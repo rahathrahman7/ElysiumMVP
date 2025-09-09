@@ -1,0 +1,31 @@
+{
+  "slug": "vow-veil",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Vow and Veil/VV-gold-back.jpeg",
+        "front": "/products/Vow and Veil/VV-gold-front.jpeg",
+        "side": "/products/Vow and Veil/VV-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Vow and Veil/VV-rose-back.jpeg",
+        "front": "/products/Vow and Veil/VV-rose-front.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Vow and Veil/VV-silver-back.jpeg",
+        "front": "/products/Vow and Veil/VV-silver-front.jpeg",
+        "side": "/products/Vow and Veil/VV-silver-side.jpeg"
+      }
+    }
+  ]
+}

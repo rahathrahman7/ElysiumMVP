@@ -1,0 +1,32 @@
+{
+  "slug": "clarion-engagement-ring",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Clarion/rsol-gold-back.jpeg",
+        "front": "/products/Clarion/rsol-gold-front.jpeg",
+        "side": "/products/Clarion/rsol-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Clarion/rsol-rose-back.jpeg",
+        "front": "/products/Clarion/rsol-rose-front.jpeg",
+        "side": "/products/Clarion/rsol-rose-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Clarion/rsol-silver-back.jpeg",
+        "front": "/products/Clarion/rsol-silver-front.jpeg",
+        "side": "/products/Clarion/rsol-silver-side.jpeg"
+      }
+    }
+  ]
+}

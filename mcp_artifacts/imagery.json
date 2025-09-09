@@ -1,0 +1,15 @@
+[
+  {
+    "src": "http://localhost:3001/_next/image?url=%2Fhero.png&w=3840&q=90",
+    "alt": "ELYSIUM hero",
+    "naturalWidth": 480,
+    "naturalHeight": 270,
+    "renderedWidth": 1424,
+    "renderedHeight": 810,
+    "hasWidth": false,
+    "hasHeight": false,
+    "loading": "auto",
+    "priority": false,
+    "upscaling": true
+  }
+]

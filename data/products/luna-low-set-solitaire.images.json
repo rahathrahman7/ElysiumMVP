@@ -1,0 +1,30 @@
+{
+  "slug": "luna-low-set-solitaire",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "front": "/products/Luna/Luna-gold-front.jpeg",
+        "side": "/products/Luna/Luna-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Luna/Luna-rose-back.jpeg",
+        "front": "/products/Luna/Luna-rose-front.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Luna/Luna-silver-back.jpeg",
+        "front": "/products/Luna/Luna-silver-front.jpeg",
+        "side": "/products/Luna/Luna-silver-side.jpeg"
+      }
+    }
+  ]
+}

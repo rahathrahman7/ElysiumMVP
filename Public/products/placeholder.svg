@@ -1,0 +1,15 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#FAF9F6"/>
+  <rect x="100" y="100" width="600" height="600" fill="#E8E2DA" stroke="#2C2C2C" stroke-width="2"/>
+  <circle cx="400" cy="300" r="80" fill="#FFD700"/>
+  <text x="400" y="500" text-anchor="middle" font-family="serif" font-size="32" fill="#2C2C2C">Product Image</text>
+  <text x="400" y="750" text-anchor="middle" font-family="serif" font-size="24" fill="#2C2C2C">Coming Soon</text>
+</svg>
+
+
+
+
+
+
+
+

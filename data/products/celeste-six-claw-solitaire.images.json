@@ -1,0 +1,34 @@
+{
+  "slug": "celeste-six-claw-solitaire",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Celeste/Celeste-gold-back.jpeg",
+        "front": "/products/Celeste/Celeste-gold-front.jpeg",
+        "side": "/products/Celeste/Celeste-gold-side.jpeg",
+        "silver": "/products/Celeste/Celeste-gold-silver-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Celeste/Celeste-rose-back.jpeg",
+        "front": "/products/Celeste/Celeste-rose-front.jpeg",
+        "side": "/products/Celeste/Celeste-rose-side.jpeg",
+        "silver": "/products/Celeste/Celeste-rose-silver-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Celeste/Celeste-silver-back.jpeg",
+        "front": "/products/Celeste/Celeste-silver-front.jpeg",
+        "side": "/products/Celeste/Celeste-silver-side.jpeg"
+      }
+    }
+  ]
+}

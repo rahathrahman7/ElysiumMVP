@@ -1,0 +1,58 @@
+[
+  {
+    "src": "http://localhost:3000/_next/image?url=%2Fhero.png&w=3840&q=90",
+    "alt": "ELYSIUM hero",
+    "naturalWidth": 480,
+    "naturalHeight": 270,
+    "renderedWidth": 1440,
+    "renderedHeight": 900,
+    "hasWidth": false,
+    "hasHeight": false,
+    "loading": "auto",
+    "priority": false,
+    "upscaling": true,
+    "imageType": "png&w=3840&q=90"
+  },
+  {
+    "src": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1522335789203-aabd1fc54bc9%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75",
+    "alt": "Solstice Ring",
+    "naturalWidth": 800,
+    "naturalHeight": 523,
+    "renderedWidth": 800,
+    "renderedHeight": 800,
+    "hasWidth": true,
+    "hasHeight": true,
+    "loading": "lazy",
+    "priority": false,
+    "upscaling": false,
+    "imageType": "com%2Fphoto-1522335789203-aabd1fc54bc9%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75"
+  },
+  {
+    "src": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1515560570411-00a0026e6086%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75",
+    "alt": "Astra Pendant",
+    "naturalWidth": 800,
+    "naturalHeight": 533,
+    "renderedWidth": 800,
+    "renderedHeight": 800,
+    "hasWidth": true,
+    "hasHeight": true,
+    "loading": "lazy",
+    "priority": false,
+    "upscaling": false,
+    "imageType": "com%2Fphoto-1515560570411-00a0026e6086%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75"
+  },
+  {
+    "src": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1522312346375-d1a52e2b99b3%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75",
+    "alt": "Mira Earrings",
+    "naturalWidth": 800,
+    "naturalHeight": 1179,
+    "renderedWidth": 800,
+    "renderedHeight": 800,
+    "hasWidth": true,
+    "hasHeight": true,
+    "loading": "lazy",
+    "priority": false,
+    "upscaling": false,
+    "imageType": "com%2Fphoto-1522312346375-d1a52e2b99b3%3Fq%3D80%26w%3D800%26auto%3Dformat%26fit%3Dcrop&w=1920&q=75"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "slug": "seraphina-signature-six-claw",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Seraphina/Seraphina-gold-back.jpeg",
+        "front": "/products/Seraphina/Seraphina-gold-front.jpeg",
+        "side": "/products/Seraphina/Seraphina-gold-side.jpeg",
+        "silver": "/products/Seraphina/Seraphina-gold-silver-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Seraphina/Seraphina-rose-back.jpeg",
+        "front": "/products/Seraphina/Seraphina-rose-front.jpeg",
+        "side": "/products/Seraphina/Seraphina-rose-side.jpeg",
+        "silver": "/products/Seraphina/Seraphina-rose-silver-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Seraphina/Seraphina-silver-back.jpeg",
+        "front": "/products/Seraphina/Seraphina-silver-front.jpeg",
+        "side": "/products/Seraphina/Seraphina-silver-side.jpeg"
+      }
+    }
+  ]
+}

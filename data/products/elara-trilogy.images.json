@@ -1,0 +1,32 @@
+{
+  "slug": "elara-trilogy",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Elara/Elara-gold-back.jpeg",
+        "front": "/products/Elara/Elara-gold-front.jpeg",
+        "side": "/products/Elara/Elara-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Elara/Elara-rose-back.jpeg",
+        "front": "/products/Elara/Elara-rose-front.jpeg",
+        "side": "/products/Elara/Elara-rose-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Elara/Elara-silver-back.jpeg",
+        "front": "/products/Elara/Elara-silver-front.jpeg",
+        "side": "/products/Elara/Elara-silver-side.jpeg"
+      }
+    }
+  ]
+}

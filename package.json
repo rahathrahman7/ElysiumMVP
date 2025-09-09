@@ -1,0 +1,51 @@
+{
+  "name": "elysium-storefront",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "sanity:seed": "tsx scripts/sanity-seed.ts",
+    "build:clarion:manifest": "tsx scripts/buildImageManifest.ts",
+    "build:orabella:manifest": "tsx scripts/buildImageManifest.ts --slug orabella-toi-et-moi --folder public/products/Orabella --productName \"Orabella Toi et Moi\" --altSuffix \"Toi et Moi — pear & radiant, four-claw points\"",
+    "build:aveline:manifest": "tsx scripts/buildImageManifest.ts --slug aveline-radiant-solitaire --folder public/products/Aveline --productName \"Aveline Radiant Solitaire\" --altSuffix \"Radiant solitaire with hidden halo — four talon-tipped claws\"",
+    "build:elara:manifest": "tsx scripts/buildImageManifest.ts --slug elara-trilogy --folder public/products/Elara --productName \"Elara Trilogy\" --altSuffix \"Round center with pear sides — sculpted trellis\"",
+    "build:vv:manifest": "tsx scripts/buildImageManifest.ts --slug vow-veil --folder \"public/products/Vow and Veil\" --productName \"Vow & Veil\" --altSuffix \"Toi et Moi — round + pear on curved band\"",
+    "build:seraphina:manifest": "tsx scripts/buildImageManifest.ts --slug seraphina-signature-six-claw --folder public/products/Seraphina --productName \"Seraphina Signature Six-Claw\" --altSuffix \"Six-claw solitaire with pavé band\"",
+    "build:luna:manifest": "tsx scripts/buildImageManifest.ts --slug luna-low-set-solitaire --folder public/products/Luna --productName \"Luna Low-Set Solitaire\" --altSuffix \"Low-set solitaire with open bridge & hidden halo\"",
+    "build:celeste:manifest": "tsx scripts/buildImageManifest.ts --slug celeste-six-claw-solitaire --folder public/products/Celeste --productName \"Celeste Six-Claw Solitaire\" --altSuffix \"Six-claw solitaire with eagle-claw prongs\""
+  },
+  "dependencies": {
+    "@sanity/client": "^7.10.0",
+    "@sanity/image-url": "^1.0.2",
+    "clsx": "^2.1.1",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.542.0",
+    "next": "15.0.0",
+    "next-seo": "^6.5.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "resend": "^4.0.0",
+    "stripe": "^16.0.0",
+    "swr": "^2.2.5",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.0.0",
+    "playwright": "^1.55.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.16.2",
+    "typescript": "5.5.4"
+  }
+}

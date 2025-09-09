@@ -1,0 +1,31 @@
+{
+  "slug": "aveline-radiant-solitaire",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Aveline/Aveline-gold-back.jpeg",
+        "front": "/products/Aveline/Aveline-gold-front.jpeg",
+        "side": "/products/Aveline/Aveline-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Aveline/Aveline-rose-back.jpeg",
+        "front": "/products/Aveline/Aveline-rose-front.jpeg",
+        "side": "/products/Aveline/Aveline-rose-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Aveline/Aveline-silver-back.jpeg",
+        "side": "/products/Aveline/Aveline-silver-side.jpeg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+"use client";
+import Link from "next/link";
+import RingSizeGuide from "@/components/ui/RingSizeGuide";
+
+export function Footer() {
+  return (
+    <footer className="border-t border-gray-200 bg-gray-50">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="font-serif text-2xl tracking-[0.15em] text-black mb-4 leading-tight">ELYSIUM</div>
+            <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+              Fine jewellery crafted with precision in our London atelier. Each piece tells a story of timeless elegance and exceptional craftsmanship.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-serif text-lg uppercase tracking-wide text-black mb-4 leading-tight">Quick Links</h3>
+            <ul className="space-y-2">
+              {['Shop', 'Bespoke', 'Heroes', 'Education', 'About', 'Contact'].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`/${item.toLowerCase()}`}
+                    className="text-gray-600 hover:text-yellow-600 transition-all duration-300 text-sm leading-normal relative group"
+                  >
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/wishlist"
+                  className="text-gray-600 hover:text-yellow-600 transition-all duration-300 text-sm leading-normal relative group"
+                >
+                  Wishlist
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full" />
+                </Link>
+              </li>
+              <li>
+                <RingSizeGuide />
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-serif text-lg uppercase tracking-wide text-black mb-4 leading-tight">Stay Updated</h3>
+            <p className="text-gray-600 text-sm mb-4 leading-relaxed">Be first to know about new collections and exclusive offers.</p>
+            <form className="flex gap-2">
+              <input
+                className="flex-1 px-3 py-2 rounded border border-gray-300 bg-white text-sm focus:outline-none focus:border-yellow-600 transition-all duration-300 leading-normal hover:border-gray-400 focus:ring-2 focus:ring-yellow-600/20" 
+                placeholder="Email address" 
+                type="email" 
+                required 
+              />
+              <button className="px-4 py-2 border-2 border-black text-black text-sm uppercase tracking-wide hover:bg-black hover:text-white transition-all duration-300 rounded leading-tight hover:scale-105 active:scale-95">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-sm text-gray-500 leading-normal">
+            © Elysium London 2025. All rights reserved.
+          </div>
+          <div className="flex items-center gap-6 text-sm text-gray-500 leading-normal">
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+            <span>Shipping & Returns</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

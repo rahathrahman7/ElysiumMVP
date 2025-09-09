@@ -1,0 +1,30 @@
+{
+  "slug": "orabella-toi-et-moi",
+  "variants": [
+    {
+      "metal": "yellow",
+      "label": "18k Yellow Gold",
+      "images": {
+        "back": "/products/Orabella/orabella-gold-back.jpeg",
+        "front": "/products/Orabella/orabella-gold-front.jpeg",
+        "side": "/products/Orabella/orabella-gold-side.jpeg"
+      }
+    },
+    {
+      "metal": "rose",
+      "label": "18k Rose Gold",
+      "images": {
+        "back": "/products/Orabella/orabella-rose-back.jpeg",
+        "front": "/products/Orabella/orabella-rose-front.jpeg",
+        "side": "/products/Orabella/orabella-rose-side.jpeg"
+      }
+    },
+    {
+      "metal": "silver",
+      "label": "Silver (shared for 18k White Gold & Platinum)",
+      "images": {
+        "back": "/products/Orabella/orabella-silver-back.jpeg"
+      }
+    }
+  ]
+}

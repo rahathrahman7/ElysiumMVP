@@ -1,0 +1,274 @@
+[
+  {
+    "selector": "h1[0]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h2[0]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h2[1]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h2[2]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h2[3]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h3[0]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h3[1]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h3[2]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h3[3]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "h3[4]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[0]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[1]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[2]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[3]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[4]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[5]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "p[6]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 1,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[0]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[1]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[2]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[3]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[4]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[5]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[6]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[7]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[8]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[9]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[10]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[11]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[12]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[13]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[14]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "a[15]",
+    "foreground": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "contrastRatio": 2.23,
+    "wcagAA": false,
+    "wcagAAA": false
+  },
+  {
+    "selector": "button[0]",
+    "foreground": "rgb(0, 0, 0)",
+    "background": "rgb(239, 239, 239)",
+    "contrastRatio": 18.26,
+    "wcagAA": true,
+    "wcagAAA": true
+  }
+]

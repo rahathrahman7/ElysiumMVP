@@ -1,0 +1,32 @@
+{
+  "typography": {
+    "h1": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "32px",
+      "lineHeight": "normal",
+      "fontWeight": "700"
+    },
+    "h2": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "24px",
+      "lineHeight": "normal",
+      "fontWeight": "700"
+    },
+    "h3": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "18.72px",
+      "lineHeight": "normal",
+      "fontWeight": "700"
+    },
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "lineHeight": "normal"
+    }
+  },
+  "spacing": [
+    21,
+    1,
+    20
+  ]
+}

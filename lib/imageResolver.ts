@@ -1,4 +1,8 @@
 import type { Product } from "@/lib/products";
+import type { ProductListItem } from "@/types/product";
+
+// Union type to handle both local and API product formats
+type ProductLike = Product | ProductListItem;
 
 // maps common variants to the keys used in galleryByMetal
 const NORMALIZE_METAL: Record<string,string> = {
@@ -15,10 +19,24 @@ const NORMALIZE_METAL: Record<string,string> = {
   "Pt": "Platinum"
 };
 
-export function resolveGallery(p: Product, metalLabel?: string): string[] {
+// Helper to normalize images to string array
+function normalizeImages(product: ProductLike): string[] {
+  if (!product.images) return [];
+  
+  // Check if it's the API format (array of objects with url property)
+  if (product.images.length > 0 && typeof product.images[0] === 'object' && 'url' in product.images[0]) {
+    return (product.images as Array<{url: string}>).map(img => img.url);
+  }
+  
+  // It's the local format (array of strings)
+  return product.images as string[];
+}
+
+export function resolveGallery(p: ProductLike, metalLabel?: string): string[] {
   const normalized = metalLabel ? NORMALIZE_METAL[metalLabel] ?? metalLabel : undefined;
-  const fromGallery = normalized && p.galleryByMetal?.[normalized];
-  const fromImages  = p.images && p.images.length ? p.images : undefined;
+  const fromGallery = normalized && 'galleryByMetal' in p && p.galleryByMetal?.[normalized];
+  const images = normalizeImages(p);
+  const fromImages = images && images.length ? images : undefined;
 
   // final fallback to a safe placeholder
   const fallback = ["/products/placeholder.svg"];
@@ -30,7 +48,7 @@ export function resolveGallery(p: Product, metalLabel?: string): string[] {
       : fallback;
 }
 
-export function resolvePrimary(p: Product, metalLabel?: string): string {
+export function resolvePrimary(p: ProductLike, metalLabel?: string): string {
   return resolveGallery(p, metalLabel)[0] ?? "/products/placeholder.svg";
 }
 

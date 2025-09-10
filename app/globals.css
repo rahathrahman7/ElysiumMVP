@@ -8,14 +8,28 @@
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-eb-garamond: 'EB Garamond', serif;
   
-  /* New luxury design tokens */
-  --page-bg: #FAF7F2;
-  --card-bg: #FFFFFF;
-  --ink: #111111;
-  --ink-soft: #5E5B55;
-  --line: rgba(17,17,17,0.08);
-  --ring: rgba(198,166,97,0.55);
-  --gold: #C6A661;
+  /* ELYSIUM Luxury Design System - Compete with Tiffany/Cartier */
+  --elysium-ivory: #FEFDFB;
+  --elysium-pearl: #F8F6F2;
+  --elysium-champagne: #F5F1EB;
+  --elysium-gold: #D4AF37;
+  --elysium-rose-gold: #E8B4B8;
+  --elysium-platinum: #8A9BA8;
+  --elysium-obsidian: #0A0A0A;
+  --elysium-charcoal: #2D2926;
+  --elysium-smoke: #6B6761;
+  --elysium-whisper: rgba(212, 175, 55, 0.08);
+  --elysium-glow: rgba(212, 175, 55, 0.15);
+  --elysium-shimmer: rgba(255, 255, 255, 0.4);
+  
+  /* Primary system colors */
+  --page-bg: var(--elysium-pearl);
+  --card-bg: var(--elysium-ivory);
+  --ink: var(--elysium-obsidian);
+  --ink-soft: var(--elysium-smoke);
+  --line: var(--elysium-whisper);
+  --ring: var(--elysium-glow);
+  --gold: var(--elysium-gold);
   
   /* Legacy color tokens */
   --color-ivory: #FAF9F6;
@@ -80,5 +94,73 @@ h1, h2, h3, h4, h5, h6 {
   .link-underline { position: relative; text-decoration: none; }
   .link-underline::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--gold, #C6A661); transition: width .25s ease; }
   .link-underline:hover::after { width: 100%; }
+  
+  /* Luxury Button Styles */
+  .luxury-button {
+    border: 2px solid var(--elysium-charcoal);
+    color: var(--elysium-charcoal);
+    background: transparent;
+  }
+  
+  .luxury-button:hover {
+    background: var(--elysium-charcoal);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Luxury Chip Styles */
+  .luxury-chip {
+    border-color: var(--elysium-whisper);
+    color: var(--elysium-charcoal);
+    background-color: var(--elysium-ivory);
+  }
+  
+  .luxury-chip:hover {
+    border-color: var(--elysium-gold);
+    color: var(--elysium-gold);
+  }
+  
+  /* Luxury Wishlist Button */
+  .luxury-wishlist-btn {
+    color: var(--elysium-charcoal);
+    border-color: var(--elysium-whisper);
+    background-color: var(--elysium-pearl);
+  }
+  
+  .luxury-wishlist-btn:hover {
+    border-color: var(--elysium-gold);
+    color: var(--elysium-gold);
+  }
+  
+  /* Luxury Product Grid Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes luxuryPulse {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .luxury-grid-item {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .luxury-pulse {
+    animation: luxuryPulse 2s ease-in-out infinite;
+  }
 }
 

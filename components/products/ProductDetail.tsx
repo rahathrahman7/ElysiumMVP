@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Product } from "@/lib/products";
 import { ProductVariants } from "./ProductVariants";
 import { ProductActions } from "./ProductActions";
+import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";
 import StickySummary from "../pdp/StickySummary";
 import Gallery from "../pdp/Gallery";
 import TrustStrip from "../pdp/TrustStrip";
@@ -29,6 +30,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedSize, setSelectedSize] = useState(product.sizes?.[2] || null); // Default to L (or null if no sizes)
   const [engravingSelected, setEngravingSelected] = useState(false);
   const [engravingText, setEngravingText] = useState("");
+  const [useLuxuryConfigurator, setUseLuxuryConfigurator] = useState(false);
 
   // hydrate from URL (URL wins), and keep URL in sync when local changes happen
   const { build, setField, copyLink } = useConfiguratorShare({
@@ -164,28 +166,72 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
 
-              {/* Variants */}
-              <ProductVariants
-                product={product}
-                selectedMetal={selectedMetal}
-                selectedOrigin={selectedOrigin}
-                selectedCarat={selectedCarat}
-                selectedColour={selectedColour}
-                selectedClarity={selectedClarity}
-                selectedCert={selectedCert}
-                selectedSize={selectedSize}
-                engravingSelected={engravingSelected}
-                engravingText={engravingText}
-                onMetalChange={(v) => { setSelectedMetal(v); setField("metal", v?.name); }}
-                onOriginChange={(v) => { setSelectedOrigin(v); setField("origin", v?.label); }}
-                onCaratChange={(v) => { setSelectedCarat(v); setField("carat", v?.label); }}
-                onColourChange={(v) => { setSelectedColour(v); setField("colour", v?.label); }}
-                onClarityChange={(v) => { setSelectedClarity(v); setField("clarity", v?.label); }}
-                onCertChange={(v) => { setSelectedCert(v); setField("certificate", v?.label); }}
-                onSizeChange={(v) => { setSelectedSize(v); setField("ringSize", v || undefined); }}
-                onEngravingChange={(v) => { setEngravingSelected(v); setField("engravingOn", v); if(!v) setField("engravingText", ""); }}
-                onEngravingTextChange={(t) => { const s=t.slice(0,24); setEngravingText(s); setField("engravingText", s); }}
-              />
+              {/* Configuration Toggle */}
+              <div className="mb-6 flex items-center justify-center space-x-4">
+                <button
+                  onClick={() => setUseLuxuryConfigurator(false)}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                    !useLuxuryConfigurator 
+                      ? 'bg-elysium-gold text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  Classic View
+                </button>
+                <button
+                  onClick={() => setUseLuxuryConfigurator(true)}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                    useLuxuryConfigurator 
+                      ? 'bg-elysium-gold text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  Premium Configurator
+                </button>
+              </div>
+
+              {/* Configurator or Variants */}
+              {useLuxuryConfigurator ? (
+                <LuxuryProductConfigurator
+                  product={product}
+                  onConfigurationChange={(config) => {
+                    if (config.metal) {
+                      setSelectedMetal(config.metal);
+                      setField("metal", config.metal.name);
+                    }
+                    if (config.size) {
+                      setSelectedSize(config.size);
+                      setField("ringSize", config.size);
+                    }
+                    if (config.engraving !== undefined) {
+                      setEngravingText(config.engraving);
+                      setField("engravingText", config.engraving);
+                    }
+                  }}
+                />
+              ) : (
+                <ProductVariants
+                  product={product}
+                  selectedMetal={selectedMetal}
+                  selectedOrigin={selectedOrigin}
+                  selectedCarat={selectedCarat}
+                  selectedColour={selectedColour}
+                  selectedClarity={selectedClarity}
+                  selectedCert={selectedCert}
+                  selectedSize={selectedSize}
+                  engravingSelected={engravingSelected}
+                  engravingText={engravingText}
+                  onMetalChange={(v) => { setSelectedMetal(v); setField("metal", v?.name); }}
+                  onOriginChange={(v) => { setSelectedOrigin(v); setField("origin", v?.label); }}
+                  onCaratChange={(v) => { setSelectedCarat(v); setField("carat", v?.label); }}
+                  onColourChange={(v) => { setSelectedColour(v); setField("colour", v?.label); }}
+                  onClarityChange={(v) => { setSelectedClarity(v); setField("clarity", v?.label); }}
+                  onCertChange={(v) => { setSelectedCert(v); setField("certificate", v?.label); }}
+                  onSizeChange={(v) => { setSelectedSize(v); setField("ringSize", v || undefined); }}
+                  onEngravingChange={(v) => { setEngravingSelected(v); setField("engravingOn", v); if(!v) setField("engravingText", ""); }}
+                  onEngravingTextChange={(t) => { const s=t.slice(0,24); setEngravingText(s); setField("engravingText", s); }}
+                />
+              )}
 
               {/* Actions */}
               <ProductActions product={product} />

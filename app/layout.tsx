@@ -2,11 +2,13 @@ import './globals.css'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
 import { PlausibleAnalytics } from "@/components/PlausibleAnalytics";
 import { Header } from "@/components/ui/Header";
+import LuxuryHeader from "@/components/ui/LuxuryHeader";
 import { Footer } from "@/components/Footer";
 import { SkipLinks } from "@/components/ui/SkipLinks";
 import { AccessibilityProvider } from "@/components/ui/AccessibilityProvider";
 import ConciergeWidget from "@/components/concierge/ConciergeWidget";
 import { ReactNode } from 'react';
+import { ConditionalLayout } from '@/components/ConditionalLayout';
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -40,10 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <SkipLinks />
           
           <div id="app-root">
-            <Header id="navigation" />
-            <main id="main-content" className="min-h-[70vh] fade-in" tabIndex={-1}>
-              {children}
-            </main>
+            <ConditionalLayout>{children}</ConditionalLayout>
             <Footer id="footer" />
           </div>
           

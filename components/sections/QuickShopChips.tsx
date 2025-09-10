@@ -9,8 +9,8 @@ export function QuickShopChips() {
         {chips.map((chip) => (
           <Link
             key={chip}
-            href={`/products?style=${chip.toLowerCase().replace(/\s+/g, '-')}`}
-            className="px-4 py-2 border border-neutral-300 text-neutral-800 hover:text-neutral-900 hover:border-neutral-500 transition rounded-full text-[12px] tracking-[0.16em] uppercase bg-white"
+            href={`/shop?style=${chip.toLowerCase().replace(/\s+/g, '-')}`}
+            className="px-4 py-2 border rounded-full text-[12px] tracking-[0.16em] uppercase transition-all duration-300 hover:scale-105 luxury-chip"
           >
             {chip}
           </Link>

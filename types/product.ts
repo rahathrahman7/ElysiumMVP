@@ -27,7 +27,10 @@ export interface Product {
   seoDescription?: string;
 }
 
-export interface ProductListItem extends Pick<Product, "_id" | "title" | "slug" | "images" | "basePriceGBP"> {}
+export interface ProductListItem extends Pick<Product, "_id" | "title" | "slug" | "images" | "basePriceGBP"> {
+  blurb?: string;
+  isFeatured?: boolean;
+}
 
 
 

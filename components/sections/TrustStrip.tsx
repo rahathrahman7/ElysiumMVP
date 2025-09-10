@@ -1,41 +1,61 @@
+import { HallmarkIcon, ReturnsIcon, ServiceIcon } from '@/components/icons/LuxuryIcons';
+
 export function TrustStrip() {
   return (
-    <section className="bg-gray-100 border-y border-gray-200">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🏛️</span>
+    <section className="bg-gradient-to-b from-elysium-ivory to-elysium-pearl border-y border-elysium-whisper">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          {/* Hallmarked in London */}
+          <div className="flex flex-col items-center gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-elysium-gold/20 to-elysium-gold/10 backdrop-blur-sm border border-elysium-gold/30 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-elysium-gold/20">
+              <HallmarkIcon 
+                size={32} 
+                className="text-elysium-charcoal group-hover:text-elysium-gold transition-colors duration-300" 
+              />
             </div>
             <div>
-              <h2 className="font-heading text-lg uppercase tracking-wide text-black mb-1 leading-tight">
+              <h2 className="font-serif text-xl uppercase tracking-[0.15em] text-elysium-charcoal mb-2 leading-tight">
                 Hallmarked in London
               </h2>
-              <p className="text-sm text-gray-600 leading-normal">Assay Office certified</p>
+              <p className="text-sm text-elysium-smoke leading-relaxed font-light tracking-wide">
+                Assay Office certified
+              </p>
             </div>
           </div>
           
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center">
-              <span className="text-2xl">📦</span>
+          {/* Free 30-day Returns */}
+          <div className="flex flex-col items-center gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-elysium-gold/20 to-elysium-gold/10 backdrop-blur-sm border border-elysium-gold/30 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-elysium-gold/20">
+              <ReturnsIcon 
+                size={32} 
+                className="text-elysium-charcoal group-hover:text-elysium-gold transition-colors duration-300" 
+              />
             </div>
             <div>
-              <h2 className="font-heading text-lg uppercase tracking-wide text-black mb-1 leading-tight">
+              <h2 className="font-serif text-xl uppercase tracking-[0.15em] text-elysium-charcoal mb-2 leading-tight">
                 Free 30-day Returns
               </h2>
-              <p className="text-sm text-gray-600 leading-normal">No questions asked</p>
+              <p className="text-sm text-elysium-smoke leading-relaxed font-light tracking-wide">
+                No questions asked
+              </p>
             </div>
           </div>
           
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🔧</span>
+          {/* Complimentary Resizing */}
+          <div className="flex flex-col items-center gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-elysium-gold/20 to-elysium-gold/10 backdrop-blur-sm border border-elysium-gold/30 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-elysium-gold/20">
+              <ServiceIcon 
+                size={32} 
+                className="text-elysium-charcoal group-hover:text-elysium-gold transition-colors duration-300" 
+              />
             </div>
             <div>
-              <h2 className="font-heading text-lg uppercase tracking-wide text-black mb-1 leading-tight">
+              <h2 className="font-serif text-xl uppercase tracking-[0.15em] text-elysium-charcoal mb-2 leading-tight">
                 Complimentary Resizing
               </h2>
-              <p className="text-sm text-gray-600 leading-normal">Lifetime service</p>
+              <p className="text-sm text-elysium-smoke leading-relaxed font-light tracking-wide">
+                Lifetime service
+              </p>
             </div>
           </div>
         </div>

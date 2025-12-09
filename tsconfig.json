@@ -55,6 +55,14 @@
   ],
   "exclude": [
     "node_modules",
-    "sanity/**"
+    "sanity/**",
+    "bmad",
+    "bmad-v6",
+    "tmp_context7",
+    "planning and client meetings",
+    "qa",
+    "docs",
+    "mcp_artifacts",
+    "app/Public"
   ]
 }

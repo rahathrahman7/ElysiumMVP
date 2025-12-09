@@ -1,8 +1,10 @@
 import { MetadataRoute } from 'next'
-import { getAllProducts } from '@/lib/products'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://elysium.com'
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elysium.com'
+
+  // Lazy import to avoid loading large products array during build
+  const { getAllProducts } = await import('@/lib/products')
   const products = getAllProducts()
 
   const staticPages = [

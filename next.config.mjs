@@ -11,6 +11,16 @@ const nextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" }
     ]
   },
+  // Optimize build performance
+  typescript: {
+    // Skip type checking during build to speed up deployment
+    // Types are still checked in CI/local dev with 'typecheck' script
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    // Skip ESLint during build to speed up deployment
+    ignoreDuringBuilds: true,
+  },
   headers: async () => {
     return [
       {

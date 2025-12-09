@@ -4,7 +4,6 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { 
   DiamondShapeIcon,
-  DiamondIcon,
   type DiamondShape
 } from '@/components/icons/DiamondIcons';
 
@@ -215,9 +214,10 @@ export function DiamondShapesTrigger({
         className
       )}
     >
-      <DiamondIcon 
-        size={16} 
-        className="transition-transform duration-300 group-hover:scale-110" 
+      <DiamondShapeIcon
+        shape="princess"
+        size={16}
+        className="transition-transform duration-300 group-hover:scale-110"
       />
       <span>Diamonds</span>
       <svg

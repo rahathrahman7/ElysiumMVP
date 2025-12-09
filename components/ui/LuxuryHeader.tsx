@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import DiamondShapesDropdown, { DiamondShapesTrigger } from '@/components/ui/DiamondShapesDropdown';
+import { DiamondShapeIcon } from '@/components/icons/DiamondIcons';
 
 const navigationLinks = [
   { href: '/shop', label: 'Collections' },

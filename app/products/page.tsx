@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { products } from "@/lib/products";
 import ProductCard from "@/components/ui/ProductCard";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
 import FilterSections from "@/components/filters/FilterSections";
 import FiltersDrawer from "@/components/filters/FiltersDrawer";
 // reverted to static rendering (no client-only wrappers)
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  // Lazy import to avoid loading large products array during build compilation
+  const { products } = await import('@/lib/products');
   return (
     <main className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

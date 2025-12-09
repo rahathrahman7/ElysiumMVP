@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getProductBySlug } from "@/lib/products";
 import { ProductDetail } from "@/components/products/ProductDetail";
 
 interface ProductPageProps {
@@ -9,6 +8,8 @@ interface ProductPageProps {
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
+  // Lazy import to avoid loading large products array during build compilation
+  const { getProductBySlug } = await import('@/lib/products');
   const product = getProductBySlug(slug);
   
   if (!product) {
@@ -47,6 +48,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
+  // Lazy import to avoid loading large products array during build compilation
+  const { getProductBySlug } = await import('@/lib/products');
   const product = getProductBySlug(slug);
   
   if (!product) {

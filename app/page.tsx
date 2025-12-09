@@ -1,5 +1,4 @@
 import LuxuryProductCard from '@/components/ui/LuxuryProductCard'
-import { getAllProducts } from '@/lib/products'
 import RingSizeGuide from '@/components/ui/RingSizeGuide'
 import LuxuryHero from '@/components/sections/LuxuryHero'
 import { ValueBar } from '@/components/sections/ValueBar'
@@ -36,7 +35,9 @@ export const metadata: Metadata = {
   }
 }
 
-export default function HomePage(){
+export default async function HomePage(){
+  // Lazy import to avoid loading large products array during build compilation
+  const { getAllProducts } = await import('@/lib/products')
   const featuredProducts = getAllProducts().filter(p => p.isFeatured);
   const organizationJsonLd = generateOrganizationJsonLd();
 

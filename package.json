@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "postinstall": "prisma generate",
     "context7:mcp": "npx -y @upstash/context7-mcp",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",

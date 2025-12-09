@@ -23,6 +23,7 @@ interface ProductVariantsProps {
   onSizeChange: (size: string | null) => void;
   onEngravingChange: (selected: boolean) => void;
   onEngravingTextChange: (text: string) => void;
+  onMetalHover?: (metalName?: string) => void;
 }
 
 export function ProductVariants({
@@ -45,6 +46,7 @@ export function ProductVariants({
   onSizeChange,
   onEngravingChange,
   onEngravingTextChange,
+  onMetalHover,
 }: ProductVariantsProps) {
   return (
     <div className="space-y-8">
@@ -61,11 +63,14 @@ export function ProductVariants({
                 <button
                   key={metal.name}
                   onClick={() => onMetalChange(metal)}
+                  onMouseEnter={() => onMetalHover?.(metal.name)}
+                  onFocus={() => onMetalHover?.(metal.name)}
+                  onMouseLeave={() => onMetalHover?.(undefined)}
                   aria-pressed={active}
                   className={`p-4 rounded-lg border-2 text-left transition-all duration-300 ${
                     active
-                      ? "border-yellow-500 bg-yellow-50 shadow-md"
-                      : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                      ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                      : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -102,8 +107,8 @@ export function ProductVariants({
                 onClick={() => onOriginChange(origin)}
                 className={`p-4 rounded-lg border-2 text-center transition-all duration-300 ${
                   selectedOrigin?.label === origin.label
-                    ? "border-yellow-500 bg-yellow-50 shadow-md"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                    ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                    : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                 }`}
               >
                 <div className="font-medium text-gray-900 text-sm">
@@ -128,8 +133,8 @@ export function ProductVariants({
                 onClick={() => onCaratChange(carat)}
                 className={`p-4 rounded-lg border-2 text-center transition-all duration-300 ${
                   selectedCarat?.label === carat.label
-                    ? "border-yellow-500 bg-yellow-50 shadow-md"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                    ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                    : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                 }`}
               >
                 <div className="font-medium text-gray-900 text-sm">
@@ -154,8 +159,8 @@ export function ProductVariants({
                 onClick={() => onColourChange(colour)}
                 className={`p-4 rounded-lg border-2 text-center transition-all duration-300 ${
                   selectedColour?.label === colour.label
-                    ? "border-yellow-500 bg-yellow-50 shadow-md"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                    ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                    : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                 }`}
               >
                 <div className="font-medium text-gray-900 text-sm">
@@ -180,8 +185,8 @@ export function ProductVariants({
                 onClick={() => onClarityChange(clarity)}
                 className={`p-4 rounded-lg border-2 text-center transition-all duration-300 ${
                   selectedClarity?.label === clarity.label
-                    ? "border-yellow-500 bg-yellow-50 shadow-md"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                    ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                    : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                 }`}
               >
                 <div className="font-medium text-gray-900 text-sm">
@@ -206,8 +211,8 @@ export function ProductVariants({
                 onClick={() => onCertChange(cert)}
                 className={`p-4 rounded-lg border-2 text-center transition-all duration-300 ${
                   selectedCert?.label === cert.label
-                    ? "border-yellow-500 bg-yellow-50 shadow-md"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-sm hover:scale-[1.02]"
+                    ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
+                    : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
                 }`}
               >
                 <div className="font-medium text-gray-900 text-sm">
@@ -231,7 +236,7 @@ export function ProductVariants({
           <select
             value={selectedSize || ""}
             onChange={(e) => onSizeChange(e.target.value)}
-            className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-yellow-500 focus:outline-none transition-all duration-300 hover:border-gray-300 focus:ring-2 focus:ring-yellow-500/20"
+            className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#45321e] focus:outline-none transition-all duration-300 hover:border-[#45321e] focus:ring-2 focus:ring-[#45321e]/20"
           >
             <option value="">Select size</option>
             {product.sizes.map((size) => (
@@ -252,7 +257,7 @@ export function ProductVariants({
               id="engraving"
               checked={engravingSelected}
               onChange={(e) => onEngravingChange(e.target.checked)}
-              className="w-5 h-5 text-yellow-500 border-gray-300 rounded focus:ring-yellow-500"
+              className="w-5 h-5 text-[#45321e] border-gray-300 rounded focus:ring-[#45321e]"
             />
             <label htmlFor="engraving" className="font-serif text-lg uppercase tracking-[0.08em] text-gray-900">
               Engraving + £{product.engravingFeeGBP}
@@ -266,7 +271,7 @@ export function ProductVariants({
                 onChange={(e) => onEngravingTextChange(e.target.value)}
                 placeholder={`Enter engraving text (max ${product.engravingMaxChars || 24} characters)`}
                 maxLength={product.engravingMaxChars || 24}
-                className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-yellow-500 focus:outline-none transition-all duration-300 hover:border-gray-300 focus:ring-2 focus:ring-yellow-500/20"
+                className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-[#45321e] focus:outline-none transition-all duration-300 hover:border-[#45321e] focus:ring-2 focus:ring-[#45321e]/20"
               />
             </div>
           )}

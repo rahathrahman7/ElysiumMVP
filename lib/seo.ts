@@ -15,8 +15,19 @@ export function generateOrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ELYSIUM",
-    url: "https://elysium.example",
-    logo: "https://elysium.example/logo.png",
+    description: "Luxury jewellery crafted in our London atelier",
+    url: "https://elysium.com",
+    logo: "https://elysium.com/brand/elysium-mark.svg",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "London",
+      addressCountry: "GB"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: "English"
+    }
   };
 }
 
@@ -30,7 +41,7 @@ export function generateProductJsonLd(product: Product) {
     offers: {
       "@type": "Offer",
       priceCurrency: "GBP",
-      price: (product.basePriceGBP / 100).toFixed(2),
+      price: (product.basePriceGBP).toFixed(2),
       availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
     },
   } as const;
@@ -47,6 +58,11 @@ export function generatePdpBreadcrumbJsonLd(product: Product) {
     ],
   } as const;
 }
+
+
+
+
+
 
 
 

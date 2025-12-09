@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { HallmarkIcon, ReturnsIcon, ServiceIcon } from '@/components/icons/LuxuryIcons';
 
 export function TrustStrip() {
@@ -42,7 +43,7 @@ export function TrustStrip() {
           </div>
           
           {/* Complimentary Resizing */}
-          <div className="flex flex-col items-center gap-6 group">
+          <Link href="/resizing" className="flex flex-col items-center gap-6 group transition-transform duration-300 hover:scale-105">
             <div className="w-16 h-16 bg-gradient-to-br from-elysium-gold/20 to-elysium-gold/10 backdrop-blur-sm border border-elysium-gold/30 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-elysium-gold/20">
               <ServiceIcon 
                 size={32} 
@@ -57,11 +58,10 @@ export function TrustStrip() {
                 Lifetime service
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
   );
 }
-
 

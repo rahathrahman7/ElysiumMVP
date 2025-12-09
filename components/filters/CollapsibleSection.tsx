@@ -26,7 +26,7 @@ export default function CollapsibleSection({
         <div className="flex items-center gap-4">
           <h3 className="font-serif text-2xl text-neutral-900 font-light tracking-wide">{title}</h3>
           {selectedCount > 0 && (
-            <span className="inline-flex items-center justify-center h-6 min-w-[1.5rem] px-2.5 rounded-full text-xs font-medium text-white bg-gradient-to-r from-[#D4AF37] to-[#B8941F] shadow-sm">
+            <span className="inline-flex items-center justify-center h-6 min-w-[1.5rem] px-2.5 rounded-full text-xs font-medium text-white bg-[#753600] shadow-sm">
               {selectedCount}
             </span>
           )}

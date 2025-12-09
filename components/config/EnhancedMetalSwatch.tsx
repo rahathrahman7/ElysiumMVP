@@ -13,10 +13,10 @@ interface EnhancedMetalSwatchProps {
 }
 
 const metalTextures: Record<string, string> = {
-  yellow: "linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFD700 100%)",
-  white: "linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #F8F9FA 100%)",
-  rose: "linear-gradient(135deg, #FFE4E6 0%, #FECACA 50%, #FFE4E6 100%)",
-  platinum: "linear-gradient(135deg, #F1F5F9 0%, #CBD5E1 50%, #F1F5F9 100%)"
+  yellow: "#FFD700",
+  white: "#F8F9FA",
+  rose: "#FFE4E6",
+  platinum: "#F1F5F9"
 };
 
 const metalHighlights: Record<string, string> = {

@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { DiamondShapeIcon, diamondShapeIcons, type DiamondShape } from '@/components/icons/DiamondIcons';
 
 const diamondInfo = [
@@ -12,7 +13,11 @@ const diamondInfo = [
   { shape: 'cushion' as DiamondShape, name: 'Cushion', description: 'Vintage-inspired cut with rounded corners and larger facets.' },
 ];
 
-export default function DiamondsPage() {
+export default function DiamondsPage({ searchParams }: { searchParams: { shape?: string } }) {
+  if (searchParams?.shape) {
+    const shape = encodeURIComponent(searchParams.shape);
+    redirect(`/shop?shape=${shape}`);
+  }
   return (
     <div className="min-h-screen py-8 bg-elysium-ivory">
       <div className="container mx-auto px-6">
@@ -55,9 +60,12 @@ export default function DiamondsPage() {
                 </p>
 
                 {/* CTA Button */}
-                <button className="w-full py-3 px-6 border border-elysium-gold text-elysium-charcoal hover:bg-elysium-gold hover:text-black transition-all duration-300">
+                <a
+                  href={`/diamonds?shape=${diamond.shape}`}
+                  className="inline-block w-full text-center py-3 px-6 border border-elysium-gold text-elysium-charcoal hover:bg-elysium-gold hover:text-black transition-all duration-300"
+                >
                   View {diamond.name} Diamonds
-                </button>
+                </a>
               </div>
             </div>
           ))}

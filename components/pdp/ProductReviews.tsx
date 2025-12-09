@@ -220,10 +220,10 @@ export default function ProductReviews({ productSlug, className = "" }: ProductR
       )}
 
       {/* Review CTA */}
-      <div className="mt-8 p-6 bg-gradient-to-r from-ivory to-beige rounded-2xl text-center">
+      <div className="mt-8 p-6 bg-ivory rounded-2xl text-center border-2 border-[var(--elysium-whisper)]">
         <h4 className="font-serif text-xl text-charcoal mb-2">Share Your Experience</h4>
         <p className="text-gray-700 mb-4">Help other couples find their perfect ring</p>
-        <button className="px-6 py-3 bg-gold text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 font-medium">
+        <button className="px-6 py-3 bg-charcoal text-white rounded-lg hover:bg-gold transition-all duration-300 font-medium">
           Write a Review
         </button>
       </div>

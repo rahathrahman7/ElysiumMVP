@@ -32,8 +32,8 @@ export function ProductGallery({ images, activeIndex, onThumbnailClick }: Produc
             onClick={() => onThumbnailClick(index)}
             className={`aspect-square relative overflow-hidden rounded-lg border-2 transition-all ${
               activeIndex === index
-                ? "border-yellow-500 ring-2 ring-yellow-500/20"
-                : "border-gray-200 hover:border-gray-300"
+                ? "border-[#45321e] ring-2 ring-[#45321e]/20"
+                : "border-gray-200 hover:border-[#45321e]"
             }`}
           >
             <Image

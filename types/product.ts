@@ -41,3 +41,9 @@ export interface ProductListItem extends Pick<Product, "_id" | "title" | "slug" 
 
 
 
+
+
+
+
+
+

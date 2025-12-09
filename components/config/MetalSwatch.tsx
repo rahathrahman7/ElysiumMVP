@@ -23,8 +23,8 @@ export default function MetalSwatch({
         "group relative flex flex-col items-center justify-center w-28 h-32 rounded-2xl border-2 transition-all duration-300",
         "hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2",
         active
-          ? "border-[var(--gold)] bg-gradient-to-br from-[var(--ivory)] to-white shadow-lg ring-2 ring-[var(--gold)]/20"
-          : "border-neutral-200 bg-white hover:border-[var(--gold)] hover:shadow-md hover:bg-gradient-to-br hover:from-[var(--ivory)] hover:to-white",
+          ? "border-[var(--gold)] bg-[var(--ivory)] shadow-lg ring-2 ring-[var(--gold)]/20"
+          : "border-neutral-200 bg-white hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:shadow-md",
         className,
       ].join(" ")}
       aria-pressed={active}
@@ -60,6 +60,12 @@ export default function MetalSwatch({
     </button>
   );
 }
+
+
+
+
+
+
 
 
 

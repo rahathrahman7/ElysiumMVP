@@ -3,6 +3,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import useSWR from "swr";
 import LuxuryProductCard from "@/components/ui/LuxuryProductCard";
 import { useState } from "react";
+import { facets } from "@/lib/filterSchema";
 
 const fetcher = (url: string) => fetch(url).then(r=>r.json());
 
@@ -56,8 +57,37 @@ export function ShopGrid() {
                   >
                     <option value="">All Collections</option>
                     <option value="ring">Engagement Rings</option>
+                    <option value="mens-rings">Men's Wedding Bands</option>
                     <option value="necklace">Necklaces</option>
                     <option value="earring">Earrings</option>
+                  </select>
+                </div>
+
+                <div className="group">
+                  <label className="block text-sm font-medium text-elysium-smoke mb-2 tracking-wider uppercase">Shape</label>
+                  <select
+                    className="w-full bg-white/50 backdrop-blur-sm border border-elysium-whisper  px-4 py-3 text-elysium-obsidian placeholder-elysium-smoke focus:outline-none focus:ring-2 focus:ring-elysium-gold focus:border-transparent transition-all duration-300 hover:bg-white/70"
+                    value={params.get("shape") ?? ""}
+                    onChange={(e)=>updateParam("shape", e.target.value)}
+                  >
+                    <option value="">All Shapes</option>
+                    {facets.shape.map((shape)=> (
+                      <option key={shape.id} value={shape.id}>{shape.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="group">
+                  <label className="block text-sm font-medium text-elysium-smoke mb-2 tracking-wider uppercase">Collection</label>
+                  <select
+                    className="w-full bg-white/50 backdrop-blur-sm border border-elysium-whisper  px-4 py-3 text-elysium-obsidian placeholder-elysium-smoke focus:outline-none focus:ring-2 focus:ring-elysium-gold focus:border-transparent transition-all duration-300 hover:bg-white/70"
+                    value={params.get("collection") ?? ""}
+                    onChange={(e)=>updateParam("collection", e.target.value)}
+                  >
+                    <option value="">All Collections</option>
+                    {facets.collection.map((col)=> (
+                      <option key={col.id} value={col.id}>{col.label}</option>
+                    ))}
                   </select>
                 </div>
 
@@ -138,21 +168,30 @@ export function ShopGrid() {
                     // Group products by type
                     const products = data?.products ?? [];
                     const groups = {
+                      'mens-rings': products.filter((p:any) => 
+                        p.collections?.includes('mens-rings') ||
+                        p.title.toLowerCase().includes('men\'s wedding band')
+                      ),
                       solitaires: products.filter((p:any) => 
                         p.title.toLowerCase().includes('solitaire') && 
                         !p.title.toLowerCase().includes('toi et moi') &&
-                        !p.title.toLowerCase().includes('trilogy')
+                        !p.title.toLowerCase().includes('trilogy') &&
+                        !p.collections?.includes('mens-rings')
                       ),
                       'toi-et-moi': products.filter((p:any) => 
-                        p.title.toLowerCase().includes('toi et moi')
+                        p.title.toLowerCase().includes('toi et moi') &&
+                        !p.collections?.includes('mens-rings')
                       ),
                       trilogy: products.filter((p:any) => 
-                        p.title.toLowerCase().includes('trilogy')
+                        p.title.toLowerCase().includes('trilogy') &&
+                        !p.collections?.includes('mens-rings')
                       ),
                       other: products.filter((p:any) => 
                         !p.title.toLowerCase().includes('solitaire') &&
                         !p.title.toLowerCase().includes('toi et moi') &&
-                        !p.title.toLowerCase().includes('trilogy')
+                        !p.title.toLowerCase().includes('trilogy') &&
+                        !p.collections?.includes('mens-rings') &&
+                        !p.title.toLowerCase().includes('men\'s wedding band')
                       )
                     };
 
@@ -160,6 +199,7 @@ export function ShopGrid() {
                       if (groupProducts.length === 0) return null;
                       
                       const groupTitles = {
+                        'mens-rings': 'Men\'s Wedding Bands',
                         solitaires: 'Solitaire Collection',
                         'toi-et-moi': 'Toi et Moi Collection',
                         trilogy: 'Trilogy Collection',

@@ -12,9 +12,7 @@ const STATIC_ASSETS = [
   '/education',
   '/about',
   '/contact',
-  '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
+  // Manifest and icons can be added later when available
   // Add critical CSS and JS files
 ];
 

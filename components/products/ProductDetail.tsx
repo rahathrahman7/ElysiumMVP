@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Product } from "@/lib/products";
-import { ProductVariants } from "./ProductVariants";
+import { CompactProductVariants } from "./CompactProductVariants";
 import { ProductActions } from "./ProductActions";
 import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";
 import StickySummary from "../pdp/StickySummary";
@@ -15,6 +15,7 @@ import ProductReviews from "../pdp/ProductReviews";
 import { Breadcrumb } from "../ui/Breadcrumb";
 import { resolveGallery } from "@/lib/imageResolver";
 import useConfiguratorShare from "@/hooks/useConfiguratorShare";
+import { generateProductJsonLd, generatePdpBreadcrumbJsonLd } from "@/lib/seo";
 
 interface ProductDetailProps {
   product: Product;
@@ -26,11 +27,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)
   const [selectedColour, setSelectedColour] = useState(product.colours?.[2] || null); // Default to F (or null if no colours)
   const [selectedClarity, setSelectedClarity] = useState(product.clarities?.[3] || null); // Default to VS1 (or null if no clarities)
-  const [selectedCert, setSelectedCert] = useState(product.certificates?.[1] || null); // Default to IGI (or null if no certificates)
   const [selectedSize, setSelectedSize] = useState(product.sizes?.[2] || null); // Default to L (or null if no sizes)
   const [engravingSelected, setEngravingSelected] = useState(false);
   const [engravingText, setEngravingText] = useState("");
   const [useLuxuryConfigurator, setUseLuxuryConfigurator] = useState(false);
+  const [previewMetalName, setPreviewMetalName] = useState<string | undefined>(undefined);
 
   // hydrate from URL (URL wins), and keep URL in sync when local changes happen
   const { build, setField, copyLink } = useConfiguratorShare({
@@ -38,7 +39,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
     carat: selectedCarat?.label,
     colour: selectedColour?.label,
     clarity: selectedClarity?.label,
-    certificate: selectedCert?.label,
     metal: selectedMetal?.name,
     ringSize: selectedSize || undefined,
     engravingText: engravingText,
@@ -51,7 +51,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
     if (build.carat !== undefined) setSelectedCarat(product.carats?.find(c => c.label === build.carat) || null);
     if (build.colour !== undefined) setSelectedColour(product.colours?.find(c => c.label === build.colour) || null);
     if (build.clarity !== undefined) setSelectedClarity(product.clarities?.find(c => c.label === build.clarity) || null);
-    if (build.certificate !== undefined) setSelectedCert(product.certificates?.find(c => c.label === build.certificate) || null);
     if (build.metal !== undefined) setSelectedMetal(product.metals?.find(m => m.name === build.metal) || null);
     if (build.ringSize !== undefined) setSelectedSize(build.ringSize);
     if (build.engravingOn !== undefined) setEngravingSelected(!!build.engravingOn);
@@ -59,19 +58,19 @@ export function ProductDetail({ product }: ProductDetailProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [build]);
 
-  // Derive current gallery images based on selected metal or fallback to product.images
-  const currentGalleryImages = resolveGallery(product, selectedMetal?.name).map(src => ({
+  // Derive current gallery images based on selected/preview metal or fallback to product.images
+  const displayMetal = previewMetalName || selectedMetal?.name;
+  const currentGalleryImages = resolveGallery(product, displayMetal).map(src => ({
     src,
     alt: product.title
   }));
 
-  const totalPrice = product.basePriceGBP + 
+  const totalPrice = product.basePriceGBP +
     (selectedMetal?.priceDeltaGBP || 0) +
     (selectedOrigin?.priceDeltaGBP || 0) +
-    (selectedCarat?.priceDeltaGBP || 0) + 
+    (selectedCarat?.priceDeltaGBP || 0) +
     (selectedColour?.priceDeltaGBP || 0) +
     (selectedClarity?.priceDeltaGBP || 0) +
-    (selectedCert?.priceDeltaGBP || 0) +
     (engravingSelected ? (product.engravingFeeGBP || 0) : 0);
 
   // Prepare selections for StickySummary
@@ -80,11 +79,21 @@ export function ProductDetail({ product }: ProductDetailProps) {
     carat: selectedCarat?.label,
     colour: selectedColour?.label,
     clarity: selectedClarity?.label,
-    certificate: selectedCert?.label,
     metal: selectedMetal?.name,
     ringSize: selectedSize || undefined,
     engraving: engravingSelected ? "Yes" : null,
   };
+
+  // Check if current config is entry-level (1ct, F, VS1, Lab-grown)
+  const isEntryLevel = Boolean(
+    selectedCarat?.label === '1ct' &&
+    selectedColour?.label === 'F' &&
+    selectedClarity?.label === 'VS1' &&
+    selectedOrigin?.label !== 'Natural'
+  );
+
+  // Check if natural diamond is selected
+  const isNaturalDiamond = selectedOrigin?.label === 'Natural';
 
   // Check if required fields are selected (ring size is required)
   const canAdd = Boolean(selectedSize);
@@ -99,8 +108,21 @@ export function ProductDetail({ product }: ProductDetailProps) {
     });
   };
 
+  // Generate structured data
+  const productJsonLd = generateProductJsonLd(product);
+  const breadcrumbJsonLd = generatePdpBreadcrumbJsonLd(product);
+
   return (
-    <main className="min-h-screen bg-white pb-24 md:pb-12">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <main className="min-h-screen bg-white pb-24 md:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Breadcrumb Navigation */}
         <div className="mb-6">
@@ -156,14 +178,25 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               {/* Price */}
               <div className="mb-8">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-serif text-3xl lg:text-4xl text-gray-900">
-                    £{totalPrice.toLocaleString()}
-                  </span>
-                  <span className="font-sans text-sm text-gray-600">
-                    Base price: £{product.basePriceGBP.toLocaleString()}
-                  </span>
-                </div>
+                {isNaturalDiamond ? (
+                  <div className="flex flex-col gap-2">
+                    <span className="font-serif text-2xl lg:text-3xl text-gray-900">
+                      Price upon request
+                    </span>
+                    <span className="font-sans text-sm text-gray-600">
+                      Natural diamonds require consultation for pricing
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-serif text-3xl lg:text-4xl text-gray-900">
+                      £{totalPrice.toLocaleString()}
+                    </span>
+                    <span className="font-sans text-sm text-gray-600">
+                      From £{product.basePriceGBP.toLocaleString()}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Configuration Toggle */}
@@ -210,14 +243,13 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   }}
                 />
               ) : (
-                <ProductVariants
+                <CompactProductVariants
                   product={product}
                   selectedMetal={selectedMetal}
                   selectedOrigin={selectedOrigin}
                   selectedCarat={selectedCarat}
                   selectedColour={selectedColour}
                   selectedClarity={selectedClarity}
-                  selectedCert={selectedCert}
                   selectedSize={selectedSize}
                   engravingSelected={engravingSelected}
                   engravingText={engravingText}
@@ -226,15 +258,21 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   onCaratChange={(v) => { setSelectedCarat(v); setField("carat", v?.label); }}
                   onColourChange={(v) => { setSelectedColour(v); setField("colour", v?.label); }}
                   onClarityChange={(v) => { setSelectedClarity(v); setField("clarity", v?.label); }}
-                  onCertChange={(v) => { setSelectedCert(v); setField("certificate", v?.label); }}
                   onSizeChange={(v) => { setSelectedSize(v); setField("ringSize", v || undefined); }}
                   onEngravingChange={(v) => { setEngravingSelected(v); setField("engravingOn", v); if(!v) setField("engravingText", ""); }}
                   onEngravingTextChange={(t) => { const s=t.slice(0,24); setEngravingText(s); setField("engravingText", s); }}
+                  onMetalHover={(name)=> setPreviewMetalName(name)}
                 />
               )}
 
               {/* Actions */}
-              <ProductActions product={product} />
+              <ProductActions
+                product={product}
+                isEntryLevel={isEntryLevel}
+                isNaturalDiamond={isNaturalDiamond}
+                onAddToBag={handleAddToBag}
+                canAddToBag={canAdd}
+              />
 
               {/* Share Build */}
               <div className="mt-6">
@@ -278,7 +316,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
         canAdd={canAdd}
         onAdd={handleAddToBag}
         appointmentHref="/contact"
+        isEntryLevel={isEntryLevel}
+        isNaturalDiamond={isNaturalDiamond}
       />
-    </main>
+      </main>
+    </>
   );
 }

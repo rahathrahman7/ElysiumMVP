@@ -12,7 +12,19 @@ import { useState } from "react";
 
 export default function CollectionPage({ params, searchParams }:{ params:{handle:string}, searchParams:Record<string,string|undefined> }){
   const fs = parseQuery(new URLSearchParams(searchParams as any));
-  const filtered = applyFilters(products, fs);
+  
+  // Filter products by collection handle first
+  const collectionProducts = products.filter(p => {
+    if (params.handle === 'engagement-rings') {
+      return p.collections?.includes('engagement-rings');
+    } else if (params.handle === 'mens-rings') {
+      return p.collections?.includes('mens-rings');
+    }
+    // For other collections, check if the handle matches any collection
+    return p.collections?.includes(params.handle);
+  });
+  
+  const filtered = applyFilters(collectionProducts, fs);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   return (

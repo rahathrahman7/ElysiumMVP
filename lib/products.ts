@@ -32,6 +32,12 @@ export type CertOption = {
   priceDeltaGBP: number 
 };
 
+export type WidthOption = {
+  label: string;
+  width: number;
+  priceDeltaGBP: number;
+};
+
 export type Product = {
   slug: string;
   title: string;
@@ -40,6 +46,7 @@ export type Product = {
   images: string[];    // place hero images in /public/products/
   basePriceGBP: number;
   metals?: MetalOption[];
+  widths?: WidthOption[];  // For men's rings
   origins?: OriginOption[];
   carats?: CaratOption[];
   colours?: ColourOption[];
@@ -183,7 +190,7 @@ export const products: Product[] = [
     images: [
       "/products/Luna/Luna-gold-front.jpeg",
       "/products/Luna/Luna-gold-side.jpeg",
-      "/products/Luna/Luna-gold=back.jpeg"
+      "/products/Luna/Luna-gold-back.jpeg"
     ],
     basePriceGBP: 3250,
     metals: [
@@ -231,7 +238,7 @@ export const products: Product[] = [
       "18k Yellow Gold": [
         "/products/Luna/Luna-gold-front.jpeg",
         "/products/Luna/Luna-gold-side.jpeg",
-        "/products/Luna/Luna-gold=back.jpeg"
+        "/products/Luna/Luna-gold-back.jpeg"
       ],
       "18k Rose Gold": [
         "/products/Luna/Luna-rose-front.jpeg",
@@ -345,9 +352,9 @@ export const products: Product[] = [
     description:
       "Elegant in its individuality, the Vow & Veil engagement ring pairs a round and pear-cut center stone in a gracefully sculpted, curved band for a distinctive silhouette. For perfect harmony, both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both the round and pear stones.",
     images: [
-      "/products/Vow and Veil/VV-gold-front.jpeg",
-      "/products/Vow and Veil/VV-gold-side.jpeg",
-      "/products/Vow and Veil/VV-gold-back.jpeg"
+      "/products/vow-and-veil/VV-gold-front.jpeg",
+      "/products/vow-and-veil/VV-gold-side.jpeg",
+      "/products/vow-and-veil/VV-gold-back.jpeg"
     ],
     basePriceGBP: 4050,
     metals: [
@@ -393,23 +400,24 @@ export const products: Product[] = [
     caratBuckets: ["1-1.5", "1.5-2", "2-2.5", "2.5-3", "3plus"],
     galleryByMetal: {
       "18k Yellow Gold": [
-        "/products/Vow and Veil/VV-gold-front.jpeg",
-        "/products/Vow and Veil/VV-gold-side.jpeg",
-        "/products/Vow and Veil/VV-gold-back.jpeg"
+        "/products/vow-and-veil/VV-gold-front.jpeg",
+        "/products/vow-and-veil/VV-gold-side.jpeg",
+        "/products/vow-and-veil/VV-gold-back.jpeg"
       ],
       "18k Rose Gold": [
-        "/products/Vow and Veil/VV-rose-front.jpeg",
-        "/products/Vow and Veil/VV-rose-back.jpeg"
+        "/products/vow-and-veil/VV-rose-front.jpeg",
+        "/products/vow-and-veil/VV-rose-side.jpeg",
+        "/products/vow-and-veil/VV-rose-back.jpeg"
       ],
       "18k White Gold": [
-        "/products/Vow and Veil/VV-silver-front.jpeg",
-        "/products/Vow and Veil/VV-silver-side.jpeg",
-        "/products/Vow and Veil/VV-silver-back.jpeg"
+        "/products/vow-and-veil/VV-silver-front.jpeg",
+        "/products/vow-and-veil/VV-silver-side.jpeg",
+        "/products/vow-and-veil/VV-silver-back.jpeg"
       ],
       "Platinum": [
-        "/products/Vow and Veil/VV-silver-front.jpeg",
-        "/products/Vow and Veil/VV-silver-side.jpeg",
-        "/products/Vow and Veil/VV-silver-back.jpeg"
+        "/products/vow-and-veil/VV-silver-front.jpeg",
+        "/products/vow-and-veil/VV-silver-side.jpeg",
+        "/products/vow-and-veil/VV-silver-back.jpeg"
       ]
     }
   },
@@ -790,8 +798,7 @@ export const products: Product[] = [
   {
     slug: "eterna-oval-solitaire-hidden-halo",
     title: "Oval Solitaire w Hidden Halo",
-    blurb:
-      "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.",
+    blurb: "Classic oval solitaire with four-talon claws and hidden halo.",
     description:
       "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.",
     images: [
@@ -867,8 +874,7 @@ export const products: Product[] = [
   {
     slug: "nova-oval-solitaire-round-marquise",
     title: "Oval Solitaire w Round & Marquise",
-    blurb:
-      "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.",
+    blurb: "Oval centre stone with round and marquise side stones on refined band.",
     description:
       "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.",
     images: [
@@ -938,6 +944,692 @@ export const products: Product[] = [
         "/products/nova/nova-plat-front.jpeg",
         "/products/nova/nova-plat-side.jpeg",
         "/products/nova/nova-plat-back.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "arden-mens-ring",
+    title: "Arden — Men's Wedding Band",
+    blurb: "Brushed finish with smooth beveled edges and dual grooves.",
+    description:
+      "The Arden wedding ring showcases an elegant design with smooth beveled edges and dual polished grooves that gracefully encircle its brushed finish band.",
+    images: [
+      "/products/mens-rings/Arden/arden-silver.jpeg",
+      "/products/mens-rings/Arden/Arden-gold.jpeg",
+      "/products/mens-rings/Arden/arden-rose.jpeg"
+    ],
+    basePriceGBP: 1200,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "arden"],
+    shape: "band",
+    styles: ["classic", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Arden/Arden-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Arden/arden-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Arden/arden-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Arden/arden-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "bastion-mens-ring",
+    title: "Bastion — Men's Wedding Band",
+    blurb: "Brushed finish band with polished groove detail.",
+    description:
+      "The Bastion wedding ring stands out with its distinctive design, featuring a polished groove set into a brushed finish band.",
+    images: [
+      "/products/mens-rings/Bastion/basttion-silver.jpeg",
+      "/products/mens-rings/Bastion/bastion-gold.jpeg",
+      "/products/mens-rings/Bastion/bastion-rose.jpeg"
+    ],
+    basePriceGBP: 1250,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "bastion"],
+    shape: "band",
+    styles: ["bold", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Bastion/bastion-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Bastion/bastion-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Bastion/basttion-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Bastion/basttion-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "blacksmith-mens-ring",
+    title: "Blacksmith — Men's Wedding Band",
+    blurb: "Hammered matte finish with polished grooves and beveled edges.",
+    description:
+      "The Blacksmith design perfectly blends ruggedness and refinement, featuring a hammered matte finish, two polished grooves, and smooth, polished beveled edges.",
+    images: [
+      "/products/mens-rings/Blacksmith/blacksmith-silver.jpeg",
+      "/products/mens-rings/Blacksmith/blacksmith-gold.jpeg",
+      "/products/mens-rings/Blacksmith/blacksmith-rose.jpeg"
+    ],
+    basePriceGBP: 1350,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "blacksmith"],
+    shape: "band",
+    styles: ["artisanal", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Blacksmith/blacksmith-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Blacksmith/blacksmith-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Blacksmith/blacksmith-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Blacksmith/blacksmith-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "heritage-mens-ring",
+    title: "Heritage — Men's Wedding Band",
+    blurb: "Hammered matte finish with smooth flat edges.",
+    description:
+      "The Heritage wedding ring features a distinctive hammered matte finish, paired with smooth flat edges for a refined look and comfortable fit.",
+    images: [
+      "/products/mens-rings/Heritage/heritage-silver.jpeg",
+      "/products/mens-rings/Heritage/heritage-gold.jpeg",
+      "/products/mens-rings/Heritage/heritage-rose.jpeg"
+    ],
+    basePriceGBP: 1300,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "heritage"],
+    shape: "band",
+    styles: ["traditional", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Heritage/heritage-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Heritage/heritage-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Heritage/heritage-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Heritage/heritage-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "kairo-mens-ring",
+    title: "Kairo — Men's Wedding Band",
+    blurb: "Brushed finish with crisp edges and single diamond detail.",
+    description:
+      "Kairo's design captures both strength and sophistication, featuring a brushed finish with crisp edges. A single diamond detail adds a subtle sparkle, blending modern minimalism with timeless elegance. An ideal choice for those who value understated luxury and lasting style.",
+    images: [
+      "/products/mens-rings/Kairo/kairo-silver.jpeg",
+      "/products/mens-rings/Kairo/kairo-gold.jpeg",
+      "/products/mens-rings/Kairo/kairo-rose.jpeg"
+    ],
+    basePriceGBP: 1400,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "kairo"],
+    shape: "band",
+    styles: ["contemporary", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Kairo/kairo-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Kairo/kairo-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Kairo/kairo-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Kairo/kairo-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "orion-mens-ring",
+    title: "Orion — Men's Wedding Band",
+    blurb: "Smooth finish with beveled edges for timeless elegance.",
+    description:
+      "Orion's design captures simplicity and elegance through its smooth finish and beveled edges. Ideal for those who appreciate grace and understatement, it reflects a timeless charm that speaks to refined sensibilities.",
+    images: [
+      "/products/mens-rings/Orion/orion-silver.jpeg",
+      "/products/mens-rings/Orion/orion-gold.jpeg",
+      "/products/mens-rings/Orion/orion-rose.jpeg"
+    ],
+    basePriceGBP: 1350,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "orion"],
+    shape: "band",
+    styles: ["stellar", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Orion/orion-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Orion/orion-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Orion/orion-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Orion/orion-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "sable-mens-ring",
+    title: "Sable — Men's Wedding Band",
+    blurb: "Brushed finish with polished step-cut beveled edges.",
+    description:
+      "Sable features a brushed finish complemented by polished step-cut beveled edges, creating a bold yet comfortable design.",
+    images: [
+      "/products/mens-rings/Sable/sable-silver.jpeg",
+      "/products/mens-rings/Sable/sable-gold.jpeg",
+      "/products/mens-rings/Sable/sable-rose.jpeg"
+    ],
+    basePriceGBP: 1200,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "sable"],
+    shape: "band",
+    styles: ["sophisticated", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Sable/sable-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Sable/sable-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Sable/sable-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Sable/sable-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "vireo-mens-ring",
+    title: "Vireo — Men's Wedding Band",
+    blurb: "Brushed finish band with smooth contours and centered diamond.",
+    description:
+      "Vireo's design embodies harmony and grace, featuring smooth contours and a brushed finish that give it a contemporary edge. A centered diamond serves as a radiant focal point, creating a look that is both unique and subtle. This timeless piece appeals to those who appreciate balance, elegance, and quiet confidence.",
+    images: [
+      "/products/mens-rings/Vireo/vireo-silver.jpeg",
+      "/products/mens-rings/Vireo/vireo-gold.jpeg",
+      "/products/mens-rings/Vireo/vireo-rose.jpeg"
+    ],
+    basePriceGBP: 1300,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: true,
+    collections: ["mens-rings", "wedding-bands", "vireo"],
+    shape: "band",
+    styles: ["nature-inspired", "wedding-band"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/Vireo/vireo-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/Vireo/vireo-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/Vireo/vireo-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/Vireo/vireo-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-side-cut-mens-ring",
+    title: "Traditional Side Cut — Men's Wedding Band",
+    blurb: "Timeless style with refined step-cut edge details.",
+    description:
+      "The Traditional Side Cut wedding ring offers a timeless style, elevated by the refined detail of step-cut edges.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Side Cut/TSC-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Side Cut/TSC-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Side Cut/TSC-rose.jpeg"
+    ],
+    basePriceGBP: 1150,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-side-cut"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "step-cut"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Side Cut/TSC-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Side Cut/TSC-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Side Cut/TSC-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Side Cut/TSC-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-milgrain-mens-ring",
+    title: "Traditional Milgrain — Men's Wedding Band",
+    blurb: "Vintage-inspired design with delicate milgrain detailing.",
+    description:
+      "Featuring delicate milgrain detailing along its edges, the Traditional Milgrain wedding ring is a vintage-inspired design with a polished, curved band.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Milgrain/TM-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Milgrain/TM-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Milgrain/TM-rose.jpeg"
+    ],
+    basePriceGBP: 1180,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-milgrain"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "vintage", "milgrain"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Milgrain/TM-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Milgrain/TM-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Milgrain/TM-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Milgrain/TM-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-flat-bevel-mens-ring",
+    title: "Traditional Flat Bevel — Men's Wedding Band",
+    blurb: "Sleek refined design with polished beveled edges.",
+    description:
+      "The Classic Flat Bevel wedding ring showcases a sleek, refined design with a smooth surface and polished, beveled edges.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-rose.jpeg"
+    ],
+    basePriceGBP: 1120,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-flat-bevel"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "bevel"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-flat-mens-ring",
+    title: "Traditional Flat — Men's Wedding Band",
+    blurb: "Minimalist sleek design with smoothed flat edges.",
+    description:
+      "The Traditional Flat wedding ring features a minimalist, sleek design with smoothed flat edges for enhanced comfort.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Flat/Tflat-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Flat/Tflat-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Flat/Tflat-rose.jpeg"
+    ],
+    basePriceGBP: 1050,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-flat"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "minimalist"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Flat/Tflat-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Flat/Tflat-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Flat/Tflat-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Flat/Tflat-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-double-milgrain-mens-ring",
+    title: "Traditional Double Milgrain — Men's Wedding Band",
+    blurb: "Vintage-style design with two rows of intricate milgrain detailing.",
+    description:
+      "The Traditional Double Milgrain wedding ring is a vintage-style design, showcasing two rows of intricate milgrain detailing on a smooth, curved band.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-rose.jpeg"
+    ],
+    basePriceGBP: 1220,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-double-milgrain"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "vintage", "milgrain"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-silver.jpeg"
+      ]
+    }
+  },
+  {
+    slug: "traditional-court-mens-ring",
+    title: "Traditional Court — Men's Wedding Band",
+    blurb: "Timeless design with smooth curved exterior and polished finish.",
+    description:
+      "The traditional court wedding ring is a timeless design, featuring a smooth curved exterior, straight edges, and a polished finish.",
+    images: [
+      "/products/mens-rings/traditional/Traditional Court/Tcourt-silver.jpeg",
+      "/products/mens-rings/traditional/Traditional Court/Tcourt-gold.jpeg",
+      "/products/mens-rings/traditional/Traditional Court/Tcourt-rose.jpeg"
+    ],
+    basePriceGBP: 1100,
+    metals: [
+      { name: "18k Yellow Gold", hex: METAL_HEX.yellow18k, priceDeltaGBP: 0 },
+      { name: "18k Rose Gold",   hex: METAL_HEX.rose18k,   priceDeltaGBP: 0 },
+      { name: "18k White Gold",  hex: METAL_HEX.white18k,  priceDeltaGBP: 0 },
+      { name: "Platinum",        hex: METAL_HEX.platinum,  priceDeltaGBP: 150 }
+    ],
+    widths: [
+      { label: "3mm", width: 3, priceDeltaGBP: -100 },
+      { label: "4mm", width: 4, priceDeltaGBP: -50 },
+      { label: "5mm", width: 5, priceDeltaGBP: 0 },
+      { label: "6mm", width: 6, priceDeltaGBP: 50 },
+      { label: "7mm", width: 7, priceDeltaGBP: 100 },
+      { label: "8mm", width: 8, priceDeltaGBP: 150 }
+    ],
+    engravingFeeGBP: 25,
+    engravingMaxChars: 30,
+    sizes: generateRingSizes(),
+    qualityBanner: "Premium craftsmanship • Comfort fit",
+    isFeatured: false,
+    collections: ["mens-rings", "wedding-bands", "traditional", "traditional-court"],
+    shape: "band",
+    styles: ["traditional", "wedding-band", "court"],
+    galleryByMetal: {
+      "18k Yellow Gold": [
+        "/products/mens-rings/traditional/Traditional Court/Tcourt-gold.jpeg"
+      ],
+      "18k Rose Gold": [
+        "/products/mens-rings/traditional/Traditional Court/Tcourt-rose.jpeg"
+      ],
+      "18k White Gold": [
+        "/products/mens-rings/traditional/Traditional Court/Tcourt-silver.jpeg"
+      ],
+      "Platinum": [
+        "/products/mens-rings/traditional/Traditional Court/Tcourt-silver.jpeg"
       ]
     }
   }

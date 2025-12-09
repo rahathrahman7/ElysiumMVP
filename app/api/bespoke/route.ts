@@ -1,30 +1,64 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { env, requireEnv } from "@/lib/env";
-// import { createClient } from "sanity";
+import { requireEnv } from "@/lib/env";
+import { prisma } from "@/lib/database/prisma";
+import { z } from "zod";
+
+const bespokeSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().optional(),
+  budget: z.string().optional(),
+  notes: z.string().optional(),
+});
 
 export async function POST(request: Request) {
-  const resend = new Resend(requireEnv("RESEND_API_KEY"));
-  const form = await request.formData();
-  const name = String(form.get("name") || "");
-  const email = String(form.get("email") || "");
-  const phone = String(form.get("phone") || "");
-  const budget = String(form.get("budget") || "");
-  const notes = String(form.get("notes") || "");
+  try {
+    const resend = new Resend(requireEnv("RESEND_API_KEY"));
+    const form = await request.formData();
 
-  // Send email
-  await resend.emails.send({
-    from: "studio@elysium.example",
-    to: ["hello@elysium.example"],
-    subject: "New Bespoke Enquiry",
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nBudget: ${budget}\nNotes: ${notes}`,
-  });
+    const data = bespokeSchema.parse({
+      name: String(form.get("name") || ""),
+      email: String(form.get("email") || ""),
+      phone: String(form.get("phone") || ""),
+      budget: String(form.get("budget") || ""),
+      notes: String(form.get("notes") || ""),
+    });
 
-  // Create Lead in Sanity - commented out until Sanity is installed
-  // const client = createClient({ projectId: env.SANITY_PROJECT_ID, dataset: env.SANITY_DATASET, apiVersion: "2024-07-01", token: env.SANITY_API_TOKEN });
-  // await client.create({ _type: "lead", name, email, phone, budget, notes });
+    // Save lead to database
+    const lead = await prisma.bespokeLead.create({
+      data: {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        budget: data.budget,
+        notes: data.notes,
+      }
+    });
 
-  return NextResponse.json({ ok: true });
+    // Send email
+    await resend.emails.send({
+      from: "studio@elysium.example",
+      to: ["hello@elysium.example"],
+      subject: "New Bespoke Enquiry",
+      text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'N/A'}\nBudget: ${data.budget || 'N/A'}\nNotes: ${data.notes || 'N/A'}\n\nLead ID: ${lead.id}`,
+    });
+
+    return NextResponse.json({ ok: true, leadId: lead.id });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: 'Validation error', details: error.issues },
+        { status: 400 }
+      );
+    }
+
+    console.error('Bespoke enquiry error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
 }
 
 

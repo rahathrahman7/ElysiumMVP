@@ -68,7 +68,21 @@ export async function getProductsFiltered(params: Record<string, string | undefi
   let filteredProducts = localProducts;
   if (params.category) {
     filteredProducts = localProducts.filter(p => 
-      p.category?.toLowerCase() === params.category?.toLowerCase()
+      p.collections?.includes(params.category || '') ||
+      (params.category === 'ring' && p.collections?.includes('engagement-rings')) ||
+      (params.category === 'mens-rings' && p.collections?.includes('mens-rings'))
+    );
+  }
+
+  if (params.shape) {
+    const shape = (params.shape || '').toLowerCase();
+    filteredProducts = filteredProducts.filter(p => (p.shape || '').toLowerCase() === shape);
+  }
+
+  if (params.collection) {
+    const collection = (params.collection || '').toLowerCase();
+    filteredProducts = filteredProducts.filter(p => 
+      p.collections?.some(c => c.toLowerCase() === collection)
     );
   }
 
@@ -96,6 +110,7 @@ export async function getProductsFiltered(params: Record<string, string | undefi
     _id: p.slug,
     title: p.title,
     blurb: p.blurb,
+    description: p.description,
     slug: p.slug,
     images: p.images?.map(img => ({ url: img })) || [],
     basePriceGBP: p.basePriceGBP,
@@ -104,5 +119,3 @@ export async function getProductsFiltered(params: Record<string, string | undefi
 
   return { products, total, page, limit };
 }
-
-

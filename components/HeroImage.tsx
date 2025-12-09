@@ -36,10 +36,8 @@ export default function HeroImage() {
 
       {/* Readability overlays */}
       <div className="pointer-events-none absolute inset-0">
-        {/* soft top-to-bottom gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/28 via-transparent to-white/42" />
-        {/* vignette via mask for edges */}
-        <div className="absolute inset-0 [mask-image:radial-gradient(85%_100%_at_50%_55%,#000_70%,transparent_100%)]" />
+        {/* Subtle white overlay for contrast */}
+        <div className="absolute inset-0 bg-white/20" />
       </div>
 
       {/* Foreground content */}
@@ -48,9 +46,8 @@ export default function HeroImage() {
 
           {/* Logo with subtle gold glow + gentle pulse */}
           <div className="relative animate-fade-in" style={{ animationDelay: "0ms" }}>
-            {/* glow */}
-            <div className="absolute -inset-x-20 -inset-y-12 md:-inset-x-28 md:-inset-y-16 rounded-full opacity-60 blur-2xl
-                            bg-[radial-gradient(closest-side,rgba(212,175,55,0.18),transparent_65%)]" />
+            {/* Subtle glow - no gradient */}
+            <div className="absolute -inset-x-20 -inset-y-12 md:-inset-x-28 md:-inset-y-16 rounded-full opacity-40 blur-2xl bg-[var(--elysium-gold)]" />
             <Image
               src="/logo/image.png"
               alt="ELYSIUM London"

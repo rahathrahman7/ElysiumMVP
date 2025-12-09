@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
 import { PlausibleAnalytics } from "@/components/PlausibleAnalytics";
+import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 import { Header } from "@/components/ui/Header";
 import LuxuryHeader from "@/components/ui/LuxuryHeader";
 import { Footer } from "@/components/Footer";
@@ -33,12 +34,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#D4AF37" />
+        <meta name="theme-color" content="#45321e" />
         <meta name="color-scheme" content="light" />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} bg-white text-black antialiased`}>
         <AccessibilityProvider>
           <PlausibleAnalytics />
+          <ServiceWorkerRegistration />
           <SkipLinks />
           
           <div id="app-root">

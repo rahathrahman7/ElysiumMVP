@@ -1,0 +1,14 @@
+# BMAD™ Creative Intelligence Suite Configuration
+
+code: cis
+name: "CIS: Creative Innovation Suite"
+default_selected: false # This module will not be selected by default for new installations
+
+prompt:
+  - "Thank you for choosing the BMAD™ Creative Intelligence Suite, an early beta release with much more planned!"
+  - "With this BMAD™ Creative Intelligence Suite Configuration, remember that all paths are relative to project root, with no leading slash."
+# Variables from Core Config inserted:
+
+## user_name
+## communication_language
+## output_folder

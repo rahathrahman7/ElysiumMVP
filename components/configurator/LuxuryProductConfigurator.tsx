@@ -118,7 +118,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
     metal: metalOptions[0],
     cut: cutOptions[0],
     size: '6',
-    totalPrice: product.basePriceGBP / 100
+    totalPrice: product.basePriceGBP
   });
   
   const [showARPreview, setShowARPreview] = useState(false);
@@ -132,7 +132,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
   ];
 
   useEffect(() => {
-    const newPrice = (product.basePriceGBP / 100) + 
+    const newPrice = (product.basePriceGBP) + 
                      configuration.metal.price + 
                      (configuration.cut?.priceModifier || 0);
     
@@ -172,7 +172,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
   return (
     <div className="luxury-glass rounded-3xl overflow-hidden shadow-2xl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-elysium-obsidian to-elysium-charcoal p-6">
+      <div className="bg-[#753600] p-6">
         <div className="flex items-center justify-between">
           <h3 className="luxury-h2 text-white">Design Your Ring</h3>
           <div className="flex items-center space-x-3">
@@ -227,7 +227,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
       </div>
 
       {/* Configuration Content */}
-      <div className="p-6 bg-gradient-to-b from-elysium-ivory to-elysium-pearl min-h-[400px]">
+      <div className="p-6 bg-[#f5f5dc] min-h-[400px]">
         {/* Step 0: Metal Selection */}
         {activeStep === 0 && (
           <div className="space-y-6">
@@ -270,7 +270,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
                   </p>
                   
                   {configuration.metal.id === metal.id && (
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-elysium-gold/5 via-elysium-gold/10 to-elysium-gold/5 pointer-events-none" />
+                    <div className="absolute inset-0 rounded-2xl bg-elysium-gold/10 pointer-events-none" />
                   )}
                 </button>
               ))}
@@ -459,7 +459,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
           {activeStep < steps.length - 1 ? (
             <button
               onClick={() => setActiveStep(Math.min(steps.length - 1, activeStep + 1))}
-              className="flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-elysium-gold to-amber-500 text-white rounded-xl font-medium tracking-wide hover:scale-105 transition-all duration-300"
+              className="flex items-center space-x-2 px-8 py-3 bg-elysium-gold text-white rounded-xl font-medium tracking-wide hover:scale-105 transition-all duration-300"
             >
               <span>Next Step</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -467,7 +467,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
               </svg>
             </button>
           ) : (
-            <button className="flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl font-medium tracking-wide hover:scale-105 transition-all duration-300">
+            <button className="flex items-center space-x-2 px-8 py-3 bg-green-600 text-white rounded-xl font-medium tracking-wide hover:scale-105 transition-all duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5.5M7 13v6a2 2 0 002 2h6a2 2 0 002-2v-6" />
               </svg>
@@ -493,7 +493,7 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
               </button>
             </div>
             <div className="p-6">
-              <div className="aspect-video bg-gradient-to-br from-elysium-pearl to-elysium-champagne rounded-2xl flex items-center justify-center">
+              <div className="aspect-video bg-[#f5f5dc] rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto mb-4 bg-elysium-gold/20 rounded-full flex items-center justify-center">
                     <svg className="w-12 h-12 text-elysium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">

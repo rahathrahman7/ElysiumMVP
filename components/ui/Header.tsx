@@ -11,6 +11,7 @@ export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   // Track if we've scrolled past the hero section
   // Transparent over hero; gold once below
@@ -26,10 +27,22 @@ export function Header() {
     return () => window.removeEventListener('scroll', handler as any);
   }, []);
 
+  // Logo should be visible only when navbar has white background
+  // On homepage: show ONLY when scrolled (navbar is white)
+  // On other pages: always show
+  const showLogo = isHomePage ? scrolledPastHero : true;
+
   return (
-    <header className={`${pathname === '/' ? 'fixed' : 'sticky'} top-0 left-0 right-0 z-40 border-b border-transparent ${scrolledPastHero ? 'bg-[var(--gold)]/85 backdrop-blur-sm' : 'bg-transparent'}`}>
+    <header className={`${isHomePage ? 'fixed' : 'sticky'} top-0 left-0 right-0 z-40 border-b border-transparent ${scrolledPastHero ? 'bg-white/95 backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 h-20 flex items-center justify-between gap-6">
-        <Link href="/" className={`eb-serif text-3xl tracking-wide text-black flex-shrink-0`}>
+        <Link
+          href="/"
+          className={`eb-serif text-3xl tracking-wide flex-shrink-0 transition-all duration-500 text-elysium-brown ${
+            showLogo
+              ? 'opacity-100'
+              : 'opacity-0 pointer-events-none'
+          }`}
+        >
           ELYSIUM
         </Link>
 
@@ -51,9 +64,14 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`eb-serif text-[20px] tracking-wide text-black`}
+              className={`navbar-link eb-serif text-[20px] tracking-wide transition-colors duration-300 relative group ${
+                scrolledPastHero
+                  ? 'text-elysium-brown hover:text-elysium-gold'
+                  : 'text-elysium-brown hover:text-elysium-gold'
+              }`}
             >
               {item.label}
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-elysium-gold transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </nav>
@@ -74,7 +92,7 @@ export function Header() {
           
           <Link
             href="/bespoke"
-            className={`eb-serif px-4 py-2 rounded-md border border-black text-black bg-transparent text-[20px]`}
+            className="eb-serif px-4 py-2 rounded-md border border-elysium-brown text-elysium-brown hover:bg-elysium-gold hover:border-elysium-gold hover:text-elysium-brown transition-all duration-300 text-[20px]"
           >
             BOOK APPOINTMENT
           </Link>
@@ -114,7 +132,7 @@ export function Header() {
 
       {/* Mobile Search */}
       {searchOpen && (
-        <div className="lg:hidden bg-[var(--surface-elevated)] border-t border-[var(--border-subtle)] animate-slide-in-top">
+        <div className="lg:hidden bg-elysium-light border-t border-elysium-dark/20 animate-slide-in-top">
           <div className="container mx-auto px-6 py-4">
             <SearchBar />
           </div>
@@ -123,7 +141,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[var(--surface-elevated)] border-t border-[var(--border-subtle)] animate-slide-in-top">
+        <div className="md:hidden bg-elysium-light border-t border-elysium-dark/20 animate-slide-in-top">
           <nav className="container mx-auto px-6 py-4 space-y-1">
             {[
               { href: "/products", label: "Collection" },
@@ -138,17 +156,17 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 px-2 text-[var(--color-ink)] hover:text-[var(--color-gold)] hover:bg-[var(--color-ivory)] rounded-lg transition-all duration-200 font-serif font-medium"
+                className="block py-3 px-2 text-elysium-dark hover:text-white hover:bg-elysium-dark rounded-lg transition-all duration-200 font-serif font-medium"
               >
                 {item.label}
               </Link>
             ))}
             
-            <div className="pt-4 mt-4 border-t border-[var(--border-subtle)]">
+            <div className="pt-4 mt-4 border-t border-elysium-dark/20">
               <Link
                 href="/bespoke"
                 onClick={() => setMobileMenuOpen(false)}
-                className="btn-primary w-full text-center"
+                className="block w-full text-center py-3 px-4 bg-elysium-dark text-elysium-light hover:bg-elysium-dark/90 rounded-lg transition-all duration-200 font-serif font-medium"
               >
                 BOOK APPOINTMENT
               </Link>

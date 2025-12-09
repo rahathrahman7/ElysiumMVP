@@ -20,7 +20,7 @@ export default function FilterSections() {
   const sp = useSearchParams();
   const state = parseQuery(sp);
 
-  const toggleAndPush = (key: "style"|"shape"|"metal", id: string) => {
+  const toggleAndPush = (key: "style"|"shape"|"metal"|"collection", id: string) => {
     const next = toggle(state, key, id);
     router.push(`${location.pathname}${toQuery(next)}`, { scroll: false });
   };
@@ -32,6 +32,7 @@ export default function FilterSections() {
   // Prepare items for SelectionSummary
   const summaryItems = [
     { key: "Style", value: state.style?.length ? `${state.style.length} selected` : undefined },
+    { key: "Collection", value: state.collection?.length ? `${state.collection.length} selected` : undefined },
     { key: "Shape", value: state.shape?.length ? `${state.shape.length} selected` : undefined },
     { key: "Metal", value: state.metal?.length ? `${state.metal.length} selected` : undefined },
   ];
@@ -55,9 +56,24 @@ export default function FilterSections() {
                   active={(state.style || []).includes(opt.id)}
                   onClick={() => toggleAndPush("style", opt.id)}
                   className="config-option-card"
-                >
-                  <span className="text-xl">💎</span>
-                </SelectCard>
+                  iconSrc={opt.icon}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Collection Section */}
+          <div>
+            <h4 className="font-serif text-xl text-neutral-800 mb-6 font-light tracking-wide">Choose Your Collection</h4>
+            <div className="configurator-grid">
+              {facets.collection.map(opt => (
+                <SelectCard
+                  key={opt.id}
+                  label={opt.label}
+                  active={(state.collection || []).includes(opt.id)}
+                  onClick={() => toggleAndPush("collection", opt.id)}
+                  className="config-option-card"
+                />
               ))}
             </div>
           </div>
@@ -73,9 +89,8 @@ export default function FilterSections() {
                   active={(state.shape || []).includes(opt.id)}
                   onClick={() => toggleAndPush("shape", opt.id)}
                   className="config-option-card"
-                >
-                  <span className="text-xl">✨</span>
-                </SelectCard>
+                  iconSrc={opt.icon}
+                />
               ))}
             </div>
           </div>

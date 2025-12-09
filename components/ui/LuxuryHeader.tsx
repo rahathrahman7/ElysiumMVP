@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -18,6 +18,7 @@ export default function LuxuryHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDiamondDropdownOpen, setIsDiamondDropdownOpen] = useState(false);
+  const diamondDropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
@@ -29,6 +30,23 @@ export default function LuxuryHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (diamondDropdownRef.current && !diamondDropdownRef.current.contains(event.target as Node)) {
+        setIsDiamondDropdownOpen(false);
+      }
+    };
+
+    if (isDiamondDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDiamondDropdownOpen]);
 
   return (
     <header
@@ -44,14 +62,16 @@ export default function LuxuryHeader() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="relative group">
-            <div className="transition-all duration-300 group-hover:scale-105">
-              <span className={clsx(
-                "font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300",
-                isHomePage 
-                  ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                  : "text-elysium-charcoal"
-              )}>
+          <Link href="/" className={clsx("relative transition-all duration-300", isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100")}>
+            <div className="group transition-all duration-300 hover:scale-105">
+              <span
+                className={clsx(
+                  "font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300",
+                  isHomePage
+                    ? (isScrolled ? "text-[#45321e]" : "text-white")
+                    : "text-[#45321e]"
+                )}
+              >
                 ELYSIUM
               </span>
             </div>
@@ -61,14 +81,14 @@ export default function LuxuryHeader() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4">
             {/* Diamonds Dropdown */}
-            <div className="relative">
+            <div className="relative" ref={diamondDropdownRef}>
               <DiamondShapesTrigger
                 isOpen={isDiamondDropdownOpen}
                 onToggle={() => setIsDiamondDropdownOpen(!isDiamondDropdownOpen)}
                 className={clsx(
                   isHomePage
-                    ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                    : "text-elysium-charcoal"
+                    ? (isScrolled ? "text-[#45321e]" : "text-white")
+                    : "text-[#45321e]"
                 )}
               />
               <DiamondShapesDropdown
@@ -83,12 +103,11 @@ export default function LuxuryHeader() {
                 href={link.href}
                 className={clsx(
                   "relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 group overflow-hidden rounded-2xl",
-                  "hover:text-white",
                   pathname === link.href
                     ? "text-elysium-gold"
                     : isHomePage
-                    ? (isScrolled ? "text-elysium-charcoal hover:text-elysium-gold" : "text-white")
-                    : "text-elysium-charcoal hover:text-elysium-gold"
+                    ? (isScrolled ? "text-[#45321e]" : "text-white")
+                    : "text-[#45321e]"
                 )}
               >
                 {link.label}
@@ -103,17 +122,9 @@ export default function LuxuryHeader() {
                   />
                 )}
                 
-                {/* Gold gradient effect when transparent over hero - matching "Explore Collection" button */}
+                {/* Glassmorphism effect for transparent navbar */}
                 {isHomePage && !isScrolled && (
-                  <>
-                    <span className="absolute inset-0 bg-gradient-to-r from-elysium-gold to-amber-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
-                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 rounded-2xl" />
-                  </>
-                )}
-                
-                {/* Regular hover glow for white navbar */}
-                {(isScrolled || !isHomePage) && (
-                  <span className="absolute inset-0 bg-elysium-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                  <span className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                 )}
               </Link>
             ))}
@@ -127,8 +138,8 @@ export default function LuxuryHeader() {
                 "p-2 rounded-full transition-all duration-300 hover:scale-110",
                 "hover:bg-elysium-gold/10",
                 isHomePage 
-                  ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                  : "text-elysium-charcoal"
+                  ? (isScrolled ? "text-[#45321e]" : "text-white")
+                  : "text-[#45321e]"
               )}
               aria-label="Search"
             >
@@ -144,8 +155,8 @@ export default function LuxuryHeader() {
                 "relative p-2 rounded-full transition-all duration-300 hover:scale-110",
                 "hover:bg-elysium-gold/10",
                 isHomePage 
-                  ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                  : "text-elysium-charcoal"
+                  ? (isScrolled ? "text-[#45321e]" : "text-white")
+                  : "text-[#45321e]"
               )}
               aria-label="Shopping cart"
             >
@@ -165,8 +176,8 @@ export default function LuxuryHeader() {
                 "p-2 rounded-full transition-all duration-300 hover:scale-110",
                 "hover:bg-elysium-gold/10",
                 isHomePage 
-                  ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                  : "text-elysium-charcoal"
+                  ? (isScrolled ? "text-[#45321e]" : "text-white")
+                  : "text-[#45321e]"
               )}
               aria-label="Wishlist"
             >
@@ -182,8 +193,8 @@ export default function LuxuryHeader() {
                 "md:hidden p-2 rounded-full transition-all duration-300",
                 "hover:bg-elysium-gold/10",
                 isHomePage 
-                  ? (isScrolled ? "text-elysium-charcoal" : "text-white")
-                  : "text-elysium-charcoal"
+                  ? (isScrolled ? "text-[#45321e]" : "text-white")
+                  : "text-[#45321e]"
               )}
               aria-label="Toggle menu"
             >
@@ -217,14 +228,14 @@ export default function LuxuryHeader() {
               <DiamondShapesTrigger
                 isOpen={isDiamondDropdownOpen}
                 onToggle={() => setIsDiamondDropdownOpen(!isDiamondDropdownOpen)}
-                className="text-elysium-charcoal w-full justify-start"
+                className="text-[#45321e] w-full justify-start"
               />
               {isDiamondDropdownOpen && (
                 <div className="mt-3 pl-4 space-y-2">
                   {['round', 'oval', 'princess', 'pear', 'radiant'].map((shape) => (
                     <Link
                       key={shape}
-                      href={`/diamonds/${shape}`}
+                      href={`/diamonds?shape=${shape}`}
                       onClick={() => {
                         setIsMobileMenuOpen(false);
                         setIsDiamondDropdownOpen(false);
@@ -244,7 +255,7 @@ export default function LuxuryHeader() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={clsx(
-                  "block px-6 py-3 text-elysium-charcoal font-medium tracking-wide transition-all duration-300",
+                  "block px-6 py-3 text-[#45321e] font-medium tracking-wide transition-all duration-300",
                   "hover:text-elysium-gold hover:bg-elysium-gold/5 hover:translate-x-2",
                   pathname === link.href && "text-elysium-gold bg-elysium-gold/10"
                 )}
@@ -259,7 +270,7 @@ export default function LuxuryHeader() {
               <Link
                 href="/bespoke"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full py-3 px-6 bg-gradient-to-r from-elysium-gold to-amber-500 text-white text-center font-medium tracking-wide rounded-xl hover:scale-105 transition-transform duration-300"
+                className="block w-full py-3 px-6 bg-elysium-brown text-white text-center font-medium tracking-wide rounded-xl hover:bg-elysium-gold hover:text-elysium-brown hover:scale-105 transition-all duration-300"
               >
                 Book Consultation
               </Link>

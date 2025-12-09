@@ -2,7 +2,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
+import { useMemo, useState } from "react";
 import { Product } from '@/lib/products';
+import { getProductBySlug as getLocalProductBySlug } from '@/lib/products';
 import { resolvePrimary } from '@/lib/imageResolver';
 import WishHeart from '@/components/common/WishHeart';
 
@@ -12,12 +14,22 @@ type Props = {
 };
 
 export default function ProductCard({ product, className = "" }: Props) {
+  const [activeMetal, setActiveMetal] = useState<string | undefined>(undefined);
+  // If API item omitted metals/gallery, fallback to local catalog by slug
+  const local = useMemo(() => getLocalProductBySlug(product.slug), [product.slug]);
+  const effective = (local ? { ...product, ...local } : product) as Product;
   const img = product.images?.[0];
   const price = new Intl.NumberFormat("en-GB", {
     style: "currency",
     currency: "GBP",
     maximumFractionDigits: 0,
-  }).format(product.basePriceGBP / 100);
+  }).format(product.basePriceGBP);
+
+  // Distinct metals by label with optional color swatches
+  const metals = useMemo(() => (effective.metals || []).map(m => ({
+    name: m.name,
+    hex: m.hex
+  })), [effective.metals]);
 
   return (
     <div className={clsx(
@@ -25,11 +37,13 @@ export default function ProductCard({ product, className = "" }: Props) {
       className
     )}>
       {/* Media */}
-      <Link href={`/products/${product.slug}`} aria-label={product.title}>
+      <Link href={`/products/${product.slug}`} aria-label={product.title}
+        onMouseLeave={() => setActiveMetal(undefined)}
+      >
         <div className="relative overflow-hidden rounded-t-2xl aspect-[4/5] bg-[#f5f3ef] group-hover:bg-gradient-to-br group-hover:from-ivory group-hover:to-beige transition-all duration-300">
           {img ? (
             <Image
-              src={resolvePrimary(product)}
+              src={resolvePrimary(effective, activeMetal)}
               alt={product.title}
               fill
               sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
@@ -69,8 +83,8 @@ export default function ProductCard({ product, className = "" }: Props) {
           item={{ 
             slug: product.slug, 
             name: product.title, 
-            price: product.basePriceGBP / 100, 
-            imageSrc: resolvePrimary(product) 
+            price: product.basePriceGBP, 
+            imageSrc: resolvePrimary(effective) 
           }} 
           className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/85 backdrop-blur ring-1 ring-[var(--line)] hover:ring-[var(--ring)] transition text-[var(--ink-soft)]" 
         />
@@ -91,6 +105,27 @@ export default function ProductCard({ product, className = "" }: Props) {
             <p className="sans text-[13px] font-medium text-[var(--ink-soft)] group-hover:text-gold transition-colors duration-200">{price}</p>
           )}
         </div>
+
+        {/* Metal Swatches */}
+        {metals.length > 0 && (
+          <div className="mt-3 flex items-center gap-2" aria-label="Available metals">
+            {metals.map((m) => (
+              <button
+                key={m.name}
+                type="button"
+                className={clsx(
+                  "w-5 h-5 rounded-full border shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]",
+                  activeMetal === m.name ? "ring-2 ring-gold" : "border-gray-200"
+                )}
+                style={{ backgroundColor: m.hex || undefined }}
+                aria-label={`Preview in ${m.name}`}
+                onMouseEnter={() => setActiveMetal(m.name)}
+                onFocus={() => setActiveMetal(m.name)}
+                onClick={(e) => { e.preventDefault(); setActiveMetal(m.name);} }
+              />)
+            )}
+          </div>
+        )}
       </div>
       
       {/* Bottom Glow Effect */}

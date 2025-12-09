@@ -1,4 +1,4 @@
-export type FacetKey = "style"|"shape"|"metal"|"origin"|"carat"|"colour"|"clarity"|"certificate";
+export type FacetKey = "style"|"shape"|"metal"|"collection"|"origin"|"carat"|"colour"|"clarity"|"certificate";
 export type Option = { id:string; label:string; icon?:string }; // icon is a public path to PNG/SVG
 export type Facets = Record<FacetKey, Option[]>;
 
@@ -9,16 +9,22 @@ export const facets: Facets = {
     { id:"three-stone", label:"Three-Stone", icon:"/icons/styles/three-stone.svg" },
     { id:"hidden-halo", label:"Hidden Halo", icon:"/icons/styles/hidden-halo.svg" },
   ],
+  collection: [
+    { id:"signature", label:"Signature" },
+    { id:"trilogy", label:"Trilogy" },
+    { id:"heritage", label:"Heritage" },
+    { id:"modern", label:"Modern" },
+  ],
   shape: [
     { id:"round",    label:"Round",    icon:"/icons/cuts/round.svg" },
     { id:"oval",     label:"Oval",     icon:"/icons/cuts/oval.svg" },
     { id:"marquise", label:"Marquise", icon:"/icons/cuts/marquise.svg" },
-    { id:"pear",     label:"Pear",     icon:"/icons/cuts/pear.svg" },
+    { id:"pear",     label:"Pear",     icon:"/icons/cuts/pear-v2.svg" },
     { id:"princess", label:"Princess", icon:"/icons/cuts/princess.svg" },
     { id:"emerald",  label:"Emerald",  icon:"/icons/cuts/emerald.svg" },
     { id:"cushion",  label:"Cushion",  icon:"/icons/cuts/cushion.svg" },
     { id:"asscher",  label:"Asscher",  icon:"/icons/cuts/asscher.svg" },
-    { id:"radiant",  label:"Radiant",  icon:"/icons/cuts/radiant.svg" },
+    { id:"radiant",  label:"Radiant",  icon:"/icons/cuts/radiant-rect.svg" },
     { id:"heart",    label:"Heart",    icon:"/icons/cuts/heart.svg" },
   ],
   metal: [
@@ -78,6 +84,8 @@ export function toggle(state: FilterState, key:FacetKey, id:string): FilterState
   next[key] = Array.from(list);
   return next;
 }
+
+
 
 
 

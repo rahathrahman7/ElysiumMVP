@@ -10,10 +10,17 @@ export default {
     extend: {
       colors: {
         ivory: "#FAF9F6",
-        beige: "#E8E2DA",
+        beige: "#f5f5dc",
         sand: "#D6C7B4",
-        charcoal: "#2C2C2C",
+        charcoal: "#753600",
         gold: "#D4AF37",
+        'elysium-brown': "#753600",
+        'elysium-brown-light': "#8B4D1A",
+        'elysium-brown-soft': "#9A6B3A",
+        'elysium-dark': "#753600",
+        'elysium-light': "#f5f5dc",
+        'elysium-charcoal': "#753600",
+        'elysium-gold': "#D4AF37",
       },
       fontFamily: {
         heading: ["var(--font-cormorant)", "Cormorant Garamond", "serif"],

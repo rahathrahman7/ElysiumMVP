@@ -17,6 +17,8 @@ type Props = {
   canAdd: boolean;
   onAdd: () => void;
   appointmentHref?: string;
+  isEntryLevel: boolean;
+  isNaturalDiamond: boolean;
 };
 
 export default function StickySummary({
@@ -26,35 +28,25 @@ export default function StickySummary({
   canAdd,
   onAdd,
   appointmentHref = "/contact",
+  isEntryLevel,
+  isNaturalDiamond,
 }: Props) {
+  const showBuyNow = isEntryLevel && !isNaturalDiamond;
+  const showInquire = !isEntryLevel || isNaturalDiamond;
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    // hydrate dismissed state once
-    const hid = sessionStorage.getItem("ely:hideSticky");
-    if (hid === "1") setDismissed(true);
-
     const onScroll = () => {
-      if (sessionStorage.getItem("ely:hideSticky") === "1") {
-        setVisible(false);
-        return;
-      }
       const y = window.scrollY || 0;
-      setVisible(y > 320);
+      // Show after scrolling just 200px
+      setVisible(y > 200);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dismiss = () => {
-    setDismissed(true);
-    sessionStorage.setItem("ely:hideSticky", "1");
-    setVisible(false);
-  };
-
-  if (!visible || dismissed) return null;
+  if (!visible) return null;
 
   return (
     <div
@@ -88,37 +80,44 @@ export default function StickySummary({
 
           {/* Price */}
           <div className="shrink-0 text-right">
-            <div className="text-xs text-neutral-600">From</div>
-            <div className="text-base font-semibold text-neutral-900">{priceFormatted}</div>
+            {isNaturalDiamond ? (
+              <div className="text-sm text-neutral-900">Price upon request</div>
+            ) : (
+              <>
+                <div className="text-xs text-neutral-600">From</div>
+                <div className="text-base font-semibold text-neutral-900">{priceFormatted}</div>
+              </>
+            )}
           </div>
 
           {/* CTAs */}
           <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              onClick={onAdd}
-              disabled={!canAdd}
-              className={`rounded-full px-4 py-2 text-sm font-medium text-white transition
-                ${canAdd ? "bg-black hover:bg-neutral-900" : "bg-neutral-300 cursor-not-allowed"}
-              `}
-            >
-              Add to Bag
-            </button>
+            {showBuyNow && (
+              <button
+                type="button"
+                onClick={onAdd}
+                disabled={!canAdd}
+                className={`rounded-full px-4 py-2 text-sm font-medium text-white transition
+                  ${canAdd ? "bg-[#753600] hover:bg-[#753600]/90" : "bg-neutral-300 cursor-not-allowed"}
+                `}
+              >
+                Add to Bag
+              </button>
+            )}
+            {showInquire && (
+              <a
+                href={appointmentHref}
+                className="rounded-full px-4 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
+              >
+                Inquire
+              </a>
+            )}
             <a
               href={appointmentHref}
               className="rounded-full border border-[var(--gold)] px-4 py-2 text-sm font-medium text-neutral-900 bg-white hover:bg-[color-mix(in_srgb,var(--gold)_10%,#fff)]"
             >
               Book Appointment
             </a>
-            <button
-              type="button"
-              aria-label="Hide summary"
-              onClick={dismiss}
-              className="ml-1 hidden h-8 w-8 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 hover:bg-white md:flex"
-              title="Hide"
-            >
-              ✕
-            </button>
           </div>
         </div>
       </div>

@@ -79,10 +79,10 @@ export default function EnhancedSelectCard({
         "group relative flex flex-col items-center justify-center rounded-[var(--radius-2xl)] border-2 transition-all duration-300 overflow-hidden",
         "hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-gold)]/50",
         active
-          ? "border-[var(--color-gold)] bg-gradient-to-br from-[var(--color-ivory)] to-[var(--surface-card)] shadow-[var(--shadow-gold-md)] ring-2 ring-[var(--color-gold)]/30 animate-luxury-glow"
+          ? "border-[var(--color-gold)] bg-[var(--color-ivory)] shadow-[var(--shadow-gold-md)] ring-2 ring-[var(--color-gold)]/30 animate-luxury-glow"
           : disabled
           ? "border-[var(--border-subtle)] bg-[var(--surface-card)] opacity-50 cursor-not-allowed"
-          : "border-[var(--border-default)] bg-[var(--surface-card)] hover:border-[var(--color-gold)] hover:shadow-[var(--shadow-md)] hover:bg-gradient-to-br hover:from-[var(--color-ivory)] hover:to-[var(--surface-card)]",
+          : "border-[var(--border-default)] bg-[var(--surface-card)] hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)] hover:shadow-[var(--shadow-md)]",
         getVariantClasses(),
         className,
       ].join(" ")}
@@ -130,9 +130,14 @@ export default function EnhancedSelectCard({
         getIconSize()
       ].join(" ")}>
         {children || (
-          <span className={variant === 'large' ? 'text-2xl' : variant === 'compact' ? 'text-lg' : 'text-xl'}>
-            ✨
-          </span>
+          <svg
+            className={variant === 'large' ? 'w-8 h-8' : variant === 'compact' ? 'w-5 h-5' : 'w-6 h-6'}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
         )}
       </div>
       
@@ -160,8 +165,6 @@ export default function EnhancedSelectCard({
         )}
       </div>
 
-      {/* Hover Glow Effect */}
-      <div className="absolute inset-0 rounded-[var(--radius-2xl)] bg-gradient-to-br from-[var(--color-gold)]/0 via-[var(--color-gold)]/0 to-[var(--color-gold)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     </button>
   );
 }

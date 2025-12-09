@@ -142,13 +142,13 @@ export const PearDiamondIcon = ({ className = "", size = 24 }: DiamondIconProps)
     className={className}
   >
     <path
-      d="M12 3C8 3 5 6 5 10C5 14 8 17 12 21C16 17 19 14 19 10C19 6 16 3 12 3Z"
+      d="M12 4C16 8 19 12 19 16C19 20 16 23 12 23C8 23 5 20 5 16C5 12 8 8 12 4Z"
       stroke="currentColor"
       strokeWidth="1.5"
       fill="none"
     />
     <path
-      d="M12 6C9.5 6 7.5 8 7.5 10.5C7.5 13 9.5 15 12 17.5C14.5 15 16.5 13 16.5 10.5C16.5 8 14.5 6 12 6Z"
+      d="M12 7C14.5 9.5 16.5 11.5 16.5 14C16.5 16.5 14.5 18.5 12 18.5C9.5 18.5 7.5 16.5 7.5 14C7.5 11.5 9.5 9.5 12 7Z"
       stroke="currentColor"
       strokeWidth="1"
       fill="none"
@@ -156,7 +156,7 @@ export const PearDiamondIcon = ({ className = "", size = 24 }: DiamondIconProps)
     />
     <circle
       cx="12"
-      cy="10"
+      cy="15"
       r="2"
       stroke="currentColor"
       strokeWidth="0.5"
@@ -176,25 +176,44 @@ export const RadiantDiamondIcon = ({ className = "", size = 24 }: DiamondIconPro
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <path
-      d="M6 4L12 2L18 4L20 12L12 22L4 12L6 4Z"
+    <rect
+      x="6"
+      y="4"
+      width="12"
+      height="16"
       stroke="currentColor"
       strokeWidth="1.5"
+      rx="1.5"
       fill="none"
     />
-    <path
-      d="M8 6L12 5L16 6L17.5 12L12 19L6.5 12L8 6Z"
+    <rect
+      x="8"
+      y="6"
+      width="8"
+      height="12"
       stroke="currentColor"
       strokeWidth="1"
       fill="none"
       opacity="0.5"
+      rx="1"
     />
     <path
-      d="M10 8L12 7.5L14 8L14.5 12L12 16L9.5 12L10 8Z"
+      d="M8 7.5L16 18.5M16 7.5L8 18.5"
       stroke="currentColor"
-      strokeWidth="0.5"
-      fill="none"
-      opacity="0.3"
+      strokeWidth="0.75"
+      opacity="0.7"
+    />
+    <path
+      d="M6 9L8 6H16L18 9"
+      stroke="currentColor"
+      strokeWidth="0.75"
+      opacity="0.6"
+    />
+    <path
+      d="M6 15L8 18H16L18 15"
+      stroke="currentColor"
+      strokeWidth="0.75"
+      opacity="0.6"
     />
   </svg>
 );

@@ -45,7 +45,7 @@ export default function LuxuryHero() {
           priority
           sizes="100vw"
           quality={100}
-          className="object-cover scale-105 transition-transform duration-[8s] ease-out hover:scale-110"
+          className="object-cover md:object-center object-[center_55%] scale-105 transition-transform duration-[8s] ease-out hover:scale-110"
         />
         
         {/* Luxury Gradient Overlays */}
@@ -79,19 +79,20 @@ export default function LuxuryHero() {
             {/* Primary CTA */}
             <Link
               href="/shop"
-              className="group relative overflow-hidden px-10 py-4 bg-gradient-to-r from-elysium-gold to-amber-500 text-white rounded-2xl font-medium tracking-[0.1em] uppercase text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-elysium-gold/25"
+              className="group px-10 py-4 text-white text-opacity-95 font-semibold tracking-[0.2em] uppercase text-sm transition-all duration-300 hover:text-white"
             >
-              <span className="relative z-10">Explore Collection</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="relative z-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">
+                Explore Collection
+              </span>
             </Link>
 
             {/* Secondary CTA */}
             <Link
               href="/bespoke"
-              className="group px-10 py-4 border-2 border-white/80 text-white rounded-2xl font-medium tracking-[0.1em] uppercase text-sm backdrop-blur-sm hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105"
+              className="group px-10 py-4 text-[var(--color-gold,#D4AF37)] font-semibold tracking-[0.2em] uppercase text-sm transition-all duration-300 flex items-center gap-2"
             >
-              Bespoke Design
-              <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+              <span className="drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">Bespoke Design</span>
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
@@ -115,7 +116,7 @@ export default function LuxuryHero() {
       >
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.02em] leading-[0.9] mb-6">
           <span className="block">{currentHero.title}</span>
-          <span className="block text-elysium-gold font-normal">{currentHero.subtitle}</span>
+          <span className="block font-normal text-[var(--color-gold,#D4AF37)]">{currentHero.subtitle}</span>
         </h2>
         
         <p className="text-lg md:text-xl text-white/90 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">

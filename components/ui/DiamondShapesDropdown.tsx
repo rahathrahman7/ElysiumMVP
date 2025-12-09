@@ -21,57 +21,57 @@ const diamondShapes: DiamondShapeItem[] = [
     shape: 'round',
     name: 'Round Brilliant',
     description: 'Classic and most popular cut',
-    href: '/diamonds/round',
+    href: '/diamonds?shape=round',
     popular: true,
   },
   {
     shape: 'oval',
     name: 'Oval',
     description: 'Elegant elongated brilliance',
-    href: '/diamonds/oval',
+    href: '/diamonds?shape=oval',
     popular: true,
   },
   {
     shape: 'princess',
     name: 'Princess',
     description: 'Modern square cut',
-    href: '/diamonds/princess',
+    href: '/diamonds?shape=princess',
   },
   {
     shape: 'pear',
     name: 'Pear',
     description: 'Unique teardrop shape',
-    href: '/diamonds/pear',
+    href: '/diamonds?shape=pear',
   },
   {
     shape: 'radiant',
     name: 'Radiant',
     description: 'Brilliant rectangular cut',
-    href: '/diamonds/radiant',
+    href: '/diamonds?shape=radiant',
   },
   {
     shape: 'emerald',
     name: 'Emerald',
     description: 'Step-cut elegance',
-    href: '/diamonds/emerald',
+    href: '/diamonds?shape=emerald',
   },
   {
     shape: 'marquise',
     name: 'Marquise',
     description: 'Regal pointed oval',
-    href: '/diamonds/marquise',
+    href: '/diamonds?shape=marquise',
   },
   {
     shape: 'heart',
     name: 'Heart',
     description: 'Symbol of love',
-    href: '/diamonds/heart',
+    href: '/diamonds?shape=heart',
   },
   {
     shape: 'cushion',
     name: 'Cushion',
     description: 'Vintage pillow cut',
-    href: '/diamonds/cushion',
+    href: '/diamonds?shape=cushion',
   },
 ];
 
@@ -97,7 +97,7 @@ export default function DiamondShapesDropdown({
       {/* Header */}
       <div className="p-4 border-b border-elysium-whisper">
         <div className="flex items-center gap-3">
-          <DiamondIcon size={20} className="text-elysium-gold" />
+          <DiamondShapeIcon shape="princess" size={20} className="text-elysium-gold" />
           <h3 className="font-serif text-lg text-elysium-charcoal">Diamond Shapes</h3>
         </div>
         <p className="text-xs text-elysium-smoke mt-1 tracking-wide">
@@ -177,13 +177,13 @@ export default function DiamondShapesDropdown({
       </div>
 
       {/* Footer CTA */}
-      <div className="p-4 bg-gradient-to-r from-elysium-gold/10 to-elysium-rose-gold/10 border-t border-elysium-whisper">
+      <div className="p-4 bg-elysium-ivory border-t border-elysium-whisper">
         <Link
           href="/diamonds"
           onClick={onClose}
           className={clsx(
             "block w-full py-3 text-center font-medium tracking-wide transition-all duration-300",
-            "bg-gradient-to-r from-elysium-gold to-amber-500 text-black hover:scale-105"
+            "bg-elysium-brown text-white hover:bg-elysium-gold hover:text-elysium-brown hover:scale-105"
           )}
         >
           Browse All Diamonds

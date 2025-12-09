@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Next.js 16: typedRoutes moved from experimental to root
+  typedRoutes: true,
   experimental: {
-    typedRoutes: true,
     optimizePackageImports: ["swr", "zustand"],
   },
   images: {
@@ -15,13 +16,9 @@ const nextConfig = {
   typescript: {
     // Skip type checking during build to speed up deployment
     // Types are still checked in CI/local dev with 'typecheck' script
-    // TODO: Fix Next.js 15 async params/searchParams types, then re-enable
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // Skip ESLint during build to speed up deployment
-    ignoreDuringBuilds: true,
-  },
+  // Note: eslint config removed - use CLI flags in Next.js 16+
   headers: async () => {
     return [
       {

@@ -119,3 +119,5 @@ coverage/
 .env.test.local
 .env.production.local
 /generated/prisma
+.vercel
+.env*.local

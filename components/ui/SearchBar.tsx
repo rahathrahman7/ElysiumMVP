@@ -2,8 +2,18 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllProducts, Product } from "@/lib/products";
+import { Product } from "@/lib/productTypes";
 import { resolvePrimary } from "@/lib/imageResolver";
+
+// Lazy load products to avoid importing large array at build time
+let cachedProducts: Product[] | null = null;
+const loadProducts = async (): Promise<Product[]> => {
+  if (!cachedProducts) {
+    const mod = await import('@/lib/products');
+    cachedProducts = mod.getAllProducts();
+  }
+  return cachedProducts;
+};
 
 interface SearchBarProps {
   className?: string;
@@ -24,21 +34,26 @@ export function SearchBar({ className = "" }: SearchBarProps) {
       return;
     }
 
-    const allProducts = getAllProducts();
-    const searchQuery = query.toLowerCase().trim();
-    
-    const filteredProducts = allProducts.filter(product => {
-      const matchesTitle = product.title.toLowerCase().includes(searchQuery);
-      const matchesDescription = product.description?.toLowerCase().includes(searchQuery);
-      const matchesMetal = product.metal?.toLowerCase().includes(searchQuery);
-      const matchesStyle = product.style?.toLowerCase().includes(searchQuery);
-      const matchesShape = product.shape?.toLowerCase().includes(searchQuery);
+    // Use async loading to avoid importing large products array at build time
+    const searchProducts = async () => {
+      const allProducts = await loadProducts();
+      const searchQuery = query.toLowerCase().trim();
       
-      return matchesTitle || matchesDescription || matchesMetal || matchesStyle || matchesShape;
-    }).slice(0, 6); // Limit to 6 results
+      const filteredProducts = allProducts.filter(product => {
+        const matchesTitle = product.title.toLowerCase().includes(searchQuery);
+        const matchesDescription = product.description?.toLowerCase().includes(searchQuery);
+        const matchesMetal = (product as unknown as { metal?: string }).metal?.toLowerCase().includes(searchQuery);
+        const matchesStyle = (product as unknown as { style?: string }).style?.toLowerCase().includes(searchQuery);
+        const matchesShape = product.shape?.toLowerCase().includes(searchQuery);
+        
+        return matchesTitle || matchesDescription || matchesMetal || matchesStyle || matchesShape;
+      }).slice(0, 6); // Limit to 6 results
 
-    setResults(filteredProducts);
-    setSelectedIndex(-1);
+      setResults(filteredProducts);
+      setSelectedIndex(-1);
+    };
+
+    searchProducts();
   }, [query]);
 
   // Handle keyboard navigation

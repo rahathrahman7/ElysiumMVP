@@ -1,6 +1,6 @@
 "use client";
 
-import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption, CertOption } from "@/lib/products";
+import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption, CertOption } from "@/lib/productTypes";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
 
 interface ProductVariantsProps {

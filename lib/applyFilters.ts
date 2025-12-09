@@ -1,5 +1,5 @@
 import type { FilterState } from "./filterSchema";
-import { Product } from "@/lib/products";
+import { Product } from "@/lib/productTypes";
 
 export function productMatches(p: Product, fs: FilterState): boolean {
   // Implement tolerant matching against your product fields:

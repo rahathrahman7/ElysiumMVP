@@ -1,4 +1,4 @@
-import type { Product } from "@/lib/products";
+import type { Product } from "@/lib/productTypes";
 import type { ProductListItem } from "@/types/product";
 
 // Union type to handle both local and API product formats

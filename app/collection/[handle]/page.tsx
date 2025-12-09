@@ -1,31 +1,54 @@
 "use client";
 
 import Link from "next/link";
-import { products } from "@/lib/products";
 import { parseQuery } from "@/lib/filterSchema";
 import { applyFilters } from "@/lib/applyFilters";
 import FiltersDrawer from "@/components/filters/FiltersDrawer";
 import FilterHeaderBar from "@/components/filters/FilterHeaderBar";
 import FilterSections from "@/components/filters/FilterSections";
 import CollectionGrid from "@/components/sections/CollectionGrid";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { Product } from "@/lib/productTypes";
 
 export default function CollectionPage({ params, searchParams }:{ params:{handle:string}, searchParams:Record<string,string|undefined> }){
-  const fs = parseQuery(new URLSearchParams(searchParams as any));
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load products on mount
+  useEffect(() => {
+    const loadProducts = async () => {
+      const mod = await import('@/lib/products');
+      setAllProducts(mod.products);
+      setIsLoading(false);
+    };
+    loadProducts();
+  }, []);
+
+  const fs = parseQuery(new URLSearchParams(searchParams as Record<string, string>));
   
   // Filter products by collection handle first
-  const collectionProducts = products.filter(p => {
-    if (params.handle === 'engagement-rings') {
-      return p.collections?.includes('engagement-rings');
-    } else if (params.handle === 'mens-rings') {
-      return p.collections?.includes('mens-rings');
-    }
-    // For other collections, check if the handle matches any collection
-    return p.collections?.includes(params.handle);
-  });
-  
-  const filtered = applyFilters(collectionProducts, fs);
-  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const filtered = useMemo(() => {
+    const collectionProducts = allProducts.filter(p => {
+      if (params.handle === 'engagement-rings') {
+        return p.collections?.includes('engagement-rings');
+      } else if (params.handle === 'mens-rings') {
+        return p.collections?.includes('mens-rings');
+      }
+      // For other collections, check if the handle matches any collection
+      return p.collections?.includes(params.handle);
+    });
+    
+    return applyFilters(collectionProducts, fs);
+  }, [allProducts, params.handle, fs]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="animate-pulse text-neutral-400">Loading collection...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white">

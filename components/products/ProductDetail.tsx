@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Product } from "@/lib/products";
+import { Product } from "@/lib/productTypes";
 import { CompactProductVariants } from "./CompactProductVariants";
 import { ProductActions } from "./ProductActions";
 import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";

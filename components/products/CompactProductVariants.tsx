@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption } from "@/lib/products";
+import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption } from "@/lib/productTypes";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
 
 interface CompactProductVariantsProps {

@@ -1,5 +1,5 @@
 "use client";
-import { Product } from '@/lib/products';
+import { Product } from '@/lib/productTypes';
 import LuxuryProductCard from '@/components/ui/LuxuryProductCard';
 
 interface CollectionGridProps {

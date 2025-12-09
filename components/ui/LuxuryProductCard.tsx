@@ -2,11 +2,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { Product } from '@/lib/products';
-import { getProductBySlug as getLocalProductBySlug } from '@/lib/products';
+import { Product } from '@/lib/productTypes';
 import { resolvePrimary } from '@/lib/imageResolver';
 import WishHeart from '@/components/common/WishHeart';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
+
+// Lazy load product lookup to avoid importing large products array at build time
+let getLocalProductBySlug: ((slug: string) => Product | undefined) | null = null;
+const loadProductLookup = async () => {
+  if (!getLocalProductBySlug) {
+    const mod = await import('@/lib/products');
+    getLocalProductBySlug = mod.getProductBySlug;
+  }
+  return getLocalProductBySlug;
+};
 
 type Props = {
   product: Product;

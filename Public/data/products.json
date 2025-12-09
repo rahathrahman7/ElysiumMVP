@@ -2096,9 +2096,9 @@
     "blurb": "Oval centre stone with round and marquise side stones on refined band.",
     "description": "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.",
     "images": [
-      "/products/nova/nova-front.jpeg",
-      "/products/nova/nova-side.jpeg",
-      "/products/nova/nova-back.jpeg"
+      "/products/Nova/nova-front.jpeg",
+      "/products/Nova/nova-side.jpeg",
+      "/products/Nova/nova-back.jpeg"
     ],
     "basePriceGBP": 3750,
     "metals": [
@@ -2273,24 +2273,24 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/nova/nova-front.jpeg",
-        "/products/nova/nova-side.jpeg",
-        "/products/nova/nova-back.jpeg"
+        "/products/Nova/nova-front.jpeg",
+        "/products/Nova/nova-side.jpeg",
+        "/products/Nova/nova-back.jpeg"
       ],
       "18k Rose Gold": [
-        "/products/nova/nova-rose-front.jpeg",
-        "/products/nova/nova-rose-side.jpeg",
-        "/products/nova/nova-rose-back.jpeg"
+        "/products/Nova/nova-rose-front.jpeg",
+        "/products/Nova/nova-rose-side.jpeg",
+        "/products/Nova/nova-rose-back.jpeg"
       ],
       "18k White Gold": [
-        "/products/nova/nova-plat-front.jpeg",
-        "/products/nova/nova-plat-side.jpeg",
-        "/products/nova/nova-plat-back.jpeg"
+        "/products/Nova/nova-plat-front.jpeg",
+        "/products/Nova/nova-plat-side.jpeg",
+        "/products/Nova/nova-plat-back.jpeg"
       ],
       "Platinum": [
-        "/products/nova/nova-plat-front.jpeg",
-        "/products/nova/nova-plat-side.jpeg",
-        "/products/nova/nova-plat-back.jpeg"
+        "/products/Nova/nova-plat-front.jpeg",
+        "/products/Nova/nova-plat-side.jpeg",
+        "/products/Nova/nova-plat-back.jpeg"
       ]
     }
   },

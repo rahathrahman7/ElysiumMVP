@@ -1,7 +1,7 @@
 interface ErrorPageProps {
-  searchParams?: {
+  searchParams: Promise<{
     error?: string;
-  };
+  }>;
 }
 
 const errorMessages: Record<string, string> = {
@@ -12,8 +12,9 @@ const errorMessages: Record<string, string> = {
   CredentialsSignin: "Invalid credentials provided.",
 };
 
-export default function AuthErrorPage({ searchParams }: ErrorPageProps) {
-  const errorKey = searchParams?.error ?? "Callback";
+export default async function AuthErrorPage({ searchParams }: ErrorPageProps) {
+  const params = await searchParams;
+  const errorKey = params?.error ?? "Callback";
   const message = errorMessages[errorKey] ?? "An unexpected error occurred.";
 
   return (

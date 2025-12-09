@@ -10,9 +10,10 @@ const updateCartSchema = z.object({
 
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.id) {
@@ -22,7 +23,7 @@ export async function PUT(
     const body = await request.json();
     const { quantity } = updateCartSchema.parse(body);
 
-    const cartItem = await updateCartItem(params.id, session.user.id, quantity);
+    const cartItem = await updateCartItem(id, session.user.id, quantity);
 
     if (!cartItem) {
       return NextResponse.json({ message: 'Item removed from cart' });
@@ -51,16 +52,17 @@ export async function PUT(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    await removeFromCart(params.id, session.user.id);
+    await removeFromCart(id, session.user.id);
 
     return NextResponse.json({ message: 'Item removed from cart' });
   } catch (error) {

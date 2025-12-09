@@ -5,16 +5,17 @@ import { getOrder } from '@/lib/services/orders';
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const order = await getOrder(params.id, session.user.id);
+    const order = await getOrder(id, session.user.id);
 
     if (!order) {
       return NextResponse.json({ error: 'Order not found' }, { status: 404 });

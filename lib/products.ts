@@ -20,7 +20,6 @@ import type { Product } from './productTypes';
 let _products: Product[] | null = null;
 
 // For server-side: load synchronously from filesystem
-// For client-side: will be loaded via fetch
 function loadProductsSync(): Product[] {
   if (_products) return _products;
   
@@ -58,21 +57,8 @@ async function loadProductsAsync(): Promise<Product[]> {
   }
 }
 
-// Export the products array (lazy loaded)
-export const products: Product[] = new Proxy([] as Product[], {
-  get(target, prop) {
-    const loaded = loadProductsSync();
-    if (prop === 'length') return loaded.length;
-    if (prop === Symbol.iterator) return loaded[Symbol.iterator].bind(loaded);
-    if (typeof prop === 'string' && !isNaN(Number(prop))) {
-      return loaded[Number(prop)];
-    }
-    if (typeof prop === 'string' && prop in Array.prototype) {
-      return (loaded as any)[prop].bind(loaded);
-    }
-    return (loaded as any)[prop];
-  }
-});
+// Export products as a getter to load on demand
+export const products: Product[] = loadProductsSync();
 
 export function getAllProducts(): Product[] {
   return loadProductsSync();

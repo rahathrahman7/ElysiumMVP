@@ -4,11 +4,19 @@ import { requireEnv } from '@/lib/env';
 import { updateOrderStatus } from '@/lib/services/orders';
 import { OrderStatus } from '@prisma/client';
 
-const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'), {
-  apiVersion: '2024-06-20',
-});
+// Lazy initialize Stripe client to avoid build-time env check
+let _stripe: Stripe | null = null;
+function getStripe() {
+  if (!_stripe) {
+    _stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'), {
+      apiVersion: '2024-06-20',
+    });
+  }
+  return _stripe;
+}
 
 export async function POST(request: Request) {
+  const stripe = getStripe();
   const body = await request.text();
   const signature = request.headers.get('stripe-signature');
 

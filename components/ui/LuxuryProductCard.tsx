@@ -26,9 +26,18 @@ type Props = {
 export default function LuxuryProductCard({ product, className = "", priority = false }: Props) {
   const [isHovered, setIsHovered] = useState(false);
   const [activeMetal, setActiveMetal] = useState<string | undefined>(undefined);
-  // If API item omitted metals/gallery, fallback to local catalog by slug
-  const local = useMemo(() => getLocalProductBySlug(product.slug), [product.slug]);
-  const effective = (local ? { ...product, ...local } : product) as Product;
+  const [localProduct, setLocalProduct] = useState<Product | undefined>(undefined);
+  
+  // Load local product data on mount
+  useEffect(() => {
+    loadProductLookup().then(lookup => {
+      if (lookup) {
+        setLocalProduct(lookup(product.slug));
+      }
+    });
+  }, [product.slug]);
+  
+  const effective = (localProduct ? { ...product, ...localProduct } : product) as Product;
   const img = product.images?.[0];
   
   // Extract ring name from title (e.g. "Celeste — Six-Claw Solitaire" -> "Celeste")

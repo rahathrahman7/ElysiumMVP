@@ -1,9 +1,8 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import ProductCard from "@/components/ui/ProductCard";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
 import FilterSections from "@/components/filters/FilterSections";
-import FiltersDrawer from "@/components/filters/FiltersDrawer";
-// reverted to static rendering (no client-only wrappers)
 
 export default async function ProductsPage() {
   // Lazy import to avoid loading large products array during build compilation
@@ -42,7 +41,9 @@ export default async function ProductsPage() {
               Want to customize your search? Click below to configure style, shape, and metal preferences
             </p>
           </div>
-          <FilterSections />
+          <Suspense fallback={<div className="animate-pulse h-20 bg-neutral-100 rounded-lg" />}>
+            <FilterSections />
+          </Suspense>
         </div>
 
         {/* Products Grid */}

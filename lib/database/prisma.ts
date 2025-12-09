@@ -8,32 +8,48 @@ const globalForPrisma = globalThis as unknown as {
   prismaAdapter: PrismaPg | undefined;
 };
 
-const databaseUrl = process.env.DATABASE_URL;
+function getPrismaClient() {
+  // During build, skip database connection initialization
+  const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' || 
+                      process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV;
+  
+  if (isBuildTime) {
+    // Return a basic client without adapter during build
+    return new PrismaClient({
+      log: ['error'],
+    });
+  }
 
-if (!databaseUrl) {
-  throw new Error('DATABASE_URL is not set. Please define it in your environment.');
+  const databaseUrl = process.env.DATABASE_URL;
+
+  if (!databaseUrl) {
+    throw new Error('DATABASE_URL is not set. Please define it in your environment.');
+  }
+
+  const pool =
+    globalForPrisma.prismaPool ??
+    new Pool({
+      connectionString: databaseUrl,
+      max: 10,
+    });
+
+  const adapter = globalForPrisma.prismaAdapter ?? new PrismaPg(pool);
+
+  const prisma =
+    globalForPrisma.prisma ??
+    new PrismaClient({
+      adapter,
+      log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    });
+
+  if (process.env.NODE_ENV !== 'production') {
+    globalForPrisma.prisma = prisma;
+    globalForPrisma.prismaPool = pool;
+    globalForPrisma.prismaAdapter = adapter;
+  }
+
+  return prisma;
 }
 
-const pool =
-  globalForPrisma.prismaPool ??
-  new Pool({
-    connectionString: databaseUrl,
-    max: 10,
-  });
-
-const adapter = globalForPrisma.prismaAdapter ?? new PrismaPg(pool);
-
-export const prisma =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    adapter,
-    log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
-  });
-
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.prisma = prisma;
-  globalForPrisma.prismaPool = pool;
-  globalForPrisma.prismaAdapter = adapter;
-}
-
+export const prisma = getPrismaClient();
 export default prisma;

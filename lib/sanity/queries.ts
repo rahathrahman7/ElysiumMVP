@@ -1,7 +1,7 @@
 import { getSanityClient } from "@/lib/sanity/client";
 import { env } from "@/lib/env";
 import type { Product, ProductListItem } from "@/types/product";
-import { getAllProducts } from "@/lib/products";
+// Removed top-level import to prevent build-time compilation of large products.ts file
 
 export async function getFeaturedProducts(): Promise<ProductListItem[]> {
   if (!env.SANITY_PROJECT_ID) return [];
@@ -61,7 +61,8 @@ export async function getProductsFiltered(params: Record<string, string | undefi
     }
   }
 
-  // Fallback to local products data
+  // Fallback to local products data - lazy import to avoid build-time compilation
+  const { getAllProducts } = await import('@/lib/products');
   const localProducts = getAllProducts();
   
   // Apply category filter if specified

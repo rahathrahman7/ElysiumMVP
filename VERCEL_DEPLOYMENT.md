@@ -214,3 +214,4 @@ Vercel automatically optimizes Next.js 15 with:
 ---
 
 **Note:** Your `.vercelignore` file excludes unnecessary directories from deployment, keeping deployments fast and secure.
+

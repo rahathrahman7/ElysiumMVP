@@ -1,3 +1,5 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "buildCommand": "prisma generate && next build",
+  "installCommand": "pnpm install --frozen-lockfile"
 }

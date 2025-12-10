@@ -58,7 +58,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
   return (
     <div 
       className={clsx(
-        "group relative luxury-card transform-gpu transition-all duration-500 ease-out",
+        "group relative luxury-card transform-gpu transition-all duration-500 ease-out touch-manipulation",
         "bg-gradient-to-b from-elysium-light/50 to-white",
         "rounded-lg overflow-hidden",
         "hover:scale-[1.03] hover:shadow-2xl hover:shadow-elysium-dark/20",
@@ -102,7 +102,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Product Image Container */}
-      <Link href={`/products/${product.slug}`} aria-label={product.title} onMouseLeave={() => setActiveMetal(undefined)}>
+      <Link href={`/products/${product.slug}`} aria-label={product.title} onMouseLeave={() => setActiveMetal(undefined)} className="block touch-manipulation">
         <div className="relative aspect-[4/5] overflow-hidden">
           {/* Gradient Overlay for Luxury Effect */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10" />
@@ -146,6 +146,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
           <div className={clsx(
             "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent",
             "flex items-end justify-center p-6 transition-all duration-300",
+            "pointer-events-none",
             isHovered ? "opacity-100" : "opacity-0"
           )}>
             <div className="transform transition-all duration-300 translate-y-4 group-hover:translate-y-0">
@@ -162,7 +163,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
 
       {/* Product Information */}
       <div className="relative p-6 bg-gradient-to-b from-white/50 to-white/80 backdrop-blur-sm">
-        <Link href={`/products/${product.slug}`} className="block group-hover:text-elysium-dark/80 transition-colors duration-300">
+        <Link href={`/products/${product.slug}`} className="block group-hover:text-elysium-dark/80 transition-colors duration-300 touch-manipulation">
           <h3 className="text-xl font-light text-elysium-dark mb-2 tracking-wide leading-tight text-center">
             {ringName}
           </h3>
@@ -183,7 +184,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
                 onFocus={() => setActiveMetal(m.name)}
-                onClick={(e) => { e.preventDefault(); setActiveMetal(m.name);} }
+                onClick={() => setActiveMetal(m.name)}
               />
             ))}
           </div>

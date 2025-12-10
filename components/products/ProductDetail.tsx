@@ -22,7 +22,10 @@ interface ProductDetailProps {
 }
 
 export function ProductDetail({ product }: ProductDetailProps) {
-  const [selectedMetal, setSelectedMetal] = useState(product.metals?.[1] || null); // Default to 18k White Gold
+  // Client requirement: Default to 18k Yellow Gold for all rings except men's rings
+  const isMensRing = product.collections?.includes('mens-rings');
+  const defaultMetalIndex = isMensRing ? 1 : 0; // Men's rings: Rose Gold, Others: Yellow Gold
+  const [selectedMetal, setSelectedMetal] = useState(product.metals?.[defaultMetalIndex] || null);
   const [selectedOrigin, setSelectedOrigin] = useState(product.origins?.[0] || null); // Default to Natural (or null if no origins)
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)
   const [selectedColour, setSelectedColour] = useState(product.colours?.[2] || null); // Default to F (or null if no colours)

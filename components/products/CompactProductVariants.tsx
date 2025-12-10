@@ -47,13 +47,12 @@ export function CompactProductVariants({
 }: CompactProductVariantsProps) {
   const [ringSizeExpanded, setRingSizeExpanded] = useState(false);
 
-  // Simplified Diamond Tiers - "Meet in the Middle" Approach
-  // Define curated tiers instead of showing all combinations
-  // Client specs: Entry-level (1ct F VS1) = Buy Now, All upgrades = Inquire
-  // NO IF clarity for lab-grown diamonds (per client requirement line 128, 436)
+  // Diamond Tiers - All based on F Colour / VS1 Clarity as standard
+  // Client requirement: All tiers use F/VS1 as baseline for pricing
+  // For better colour (D, E) or clarity (IF, VVS1, VVS2) → Custom Specification
   const diamondTiers = product.carats && product.colours && product.clarities
     ? [
-        // Tier 1: Entry-Level (Buy Now) - ONLY direct purchase option
+        // Tier 1: 1ct - Entry-Level (Buy Now)
         {
           id: 'entry',
           label: '1ct Centre | F Colour | VS1 Clarity',
@@ -63,47 +62,47 @@ export function CompactProductVariants({
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: true,
         },
-        // Tier 2: Premium
+        // Tier 2: 1.5ct - F/VS1
         {
           id: 'premium',
-          label: '1.5ct Centre | E Colour | VVS2 Clarity',
+          label: '1.5ct Centre | F Colour | VS1 Clarity',
           description: 'Premium tier - Consultation required',
           carat: product.carats.find(c => c.label === '1.5ct'),
-          colour: product.colours.find(c => c.label === 'E'),
-          clarity: product.clarities.find(c => c.label === 'VVS2'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 3: Luxury
+        // Tier 3: 2ct - F/VS1
         {
           id: 'luxury',
-          label: '2ct Centre | D Colour | VVS1 Clarity',
+          label: '2ct Centre | F Colour | VS1 Clarity',
           description: 'Luxury tier - Consultation required',
           carat: product.carats.find(c => c.label === '2ct'),
-          colour: product.colours.find(c => c.label === 'D'),
-          clarity: product.clarities.find(c => c.label === 'VVS1'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 4: Signature
+        // Tier 4: 2.5ct - F/VS1
         {
           id: 'signature',
-          label: '2.5ct Centre | D Colour | VVS1 Clarity',
+          label: '2.5ct Centre | F Colour | VS1 Clarity',
           description: 'Signature tier - Consultation required',
           carat: product.carats.find(c => c.label === '2.5ct'),
-          colour: product.colours.find(c => c.label === 'D'),
-          clarity: product.clarities.find(c => c.label === 'VVS1'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 5: Ultra
+        // Tier 5: 3ct - F/VS1
         {
           id: 'ultra',
-          label: '3ct Centre | D Colour | VVS1 Clarity',
+          label: '3ct Centre | F Colour | VS1 Clarity',
           description: 'Ultra tier - Consultation required',
           carat: product.carats.find(c => c.label === '3ct'),
-          colour: product.colours.find(c => c.label === 'D'),
-          clarity: product.clarities.find(c => c.label === 'VVS1'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 6: Bespoke - for custom colour/clarity combinations
+        // Tier 6: Custom - for better colour (D, E) or clarity (IF, VVS1, VVS2)
         {
           id: 'bespoke',
           label: 'Custom Specification',

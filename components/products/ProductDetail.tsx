@@ -122,10 +122,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <main className="min-h-screen bg-white pb-24 md:pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <main className="min-h-screen bg-white pb-20 md:pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
         {/* Breadcrumb Navigation */}
-        <div className="mb-6">
+        <div className="mb-4 md:mb-6">
           <Breadcrumb 
             items={[
               { label: 'Home', href: '/' },
@@ -134,20 +134,20 @@ export function ProductDetail({ product }: ProductDetailProps) {
             ]}
           />
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Product Gallery */}
-          <div className="order-2 lg:order-1">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-16">
+          {/* Product Gallery - shows first on mobile */}
+          <div className="order-1">
             <Gallery 
               images={currentGalleryImages} 
             />
             <TrustStrip />
           </div>
 
-          {/* Product Info */}
-          <div className="order-1 lg:order-2">
+          {/* Product Info - shows second on mobile */}
+          <div className="order-2">
             <div className="sticky top-8">
               {/* Quality Banner */}
-              <div className="mb-6">
+              <div className="mb-4 md:mb-6">
                 <div className="inline-flex items-center px-3 py-1 bg-gray-50 border border-gray-200 rounded-full">
                   <span className="text-xs font-medium text-gray-700 uppercase tracking-wide">
                     {product.qualityBanner}
@@ -156,9 +156,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               {/* Title & Blurb */}
-              <div className="mb-8">
+              <div className="mb-6 md:mb-8">
                 <div className="relative">
-                  <h1 className="font-serif text-4xl lg:text-5xl uppercase tracking-[0.12em] text-gray-900 mb-4 leading-tight">
+                  <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl uppercase tracking-[0.08em] lg:tracking-[0.12em] text-gray-900 mb-3 md:mb-4 leading-tight">
                     {product.title}
                   </h1>
                   <WishHeart 
@@ -177,22 +177,22 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               {/* Price */}
-              <div className="mb-8">
+              <div className="mb-6 md:mb-8">
                 {isNaturalDiamond ? (
-                  <div className="flex flex-col gap-2">
-                    <span className="font-serif text-2xl lg:text-3xl text-gray-900">
+                  <div className="flex flex-col gap-1 md:gap-2">
+                    <span className="font-serif text-xl md:text-2xl lg:text-3xl text-gray-900">
                       Price upon request
                     </span>
-                    <span className="font-sans text-sm text-gray-600">
+                    <span className="font-sans text-xs md:text-sm text-gray-600">
                       Natural diamonds require consultation for pricing
                     </span>
                   </div>
                 ) : (
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-serif text-3xl lg:text-4xl text-gray-900">
+                  <div className="flex items-baseline gap-2 md:gap-3">
+                    <span className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900">
                       £{totalPrice.toLocaleString()}
                     </span>
-                    <span className="font-sans text-sm text-gray-600">
+                    <span className="font-sans text-xs md:text-sm text-gray-600">
                       From £{product.basePriceGBP.toLocaleString()}
                     </span>
                   </div>
@@ -200,26 +200,26 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               {/* Configuration Toggle */}
-              <div className="mb-6 flex items-center justify-center space-x-4">
+              <div className="mb-4 md:mb-6 flex items-center justify-center space-x-2 md:space-x-4">
                 <button
                   onClick={() => setUseLuxuryConfigurator(false)}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 ${
                     !useLuxuryConfigurator 
                       ? 'bg-elysium-gold text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
-                  Classic View
+                  Classic
                 </button>
                 <button
                   onClick={() => setUseLuxuryConfigurator(true)}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 ${
                     useLuxuryConfigurator 
                       ? 'bg-elysium-gold text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
-                  Premium Configurator
+                  Premium
                 </button>
               </div>
 

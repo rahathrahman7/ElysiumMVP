@@ -52,19 +52,65 @@ export default function StickySummary({
     <div
       className="
         fixed inset-x-0 bottom-0 z-40
-        bg-white/85 backdrop-blur-md border-t border-neutral-200
+        bg-white/95 backdrop-blur-md border-t border-neutral-200
         shadow-[0_-8px_24px_rgba(0,0,0,0.08)]
         transition-all duration-200
+        safe-area-bottom
       "
       role="region"
       aria-label="Build summary"
     >
-      <div className="mx-auto max-w-5xl px-4 py-3 md:py-4">
-        <div className="flex items-start gap-3 md:items-center md:gap-6">
+      <div className="mx-auto max-w-5xl px-3 py-2 md:px-4 md:py-4">
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          <div className="flex items-center justify-between gap-2 mb-2">
+            {/* Name + Price */}
+            <div className="min-w-0 flex-1">
+              <div className="truncate font-serif text-sm text-neutral-900">{name}</div>
+              {isNaturalDiamond ? (
+                <div className="text-xs text-neutral-600">Price upon request</div>
+              ) : (
+                <div className="text-sm font-semibold text-neutral-900">{priceFormatted}</div>
+              )}
+            </div>
+          </div>
+          {/* Mobile CTAs - horizontal compact */}
+          <div className="flex items-center gap-2">
+            {showBuyNow && (
+              <button
+                type="button"
+                onClick={onAdd}
+                disabled={!canAdd}
+                className={`flex-1 rounded-full px-3 py-2 text-sm font-medium text-white transition
+                  ${canAdd ? "bg-[#753600] hover:bg-[#753600]/90" : "bg-neutral-300 cursor-not-allowed"}
+                `}
+              >
+                Add to Bag
+              </button>
+            )}
+            {showInquire && (
+              <a
+                href={appointmentHref}
+                className="flex-1 text-center rounded-full px-3 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
+              >
+                Inquire
+              </a>
+            )}
+            <a
+              href={appointmentHref}
+              className="rounded-full border border-[var(--gold)] px-3 py-2 text-sm font-medium text-neutral-900 bg-white hover:bg-[color-mix(in_srgb,var(--gold)_10%,#fff)]"
+            >
+              Book
+            </a>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center gap-6">
           {/* Left: name + chips */}
           <div className="min-w-0 flex-1">
-            <div className="truncate font-serif text-base md:text-lg text-neutral-900">{name}</div>
-            <div className="mt-1 flex flex-wrap gap-1 text-[11px] md:text-xs text-neutral-700">
+            <div className="truncate font-serif text-lg text-neutral-900">{name}</div>
+            <div className="mt-1 flex flex-wrap gap-1 text-xs text-neutral-700">
               {Object.entries(selections)
                 .filter(([, v]) => Boolean(v))
                 .map(([k, v]) => (

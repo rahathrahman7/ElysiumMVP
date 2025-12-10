@@ -32,7 +32,7 @@ export default function StickySummary({
   isNaturalDiamond,
 }: Props) {
   const showBuyNow = isEntryLevel && !isNaturalDiamond;
-  const showInquire = !isEntryLevel || isNaturalDiamond;
+  const showEnquire = !isEntryLevel || isNaturalDiamond;
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -88,12 +88,12 @@ export default function StickySummary({
                 Add to Bag
               </button>
             )}
-            {showInquire && (
+            {showEnquire && (
               <a
                 href={appointmentHref}
                 className="flex-1 text-center rounded-full px-3 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
               >
-                Inquire
+                Enquire
               </a>
             )}
             <a
@@ -150,12 +150,12 @@ export default function StickySummary({
                 Add to Bag
               </button>
             )}
-            {showInquire && (
+            {showEnquire && (
               <a
                 href={appointmentHref}
                 className="rounded-full px-4 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
               >
-                Inquire
+                Enquire
               </a>
             )}
             <a

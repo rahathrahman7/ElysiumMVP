@@ -20,9 +20,9 @@ export function ProductActions({
 }: ProductActionsProps) {
   // Client's "Meet in the Middle" business model:
   // Entry-level (Lab, 1ct, F, VS1) = Buy Now
-  // Any upgrade OR Natural = Inquire
+  // Any upgrade OR Natural = Enquire
   const showBuyNow = isEntryLevel && !isNaturalDiamond;
-  const showInquire = !isEntryLevel || isNaturalDiamond;
+  const showEnquire = !isEntryLevel || isNaturalDiamond;
 
   return (
     <div className="space-y-4">
@@ -41,12 +41,12 @@ export function ProductActions({
         </button>
       )}
 
-      {showInquire && (
+      {showEnquire && (
         <Link
           href="/contact"
           className="block w-full bg-white text-[#753600] border border-[#753600] py-3 px-6 font-serif uppercase tracking-[0.08em] text-base hover:bg-[#753600] hover:text-white transition-all duration-300 text-center"
         >
-          Inquire
+          Enquire
         </Link>
       )}
 

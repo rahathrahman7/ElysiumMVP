@@ -327,7 +327,7 @@ export function CompactProductVariants({
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mb-1 ${
                             isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
                           }`}>
-                            Inquire
+                            Enquire
                           </span>
                           {totalDelta > 0 && (
                             <div className={`text-xs ${isActive ? 'text-white/80' : 'text-gray-600'}`}>
@@ -337,7 +337,7 @@ export function CompactProductVariants({
                         </div>
                       ) : (
                         <span className="inline-block px-2 py-1 text-xs font-medium rounded bg-amber-100 text-amber-700">
-                          Inquire
+                          Enquire
                         </span>
                       )}
                     </div>

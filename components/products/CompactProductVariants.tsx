@@ -103,11 +103,11 @@ export function CompactProductVariants({
           clarity: product.clarities.find(c => c.label === 'VVS1'),
           isEntryLevel: false,
         },
-        // Tier 6: Bespoke
+        // Tier 6: Bespoke - for custom colour/clarity combinations
         {
           id: 'bespoke',
           label: 'Custom Specification',
-          description: 'Bespoke design - Consultation required',
+          description: 'Bespoke Design - Different Colour - Different Clarity',
           carat: undefined,
           colour: undefined,
           clarity: undefined,
@@ -298,13 +298,12 @@ export function CompactProductVariants({
               return (
                 <button
                   key={tier.id}
-                  onClick={() => handleDiamondTierChange(tier.id)}
-                  disabled={tier.id === 'bespoke'}
+                  onClick={() => tier.id === 'bespoke' ? window.location.href = '/contact' : handleDiamondTierChange(tier.id)}
                   className={`w-full px-4 py-3 rounded-lg border-2 text-left transition-all duration-200 ${
                     isActive
                       ? "border-[#753600] bg-[#753600] text-white"
                       : tier.id === 'bespoke'
-                      ? "border-gray-200 bg-gray-50 cursor-not-allowed opacity-60"
+                      ? "border-dashed border-gray-300 bg-gray-50 hover:border-[#753600] hover:bg-[#753600]/5"
                       : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
                   }`}
                 >
@@ -338,8 +337,8 @@ export function CompactProductVariants({
                           )}
                         </div>
                       ) : (
-                        <span className="inline-block px-2 py-1 text-xs font-medium rounded bg-gray-200 text-gray-600">
-                          Contact Us
+                        <span className="inline-block px-2 py-1 text-xs font-medium rounded bg-amber-100 text-amber-700">
+                          Inquire
                         </span>
                       )}
                     </div>

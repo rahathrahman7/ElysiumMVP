@@ -28,11 +28,12 @@ export async function addToCart(
   quantity: number = 1
 ) {
   // Check if item with same config exists
+  // Note: Prisma JSON field comparison requires casting
   const existingItem = await prisma.cartItem.findFirst({
     where: {
       userId,
       productSlug,
-      configuration: configuration as any,
+      configuration: { equals: configuration as object },
     }
   });
 
@@ -49,7 +50,7 @@ export async function addToCart(
     data: {
       userId,
       productSlug,
-      configuration: configuration as any,
+      configuration: configuration as object,
       quantity,
     }
   });

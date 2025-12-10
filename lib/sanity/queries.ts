@@ -56,7 +56,9 @@ export async function getProductsFiltered(params: Record<string, string | undefi
         const products = await sanityClient.fetch<ProductListItem[]>(pageQuery);
         return { products, total, page, limit };
       } catch (error) {
-        console.warn("Sanity fetch failed, falling back to local data:", error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn("Sanity fetch failed, falling back to local data:", error);
+        }
       }
     }
   }

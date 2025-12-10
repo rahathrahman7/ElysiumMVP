@@ -1,11 +1,11 @@
 ## ELYSIUM — Luxury Jewellery E-commerce Platform
 
-A production-ready luxury jewelry e-commerce platform built with Next.js 15, featuring a complete backend with PostgreSQL, NextAuth.js authentication, Stripe payments, and comprehensive order management.
+A production-ready luxury jewelry e-commerce platform built with Next.js 16, featuring a complete backend with PostgreSQL, NextAuth.js authentication, Stripe payments, and comprehensive order management.
 
 ### Tech Stack
 
 **Frontend:**
-- Next.js 15 (App Router) + Tailwind CSS 3.4
+- Next.js 16 (App Router + Turbopack) + Tailwind CSS 3.4
 - SWR + Zustand + GSAP
 - Plausible Analytics
 
@@ -52,7 +52,7 @@ Visit `http://localhost:3000`
 - ✅ Authentication (100%)
 - ✅ Payment Processing (100%)
 - 🟡 Testing (60%)
-- 🔴 Deployment Setup (0%)
+- ✅ Deployment (100%) - Live on Vercel
 
 **Next Step:** Database provisioning (30 min) → [Setup Guide](./docs/BACKEND_SETUP.md)
 

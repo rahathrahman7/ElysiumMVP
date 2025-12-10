@@ -34,10 +34,7 @@ function getPrismaClient(): PrismaClient {
           if (typeof prop === 'string') {
             // Return a proxy for model access that returns empty results
             return new Proxy({}, {
-              get: () => async () => {
-                console.warn(`Prisma: Database not available during build (${String(prop)})`);
-                return null;
-              }
+              get: () => async () => null
             });
           }
           return undefined;

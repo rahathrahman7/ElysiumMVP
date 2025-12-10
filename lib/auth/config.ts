@@ -6,8 +6,10 @@ import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/database/prisma';
 import { Adapter } from 'next-auth/adapters';
 
-const demoAdminEmail = process.env.DEMO_ADMIN_EMAIL ?? "demo@elysium.dev";
-const demoAdminPassword = process.env.DEMO_ADMIN_PASSWORD ?? "DemoAdmin123!";
+// Demo admin credentials - only enabled if explicitly set in environment
+// Remove these env vars in production for security
+const demoAdminEmail = process.env.DEMO_ADMIN_EMAIL;
+const demoAdminPassword = process.env.DEMO_ADMIN_PASSWORD;
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
@@ -70,7 +72,7 @@ export const authOptions: NextAuthOptions = {
           name: user.name,
           image: user.image,
           role: user.role,
-        } as any;
+        };
       }
     }),
     GoogleProvider({
@@ -89,15 +91,15 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.id = (user as any).id;
-        token.role = (user as any).role ?? 'CUSTOMER';
+        token.id = user.id;
+        token.role = user.role ?? 'CUSTOMER';
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        session.user.id = token.id as string;
-        (session.user as any).role = token.role;
+        session.user.id = token.id;
+        session.user.role = token.role;
       }
       return session;
     },

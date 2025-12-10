@@ -33,17 +33,3 @@ test('check site styling and layout', async ({ page }) => {
   
   console.log('✅ Site styling check completed successfully');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

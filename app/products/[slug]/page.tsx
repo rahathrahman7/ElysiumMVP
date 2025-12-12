@@ -53,6 +53,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const product = getProductBySlug(slug);
   
   if (!product) {
+    console.error(`[ProductPage] Product not found for slug: "${slug}"`);
     notFound();
   }
 

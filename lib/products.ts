@@ -30,11 +30,18 @@ function loadProductsSync(): Product[] {
       const fs = require('fs');
       const path = require('path');
       const jsonPath = path.join(process.cwd(), 'public', 'data', 'products.json');
+      
+      if (!fs.existsSync(jsonPath)) {
+        console.error(`[products.ts] products.json not found at: ${jsonPath}`);
+        return [];
+      }
+      
       const data = fs.readFileSync(jsonPath, 'utf8');
       _products = JSON.parse(data);
+      console.log(`[products.ts] Loaded ${_products.length} products from ${jsonPath}`);
       return _products!;
     } catch (e) {
-      console.error('Failed to load products.json:', e);
+      console.error('[products.ts] Failed to load products.json:', e);
       return [];
     }
   }
@@ -65,7 +72,14 @@ export function getAllProducts(): Product[] {
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
-  return loadProductsSync().find(p => p.slug === slug);
+  const products = loadProductsSync();
+  const product = products.find(p => p.slug === slug);
+  
+  if (!product && products.length > 0) {
+    console.warn(`[products.ts] Product not found: "${slug}". Available slugs:`, products.slice(0, 5).map(p => p.slug));
+  }
+  
+  return product;
 }
 
 // Async versions for client components

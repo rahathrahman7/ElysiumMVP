@@ -105,7 +105,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       <Link href={`/products/${product.slug}`} aria-label={product.title} onMouseLeave={() => setActiveMetal(undefined)} className="block touch-manipulation">
         <div className="relative aspect-[4/5] overflow-hidden">
           {/* Gradient Overlay for Luxury Effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10 pointer-events-none" />
           
           {img ? (
             <>
@@ -126,6 +126,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
               <div className={clsx(
                 "absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent",
                 "transform -skew-x-12 transition-transform duration-1000",
+                "pointer-events-none",
                 isHovered ? "translate-x-full" : "-translate-x-full"
               )} />
             </>

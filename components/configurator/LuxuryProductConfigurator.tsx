@@ -136,10 +136,17 @@ export default function LuxuryProductConfigurator({ product, onConfigurationChan
                      configuration.metal.price + 
                      (configuration.cut?.priceModifier || 0);
     
-    const updatedConfig = { ...configuration, totalPrice: newPrice };
-    setConfiguration(updatedConfig);
-    onConfigurationChange?.(updatedConfig);
-  }, [configuration.metal, configuration.cut, product.basePriceGBP, onConfigurationChange]);
+    // Only update if price actually changed to prevent infinite loop
+    if (configuration.totalPrice !== newPrice) {
+      setConfiguration(prev => ({ ...prev, totalPrice: newPrice }));
+    }
+  }, [configuration.metal.id, configuration.metal.price, configuration.cut?.id, configuration.cut?.priceModifier, product.basePriceGBP]);
+
+  // Separate effect for calling onConfigurationChange to avoid dependency issues
+  useEffect(() => {
+    onConfigurationChange?.(configuration);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [configuration.metal.id, configuration.cut?.id, configuration.size, configuration.engraving, configuration.totalPrice]);
 
   const handleMetalSelection = (metal: MetalOption) => {
     setConfiguration(prev => ({ ...prev, metal }));

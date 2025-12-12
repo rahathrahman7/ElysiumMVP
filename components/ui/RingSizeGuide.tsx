@@ -1,26 +1,68 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function RingSizeGuide(){
   const [open, setOpen] = useState(false);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
+
   return (
     <>
       <button onClick={()=>setOpen(true)} className="text-sm link-underline">Ring size guide</button>
       {open && (
-        <div className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center p-4">
-          <div className="max-w-lg w-full bg-white rounded-xl p-5">
-            <div className="flex items-center justify-between">
-              <h3 className="font-serif text-xl">Find your ring size (UK)</h3>
-              <button onClick={()=>setOpen(false)}>✕</button>
+        <div
+          className="fixed inset-0 z-50 bg-black/30 flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto"
+          onClick={()=>setOpen(false)}
+        >
+          <div
+            className="w-full max-w-lg bg-white rounded-xl p-4 sm:p-6 my-4 sm:my-8 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <h3 className="font-serif text-lg sm:text-xl md:text-2xl text-[#6D3D0D]">
+                Find your ring size (UK)
+              </h3>
+              <button
+                onClick={()=>setOpen(false)}
+                className="ml-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-gray-500 hover:text-gray-700 text-xl"
+                aria-label="Close"
+              >
+                ✕
+              </button>
             </div>
-            <p className="mt-2 text-sm text-neutral-700">
+
+            {/* Instructions */}
+            <p className="text-xs sm:text-sm text-neutral-700 mb-4">
               UK sizes run F → Z in half sizes. Tip: wrap a strip of paper around the finger, mark, measure mm, match to the table.
             </p>
-            <div className="mt-4 overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead><tr className="text-left text-neutral-500">
-                  <th className="py-2">UK</th><th>Inside Circumference (mm)</th><th>Inside Diameter (mm)</th>
-                </tr></thead>
+
+            {/* Scrollable Table Container */}
+            <div className="overflow-x-auto overflow-y-auto max-h-[50vh] sm:max-h-[60vh] border rounded-lg">
+              <table className="w-full text-xs sm:text-sm">
+                <thead className="sticky top-0 bg-gray-50 border-b">
+                  <tr className="text-left text-neutral-600">
+                    <th className="py-2 sm:py-3 px-2 sm:px-3 font-medium">UK</th>
+                    <th className="py-2 sm:py-3 px-2 sm:px-3 font-medium">
+                      <span className="hidden sm:inline">Inside Circumference (mm)</span>
+                      <span className="sm:hidden">Circ (mm)</span>
+                    </th>
+                    <th className="py-2 sm:py-3 px-2 sm:px-3 font-medium">
+                      <span className="hidden sm:inline">Inside Diameter (mm)</span>
+                      <span className="sm:hidden">Dia (mm)</span>
+                    </th>
+                  </tr>
+                </thead>
                 <tbody>
                   {[
                     ["F","44.5","14.1"],["F 1/2","45.2","14.4"],["G","45.5","14.5"],["G 1/2","46.8","14.9"],
@@ -35,12 +77,20 @@ export default function RingSizeGuide(){
                     ["X","66.6","21.2"],["X 1/2","67.2","21.4"],["Y","67.8","21.6"],["Y 1/2","68.5","21.8"],
                     ["Z","69.1","22.0"]
                   ].map(r=>(
-                    <tr key={r[0]} className="border-t"><td className="py-2">{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td></tr>
+                    <tr key={r[0]} className="border-t border-gray-100 hover:bg-gray-50">
+                      <td className="py-2 sm:py-3 px-2 sm:px-3 font-medium">{r[0]}</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-3 text-neutral-600">{r[1]}</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-3 text-neutral-600">{r[2]}</td>
+                    </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="mt-4 text-xs text-neutral-500">For Z+ sizes, contact us for a custom fit.</p>
+
+            {/* Footer Note */}
+            <p className="mt-4 text-xs sm:text-sm text-neutral-500 text-center sm:text-left">
+              For Z+ sizes, contact us for a custom fit.
+            </p>
           </div>
         </div>
       )}

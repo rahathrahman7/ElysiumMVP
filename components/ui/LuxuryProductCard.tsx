@@ -67,10 +67,12 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         "before:bg-gradient-to-b before:from-elysium-dark/5 before:to-transparent",
         "before:opacity-0 before:transition-opacity before:duration-300",
         "hover:before:opacity-100",
+        "cursor-pointer",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      prefetch={true}
     >
       {/* Premium Badge */}
       {product.isFeatured && (
@@ -82,7 +84,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       )}
 
       {/* Wishlist - Premium Styling */}
-      <div className="absolute right-4 top-4 z-20" onClick={(e) => e.stopPropagation()}>
+      <div className="absolute right-4 top-4 z-20" data-no-navigate onClick={(e) => e.stopPropagation()}>
         <WishHeart 
           item={{ 
             slug: product.slug, 
@@ -169,7 +171,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         
         {/* Metal Swatches */}
         {metals.length > 0 && (
-          <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals" onClick={(e) => e.stopPropagation()}>
+          <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals" data-no-navigate onClick={(e) => e.stopPropagation()}>
             {metals.map((m) => (
               <button
                 key={m.name}

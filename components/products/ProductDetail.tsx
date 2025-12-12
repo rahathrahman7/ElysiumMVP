@@ -22,12 +22,33 @@ interface ProductDetailProps {
 }
 
 export function ProductDetail({ product }: ProductDetailProps) {
-  // Client requirement: Default to 18k Yellow Gold for all rings except men's rings
+  // Client requirement: Default metals by category
+  // - Engagement rings: default to 18k Yellow Gold
+  // - Men's rings: default to Platinum
   const isMensRing = product.collections?.includes('mens-rings');
-  // For men's rings, find Platinum; for others, default to first metal (Yellow Gold)
-  const defaultMetal = isMensRing 
-    ? product.metals?.find(m => m.name.toLowerCase().includes('platinum')) || product.metals?.[0]
-    : product.metals?.[0];
+  const isEngagementRing = product.collections?.includes('engagement-rings');
+  
+  // Determine default metal based on product category
+  let defaultMetal: MetalOption | undefined;
+  if (isMensRing) {
+    // Men's rings: default to Platinum
+    defaultMetal = product.metals?.find(m => m.name.toLowerCase().includes('platinum')) || product.metals?.[0];
+  } else if (isEngagementRing) {
+    // Engagement rings: default to 18k Yellow Gold
+    // Search for yellow gold (prefer 18k Yellow Gold, but accept any yellow gold variant)
+    defaultMetal = product.metals?.find(m => {
+      const name = m.name.toLowerCase();
+      return name.includes('18k yellow gold') || name.includes('yellow gold');
+    });
+    // If no yellow gold found, fall back to first metal that's not platinum
+    if (!defaultMetal) {
+      defaultMetal = product.metals?.find(m => !m.name.toLowerCase().includes('platinum')) || product.metals?.[0];
+    }
+  } else {
+    // Other products: default to first metal
+    defaultMetal = product.metals?.[0];
+  }
+  
   const [selectedMetal, setSelectedMetal] = useState(defaultMetal || null);
   const [selectedOrigin, setSelectedOrigin] = useState(product.origins?.[0] || null); // Default to Natural (or null if no origins)
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)

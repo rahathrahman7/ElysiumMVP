@@ -33,7 +33,7 @@ export function EditorialTeasers() {
         >
           <div className="absolute inset-0">
             <Image
-              src="/images/new-collection-rings.png"
+              src="/images/NewCollection.png"
               alt="New collection of elegant diamond engagement rings"
               fill
               className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"
@@ -76,7 +76,7 @@ export function EditorialTeasers() {
         >
           <div className="absolute inset-0">
             <Image
-              src="/images/craftsman-building-ring.png"
+              src="/images/BespokeDesign.png"
               alt="Master craftsman handcrafting a ring in our London atelier"
               fill
               className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"

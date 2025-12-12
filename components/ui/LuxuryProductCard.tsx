@@ -81,7 +81,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       )}
 
       {/* Wishlist - Premium Styling */}
-      <div className="absolute right-4 top-4 z-20">
+      <div className="absolute right-4 top-4 z-20" onClick={(e) => e.stopPropagation()}>
         <WishHeart 
           item={{ 
             slug: product.slug, 
@@ -102,7 +102,12 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Product Image Container */}
-      <Link href={`/products/${product.slug}`} aria-label={product.title} onMouseLeave={() => setActiveMetal(undefined)} className="block touch-manipulation">
+      <Link 
+        href={`/products/${product.slug}`} 
+        aria-label={product.title} 
+        onMouseLeave={() => setActiveMetal(undefined)} 
+        className="block touch-manipulation relative z-0"
+      >
         <div className="relative aspect-[4/5] overflow-hidden">
           {/* Gradient Overlay for Luxury Effect */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10 pointer-events-none" />
@@ -172,20 +177,24 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         
         {/* Metal Swatches */}
         {metals.length > 0 && (
-          <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals">
+          <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals" onClick={(e) => e.stopPropagation()}>
             {metals.map((m) => (
               <button
                 key={m.name}
                 type="button"
                 className={clsx(
-                  "w-5 h-5 rounded-full border shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]",
+                  "w-5 h-5 rounded-full border shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] relative z-10",
                   activeMetal === m.name ? "ring-2 ring-elysium-dark" : "border-gray-200"
                 )}
                 style={{ backgroundColor: m.hex || undefined }}
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
                 onFocus={() => setActiveMetal(m.name)}
-                onClick={() => setActiveMetal(m.name)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  setActiveMetal(m.name);
+                }}
               />
             ))}
           </div>

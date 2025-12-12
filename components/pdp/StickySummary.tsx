@@ -31,8 +31,13 @@ export default function StickySummary({
   isEntryLevel,
   isNaturalDiamond,
 }: Props) {
-  const showBuyNow = isEntryLevel && !isNaturalDiamond;
-  const showEnquire = !isEntryLevel || isNaturalDiamond;
+  // New purchase flow logic:
+  // - Natural 1ct/F/VS1 → Buy Now (can purchase directly)
+  // - Natural anything else → Enquire (consultation required)
+  // - Lab Grown + NOT custom spec → Buy Now
+  // - Lab Grown + custom spec → Enquire
+  const showBuyNow = isEntryLevel; // isEntryLevel now means: Natural 1ct OR Lab Grown + NOT custom spec
+  const showEnquire = !isEntryLevel; // Everything else (Natural other specs OR custom spec) → Enquire
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -70,7 +75,10 @@ export default function StickySummary({
               {isNaturalDiamond ? (
                 <div className="text-xs text-neutral-600">Price upon request</div>
               ) : (
-                <div className="text-sm font-semibold text-neutral-900">{priceFormatted}</div>
+                <>
+                  <div className="text-sm font-semibold text-neutral-900">{priceFormatted}</div>
+                  <div className="text-xs text-neutral-500">Tax Included</div>
+                </>
               )}
             </div>
           </div>
@@ -132,6 +140,7 @@ export default function StickySummary({
               <>
                 <div className="text-xs text-neutral-600">From</div>
                 <div className="text-base font-semibold text-neutral-900">{priceFormatted}</div>
+                <div className="text-xs text-neutral-500">Tax Included</div>
               </>
             )}
           </div>

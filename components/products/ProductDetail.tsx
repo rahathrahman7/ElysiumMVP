@@ -243,12 +243,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     </span>
                   </div>
                 ) : (
-                  <div className="flex items-baseline gap-2 md:gap-3">
-                    <span className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#6D3D0D]">
-                      £{totalPrice.toLocaleString()}
-                    </span>
+                  <div className="flex flex-col gap-1 md:gap-2">
+                    <div className="flex items-baseline gap-2 md:gap-3">
+                      <span className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#6D3D0D]">
+                        £{totalPrice.toLocaleString()}
+                      </span>
+                      <span className="font-serif text-xs md:text-sm text-[#6D3D0D]/60">
+                        From £{product.basePriceGBP.toLocaleString()}
+                      </span>
+                    </div>
                     <span className="font-serif text-xs md:text-sm text-[#6D3D0D]/60">
-                      From £{product.basePriceGBP.toLocaleString()}
+                      Tax Included
                     </span>
                   </div>
                 )}

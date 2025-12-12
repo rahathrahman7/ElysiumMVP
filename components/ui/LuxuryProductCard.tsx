@@ -56,9 +56,10 @@ export default function LuxuryProductCard({ product, className = "", priority = 
   })), [effective.metals]);
 
   return (
-    <div 
+    <Link 
+      href={`/products/${product.slug}`}
       className={clsx(
-        "group relative luxury-card transform-gpu transition-all duration-500 ease-out touch-manipulation",
+        "group relative luxury-card transform-gpu transition-all duration-500 ease-out touch-manipulation block",
         "bg-gradient-to-b from-elysium-light/50 to-white",
         "rounded-lg overflow-hidden",
         "hover:scale-[1.03] hover:shadow-2xl hover:shadow-elysium-dark/20",
@@ -73,7 +74,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
     >
       {/* Premium Badge */}
       {product.isFeatured && (
-        <div className="absolute left-4 top-4 z-20">
+        <div className="absolute left-4 top-4 z-20 pointer-events-none">
           <span className="px-2 py-1 bg-white/80 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm">
             Signature
           </span>
@@ -102,78 +103,69 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Product Image Container */}
-      <Link 
-        href={`/products/${product.slug}`} 
-        aria-label={product.title} 
-        onMouseLeave={() => setActiveMetal(undefined)} 
-        className="block touch-manipulation relative z-0"
-      >
-        <div className="relative aspect-[4/5] overflow-hidden">
-          {/* Gradient Overlay for Luxury Effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10 pointer-events-none" />
-          
-          {img ? (
-            <>
-              {/* Main Image */}
-              <Image
-                src={resolvePrimary(effective, activeMetal)}
-                alt={product.title}
-                fill
-                sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
-                className={clsx(
-                  "object-cover transition-all duration-700 ease-out",
-                  isHovered ? "scale-110 brightness-110" : "scale-100"
-                )}
-                priority={priority}
-              />
-              
-              {/* Shimmer Effect on Hover */}
-              <div className={clsx(
-                "absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent",
-                "transform -skew-x-12 transition-transform duration-1000",
-                "pointer-events-none",
-                isHovered ? "translate-x-full" : "-translate-x-full"
-              )} />
-            </>
-          ) : (
-            <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-elysium-light to-elysium-light/50">
-              <div className="text-center text-elysium-dark">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-none bg-white/50 flex items-center justify-center">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <span className="text-sm font-light">Image Coming Soon</span>
-              </div>
-            </div>
-          )}
-
-          {/* Hover Overlay with Premium CTA */}
-          <div className={clsx(
-            "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent",
-            "flex items-end justify-center p-6 transition-all duration-300",
-            "pointer-events-none",
-            isHovered ? "opacity-100" : "opacity-0"
-          )}>
-            <div className="transform transition-all duration-300 translate-y-4 group-hover:translate-y-0">
-              <span className="inline-flex items-center px-6 py-3 text-elysium-dark font-medium text-sm tracking-wide shadow-2xl border border-transparent" style={{ backgroundColor: "var(--elysium-champagne)" }}>
-                View Collection
-                <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      <div className="relative aspect-[4/5] overflow-hidden">
+        {/* Gradient Overlay for Luxury Effect */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10 pointer-events-none" />
+        
+        {img ? (
+          <>
+            {/* Main Image */}
+            <Image
+              src={resolvePrimary(effective, activeMetal)}
+              alt={product.title}
+              fill
+              sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
+              className={clsx(
+                "object-cover transition-all duration-700 ease-out",
+                isHovered ? "scale-110 brightness-110" : "scale-100"
+              )}
+              priority={priority}
+            />
+            
+            {/* Shimmer Effect on Hover */}
+            <div className={clsx(
+              "absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent",
+              "transform -skew-x-12 transition-transform duration-1000",
+              "pointer-events-none",
+              isHovered ? "translate-x-full" : "-translate-x-full"
+            )} />
+          </>
+        ) : (
+          <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-elysium-light to-elysium-light/50">
+            <div className="text-center text-elysium-dark">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-none bg-white/50 flex items-center justify-center">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-              </span>
+              </div>
+              <span className="text-sm font-light">Image Coming Soon</span>
             </div>
           </div>
+        )}
+
+        {/* Hover Overlay with Premium CTA */}
+        <div className={clsx(
+          "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent",
+          "flex items-end justify-center p-6 transition-all duration-300",
+          "pointer-events-none",
+          isHovered ? "opacity-100" : "opacity-0"
+        )}>
+          <div className="transform transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+            <span className="inline-flex items-center px-6 py-3 text-elysium-dark font-medium text-sm tracking-wide shadow-2xl border border-transparent" style={{ backgroundColor: "var(--elysium-champagne)" }}>
+              View Collection
+              <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
         </div>
-      </Link>
+      </div>
 
       {/* Product Information */}
-      <div className="relative p-6 bg-gradient-to-b from-white/50 to-white/80 backdrop-blur-sm">
-        <Link href={`/products/${product.slug}`} className="block group-hover:text-elysium-dark/80 transition-colors duration-300">
-          <h3 className="text-xl font-light text-elysium-dark mb-2 tracking-wide leading-tight text-center">
-            {ringName}
-          </h3>
-        </Link>
+      <div className="relative p-6 bg-gradient-to-b from-white/50 to-white/80 backdrop-blur-sm" onMouseLeave={() => setActiveMetal(undefined)}>
+        <h3 className="text-xl font-light text-elysium-dark mb-2 tracking-wide leading-tight text-center">
+          {ringName}
+        </h3>
         
         {/* Metal Swatches */}
         {metals.length > 0 && (
@@ -232,6 +224,6 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Premium Shadow Effect */}
-    </div>
+    </Link>
   );
 }

@@ -24,8 +24,11 @@ interface ProductDetailProps {
 export function ProductDetail({ product }: ProductDetailProps) {
   // Client requirement: Default to 18k Yellow Gold for all rings except men's rings
   const isMensRing = product.collections?.includes('mens-rings');
-  const defaultMetalIndex = isMensRing ? 1 : 0; // Men's rings: Rose Gold, Others: Yellow Gold
-  const [selectedMetal, setSelectedMetal] = useState(product.metals?.[defaultMetalIndex] || null);
+  // For men's rings, find Platinum; for others, default to first metal (Yellow Gold)
+  const defaultMetal = isMensRing 
+    ? product.metals?.find(m => m.name.toLowerCase().includes('platinum')) || product.metals?.[0]
+    : product.metals?.[0];
+  const [selectedMetal, setSelectedMetal] = useState(defaultMetal || null);
   const [selectedOrigin, setSelectedOrigin] = useState(product.origins?.[0] || null); // Default to Natural (or null if no origins)
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)
   const [selectedColour, setSelectedColour] = useState(product.colours?.[2] || null); // Default to F (or null if no colours)
@@ -87,16 +90,44 @@ export function ProductDetail({ product }: ProductDetailProps) {
     engraving: engravingSelected ? "Yes" : null,
   };
 
-  // Check if current config is entry-level (1ct, F, VS1, Lab-grown)
-  const isEntryLevel = Boolean(
-    selectedCarat?.label === '1ct' &&
-    selectedColour?.label === 'F' &&
-    selectedClarity?.label === 'VS1' &&
-    selectedOrigin?.label !== 'Natural'
-  );
-
   // Check if natural diamond is selected
   const isNaturalDiamond = selectedOrigin?.label === 'Natural';
+
+  // Check if current selection is a custom specification
+  // Custom specification = when the selected combination doesn't match any standard tier
+  // Standard tiers are: 1ct/F/VS1, 1.5ct/F/VS1, 2ct/F/VS1, 2.5ct/F/VS1, 3ct/F/VS1
+  const standardTiers = [
+    { carat: '1ct', colour: 'F', clarity: 'VS1' },
+    { carat: '1.5ct', colour: 'F', clarity: 'VS1' },
+    { carat: '2ct', colour: 'F', clarity: 'VS1' },
+    { carat: '2.5ct', colour: 'F', clarity: 'VS1' },
+    { carat: '3ct', colour: 'F', clarity: 'VS1' },
+  ];
+  
+  const isCustomSpecification = selectedCarat && selectedColour && selectedClarity
+    ? !standardTiers.some(tier => 
+        tier.carat === selectedCarat.label &&
+        tier.colour === selectedColour.label &&
+        tier.clarity === selectedClarity.label
+      )
+    : true; // If any selection is missing, consider it custom
+
+  // Check if it's the 1ct Natural tier (can be purchased directly)
+  const is1ctNatural = Boolean(
+    isNaturalDiamond &&
+    selectedCarat?.label === '1ct' &&
+    selectedColour?.label === 'F' &&
+    selectedClarity?.label === 'VS1'
+  );
+
+  // New purchase flow logic:
+  // - Natural 1ct/F/VS1 → Buy Now (can purchase directly)
+  // - Natural anything else → Enquire (consultation required)
+  // - Lab Grown + NOT custom spec → Buy Now
+  // - Lab Grown + custom spec → Enquire
+  const isEntryLevel = Boolean(
+    is1ctNatural || (!isNaturalDiamond && !isCustomSpecification)
+  );
 
   // Check if required fields are selected (ring size is required)
   const canAdd = Boolean(selectedSize);
@@ -152,7 +183,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               {/* Quality Banner */}
               <div className="mb-4 md:mb-6">
                 <div className="inline-flex items-center px-3 py-1 bg-gray-50 border border-gray-200 rounded-full">
-                  <span className="text-xs font-medium text-gray-700 uppercase tracking-wide">
+                  <span className="text-xs font-serif font-medium text-[#6D3D0D] uppercase tracking-wide">
                     {product.qualityBanner}
                   </span>
                 </div>
@@ -160,8 +191,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               {/* Title & Blurb */}
               <div className="mb-6 md:mb-8">
-                <div className="relative">
-                  <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl uppercase tracking-[0.08em] lg:tracking-[0.12em] text-gray-900 mb-3 md:mb-4 leading-tight">
+                <div className="relative pr-12">
+                  <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl uppercase tracking-[0.08em] lg:tracking-[0.12em] text-[#6D3D0D] mb-3 md:mb-4 leading-tight">
                     {product.title}
                   </h1>
                   <WishHeart 
@@ -171,10 +202,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
                       price: totalPrice, 
                       imageSrc: product.images?.[0] 
                     }} 
-                    className="absolute right-0 top-0 text-neutral-600 hover:text-neutral-900" 
+                    className="absolute right-0 top-0 text-[#6D3D0D]/60 hover:text-[#6D3D0D]" 
                   />
                 </div>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed">
+                <p className="font-serif text-lg text-[#6D3D0D]/70 leading-relaxed">
                   {product.blurb}
                 </p>
               </div>
@@ -183,19 +214,19 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <div className="mb-6 md:mb-8">
                 {isNaturalDiamond ? (
                   <div className="flex flex-col gap-1 md:gap-2">
-                    <span className="font-serif text-xl md:text-2xl lg:text-3xl text-gray-900">
+                    <span className="font-serif text-xl md:text-2xl lg:text-3xl text-[#6D3D0D]">
                       Price upon request
                     </span>
-                    <span className="font-sans text-xs md:text-sm text-gray-600">
+                    <span className="font-serif text-xs md:text-sm text-[#6D3D0D]/60">
                       Natural diamonds require consultation for pricing
                     </span>
                   </div>
                 ) : (
                   <div className="flex items-baseline gap-2 md:gap-3">
-                    <span className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900">
+                    <span className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#6D3D0D]">
                       £{totalPrice.toLocaleString()}
                     </span>
-                    <span className="font-sans text-xs md:text-sm text-gray-600">
+                    <span className="font-serif text-xs md:text-sm text-[#6D3D0D]/60">
                       From £{product.basePriceGBP.toLocaleString()}
                     </span>
                   </div>
@@ -206,20 +237,20 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <div className="mb-4 md:mb-6 flex items-center justify-center space-x-2 md:space-x-4">
                 <button
                   onClick={() => setUseLuxuryConfigurator(false)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 ${
+                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-serif font-medium rounded-lg transition-all duration-300 ${
                     !useLuxuryConfigurator 
                       ? 'bg-elysium-gold text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      : 'bg-gray-100 text-[#6D3D0D]/70 hover:bg-gray-200'
                   }`}
                 >
                   Classic
                 </button>
                 <button
                   onClick={() => setUseLuxuryConfigurator(true)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 ${
+                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-serif font-medium rounded-lg transition-all duration-300 ${
                     useLuxuryConfigurator 
                       ? 'bg-elysium-gold text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      : 'bg-gray-100 text-[#6D3D0D]/70 hover:bg-gray-200'
                   }`}
                 >
                   Premium
@@ -283,13 +314,13 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               {/* Description */}
-              <div className="mt-12 pt-8 border-t border-gray-200">
-                <h3 className="font-serif text-xl uppercase tracking-[0.08em] text-gray-900 mb-4">
+              <div className="mt-12 pt-8 border-t border-[rgba(109,61,13,0.1)]">
+                <h3 className="font-serif text-xl uppercase tracking-[0.08em] text-[#6D3D0D] mb-4">
                   Description
                 </h3>
-                <p className="font-sans text-gray-800 leading-relaxed">
+                <div className="font-serif text-[#6D3D0D]/80 leading-relaxed whitespace-pre-line">
                   {product.description}
-                </p>
+                </div>
               </div>
             </div>
           </div>

@@ -168,10 +168,10 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
+                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
                       }`}
                     >
                       {metal.hex && (
@@ -201,10 +201,10 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
+                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
                       }`}
                     >
                       {metal.hex && (
@@ -234,10 +234,10 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
+                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
                       }`}
                     >
                       {metal.hex && (
@@ -268,7 +268,7 @@ export function CompactProductVariants({
               <button
                 key={origin.label}
                 onClick={() => onOriginChange(origin)}
-                className={`flex-1 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                className={`flex-1 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
                   selectedOrigin?.label === origin.label
                     ? "border-[#753600] bg-[#753600] text-white"
                     : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -319,14 +319,14 @@ export function CompactProductVariants({
                         
                         if (isNatural && isAbove1ct) {
                           return (
-                            <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-black'}`}>
+                            <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-[#6D3D0D]'}`}>
                               Consultation required
                             </div>
                           );
                         }
                         
                         return tier.description ? (
-                          <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-black'}`}>
+                          <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-[#6D3D0D]'}`}>
                             {tier.description}
                           </div>
                         ) : null;
@@ -397,14 +397,14 @@ export function CompactProductVariants({
               onClick={() => setRingSizeExpanded(true)}
               className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-left transition-all duration-200 flex items-center justify-between"
             >
-              <span className="text-sm font-medium text-gray-900">
+              <span className="text-sm font-serif font-medium text-[#6D3D0D]">
                 {selectedSize && selectedSize !== "unknown"
                   ? `Size ${selectedSize}`
                   : selectedSize === "unknown"
                   ? "I don't know my size"
                   : "Select your ring size"}
               </span>
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#6D3D0D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -424,10 +424,10 @@ export function CompactProductVariants({
                         onSizeChange(size);
                         setRingSizeExpanded(false);
                       }}
-                      className={`px-2 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                      className={`px-2 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
                         isSelected
                           ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
+                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
                       }`}
                     >
                       {size}
@@ -442,10 +442,10 @@ export function CompactProductVariants({
                   onSizeChange("unknown");
                   setRingSizeExpanded(false);
                 }}
-                className={`w-full px-3 py-2.5 rounded-lg border-2 text-sm font-medium transition-all duration-200 ${
+                className={`w-full px-3 py-2.5 rounded-lg border-2 text-sm font-serif font-medium transition-all duration-200 ${
                   selectedSize === "unknown"
                     ? "border-[#753600] bg-[#753600] text-white"
-                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-gray-700"
+                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
                 }`}
               >
                 {selectedSize === "unknown" ? "✓ " : ""}I don't know my size
@@ -454,7 +454,7 @@ export function CompactProductVariants({
               {/* Collapse Button */}
               <button
                 onClick={() => setRingSizeExpanded(false)}
-                className="w-full mt-2 px-3 py-2 text-xs text-gray-600 hover:text-gray-900 transition-colors"
+                className="w-full mt-2 px-3 py-2 text-xs font-serif text-[#6D3D0D]/70 hover:text-[#6D3D0D] transition-colors"
               >
                 Collapse ↑
               </button>
@@ -474,7 +474,7 @@ export function CompactProductVariants({
             className="mt-0.5 w-4 h-4 text-[#753600] border-gray-300 rounded focus:ring-[#753600]"
           />
           <div className="flex-1">
-            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-gray-900 cursor-pointer">
+            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] cursor-pointer">
               Complimentary Engraving (Optional)
             </label>
             {engravingSelected && (
@@ -487,7 +487,7 @@ export function CompactProductVariants({
                   maxLength={product.engravingMaxChars || 24}
                   className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-sm focus:border-[#753600] focus:outline-none transition-all duration-200 hover:border-[#753600]"
                 />
-                <p className="mt-1 text-xs text-gray-600">
+                <p className="mt-1 text-xs font-serif text-[#6D3D0D]/70">
                   {engravingText.length}/{product.engravingMaxChars || 24} characters
                 </p>
               </div>

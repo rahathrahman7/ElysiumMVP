@@ -158,7 +158,7 @@ export function CompactProductVariants({
       {/* Metal Selection - 3-ROW LAYOUT */}
       {product.metals && product.metals.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
             Metal
           </h3>
           <div className="space-y-2">
@@ -267,7 +267,7 @@ export function CompactProductVariants({
       {/* Origin Selection - Compact */}
       {product.origins && product.origins.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
             Origin
           </h3>
           <div className="flex gap-2">
@@ -291,7 +291,7 @@ export function CompactProductVariants({
       {/* Diamond Tiers - Simplified "Meet in the Middle" Approach */}
       {diamondTiers.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
             Carat Size
           </h3>
           <div className="space-y-2">
@@ -315,7 +315,7 @@ export function CompactProductVariants({
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1">
-                      <div className={`text-sm font-serif font-medium mb-1 ${isActive ? 'text-white' : 'text-[#6D3D0D]'}`}>
+                      <div className={`text-sm font-serif font-light mb-1.5 leading-tight ${isActive ? 'text-white' : 'text-[#6D3D0D]'}`}>
                         {tier.label}
                       </div>
                       {(() => {
@@ -343,7 +343,7 @@ export function CompactProductVariants({
                         }
                         
                         return descriptionText ? (
-                          <div className={`text-xs font-serif font-medium ${isActive ? 'text-white/90' : 'text-black'}`}>
+                          <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
                             {descriptionText}
                           </div>
                         ) : null;
@@ -362,13 +362,13 @@ export function CompactProductVariants({
                         const showBuyNow = (isNatural && is1ctTier) || (!isNatural && !isBespoke);
                         
                         return showBuyNow ? (
-                          <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
+                          <span className={`inline-block px-2.5 py-1 text-xs font-serif font-medium rounded ${
                             isActive ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700'
                           }`}>
                             Buy Now
                           </span>
                         ) : (
-                          <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
+                          <span className={`inline-block px-2.5 py-1 text-xs font-serif font-medium rounded ${
                             isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
                           }`}>
                             Enquire
@@ -381,10 +381,10 @@ export function CompactProductVariants({
               );
             })}
           </div>
-          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70">
+          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70 font-light leading-relaxed">
             * Higher specifications require consultation for custom pricing and availability
           </p>
-          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70">
+          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70 font-light leading-relaxed">
             Tax Included
           </p>
         </div>
@@ -394,7 +394,7 @@ export function CompactProductVariants({
       {product.sizes && product.sizes.length > 0 && (
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D]">
+            <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] font-light">
               Ring Size
             </h3>
             <RingSizeGuide />
@@ -483,7 +483,7 @@ export function CompactProductVariants({
             className="mt-0.5 w-4 h-4 text-[#753600] border-gray-300 rounded focus:ring-[#753600] bg-white"
           />
           <div className="flex-1">
-            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] cursor-pointer">
+            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] cursor-pointer font-light">
               Complimentary Engraving (Optional)
             </label>
             {engravingSelected && (

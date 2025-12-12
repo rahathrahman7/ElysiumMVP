@@ -321,13 +321,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
               )}
 
               {/* Actions */}
-              <ProductActions
-                product={product}
-                isEntryLevel={isEntryLevel}
-                isNaturalDiamond={isNaturalDiamond}
-                onAddToBag={handleAddToBag}
-                canAddToBag={canAdd}
-              />
+              <div className="mt-6">
+                <ProductActions
+                  product={product}
+                  isEntryLevel={isEntryLevel}
+                  isNaturalDiamond={isNaturalDiamond}
+                  onAddToBag={handleAddToBag}
+                  canAddToBag={canAdd}
+                />
+              </div>
 
               {/* Share Build */}
               <div className="mt-6">

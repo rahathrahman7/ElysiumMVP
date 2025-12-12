@@ -3,7 +3,7 @@
     "slug": "celeste-six-claw-solitaire",
     "title": "Celeste — Six-Claw Solitaire",
     "blurb": "Timeless round solitaire secured by six graceful eagle-claw prongs.",
-    "description": "Celeste is a timeless solitaire engagement ring, featuring a brilliant round-cut center stone secured by six graceful eagle-claw prongs. Metals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Silver, Two-Tone Yellow/Silver. Diamonds: D–F colour, VS1+ clarity. Certification: GIA or IGI.",
+    "description": "Celeste is a timeless solitaire engagement ring, featuring a brilliant round-cut center stone secured by six graceful eagle-claw prongs.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Celeste/Celeste-gold-front.jpeg",
       "/products/Celeste/Celeste-gold-side.jpeg",
@@ -32,12 +32,12 @@
         "priceDeltaGBP": 75
       },
       {
-        "name": "Two-Tone Rose/Silver",
+        "name": "Two-Tone Rose/Platinum",
         "hex": "#B76E79",
         "priceDeltaGBP": 50
       },
       {
-        "name": "Two-Tone Yellow/Silver",
+        "name": "Two-Tone Yellow/Platinum",
         "hex": "#D4AF37",
         "priceDeltaGBP": 50
       }
@@ -216,12 +216,12 @@
         "/products/Celeste/Celeste-silver-side.jpeg",
         "/products/Celeste/Celeste-silver-back.jpeg"
       ],
-      "Two-Tone Rose/Silver": [
+      "Two-Tone Rose/Platinum": [
         "/products/Celeste/Celeste-rose-silver-front.jpeg",
         "/products/Celeste/Celeste-rose-silver-side.jpeg",
         "/products/Celeste/Celeste-rose-silver-back.jpeg"
       ],
-      "Two-Tone Yellow/Silver": [
+      "Two-Tone Yellow/Platinum": [
         "/products/Celeste/Celeste-gold-silver-front.jpeg",
         "/products/Celeste/Celeste-gold-silver-side.jpeg",
         "/products/Celeste/Celeste-gold-silver-back.jpeg"
@@ -232,7 +232,7 @@
     "slug": "luna-low-set-solitaire",
     "title": "Luna — Low-Set Solitaire",
     "blurb": "Contemporary low-set round solitaire with open bridge & hidden halo. Flush-fit friendly.",
-    "description": "Luna is a contemporary solitaire that blends elegance with everyday practicality. Designed with a low-set round center stone, its open bridge and hidden halo create a delicate floating effect, allowing the ring to sit close to the finger while fitting perfectly flush with a matching wedding band. Metals: 18k Yellow, 18k Rose, 18k White, Platinum. Diamonds: D–F colour, VS1+ clarity. Certification: GIA or IGI.",
+    "description": "Luna is a contemporary solitaire that blends elegance with everyday practicality. Designed with a low-set round center stone, its open bridge and hidden halo create a delicate floating effect, allowing the ring to sit close to the finger while fitting perfectly flush with a matching wedding band.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Luna/Luna-gold-front.jpeg",
       "/products/Luna/Luna-gold-side.jpeg",
@@ -441,7 +441,7 @@
     "slug": "seraphina-signature-six-claw",
     "title": "Seraphina — Signature Six-Claw",
     "blurb": "Signature six-claw solitaire with a round-cut centre and pavé band.",
-    "description": "Seraphina is a signature six-claw solitaire, showcasing a round-cut center stone paired with a delicately pavé-set band that extends two-thirds of the way around. Metals: 18k Yellow, 18k Rose, 18k White, Platinum, and Two-Tone (Yellow + White or Rose + White). Diamonds: D–F colour, VS1+ clarity. Certification: GIA or IGI.",
+    "description": "Seraphina is a signature six-claw solitaire, showcasing a round-cut center stone paired with a delicately pavé-set band that extends two-thirds of the way around.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone: Yellow + White, Two-Tone: Rose + White.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Seraphina/Seraphina-gold-front.jpeg",
       "/products/Seraphina/Seraphina-gold-side.jpeg",
@@ -670,7 +670,7 @@
     "slug": "vow-veil",
     "title": "Vow & Veil — Toi et Moi",
     "blurb": "Elegant Toi et Moi design with round and pear stones on a curved band.",
-    "description": "Elegant in its individuality, the Vow & Veil engagement ring pairs a round and pear-cut center stone in a gracefully sculpted, curved band for a distinctive silhouette. For perfect harmony, both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both the round and pear stones.",
+    "description": "Elegant in its individuality, the Vow & Veil engagement ring pairs a round and pear-cut center stone in a gracefully sculpted, curved band for a distinctive silhouette. For perfect harmony, both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both the round and pear stones.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/vow-and-veil/VV-gold-front.jpeg",
       "/products/vow-and-veil/VV-gold-side.jpeg",
@@ -876,7 +876,7 @@
     "slug": "elara-trilogy",
     "title": "Elara — Trilogy",
     "blurb": "Timeless trilogy design with round center and pear sides in sculpted trellis setting.",
-    "description": "Elara is a timeless trilogy design, showcasing a brilliant round center stone flanked by two pear-cut side stones, all gracefully nestled within a sculpted trellis setting.",
+    "description": "Elara is a timeless trilogy design, showcasing a brilliant round center stone flanked by two pear-cut side stones, all gracefully nestled within a sculpted trellis setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Elara/Elara-gold-front.jpeg",
       "/products/Elara/Elara-gold-side.jpeg",
@@ -1081,7 +1081,7 @@
     "slug": "aveline-radiant-solitaire",
     "title": "Aveline — Radiant Solitaire",
     "blurb": "Radiant solitaire with hidden halo featuring four talon-tipped claws.",
-    "description": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and a hidden halo.",
+    "description": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and a hidden halo.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Aveline/Aveline-gold-front.jpeg",
       "/products/Aveline/Aveline-gold-side.jpeg",
@@ -1284,7 +1284,7 @@
     "slug": "orabella-toi-et-moi",
     "title": "Orabella — Toi et Moi",
     "blurb": "Toi et Moi design featuring pear-cut and radiant-cut stones in perfect harmony.",
-    "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony.",
+    "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Orabella/orabella-gold-front.jpeg",
       "/products/Orabella/orabella-gold-side.jpeg",
@@ -1484,7 +1484,7 @@
     "slug": "clarion-engagement-ring",
     "title": "Clarion Engagement Ring",
     "blurb": "Radiant solitaire with four-claw setting in classic elegance.",
-    "description": "The Clarion engagement ring is a classic solitaire design, showcasing an exquisite radiant-cut center stone held in a sleek four-claw setting.",
+    "description": "The Clarion engagement ring is a classic solitaire design, showcasing an exquisite radiant-cut center stone held in a sleek four-claw setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Clarion/rsol-gold-front.jpeg",
       "/products/Clarion/rsol-gold-side.jpeg",
@@ -1687,7 +1687,7 @@
     "slug": "ovalis-oval-solitaire",
     "title": "Ovalis — Oval Solitaire",
     "blurb": "Oval-cut centre stone with refined talon-tipped claws.",
-    "description": "Elegant in its simplicity, the Ovalis engagement ring showcases a captivating oval-cut centre stone secured by four refined talon-tipped claws on a slender band.",
+    "description": "Elegant in its simplicity, the Ovalis engagement ring showcases a captivating oval-cut centre stone secured by four refined talon-tipped claws on a slender band.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Ovalis/ovalis-front.jpeg",
       "/products/Ovalis/ovalis-side.jpeg",
@@ -1890,7 +1890,7 @@
     "slug": "eterna-oval-solitaire-hidden-halo",
     "title": "Oval Solitaire w Hidden Halo",
     "blurb": "Classic oval solitaire with four-talon claws and hidden halo.",
-    "description": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.",
+    "description": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Eterna/eterna-front.jpeg",
       "/products/Eterna/eterna-side.jpeg",
@@ -2094,7 +2094,7 @@
     "slug": "nova-oval-solitaire-round-marquise",
     "title": "Oval Solitaire w Round & Marquise",
     "blurb": "Oval centre stone with round and marquise side stones on refined band.",
-    "description": "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.",
+    "description": "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Nova/nova-front.jpeg",
       "/products/Nova/nova-side.jpeg",

@@ -313,13 +313,20 @@ export function CompactProductVariants({
                         {tier.label}
                       </div>
                       {(() => {
-                        // Only show "Direct purchase available" for 1ct natural diamonds
-                        // Remove for natural diamonds above 1ct
+                        // For natural diamonds above 1ct, show "Consultation required"
+                        // For others, show the tier description
                         const isNatural = selectedOrigin?.label === 'Natural';
                         const isAbove1ct = tier.id !== 'entry'; // entry is 1ct
-                        const shouldShowDescription = !(isNatural && isAbove1ct) && tier.description;
                         
-                        return shouldShowDescription ? (
+                        if (isNatural && isAbove1ct) {
+                          return (
+                            <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
+                              Consultation required
+                            </div>
+                          );
+                        }
+                        
+                        return tier.description ? (
                           <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
                             {tier.description}
                           </div>

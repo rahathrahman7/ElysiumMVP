@@ -52,56 +52,51 @@ export function CompactProductVariants({
   // For better colour (D, E) or clarity (IF, VVS1, VVS2) → Custom Specification
   const diamondTiers = product.carats && product.colours && product.clarities
     ? [
-        // Tier 1: 1ct - Entry-level tier
+        // Tier 1: 1ct - Standard tier (Buy Now for Lab Grown)
         {
           id: 'entry',
           label: '1ct Centre | F Colour | VS1 Clarity',
-          tierName: 'Entry-level',
           description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '1ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: true,
         },
-        // Tier 2: 1.5ct - Premium tier
+        // Tier 2: 1.5ct - Standard tier (Buy Now for Lab Grown)
         {
           id: 'premium',
           label: '1.5ct Centre | F Colour | VS1 Clarity',
-          tierName: 'Premium tier',
-          description: 'Consultation required',
+          description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '1.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 3: 2ct - Luxury tier
+        // Tier 3: 2ct - Standard tier (Buy Now for Lab Grown)
         {
           id: 'luxury',
           label: '2ct Centre | F Colour | VS1 Clarity',
-          tierName: 'Luxury tier',
-          description: 'Consultation required',
+          description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '2ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 4: 2.5ct - Signature tier
+        // Tier 4: 2.5ct - Standard tier (Buy Now for Lab Grown)
         {
           id: 'signature',
           label: '2.5ct Centre | F Colour | VS1 Clarity',
-          tierName: 'Signature tier',
-          description: 'Consultation required',
+          description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '2.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 5: 3ct - Ultra tier
+        // Tier 5: 3ct - Standard tier (Buy Now for Lab Grown)
         {
           id: 'ultra',
           label: '3ct Centre | F Colour | VS1 Clarity',
-          tierName: 'Ultra tier',
-          description: 'Consultation required',
+          description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '3ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
@@ -111,7 +106,6 @@ export function CompactProductVariants({
         {
           id: 'bespoke',
           label: 'Custom Specification',
-          tierName: 'Bespoke',
           description: 'Bespoke Design - Different Colour - Different Clarity',
           carat: undefined,
           colour: undefined,
@@ -319,32 +313,15 @@ export function CompactProductVariants({
                         {tier.label}
                       </div>
                       {(() => {
-                        // Show tier name and description
-                        // For natural diamonds above 1ct, hide "Direct purchase available"
+                        // Only show "Direct purchase available" for 1ct natural diamonds
+                        // Remove for natural diamonds above 1ct
                         const isNatural = selectedOrigin?.label === 'Natural';
                         const isAbove1ct = tier.id !== 'entry'; // entry is 1ct
-                        const shouldShowDirectPurchase = !(isNatural && isAbove1ct);
+                        const shouldShowDescription = !(isNatural && isAbove1ct) && tier.description;
                         
-                        // Build description text
-                        let descriptionText = '';
-                        if (tier.tierName) {
-                          descriptionText = tier.tierName;
-                          if (shouldShowDirectPurchase && tier.description && tier.description !== 'Consultation required') {
-                            descriptionText += ` - ${tier.description}`;
-                          } else if (!shouldShowDirectPurchase && tier.description) {
-                            descriptionText += ` - Consultation required`;
-                          } else if (tier.description === 'Consultation required') {
-                            descriptionText += ` - ${tier.description}`;
-                          }
-                        } else if (shouldShowDirectPurchase && tier.description) {
-                          descriptionText = tier.description;
-                        } else if (!shouldShowDirectPurchase && tier.description) {
-                          descriptionText = 'Consultation required';
-                        }
-                        
-                        return descriptionText ? (
+                        return shouldShowDescription ? (
                           <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
-                            {descriptionText}
+                            {tier.description}
                           </div>
                         ) : null;
                       })()}

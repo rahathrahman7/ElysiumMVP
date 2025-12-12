@@ -4,8 +4,8 @@ export function QuickShopChips() {
   const chips = ["Solitaire", "Hidden Halo", "Three-Stone", "Round", "Oval", "Marquise"];
 
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-6">
-      <div className="flex flex-wrap items-center justify-center gap-3">
+    <section className="mx-auto max-w-5xl px-6 py-6 md:py-8">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5">
         {chips.map((chip) => (
           <Link
             key={chip}

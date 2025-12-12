@@ -62,7 +62,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         "bg-gradient-to-b from-elysium-light/50 to-white",
         "rounded-lg overflow-hidden",
         "hover:scale-[1.03] hover:shadow-2xl hover:shadow-elysium-dark/20",
-        "before:absolute before:inset-0 before:rounded-lg",
+        "before:absolute before:inset-0 before:rounded-lg before:pointer-events-none",
         "before:bg-gradient-to-b before:from-elysium-dark/5 before:to-transparent",
         "before:opacity-0 before:transition-opacity before:duration-300",
         "hover:before:opacity-100",
@@ -163,7 +163,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
 
       {/* Product Information */}
       <div className="relative p-6 bg-gradient-to-b from-white/50 to-white/80 backdrop-blur-sm">
-        <Link href={`/products/${product.slug}`} className="block group-hover:text-elysium-dark/80 transition-colors duration-300 touch-manipulation">
+        <Link href={`/products/${product.slug}`} className="block group-hover:text-elysium-dark/80 transition-colors duration-300">
           <h3 className="text-xl font-light text-elysium-dark mb-2 tracking-wide leading-tight text-center">
             {ringName}
           </h3>
@@ -190,18 +190,18 @@ export default function LuxuryProductCard({ product, className = "", priority = 
           </div>
         )}
 
-        
+
         {/* Description - show on hover */}
         {isHovered && (
           <div className="mt-4 relative transition-all duration-500 ease-out animate-fade-in-up">
             <div className="px-6 py-3">
               {/* Subtle decorative line above */}
               <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#45321e]/40 to-transparent mx-auto mb-3" />
-              
+
               <p className="text-sm text-[#45321e]/90 font-light leading-[1.6] text-center tracking-[0.02em] max-w-xs mx-auto">
                 {product.blurb}
               </p>
-              
+
               {/* Subtle decorative line below */}
               <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#45321e]/40 to-transparent mx-auto mt-3" />
             </div>

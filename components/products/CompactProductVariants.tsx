@@ -313,9 +313,11 @@ export function CompactProductVariants({
                       </div>
                       {(() => {
                         // For natural diamonds above 1ct, show "Consultation required"
-                        // For others, show the tier description
+                        // For lab-grown, only show description for bespoke (custom spec)
+                        // All other lab-grown tiers are direct purchase, so no consultation text
                         const isNatural = selectedOrigin?.label === 'Natural';
                         const isAbove1ct = tier.id !== 'entry'; // entry is 1ct
+                        const isBespoke = tier.id === 'bespoke';
                         
                         if (isNatural && isAbove1ct) {
                           return (
@@ -323,6 +325,11 @@ export function CompactProductVariants({
                               Consultation required
                             </div>
                           );
+                        }
+                        
+                        // For lab-grown: only show description for bespoke, otherwise show nothing (direct purchase)
+                        if (!isNatural && !isBespoke) {
+                          return null; // Lab-grown non-bespoke = direct purchase, no text needed
                         }
                         
                         return tier.description ? (
@@ -355,16 +362,11 @@ export function CompactProductVariants({
                         } else {
                           return (
                             <div>
-                              <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded mb-1 ${
+                              <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
                                 isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
                               }`}>
                                 Enquire
                               </span>
-                              {totalDelta > 0 && (
-                                <div className={`text-xs font-serif ${isActive ? 'text-white/80' : 'text-[#6D3D0D]/70'}`}>
-                                  +£{totalDelta.toLocaleString()}
-                                </div>
-                              )}
                             </div>
                           );
                         }

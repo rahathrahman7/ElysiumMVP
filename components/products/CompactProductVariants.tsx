@@ -52,7 +52,7 @@ export function CompactProductVariants({
   // For better colour (D, E) or clarity (IF, VVS1, VVS2) → Custom Specification
   const diamondTiers = product.carats && product.colours && product.clarities
     ? [
-        // Tier 1: 1ct - Standard tier (Buy Now for Lab Grown)
+        // Tier 1: 1ct - Entry-Level (Buy Now)
         {
           id: 'entry',
           label: '1ct Centre | F Colour | VS1 Clarity',
@@ -62,41 +62,41 @@ export function CompactProductVariants({
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: true,
         },
-        // Tier 2: 1.5ct - Standard tier (Buy Now for Lab Grown)
+        // Tier 2: 1.5ct - F/VS1
         {
           id: 'premium',
           label: '1.5ct Centre | F Colour | VS1 Clarity',
-          description: 'Direct purchase available',
+          description: 'Consultation required',
           carat: product.carats.find(c => c.label === '1.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 3: 2ct - Standard tier (Buy Now for Lab Grown)
+        // Tier 3: 2ct - F/VS1
         {
           id: 'luxury',
           label: '2ct Centre | F Colour | VS1 Clarity',
-          description: 'Direct purchase available',
+          description: 'Consultation required',
           carat: product.carats.find(c => c.label === '2ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 4: 2.5ct - Standard tier (Buy Now for Lab Grown)
+        // Tier 4: 2.5ct - F/VS1
         {
           id: 'signature',
           label: '2.5ct Centre | F Colour | VS1 Clarity',
-          description: 'Direct purchase available',
+          description: 'Consultation required',
           carat: product.carats.find(c => c.label === '2.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 5: 3ct - Standard tier (Buy Now for Lab Grown)
+        // Tier 5: 3ct - F/VS1
         {
           id: 'ultra',
           label: '3ct Centre | F Colour | VS1 Clarity',
-          description: 'Direct purchase available',
+          description: 'Consultation required',
           carat: product.carats.find(c => c.label === '3ct'),
           colour: product.colours.find(c => c.label === 'F'),
           clarity: product.clarities.find(c => c.label === 'VS1'),
@@ -135,7 +135,6 @@ export function CompactProductVariants({
     }
   };
 
-
   // Organize metals by type for proper layout
   const goldMetals = product.metals?.filter(m =>
     m.name.includes('18k') && !m.name.toLowerCase().includes('two-tone')
@@ -144,7 +143,7 @@ export function CompactProductVariants({
     m.name.toLowerCase().includes('two-tone')
   ) || [];
   const platinumMetals = product.metals?.filter(m =>
-    m.name.toLowerCase().includes('platinum') && !m.name.toLowerCase().includes('two-tone')
+    m.name.toLowerCase().includes('platinum')
   ) || [];
 
   return (
@@ -152,7 +151,7 @@ export function CompactProductVariants({
       {/* Metal Selection - 3-ROW LAYOUT */}
       {product.metals && product.metals.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
             Metal
           </h3>
           <div className="space-y-2">
@@ -169,7 +168,7 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
                           : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -202,7 +201,7 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
                           : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -235,7 +234,7 @@ export function CompactProductVariants({
                       onFocus={() => onMetalHover?.(metal.name)}
                       onMouseLeave={() => onMetalHover?.(undefined)}
                       aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
                         active
                           ? "border-[#753600] bg-[#753600] text-white"
                           : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -261,7 +260,7 @@ export function CompactProductVariants({
       {/* Origin Selection - Compact */}
       {product.origins && product.origins.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
             Origin
           </h3>
           <div className="flex gap-2">
@@ -269,7 +268,7 @@ export function CompactProductVariants({
               <button
                 key={origin.label}
                 onClick={() => onOriginChange(origin)}
-                className={`flex-1 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                className={`flex-1 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
                   selectedOrigin?.label === origin.label
                     ? "border-[#753600] bg-[#753600] text-white"
                     : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -285,7 +284,7 @@ export function CompactProductVariants({
       {/* Diamond Tiers - Simplified "Meet in the Middle" Approach */}
       {diamondTiers.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3 font-light">
+          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
             Carat Size
           </h3>
           <div className="space-y-2">
@@ -309,7 +308,7 @@ export function CompactProductVariants({
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1">
-                      <div className={`text-sm font-serif font-light mb-1.5 leading-tight ${isActive ? 'text-white' : 'text-[#6D3D0D]'}`}>
+                      <div className={`text-sm font-serif font-medium mb-1 ${isActive ? 'text-white' : 'text-[#6D3D0D]'}`}>
                         {tier.label}
                       </div>
                       {(() => {
@@ -320,14 +319,14 @@ export function CompactProductVariants({
                         
                         if (isNatural && isAbove1ct) {
                           return (
-                            <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
+                            <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-black'}`}>
                               Consultation required
                             </div>
                           );
                         }
                         
                         return tier.description ? (
-                          <div className={`text-xs font-serif font-normal leading-relaxed ${isActive ? 'text-white/95' : 'text-black'}`}>
+                          <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-black'}`}>
                             {tier.description}
                           </div>
                         ) : null;
@@ -345,19 +344,30 @@ export function CompactProductVariants({
                         const is1ctTier = tier.id === 'entry'; // 1ct/F/VS1 tier
                         const showBuyNow = (isNatural && is1ctTier) || (!isNatural && !isBespoke);
                         
-                        return showBuyNow ? (
-                          <span className={`inline-block px-2.5 py-1 text-xs font-serif font-medium rounded ${
-                            isActive ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700'
-                          }`}>
-                            Buy Now
-                          </span>
-                        ) : (
-                          <span className={`inline-block px-2.5 py-1 text-xs font-serif font-medium rounded ${
-                            isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
-                          }`}>
-                            Enquire
-                          </span>
-                        );
+                        if (showBuyNow) {
+                          return (
+                            <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
+                              isActive ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700'
+                            }`}>
+                              Buy Now
+                            </span>
+                          );
+                        } else {
+                          return (
+                            <div>
+                              <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded mb-1 ${
+                                isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
+                              }`}>
+                                Enquire
+                              </span>
+                              {totalDelta > 0 && (
+                                <div className={`text-xs font-serif ${isActive ? 'text-white/80' : 'text-[#6D3D0D]/70'}`}>
+                                  +£{totalDelta.toLocaleString()}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
                       })()}
                     </div>
                   </div>
@@ -365,11 +375,8 @@ export function CompactProductVariants({
               );
             })}
           </div>
-          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70 font-light leading-relaxed">
+          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70">
             * Higher specifications require consultation for custom pricing and availability
-          </p>
-          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70 font-light leading-relaxed">
-            Tax Included
           </p>
         </div>
       )}
@@ -378,7 +385,7 @@ export function CompactProductVariants({
       {product.sizes && product.sizes.length > 0 && (
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] font-light">
+            <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D]">
               Ring Size
             </h3>
             <RingSizeGuide />
@@ -390,14 +397,14 @@ export function CompactProductVariants({
               onClick={() => setRingSizeExpanded(true)}
               className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-left transition-all duration-200 flex items-center justify-between"
             >
-              <span className="text-sm font-serif font-medium text-[#6D3D0D]">
+              <span className="text-sm font-medium text-gray-900">
                 {selectedSize && selectedSize !== "unknown"
                   ? `Size ${selectedSize}`
                   : selectedSize === "unknown"
                   ? "I don't know my size"
                   : "Select your ring size"}
               </span>
-              <svg className="w-4 h-4 text-[#6D3D0D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -417,7 +424,7 @@ export function CompactProductVariants({
                         onSizeChange(size);
                         setRingSizeExpanded(false);
                       }}
-                      className={`px-2 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                      className={`px-2 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
                         isSelected
                           ? "border-[#753600] bg-[#753600] text-white"
                           : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
@@ -435,10 +442,10 @@ export function CompactProductVariants({
                   onSizeChange("unknown");
                   setRingSizeExpanded(false);
                 }}
-                className={`w-full px-3 py-2.5 rounded-lg border-2 text-sm font-serif font-medium transition-all duration-200 ${
+                className={`w-full px-3 py-2.5 rounded-lg border-2 text-sm font-medium transition-all duration-200 ${
                   selectedSize === "unknown"
                     ? "border-[#753600] bg-[#753600] text-white"
-                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]/70"
+                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-gray-700"
                 }`}
               >
                 {selectedSize === "unknown" ? "✓ " : ""}I don't know my size
@@ -447,7 +454,7 @@ export function CompactProductVariants({
               {/* Collapse Button */}
               <button
                 onClick={() => setRingSizeExpanded(false)}
-                className="w-full mt-2 px-3 py-2 text-xs font-serif text-[#6D3D0D]/70 hover:text-[#6D3D0D] transition-colors"
+                className="w-full mt-2 px-3 py-2 text-xs text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Collapse ↑
               </button>
@@ -464,10 +471,10 @@ export function CompactProductVariants({
             id="engraving"
             checked={engravingSelected}
             onChange={(e) => onEngravingChange(e.target.checked)}
-            className="mt-0.5 w-4 h-4 text-[#753600] border-gray-300 rounded focus:ring-[#753600] bg-white"
+            className="mt-0.5 w-4 h-4 text-[#753600] border-gray-300 rounded focus:ring-[#753600]"
           />
           <div className="flex-1">
-            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] cursor-pointer font-light">
+            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-gray-900 cursor-pointer">
               Complimentary Engraving (Optional)
             </label>
             {engravingSelected && (
@@ -478,9 +485,9 @@ export function CompactProductVariants({
                   onChange={(e) => onEngravingTextChange(e.target.value)}
                   placeholder={`Enter text (max ${product.engravingMaxChars || 24} characters)`}
                   maxLength={product.engravingMaxChars || 24}
-                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-sm font-serif bg-white text-[#6D3D0D] focus:border-[#753600] focus:outline-none transition-all duration-200 hover:border-[#753600]"
+                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-sm focus:border-[#753600] focus:outline-none transition-all duration-200 hover:border-[#753600]"
                 />
-                <p className="mt-1 text-xs font-serif text-[#6D3D0D]/70">
+                <p className="mt-1 text-xs text-gray-600">
                   {engravingText.length}/{product.engravingMaxChars || 24} characters
                 </p>
               </div>

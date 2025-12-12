@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "postinstall": "DATABASE_URL=${DATABASE_URL:-postgresql://placeholder:placeholder@localhost:5432/placeholder} prisma generate",
+    "postinstall": "prisma generate",
     "context7:mcp": "npx -y @upstash/context7-mcp",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",

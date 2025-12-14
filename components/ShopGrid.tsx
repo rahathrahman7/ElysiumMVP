@@ -200,19 +200,39 @@ export function ShopGrid() {
                       
                       const groupTitles = {
                         'mens-rings': 'Men\'s Wedding Bands',
-                        solitaires: 'Solitaire Collection',
-                        'toi-et-moi': 'Toi et Moi Collection',
-                        trilogy: 'Trilogy Collection',
-                        other: 'Signature Collection'
+                        solitaires: 'Solitaire',
+                        'toi-et-moi': 'Toi et Moi',
+                        trilogy: 'Trilogy',
+                        other: 'Other Collections'
                       };
+
+                      // Skip rendering if it's 'other' and we have other signature groups
+                      if (groupName === 'other' && (groups.solitaires.length > 0 || groups['toi-et-moi'].length > 0 || groups.trilogy.length > 0)) {
+                        return null;
+                      }
+
+                      // Check if this is a signature collection group
+                      const isSignatureGroup = ['solitaires', 'toi-et-moi', 'trilogy'].includes(groupName);
 
                       return (
                         <div key={groupName} className="space-y-8">
+                          {/* Show "Signature Collection" as main heading only for first signature group */}
+                          {isSignatureGroup && groupName === 'solitaires' && (
+                            <div className="text-center mb-8">
+                              <h2 className="font-serif text-3xl md:text-4xl text-elysium-charcoal tracking-wide mb-2 uppercase">
+                                Signature Collection
+                              </h2>
+                              <div className="w-24 h-px bg-gradient-to-r from-transparent via-elysium-gold to-transparent mx-auto"></div>
+                            </div>
+                          )}
+                          
                           <div className="text-center">
-                            <h3 className="font-serif text-2xl md:text-3xl text-elysium-charcoal tracking-wide mb-2">
-                              {groupTitles[groupName as keyof typeof groupTitles]}
+                            <h3 className="font-serif text-xl md:text-2xl text-elysium-charcoal tracking-wide mb-2">
+                              {isSignatureGroup ? `${groupTitles[groupName as keyof typeof groupTitles]} Collection` : groupTitles[groupName as keyof typeof groupTitles]}
                             </h3>
-                            <div className="w-16 h-px bg-gradient-to-r from-transparent via-elysium-gold to-transparent mx-auto"></div>
+                            {!isSignatureGroup && (
+                              <div className="w-16 h-px bg-gradient-to-r from-transparent via-elysium-gold to-transparent mx-auto"></div>
+                            )}
                           </div>
                           
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">

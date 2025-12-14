@@ -71,7 +71,9 @@ export default function CollectionPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
         <div className="mb-6 flex items-center justify-between">
-          <h1 className="font-serif text-2xl capitalize">{handle.replace(/-/g," ")}</h1>
+          <h1 className="font-serif text-2xl md:text-3xl capitalize">
+            {handle === 'engagement-rings' ? 'Signature Collection' : handle.replace(/-/g," ")}
+          </h1>
           <Link 
             href="/wishlist" 
             className="inline-flex items-center gap-2 px-3 py-2 text-sm text-neutral-600 hover:text-neutral-900 transition-colors rounded-full border border-neutral-200 hover:border-neutral-300"

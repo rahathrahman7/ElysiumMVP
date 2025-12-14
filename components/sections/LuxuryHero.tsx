@@ -67,7 +67,7 @@ export default function LuxuryHero() {
             </Link>
             <Link
               href="/bespoke"
-              className="group px-6 md:px-10 py-3 md:py-4 text-[var(--color-gold,#D4AF37)] font-semibold tracking-[0.2em] uppercase text-xs md:text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
+              className="group px-6 md:px-10 py-3 md:py-4 text-white font-semibold tracking-[0.2em] uppercase text-xs md:text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
             >
               <span className="drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">Bespoke Design</span>
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -117,6 +117,7 @@ export default function LuxuryHero() {
         
         <button
           aria-label="Explore more"
+          onClick={() => document.getElementById('featured-collection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
           className={`mt-6 md:mt-8 mx-auto group transition-all duration-1000 delay-700 ${
             ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}

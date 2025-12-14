@@ -5,9 +5,10 @@ export type Facets = Record<FacetKey, Option[]>;
 export const facets: Facets = {
   style: [
     { id:"solitaire", label:"Solitaire", icon:"/icons/styles/solitaire.svg" },
-    { id:"halo",      label:"Halo",      icon:"/icons/styles/halo.svg" },
-    { id:"three-stone", label:"Three-Stone", icon:"/icons/styles/three-stone.svg" },
+    { id:"halo",      label:"Traditional Halo",      icon:"/icons/styles/halo.svg" },
+    { id:"three-stone", label:"Trilogy", icon:"/icons/styles/three-stone.svg" },
     { id:"hidden-halo", label:"Hidden Halo", icon:"/icons/styles/hidden-halo.svg" },
+    { id:"half-eternity", label:"Half Eternity", icon:"/icons/styles/halo.svg" },
   ],
   collection: [
     { id:"signature", label:"Signature" },

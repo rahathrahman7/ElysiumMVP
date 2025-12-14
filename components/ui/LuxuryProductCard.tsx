@@ -169,6 +169,17 @@ export default function LuxuryProductCard({ product, className = "", priority = 
           {ringName}
         </h3>
         
+        {/* Hidden Halo Signature Box */}
+        {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
+          <div className="mb-2 flex justify-center">
+            <div className="inline-flex items-center px-2 py-1 bg-white/80 backdrop-blur-sm border border-[#45321e]/30 rounded-full shadow-sm">
+              <span className="text-[10px] font-serif font-light tracking-[0.1em] text-[#45321e] uppercase">
+                Hidden Halo
+              </span>
+            </div>
+          </div>
+        )}
+        
         {/* Metal Swatches */}
         {metals.length > 0 && (
           <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals" data-no-navigate onClick={(e) => e.stopPropagation()}>

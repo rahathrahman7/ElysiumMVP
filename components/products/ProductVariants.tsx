@@ -2,6 +2,7 @@
 
 import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption, CertOption } from "@/lib/productTypes";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
+import MetalSwatch from "@/components/ui/MetalSwatch";
 
 interface ProductVariantsProps {
   product: Product;
@@ -53,43 +54,23 @@ export function ProductVariants({
       {/* Metal Selection */}
       {product.metals && product.metals.length > 0 && (
         <div>
-          <h3 className="font-serif text-lg uppercase tracking-[0.08em] text-gray-900 mb-4">
-            Metal
+          <h3 className="font-serif text-sm uppercase tracking-[0.12em] text-[#6D3D0D]/80 mb-5 text-center">
+            Ring Metal
           </h3>
-          <div className="grid grid-cols-2 gap-3">
-            {product.metals.map((metal) => {
-              const active = selectedMetal?.name === metal.name;
-              return (
-                <button
-                  key={metal.name}
-                  onClick={() => onMetalChange(metal)}
-                  onMouseEnter={() => onMetalHover?.(metal.name)}
-                  onFocus={() => onMetalHover?.(metal.name)}
-                  onMouseLeave={() => onMetalHover?.(undefined)}
-                  aria-pressed={active}
-                  className={`p-4 rounded-lg border-2 text-left transition-all duration-300 ${
-                    active
-                      ? "border-[#45321e] bg-[#45321e] text-white shadow-md"
-                      : "border-gray-200 hover:border-[#45321e] hover:bg-[#45321e] hover:text-white hover:shadow-sm hover:scale-[1.02]"
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    {metal.hex && (
-                      <div
-                        className="w-6 h-6 rounded-full border border-gray-200"
-                        style={{ backgroundColor: metal.hex }}
-                        aria-hidden="true"
-                      />
-                    )}
-                    <div className="flex-1">
-                      <div className="font-medium text-gray-900 text-sm">
-                        {metal.name}
-                      </div>
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
+          <div className="flex flex-wrap justify-center gap-8">
+            {product.metals.map((metal) => (
+              <MetalSwatch
+                key={metal.name}
+                metal={metal}
+                isSelected={selectedMetal?.name === metal.name}
+                onSelect={onMetalChange}
+                onHover={onMetalHover}
+                size="lg"
+                showLabel={true}
+                groupName="metal-selection"
+                variant="circle"
+              />
+            ))}
           </div>
         </div>
       )}
@@ -101,7 +82,7 @@ export function ProductVariants({
             Origin
           </h3>
           <div className="grid grid-cols-2 gap-3">
-            {product.origins.map((origin) => (
+            {[...product.origins].reverse().map((origin) => (
               <button
                 key={origin.label}
                 onClick={() => onOriginChange(origin)}

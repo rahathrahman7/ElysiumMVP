@@ -7,7 +7,17 @@ export function productMatches(p: Product, fs: FilterState): boolean {
   const by = <T extends string>(vals: T[]|undefined, want?: string[]) =>
     !want?.length || (vals||[]).some(v => want.includes(v));
 
-  const okShape   = by([p.shape], fs.shape);
+  // Shape matching: check both p.shape and collections array for multi-shape products
+  const shapeMatches = (() => {
+    if (!fs.shape?.length) return true;
+    // Check primary shape
+    if (p.shape && fs.shape.includes(p.shape)) return true;
+    // Check collections array for additional shapes (for multi-shape products like Toi et Moi)
+    if (p.collections && p.collections.some(c => fs.shape!.includes(c))) return true;
+    return false;
+  })();
+
+  const okShape   = shapeMatches;
   const okStyle   = by(p.styles, fs.style);
   const okMetal   = by(p.metals?.map(m=>m.name.toLowerCase().includes('yellow') ? 'yellow' : m.name.toLowerCase().includes('white') ? 'white' : m.name.toLowerCase().includes('rose') ? 'rose' : m.name.toLowerCase().includes('platinum') ? 'platinum' : ''), fs.metal);
   const okOrigin  = by(p.origins?.map(o=>o.label.toLowerCase().includes('natural') ? 'natural' : o.label.toLowerCase().includes('lab') ? 'lab' : ''), fs.origin);

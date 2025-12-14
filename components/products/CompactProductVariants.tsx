@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Product, MetalOption, OriginOption, CaratOption, ColourOption, ClarityOption } from "@/lib/productTypes";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
+import MetalSwatch from "@/components/ui/MetalSwatch";
 
 interface CompactProductVariantsProps {
   product: Product;
@@ -135,124 +136,28 @@ export function CompactProductVariants({
     }
   };
 
-  // Organize metals by type for proper layout
-  const goldMetals = product.metals?.filter(m =>
-    m.name.includes('18k') && !m.name.toLowerCase().includes('two-tone')
-  ) || [];
-  const twoToneMetals = product.metals?.filter(m =>
-    m.name.toLowerCase().includes('two-tone')
-  ) || [];
-  const platinumMetals = product.metals?.filter(m =>
-    m.name.toLowerCase().includes('platinum')
-  ) || [];
-
   return (
     <div className="space-y-6">
-      {/* Metal Selection - 3-ROW LAYOUT */}
+      {/* Metal Selection */}
       {product.metals && product.metals.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
-            Metal
+          <h3 className="font-serif text-xs uppercase tracking-[0.12em] text-[#6D3D0D]/80 mb-4 text-center">
+            Ring Metal
           </h3>
-          <div className="space-y-2">
-            {/* Row 1: 18k Golds (3 across) */}
-            {goldMetals.length > 0 && (
-              <div className="grid grid-cols-3 gap-2">
-                {goldMetals.map((metal) => {
-                  const active = selectedMetal?.name === metal.name;
-                  return (
-                    <button
-                      key={metal.name}
-                      onClick={() => onMetalChange(metal)}
-                      onMouseEnter={() => onMetalHover?.(metal.name)}
-                      onFocus={() => onMetalHover?.(metal.name)}
-                      onMouseLeave={() => onMetalHover?.(undefined)}
-                      aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
-                        active
-                          ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
-                      }`}
-                    >
-                      {metal.hex && (
-                        <div
-                          className="w-3 h-3 rounded-full border border-white/50"
-                          style={{ backgroundColor: metal.hex }}
-                          aria-hidden="true"
-                        />
-                      )}
-                      <span className="truncate">{metal.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* Row 2: Two-Tone options */}
-            {twoToneMetals.length > 0 && (
-              <div className="grid grid-cols-2 gap-2">
-                {twoToneMetals.map((metal) => {
-                  const active = selectedMetal?.name === metal.name;
-                  return (
-                    <button
-                      key={metal.name}
-                      onClick={() => onMetalChange(metal)}
-                      onMouseEnter={() => onMetalHover?.(metal.name)}
-                      onFocus={() => onMetalHover?.(metal.name)}
-                      onMouseLeave={() => onMetalHover?.(undefined)}
-                      aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
-                        active
-                          ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
-                      }`}
-                    >
-                      {metal.hex && (
-                        <div
-                          className="w-3 h-3 rounded-full border border-white/50"
-                          style={{ backgroundColor: metal.hex }}
-                          aria-hidden="true"
-                        />
-                      )}
-                      <span className="truncate">{metal.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* Row 3: Platinum (full width) */}
-            {platinumMetals.length > 0 && (
-              <div className="grid grid-cols-1 gap-2">
-                {platinumMetals.map((metal) => {
-                  const active = selectedMetal?.name === metal.name;
-                  return (
-                    <button
-                      key={metal.name}
-                      onClick={() => onMetalChange(metal)}
-                      onMouseEnter={() => onMetalHover?.(metal.name)}
-                      onFocus={() => onMetalHover?.(metal.name)}
-                      onMouseLeave={() => onMetalHover?.(undefined)}
-                      aria-pressed={active}
-                      className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
-                        active
-                          ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
-                      }`}
-                    >
-                      {metal.hex && (
-                        <div
-                          className="w-3 h-3 rounded-full border border-white/50"
-                          style={{ backgroundColor: metal.hex }}
-                          aria-hidden="true"
-                        />
-                      )}
-                      <span className="truncate">{metal.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+          <div className="flex flex-wrap justify-center gap-6">
+            {product.metals.map((metal) => (
+              <MetalSwatch
+                key={metal.name}
+                metal={metal}
+                isSelected={selectedMetal?.name === metal.name}
+                onSelect={onMetalChange}
+                onHover={onMetalHover}
+                size="md"
+                showLabel={true}
+                groupName="compact-metal-selection"
+                variant="circle"
+              />
+            ))}
           </div>
         </div>
       )}
@@ -264,7 +169,7 @@ export function CompactProductVariants({
             Origin
           </h3>
           <div className="flex gap-2">
-            {product.origins.map((origin) => (
+            {[...product.origins].reverse().map((origin) => (
               <button
                 key={origin.label}
                 onClick={() => onOriginChange(origin)}

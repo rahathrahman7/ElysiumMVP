@@ -3,7 +3,8 @@
 
 export type MetalOption = {
   name: string;
-  hex?: string;        // swatch colour
+  hex?: string;        // swatch colour (fallback for loading/errors)
+  imageUrl?: string;   // path to realistic metal swatch image (192x192px PNG)
   priceDeltaGBP: number;
 };
 

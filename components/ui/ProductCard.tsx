@@ -46,7 +46,8 @@ export default function ProductCard({ product, className = "" }: Props) {
   // Distinct metals by label with optional color swatches
   const metals = useMemo(() => (effective.metals || []).map(m => ({
     name: m.name,
-    hex: m.hex
+    hex: m.hex,
+    imageUrl: m.imageUrl
   })), [effective.metals]);
 
   return (
@@ -132,15 +133,26 @@ export default function ProductCard({ product, className = "" }: Props) {
                 key={m.name}
                 type="button"
                 className={clsx(
-                  "w-5 h-5 rounded-full border shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]",
+                  "relative w-5 h-5 rounded-full border shadow-sm overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]",
                   activeMetal === m.name ? "ring-2 ring-gold" : "border-gray-200"
                 )}
-                style={{ backgroundColor: m.hex || undefined }}
+                style={!m.imageUrl ? { backgroundColor: m.hex || undefined } : undefined}
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
                 onFocus={() => setActiveMetal(m.name)}
                 onClick={(e) => { e.preventDefault(); setActiveMetal(m.name);} }
-              />)
+              >
+                {m.imageUrl && (
+                  <Image
+                    src={m.imageUrl}
+                    alt={m.name}
+                    width={20}
+                    height={20}
+                    className="w-full h-full object-cover"
+                    quality={90}
+                  />
+                )}
+              </button>)
             )}
           </div>
         )}

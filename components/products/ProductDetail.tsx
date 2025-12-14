@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Product } from "@/lib/productTypes";
+import { Product, MetalOption } from "@/lib/productTypes";
 import { CompactProductVariants } from "./CompactProductVariants";
 import { ProductActions } from "./ProductActions";
 import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";
@@ -50,7 +50,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
   }
   
   const [selectedMetal, setSelectedMetal] = useState(defaultMetal || null);
-  const [selectedOrigin, setSelectedOrigin] = useState(product.origins?.[0] || null); // Default to Natural (or null if no origins)
+  const [selectedOrigin, setSelectedOrigin] = useState(
+    product.origins?.find(o => o.label === 'Lab Grown') || product.origins?.[0] || null
+  ); // Default to Lab Grown (or null if no origins)
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)
   const [selectedColour, setSelectedColour] = useState(product.colours?.[2] || null); // Default to F (or null if no colours)
   const [selectedClarity, setSelectedClarity] = useState(product.clarities?.[3] || null); // Default to VS1 (or null if no clarities)
@@ -74,7 +76,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   // When hook's build changes, mirror into your local state (without breaking logic)
   useEffect(()=>{
-    if (build.origin !== undefined) setSelectedOrigin(product.origins?.find(o => o.label === build.origin) || null);
+    if (build.origin !== undefined) {
+      setSelectedOrigin(product.origins?.find(o => o.label === build.origin) || null);
+    } else {
+      // If no origin in URL, default to Lab Grown
+      setSelectedOrigin(product.origins?.find(o => o.label === 'Lab Grown') || product.origins?.[0] || null);
+    }
     if (build.carat !== undefined) setSelectedCarat(product.carats?.find(c => c.label === build.carat) || null);
     if (build.colour !== undefined) setSelectedColour(product.colours?.find(c => c.label === build.colour) || null);
     if (build.clarity !== undefined) setSelectedClarity(product.clarities?.find(c => c.label === build.clarity) || null);
@@ -226,6 +233,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     className="absolute right-0 top-0 text-[#6D3D0D]/60 hover:text-[#6D3D0D]" 
                   />
                 </div>
+                {/* Hidden Halo Signature Box */}
+                {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
+                  <div className="mb-3 md:mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#6D3D0D]/30 rounded-full shadow-sm">
+                      <span className="text-xs font-serif font-light tracking-[0.1em] text-[#6D3D0D] uppercase">
+                        Hidden Halo
+                      </span>
+                    </div>
+                  </div>
+                )}
                 <p className="font-serif text-lg text-[#6D3D0D]/70 leading-relaxed">
                   {product.blurb}
                 </p>

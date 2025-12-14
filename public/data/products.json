@@ -14,32 +14,38 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       },
       {
         "name": "Two-Tone Rose/Platinum",
         "hex": "#B76E79",
-        "priceDeltaGBP": 50
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
       },
       {
         "name": "Two-Tone Yellow/Platinum",
         "hex": "#D4AF37",
-        "priceDeltaGBP": 50
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
       }
     ],
     "origins": [
@@ -243,22 +249,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -452,32 +462,38 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       },
       {
         "name": "Two-Tone: Yellow + White",
         "hex": "#D4AF37",
-        "priceDeltaGBP": 50
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldwhitegold.png"
       },
       {
         "name": "Two-Tone: Rose + White",
         "hex": "#B76E79",
-        "priceDeltaGBP": 50
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldwhitegold.png"
       }
     ],
     "origins": [
@@ -670,7 +686,7 @@
     "slug": "vow-veil",
     "title": "Vow & Veil — Toi et Moi",
     "blurb": "Elegant Toi et Moi design with round and pear stones on a curved band.",
-    "description": "Elegant in its individuality, the Vow & Veil engagement ring pairs a round and pear-cut center stone in a gracefully sculpted, curved band for a distinctive silhouette. For perfect harmony, both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both the round and pear stones.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "description": "Elegant in its individuality, the Vow & Veil engagement ring pairs a round and pear-cut stone in a gracefully sculpted, curved band for a distinctive silhouette. For perfect harmony, both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the round will be 1ct and the pear will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/vow-and-veil/VV-gold-front.jpeg",
       "/products/vow-and-veil/VV-gold-side.jpeg",
@@ -681,22 +697,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -887,22 +907,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -1092,22 +1116,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -1284,7 +1312,7 @@
     "slug": "orabella-toi-et-moi",
     "title": "Orabella — Toi et Moi",
     "blurb": "Toi et Moi design featuring pear-cut and radiant-cut stones in perfect harmony.",
-    "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony. Both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the pear will be 1ct and the radiant will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Orabella/orabella-gold-front.jpeg",
       "/products/Orabella/orabella-gold-side.jpeg",
@@ -1295,22 +1323,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -1495,22 +1527,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -1698,22 +1734,26 @@
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       }
     ],
     "origins": [
@@ -1888,7 +1928,7 @@
   },
   {
     "slug": "eterna-oval-solitaire-hidden-halo",
-    "title": "Oval Solitaire WITH Hidden Halo",
+    "title": "Eterna",
     "blurb": "Classic oval solitaire with four-talon claws and hidden halo.",
     "description": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
@@ -1901,22 +1941,26 @@
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       }
     ],
     "origins": [
@@ -2092,7 +2136,7 @@
   },
   {
     "slug": "nova-oval-solitaire-round-marquise",
-    "title": "Oval Solitaire WITH Round & Marquise",
+    "title": "Nova",
     "blurb": "Oval centre stone with round and marquise side stones on refined band.",
     "description": "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
@@ -2105,22 +2149,26 @@
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 75
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       }
     ],
     "origins": [
@@ -2309,22 +2357,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -2450,22 +2502,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -2591,22 +2647,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -2732,22 +2792,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -2873,22 +2937,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3014,22 +3082,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3155,22 +3227,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3296,22 +3372,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3437,22 +3517,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3580,22 +3664,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3724,22 +3812,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -3867,22 +3959,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -4010,22 +4106,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [
@@ -4154,22 +4254,26 @@
       {
         "name": "18k Yellow Gold",
         "hex": "#FFD700",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
       },
       {
         "name": "18k Rose Gold",
         "hex": "#B76E79",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
       },
       {
         "name": "18k White Gold",
         "hex": "#FAF9F6",
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
       },
       {
         "name": "Platinum",
         "hex": "#E5E4E2",
-        "priceDeltaGBP": 150
+        "priceDeltaGBP": 150,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "widths": [

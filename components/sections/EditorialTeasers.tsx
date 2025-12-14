@@ -24,7 +24,7 @@ export function EditorialTeasers() {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 h-[650px] md:h-[750px] lg:h-[800px]">
-        {/* New Collection */}
+        {/* Signature Collection */}
         <Link
           ref={firstRef}
           href="/shop"
@@ -34,7 +34,7 @@ export function EditorialTeasers() {
           <div className="absolute inset-0">
             <Image
               src="/images/NewCollection.png"
-              alt="New collection of elegant diamond engagement rings"
+              alt="Signature collection of elegant diamond engagement rings"
               fill
               className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -50,12 +50,12 @@ export function EditorialTeasers() {
           <div className="relative z-10 h-full flex flex-col justify-between p-12 md:p-20 lg:p-24">
             <div className="text-left">
               <h3 className="font-serif text-white font-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]" style={{ fontSize: 'clamp(32px, 4.5vw, 42px)', letterSpacing: '0.06em', lineHeight: '1.15', marginBottom: 0 }}>
-                New Collection
+                Signature Collection
               </h3>
             </div>
             <div className="text-left space-y-10 max-w-lg">
               <p className="text-[#EAE6DF] font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]" style={{ fontSize: 'clamp(17px, 2.2vw, 20px)', lineHeight: '1.6', letterSpacing: '0.015em', fontWeight: 300 }}>
-                Discover our latest designs, crafted with exceptional artistry and timeless elegance
+                Discover our signature designs, crafted with exceptional artistry and timeless elegance
               </p>
               <div className="inline-flex items-center gap-3 px-10 py-4 rounded-full border border-white/35 text-white font-light tracking-[0.12em] uppercase text-xs transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/50 group-hover:scale-[1.02] backdrop-blur-[2px]">
                 Explore Now

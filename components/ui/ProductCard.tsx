@@ -59,7 +59,7 @@ export default function ProductCard({ product, className = "" }: Props) {
       <Link href={`/products/${product.slug}`} aria-label={product.title}
         onMouseLeave={() => setActiveMetal(undefined)}
       >
-        <div className="relative overflow-hidden rounded-t-2xl aspect-[4/5] bg-[#f5f3ef] group-hover:bg-gradient-to-br group-hover:from-ivory group-hover:to-beige transition-all duration-300">
+        <div className="relative overflow-hidden rounded-t-2xl aspect-[4/5] transition-all duration-300" style={{ backgroundColor: '#E8E2DA' }}>
           {img ? (
             <Image
               src={resolvePrimary(effective, activeMetal)}
@@ -70,7 +70,7 @@ export default function ProductCard({ product, className = "" }: Props) {
               priority={false}
             />
           ) : (
-            <div className="absolute inset-0 grid place-items-center bg-[#f5f3ef] text-[var(--ink-soft)]">
+            <div className="absolute inset-0 grid place-items-center text-[var(--ink-soft)]" style={{ backgroundColor: '#E8E2DA' }}>
               <span className="text-xs">Image coming soon</span>
             </div>
           )}

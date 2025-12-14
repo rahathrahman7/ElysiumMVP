@@ -87,7 +87,8 @@ export default function Gallery({
       {/* Main image */}
       <div
         ref={mainRef}
-        className="gallery-main-image relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white"
+        className="gallery-main-image relative aspect-square w-full overflow-hidden border border-neutral-200"
+        style={{ backgroundColor: '#E8E2DA' }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -105,11 +106,11 @@ export default function Gallery({
               alt={current.alt || "Product image"}
               fill
               sizes="(min-width:1024px) 50vw, 100vw"
-              className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+              className="object-contain p-6 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
               priority={index === 0}
             />
           ) : (
-            <div className="absolute inset-0 grid place-items-center bg-[var(--ivory)] text-neutral-500">
+            <div className="absolute inset-0 grid place-items-center text-neutral-500" style={{ backgroundColor: '#E8E2DA' }}>
               <span className="text-xs">Image coming soon</span>
             </div>
           )}
@@ -179,7 +180,7 @@ export default function Gallery({
                   loading={i === 0 ? "eager" : "lazy"}
                 />
               ) : (
-                <div className="absolute inset-0 grid place-items-center bg-[var(--ivory)] text-neutral-500">
+                <div className="absolute inset-0 grid place-items-center text-neutral-500" style={{ backgroundColor: '#E8E2DA' }}>
                   <span className="text-xs">—</span>
                 </div>
               )}

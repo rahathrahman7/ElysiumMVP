@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { Product, MetalOption } from "@/lib/productTypes";
 import { CompactProductVariants } from "./CompactProductVariants";
 import { ProductActions } from "./ProductActions";
-import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";
+// Premium configurator hidden for now - may work on this later
+// import LuxuryProductConfigurator from "../configurator/LuxuryProductConfigurator";
 import StickySummary from "../pdp/StickySummary";
 import Gallery from "../pdp/Gallery";
 import TrustStrip from "../pdp/TrustStrip";
@@ -59,7 +60,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedSize, setSelectedSize] = useState(product.sizes?.[2] || null); // Default to L (or null if no sizes)
   const [engravingSelected, setEngravingSelected] = useState(false);
   const [engravingText, setEngravingText] = useState("");
-  const [useLuxuryConfigurator, setUseLuxuryConfigurator] = useState(false);
+  // Premium configurator hidden for now - may work on this later
+  // const [useLuxuryConfigurator, setUseLuxuryConfigurator] = useState(false);
   const [previewMetalName, setPreviewMetalName] = useState<string | undefined>(undefined);
 
   // hydrate from URL (URL wins), and keep URL in sync when local changes happen
@@ -276,32 +278,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 )}
               </div>
 
-              {/* Configuration Toggle */}
-              <div className="mb-4 md:mb-6 flex items-center justify-center space-x-2 md:space-x-4">
-                <button
-                  onClick={() => setUseLuxuryConfigurator(false)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-serif font-medium rounded-lg transition-all duration-300 ${
-                    !useLuxuryConfigurator 
-                      ? 'bg-elysium-gold text-white shadow-lg' 
-                      : 'bg-gray-100 text-[#6D3D0D]/70 hover:bg-gray-200'
-                  }`}
-                >
-                  Classic
-                </button>
-                <button
-                  onClick={() => setUseLuxuryConfigurator(true)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-serif font-medium rounded-lg transition-all duration-300 ${
-                    useLuxuryConfigurator 
-                      ? 'bg-elysium-gold text-white shadow-lg' 
-                      : 'bg-gray-100 text-[#6D3D0D]/70 hover:bg-gray-200'
-                  }`}
-                >
-                  Premium
-                </button>
-              </div>
-
-              {/* Configurator or Variants */}
-              {useLuxuryConfigurator ? (
+              {/* Configurator - Premium configurator hidden for now */}
+              {/* {useLuxuryConfigurator ? (
                 <LuxuryProductConfigurator
                   product={product}
                   onConfigurationChange={(config) => {
@@ -319,7 +297,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     }
                   }}
                 />
-              ) : (
+              ) : ( */}
                 <CompactProductVariants
                   product={product}
                   selectedMetal={selectedMetal}
@@ -340,7 +318,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   onEngravingTextChange={(t) => { const s=t.slice(0,24); setEngravingText(s); setField("engravingText", s); }}
                   onMetalHover={(name)=> setPreviewMetalName(name)}
                 />
-              )}
+              {/* )} */}
 
               {/* Actions */}
               <div className="mt-6">

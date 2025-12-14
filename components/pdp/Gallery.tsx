@@ -106,7 +106,7 @@ export default function Gallery({
               alt={current.alt || "Product image"}
               fill
               sizes="(min-width:1024px) 50vw, 100vw"
-              className="object-contain p-6 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+              className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
               priority={index === 0}
             />
           ) : (

@@ -66,12 +66,12 @@ export default function LuxuryHeader() {
           <Link href="/" className={clsx("relative transition-all duration-300", isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100")}>
             <div className="group transition-all duration-300 hover:scale-105">
               <span
-                className={clsx(
-                  "font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300",
-                  isHomePage
-                    ? (isScrolled ? "text-[#45321e]" : "text-white")
-                    : "text-[#45321e]"
-                )}
+                className="font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300"
+                style={{
+                  color: isHomePage
+                    ? (isScrolled ? "var(--elysium-brown)" : "white")
+                    : "var(--elysium-brown)"
+                }}
               >
                 ELYSIUM
               </span>

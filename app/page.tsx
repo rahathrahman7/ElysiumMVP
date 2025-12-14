@@ -56,13 +56,13 @@ export default async function HomePage(){
       <TrustStrip />
 
       {/* Featured Products Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--elysium-ivory)' }}>
+      <section id="featured-collection" className="py-20" style={{ backgroundColor: 'var(--elysium-ivory)' }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.1em] mb-4 leading-tight" style={{ color: 'var(--elysium-charcoal)' }}>
+            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.1em] mb-4 leading-tight" style={{ color: 'var(--elysium-brown)' }}>
               Featured Collection
             </h2>
-            <p className="font-serif text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--elysium-charcoal)' }}>
+            <p className="font-serif text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--elysium-brown)' }}>
               Discover our most sought-after pieces, crafted with precision in our London atelier
             </p>
             <div className="mt-6">

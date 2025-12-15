@@ -19,7 +19,7 @@ export default function ShareBuild({ onShare }:{ onShare: ()=>Promise<string>|vo
   },[]);
 
   return (
-    <div className="flex justify-end pt-4">
+    <div className="flex justify-center pt-4">
       <button
         type="button"
         aria-label="Share this build"

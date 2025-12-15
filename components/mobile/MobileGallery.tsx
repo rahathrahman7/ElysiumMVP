@@ -172,10 +172,12 @@ export default function MobileGallery({ images, className = "" }: MobileGalleryP
         </div>
       )}
 
-      {/* Swipe Instruction (Show only on first load) */}
+      {/* Swipe Instruction (centered, subtle, fades out) */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-xs bg-black/40 px-3 py-1 rounded-full backdrop-blur animate-bounce-gentle sm:hidden">
-          Swipe to browse
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center sm:hidden">
+          <div className="swipe-hint">
+            Swipe to browse
+          </div>
         </div>
       )}
     </div>

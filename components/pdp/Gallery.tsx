@@ -142,7 +142,7 @@ export default function Gallery({
 
         {/* Mobile swipe indicator */}
         {safe.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-xs bg-black/40 px-3 py-1 rounded-full backdrop-blur md:hidden animate-bounce-gentle">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 swipe-hint md:hidden">
             Swipe to browse
           </div>
         )}

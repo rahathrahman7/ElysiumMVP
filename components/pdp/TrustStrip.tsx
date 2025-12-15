@@ -7,12 +7,12 @@ export default function TrustStrip(){
     { label:"Secure Checkout" },
   ];
   return (
-    <div className="mt-6 rounded-2xl border border-neutral-200 bg-white/70 backdrop-blur-sm px-4 py-3">
-      <ul className="grid grid-cols-2 gap-2 text-xs text-neutral-700 sm:grid-cols-4">
+    <div className="mt-8 py-5 border-t border-[#6D3D0D]/10">
+      <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
         {items.map(i => (
           <li key={i.label} className="flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
-            <span className="font-medium">{i.label}</span>
+            <span className="text-[#D4AF37]/70">◆</span>
+            <span className="font-serif text-[10px] uppercase tracking-[0.1em] text-[#6D3D0D]/50">{i.label}</span>
           </li>
         ))}
       </ul>

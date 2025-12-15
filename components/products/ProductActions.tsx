@@ -18,67 +18,75 @@ export function ProductActions({
   onAddToBag,
   canAddToBag,
 }: ProductActionsProps) {
-  // Client's "Meet in the Middle" business model:
-  // Entry-level (Lab, 1ct, F, VS1) = Buy Now
-  // Any upgrade OR Natural = Inquire
+  // Business logic:
+  // - Lab Grown 1ct = Direct purchase (Add to Bag)
+  // - Lab Grown >1ct = Enquire
+  // - All Natural diamonds = Enquire
   const showBuyNow = isEntryLevel && !isNaturalDiamond;
-  const showInquire = !isEntryLevel || isNaturalDiamond;
+  const showEnquire = !showBuyNow;
 
   return (
-    <div className="space-y-4">
-      {/* Primary CTA - Dynamic based on configuration */}
+    <div className="space-y-5">
+      {/* Primary CTA - Luxurious Filled Button with Shimmer */}
       {showBuyNow && (
         <button
           onClick={onAddToBag}
           disabled={!canAddToBag}
-          className={`w-full py-3 px-6 font-serif uppercase tracking-[0.08em] text-base transition-all duration-300 ${
+          className={`group relative w-full py-[18px] px-6 rounded font-serif text-[12px] font-medium uppercase tracking-[0.2em] transition-all duration-300 overflow-hidden ${
             canAddToBag
-              ? "bg-white text-[#753600] border border-[#753600] hover:bg-[#753600] hover:text-white"
-              : "bg-gray-100 text-gray-400 border border-gray-300 cursor-not-allowed"
+              ? "bg-[#6D3D0D] text-white hover:bg-[#5A3009] hover:-translate-y-[2px] hover:shadow-[0_4px_16px_rgba(109,61,13,0.2)]"
+              : "bg-gray-200 text-gray-400 cursor-not-allowed"
           }`}
         >
-          Add to Bag
+          <span className="relative z-10">Add to Bag</span>
+          {/* Shimmer Effect */}
+          {canAddToBag && (
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+          )}
         </button>
       )}
 
-      {showInquire && (
+      {showEnquire && (
         <Link
           href="/contact"
-          className="block w-full bg-white text-[#753600] border border-[#753600] py-3 px-6 font-serif uppercase tracking-[0.08em] text-base hover:bg-[#753600] hover:text-white transition-all duration-300 text-center"
+          className="group relative block w-full py-[18px] px-6 rounded font-serif text-[12px] font-medium uppercase tracking-[0.2em] bg-[#6D3D0D] text-white hover:bg-[#5A3009] hover:-translate-y-[2px] hover:shadow-[0_4px_16px_rgba(109,61,13,0.2)] transition-all duration-300 text-center overflow-hidden"
         >
-          Inquire
+          <span className="relative z-10">Enquire</span>
+          {/* Shimmer Effect */}
+          <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         </Link>
       )}
 
-      {/* Secondary Actions */}
-      <div className="grid grid-cols-2 gap-3">
+      {/* Secondary Actions - Text Links */}
+      <div className="flex items-center justify-center gap-2 pt-1">
         <Link
           href="/contact"
-          className="border-2 border-gray-300 hover:border-[#753600] text-gray-900 text-center py-3 px-4 rounded-lg text-sm font-medium transition-colors"
+          className="font-serif text-[11px] uppercase tracking-[0.15em] text-[#6D3D0D]/60 hover:text-[#D4AF37] transition-colors duration-200"
         >
           Book Consultation
         </Link>
+        <span className="text-[#6D3D0D]/30">·</span>
         <Link
           href="/education"
-          className="border-2 border-gray-300 hover:border-[#753600] text-gray-900 text-center py-3 px-4 rounded-lg text-sm font-medium transition-colors"
+          className="font-serif text-[11px] uppercase tracking-[0.15em] text-[#6D3D0D]/60 hover:text-[#D4AF37] transition-colors duration-200"
         >
           Learn More
         </Link>
       </div>
 
-      {/* Trust Indicators */}
-      <div className="pt-6 border-t border-gray-200">
-        <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#FFD700] rounded-full"></span>
+      {/* Trust Indicators - Refined */}
+      <div className="pt-5">
+        <div className="flex items-center justify-center gap-5 flex-wrap">
+          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
+            <span className="text-[#D4AF37]/70">◆</span>
             UK Hallmarked
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#FFD700] rounded-full"></span>
+          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
+            <span className="text-[#D4AF37]/70">◆</span>
             Lifetime Care
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#FFD700] rounded-full"></span>
+          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
+            <span className="text-[#D4AF37]/70">◆</span>
             London Atelier
           </div>
         </div>
@@ -86,16 +94,3 @@ export function ProductActions({
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

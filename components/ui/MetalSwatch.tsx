@@ -132,8 +132,7 @@ export default function MetalSwatch({
           className={`
             mt-3 text-center font-serif ${labelSizes[size]}
             tracking-[0.1em] leading-tight
-            transition-colors duration-200
-            ${isSelected ? "text-[#D4AF37] font-medium" : "text-[#6D3D0D]/50 group-hover:text-[#6D3D0D]/70"}
+            text-[#6D3D0D]
           `}
         >
           {getDisplayName(metal.name)}

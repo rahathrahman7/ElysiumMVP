@@ -172,7 +172,7 @@ export function CompactProductVariants({
               <>
                 <div className="flex items-center justify-center gap-4 mb-5">
                   <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#6D3D0D]/10" />
-                  <span className="font-serif text-[9px] uppercase tracking-[0.2em] text-[#6D3D0D]/40">
+                  <span className="font-serif text-[9px] uppercase tracking-[0.2em] text-[#6D3D0D]">
                     Two-Tone
                   </span>
                   <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#6D3D0D]/10" />

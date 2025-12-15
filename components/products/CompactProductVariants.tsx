@@ -254,12 +254,15 @@ export function CompactProductVariants({
               const isBespoke = tier.id === 'bespoke';
               const isEntryTier = tier.id === 'entry'; // 1ct tier
 
-              // Business logic:
-              // - Lab Grown 1ct = Direct purchase
-              // - Lab Grown >1ct = Enquire
-              // - All Natural = Enquire
+              // Indicator copy rules:
+              // - Lab Grown:
+              //   - All standard tiers (including 1ct, 1.5ct, 2ct, 2.5ct) → "Purchase"
+              //   - Custom Specification only → "Enquire"
+              // - Natural:
+              //   - All tiers → "Enquire"
               const isNatural = selectedOrigin?.label === 'Natural';
-              const requiresEnquiry = isNatural || (!isNatural && !isEntryTier && !isBespoke);
+              const indicatorText =
+                isNatural || isBespoke ? "Enquire" : "Purchase";
 
               // Format tier label with dots separator
               const formatLabel = () => {
@@ -311,13 +314,11 @@ export function CompactProductVariants({
                       )}
                     </div>
 
-                    {/* Enquire indicator for tiers requiring consultation */}
+                    {/* Right-hand indicator label */}
                     <div className="flex-shrink-0 ml-4">
-                      {(isBespoke || requiresEnquiry) && (
-                        <span className="font-serif text-[11px] tracking-[0.1em] text-[#6D3D0D]/50 flex items-center gap-1 hover:text-[#D4AF37] transition-colors">
-                          Enquire <span className="text-[9px]">→</span>
-                        </span>
-                      )}
+                      <span className="font-serif text-[11px] tracking-[0.1em] text-[#6D3D0D]/50 flex items-center gap-1 hover:text-[#D4AF37] transition-colors">
+                        {indicatorText} <span className="text-[9px]">→</span>
+                      </span>
                     </div>
                   </div>
                 </button>

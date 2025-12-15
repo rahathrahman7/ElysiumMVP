@@ -17,13 +17,13 @@ export default function RecentlyViewed({ current }: { current: SavedItem }) {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {items.map((p) => (
           <Link key={p.slug} href={`/products/${p.slug}`} className="block hover:scale-[1.02] transition-transform">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300">
+            <div className="relative aspect-[4/5] overflow-hidden border border-neutral-200 bg-[rgba(248,244,236,1)] transition-all duration-300">
               {p.imageSrc ? (
                 <Image 
                   src={p.imageSrc} 
                   alt={p.name} 
                   fill 
-                  className="object-cover transition-transform duration-300 hover:scale-105" 
+                  className="object-contain p-1 transition-transform duration-300 hover:scale-105" 
                 />
               ) : (
                 <div className="absolute inset-0 grid place-items-center bg-neutral-50 text-neutral-400">

@@ -159,6 +159,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
     is1ctNatural || (!isNaturalDiamond && !isCustomSpecification)
   );
 
+  // Helper: display title without technical suffixes (e.g. remove "— SIX-CLAW SOLITAIRE")
+  const displayTitle = product.title.split('—')[0]?.trim() || product.title;
+
   // Check if required fields are selected (ring size is required)
   const canAdd = Boolean(selectedSize);
 
@@ -194,16 +197,49 @@ export function ProductDetail({ product }: ProductDetailProps) {
             items={[
               { label: 'Home', href: '/' },
               { label: 'Collection', href: '/products' },
-              { label: product.title, href: `/products/${product.slug}`, current: true }
+              { label: displayTitle, href: `/products/${product.slug}`, current: true }
             ]}
           />
         </div>
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-16">
-          {/* Product Gallery - shows first on mobile */}
+          {/* Product Gallery & Title - shows first on mobile */}
           <div className="order-1">
             <Gallery 
               images={currentGalleryImages} 
             />
+
+            {/* Title & Full Description directly beneath the gallery */}
+            <div className="mt-6 md:mt-8 mb-6 md:mb-8">
+              <div className="relative pr-12">
+                <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl uppercase tracking-[0.08em] lg:tracking-[0.12em] text-[#6D3D0D] mb-3 md:mb-4 leading-tight">
+                  {displayTitle}
+                </h1>
+                <WishHeart 
+                  item={{ 
+                    slug: product.slug, 
+                    name: product.title, 
+                    price: totalPrice, 
+                    imageSrc: product.images?.[0] 
+                  }} 
+                  className="absolute right-0 top-0 text-[#6D3D0D]/60 hover:text-[#6D3D0D]" 
+                />
+              </div>
+              {/* Hidden Halo Signature Box */}
+              {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
+                <div className="mb-3 md:mb-4">
+                  <div className="inline-flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#6D3D0D]/30 rounded-full shadow-sm">
+                    <span className="text-xs font-serif font-light tracking-[0.1em] text-[#6D3D0D] uppercase">
+                      Hidden Halo
+                    </span>
+                  </div>
+                </div>
+              )}
+              {/* Use full description here (preserve paragraph breaks) */}
+              <div className="font-serif text-[#6D3D0D]/80 leading-relaxed whitespace-pre-line">
+                {product.description}
+              </div>
+            </div>
+
             <TrustStrip />
           </div>
 
@@ -217,37 +253,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     {product.qualityBanner}
                   </span>
                 </div>
-              </div>
-
-              {/* Title & Blurb */}
-              <div className="mb-6 md:mb-8">
-                <div className="relative pr-12">
-                  <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl uppercase tracking-[0.08em] lg:tracking-[0.12em] text-[#6D3D0D] mb-3 md:mb-4 leading-tight">
-                    {product.title}
-                  </h1>
-                  <WishHeart 
-                    item={{ 
-                      slug: product.slug, 
-                      name: product.title, 
-                      price: totalPrice, 
-                      imageSrc: product.images?.[0] 
-                    }} 
-                    className="absolute right-0 top-0 text-[#6D3D0D]/60 hover:text-[#6D3D0D]" 
-                  />
-                </div>
-                {/* Hidden Halo Signature Box */}
-                {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
-                  <div className="mb-3 md:mb-4">
-                    <div className="inline-flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#6D3D0D]/30 rounded-full shadow-sm">
-                      <span className="text-xs font-serif font-light tracking-[0.1em] text-[#6D3D0D] uppercase">
-                        Hidden Halo
-                      </span>
-                    </div>
-                  </div>
-                )}
-                <p className="font-serif text-lg text-[#6D3D0D]/70 leading-relaxed">
-                  {product.blurb}
-                </p>
               </div>
 
               {/* Price */}
@@ -336,15 +341,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <ShareBuild onShare={copyLink} />
               </div>
 
-              {/* Description */}
-              <div className="mt-12 pt-8 border-t border-[rgba(109,61,13,0.1)]">
-                <h3 className="font-serif text-xl uppercase tracking-[0.08em] text-[#6D3D0D] mb-4">
-                  Description
-                </h3>
-                <div className="font-serif text-[#6D3D0D]/80 leading-relaxed whitespace-pre-line">
-                  {product.description}
-                </div>
-              </div>
             </div>
           </div>
         </div>

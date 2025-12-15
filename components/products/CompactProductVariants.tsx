@@ -138,190 +138,229 @@ export function CompactProductVariants({
 
   return (
     <div className="space-y-6">
-      {/* Metal Selection */}
-      {product.metals && product.metals.length > 0 && (
-        <div>
-          <h3 className="font-serif text-xs uppercase tracking-[0.12em] text-[#6D3D0D]/80 mb-4 text-center">
-            Ring Metal
-          </h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {product.metals.map((metal) => (
-              <MetalSwatch
-                key={metal.name}
-                metal={metal}
-                isSelected={selectedMetal?.name === metal.name}
-                onSelect={onMetalChange}
-                onHover={onMetalHover}
-                size="md"
-                showLabel={true}
-                groupName="compact-metal-selection"
-                variant="circle"
-              />
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Metal Selection - Elegant Grouped Layout */}
+      {product.metals && product.metals.length > 0 && (() => {
+        // Separate solid metals from two-tone metals
+        const solidMetals = product.metals.filter(m => !m.name.includes('/') && !m.name.toLowerCase().includes('two-tone'));
+        const twoToneMetals = product.metals.filter(m => m.name.includes('/') || m.name.toLowerCase().includes('two-tone'));
 
-      {/* Origin Selection - Compact */}
+        return (
+          <div>
+            <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-5 text-center">
+              Ring Metal
+            </h3>
+
+            {/* Solid Metals Row */}
+            <div className="flex justify-center gap-7 mb-5">
+              {solidMetals.map((metal) => (
+                <MetalSwatch
+                  key={metal.name}
+                  metal={metal}
+                  isSelected={selectedMetal?.name === metal.name}
+                  onSelect={onMetalChange}
+                  onHover={onMetalHover}
+                  size="md"
+                  showLabel={true}
+                  groupName="compact-metal-selection"
+                  variant="circle"
+                />
+              ))}
+            </div>
+
+            {/* Two-Tone Divider & Row */}
+            {twoToneMetals.length > 0 && (
+              <>
+                <div className="flex items-center justify-center gap-4 mb-5">
+                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#6D3D0D]/10" />
+                  <span className="font-serif text-[9px] uppercase tracking-[0.2em] text-[#6D3D0D]/40">
+                    Two-Tone
+                  </span>
+                  <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#6D3D0D]/10" />
+                </div>
+                <div className="flex justify-center gap-7">
+                  {twoToneMetals.map((metal) => (
+                    <MetalSwatch
+                      key={metal.name}
+                      metal={metal}
+                      isSelected={selectedMetal?.name === metal.name}
+                      onSelect={onMetalChange}
+                      onHover={onMetalHover}
+                      size="md"
+                      showLabel={true}
+                      groupName="compact-metal-selection"
+                      variant="circle"
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        );
+      })()}
+
+      {/* Origin Selection - Elegant Underline Style */}
       {product.origins && product.origins.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
+          <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-4">
             Origin
           </h3>
-          <div className="flex gap-2">
-            {[...product.origins].reverse().map((origin) => (
-              <button
-                key={origin.label}
-                onClick={() => onOriginChange(origin)}
-                className={`flex-1 px-3 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
-                  selectedOrigin?.label === origin.label
-                    ? "border-[#753600] bg-[#753600] text-white"
-                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
-                }`}
-              >
-                {origin.label}
-              </button>
-            ))}
+          <div className="flex gap-8 justify-center">
+            {[...product.origins].reverse().map((origin) => {
+              const isSelected = selectedOrigin?.label === origin.label;
+              const isNatural = origin.label === 'Natural';
+              return (
+                <button
+                  key={origin.label}
+                  onClick={() => onOriginChange(origin)}
+                  className={`relative pb-2 font-serif text-[13px] tracking-[0.15em] uppercase transition-all duration-200 ${
+                    isSelected
+                      ? "text-[#6D3D0D] font-medium"
+                      : "text-[#6D3D0D]/50 hover:text-[#6D3D0D]/80"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    {origin.label}
+                    {/* Subtle enquire indicator for Natural */}
+                    {isNatural && (
+                      <span className="font-serif text-[9px] tracking-[0.05em] text-[#6D3D0D]/40 normal-case font-normal">
+                        (enquire)
+                      </span>
+                    )}
+                  </span>
+                  {/* Underline indicator */}
+                  <span
+                    className={`absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-300 ${
+                      isSelected
+                        ? "bg-[#D4AF37]"
+                        : "bg-transparent hover:bg-[#D4AF37]/30"
+                    }`}
+                  />
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
 
-      {/* Diamond Tiers - Simplified "Meet in the Middle" Approach */}
+      {/* Diamond Tiers - Elegant Radio-Style Selection */}
       {diamondTiers.length > 0 && (
         <div>
-          <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] mb-3">
+          <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-4">
             Carat Size
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-3">
             {diamondTiers.map((tier) => {
               const isActive = currentDiamondTier === tier.id;
-              const totalDelta = tier.carat && tier.colour && tier.clarity
-                ? (tier.carat.priceDeltaGBP || 0) + (tier.colour.priceDeltaGBP || 0) + (tier.clarity.priceDeltaGBP || 0)
-                : 0;
+              const isBespoke = tier.id === 'bespoke';
+              const isEntryTier = tier.id === 'entry'; // 1ct tier
+
+              // Business logic:
+              // - Lab Grown 1ct = Direct purchase
+              // - Lab Grown >1ct = Enquire
+              // - All Natural = Enquire
+              const isNatural = selectedOrigin?.label === 'Natural';
+              const requiresEnquiry = isNatural || (!isNatural && !isEntryTier && !isBespoke);
+
+              // Format tier label with dots separator
+              const formatLabel = () => {
+                if (isBespoke) return null;
+                const parts = tier.label.split(' | ');
+                return parts.map((part, idx) => (
+                  <span key={idx} className="inline-flex items-center">
+                    {idx > 0 && <span className="mx-2 text-[#6D3D0D]/30">·</span>}
+                    {part}
+                  </span>
+                ));
+              };
 
               return (
                 <button
                   key={tier.id}
-                  onClick={() => tier.id === 'bespoke' ? window.location.href = '/contact' : handleDiamondTierChange(tier.id)}
-                  className={`w-full px-4 py-3 rounded-lg border-2 text-left transition-all duration-200 ${
+                  onClick={() => isBespoke ? window.location.href = '/contact' : handleDiamondTierChange(tier.id)}
+                  className={`w-full px-5 py-4 rounded text-left transition-all duration-250 flex items-center gap-4 ${
                     isActive
-                      ? "border-[#753600] bg-[#753600] text-white"
-                      : tier.id === 'bespoke'
-                      ? "border-dashed border-gray-300 bg-gray-50 hover:border-[#753600] hover:bg-[#753600]/5"
-                      : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5"
+                      ? "border-[1.5px] border-[#D4AF37] bg-[#D4AF37]/[0.03] shadow-[0_2px_12px_rgba(212,175,55,0.1)]"
+                      : isBespoke
+                      ? "border border-dashed border-[#6D3D0D]/20 hover:border-[#6D3D0D]/40 hover:-translate-y-[1px]"
+                      : "border border-dashed border-[#6D3D0D]/20 hover:border-solid hover:border-[#6D3D0D]/30 hover:-translate-y-[1px]"
                   }`}
                 >
-                  <div className="flex items-start justify-between gap-3">
+                  {/* Radio Indicator */}
+                  <div
+                    className={`flex-shrink-0 w-[18px] h-[18px] rounded-full border-[1.5px] transition-all duration-200 ${
+                      isActive
+                        ? "border-[#D4AF37] bg-[#D4AF37] shadow-[inset_0_0_0_4px_white]"
+                        : "border-[#6D3D0D]/30"
+                    }`}
+                  />
+
+                  {/* Content */}
+                  <div className="flex-1 flex items-center justify-between min-w-0">
                     <div className="flex-1">
-                      <div className={`text-sm font-serif font-medium mb-1 ${isActive ? 'text-white' : 'text-[#6D3D0D]'}`}>
-                        {tier.label}
-                      </div>
-                      {(() => {
-                        // For natural diamonds above 1ct, show "Consultation required"
-                        // For lab-grown, only show description for bespoke (custom spec)
-                        // All other lab-grown tiers are direct purchase, so no consultation text
-                        const isNatural = selectedOrigin?.label === 'Natural';
-                        const isAbove1ct = tier.id !== 'entry'; // entry is 1ct
-                        const isBespoke = tier.id === 'bespoke';
-                        
-                        if (isNatural && isAbove1ct) {
-                          return (
-                            <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-[#6D3D0D]'}`}>
-                              Consultation required
-                            </div>
-                          );
-                        }
-                        
-                        // For lab-grown: only show description for bespoke, otherwise show nothing (direct purchase)
-                        if (!isNatural && !isBespoke) {
-                          return null; // Lab-grown non-bespoke = direct purchase, no text needed
-                        }
-                        
-                        return tier.description ? (
-                          <div className={`text-xs font-serif ${isActive ? 'text-white/70' : 'text-[#6D3D0D]'}`}>
-                            {tier.description}
-                          </div>
-                        ) : null;
-                      })()}
+                      {isBespoke ? (
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#D4AF37]">✦</span>
+                          <span className="font-serif text-[13px] tracking-[0.05em] text-[#6D3D0D]">
+                            Custom Specification
+                          </span>
+                        </div>
+                      ) : (
+                        <div className="font-serif text-[13px] tracking-[0.05em] text-[#6D3D0D] flex flex-wrap items-center">
+                          {formatLabel()}
+                        </div>
+                      )}
                     </div>
-                    <div className="text-right">
-                      {(() => {
-                        // New purchase flow logic:
-                        // - Natural 1ct/F/VS1 → Buy Now (can purchase directly)
-                        // - Natural anything else → Enquire (consultation required)
-                        // - Lab Grown + standard tier (not bespoke) → Buy Now
-                        // - Lab Grown + bespoke → Enquire
-                        const isNatural = selectedOrigin?.label === 'Natural';
-                        const isBespoke = tier.id === 'bespoke';
-                        const is1ctTier = tier.id === 'entry'; // 1ct/F/VS1 tier
-                        const showBuyNow = (isNatural && is1ctTier) || (!isNatural && !isBespoke);
-                        
-                        if (showBuyNow) {
-                          return (
-                            <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
-                              isActive ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700'
-                            }`}>
-                              Buy Now
-                            </span>
-                          );
-                        } else {
-                          return (
-                            <div>
-                              <span className={`inline-block px-2 py-1 text-xs font-serif font-medium rounded ${
-                                isActive ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-700'
-                              }`}>
-                                Enquire
-                              </span>
-                            </div>
-                          );
-                        }
-                      })()}
+
+                    {/* Enquire indicator for tiers requiring consultation */}
+                    <div className="flex-shrink-0 ml-4">
+                      {(isBespoke || requiresEnquiry) && (
+                        <span className="font-serif text-[11px] tracking-[0.1em] text-[#6D3D0D]/50 flex items-center gap-1 hover:text-[#D4AF37] transition-colors">
+                          Enquire <span className="text-[9px]">→</span>
+                        </span>
+                      )}
                     </div>
                   </div>
                 </button>
               );
             })}
           </div>
-          <p className="mt-2 text-xs font-serif text-[#6D3D0D]/70">
-            * Higher specifications require consultation for custom pricing and availability
-          </p>
         </div>
       )}
 
-      {/* Ring Size Selection - Collapsible */}
+      {/* Ring Size Selection - Elegant Dropdown */}
       {product.sizes && product.sizes.length > 0 && (
         <div>
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D]">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D]">
               Ring Size
             </h3>
             <RingSizeGuide />
           </div>
 
-          {/* Collapsed State - Show Selected or Select Button */}
+          {/* Collapsed State - Minimal Select */}
           {!ringSizeExpanded && (
             <button
               onClick={() => setRingSizeExpanded(true)}
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-left transition-all duration-200 flex items-center justify-between"
+              className="w-full px-4 py-[14px] rounded border border-[#6D3D0D]/15 bg-white hover:border-[#D4AF37] focus:border-[#D4AF37] focus:shadow-[0_0_0_3px_rgba(212,175,55,0.1)] text-left transition-all duration-200 flex items-center justify-between"
             >
-              <span className="text-sm font-serif font-medium text-[#6D3D0D]">
+              <span className="font-serif text-[14px] tracking-[0.05em] text-[#6D3D0D]">
                 {selectedSize && selectedSize !== "unknown"
                   ? `Size ${selectedSize}`
                   : selectedSize === "unknown"
                   ? "I don't know my size"
                   : "Select your ring size"}
               </span>
-              <svg className="w-4 h-4 text-[#6D3D0D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 text-[#6D3D0D]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
           )}
 
-          {/* Expanded State - Show Grid */}
+          {/* Expanded State - Refined Grid */}
           {ringSizeExpanded && (
-            <>
+            <div className="p-4 rounded border border-[#6D3D0D]/15 bg-white">
               {/* Size Grid */}
-              <div className="grid grid-cols-6 gap-2 mb-2">
+              <div className="grid grid-cols-6 gap-2 mb-3">
                 {product.sizes.map((size) => {
                   const isSelected = selectedSize === size;
                   return (
@@ -331,10 +370,10 @@ export function CompactProductVariants({
                         onSizeChange(size);
                         setRingSizeExpanded(false);
                       }}
-                      className={`px-2 py-2 rounded-lg border text-xs font-serif font-medium transition-all duration-200 ${
+                      className={`py-2.5 rounded border text-[12px] font-serif font-medium transition-all duration-200 ${
                         isSelected
-                          ? "border-[#753600] bg-[#753600] text-white"
-                          : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
+                          ? "border-[#D4AF37] bg-[#D4AF37]/[0.05] text-[#6D3D0D]"
+                          : "border-[#6D3D0D]/15 bg-white hover:border-[#D4AF37]/50 text-[#6D3D0D]"
                       }`}
                     >
                       {size}
@@ -343,64 +382,87 @@ export function CompactProductVariants({
                 })}
               </div>
 
-              {/* "I Don't Know My Size" Button */}
+              {/* "I Don't Know My Size" Option */}
               <button
                 onClick={() => {
                   onSizeChange("unknown");
                   setRingSizeExpanded(false);
                 }}
-                className={`w-full px-3 py-2.5 rounded-lg border-2 text-sm font-serif font-medium transition-all duration-200 ${
+                className={`w-full px-3 py-2.5 rounded border text-[12px] font-serif transition-all duration-200 ${
                   selectedSize === "unknown"
-                    ? "border-[#753600] bg-[#753600] text-white"
-                    : "border-gray-300 bg-white hover:border-[#753600] hover:bg-[#753600]/5 text-[#6D3D0D]"
+                    ? "border-[#D4AF37] bg-[#D4AF37]/[0.05] text-[#6D3D0D]"
+                    : "border-dashed border-[#6D3D0D]/15 bg-white hover:border-[#D4AF37]/50 text-[#6D3D0D]/70"
                 }`}
               >
-                {selectedSize === "unknown" ? "✓ " : ""}I don't know my size
+                {selectedSize === "unknown" && <span className="text-[#D4AF37] mr-1">✓</span>}
+                I don't know my size
               </button>
 
-              {/* Collapse Button */}
+              {/* Collapse */}
               <button
                 onClick={() => setRingSizeExpanded(false)}
-                className="w-full mt-2 px-3 py-2 text-xs font-serif text-[#6D3D0D]/70 hover:text-[#6D3D0D] transition-colors"
+                className="w-full mt-3 text-[10px] font-serif uppercase tracking-[0.15em] text-[#6D3D0D]/50 hover:text-[#6D3D0D] transition-colors"
               >
-                Collapse ↑
+                Done
               </button>
-            </>
+            </div>
           )}
         </div>
       )}
 
-      {/* Engraving Selection - Compact */}
-      <div className="pt-4 border-t border-gray-200">
-        <div className="flex items-start gap-3">
-          <input
-            type="checkbox"
-            id="engraving"
-            checked={engravingSelected}
-            onChange={(e) => onEngravingChange(e.target.checked)}
-            className="mt-0.5 w-4 h-4 text-[#753600] border-gray-300 rounded focus:ring-[#753600]"
-          />
-          <div className="flex-1">
-            <label htmlFor="engraving" className="font-serif text-sm uppercase tracking-[0.08em] text-[#6D3D0D] cursor-pointer">
-              Complimentary Engraving (Optional)
-            </label>
-            {engravingSelected && (
-              <div className="mt-2">
-                <input
-                  type="text"
-                  value={engravingText}
-                  onChange={(e) => onEngravingTextChange(e.target.value)}
-                  placeholder={`Enter text (max ${product.engravingMaxChars || 24} characters)`}
-                  maxLength={product.engravingMaxChars || 24}
-                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-sm focus:border-[#753600] focus:outline-none transition-all duration-200 hover:border-[#753600]"
-                />
-                <p className="mt-1 text-xs font-serif text-[#6D3D0D]/70">
-                  {engravingText.length}/{product.engravingMaxChars || 24} characters
+      {/* Engraving Selection - Elegant Toggle Card */}
+      <div className="pt-6">
+        <button
+          onClick={() => onEngravingChange(!engravingSelected)}
+          className={`w-full px-5 py-4 rounded border text-left transition-all duration-200 ${
+            engravingSelected
+              ? "border-[#D4AF37] bg-[#D4AF37]/[0.03]"
+              : "border-[#6D3D0D]/15 hover:border-[#6D3D0D]/30"
+          }`}
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-[#6D3D0D]/60">✎</span>
+              <div>
+                <span className="font-serif text-[13px] tracking-[0.05em] text-[#6D3D0D]">
+                  Complimentary Engraving
+                </span>
+                <p className="font-serif text-[11px] text-[#6D3D0D]/50 mt-0.5">
+                  Add a personal message at no extra cost
                 </p>
               </div>
-            )}
+            </div>
+            {/* Toggle Switch */}
+            <div
+              className={`relative w-10 h-5 rounded-full transition-colors duration-200 ${
+                engravingSelected ? "bg-[#D4AF37]" : "bg-[#6D3D0D]/20"
+              }`}
+            >
+              <div
+                className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
+                  engravingSelected ? "translate-x-5" : "translate-x-0.5"
+                }`}
+              />
+            </div>
           </div>
-        </div>
+        </button>
+
+        {/* Engraving Input */}
+        {engravingSelected && (
+          <div className="mt-3 px-5">
+            <input
+              type="text"
+              value={engravingText}
+              onChange={(e) => onEngravingTextChange(e.target.value)}
+              placeholder={`Enter text (max ${product.engravingMaxChars || 24} characters)`}
+              maxLength={product.engravingMaxChars || 24}
+              className="w-full px-4 py-3 border border-[#6D3D0D]/15 rounded text-[14px] font-serif focus:border-[#D4AF37] focus:outline-none focus:shadow-[0_0_0_3px_rgba(212,175,55,0.1)] transition-all duration-200"
+            />
+            <p className="mt-2 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50 text-right">
+              {engravingText.length}/{product.engravingMaxChars || 24}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

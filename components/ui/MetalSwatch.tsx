@@ -87,8 +87,8 @@ export default function MetalSwatch({
           overflow-hidden
           transition-all duration-300 ease-out
           ${isSelected
-            ? "ring-[1.5px] ring-[#6D3D0D] ring-offset-[3px] ring-offset-white shadow-md"
-            : "ring-1 ring-[#E8E4DF] group-hover:ring-[#6D3D0D]/30 group-hover:shadow-sm"
+            ? "ring-[2px] ring-[#D4AF37] ring-offset-[3px] ring-offset-white shadow-md"
+            : "ring-1 ring-[#E8E4DF] group-hover:ring-[#D4AF37]/40 group-hover:shadow-sm group-hover:scale-[1.08]"
           }
         `}
       >
@@ -131,9 +131,9 @@ export default function MetalSwatch({
         <span
           className={`
             mt-3 text-center font-serif ${labelSizes[size]}
-            tracking-[0.08em] leading-tight
+            tracking-[0.1em] leading-tight
             transition-colors duration-200
-            ${isSelected ? "text-[#6D3D0D]" : "text-[#6D3D0D]/60 group-hover:text-[#6D3D0D]/80"}
+            ${isSelected ? "text-[#D4AF37] font-medium" : "text-[#6D3D0D]/50 group-hover:text-[#6D3D0D]/70"}
           `}
         >
           {getDisplayName(metal.name)}

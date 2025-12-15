@@ -158,7 +158,7 @@ export default function Gallery({
       {/* Thumbs */}
       <div className="mt-3 grid grid-cols-5 gap-2 md:grid-cols-6">
         {safe.map((img, i) => {
-          const active = i === index;
+          const active = i === (index);
           return (
             <button
               key={img.src + i}
@@ -166,8 +166,8 @@ export default function Gallery({
               onClick={() => setIndex(i)}
               aria-current={active ? "true" : "false"}
               className={[
-                "gallery-thumbnail relative aspect-square overflow-hidden rounded-xl border touch-manipulation",
-                active ? "border-[var(--gold)] active ring-2 ring-gold/20" : "border-neutral-200 hover:border-[var(--gold)]",
+                "gallery-thumbnail relative aspect-square overflow-hidden rounded-none border bg-[rgba(248,244,236,1)] touch-manipulation",
+                active ? "border-[var(--gold)] active ring-gold/20" : "border-neutral-200 hover:border-[var(--gold)]",
               ].join(" ")}
             >
               {img.src && img.src.trim() !== '' ? (
@@ -176,7 +176,7 @@ export default function Gallery({
                   alt={img.alt || `Thumbnail ${i + 1}`}
                   fill
                   sizes="120px"
-                  className="object-cover"
+                  className="object-contain p-1"
                   loading={i === 0 ? "eager" : "lazy"}
                 />
               ) : (

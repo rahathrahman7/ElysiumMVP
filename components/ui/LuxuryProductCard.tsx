@@ -138,7 +138,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Product Image Container */}
-      <div className="relative aspect-[4/5] overflow-hidden rounded-lg" style={{ backgroundColor: '#E8E2DA' }}>
+      <div className="relative aspect-[4/5] overflow-hidden rounded-sm" style={{ backgroundColor: '#E8E2DA' }}>
           {/* Gradient Overlay with Elysium Beige Tint */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#E8E2DA]/40 via-[#E8E2DA]/10 to-transparent z-10 pointer-events-none" />
           

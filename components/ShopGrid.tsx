@@ -165,33 +165,40 @@ export function ShopGrid() {
               {(data?.products ?? []).length > 0 ? (
                 <div className="space-y-16">
                   {(() => {
-                    // Group products by type
+                    // Group products by collection tags for efficient organization
                     const products = data?.products ?? [];
                     const groups = {
                       'mens-rings': products.filter((p:any) => 
-                        p.collections?.includes('mens-rings') ||
-                        p.title.toLowerCase().includes('men\'s wedding band')
+                        p.collections?.includes('mens-rings') || 
+                        p.collections?.includes('wedding-bands')
                       ),
                       solitaires: products.filter((p:any) => 
-                        p.title.toLowerCase().includes('solitaire') && 
-                        !p.title.toLowerCase().includes('toi et moi') &&
-                        !p.title.toLowerCase().includes('trilogy') &&
-                        !p.collections?.includes('mens-rings')
+                        (p.collections?.includes('solitaire') || p.collections?.includes('signature-collection')) &&
+                        !p.collections?.includes('mens-rings') &&
+                        !p.collections?.includes('bracelets') &&
+                        !p.collections?.includes('trilogy') &&
+                        !p.collections?.includes('toi-et-moi')
                       ),
                       'toi-et-moi': products.filter((p:any) => 
-                        p.title.toLowerCase().includes('toi et moi') &&
+                        p.collections?.includes('toi-et-moi') &&
                         !p.collections?.includes('mens-rings')
                       ),
                       trilogy: products.filter((p:any) => 
-                        p.title.toLowerCase().includes('trilogy') &&
+                        p.collections?.includes('trilogy') &&
                         !p.collections?.includes('mens-rings')
                       ),
+                      bracelets: products.filter((p:any) => 
+                        p.collections?.includes('bracelets') ||
+                        p.collections?.includes('tennis-bracelets')
+                      ),
                       other: products.filter((p:any) => 
-                        !p.title.toLowerCase().includes('solitaire') &&
-                        !p.title.toLowerCase().includes('toi et moi') &&
-                        !p.title.toLowerCase().includes('trilogy') &&
+                        !p.collections?.includes('solitaire') &&
+                        !p.collections?.includes('signature-collection') &&
+                        !p.collections?.includes('toi-et-moi') &&
+                        !p.collections?.includes('trilogy') &&
                         !p.collections?.includes('mens-rings') &&
-                        !p.title.toLowerCase().includes('men\'s wedding band')
+                        !p.collections?.includes('wedding-bands') &&
+                        !p.collections?.includes('bracelets')
                       )
                     };
 
@@ -207,7 +214,7 @@ export function ShopGrid() {
                       };
 
                       // Skip rendering if it's 'other' and we have other signature groups
-                      if (groupName === 'other' && (groups.solitaires.length > 0 || groups['toi-et-moi'].length > 0 || groups.trilogy.length > 0)) {
+                      if (groupName === 'other' && (groups.solitaires.length > 0 || groups['toi-et-moi'].length > 0 || groups.trilogy.length > 0 || groups.bracelets.length > 0)) {
                         return null;
                       }
 

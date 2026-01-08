@@ -64,7 +64,6 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         "bg-gradient-to-b from-elysium-light/50 to-white",
         "rounded-lg overflow-hidden",
         "cursor-pointer",
-        "transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]",
         className
       )}
       style={{
@@ -73,6 +72,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         backfaceVisibility: 'hidden',
         isolation: 'isolate',
         willChange: 'transform',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -80,32 +80,39 @@ export default function LuxuryProductCard({ product, className = "", priority = 
     >
       {/* Shadow that appears on hover - positioned absolutely to not affect layout */}
       <div 
-        className="absolute inset-0 rounded-lg pointer-events-none transition-opacity duration-500"
+        className="absolute inset-0 rounded-lg pointer-events-none"
         style={{
           opacity: isHovered ? 1 : 0,
           boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)',
           zIndex: -1,
+          transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       />
       
       {/* Gradient overlay */}
       <div 
-        className="absolute inset-0 rounded-lg pointer-events-none transition-opacity duration-500"
+        className="absolute inset-0 rounded-lg pointer-events-none"
         style={{
           opacity: isHovered ? 1 : 0,
           background: 'linear-gradient(to bottom, rgba(109, 61, 13, 0.05), transparent)',
           zIndex: 1,
+          transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       />
 
-      {/* Premium Badge */}
-      {product.isFeatured && (
-        <div className="absolute left-4 top-4 z-20 pointer-events-none">
+      {/* Premium Badges */}
+      <div className="absolute left-4 top-4 z-20 pointer-events-none flex flex-col gap-2">
+        {product.isFeatured && (
           <span className="px-2 py-1 bg-white/80 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm">
             Signature
           </span>
-        </div>
-      )}
+        )}
+        {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
+          <span className="px-2 py-1 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm" style={{ backgroundColor: '#E8E2DA' }}>
+            Hidden Halo
+          </span>
+        )}
+      </div>
 
       {/* Wishlist - Premium Styling */}
       <div className="absolute right-4 top-4 z-20" data-no-navigate onClick={(e) => e.stopPropagation()}>

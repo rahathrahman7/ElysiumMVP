@@ -228,7 +228,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                 key={m.name}
                 type="button"
                 className={clsx(
-                  "relative w-6 h-6 rounded-full border overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-elysium-dark",
+                  "relative w-7 h-7 rounded-full border overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-elysium-dark",
                   activeMetal === m.name 
                     ? "ring-2 ring-elysium-dark ring-offset-1 shadow-lg scale-110" 
                     : "border-gray-300 hover:border-elysium-dark/60 hover:scale-105 shadow-sm"
@@ -236,6 +236,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                 style={{
                   backgroundColor: !m.imageUrl ? (m.hex || undefined) : undefined,
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  imageRendering: '-webkit-optimize-contrast',
                 }}
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
@@ -250,11 +251,15 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                   <Image
                     src={m.imageUrl}
                     alt={m.name}
-                    fill
-                    className="object-cover"
-                    quality={90}
-                    sizes="24px"
-                    unoptimized={m.imageUrl?.includes('/swatches/')}
+                    width={28}
+                    height={28}
+                    className="object-cover w-full h-full"
+                    quality={100}
+                    sizes="28px"
+                    unoptimized={true}
+                    style={{
+                      imageRendering: '-webkit-optimize-contrast',
+                    }}
                   />
                 )}
               </button>

@@ -62,7 +62,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       className={clsx(
         "group relative luxury-card block",
         "bg-gradient-to-b from-elysium-light/50 to-white",
-        "rounded-lg overflow-hidden",
+        "rounded-sm overflow-hidden",
         "cursor-pointer",
         className
       )}

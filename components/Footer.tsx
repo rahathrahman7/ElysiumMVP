@@ -17,7 +17,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg uppercase tracking-wide text-elysium-dark mb-4 leading-tight">Quick Links</h3>
+            <h3 className="font-serif text-lg uppercase tracking-wide text-elysium-dark mb-4 leading-tight">QUICK LINKS</h3>
             <ul className="space-y-2">
               {['Shop', 'Bespoke', 'Heroes', 'Education', 'About', 'Contact'].map((item) => (
                 <li key={item}>
@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-serif text-lg uppercase tracking-wide text-elysium-dark mb-4 leading-tight">Stay Updated</h3>
+            <h3 className="font-serif text-lg uppercase tracking-wide text-elysium-dark mb-4 leading-tight">STAY UPDATED</h3>
             <p className="text-elysium-dark/70 text-sm mb-4 leading-relaxed">Be first to know about new collections and exclusive offers.</p>
             <form className="flex gap-2">
               <input
@@ -69,9 +69,9 @@ export function Footer() {
             © Elysium London 2025. All rights reserved.
           </div>
           <div className="flex items-center gap-6 text-sm text-elysium-dark/60 leading-normal">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Shipping & Returns</span>
+            <Link href="/privacy" className="hover:text-elysium-dark transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-elysium-dark transition-colors">Terms of Service</Link>
+            <Link href="/shipping" className="hover:text-elysium-dark transition-colors">Shipping & Returns</Link>
           </div>
         </div>
       </div>

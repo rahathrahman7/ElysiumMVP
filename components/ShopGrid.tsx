@@ -130,7 +130,7 @@ export function ShopGrid() {
         </aside>
 
         {/* Main Content */}
-        <section className="relative">
+        <section className="relative" style={{ backgroundColor: 'var(--elysium-ivory)' }}>
           <div className="mb-8 pb-6 border-b border-elysium-whisper">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -235,11 +235,15 @@ export function ShopGrid() {
                             )}
                           </div>
                           
-                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
+                          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7 xl:gap-8">
                             {groupProducts.map((p:any, index:number) => (
                               <div 
                                 key={p._id} 
-                                className="transform transition-all duration-700 hover:scale-[1.02]"
+                                className="stagger-item"
+                                style={{
+                                  animationDelay: `${(index + 1) * 0.1}s`,
+                                  isolation: 'isolate',
+                                }}
                               >
                                 <LuxuryProductCard 
                                   product={p} 

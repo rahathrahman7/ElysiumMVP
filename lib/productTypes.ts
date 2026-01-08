@@ -61,6 +61,7 @@ export type Product = {
   isFeatured?: boolean;
   collections?: string[];
   galleryByMetal?: Record<string, string[]>; // Metal-aware image galleries
+  galleryByCaratAndMetal?: Record<string, Record<string, string[]>>; // Carat and metal-aware image galleries: { "2ct": { "18k Yellow Gold": [...] } }
   // Filtering fields
   shape?: string;
   styles?: string[];

@@ -12,6 +12,15 @@
       "env": {
         "POSTGRES_CONNECTION_STRING": "${DATABASE_URL}"
       }
+    },
+    "gdrive": {
+      "command": "npx",
+      "args": ["-y", "@isaacphi/mcp-gdrive"],
+      "env": {
+        "CLIENT_ID": "${GOOGLE_CLIENT_ID}",
+        "CLIENT_SECRET": "${GOOGLE_CLIENT_SECRET}",
+        "GDRIVE_CREDS_DIR": "${HOME}/.config/mcp-gdrive"
+      }
     }
   }
 }

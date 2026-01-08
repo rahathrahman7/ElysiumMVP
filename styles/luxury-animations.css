@@ -234,3 +234,9 @@
 .luxury-image-hover:hover::after {
   transform: translateX(100%) translateY(100%);
 }
+
+/* Stagger animation for product cards */
+.stagger-item {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
+}

@@ -103,7 +103,37 @@ export function CompactProductVariants({
           clarity: product.clarities.find(c => c.label === 'VS1'),
           isEntryLevel: false,
         },
-        // Tier 6: Custom - for better colour (D, E) or clarity (IF, VVS1, VVS2)
+        // Tier 6: 4ct - F/VS1
+        {
+          id: 'elite',
+          label: '4ct Total | F Colour | VS1 Clarity',
+          description: 'Consultation required',
+          carat: product.carats.find(c => c.label === '4ct'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
+          isEntryLevel: false,
+        },
+        // Tier 7: 5ct - F/VS1
+        {
+          id: 'premium-elite',
+          label: '5ct Total | F Colour | VS1 Clarity',
+          description: 'Consultation required',
+          carat: product.carats.find(c => c.label === '5ct'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
+          isEntryLevel: false,
+        },
+        // Tier 8: 7ct - F/VS1
+        {
+          id: 'ultimate',
+          label: '7ct Total | F Colour | VS1 Clarity',
+          description: 'Consultation required',
+          carat: product.carats.find(c => c.label === '7ct'),
+          colour: product.colours.find(c => c.label === 'F'),
+          clarity: product.clarities.find(c => c.label === 'VS1'),
+          isEntryLevel: false,
+        },
+        // Tier 9: Custom - for better colour (D, E) or clarity (IF, VVS1, VVS2)
         {
           id: 'bespoke',
           label: 'Custom Specification',

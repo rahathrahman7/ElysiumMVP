@@ -4385,5 +4385,344 @@
         "/products/mens-rings/traditional/Traditional Court/Tcourt-silver.jpeg"
       ]
     }
+  },
+  {
+    "slug": "bezel-tennis-bracelet",
+    "title": "Bezel Tennis Bracelet",
+    "blurb": "Elegant tennis bracelet featuring bezel-set diamonds in a timeless design.",
+    "description": "A refined finishing touch to any ensemble, our tennis bracelets are thoughtfully crafted with an unwavering focus on detail. Perfect for gifting, they offer enduring beauty for every special moment.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold.PNG",
+      "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold2.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "4ct",
+        "carat": 4,
+        "priceDeltaGBP": 0
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "bracelets",
+      "tennis-bracelets"
+    ],
+    "shape": "round",
+    "styles": [
+      "tennis-bracelet",
+      "bezel-set"
+    ],
+    "caratBuckets": [
+      "2-4"
+    ],
+    "galleryByCaratAndMetal": {
+      "2ct": {
+        "18k Yellow Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-rose.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-silver.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-silver2.PNG"
+        ]
+      },
+      "4ct": {
+        "18k Yellow Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-gold.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-rose.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-silver.PNG",
+          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-silver2.PNG"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "classic-4-claw-tennis-bracelet",
+    "title": "Classic 4 Claw Tennis Bracelet",
+    "blurb": "Timeless tennis bracelet featuring classic four-claw diamond settings in an elegant design.",
+    "description": "A refined finishing touch to any ensemble, our tennis bracelets are thoughtfully crafted with an unwavering focus on detail. Perfect for gifting, they offer enduring beauty for every special moment.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold.PNG",
+      "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold2.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "3ct",
+        "carat": 3,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "4ct",
+        "carat": 4,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "5ct",
+        "carat": 5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "7ct",
+        "carat": 7,
+        "priceDeltaGBP": 0
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "bracelets",
+      "tennis-bracelets"
+    ],
+    "shape": "round",
+    "styles": [
+      "tennis-bracelet",
+      "four-claw"
+    ],
+    "caratBuckets": [
+      "2-3",
+      "3-4",
+      "4-5",
+      "5-7",
+      "7plus"
+    ],
+    "galleryByCaratAndMetal": {
+      "2ct": {
+        "18k Yellow Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-rose.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-silver.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-silver2.PNG"
+        ]
+      },
+      "3ct": {
+        "18k Yellow Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-gold.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-rose.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-silver.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-silver2.PNG"
+        ]
+      },
+      "4ct": {
+        "18k Yellow Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-gold.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-rose.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/ClassicTB4ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-silverPNG.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-silver2.PNG"
+        ]
+      },
+      "5ct": {
+        "18k Yellow Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-gold.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-rose.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-silver.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-silver2.PNG"
+        ]
+      },
+      "7ct": {
+        "18k Yellow Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-gold.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-gold2.PNG"
+        ],
+        "18k Rose Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-rose.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-rose2.PNG"
+        ],
+        "18k White Gold": [
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-silver.PNG",
+          "/products/Classic 4 Claw Tennis Bracelet /7ct/classsictb7ct-silver2.PNG"
+        ]
+      }
+    }
   }
 ]

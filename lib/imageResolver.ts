@@ -32,24 +32,35 @@ function normalizeImages(product: ProductLike): string[] {
   return product.images as string[];
 }
 
-export function resolveGallery(p: ProductLike, metalLabel?: string): string[] {
+export function resolveGallery(p: ProductLike, metalLabel?: string, caratLabel?: string): string[] {
   const normalized = metalLabel ? NORMALIZE_METAL[metalLabel] ?? metalLabel : undefined;
+  
+  // First, try carat-specific gallery if both carat and metal are provided
+  const fromCaratGallery = caratLabel && normalized && 'galleryByCaratAndMetal' in p 
+    ? p.galleryByCaratAndMetal?.[caratLabel]?.[normalized]
+    : undefined;
+  
+  // Fall back to metal-specific gallery
   const fromGallery = normalized && 'galleryByMetal' in p && p.galleryByMetal?.[normalized];
+  
+  // Fall back to base images
   const images = normalizeImages(p);
   const fromImages = images && images.length ? images : undefined;
 
   // final fallback to a safe placeholder
   const fallback = ["/products/placeholder.svg"];
 
-  return fromGallery && fromGallery.length
-    ? fromGallery
-    : fromImages && fromImages.length
-      ? fromImages
-      : fallback;
+  return fromCaratGallery && fromCaratGallery.length
+    ? fromCaratGallery
+    : fromGallery && fromGallery.length
+      ? fromGallery
+      : fromImages && fromImages.length
+        ? fromImages
+        : fallback;
 }
 
-export function resolvePrimary(p: ProductLike, metalLabel?: string): string {
-  return resolveGallery(p, metalLabel)[0] ?? "/products/placeholder.svg";
+export function resolvePrimary(p: ProductLike, metalLabel?: string, caratLabel?: string): string {
+  return resolveGallery(p, metalLabel, caratLabel)[0] ?? "/products/placeholder.svg";
 }
 
 

@@ -96,7 +96,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   // Derive current gallery images based on selected/preview metal or fallback to product.images
   const displayMetal = previewMetalName || selectedMetal?.name;
-  const currentGalleryImages = resolveGallery(product, displayMetal).map(src => ({
+  const currentGalleryImages = resolveGallery(product, displayMetal, selectedCarat?.label).map(src => ({
     src,
     alt: product.title
   }));

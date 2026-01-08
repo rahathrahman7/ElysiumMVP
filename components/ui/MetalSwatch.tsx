@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { MetalOption } from "@/lib/productTypes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface MetalSwatchProps {
   metal: MetalOption;
@@ -27,6 +27,14 @@ export default function MetalSwatch({
 }: MetalSwatchProps) {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+
+  // Reset loading state when imageUrl changes
+  useEffect(() => {
+    if (metal.imageUrl) {
+      setImageLoading(true);
+      setImageError(false);
+    }
+  }, [metal.imageUrl]);
 
   // Debug: Log image loading issues
   const handleImageError = () => {
@@ -92,36 +100,28 @@ export default function MetalSwatch({
           }
         `}
       >
-        {/* Loading state - show HEX color while image loads */}
-        {imageLoading && metal.imageUrl && !imageError && (
-          <div
-            className="absolute inset-0 w-full h-full"
-            style={{ backgroundColor: metal.hex || "#CCCCCC" }}
-          />
-        )}
+        {/* Background color fallback - always present */}
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{ backgroundColor: metal.hex || "#CCCCCC" }}
+        />
         
-        {/* Display image or fallback to HEX */}
-        {metal.imageUrl && !imageError ? (
+        {/* Display image - fades in when loaded */}
+        {metal.imageUrl && !imageError && (
           <Image
             src={metal.imageUrl}
             alt={metal.name}
-            width={56}
-            height={56}
-            className={`w-full h-full object-cover transition-opacity duration-300 ${
+            fill
+            className={`object-cover transition-opacity duration-300 ${
               imageLoading ? 'opacity-0' : 'opacity-100'
             }`}
             onError={handleImageError}
-            onLoad={handleImageLoad}
+            onLoadingComplete={handleImageLoad}
             quality={75}
             loading="lazy"
             sizes="56px"
             unoptimized={metal.imageUrl?.includes('/swatches/')}
             priority={false}
-          />
-        ) : (
-          <div
-            className="w-full h-full"
-            style={{ backgroundColor: metal.hex || "#CCCCCC" }}
           />
         )}
       </div>

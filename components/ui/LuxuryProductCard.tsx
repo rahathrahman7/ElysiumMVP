@@ -52,28 +52,52 @@ export default function LuxuryProductCard({ product, className = "", priority = 
 
   const metals = useMemo(() => (effective.metals || []).map(m => ({
     name: m.name,
-    hex: m.hex
+    hex: m.hex,
+    imageUrl: m.imageUrl
   })), [effective.metals]);
 
   return (
     <Link 
       href={`/products/${product.slug}`}
       className={clsx(
-        "group relative luxury-card transform-gpu transition-all duration-500 ease-out touch-manipulation block",
+        "group relative luxury-card block",
         "bg-gradient-to-b from-elysium-light/50 to-white",
         "rounded-lg overflow-hidden",
-        "hover:scale-[1.03] hover:shadow-2xl hover:shadow-elysium-dark/20",
-        "before:absolute before:inset-0 before:rounded-lg before:pointer-events-none",
-        "before:bg-gradient-to-b before:from-elysium-dark/5 before:to-transparent",
-        "before:opacity-0 before:transition-opacity before:duration-300",
-        "hover:before:opacity-100",
         "cursor-pointer",
+        "transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]",
         className
       )}
+      style={{
+        transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
+        transformStyle: 'preserve-3d',
+        backfaceVisibility: 'hidden',
+        isolation: 'isolate',
+        willChange: 'transform',
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       prefetch={true}
     >
+      {/* Shadow that appears on hover - positioned absolutely to not affect layout */}
+      <div 
+        className="absolute inset-0 rounded-lg pointer-events-none transition-opacity duration-500"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)',
+          zIndex: -1,
+        }}
+      />
+      
+      {/* Gradient overlay */}
+      <div 
+        className="absolute inset-0 rounded-lg pointer-events-none transition-opacity duration-500"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          background: 'linear-gradient(to bottom, rgba(109, 61, 13, 0.05), transparent)',
+          zIndex: 1,
+        }}
+      />
+
       {/* Premium Badge */}
       {product.isFeatured && (
         <div className="absolute left-4 top-4 z-20 pointer-events-none">
@@ -105,24 +129,28 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       </div>
 
       {/* Product Image Container */}
-      <div className="relative aspect-[4/5] overflow-hidden" style={{ backgroundColor: '#E8E2DA' }}>
-        {/* Gradient Overlay with Elysium Beige Tint */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#E8E2DA]/40 via-[#E8E2DA]/10 to-transparent z-10 pointer-events-none" />
-        
-        {img ? (
-          <>
-            {/* Main Image */}
-            <Image
-              src={resolvePrimary(effective, activeMetal)}
-              alt={product.title}
-              fill
-              sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
-              className={clsx(
-                "object-cover transition-all duration-700 ease-out",
-                isHovered ? "scale-110 brightness-110" : "scale-100"
-              )}
-              priority={priority}
-            />
+      <div className="relative aspect-[4/5] overflow-hidden rounded-lg" style={{ backgroundColor: '#E8E2DA' }}>
+          {/* Gradient Overlay with Elysium Beige Tint */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#E8E2DA]/40 via-[#E8E2DA]/10 to-transparent z-10 pointer-events-none" />
+          
+          {img ? (
+            <>
+              {/* Main Image */}
+              <Image
+                src={resolvePrimary(effective, activeMetal)}
+                alt={product.title}
+                fill
+                sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
+                className={clsx(
+                  "object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                  isHovered ? "scale-110 brightness-110" : "scale-100"
+                )}
+                style={{
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                }}
+                priority={priority}
+              />
             
             {/* Shimmer Effect on Hover */}
             <div className={clsx(
@@ -148,11 +176,14 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         {/* Hover Overlay with Premium CTA */}
         <div className={clsx(
           "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent",
-          "flex items-end justify-center p-6 transition-all duration-300",
-          "pointer-events-none",
+          "flex items-end justify-center p-6 transition-all duration-500",
+          "pointer-events-none z-10",
           isHovered ? "opacity-100" : "opacity-0"
         )}>
-          <div className="transform transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+          <div className={clsx(
+            "transform transition-all duration-500",
+            isHovered ? "translate-y-0" : "translate-y-4"
+          )}>
             <span className="inline-flex items-center px-6 py-3 text-elysium-dark font-medium text-sm tracking-wide shadow-2xl border border-transparent" style={{ backgroundColor: "var(--elysium-champagne)" }}>
               View Collection
               <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,10 +219,10 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                 key={m.name}
                 type="button"
                 className={clsx(
-                  "w-5 h-5 rounded-full border shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] relative z-10",
-                  activeMetal === m.name ? "ring-2 ring-elysium-dark" : "border-gray-200"
+                  "relative w-5 h-5 rounded-full border shadow-sm overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] transition-all duration-300",
+                  activeMetal === m.name ? "ring-2 ring-elysium-dark ring-offset-1" : "border-gray-200 hover:border-elysium-dark/40 hover:scale-110"
                 )}
-                style={{ backgroundColor: m.hex || undefined }}
+                style={!m.imageUrl ? { backgroundColor: m.hex || undefined } : undefined}
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
                 onFocus={() => setActiveMetal(m.name)}
@@ -200,7 +231,19 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                   e.preventDefault();
                   setActiveMetal(m.name);
                 }}
-              />
+              >
+                {m.imageUrl && (
+                  <Image
+                    src={m.imageUrl}
+                    alt={m.name}
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    sizes="20px"
+                    unoptimized={m.imageUrl?.includes('/swatches/')}
+                  />
+                )}
+              </button>
             ))}
           </div>
         )}
@@ -208,7 +251,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
 
         {/* Description - show on hover */}
         {isHovered && (
-          <div className="mt-4 relative transition-all duration-500 ease-out animate-fade-in-up">
+          <div className="mt-4 relative transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] animate-fade-in-up">
             <div className="px-6 py-3">
               {/* Subtle decorative line above */}
               <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#45321e]/40 to-transparent mx-auto mb-3" />
@@ -225,7 +268,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         
         {/* Price Display - always visible */}
         {price && (
-          <div className={`text-center transition-all duration-300 ${isHovered ? "mt-4" : "mt-3"}`}>
+          <div className={`text-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isHovered ? "mt-4" : "mt-3"}`}>
             <p className="text-lg font-light text-elysium-dark tracking-wide">
               From {price}
             </p>

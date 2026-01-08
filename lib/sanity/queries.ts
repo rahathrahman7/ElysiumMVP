@@ -79,7 +79,10 @@ export async function getProductsFiltered(params: Record<string, string | undefi
 
   if (params.shape) {
     const shape = (params.shape || '').toLowerCase();
-    filteredProducts = filteredProducts.filter(p => (p.shape || '').toLowerCase() === shape);
+    filteredProducts = filteredProducts.filter(p => 
+      (p.shape || '').toLowerCase() === shape || 
+      p.collections?.some(c => c.toLowerCase() === shape)
+    );
   }
 
   if (params.collection) {

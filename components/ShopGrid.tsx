@@ -242,7 +242,7 @@ export function ShopGrid() {
                             )}
                           </div>
                           
-                          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7 xl:gap-8">
+                          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 xl:gap-12">
                             {groupProducts.map((p:any, index:number) => (
                               <div 
                                 key={p._id} 
@@ -252,6 +252,8 @@ export function ShopGrid() {
                                   isolation: 'isolate',
                                   position: 'relative',
                                   zIndex: 1,
+                                  padding: '8px',
+                                  margin: '-8px',
                                 }}
                               >
                                 <LuxuryProductCard 

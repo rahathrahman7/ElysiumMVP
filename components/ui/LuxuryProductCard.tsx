@@ -93,7 +93,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       
       {/* Gradient overlay */}
       <div 
-        className="absolute inset-0 rounded-lg pointer-events-none"
+        className="absolute inset-0 rounded-sm pointer-events-none"
         style={{
           opacity: isHovered ? 1 : 0,
           background: 'linear-gradient(to bottom, rgba(109, 61, 13, 0.05), transparent)',

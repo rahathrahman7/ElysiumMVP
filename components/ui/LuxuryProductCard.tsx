@@ -67,12 +67,12 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         className
       )}
       style={{
-        transform: isHovered ? 'translateY(-8px) scale(1.02)' : 'translateY(0) scale(1)',
+        transform: isHovered ? 'translateY(-12px)' : 'translateY(0)',
         transformStyle: 'preserve-3d',
         backfaceVisibility: 'hidden',
         isolation: 'isolate',
         willChange: isHovered ? 'transform' : 'auto',
-        transition: 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)',
+        transition: 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
         position: 'relative',
         zIndex: isHovered ? 10 : 1,
       }}

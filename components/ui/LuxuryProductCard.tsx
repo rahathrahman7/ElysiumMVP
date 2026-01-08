@@ -105,7 +105,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       {/* Premium Badges */}
       <div className="absolute left-4 top-4 z-20 pointer-events-none flex flex-col gap-1.5">
         {product.isFeatured && (
-          <span className="inline-block px-2 py-1 bg-white/90 backdrop-blur-sm text-[#45321e] text-[9px] font-medium tracking-[0.08em] uppercase border border-[#45321e]/20">
+          <span className="inline-block px-1.5 py-1 bg-white/90 backdrop-blur-sm text-[#45321e] text-[9px] font-medium tracking-[0.08em] uppercase border border-[#45321e]/20">
             Signature
           </span>
         )}

@@ -252,8 +252,8 @@ export function ShopGrid() {
                                   isolation: 'isolate',
                                   position: 'relative',
                                   zIndex: 1,
-                                  padding: '8px',
-                                  margin: '-8px',
+                                  padding: '16px',
+                                  margin: '-16px',
                                 }}
                               >
                                 <LuxuryProductCard 

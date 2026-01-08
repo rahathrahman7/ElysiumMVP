@@ -250,6 +250,8 @@ export function ShopGrid() {
                                 style={{
                                   animationDelay: `${(index + 1) * 0.1}s`,
                                   isolation: 'isolate',
+                                  position: 'relative',
+                                  zIndex: 1,
                                 }}
                               >
                                 <LuxuryProductCard 

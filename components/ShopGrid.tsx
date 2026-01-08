@@ -223,11 +223,11 @@ export function ShopGrid() {
 
                       return (
                         <div key={groupName} className="space-y-8">
-                          {/* Show "Signature Collection" as main heading only for first signature group */}
+                          {/* Show "READY TO WEAR" as main heading only for first signature group */}
                           {isSignatureGroup && groupName === 'solitaires' && (
                             <div className="text-center mb-8">
                               <h2 className="font-serif text-3xl md:text-4xl text-elysium-charcoal tracking-wide mb-2 uppercase">
-                                Signature Collection
+                                Ready To Wear
                               </h2>
                               <div className="w-24 h-px bg-gradient-to-r from-transparent via-elysium-gold to-transparent mx-auto"></div>
                             </div>

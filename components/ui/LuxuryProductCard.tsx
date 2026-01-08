@@ -103,12 +103,12 @@ export default function LuxuryProductCard({ product, className = "", priority = 
       {/* Premium Badges */}
       <div className="absolute left-4 top-4 z-20 pointer-events-none flex flex-col gap-2">
         {product.isFeatured && (
-          <span className="px-2 py-1 bg-white/80 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm">
+          <span className="inline-block px-2.5 py-0.5 bg-white/80 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm">
             Signature
           </span>
         )}
         {(product.styles?.includes('hidden-halo') || product.collections?.includes('hidden-halo')) && (
-          <span className="px-2 py-1 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm" style={{ backgroundColor: '#E8E2DA' }}>
+          <span className="inline-block px-2.5 py-0.5 backdrop-blur-sm text-[#45321e] text-[10px] font-light tracking-wide uppercase border border-[#45321e]/30 shadow-sm" style={{ backgroundColor: '#E8E2DA' }}>
             Hidden Halo
           </span>
         )}
@@ -220,16 +220,21 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         
         {/* Metal Swatches */}
         {metals.length > 0 && (
-          <div className="mt-2 flex items-center justify-center gap-2" aria-label="Available metals" data-no-navigate onClick={(e) => e.stopPropagation()}>
+          <div className="flex items-center justify-center gap-2 mb-3" aria-label="Available metals" data-no-navigate onClick={(e) => e.stopPropagation()}>
             {metals.map((m) => (
               <button
                 key={m.name}
                 type="button"
                 className={clsx(
-                  "relative w-5 h-5 rounded-full border shadow-sm overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] transition-all duration-300",
-                  activeMetal === m.name ? "ring-2 ring-elysium-dark ring-offset-1" : "border-gray-200 hover:border-elysium-dark/40 hover:scale-110"
+                  "relative w-6 h-6 rounded-full border overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-elysium-dark",
+                  activeMetal === m.name 
+                    ? "ring-2 ring-elysium-dark ring-offset-1 shadow-lg scale-110" 
+                    : "border-gray-300 hover:border-elysium-dark/60 hover:scale-105 shadow-sm"
                 )}
-                style={!m.imageUrl ? { backgroundColor: m.hex || undefined } : undefined}
+                style={{
+                  backgroundColor: !m.imageUrl ? (m.hex || undefined) : undefined,
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                }}
                 aria-label={`Preview in ${m.name}`}
                 onMouseEnter={() => setActiveMetal(m.name)}
                 onFocus={() => setActiveMetal(m.name)}
@@ -246,7 +251,7 @@ export default function LuxuryProductCard({ product, className = "", priority = 
                     fill
                     className="object-cover"
                     quality={90}
-                    sizes="20px"
+                    sizes="24px"
                     unoptimized={m.imageUrl?.includes('/swatches/')}
                   />
                 )}

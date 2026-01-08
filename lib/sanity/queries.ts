@@ -117,7 +117,10 @@ export async function getProductsFiltered(params: Record<string, string | undefi
     slug: p.slug,
     images: p.images?.map(img => ({ url: img })) || [],
     basePriceGBP: p.basePriceGBP,
-    isFeatured: p.isFeatured
+    isFeatured: p.isFeatured,
+    metals: p.metals,
+    styles: p.styles,
+    collections: p.collections
   }));
 
   return { products, total, page, limit };

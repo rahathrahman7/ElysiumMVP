@@ -180,12 +180,13 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
+      "signature-collection",
       "solitaire",
-      "six-claw",
+      "celeste",
       "eagle-claw",
       "round",
-      "two-tone",
-      "celeste"
+      "six-claw",
+      "two-tone"
     ],
     "shape": "round",
     "styles": [
@@ -403,12 +404,13 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
+      "signature-collection",
       "solitaire",
-      "low-set",
-      "hidden-halo",
-      "round",
       "flush-fit",
-      "luna"
+      "hidden-halo",
+      "low-set",
+      "luna",
+      "round"
     ],
     "shape": "round",
     "styles": [
@@ -628,12 +630,13 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
+      "signature-collection",
       "solitaire",
-      "six-claw",
       "pave",
       "round",
-      "two-tone",
-      "seraphina"
+      "seraphina",
+      "six-claw",
+      "two-tone"
     ],
     "shape": "round",
     "styles": [
@@ -851,10 +854,10 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "round",
-      "pear",
       "toi-et-moi",
       "curved-band",
+      "pear",
+      "round",
       "vow-veil"
     ],
     "shape": "toi-et-moi",
@@ -1061,10 +1064,10 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "round",
       "trilogy",
-      "trellis",
-      "elara"
+      "elara",
+      "round",
+      "trellis"
     ],
     "shape": "round",
     "styles": [
@@ -1270,10 +1273,11 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "radiant",
+      "signature-collection",
       "solitaire",
+      "aveline",
       "hidden-halo",
-      "aveline"
+      "radiant"
     ],
     "shape": "radiant",
     "styles": [
@@ -1478,9 +1482,9 @@
     "collections": [
       "engagement-rings",
       "toi-et-moi",
+      "orabella",
       "pear",
-      "radiant",
-      "orabella"
+      "radiant"
     ],
     "shape": "toi-et-moi",
     "styles": [
@@ -1681,9 +1685,10 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "radiant",
+      "signature-collection",
       "solitaire",
-      "clarion"
+      "clarion",
+      "radiant"
     ],
     "shape": "radiant",
     "styles": [
@@ -1888,8 +1893,9 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "oval",
+      "signature-collection",
       "solitaire",
+      "oval",
       "ovalis"
     ],
     "shape": "oval",
@@ -2095,9 +2101,10 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "oval",
+      "signature-collection",
       "solitaire",
-      "eterna"
+      "eterna",
+      "oval"
     ],
     "shape": "oval",
     "styles": [
@@ -2303,9 +2310,10 @@
     "isFeatured": true,
     "collections": [
       "engagement-rings",
-      "oval",
+      "signature-collection",
       "solitaire",
-      "nova"
+      "nova",
+      "oval"
     ],
     "shape": "oval",
     "styles": [
@@ -2464,8 +2472,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "arden"
+      "arden",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -2609,8 +2617,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "bastion"
+      "bastion",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -2754,8 +2762,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "blacksmith"
+      "blacksmith",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -2899,8 +2907,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "heritage"
+      "heritage",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3044,8 +3052,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "kairo"
+      "kairo",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3189,8 +3197,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "orion"
+      "orion",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3334,8 +3342,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "sable"
+      "sable",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3479,8 +3487,8 @@
     "isFeatured": true,
     "collections": [
       "mens-rings",
-      "wedding-bands",
-      "vireo"
+      "vireo",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3624,9 +3632,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-side-cut"
+      "traditional-side-cut",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3771,9 +3779,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-milgrain"
+      "traditional-milgrain",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -3919,9 +3927,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-flat-bevel"
+      "traditional-flat-bevel",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -4066,9 +4074,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-flat"
+      "traditional-flat",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -4213,9 +4221,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-double-milgrain"
+      "traditional-double-milgrain",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -4361,9 +4369,9 @@
     "isFeatured": false,
     "collections": [
       "mens-rings",
-      "wedding-bands",
       "traditional",
-      "traditional-court"
+      "traditional-court",
+      "wedding-bands"
     ],
     "shape": "band",
     "styles": [
@@ -4723,6 +4731,678 @@
           "/products/Classic 4 Claw Tennis Bracelet /7ct/classsictb7ct-silver2.PNG"
         ]
       }
+    }
+  },
+  {
+    "slug": "aura-engagement-ring",
+    "title": "Aura — Engagement Ring",
+    "blurb": "Elegant solitaire engagement ring with timeless design and two-tone options.",
+    "description": "Aura is an elegant solitaire engagement ring featuring a timeless design that captures light beautifully. Crafted with attention to detail, it offers classic elegance with modern versatility.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/Aura/Aura-gold-front.jpg",
+      "/products/Aura/aura-gold-side.jpg",
+      "/products/Aura/aura-gold-back.jpg"
+    ],
+    "basePriceGBP": 3300,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 15,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "aura",
+      "round",
+      "two-tone"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Aura/Aura-gold-front.jpg",
+        "/products/Aura/aura-gold-side.jpg",
+        "/products/Aura/aura-gold-back.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/Aura/aura-rose-front.jpg",
+        "/products/Aura/aura-rose-side.jpg",
+        "/products/Aura/aura-rose-back.jpg"
+      ],
+      "18k White Gold": [
+        "/products/Aura/aura-silver-front.jpg",
+        "/products/Aura/aura-silver-side.jpg",
+        "/products/Aura/aura-silver-back.jpg"
+      ],
+      "Platinum": [
+        "/products/Aura/aura-silver-front.jpg",
+        "/products/Aura/aura-silver-side.jpg",
+        "/products/Aura/aura-silver-back.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/Aura/aura-rose-silver-front.jpg",
+        "/products/Aura/aura-rose-silver-side.jpg",
+        "/products/Aura/aura-rose-silver-back.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/Aura/aura-gold-silver-front.jpg",
+        "/products/Aura/aura-gold-silver-side.jpg",
+        "/products/Aura/aura-gold-silver-back.jpg"
+      ]
+    }
+  },
+  {
+    "slug": "lumea-engagement-ring",
+    "title": "Lumea — Engagement Ring",
+    "blurb": "Beautiful solitaire engagement ring with radiant design and two-tone metal options.",
+    "description": "Lumea is a beautiful solitaire engagement ring featuring a radiant design that captures and reflects light exquisitely. Its elegant silhouette offers timeless appeal with contemporary versatility.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/Lumea/lumia-gold-front.jpg",
+      "/products/Lumea/lumia-gold-side.jpg",
+      "/products/Lumea/lumia-gold-back.jpg"
+    ],
+    "basePriceGBP": 3280,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 15,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "lumea",
+      "round",
+      "two-tone"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Lumea/lumia-gold-front.jpg",
+        "/products/Lumea/lumia-gold-side.jpg",
+        "/products/Lumea/lumia-gold-back.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/Lumea/lumia-rose-front.jpg",
+        "/products/Lumea/lumia-rose-side.jpg",
+        "/products/Lumea/lumia-rose-back.jpg"
+      ],
+      "18k White Gold": [
+        "/products/Lumea/lumia-silver-front.jpg",
+        "/products/Lumea/lumia-silver-side.jpg",
+        "/products/Lumea/lumia-silver-back.jpg"
+      ],
+      "Platinum": [
+        "/products/Lumea/lumia-silver-front.jpg",
+        "/products/Lumea/lumia-silver-side.jpg",
+        "/products/Lumea/lumia-silver-back.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/Lumea/lumia-rose-silver-front.jpg",
+        "/products/Lumea/lumia-rose-silver-side.jpg",
+        "/products/Lumea/lumia-rose-silver-back.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/Lumea/lumia-gold-silver-front.jpg",
+        "/products/Lumea/lumia-gold-silver-side.jpg",
+        "/products/Lumea/lumia-gold-silver-back.jpg"
+      ]
+    }
+  },
+  {
+    "slug": "unity-engagement-ring",
+    "title": "Unity — Engagement Ring",
+    "blurb": "Classic solitaire engagement ring with elegant simplicity and timeless design.",
+    "description": "Unity is a classic solitaire engagement ring featuring elegant simplicity and timeless design. Its refined silhouette celebrates the beauty of a single center stone with understated elegance.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/Unity/unity-gold-front.jpg",
+      "/products/Unity/unity-gold-side.jpg",
+      "/products/Unity/unity-gold-back.jpg"
+    ],
+    "basePriceGBP": 3150,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 15,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "round",
+      "unity"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Unity/unity-gold-front.jpg",
+        "/products/Unity/unity-gold-side.jpg",
+        "/products/Unity/unity-gold-back.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/Unity/unity-rose-front.jpg",
+        "/products/Unity/unity-rose-side.jpg",
+        "/products/Unity/unity-rose-back.jpg"
+      ],
+      "18k White Gold": [
+        "/products/Unity/unity-silver-front.jpg",
+        "/products/Unity/unity-silver-side.jpg",
+        "/products/Unity/unity-silver-back.jpg"
+      ],
+      "Platinum": [
+        "/products/Unity/unity-silver-front.jpg",
+        "/products/Unity/unity-silver-side.jpg",
+        "/products/Unity/unity-silver-back.jpg"
+      ]
     }
   }
 ]

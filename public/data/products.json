@@ -2312,13 +2312,15 @@
       "engagement-rings",
       "signature-collection",
       "solitaire",
+      "hidden-halo",
       "nova",
       "oval"
     ],
     "shape": "oval",
     "styles": [
       "solitaire",
-      "three-stone"
+      "three-stone",
+      "hidden-halo"
     ],
     "caratBuckets": [
       "1-1.5",
@@ -4736,8 +4738,8 @@
   {
     "slug": "aura-engagement-ring",
     "title": "Aura — Engagement Ring",
-    "blurb": "Elegant solitaire engagement ring with timeless design and two-tone options.",
-    "description": "Aura is an elegant solitaire engagement ring featuring a timeless design that captures light beautifully. Crafted with attention to detail, it offers classic elegance with modern versatility.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Oval-cut centre stone with refined band adorned with round and marquise-cut side stones.",
+    "description": "The beloved Aura design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Aura/Aura-gold-front.jpg",
       "/products/Aura/aura-gold-side.jpg",
@@ -4915,14 +4917,13 @@
     "collections": [
       "engagement-rings",
       "signature-collection",
-      "solitaire",
       "aura",
-      "round",
+      "oval",
       "two-tone"
     ],
-    "shape": "round",
+    "shape": "oval",
     "styles": [
-      "solitaire",
+      "three-stone",
       "two-tone"
     ],
     "caratBuckets": [
@@ -5146,15 +5147,15 @@
     "isFeatured": false,
     "collections": [
       "engagement-rings",
-      "signature-collection",
-      "solitaire",
+      "toi-et-moi",
       "lumea",
-      "round",
+      "oval",
+      "pear",
       "two-tone"
     ],
-    "shape": "round",
+    "shape": "toi-et-moi",
     "styles": [
-      "solitaire",
+      "toi-et-moi",
       "two-tone"
     ],
     "caratBuckets": [
@@ -5368,12 +5369,16 @@
       "engagement-rings",
       "signature-collection",
       "solitaire",
-      "round",
+      "hidden-halo",
+      "pave",
+      "oval",
       "unity"
     ],
-    "shape": "round",
+    "shape": "oval",
     "styles": [
-      "solitaire"
+      "solitaire",
+      "hidden-halo",
+      "pave"
     ],
     "caratBuckets": [
       "1-1.5",

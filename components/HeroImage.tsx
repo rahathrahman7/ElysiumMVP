@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function HeroImage() {
@@ -71,12 +72,12 @@ export default function HeroImage() {
 
           {/* CTA container (KEEP inner anchors EXACTLY as they are in your file) */}
           <div className="hero-ctas mt-10 flex justify-center gap-3 animate-fade-in" style={{ animationDelay: "280ms" }}>
-            <a
+            <Link
               href="/products"
               className="inline-block px-6 py-3 border-2 border-charcoal text-charcoal uppercase tracking-wide text-sm font-serif font-medium hover:bg-charcoal hover:text-white transition-all duration-300 leading-tight"
             >
               Shop Collection
-            </a>
+            </Link>
             <a
               href="/bespoke"
               className="inline-block px-6 py-3 border-2 border-gold text-gold uppercase tracking-wide text-sm font-serif font-medium hover:bg-gold hover:text-white transition-all duration-300 leading-tight"

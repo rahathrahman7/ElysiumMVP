@@ -44,7 +44,7 @@ export default function NecklacesPage() {
           </h2>
           
           <p className="text-[#6D3D0D]/60 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-            We're carefully curating a collection of exquisite necklaces and pendants. 
+            We&apos;re carefully curating a collection of exquisite necklaces and pendants. 
             Be the first to know when they arrive.
           </p>
 

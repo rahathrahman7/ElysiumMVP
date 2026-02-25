@@ -72,7 +72,7 @@ export function ShopGrid() {
                   >
                     <option value="">All Collections</option>
                     <option value="ring">Engagement Rings</option>
-                    <option value="mens-rings">Men's Wedding Bands</option>
+                    <option value="mens-rings">Men&apos;s Wedding Bands</option>
                     <option value="necklace">Necklaces</option>
                     <option value="earrings">Earrings</option>
                   </select>

@@ -12,6 +12,7 @@ type Props = {
     certificate: string;
     metal: string;
     ringSize: string;
+    length: string;
     engraving: string | null;
   }>;
   canAdd: boolean;
@@ -99,7 +100,7 @@ export default function StickySummary({
             {showEnquire && (
               <a
                 href={appointmentHref}
-                className="flex-1 text-center rounded-full px-3 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
+                className="flex-1 text-center rounded-full px-3 py-2 text-sm font-medium text-white bg-elysium-brown hover:bg-elysium-brown/90 transition"
               >
                 Enquire
               </a>
@@ -162,7 +163,7 @@ export default function StickySummary({
             {showEnquire && (
               <a
                 href={appointmentHref}
-                className="rounded-full px-4 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 transition"
+                className="rounded-full px-4 py-2 text-sm font-medium text-white bg-elysium-brown hover:bg-elysium-brown/90 transition"
               >
                 Enquire
               </a>

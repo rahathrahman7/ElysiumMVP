@@ -3,6 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+interface MenuItem {
+  label: string;
+  href?: string;
+  children?: MenuItem[];
+}
+
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -10,6 +16,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const [mounted, setMounted] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     setMounted(true);
@@ -20,6 +27,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      // Reset expanded items when menu closes
+      setExpandedItems(new Set());
     }
 
     return () => {
@@ -27,18 +36,103 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     };
   }, [isOpen]);
 
+  const toggleExpand = (label: string) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(label)) {
+        newSet.delete(label);
+      } else {
+        newSet.add(label);
+      }
+      return newSet;
+    });
+  };
+
   if (!mounted) return null;
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { label: 'Home', href: '/' },
-    { label: 'Collection', href: '/products' },
-    { label: 'Engagement Rings', href: '/products?category=engagement' },
-    { label: 'Wedding Bands', href: '/products?category=wedding' },
-    { label: 'Earrings', href: '/products?category=earrings' },
-    { label: 'Necklaces', href: '/products?category=necklaces' },
+    { 
+      label: 'Collection',
+      children: [
+        { label: 'All Jewellery', href: '/products' },
+        { label: 'Engagement Rings', href: '/products?category=engagement' },
+        { label: "Men's Wedding Bands", href: '/products?category=mens-rings' },
+        { 
+          label: 'Fine Jewellery',
+          children: [
+            { label: 'Earrings', href: '/shop?category=earrings' },
+            { label: 'Bracelets', href: '/shop?category=bracelets' },
+            { label: 'Necklaces', href: '/shop?category=necklaces' },
+          ]
+        },
+      ]
+    },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
+
+  const renderMenuItem = (item: MenuItem, index: number, depth: number = 0) => {
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedItems.has(item.label);
+    const paddingLeft = 24 + (depth * 16); // Base 24px + 16px per depth level
+
+    if (hasChildren) {
+      return (
+        <li key={item.label}>
+          <button
+            onClick={() => toggleExpand(item.label)}
+            className="flex items-center justify-between w-full py-4 text-lg font-medium text-charcoal hover:bg-ivory hover:text-gold transition-all duration-200 active:bg-beige touch-manipulation animate-slide-in-right"
+            style={{ 
+              paddingLeft: `${paddingLeft}px`, 
+              paddingRight: '24px',
+              animationDelay: `${index * 50}ms`, 
+              animationFillMode: 'both',
+              fontSize: depth > 0 ? '15px' : '18px',
+            }}
+          >
+            <span>{item.label}</span>
+            <svg 
+              className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul 
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            {item.children?.map((child, childIndex) => 
+              renderMenuItem(child, index + childIndex + 1, depth + 1)
+            )}
+          </ul>
+        </li>
+      );
+    }
+
+    return (
+      <li key={item.href || item.label}>
+        <Link
+          href={item.href || '#'}
+          onClick={onClose}
+          className="block py-4 text-lg font-medium text-charcoal hover:bg-ivory hover:text-gold transition-all duration-200 active:bg-beige touch-manipulation animate-slide-in-right"
+          style={{ 
+            paddingLeft: `${paddingLeft}px`, 
+            paddingRight: '24px',
+            animationDelay: `${index * 50}ms`, 
+            animationFillMode: 'both',
+            fontSize: depth > 0 ? '15px' : '18px',
+          }}
+        >
+          {item.label}
+        </Link>
+      </li>
+    );
+  };
 
   return (
     <>
@@ -80,18 +174,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Menu Items */}
         <nav className="py-6">
           <ul className="space-y-1">
-            {menuItems.map((item, index) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={onClose}
-                  className={`block px-6 py-4 text-lg font-medium text-charcoal hover:bg-ivory hover:text-gold transition-all duration-200 active:bg-beige touch-manipulation animate-slide-in-right`}
-                  style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {menuItems.map((item, index) => renderMenuItem(item, index))}
           </ul>
         </nav>
 

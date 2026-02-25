@@ -1,7 +1,0 @@
-project_name: "ELYSIUM Luxury Jewelry E-commerce"
-output_folder: "./bmad-output"
-user_name: "Rahath"
-communication_language: "English"
-project_type: "E-commerce Platform"
-domain: "Luxury Jewelry"
-tech_stack: "Next.js 15, TypeScript, Sanity CMS, Stripe"

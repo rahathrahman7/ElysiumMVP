@@ -169,36 +169,25 @@ export default function DiamondEducationPage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-[#6D3D0D] text-2xl mb-2">Color</h3>
-                  <p className="text-[#D4AF37] text-sm uppercase tracking-wider mb-4">The D to Z Scale</p>
+                  <p className="text-[#D4AF37] text-sm uppercase tracking-wider mb-4">Our Colour Standard</p>
                   <p className="text-[#6D3D0D]/70 leading-relaxed">
-                    Diamond color measures the absence of color. The scale runs from D (completely colorless) to Z 
-                    (light yellow or brown). Colorless diamonds allow more light to pass through, creating more sparkle.
+                    Diamond colour measures the absence of colour. The GIA scale grades diamonds from D (completely 
+                    colourless) onwards. At Elysium, we only source diamonds in the D–F (colourless) and G–J 
+                    (near colourless) range — the highest colour grades available.
                   </p>
                 </div>
               </div>
               
               <div className="bg-[#FAF7F2] p-6 border-l-2 border-[#D4AF37]">
                 <h4 className="font-medium text-[#6D3D0D] text-sm uppercase tracking-wider mb-4">Color Grade Scale</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
-                      <span className="font-medium text-[#D4AF37]">D - F</span>
-                      <span className="text-sm text-[#6D3D0D]/60">Colorless — highest grade</span>
-                    </div>
-                    <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
-                      <span className="font-medium text-[#6D3D0D]">G - J</span>
-                      <span className="text-sm text-[#6D3D0D]/60">Near colorless — excellent value</span>
-                    </div>
+                <div className="space-y-3 max-w-md">
+                  <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
+                    <span className="font-medium text-[#D4AF37]">D - F</span>
+                    <span className="text-sm text-[#6D3D0D]/60">Colourless — highest grade</span>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
-                      <span className="font-medium text-[#6D3D0D]/60">K - M</span>
-                      <span className="text-sm text-[#6D3D0D]/40">Faint yellow</span>
-                    </div>
-                    <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
-                      <span className="font-medium text-[#6D3D0D]/40">N - Z</span>
-                      <span className="text-sm text-[#6D3D0D]/40">Light yellow — not recommended</span>
-                    </div>
+                  <div className="flex items-center justify-between pb-2 border-b border-[#6D3D0D]/10">
+                    <span className="font-medium text-[#6D3D0D]">G - J</span>
+                    <span className="text-sm text-[#6D3D0D]/60">Near colourless — excellent value</span>
                   </div>
                 </div>
               </div>
@@ -371,7 +360,7 @@ export default function DiamondEducationPage() {
               These independent reports verify the 4Cs and protect your investment.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-lg mx-auto">
               <div className="text-center">
                 <div className="w-16 h-16 border border-[#D4AF37]/30 flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
@@ -389,15 +378,6 @@ export default function DiamondEducationPage() {
                 </div>
                 <h4 className="font-serif text-[#6D3D0D] text-lg mb-2">IGI</h4>
                 <p className="text-[#6D3D0D]/60 text-sm">International Gemological Institute — trusted worldwide certification</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 border border-[#D4AF37]/30 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-                  </svg>
-                </div>
-                <h4 className="font-serif text-[#6D3D0D] text-lg mb-2">HRD</h4>
-                <p className="text-[#6D3D0D]/60 text-sm">Hoge Raad voor Diamant — European diamond certification authority</p>
               </div>
             </div>
           </div>

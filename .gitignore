@@ -121,3 +121,21 @@ coverage/
 /generated/prisma
 .vercel
 .env*.local
+
+# BMAD / development tooling (not needed in production repo)
+bmad/
+bmad-v6/
+.bmad/
+.bmad-core/
+.claude/
+
+# Temporary / third-party artifacts
+tmp_context7/
+
+# BMAD webbundles
+webbundles/
+
+# Cursor config (may contain env references - keep local only)
+.cursor/mcp.json
+.cursor/mcp_artifacts/
+.cursor/rules/bmad/

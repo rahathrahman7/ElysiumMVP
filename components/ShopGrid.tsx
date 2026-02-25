@@ -2,7 +2,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import useSWR from "swr";
 import LuxuryProductCard from "@/components/ui/LuxuryProductCard";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { facets } from "@/lib/filterSchema";
 
 const fetcher = (url: string) => fetch(url).then(r=>r.json());
@@ -10,7 +10,21 @@ const fetcher = (url: string) => fetch(url).then(r=>r.json());
 export function ShopGrid() {
   const params = useSearchParams();
   const router = useRouter();
-  const query = params.toString();
+  
+  // Check if any filter is active - if not, we'll show grouped view
+  const hasCategory = params.get("category");
+  const hasCollection = params.get("collection");
+  const hasShape = params.get("shape");
+  const isFilteredView = hasCategory || hasCollection || hasShape;
+  
+  // Build query - use higher limit for grouped (all collections) view to prevent groups splitting across pages
+  const queryParams = new URLSearchParams(params.toString());
+  if (!isFilteredView && !params.get("limit")) {
+    // For "All Collections" view, fetch more products at once to keep groups together
+    queryParams.set("limit", "50");
+  }
+  const query = queryParams.toString();
+  
   const { data } = useSWR(`/api/products?${query}`, fetcher);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
@@ -22,7 +36,8 @@ export function ShopGrid() {
   }
 
   const page = Number(params.get("page") || 1);
-  const limit = Number(params.get("limit") || 12);
+  // Use the actual limit from the query we sent
+  const limit = isFilteredView ? Number(params.get("limit") || 12) : 50;
   const total = Number(data?.total || 0);
   const totalPages = total ? Math.max(1, Math.ceil(total / limit)) : 1;
 
@@ -59,7 +74,7 @@ export function ShopGrid() {
                     <option value="ring">Engagement Rings</option>
                     <option value="mens-rings">Men's Wedding Bands</option>
                     <option value="necklace">Necklaces</option>
-                    <option value="earring">Earrings</option>
+                    <option value="earrings">Earrings</option>
                   </select>
                 </div>
 
@@ -131,6 +146,21 @@ export function ShopGrid() {
 
         {/* Main Content */}
         <section className="relative" style={{ backgroundColor: 'var(--elysium-ivory)' }}>
+          {/* Active Filter Badges */}
+          {hasShape && (
+            <div className="mb-6 flex items-center gap-3">
+              <span className="text-sm text-elysium-smoke tracking-wide">Filtering by:</span>
+              <button
+                onClick={() => updateParam("shape", "")}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-elysium-gold/10 border border-elysium-gold/30 text-elysium-charcoal text-sm font-medium capitalize hover:bg-elysium-gold/20 transition-all duration-300"
+              >
+                {hasShape} Diamonds
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          )}
           <div className="mb-8 pb-6 border-b border-elysium-whisper">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -165,19 +195,76 @@ export function ShopGrid() {
               {(data?.products ?? []).length > 0 ? (
                 <div className="space-y-16">
                   {(() => {
-                    // Group products by collection tags for efficient organization
                     const products = data?.products ?? [];
+                    
+                    // If a specific category or collection filter is active, show flat grid without grouping
+                    if (isFilteredView) {
+                      // Category-specific headers and descriptions
+                      const categoryHeaders: Record<string, { title: string; description?: string }> = {
+                        bracelets: {
+                          title: 'Bracelets',
+                          description: 'A refined finishing touch to any ensemble, our tennis bracelets are thoughtfully crafted with an unwavering focus on detail. Perfect for gifting, they offer enduring beauty for every special moment.'
+                        },
+                        earrings: {
+                          title: 'Earrings',
+                          description: 'Elegance that frames the face, our earring collection features exquisite designs from refined studs to statement pieces, each crafted with precision and care.'
+                        },
+                      };
+                      
+                      const categoryInfo = hasCategory ? categoryHeaders[hasCategory] : null;
+                      
+                      return (
+                        <div className="space-y-8">
+                          {/* Category Header - only show when category filter is active */}
+                          {categoryInfo && (
+                            <div className="text-center mb-8">
+                              <h2 className="font-serif text-2xl md:text-3xl text-elysium-charcoal tracking-wide mb-2">
+                                {categoryInfo.title}
+                              </h2>
+                              <div className="w-16 h-px bg-gradient-to-r from-transparent via-elysium-gold to-transparent mx-auto"></div>
+                              {categoryInfo.description && (
+                                <p className="mt-4 text-sm md:text-base text-elysium-smoke/80 max-w-xl mx-auto font-light leading-relaxed">
+                                  {categoryInfo.description}
+                                </p>
+                              )}
+                            </div>
+                          )}
+                          
+                          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 xl:gap-12">
+                            {products.map((p: any, index: number) => (
+                              <div 
+                                key={p._id} 
+                                className="stagger-item"
+                                style={{
+                                  animationDelay: `${(index + 1) * 0.1}s`,
+                                  isolation: 'isolate',
+                                  position: 'relative',
+                                  zIndex: 1,
+                                  padding: '16px',
+                                  margin: '-16px',
+                                }}
+                              >
+                                <LuxuryProductCard 
+                                  product={p} 
+                                  priority={index < 4}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    }
+                    
+                    // Group products by collection tags for efficient organization (All Collections view)
+                    // Order: Solitaires → Toi et Moi → Trilogy → Men's Bands (Ready To Wear), then Bracelets → Earrings
                     const groups = {
-                      'mens-rings': products.filter((p:any) => 
-                        p.collections?.includes('mens-rings') || 
-                        p.collections?.includes('wedding-bands')
-                      ),
                       solitaires: products.filter((p:any) => 
                         (p.collections?.includes('solitaire') || p.collections?.includes('signature-collection')) &&
                         !p.collections?.includes('mens-rings') &&
                         !p.collections?.includes('bracelets') &&
                         !p.collections?.includes('trilogy') &&
-                        !p.collections?.includes('toi-et-moi')
+                        !p.collections?.includes('toi-et-moi') &&
+                        !p.collections?.includes('earrings')
                       ),
                       'toi-et-moi': products.filter((p:any) => 
                         p.collections?.includes('toi-et-moi') &&
@@ -187,9 +274,16 @@ export function ShopGrid() {
                         p.collections?.includes('trilogy') &&
                         !p.collections?.includes('mens-rings')
                       ),
+                      'mens-rings': products.filter((p:any) => 
+                        p.collections?.includes('mens-rings') || 
+                        p.collections?.includes('wedding-bands')
+                      ),
                       bracelets: products.filter((p:any) => 
                         p.collections?.includes('bracelets') ||
                         p.collections?.includes('tennis-bracelets')
+                      ),
+                      earrings: products.filter((p:any) => 
+                        p.collections?.includes('earrings')
                       ),
                       other: products.filter((p:any) => 
                         !p.collections?.includes('solitaire') &&
@@ -198,7 +292,8 @@ export function ShopGrid() {
                         !p.collections?.includes('trilogy') &&
                         !p.collections?.includes('mens-rings') &&
                         !p.collections?.includes('wedding-bands') &&
-                        !p.collections?.includes('bracelets')
+                        !p.collections?.includes('bracelets') &&
+                        !p.collections?.includes('earrings')
                       )
                     };
 
@@ -210,16 +305,18 @@ export function ShopGrid() {
                         solitaires: 'Solitaire',
                         'toi-et-moi': 'Toi et Moi',
                         trilogy: 'Trilogy',
+                        bracelets: 'Bracelets',
+                        earrings: 'Earrings',
                         other: 'Other Collections'
                       };
 
                       // Skip rendering if it's 'other' and we have other signature groups
-                      if (groupName === 'other' && (groups.solitaires.length > 0 || groups['toi-et-moi'].length > 0 || groups.trilogy.length > 0 || groups.bracelets.length > 0)) {
+                      if (groupName === 'other' && (groups.solitaires.length > 0 || groups['toi-et-moi'].length > 0 || groups.trilogy.length > 0 || groups.bracelets.length > 0 || groups.earrings.length > 0)) {
                         return null;
                       }
 
-                      // Check if this is a signature collection group
-                      const isSignatureGroup = ['solitaires', 'toi-et-moi', 'trilogy'].includes(groupName);
+                      // Check if this is a signature collection group (Ready To Wear)
+                      const isSignatureGroup = ['mens-rings', 'solitaires', 'toi-et-moi', 'trilogy'].includes(groupName);
 
                       return (
                         <div key={groupName} className="space-y-8">

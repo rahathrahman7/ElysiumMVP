@@ -10,6 +10,7 @@ import { AccessibilityProvider } from "@/components/ui/AccessibilityProvider";
 import ConciergeWidget from "@/components/concierge/ConciergeWidget";
 import { ReactNode } from 'react';
 import { ConditionalLayout } from '@/components/ConditionalLayout';
+import { LenisProvider } from "@/components/providers/LenisProvider";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="color-scheme" content="light" />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} bg-white text-black antialiased`}>
+        <LenisProvider>
         <AccessibilityProvider>
           <PlausibleAnalytics />
           <ServiceWorkerRegistration />
@@ -58,6 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             className="sr-only"
           />
         </AccessibilityProvider>
+        </LenisProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { useCartStore } from "@/lib/state/cart";
-import { createCheckoutSession } from "@/lib/stripe/client";
 
 export function CartDrawer() {
   const [open, setOpen] = useState(false);
@@ -35,7 +35,13 @@ export function CartDrawer() {
               <div className="font-medium">Total</div>
               <div>£{(total()/100).toFixed(2)}</div>
             </div>
-            <button className="mt-4 px-4 py-2 bg-charcoal text-ivory rounded" onClick={()=>createCheckoutSession(items)}>Checkout</button>
+            <Link
+              href="/cart"
+              className="mt-4 block text-center px-4 py-2 bg-charcoal text-ivory rounded hover:bg-charcoal/90"
+              onClick={() => setOpen(false)}
+            >
+              Proceed to Checkout
+            </Link>
           </aside>
         </div>
       )}

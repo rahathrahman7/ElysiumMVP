@@ -1518,7 +1518,7 @@
   },
   {
     "slug": "clarion-engagement-ring",
-    "title": "Clarion Engagement Ring",
+    "title": "Clarion",
     "blurb": "Radiant solitaire with four-claw setting in classic elegance.",
     "description": "The Clarion engagement ring is a classic solitaire design, showcasing an exquisite radiant-cut center stone held in a sleek four-claw setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
@@ -2144,8 +2144,8 @@
   {
     "slug": "nova-oval-solitaire-round-marquise",
     "title": "Nova",
-    "blurb": "Oval centre stone with round and marquise side stones on refined band.",
-    "description": "The beloved Nova design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Oval centre stone with hidden halo, round and marquise side stones on refined band.",
+    "description": "The captivating Nova design features a radiant four-claw oval-cut center stone with a shimmering hidden halo, set on a sleek band accented by two pairs of round and marquise-cut side stones.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Nova/nova-front.jpeg",
       "/products/Nova/nova-side.jpeg",
@@ -4399,8 +4399,8 @@
   {
     "slug": "bezel-tennis-bracelet",
     "title": "Bezel Tennis Bracelet",
-    "blurb": "Elegant tennis bracelet featuring bezel-set diamonds in a timeless design.",
-    "description": "A refined finishing touch to any ensemble, our tennis bracelets are thoughtfully crafted with an unwavering focus on detail. Perfect for gifting, they offer enduring beauty for every special moment.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Elegant bezel-set tennis bracelet with fluid silhouette and discreet custom clasp for all-day comfort.",
+    "description": "Embodied in timeless design, the Bezel Tennis Bracelet rests seamlessly on the wrist, featuring sleek bezel-set diamonds, a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold.PNG",
       "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold2.PNG"
@@ -4538,8 +4538,8 @@
   {
     "slug": "classic-4-claw-tennis-bracelet",
     "title": "Classic 4 Claw Tennis Bracelet",
-    "blurb": "Timeless tennis bracelet featuring classic four-claw diamond settings in an elegant design.",
-    "description": "A refined finishing touch to any ensemble, our tennis bracelets are thoughtfully crafted with an unwavering focus on detail. Perfect for gifting, they offer enduring beauty for every special moment.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Timeless tennis bracelet with fluid silhouette and discreet custom clasp for all-day comfort.",
+    "description": "Embodied in timeless design, the Classic 4-Claw Tennis Bracelet rests seamlessly on the wrist, featuring a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold.PNG",
       "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold2.PNG"
@@ -4661,6 +4661,12 @@
       "4-5",
       "5-7",
       "7plus"
+    ],
+    "sizes": [
+      "6\"",
+      "6.5\"",
+      "7\"",
+      "7.5\""
     ],
     "galleryByCaratAndMetal": {
       "2ct": {
@@ -4968,9 +4974,9 @@
   },
   {
     "slug": "lumea-engagement-ring",
-    "title": "Lumea — Engagement Ring",
-    "blurb": "Beautiful solitaire engagement ring with radiant design and two-tone metal options.",
-    "description": "Lumea is a beautiful solitaire engagement ring featuring a radiant design that captures and reflects light exquisitely. Its elegant silhouette offers timeless appeal with contemporary versatility.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "title": "Lumea — Toi et Moi",
+    "blurb": "Oval-cut and pear-cut stones in a timeless toi et moi design.",
+    "description": "The Lumea engagement ring showcases a striking oval-cut stone paired with a beautifully balanced pear-cut stone, brought together in a timeless toi et moi design. Both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the oval will be 1ct and the pear will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Lumea/lumia-gold-front.jpg",
       "/products/Lumea/lumia-gold-side.jpg",
@@ -5200,9 +5206,9 @@
   },
   {
     "slug": "unity-engagement-ring",
-    "title": "Unity — Engagement Ring",
-    "blurb": "Classic solitaire engagement ring with elegant simplicity and timeless design.",
-    "description": "Unity is a classic solitaire engagement ring featuring elegant simplicity and timeless design. Its refined silhouette celebrates the beauty of a single center stone with understated elegance.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "title": "Unity — Braided Solitaire",
+    "blurb": "Refined braided design with oval-cut centre, pavé detail, and hidden halo.",
+    "description": "Unity is a refined braided engagement ring featuring an interwoven half-circle of smooth pavé and polished metal, a four-claw oval-cut center stone, and a stunning hidden halo.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Unity/unity-gold-front.jpg",
       "/products/Unity/unity-gold-side.jpg",
@@ -5408,6 +5414,317 @@
         "/products/Unity/unity-silver-side.jpg",
         "/products/Unity/unity-silver-back.jpg"
       ]
+    }
+  },
+  {
+    "slug": "crown-earrings",
+    "title": "Crown — Earrings",
+    "blurb": "Exquisitely detailed six-claw setting with a crown-inspired silhouette and two luminous round-cut stones.",
+    "description": "Exquisitely detailed, the Crown earrings showcase a beautifully sculpted six-claw setting with a crown-inspired silhouette. Set with two luminous round-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Crown/crown-gold-front.PNG",
+      "/products/Earrings/Crown/crown-gold-side.PNG",
+      "/products/Earrings/Crown/crown-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": [
+      "earrings",
+      "crown",
+      "six-claw",
+      "studs"
+    ],
+    "styles": [
+      "six-claw",
+      "studs"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Earrings/Crown/crown-gold-front.PNG",
+        "/products/Earrings/Crown/crown-gold-side.PNG",
+        "/products/Earrings/Crown/crown-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Crown/crown-rose-front.PNG",
+        "/products/Earrings/Crown/crown-rose-side.PNG",
+        "/products/Earrings/Crown/crown-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Crown/crown-silver-front.PNG",
+        "/products/Earrings/Crown/crown-silver-side.PNG",
+        "/products/Earrings/Crown/crown-silver-back.PNG"
+      ]
+    }
+  },
+  {
+    "slug": "essence-earrings",
+    "title": "Essence — Earrings",
+    "blurb": "Refined pear-cut studs in a sleek bezel setting for comfort without compromising on style.",
+    "description": "Our Essence stud earrings offer a refined twist on the classic stud, showcasing pear-cut stones in a sleek bezel setting. Encasing the stone's edges for a smooth, secure finish, they're designed for comfort without compromising on style.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Essence/essence-gold-front.PNG",
+      "/products/Earrings/Essence/essence-gold-side.PNG",
+      "/products/Earrings/Essence/essence-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": [
+      "earrings",
+      "essence",
+      "bezel-set",
+      "studs"
+    ],
+    "styles": [
+      "bezel-set",
+      "studs"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Earrings/Essence/essence-gold-front.PNG",
+        "/products/Earrings/Essence/essence-gold-side.PNG",
+        "/products/Earrings/Essence/essence-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Essence/essence-rose-front.PNG",
+        "/products/Earrings/Essence/essence-rose-side.PNG",
+        "/products/Earrings/Essence/essence-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Essence/essence-silver-front.PNG",
+        "/products/Earrings/Essence/essence-silver-side.PNG",
+        "/products/Earrings/Essence/essence-silver-back.PNG"
+      ]
+    }
+  },
+  {
+    "slug": "eternal-earrings",
+    "title": "Eternal — Earrings",
+    "blurb": "Classic four-claw setting with a beautiful round-cut diamond. The heirloom staple you'll reach for day after day.",
+    "description": "Defined by enduring elegance, the Eternal earrings are a true heirloom staple, designed to be worn and loved for generations. Effortlessly transitioning from boardroom to brunch to evening occasions, they elevate every look with quiet brilliance. Featuring a classic four-claw setting and a beautiful round-cut diamond, these are the earrings you'll reach for day after day.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Eternal/eternal-gold-front.PNG",
+      "/products/Earrings/Eternal/eternal-gold-side.PNG",
+      "/products/Earrings/Eternal/eternal-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": true,
+    "collections": ["earrings", "eternal", "four-claw", "studs", "round"],
+    "styles": ["four-claw", "studs"],
+    "shape": "round",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Eternal/eternal-gold-front.PNG", "/products/Earrings/Eternal/eternal-gold-side.PNG", "/products/Earrings/Eternal/eternal-gold-back.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Eternal/eternal-rose-front.PNG", "/products/Earrings/Eternal/eternal-rose-side.PNG", "/products/Earrings/Eternal/eternal-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Eternal/eternal-silver-front.PNG", "/products/Earrings/Eternal/eternal-silver-side.PNG", "/products/Earrings/Eternal/eternal-silver-back.PNG"]
+    }
+  },
+  {
+    "slug": "heirloom-earrings",
+    "title": "Heirloom — Earrings",
+    "blurb": "Princess-cut studs with softly rounded claws. Maximum sparkle for daily wear and long-term elegance.",
+    "description": "Celebrated for their clean lines and brilliance, princess-cut diamonds are a classic stud choice. Our Heirloom earrings are crafted to maximise sparkle, with softly rounded claws that offer both security and comfort — perfect for daily wear and long-term elegance.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Heirloom/heirloom-gold-front.PNG",
+      "/products/Earrings/Heirloom/heirloom-gold-side.PNG",
+      "/products/Earrings/Heirloom/heirloom-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": true,
+    "collections": ["earrings", "heirloom", "studs", "princess"],
+    "styles": ["studs"],
+    "shape": "princess",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Heirloom/heirloom-gold-front.PNG", "/products/Earrings/Heirloom/heirloom-gold-side.PNG", "/products/Earrings/Heirloom/heirloom-gold-back.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Heirloom/heirloom-rose-front.PNG", "/products/Earrings/Heirloom/heirloom-rose-side.PNG", "/products/Earrings/Heirloom/heirloom-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Heirloom/heirloom-silver-front.PNG", "/products/Earrings/Heirloom/heirloom-silver-side.PNG", "/products/Earrings/Heirloom/heirloom-silver-back.PNG"]
+    }
+  },
+  {
+    "slug": "icon-earrings",
+    "title": "Icon — Earrings",
+    "blurb": "Emerald-cut stones with signature talon-tip claws. Glamour and restraint for day to night.",
+    "description": "The Icon studs offer a striking balance of glamour and restraint, showcasing emerald-cut stones elevated by signature talon-tip claws. Designed to transition seamlessly from day to night, they are both confident and enduringly classic.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Icon/icon-gold-front.PNG",
+      "/products/Earrings/Icon/icon-gold-side.PNG",
+      "/products/Earrings/Icon/icon-gold-side(1).PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": ["earrings", "icon", "emerald", "studs", "talon-claw"],
+    "styles": ["studs", "talon-claw"],
+    "shape": "emerald",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Icon/icon-gold-front.PNG", "/products/Earrings/Icon/icon-gold-side.PNG", "/products/Earrings/Icon/icon-gold-side(1).PNG"],
+      "18k Rose Gold": ["/products/Earrings/Icon/icon-rose-front.PNG", "/products/Earrings/Icon/icon-rose-side.PNG", "/products/Earrings/Icon/icon-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Icon/icon-silver-front.PNG", "/products/Earrings/Icon/icon-silver-side.PNG", "/products/Earrings/Icon/icon-silver-back.PNG"]
+    }
+  },
+  {
+    "slug": "legacy-earrings",
+    "title": "Legacy — Hoop Earrings",
+    "blurb": "15mm round hoops with ten radiant stones per ear. Effortless sparkle and timeless sophistication.",
+    "description": "Designed to make a subtle statement, the Legacy 15mm round hoop earrings feature ten radiant stones per ear, offering effortless sparkle and timeless sophistication.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Legacy/legacy-gold-front.PNG",
+      "/products/Earrings/Legacy/legacy-gold-side.PNG",
+      "/products/Earrings/Legacy/legacy-gold-dual.PNG",
+      "/products/Earrings/Legacy/legacy-gold-open.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": ["earrings", "legacy", "hoops", "round"],
+    "styles": ["hoops"],
+    "shape": "round",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Legacy/legacy-gold-front.PNG", "/products/Earrings/Legacy/legacy-gold-side.PNG", "/products/Earrings/Legacy/legacy-gold-dual.PNG", "/products/Earrings/Legacy/legacy-gold-open.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Legacy/legacy-rose-front.PNG", "/products/Earrings/Legacy/legacy-rose-side.PNG", "/products/Earrings/Legacy/legacy-rose-dual.PNG", "/products/Earrings/Legacy/legacy-rose-open.PNG"],
+      "18k White Gold": ["/products/Earrings/Legacy/legacy-silver-front.PNG", "/products/Earrings/Legacy/legacy-silver-side.PNG", "/products/Earrings/Legacy/legacy-silver-dual.PNG", "/products/Earrings/Legacy/legacy-silver-open.PNG"]
+    }
+  },
+  {
+    "slug": "pure-earrings",
+    "title": "Pure — Earrings",
+    "blurb": "Luminous round-cut centre stone with a pavé halo in a graceful four-claw basket setting.",
+    "description": "Featuring a luminous round-cut centre stone, the Pure earring is encircled by a sparkling pavé halo and secured in a graceful four-claw basket setting.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Pure/pure-gold-front.PNG",
+      "/products/Earrings/Pure/pure-gold-side.PNG",
+      "/products/Earrings/Pure/pure-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": true,
+    "collections": ["earrings", "pure", "halo", "four-claw", "studs", "round"],
+    "styles": ["halo", "four-claw", "studs"],
+    "shape": "round",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Pure/pure-gold-front.PNG", "/products/Earrings/Pure/pure-gold-side.PNG", "/products/Earrings/Pure/pure-gold-back.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Pure/pure-rose-front.PNG", "/products/Earrings/Pure/pure-rose-side.PNG", "/products/Earrings/Pure/pure-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Pure/pure-silver-front.PNG", "/products/Earrings/Pure/pure-silver-side.PNG", "/products/Earrings/Pure/pure-silver-back.PNG"]
+    }
+  },
+  {
+    "slug": "refined-earrings",
+    "title": "Refined — Earrings",
+    "blurb": "Bezel-set studs for a sleek, striking finish. From daytime sophistication to evening elegance.",
+    "description": "A modern interpretation of a timeless staple, the Refined studs feature bezel-set stones for a sleek yet striking finish. Versatile by design, they move seamlessly from daytime sophistication to evening elegance.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Refined/refined-gold-front.PNG",
+      "/products/Earrings/Refined/refined-gold-side.PNG",
+      "/products/Earrings/Refined/refined-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": ["earrings", "refined", "bezel-set", "studs"],
+    "styles": ["bezel-set", "studs"],
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Refined/refined-gold-front.PNG", "/products/Earrings/Refined/refined-gold-side.PNG", "/products/Earrings/Refined/refined-gold-back.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Refined/refined-rose-front.PNG", "/products/Earrings/Refined/refined-rose-side.PNG", "/products/Earrings/Refined/refined-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Refined/refined-silver-front.PNG", "/products/Earrings/Refined/refined-silver-side.PNG", "/products/Earrings/Refined/refined-silver-back.PNG"]
+    }
+  },
+  {
+    "slug": "timeless-earrings",
+    "title": "Timeless — Earrings",
+    "blurb": "Striking round-cut stone in a bold bezel setting. Classic and enduring.",
+    "description": "The Timeless earring showcases a striking round cut stone set within a bold bezel setting.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "images": [
+      "/products/Earrings/Timeless/timeless-gold-front.PNG",
+      "/products/Earrings/Timeless/timeless-gold-side.PNG",
+      "/products/Earrings/Timeless/timeless-gold-back.PNG"
+    ],
+    "basePriceGBP": 0,
+    "metals": [
+      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
+      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
+      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+    ],
+    "qualityBanner": "18k Yellow, Rose & White Gold",
+    "isFeatured": false,
+    "collections": ["earrings", "timeless", "bezel-set", "studs", "round"],
+    "styles": ["bezel-set", "studs"],
+    "shape": "round",
+    "galleryByMetal": {
+      "18k Yellow Gold": ["/products/Earrings/Timeless/timeless-gold-front.PNG", "/products/Earrings/Timeless/timeless-gold-side.PNG", "/products/Earrings/Timeless/timeless-gold-back.PNG"],
+      "18k Rose Gold": ["/products/Earrings/Timeless/timeless-rose-front.PNG", "/products/Earrings/Timeless/timeless-rose-side.PNG", "/products/Earrings/Timeless/timeless-rose-back.PNG"],
+      "18k White Gold": ["/products/Earrings/Timeless/timeless-silver-front.PNG", "/products/Earrings/Timeless/timeless-silver-side.PNG", "/products/Earrings/Timeless/timeless-silver-back.PNG"]
     }
   }
 ]

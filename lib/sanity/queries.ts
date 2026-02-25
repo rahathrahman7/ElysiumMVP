@@ -69,11 +69,25 @@ export async function getProductsFiltered(params: Record<string, string | undefi
   
   // Apply category filter if specified
   let filteredProducts = localProducts;
-  if (params.category) {
-    filteredProducts = localProducts.filter(p => 
-      p.collections?.includes(params.category || '') ||
-      (params.category === 'ring' && p.collections?.includes('engagement-rings')) ||
-      (params.category === 'mens-rings' && p.collections?.includes('mens-rings'))
+  
+  // Special filter for fine jewellery landing page (earrings + bracelets)
+  if (params.fineJewellery === 'true') {
+    filteredProducts = localProducts.filter(p =>
+      p.collections?.includes('earrings') ||
+      p.collections?.includes('bracelets') ||
+      p.collections?.includes('tennis-bracelets') ||
+      p.collections?.includes('necklaces') ||
+      p.collections?.includes('pendants')
+    );
+  } else if (params.category) {
+    const cat = params.category || '';
+    filteredProducts = localProducts.filter(p =>
+      p.collections?.includes(cat) ||
+      (cat === 'ring' && p.collections?.includes('engagement-rings')) ||
+      (cat === 'mens-rings' && p.collections?.includes('mens-rings')) ||
+      ((cat === 'earring' || cat === 'earrings') && p.collections?.includes('earrings')) ||
+      (cat === 'bracelets' && (p.collections?.includes('bracelets') || p.collections?.includes('tennis-bracelets'))) ||
+      (cat === 'necklaces' && (p.collections?.includes('necklaces') || p.collections?.includes('pendants')))
     );
   }
 

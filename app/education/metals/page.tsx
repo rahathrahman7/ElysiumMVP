@@ -88,7 +88,7 @@ export default function MetalsEducationPage() {
           <div className="bg-white border border-[#6D3D0D]/10 p-8 md:p-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div className="text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
                   <Image
                     src="/icons/swatches/goldswatch.png"
                     alt="18k Yellow Gold swatch"
@@ -102,7 +102,7 @@ export default function MetalsEducationPage() {
               </div>
               
               <div className="text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
                   <Image
                     src="/icons/swatches/rosegoldswatch.png"
                     alt="18k Rose Gold swatch"
@@ -116,7 +116,7 @@ export default function MetalsEducationPage() {
               </div>
               
               <div className="text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
                   <Image
                     src="/icons/swatches/whitegoldswatch.png"
                     alt="18k White Gold swatch"
@@ -130,7 +130,7 @@ export default function MetalsEducationPage() {
               </div>
               
               <div className="text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border border-[#6D3D0D]/10 transition-all duration-300 group-hover:border-[#D4AF37]/40 group-hover:shadow-lg">
                   <Image
                     src="/icons/swatches/platinumswatch.png"
                     alt="Platinum swatch"

@@ -1,20 +1,142 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function LuxuryHero() {
   const [ready, setReady] = useState(false);
+  const reduced = useReducedMotion();
 
+  /* ─── Parallax refs (3 layers: bg, left hand, right hand) ─── */
+  const sectionRef = useRef<HTMLElement>(null);
+  const bgLayerRef = useRef<HTMLDivElement>(null);
+  const leftHandRef = useRef<HTMLDivElement>(null);
+  const rightHandRef = useRef<HTMLDivElement>(null);
+  const textTopRef = useRef<HTMLDivElement>(null);
+  const textBottomRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  /* Track mouse in refs to avoid re-renders */
+  const bgMouse = useRef({ mx: 0, my: 0 });
+  const handMouse = useRef({ mx: 0, my: 0 });
+
+  const applyMouseTransforms = useCallback(() => {
+    const bg = bgMouse.current;
+    const h = handMouse.current;
+    if (bgLayerRef.current) {
+      bgLayerRef.current.style.transform = `translate3d(${bg.mx}px, ${bg.my}px, 0)`;
+    }
+    if (leftHandRef.current) {
+      leftHandRef.current.style.transform = `translate3d(${h.mx}px, ${h.my}px, 0)`;
+    }
+    if (rightHandRef.current) {
+      rightHandRef.current.style.transform = `translate3d(${h.mx}px, ${h.my}px, 0)`;
+    }
+  }, []);
+
+  /* ─── Mouse parallax ─── */
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      if (reduced) return;
+      const nx = (e.clientX / window.innerWidth - 0.5) * 2;
+      const ny = (e.clientY / window.innerHeight - 0.5) * 2;
+
+      bgMouse.current.mx = nx * -8;
+      bgMouse.current.my = ny * -8;
+      handMouse.current.mx = nx * -30;
+      handMouse.current.my = ny * -30;
+      applyMouseTransforms();
+    },
+    [reduced, applyMouseTransforms]
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    bgMouse.current.mx = 0;
+    bgMouse.current.my = 0;
+    handMouse.current.mx = 0;
+    handMouse.current.my = 0;
+    applyMouseTransforms();
+  }, [applyMouseTransforms]);
+
+  /* ─── Scroll parallax + exit depth (GSAP ScrollTrigger) ─── */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || reduced) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.3,
+        } as ScrollTrigger.Vars,
+      });
+
+      // Background layer sinks slowly
+      if (bgLayerRef.current) {
+        tl.to(bgLayerRef.current, { y: 80, ease: "none", duration: 1 }, 0);
+      }
+
+      // Hands sink further + scale slightly
+      if (leftHandRef.current) {
+        tl.to(leftHandRef.current, { y: 120, scale: 1.04, ease: "none", duration: 1 }, 0);
+      }
+      if (rightHandRef.current) {
+        tl.to(rightHandRef.current, { y: 120, scale: 1.04, ease: "none", duration: 1 }, 0);
+      }
+
+      // Top text rises and fades (faster than scroll)
+      if (textTopRef.current) {
+        tl.to(textTopRef.current, { y: -100, opacity: 0, ease: "none", duration: 1 }, 0);
+      }
+
+      // Bottom text rises and fades
+      if (textBottomRef.current) {
+        tl.to(textBottomRef.current, { y: -60, opacity: 0, ease: "none", duration: 1 }, 0);
+      }
+
+      // Gradient overlay darkens
+      if (overlayRef.current) {
+        tl.to(overlayRef.current, { opacity: 0.7, ease: "none", duration: 1 }, 0);
+      }
+    }, section);
+
+    return () => ctx.revert();
+  }, [reduced]);
+
+  /* ─── Ready fade-in ─── */
   useEffect(() => {
     const timer = setTimeout(() => setReady(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
+  /* ─── Layer styles ─── */
+  const layerTransition = "transform 600ms cubic-bezier(0.2, 0, 0.2, 1)";
+  const introEase = "cubic-bezier(0.16, 1, 0.3, 1)";
+  const layerStyle = { transition: layerTransition };
+
+  // Left hand: slides in from the left
+  const leftHandStyle: React.CSSProperties = ready
+    ? { transition: layerTransition }
+    : { transition: `transform 5.5s ${introEase}, opacity 4s ease-out`, transform: "translate3d(-60px, 0, 0)", opacity: 0 };
+
+  // Right hand: slides in from the right
+  const rightHandStyle: React.CSSProperties = ready
+    ? { transition: layerTransition }
+    : { transition: `transform 5.5s ${introEase}, opacity 4s ease-out`, transform: "translate3d(60px, 0, 0)", opacity: 0 };
+
   return (
-    <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-between pt-20 md:pt-32 pb-6 md:pb-8">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden min-h-screen flex flex-col items-center justify-between pt-20 md:pt-32 pb-6 md:pb-8"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="absolute inset-0">
-        {/* Mobile Image */}
+        {/* Mobile Image — single combined, no parallax */}
         <Image
           src="/images/herov3mobile.png"
           alt="ELYSIUM Luxury Collection"
@@ -24,24 +146,70 @@ export default function LuxuryHero() {
           quality={75}
           className="object-cover object-center md:hidden scale-105 transition-transform duration-[8s] ease-out"
         />
-        
-        {/* Desktop Image */}
-        <Image
-          src="/images/herov3.png"
-          alt="ELYSIUM Luxury Collection"
-          fill
-          priority
-          sizes="100vw"
-          quality={75}
-          className="hidden md:block object-cover object-center scale-105 transition-transform duration-[8s] ease-out hover:scale-110"
-        />
-        
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20" />
+
+        {/* Desktop: three-layer parallax depth */}
+        <div className="hidden md:block absolute inset-0">
+          {/* Back layer — silk background */}
+          <div
+            ref={bgLayerRef}
+            className="absolute inset-[-12px] will-change-transform"
+            style={layerStyle}
+          >
+            <Image
+              src="/images/backgrounddepth.png"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              quality={100}
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Left hand — slides in from left */}
+          <div
+            ref={leftHandRef}
+            className="absolute inset-[-30px] will-change-transform"
+            style={leftHandStyle}
+          >
+            <Image
+              src="/images/hand-left.png"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              quality={100}
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Right hand — slides in from right */}
+          <div
+            ref={rightHandRef}
+            className="absolute inset-[-30px] will-change-transform"
+            style={rightHandStyle}
+          >
+            <Image
+              src="/images/hand-right.png"
+              alt="ELYSIUM Luxury Collection"
+              fill
+              priority
+              sizes="100vw"
+              quality={100}
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
+
+        {/* Gradient Overlay (animated on scroll) */}
+        <div ref={overlayRef} className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-elysium-gold/5 via-transparent to-elysium-gold/5" />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 text-center w-full pt-[10vh] md:pt-32">
+      <div ref={textTopRef} className="relative z-20 max-w-7xl mx-auto px-6 text-center w-full pt-[10vh] md:pt-32 will-change-transform">
         <div className={`mb-6 md:mb-8 transition-all duration-1000 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
         }`}>
@@ -52,7 +220,7 @@ export default function LuxuryHero() {
             LONDON
           </p>
         </div>
-        
+
         <div className={`mb-8 md:mb-0 transition-all duration-1000 delay-300 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
@@ -76,9 +244,9 @@ export default function LuxuryHero() {
         </div>
       </div>
 
-      <div className="relative z-10 flex-1 w-full min-h-[200px] md:min-h-[300px] flex items-center justify-center"></div>
+      <div className="relative z-10 flex-1 w-full min-h-[120px] md:min-h-[180px] flex items-center justify-center"></div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 text-center w-full">
+      <div ref={textBottomRef} className="relative z-20 max-w-7xl mx-auto px-6 text-center w-full will-change-transform">
         <div className={`md:hidden mb-6 transition-all duration-1000 delay-500 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
@@ -90,7 +258,7 @@ export default function LuxuryHero() {
             <span>Handcrafted in London</span>
           </div>
         </div>
-        
+
         <div className={`hidden md:block mb-8 transition-all duration-1000 delay-500 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
@@ -102,7 +270,7 @@ export default function LuxuryHero() {
             <span>Handcrafted in London</span>
           </div>
         </div>
-        
+
         <div className={`pt-8 md:pt-0 transition-all duration-1000 delay-600 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
@@ -114,7 +282,7 @@ export default function LuxuryHero() {
             Where timeless craftsmanship meets contemporary innovation
           </p>
         </div>
-        
+
         <button
           aria-label="Explore more"
           onClick={() => document.getElementById('featured-collection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}

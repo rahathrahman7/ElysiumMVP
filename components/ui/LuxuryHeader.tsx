@@ -2,25 +2,222 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
+import { useCartStore } from '@/lib/state/cart';
 import DiamondShapesDropdown, { DiamondShapesTrigger } from '@/components/ui/DiamondShapesDropdown';
+import CollectionsMegaMenu, { CollectionsTrigger } from '@/components/ui/CollectionsMegaMenu';
+import EducationMegaMenu, { EducationTrigger } from '@/components/ui/EducationMegaMenu';
 import { DiamondShapeIcon } from '@/components/icons/DiamondIcons';
 
+// Desktop navigation links (Collections & Education have their own mega-menus)
 const navigationLinks = [
-  { href: '/shop', label: 'Collections' },
-  { href: '/heroes', label: 'Heroes' },
-  { href: '/education', label: 'Education' },
-  { href: '/bespoke', label: 'Bespoke' },
-  { href: '/about', label: 'Our Story' },
+  { href: '/heroes', label: 'Heroes', icon: 'star' },
+  { href: '/bespoke', label: 'Bespoke', icon: 'pen' },
+  { href: '/about', label: 'Our Story', icon: 'heart' },
 ];
+
+// Mobile menu items with nested structure
+interface MobileMenuItem {
+  label: string;
+  href?: string;
+  icon?: string;
+  children?: MobileMenuItem[];
+}
+
+const mobileMenuItems: MobileMenuItem[] = [
+  { 
+    label: 'Diamonds', 
+    icon: 'diamond',
+    children: [
+      { label: 'Round Diamonds', href: '/shop?shape=round' },
+      { label: 'Oval Diamonds', href: '/shop?shape=oval' },
+      { label: 'Princess Diamonds', href: '/shop?shape=princess' },
+      { label: 'Pear Diamonds', href: '/shop?shape=pear' },
+      { label: 'Radiant Diamonds', href: '/shop?shape=radiant' },
+      { label: 'Emerald Diamonds', href: '/shop?shape=emerald' },
+      { label: 'Marquise Diamonds', href: '/shop?shape=marquise' },
+      { label: 'Cushion Diamonds', href: '/shop?shape=cushion' },
+      { label: 'Heart Diamonds', href: '/shop?shape=heart' },
+      { label: 'Browse All', href: '/shop' },
+    ]
+  },
+  { 
+    label: 'Collections', 
+    icon: 'grid',
+    children: [
+      { label: 'Ready to Wear Engagement Rings', href: '/shop?category=ring' },
+      { label: "Men's Wedding Bands", href: '/shop?category=mens-rings' },
+      { 
+        label: 'Fine Jewellery',
+        href: '/fine-jewellery',
+        children: [
+          { label: 'Earrings', href: '/fine-jewellery/earrings' },
+          { label: 'Necklaces', href: '/fine-jewellery/necklaces' },
+          { label: 'Bracelets', href: '/fine-jewellery/bracelets' },
+        ]
+      },
+    ]
+  },
+  { label: 'Heroes', href: '/heroes', icon: 'star' },
+  { 
+    label: 'Education', 
+    icon: 'book',
+    children: [
+      { label: 'Diamond Education', href: '/education/diamonds' },
+      { label: 'Metal Education', href: '/education/metals' },
+    ]
+  },
+  { label: 'Bespoke', href: '/bespoke', icon: 'pen' },
+  { label: 'Our Story', href: '/about', icon: 'heart' },
+];
+
+// Icon component for mobile menu
+const NavIcon = ({ type }: { type?: string }) => {
+  if (!type) return null;
+  const iconClass = "w-4 h-4 mr-3 flex-shrink-0";
+  switch (type) {
+    case 'diamond':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3L2 9l10 12 10-12-10-6z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2 9h20" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v6" />
+        </svg>
+      );
+    case 'grid':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+      );
+    case 'star':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+      );
+    case 'book':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      );
+    case 'pen':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+        </svg>
+      );
+    case 'heart':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
+
+function CartBadge() {
+  const count = useCartStore((s) => s.items.length);
+  if (count === 0) return null;
+  return (
+    <span className="absolute -top-1 -right-1 min-w-[1.25rem] h-5 px-1 bg-elysium-gold text-white text-xs rounded-full flex items-center justify-center font-medium">
+      {count > 99 ? "99+" : count}
+    </span>
+  );
+}
 
 export default function LuxuryHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDiamondDropdownOpen, setIsDiamondDropdownOpen] = useState(false);
+  const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
+  const [isEducationOpen, setIsEducationOpen] = useState(false);
+  const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set());
+  
+  const collectionsDropdownRef = useRef<HTMLDivElement>(null);
+  const educationDropdownRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = (label: string) => {
+    setExpandedMenus(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(label)) {
+        newSet.delete(label);
+      } else {
+        newSet.add(label);
+      }
+      return newSet;
+    });
+  };
+
+  // Recursive menu item renderer for mobile menu
+  const renderMobileMenuItem = (item: MobileMenuItem, depth: number = 0): React.ReactNode => {
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedMenus.has(item.label);
+    const paddingLeft = 24 + (depth * 16);
+    
+    if (hasChildren) {
+      return (
+        <div key={item.label}>
+          <button
+            onClick={() => toggleMenu(item.label)}
+            className={clsx(
+              "flex items-center justify-between w-full py-3 text-[#45321e] font-medium tracking-wide transition-all duration-300",
+              "hover:text-elysium-gold hover:bg-elysium-gold/5",
+              isExpanded && "text-elysium-gold bg-elysium-gold/10"
+            )}
+            style={{ paddingLeft: `${paddingLeft}px`, paddingRight: '24px' }}
+          >
+            <div className="flex items-center">
+              {depth === 0 && <NavIcon type={item.icon} />}
+              {item.label}
+            </div>
+            <svg 
+              className={clsx("w-4 h-4 transition-transform duration-200", isExpanded && "rotate-180")}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div className={clsx(
+            "overflow-hidden transition-all duration-300 ease-in-out",
+            isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          )}>
+            {item.children?.map(child => renderMobileMenuItem(child, depth + 1))}
+          </div>
+        </div>
+      );
+    }
+    
+    // Render as link for items without children
+    return (
+      <Link
+        key={item.href || item.label}
+        href={item.href || '#'}
+        onClick={() => {
+          setIsMobileMenuOpen(false);
+          setExpandedMenus(new Set());
+        }}
+        className={clsx(
+          "flex items-center py-3 text-[#45321e] font-medium tracking-wide transition-all duration-300",
+          "hover:text-elysium-gold hover:bg-elysium-gold/5",
+          pathname === item.href && "text-elysium-gold bg-elysium-gold/10"
+        )}
+        style={{ paddingLeft: `${paddingLeft}px`, paddingRight: '24px' }}
+      >
+        {depth === 0 && <NavIcon type={item.icon} />}
+        {item.label}
+      </Link>
+    );
+  };
   const diamondDropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const router = useRouter();
   const isHomePage = pathname === '/';
 
   useEffect(() => {
@@ -32,7 +229,7 @@ export default function LuxuryHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown when clicking outside
+  // Close diamond dropdown when clicking outside or pressing Escape
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (diamondDropdownRef.current && !diamondDropdownRef.current.contains(event.target as Node)) {
@@ -40,14 +237,80 @@ export default function LuxuryHeader() {
       }
     };
 
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsDiamondDropdownOpen(false);
+      }
+    };
+
     if (isDiamondDropdownOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
     };
   }, [isDiamondDropdownOpen]);
+
+  // Close collections dropdown when clicking outside or pressing Escape
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (collectionsDropdownRef.current && !collectionsDropdownRef.current.contains(event.target as Node)) {
+        setIsCollectionsOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsCollectionsOpen(false);
+      }
+    };
+
+    if (isCollectionsOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isCollectionsOpen]);
+
+  // Close education dropdown when clicking outside or pressing Escape
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (educationDropdownRef.current && !educationDropdownRef.current.contains(event.target as Node)) {
+        setIsEducationOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsEducationOpen(false);
+      }
+    };
+
+    if (isEducationOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isEducationOpen]);
+
+  // Close dropdowns when route changes
+  useEffect(() => {
+    setIsDiamondDropdownOpen(false);
+    setIsCollectionsOpen(false);
+    setIsEducationOpen(false);
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header
@@ -85,7 +348,11 @@ export default function LuxuryHeader() {
             <div className="relative" ref={diamondDropdownRef}>
               <DiamondShapesTrigger
                 isOpen={isDiamondDropdownOpen}
-                onToggle={() => setIsDiamondDropdownOpen(!isDiamondDropdownOpen)}
+                onToggle={() => {
+                  setIsDiamondDropdownOpen(!isDiamondDropdownOpen);
+                  setIsCollectionsOpen(false);
+                  setIsEducationOpen(false);
+                }}
                 className={clsx(
                   isHomePage
                     ? (isScrolled ? "text-[#45321e]" : "text-white")
@@ -95,6 +362,48 @@ export default function LuxuryHeader() {
               <DiamondShapesDropdown
                 isOpen={isDiamondDropdownOpen}
                 onClose={() => setIsDiamondDropdownOpen(false)}
+              />
+            </div>
+
+            {/* Collections Mega Menu */}
+            <div className="relative" ref={collectionsDropdownRef}>
+              <CollectionsTrigger
+                isOpen={isCollectionsOpen}
+                onToggle={() => {
+                  setIsCollectionsOpen(!isCollectionsOpen);
+                  setIsDiamondDropdownOpen(false);
+                  setIsEducationOpen(false);
+                }}
+                className={clsx(
+                  isHomePage
+                    ? (isScrolled ? "text-[#45321e]" : "text-white")
+                    : "text-[#45321e]"
+                )}
+              />
+              <CollectionsMegaMenu
+                isOpen={isCollectionsOpen}
+                onClose={() => setIsCollectionsOpen(false)}
+              />
+            </div>
+
+            {/* Education Mega Menu */}
+            <div className="relative" ref={educationDropdownRef}>
+              <EducationTrigger
+                isOpen={isEducationOpen}
+                onToggle={() => {
+                  setIsEducationOpen(!isEducationOpen);
+                  setIsDiamondDropdownOpen(false);
+                  setIsCollectionsOpen(false);
+                }}
+                className={clsx(
+                  isHomePage
+                    ? (isScrolled ? "text-[#45321e]" : "text-white")
+                    : "text-[#45321e]"
+                )}
+              />
+              <EducationMegaMenu
+                isOpen={isEducationOpen}
+                onClose={() => setIsEducationOpen(false)}
               />
             </div>
 
@@ -173,10 +482,7 @@ export default function LuxuryHeader() {
                 <circle cx="14" cy="26" r="2" fill="currentColor" />
                 <circle cx="24" cy="26" r="2" fill="currentColor" />
               </svg>
-              {/* Cart badge - replace with actual cart count */}
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-elysium-gold text-white text-xs rounded-full flex items-center justify-center font-medium">
-                2
-              </span>
+              <CartBadge />
             </Link>
 
             {/* Wishlist Button */}
@@ -228,52 +534,15 @@ export default function LuxuryHeader() {
         {/* Mobile Menu */}
         <div
           className={clsx(
-            "md:hidden overflow-hidden transition-all duration-500 ease-out",
-            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            "md:hidden transition-all duration-500 ease-out",
+            isMobileMenuOpen ? "max-h-[85vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden"
           )}
         >
-          <div className="py-6 space-y-4 bg-white/95 backdrop-blur-xl rounded-2xl mt-4 border border-elysium-whisper">
-            {/* Mobile Diamonds Section */}
-            <div className="px-6">
-              <DiamondShapesTrigger
-                isOpen={isDiamondDropdownOpen}
-                onToggle={() => setIsDiamondDropdownOpen(!isDiamondDropdownOpen)}
-                className="text-[#45321e] w-full justify-start"
-              />
-              {isDiamondDropdownOpen && (
-                <div className="mt-3 pl-4 space-y-2">
-                  {['round', 'oval', 'princess', 'pear', 'radiant'].map((shape) => (
-                    <Link
-                      key={shape}
-                      href={`/diamonds?shape=${shape}`}
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsDiamondDropdownOpen(false);
-                      }}
-                      className="block py-2 text-sm text-elysium-smoke hover:text-elysium-gold transition-colors capitalize"
-                    >
-                      {shape} Diamonds
-                    </Link>
-                  ))}
-                </div>
-              )}
+          <div className="py-6 bg-white/95 backdrop-blur-xl rounded-2xl mt-4 border border-elysium-whisper">
+            {/* Mobile Menu Items with Dropdowns */}
+            <div className="space-y-1">
+              {mobileMenuItems.map(item => renderMobileMenuItem(item, 0))}
             </div>
-
-            {navigationLinks.map((link, index) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={clsx(
-                  "block px-6 py-3 text-[#45321e] font-medium tracking-wide transition-all duration-300",
-                  "hover:text-elysium-gold hover:bg-elysium-gold/5 hover:translate-x-2",
-                  pathname === link.href && "text-elysium-gold bg-elysium-gold/10"
-                )}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                {link.label}
-              </Link>
-            ))}
             
             {/* Mobile CTA */}
             <div className="px-6 pt-4 border-t border-elysium-whisper">

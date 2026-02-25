@@ -1,7 +1,26 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export function QuickShopChips() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useScrollReveal({
+    trigger: sectionRef,
+    start: "top 85%",
+    end: "top 55%",
+    scrub: 1,
+    opacity: [0.7, 1],
+    y: [10, 0],
+  });
   // Define chips with their filter types
+  const categoryChips = [
+    { label: "Earrings", href: "/shop?category=earrings" },
+    { label: "Bracelets", href: "/shop?category=bracelets" },
+  ];
+
   const styleChips = [
     { label: "Solitaire", filter: "solitaire" },
     { label: "Hidden Halo", filter: "hidden-halo" },
@@ -23,16 +42,19 @@ export function QuickShopChips() {
     { label: "Heart", filter: "heart" },
   ];
 
-  const allChips = [...styleChips, ...shapeChips];
+  const allChips = [...categoryChips, ...styleChips, ...shapeChips];
 
   return (
-    <section id="quick-shop-chips" className="mx-auto max-w-5xl px-6 py-6 md:py-8">
+    <section ref={sectionRef} id="quick-shop-chips" className="mx-auto max-w-5xl px-6 py-6 md:py-8">
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5">
         {allChips.map((chip) => {
+          const isCategory = categoryChips.some(c => c.label === chip.label);
           const isStyle = styleChips.some(s => s.label === chip.label);
-          const href = isStyle 
-            ? `/shop?style=${chip.filter}`
-            : `/shop?shape=${chip.filter}`;
+          const href = isCategory 
+            ? (chip as { href: string }).href 
+            : isStyle 
+              ? `/shop?style=${(chip as { filter: string }).filter}`
+              : `/shop?shape=${(chip as { filter: string }).filter}`;
           
           return (
             <Link

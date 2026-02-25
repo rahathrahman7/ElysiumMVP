@@ -1,12 +1,13 @@
-import LuxuryProductCard from '@/components/ui/LuxuryProductCard'
-import RingSizeGuide from '@/components/ui/RingSizeGuide'
 import LuxuryHero from '@/components/sections/LuxuryHero'
-import { QuickShopChips } from '@/components/sections/QuickShopChips'
-import { EditorialTeasers } from '@/components/sections/EditorialTeasers'
+
 import Testimonials from '@/components/sections/Testimonials'
 import { TrustStrip } from '@/components/sections/TrustStrip'
+import { CategoryShowcase } from '@/components/sections/CategoryShowcase'
 import { Metadata } from 'next'
 import { generateOrganizationJsonLd } from '@/lib/seo'
+
+// Avoid prerender to prevent GSAP/ScrollTrigger initialization issues during static generation
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'ELYSIUM — Luxury Engagement Rings & Fine Jewellery | London Atelier',
@@ -33,10 +34,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function HomePage(){
-  // Lazy import to avoid loading large products array during build compilation
-  const { getAllProducts } = await import('@/lib/products')
-  const featuredProducts = getAllProducts().filter(p => p.isFeatured);
+export default async function HomePage() {
   const organizationJsonLd = generateOrganizationJsonLd();
 
   return (
@@ -46,52 +44,19 @@ export default async function HomePage(){
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <main>
-      <LuxuryHero />
-      <QuickShopChips />
-      <EditorialTeasers />
-      
-      {/* Trust Strip */}
-      <TrustStrip />
+        <LuxuryHero />
+        {/* Category Showcase - Replaces Product Grids */}
+        <CategoryShowcase />
 
-      {/* Featured Products Section */}
-      <section id="featured-collection" className="py-20" style={{ backgroundColor: 'var(--elysium-ivory)' }}>
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.1em] mb-4 leading-tight" style={{ color: 'var(--elysium-brown)' }}>
-              Featured Collection
-            </h2>
-            <p className="font-serif text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--elysium-brown)' }}>
-              Discover our most sought-after pieces, crafted with precision in our London atelier
-            </p>
-            <div className="mt-6">
-              <RingSizeGuide />
-            </div>
-          </div>
-          
-          {/* Luxury grid with consistent spacing */}
-          <div className="mx-auto max-w-[1320px] px-4 md:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7 xl:gap-8">
-              {featuredProducts.map((product, index) => (
-                <div key={product.slug} className="stagger-item" style={{ animationDelay: `${(index + 1) * 0.1}s` }}>
-                  <LuxuryProductCard product={product} />
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <a 
-              href="/shop" 
-              className="inline-block px-8 py-4 rounded-xl uppercase tracking-wide text-sm font-medium transition-all duration-300 leading-tight luxury-button"
-            >
-              View Full Collection
-            </a>
-          </div>
+        {/* Trust Strip */}
+        <div className="mt-24 md:mt-32">
+          <TrustStrip />
         </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <Testimonials />
+        {/* Testimonials Section */}
+        <div className="mt-24 md:mt-32">
+          <Testimonials />
+        </div>
       </main>
     </>
   )

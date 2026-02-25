@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 interface Testimonial {
   id: string;
@@ -53,6 +54,16 @@ const testimonials: Testimonial[] = [
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const containerRef = useRef<HTMLElement>(null);
+
+  useScrollReveal({
+    trigger: containerRef,
+    start: "top 85%",
+    end: "top 50%",
+    scrub: 1,
+    opacity: [0.7, 1],
+    y: [16, 0],
+  });
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -77,7 +88,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-ivory to-beige">
+    <section ref={containerRef} className="py-20 bg-gradient-to-br from-ivory to-beige">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-4">

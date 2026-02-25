@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Product, MetalOption } from "@/lib/productTypes";
+import { useCartStore } from "@/lib/state/cart";
 import { CompactProductVariants } from "./CompactProductVariants";
 import { ProductActions } from "./ProductActions";
 // Premium configurator hidden for now - may work on this later
@@ -109,14 +110,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
     (selectedClarity?.priceDeltaGBP || 0) +
     (engravingSelected ? (product.engravingFeeGBP || 0) : 0);
 
-  // Prepare selections for StickySummary
+  const isBracelet = product.collections?.includes('bracelets') || product.collections?.includes('tennis-bracelets');
+
+  // Prepare selections for StickySummary (use "length" for bracelets, "ringSize" for rings)
   const selections = {
     origin: selectedOrigin?.label,
     carat: selectedCarat?.label,
     colour: selectedColour?.label,
     clarity: selectedClarity?.label,
     metal: selectedMetal?.name,
-    ringSize: selectedSize || undefined,
+    ...(isBracelet ? { length: selectedSize || undefined } : { ringSize: selectedSize || undefined }),
     engraving: engravingSelected ? "Yes" : null,
   };
 
@@ -165,13 +168,48 @@ export function ProductDetail({ product }: ProductDetailProps) {
   // Check if required fields are selected (ring size is required)
   const canAdd = Boolean(selectedSize);
 
-  // Handle Add to Bag (placeholder for now)
+  const addItem = useCartStore((s) => s.addItem);
+
+  // Handle Add to Bag
   const handleAddToBag = () => {
-    // TODO: Implement add to cart logic
-    console.log("Adding to bag:", {
-      product: product.slug,
-      selections,
-      totalPrice,
+    if (!canAdd) return;
+
+    const configuration = {
+      metal: selectedMetal?.name ?? "",
+      size: selectedSize ?? "",
+      ...(selectedCarat &&
+        selectedColour &&
+        selectedClarity && {
+          diamond: {
+            shape: product.shape ?? "round",
+            carat: selectedCarat.carat,
+            color: selectedColour.label,
+            clarity: selectedClarity.label,
+          },
+        }),
+      ...(engravingSelected && engravingText && { engraving: engravingText }),
+    };
+
+    const variantLabel = [
+      selectedMetal?.name,
+      selectedOrigin?.label,
+      selectedCarat?.label,
+      selectedColour?.label,
+      selectedClarity?.label,
+      selectedSize,
+      engravingSelected && engravingText ? `Engraved: ${engravingText}` : null,
+    ]
+      .filter(Boolean)
+      .join(" · ");
+
+    addItem({
+      id: crypto.randomUUID(),
+      productSlug: product.slug,
+      title: displayTitle,
+      price: Math.round(totalPrice * 100), // pence
+      variantLabel: variantLabel || undefined,
+      quantity: 1,
+      configuration,
     });
   };
 

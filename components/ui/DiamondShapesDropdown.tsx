@@ -12,66 +12,18 @@ interface DiamondShapeItem {
   name: string;
   description: string;
   href: string;
-  popular?: boolean;
 }
 
 const diamondShapes: DiamondShapeItem[] = [
-  {
-    shape: 'round',
-    name: 'Round Brilliant',
-    description: 'Classic and most popular cut',
-    href: '/diamonds?shape=round',
-    popular: true,
-  },
-  {
-    shape: 'oval',
-    name: 'Oval',
-    description: 'Elegant elongated brilliance',
-    href: '/diamonds?shape=oval',
-    popular: true,
-  },
-  {
-    shape: 'princess',
-    name: 'Princess',
-    description: 'Modern square cut',
-    href: '/diamonds?shape=princess',
-  },
-  {
-    shape: 'pear',
-    name: 'Pear',
-    description: 'Unique teardrop shape',
-    href: '/diamonds?shape=pear',
-  },
-  {
-    shape: 'radiant',
-    name: 'Radiant',
-    description: 'Brilliant rectangular cut',
-    href: '/diamonds?shape=radiant',
-  },
-  {
-    shape: 'emerald',
-    name: 'Emerald',
-    description: 'Step-cut elegance',
-    href: '/diamonds?shape=emerald',
-  },
-  {
-    shape: 'marquise',
-    name: 'Marquise',
-    description: 'Regal pointed oval',
-    href: '/diamonds?shape=marquise',
-  },
-  {
-    shape: 'heart',
-    name: 'Heart',
-    description: 'Symbol of love',
-    href: '/diamonds?shape=heart',
-  },
-  {
-    shape: 'cushion',
-    name: 'Cushion',
-    description: 'Vintage pillow cut',
-    href: '/diamonds?shape=cushion',
-  },
+  { shape: 'round',    name: 'Round Brilliant', description: 'Classic and most popular cut',  href: '/shop?shape=round'    },
+  { shape: 'oval',     name: 'Oval',            description: 'Elegant elongated brilliance',  href: '/shop?shape=oval'     },
+  { shape: 'princess', name: 'Princess',        description: 'Modern square cut',             href: '/shop?shape=princess' },
+  { shape: 'pear',     name: 'Pear',            description: 'Unique teardrop shape',         href: '/shop?shape=pear'     },
+  { shape: 'radiant',  name: 'Radiant',         description: 'Brilliant rectangular cut',     href: '/shop?shape=radiant'  },
+  { shape: 'emerald',  name: 'Emerald',         description: 'Step-cut elegance',             href: '/shop?shape=emerald'  },
+  { shape: 'marquise', name: 'Marquise',        description: 'Regal pointed oval',            href: '/shop?shape=marquise' },
+  { shape: 'heart',    name: 'Heart',           description: 'Symbol of love',                href: '/shop?shape=heart'    },
+  { shape: 'cushion',  name: 'Cushion',         description: 'Vintage pillow cut',            href: '/shop?shape=cushion'  },
 ];
 
 interface DiamondShapesDropdownProps {
@@ -80,109 +32,63 @@ interface DiamondShapesDropdownProps {
   className?: string;
 }
 
-export default function DiamondShapesDropdown({ 
-  isOpen, 
+export default function DiamondShapesDropdown({
+  isOpen,
   onClose,
-  className = "" 
+  className = ""
 }: DiamondShapesDropdownProps) {
   return (
     <div
       className={clsx(
-        "absolute top-full left-0 w-80 bg-white/95 backdrop-blur-xl shadow-2xl border border-elysium-whisper transition-all duration-300 z-50",
+        "absolute top-full left-0 w-[340px] bg-[#F5EFE6] shadow-2xl border border-elysium-whisper transition-all duration-300 z-50",
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none",
         className
       )}
     >
       {/* Header */}
-      <div className="p-4 border-b border-elysium-whisper">
-        <div className="flex items-center gap-3">
-          <DiamondShapeIcon shape="princess" size={20} className="text-elysium-gold" />
-          <h3 className="font-serif text-lg text-elysium-charcoal">Diamond Shapes</h3>
-        </div>
-        <p className="text-xs text-elysium-smoke mt-1 tracking-wide">
-          Discover our curated selection of certified diamonds
+      <div className="px-5 py-4 border-b border-elysium-whisper">
+        <h3 className="font-serif text-base text-elysium-charcoal tracking-wide">Diamond Shapes</h3>
+        <p className="text-[11px] text-elysium-smoke mt-0.5 tracking-wider uppercase">
+          Select your preferred cut
         </p>
       </div>
 
-      {/* Popular Shapes Section */}
-      <div className="p-4 border-b border-elysium-whisper/50">
-        <h4 className="text-xs uppercase tracking-widest text-elysium-smoke font-medium mb-3">
-          Most Popular
-        </h4>
-        <div className="grid grid-cols-2 gap-2">
-          {diamondShapes.filter(shape => shape.popular).map((item) => (
-            <Link
-              key={item.shape}
-              href={item.href}
-              onClick={onClose}
-              className={clsx(
-                "group flex items-center gap-3 p-3 rounded-none",
-                "hover:bg-elysium-gold/5 transition-all duration-300",
-                "border border-transparent hover:border-elysium-gold/20"
-              )}
-            >
-              <DiamondShapeIcon
-                shape={item.shape}
-                size={18}
-                className="text-elysium-charcoal group-hover:text-elysium-gold transition-colors"
-              />
-              <div>
-                <div className="text-sm font-medium text-elysium-charcoal group-hover:text-elysium-gold transition-colors">
-                  {item.name}
-                </div>
-                <div className="text-xs text-elysium-smoke leading-tight">
-                  {item.description}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* All Shapes Grid */}
+      {/* Shapes Grid */}
       <div className="p-4">
-        <h4 className="text-xs uppercase tracking-widest text-elysium-smoke font-medium mb-3">
-          All Shapes
-        </h4>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-1">
           {diamondShapes.map((item) => (
             <Link
               key={item.shape}
               href={item.href}
               onClick={onClose}
               className={clsx(
-                "group flex flex-col items-center gap-2 p-3 rounded-none",
-                "hover:bg-elysium-gold/5 transition-all duration-300",
+                "group flex flex-col items-center gap-2.5 py-4 px-2",
+                "hover:bg-elysium-gold/5 transition-all duration-200",
                 "border border-transparent hover:border-elysium-gold/20"
               )}
               title={item.description}
             >
               <DiamondShapeIcon
                 shape={item.shape}
-                size={24}
-                className="text-elysium-charcoal group-hover:text-elysium-gold transition-colors"
+                size={30}
+                className="text-[#6D3D0D] group-hover:text-elysium-gold transition-colors duration-200"
               />
-              <span className="text-xs text-elysium-charcoal group-hover:text-elysium-gold transition-colors text-center leading-tight">
+              <span className="text-[11px] tracking-wide text-elysium-charcoal/80 group-hover:text-elysium-gold transition-colors duration-200 text-center leading-tight font-medium">
                 {item.name}
               </span>
-              {item.popular && (
-                <span className="text-[10px] bg-elysium-gold text-black px-2 py-0.5 rounded-none font-medium">
-                  POPULAR
-                </span>
-              )}
             </Link>
           ))}
         </div>
       </div>
 
       {/* Footer CTA */}
-      <div className="p-4 bg-elysium-ivory border-t border-elysium-whisper">
+      <div className="px-4 pb-4">
         <Link
-          href="/diamonds"
+          href="/shop"
           onClick={onClose}
           className={clsx(
-            "block w-full py-3 text-center font-medium tracking-wide transition-all duration-300",
-            "bg-elysium-brown text-white hover:bg-elysium-gold hover:text-elysium-brown hover:scale-105"
+            "block w-full py-2.5 text-center text-xs font-medium tracking-widest uppercase transition-all duration-300",
+            "bg-elysium-brown text-white hover:bg-elysium-gold hover:text-elysium-brown"
           )}
         >
           Browse All Diamonds
@@ -204,9 +110,16 @@ export function DiamondShapesTrigger({
   onToggle, 
   className = "" 
 }: DiamondShapesTriggerProps) {
+  const handleToggle = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onToggle();
+  };
+
   return (
     <button
-      onClick={onToggle}
+      onClick={handleToggle}
+      onTouchEnd={handleToggle}
       className={clsx(
         "group relative flex items-center gap-2 px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300",
         "hover:text-elysium-gold",

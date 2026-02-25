@@ -48,15 +48,28 @@ export function CompactProductVariants({
 }: CompactProductVariantsProps) {
   const [ringSizeExpanded, setRingSizeExpanded] = useState(false);
 
+  // Check if product is a bracelet or earrings (different labeling and no engraving)
+  const isBracelet = product.collections?.includes('bracelets') || product.collections?.includes('tennis-bracelets');
+  const isEarring = product.collections?.includes('earrings');
+  const isMetalOnlyProduct = isBracelet || isEarring;
+
   // Diamond Tiers - All based on F Colour / VS1 Clarity as standard
   // Client requirement: All tiers use F/VS1 as baseline for pricing
   // For better colour (D, E) or clarity (IF, VVS1, VVS2) → Custom Specification
+  // Helper to format carat label - bracelets use "Total", rings use "Centre"
+  const formatCaratLabel = (carat: string, useTotalWeight: boolean = false) => {
+    if (isBracelet || useTotalWeight) {
+      return `${carat} | F Colour | VS1 Clarity`;
+    }
+    return `${carat} Centre | F Colour | VS1 Clarity`;
+  };
+
   const diamondTiers = product.carats && product.colours && product.clarities
     ? [
         // Tier 1: 1ct - Entry-Level (Buy Now)
         {
           id: 'entry',
-          label: '1ct Centre | F Colour | VS1 Clarity',
+          label: formatCaratLabel('1ct'),
           description: 'Direct purchase available',
           carat: product.carats.find(c => c.label === '1ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -66,7 +79,7 @@ export function CompactProductVariants({
         // Tier 2: 1.5ct - F/VS1
         {
           id: 'premium',
-          label: '1.5ct Centre | F Colour | VS1 Clarity',
+          label: formatCaratLabel('1.5ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '1.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -76,7 +89,7 @@ export function CompactProductVariants({
         // Tier 3: 2ct - F/VS1
         {
           id: 'luxury',
-          label: '2ct Centre | F Colour | VS1 Clarity',
+          label: formatCaratLabel('2ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '2ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -86,7 +99,7 @@ export function CompactProductVariants({
         // Tier 4: 2.5ct - F/VS1
         {
           id: 'signature',
-          label: '2.5ct Centre | F Colour | VS1 Clarity',
+          label: formatCaratLabel('2.5ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '2.5ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -96,7 +109,7 @@ export function CompactProductVariants({
         // Tier 5: 3ct - F/VS1
         {
           id: 'ultra',
-          label: '3ct Centre | F Colour | VS1 Clarity',
+          label: formatCaratLabel('3ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '3ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -106,7 +119,7 @@ export function CompactProductVariants({
         // Tier 6: 4ct - F/VS1
         {
           id: 'elite',
-          label: '4ct Total | F Colour | VS1 Clarity',
+          label: formatCaratLabel('4ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '4ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -116,7 +129,7 @@ export function CompactProductVariants({
         // Tier 7: 5ct - F/VS1
         {
           id: 'premium-elite',
-          label: '5ct Total | F Colour | VS1 Clarity',
+          label: formatCaratLabel('5ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '5ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -126,7 +139,7 @@ export function CompactProductVariants({
         // Tier 8: 7ct - F/VS1
         {
           id: 'ultimate',
-          label: '7ct Total | F Colour | VS1 Clarity',
+          label: formatCaratLabel('7ct'),
           description: 'Consultation required',
           carat: product.carats.find(c => c.label === '7ct'),
           colour: product.colours.find(c => c.label === 'F'),
@@ -177,7 +190,7 @@ export function CompactProductVariants({
         return (
           <div>
             <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-5 text-center">
-              Ring Metal
+              {isMetalOnlyProduct ? 'Metal' : 'Ring Metal'}
             </h3>
 
             {/* Solid Metals Row */}
@@ -276,7 +289,7 @@ export function CompactProductVariants({
       {diamondTiers.length > 0 && (
         <div>
           <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-4">
-            Carat Size
+            Carat {isBracelet ? 'Weight' : 'Size'}
           </h3>
           <div className="space-y-3">
             {diamondTiers.map((tier) => {
@@ -358,14 +371,14 @@ export function CompactProductVariants({
         </div>
       )}
 
-      {/* Ring Size Selection - Elegant Dropdown */}
+      {/* Ring Size / Bracelet Length Selection - Elegant Dropdown */}
       {product.sizes && product.sizes.length > 0 && (
         <div>
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D]">
-              Ring Size
+              {isBracelet ? "Length" : "Ring Size"}
             </h3>
-            <RingSizeGuide />
+            {!isBracelet && <RingSizeGuide />}
           </div>
 
           {/* Collapsed State - Minimal Select */}
@@ -376,10 +389,10 @@ export function CompactProductVariants({
             >
               <span className="font-serif text-[14px] tracking-[0.05em] text-[#6D3D0D]">
                 {selectedSize && selectedSize !== "unknown"
-                  ? `Size ${selectedSize}`
+                  ? isBracelet ? selectedSize : `Size ${selectedSize}`
                   : selectedSize === "unknown"
                   ? "I don't know my size"
-                  : "Select your ring size"}
+                  : isBracelet ? "Select length" : "Select your ring size"}
               </span>
               <svg className="w-3 h-3 text-[#6D3D0D]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -391,7 +404,7 @@ export function CompactProductVariants({
           {ringSizeExpanded && (
             <div className="p-4 rounded border border-[#6D3D0D]/15 bg-white">
               {/* Size Grid */}
-              <div className="grid grid-cols-6 gap-2 mb-3">
+              <div className={`grid gap-2 mb-3 ${isBracelet ? "grid-cols-2" : "grid-cols-6"}`}>
                 {product.sizes.map((size) => {
                   const isSelected = selectedSize === size;
                   return (
@@ -413,21 +426,23 @@ export function CompactProductVariants({
                 })}
               </div>
 
-              {/* "I Don't Know My Size" Option */}
-              <button
-                onClick={() => {
-                  onSizeChange("unknown");
-                  setRingSizeExpanded(false);
-                }}
-                className={`w-full px-3 py-2.5 rounded border text-[12px] font-serif transition-all duration-200 ${
-                  selectedSize === "unknown"
-                    ? "border-[#D4AF37] bg-[#D4AF37]/[0.05] text-[#6D3D0D]"
-                    : "border-dashed border-[#6D3D0D]/15 bg-white hover:border-[#D4AF37]/50 text-[#6D3D0D]/70"
-                }`}
-              >
-                {selectedSize === "unknown" && <span className="text-[#D4AF37] mr-1">✓</span>}
-                I don't know my size
-              </button>
+              {/* "I Don't Know My Size" Option - rings only */}
+              {!isBracelet && (
+                <button
+                  onClick={() => {
+                    onSizeChange("unknown");
+                    setRingSizeExpanded(false);
+                  }}
+                  className={`w-full px-3 py-2.5 rounded border text-[12px] font-serif transition-all duration-200 ${
+                    selectedSize === "unknown"
+                      ? "border-[#D4AF37] bg-[#D4AF37]/[0.05] text-[#6D3D0D]"
+                      : "border-dashed border-[#6D3D0D]/15 bg-white hover:border-[#D4AF37]/50 text-[#6D3D0D]/70"
+                  }`}
+                >
+                  {selectedSize === "unknown" && <span className="text-[#D4AF37] mr-1">✓</span>}
+                  I don't know my size
+                </button>
+              )}
 
               {/* Collapse */}
               <button
@@ -441,60 +456,62 @@ export function CompactProductVariants({
         </div>
       )}
 
-      {/* Engraving Selection - Elegant Toggle Card */}
-      <div className="pt-6">
-        <button
-          onClick={() => onEngravingChange(!engravingSelected)}
-          className={`w-full px-5 py-4 rounded border text-left transition-all duration-200 ${
-            engravingSelected
-              ? "border-[#D4AF37] bg-[#D4AF37]/[0.03]"
-              : "border-[#6D3D0D]/15 hover:border-[#6D3D0D]/30"
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <span className="text-[#6D3D0D]/60">✎</span>
-              <div>
-                <span className="font-serif text-[13px] tracking-[0.05em] text-[#6D3D0D]">
-                  Complimentary Engraving
-                </span>
-                <p className="font-serif text-[11px] text-[#6D3D0D]/50 mt-0.5">
-                  Add a personal message at no extra cost
-                </p>
+      {/* Engraving Selection - Elegant Toggle Card (hidden for bracelets and earrings) */}
+      {!isMetalOnlyProduct && (
+        <div className="pt-6">
+          <button
+            onClick={() => onEngravingChange(!engravingSelected)}
+            className={`w-full px-5 py-4 rounded border text-left transition-all duration-200 ${
+              engravingSelected
+                ? "border-[#D4AF37] bg-[#D4AF37]/[0.03]"
+                : "border-[#6D3D0D]/15 hover:border-[#6D3D0D]/30"
+            }`}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="text-[#6D3D0D]/60">✎</span>
+                <div>
+                  <span className="font-serif text-[13px] tracking-[0.05em] text-[#6D3D0D]">
+                    Complimentary Engraving
+                  </span>
+                  <p className="font-serif text-[11px] text-[#6D3D0D]/50 mt-0.5">
+                    Add a personal message at no extra cost
+                  </p>
+                </div>
+              </div>
+              {/* Toggle Switch */}
+              <div
+                className={`relative w-10 h-5 rounded-full transition-colors duration-200 ${
+                  engravingSelected ? "bg-[#D4AF37]" : "bg-[#6D3D0D]/20"
+                }`}
+              >
+                <div
+                  className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
+                    engravingSelected ? "translate-x-5" : "translate-x-0.5"
+                  }`}
+                />
               </div>
             </div>
-            {/* Toggle Switch */}
-            <div
-              className={`relative w-10 h-5 rounded-full transition-colors duration-200 ${
-                engravingSelected ? "bg-[#D4AF37]" : "bg-[#6D3D0D]/20"
-              }`}
-            >
-              <div
-                className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
-                  engravingSelected ? "translate-x-5" : "translate-x-0.5"
-                }`}
-              />
-            </div>
-          </div>
-        </button>
+          </button>
 
-        {/* Engraving Input */}
-        {engravingSelected && (
-          <div className="mt-3 px-5">
-            <input
-              type="text"
-              value={engravingText}
-              onChange={(e) => onEngravingTextChange(e.target.value)}
-              placeholder={`Enter text (max ${product.engravingMaxChars || 24} characters)`}
-              maxLength={product.engravingMaxChars || 24}
-              className="w-full px-4 py-3 border border-[#6D3D0D]/15 rounded text-[14px] font-serif focus:border-[#D4AF37] focus:outline-none focus:shadow-[0_0_0_3px_rgba(212,175,55,0.1)] transition-all duration-200"
-            />
-            <p className="mt-2 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50 text-right">
-              {engravingText.length}/{product.engravingMaxChars || 24}
-            </p>
-          </div>
-        )}
-      </div>
+          {/* Engraving Input */}
+          {engravingSelected && (
+            <div className="mt-3 px-5">
+              <input
+                type="text"
+                value={engravingText}
+                onChange={(e) => onEngravingTextChange(e.target.value)}
+                placeholder={`Enter text (max ${product.engravingMaxChars || 24} characters)`}
+                maxLength={product.engravingMaxChars || 24}
+                className="w-full px-4 py-3 border border-[#6D3D0D]/15 rounded text-[14px] font-serif focus:border-[#D4AF37] focus:outline-none focus:shadow-[0_0_0_3px_rgba(212,175,55,0.1)] transition-all duration-200"
+              />
+              <p className="mt-2 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50 text-right">
+                {engravingText.length}/{product.engravingMaxChars || 24}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

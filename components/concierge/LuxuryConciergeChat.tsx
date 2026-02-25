@@ -218,8 +218,8 @@ export default function LuxuryConciergeChat() {
       responseCategory = 'investment';
     }
     
-    if (responseCategory !== 'general' && responses[responseCategory]) {
-      const category = responses[responseCategory];
+    if (responseCategory !== 'general' && responses[responseCategory as keyof typeof responses]) {
+      const category = responses[responseCategory as keyof typeof responses];
       return {
         message: category.messages[Math.floor(Math.random() * category.messages.length)],
         suggestions: category.suggestions,

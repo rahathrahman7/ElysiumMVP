@@ -86,9 +86,9 @@ export async function getDashboardStats() {
     ? ((ordersToday - ordersYesterday) / ordersYesterday) * 100
     : ordersToday > 0 ? 100 : 0;
 
-  const revenueChange = (revenueLastWeek._sum.totalAmountGbp || 0) > 0
-    ? (((revenueThisWeek._sum.totalAmountGbp || 0) - (revenueLastWeek._sum.totalAmountGbp || 0)) / Number(revenueLastWeek._sum.totalAmountGbp)) * 100
-    : (revenueThisWeek._sum.totalAmountGbp || 0) > 0 ? 100 : 0;
+  const revenueChange = Number(revenueLastWeek._sum.totalAmountGbp || 0) > 0
+    ? ((Number(revenueThisWeek._sum.totalAmountGbp || 0) - Number(revenueLastWeek._sum.totalAmountGbp || 0)) / Number(revenueLastWeek._sum.totalAmountGbp)) * 100
+    : Number(revenueThisWeek._sum.totalAmountGbp || 0) > 0 ? 100 : 0;
 
   const viewsChange = viewsYesterday > 0
     ? ((viewsToday - viewsYesterday) / viewsYesterday) * 100

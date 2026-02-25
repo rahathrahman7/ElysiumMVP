@@ -11,13 +11,15 @@
  */
 
 import { useState } from 'react';
-import { LuxuryProductConfigurator } from '../configurator/LuxuryProductConfigurator';
+import LuxuryProductConfigurator from '../configurator/LuxuryProductConfigurator';
 import LuxuryConciergeChat from '../concierge/LuxuryConciergeChat';
 
 // Mock product data for testing
 const mockProduct = {
-  id: 'test-ring',
+  slug: 'test-ring',
   title: 'Eternal Solitaire',
+  blurb: 'A timeless solitaire ring',
+  description: 'A timeless solitaire ring crafted with precision',
   basePriceGBP: 5000,
   metals: [
     { name: '18k Yellow Gold', priceDeltaGBP: 0, hex: '#FFD700' },
@@ -26,7 +28,8 @@ const mockProduct = {
   ],
   sizes: ['H', 'I', 'J', 'K', 'L', 'M', 'N'],
   engravingFeeGBP: 150,
-  images: ['/images/test-ring.jpg']
+  images: ['/images/test-ring.jpg'],
+  qualityBanner: 'D/E/F • VS1+ • IGI/GIA'
 };
 
 export default function LuxuryIntegrationTest() {
@@ -149,13 +152,11 @@ export default function LuxuryIntegrationTest() {
                 
                 <LuxuryProductConfigurator
                   product={mockProduct}
-                  selectedMetal={configuration.metal}
-                  selectedSize={configuration.size}
-                  engravingText={configuration.engraving}
-                  onMetalChange={(metal) => handleConfigurationChange('metal', metal)}
-                  onSizeChange={(size) => handleConfigurationChange('size', size)}
-                  onEngravingChange={(engraving) => handleConfigurationChange('engraving', engraving)}
-                  totalPrice={totalPrice}
+                  onConfigurationChange={(config: any) => {
+                    if (config.metal) handleConfigurationChange('metal', config.metal);
+                    if (config.size) handleConfigurationChange('size', config.size);
+                    if (config.engraving !== undefined) handleConfigurationChange('engraving', config.engraving);
+                  }}
                 />
               </div>
             )}
@@ -196,7 +197,7 @@ export default function LuxuryIntegrationTest() {
       {showChat && (
         <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex items-center justify-center p-6">
           <div className="max-w-2xl w-full">
-            <LuxuryConciergeChat isOpen={true} onClose={() => setShowChat(false)} />
+            <LuxuryConciergeChat />
           </div>
         </div>
       )}

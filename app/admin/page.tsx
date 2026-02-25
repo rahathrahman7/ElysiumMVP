@@ -66,7 +66,7 @@ export default async function AdminDashboard() {
             title="New Inquiries"
             value={stats.inquiries.new}
             change={`${stats.inquiries.pending} pending`}
-            changeType="info"
+            changeType="neutral"
             icon={
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -109,11 +109,11 @@ export default async function AdminDashboard() {
                 </Link>
               </div>
 
-              {stats.lowStockItems.length === 0 ? (
+              {(stats.lowStockItems as any[]).length === 0 ? (
                 <p className="text-sm text-gray-600 text-center py-4">All stock levels healthy</p>
               ) : (
                 <div className="space-y-3">
-                  {stats.lowStockItems.slice(0, 5).map((item: any) => (
+                  {(stats.lowStockItems as any[]).slice(0, 5).map((item: any) => (
                     <div key={item.id} className="flex items-center justify-between text-sm">
                       <div className="flex-1">
                         <p className="font-medium text-gray-900 truncate">{item.productSlug}</p>

@@ -1,3 +1,4 @@
+// @ts-expect-error Prisma config module has no type declarations
 import { defineConfig } from '@prisma/config';
 
 export default defineConfig({

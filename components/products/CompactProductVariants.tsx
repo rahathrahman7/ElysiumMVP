@@ -440,7 +440,7 @@ export function CompactProductVariants({
                   }`}
                 >
                   {selectedSize === "unknown" && <span className="text-[#D4AF37] mr-1">✓</span>}
-                  I don't know my size
+                  I don&apos;t know my size
                 </button>
               )}
 

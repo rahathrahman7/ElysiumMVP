@@ -146,7 +146,7 @@ export function BespokeSuccessModal({ onClose }: BespokeSuccessModalProps) {
             className="text-[#6D3D0D]/75 font-light leading-relaxed mb-10 max-w-lg mx-auto"
             style={{ fontSize: "clamp(1rem, 1.6vw, 1.15rem)" }}
           >
-            We're thrilled to begin crafting your perfect piece. Your vision is in expert hands.
+            We&apos;re thrilled to begin crafting your perfect piece. Your vision is in expert hands.
           </p>
 
           {/* Divider */}

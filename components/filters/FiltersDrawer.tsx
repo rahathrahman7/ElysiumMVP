@@ -22,7 +22,7 @@ export default function FiltersDrawer({ onClose, isOpen }: Props){
 
   const apply = ()=>{
     router.push(`/collection/engagement-rings${toQuery(state)}`);
-    setOpen();
+    setOpen(false);
   };
 
   const getSectionTitle = (key: FacetKey) => {
@@ -58,7 +58,7 @@ export default function FiltersDrawer({ onClose, isOpen }: Props){
             <div className="flex items-center justify-between mb-8">
               <h3 className="font-serif text-2xl text-charcoal">Additional Filters</h3>
               <button 
-                onClick={()=>setOpen()}
+                onClick={()=>setOpen(false)}
                 className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:border-[#D4AF37] transition-colors"
               >
                 ✕
@@ -96,7 +96,7 @@ export default function FiltersDrawer({ onClose, isOpen }: Props){
             <div className="mt-8 flex gap-3 pt-6 border-t border-gray-100">
               <button 
                 className="flex-1 border border-gray-200 rounded-full px-6 py-3 text-sm font-serif text-charcoal hover:border-[#D4AF37] transition-colors" 
-                onClick={()=>setOpen()}
+                onClick={()=>setOpen(false)}
               >
                 Cancel
               </button>

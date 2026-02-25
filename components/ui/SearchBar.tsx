@@ -204,7 +204,7 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                     setQuery("");
                   }}
                 >
-                  View all results for "{query}" →
+                  View all results for &quot;{query}&quot; →
                 </Link>
               </div>
             </>
@@ -216,7 +216,7 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                   <path d="M21 21l-4.35-4.35"></path>
                 </svg>
               </div>
-              <p className="text-sm">No results found for "{query}"</p>
+              <p className="text-sm">No results found for &quot;{query}&quot;</p>
               <p className="text-xs mt-1">Try different keywords or browse our collection</p>
             </div>
           ) : (

@@ -314,9 +314,9 @@ export default function BespokePage() {
                 ))}
               </div>
               
-              <div className="text-4xl text-[#D4AF37] font-serif mb-4 opacity-50">"</div>
+              <div className="text-4xl text-[#D4AF37] font-serif mb-4 opacity-50">&quot;</div>
               <p className="text-[#6D3D0D]/75 font-light leading-relaxed mb-6 italic" style={{fontSize: 'clamp(1rem, 1.6vw, 1.1rem)'}}>
-                The entire bespoke process was magical. From the initial consultation to the final reveal, every detail was perfect. Our 2.5ct cushion halo engagement ring exceeded every expectation – it's truly one-of-a-kind.
+                The entire bespoke process was magical. From the initial consultation to the final reveal, every detail was perfect. Our 2.5ct cushion halo engagement ring exceeded every expectation – it&apos;s truly one-of-a-kind.
               </p>
               
               <div className="flex items-center gap-4">
@@ -352,9 +352,9 @@ export default function BespokePage() {
                 ))}
               </div>
               
-              <div className="text-4xl text-[#D4AF37] font-serif mb-4 opacity-50">"</div>
+              <div className="text-4xl text-[#D4AF37] font-serif mb-4 opacity-50">&quot;</div>
               <p className="text-[#6D3D0D]/75 font-light leading-relaxed mb-6 italic" style={{fontSize: 'clamp(1rem, 1.6vw, 1.1rem)'}}>
-                Working with ELYSIUM to redesign my grandmother's vintage sapphire into a modern halo pendant was an emotional journey. They honored the legacy while creating something uniquely beautiful that I'll pass to my daughter.
+                Working with ELYSIUM to redesign my grandmother&apos;s vintage sapphire into a modern halo pendant was an emotional journey. They honored the legacy while creating something uniquely beautiful that I&apos;ll pass to my daughter.
               </p>
               
               <div className="flex items-center gap-4">
@@ -390,7 +390,7 @@ export default function BespokePage() {
               Tell Us Your <span className="text-[#D4AF37]">Vision</span>
             </h2>
             <p className="text-[#6D3D0D]/70 font-light max-w-xl mx-auto mb-2">
-              Share your dreams with us. There's no obligation – just the beginning of something beautiful.
+              Share your dreams with us. There&apos;s no obligation – just the beginning of something beautiful.
             </p>
             {/* Time Estimate */}
             <p className="text-[#D4AF37] text-sm font-medium flex items-center justify-center gap-2">
@@ -511,7 +511,7 @@ export default function BespokePage() {
           <span className="text-[#6D3D0D]/50 text-xs uppercase tracking-[0.3em] font-light">Ready?</span>
           <h2 className="font-serif text-[#6D3D0D] mt-4 mb-6 leading-[0.95]">
             <span className="block font-light" style={{fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.02em'}}>Your Story Awaits</span>
-            <span className="block font-semibold text-[#D4AF37]" style={{fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', letterSpacing: '-0.04em'}}>Let's Begin</span>
+            <span className="block font-semibold text-[#D4AF37]" style={{fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', letterSpacing: '-0.04em'}}>Let&apos;s Begin</span>
           </h2>
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-[2px] w-16 bg-[#D4AF37]"></div>

@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           
           <div id="app-root">
             <ConditionalLayout>{children}</ConditionalLayout>
-            <Footer id="footer" />
+            <Footer />
           </div>
           
           <ConciergeWidget />

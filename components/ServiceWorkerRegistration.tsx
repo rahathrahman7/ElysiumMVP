@@ -107,8 +107,8 @@ export function useOnlineStatus() {
       // Trigger background sync when back online
       if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
         navigator.serviceWorker.ready.then(registration => {
-          registration.sync.register('wishlist-sync');
-          registration.sync.register('cart-sync');
+          (registration as any).sync.register('wishlist-sync');
+          (registration as any).sync.register('cart-sync');
         });
       }
     };

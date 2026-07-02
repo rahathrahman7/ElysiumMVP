@@ -18,6 +18,7 @@
     "db:audit": "tsx scripts/db/audit-database.ts",
     "db:audit:security": "tsx scripts/db/audit-security-performance.ts",
     "db:audit:all": "pnpm db:audit && pnpm db:audit:security",
+    "db:test:checkout-inventory": "tsx scripts/db/test-checkout-inventory.ts",
     "sanity:seed": "tsx scripts/sanity-seed.ts",
     "build:clarion:manifest": "tsx scripts/buildImageManifest.ts",
     "build:orabella:manifest": "tsx scripts/buildImageManifest.ts --slug orabella-toi-et-moi --folder public/products/Orabella --productName \"Orabella Toi et Moi\" --altSuffix \"Toi et Moi — pear & radiant, four-claw points\"",

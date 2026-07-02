@@ -7,12 +7,8 @@ import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { Pool } from 'pg';
-import {
-  auditCatalog,
-  buildVariantKey,
-  loadCatalog,
-  type AuditIssue,
-} from './catalog';
+import { buildVariantKey } from '../../lib/inventory/variantKey';
+import { auditCatalog, loadCatalog, type AuditIssue } from './catalog';
 
 type Severity = 'error' | 'warning' | 'info' | 'pass';
 
@@ -334,12 +330,6 @@ async function main() {
       'inventory-expectation',
       `Featured products: nova-oval-solitaire-round-marquise (${nova.variantCount} variants), vow-veil (${vow.variantCount} variants)`,
       `Sample keys: ${nova.sampleVariants.join(', ')}`
-    );
-    add(
-      'warning',
-      'docs-mismatch',
-      'Seed docs expect slug "nova" and numeric sizes 4–10, but catalog uses "nova-oval-solitaire-round-marquise" with UK letter sizes (F, G 1/2, …)',
-      'database-seed.sql and SEED_INVENTORY_GUIDE.md need updating before seeding'
     );
   }
 

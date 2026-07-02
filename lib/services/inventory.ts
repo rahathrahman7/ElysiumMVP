@@ -135,10 +135,16 @@ export async function fulfillInventory(
 
 export async function getLowStockItems() {
   return await prisma.$queryRaw`
-    SELECT *
-    FROM inventory
-    WHERE (stock_level - reserved_stock) <= low_stock_threshold
-    ORDER BY (stock_level - reserved_stock) ASC
+    SELECT
+      "id",
+      "productSlug",
+      "variantKey",
+      "stockLevel",
+      "reservedStock",
+      "lowStockThreshold"
+    FROM "inventory"
+    WHERE ("stockLevel" - "reservedStock") <= "lowStockThreshold"
+    ORDER BY ("stockLevel" - "reservedStock") ASC
   `;
 }
 

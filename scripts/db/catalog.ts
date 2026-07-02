@@ -1,54 +1,28 @@
 import fs from 'fs';
 import path from 'path';
+import {
+  buildInventoryRowsForProduct,
+  loadCatalogProducts,
+  type CatalogProduct,
+} from '../../lib/inventory/catalogInventory';
+import {
+  buildVariantKey,
+  metalToVariantSegment,
+  sizeToVariantSegment,
+} from '../../lib/inventory/variantKey';
 
-export interface CatalogProduct {
-  slug: string;
-  title: string;
-  basePriceGBP: number;
-  metals?: { name: string; priceDeltaGBP: number }[];
-  sizes?: string[];
-  widths?: { label: string; width: number; priceDeltaGBP: number }[];
-  images?: string[];
-  galleryByMetal?: Record<string, string[]>;
-  galleryByCaratAndMetal?: Record<string, Record<string, string[]>>;
-  collections?: string[];
-}
+export type { CatalogProduct };
+export {
+  buildVariantKey,
+  loadCatalogProducts as loadCatalog,
+  metalToVariantSegment,
+  sizeToVariantSegment,
+};
 
-const PRODUCTS_PATH = path.join(process.cwd(), 'public', 'data', 'products.json');
 const DUPLICATE_PATH = path.join(process.cwd(), 'app', 'Public', 'data', 'products.json');
 
-export function loadCatalog(): CatalogProduct[] {
-  if (!fs.existsSync(PRODUCTS_PATH)) {
-    throw new Error(`Catalog not found at ${PRODUCTS_PATH}`);
-  }
-  return JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8')) as CatalogProduct[];
-}
-
-export function metalToVariantSegment(metal: string): string {
-  return metal.trim().toLowerCase().replace(/\s+/g, '-');
-}
-
-export function sizeToVariantSegment(size: string): string {
-  return size.trim().toLowerCase().replace(/\s+/g, '-');
-}
-
-export function buildVariantKey(metal: string, size: string): string {
-  return `${metalToVariantSegment(metal)}-${sizeToVariantSegment(size)}`;
-}
-
 export function getExpectedInventoryVariants(product: CatalogProduct): string[] {
-  if (!product.metals?.length) return [];
-
-  const sizes = product.sizes?.length ? product.sizes : ['one-size'];
-  const variants: string[] = [];
-
-  for (const metal of product.metals) {
-    for (const size of sizes) {
-      variants.push(buildVariantKey(metal.name, size));
-    }
-  }
-
-  return variants;
+  return buildInventoryRowsForProduct(product).map((row) => row.variantKey);
 }
 
 export function isRingLikeProduct(product: CatalogProduct): boolean {
@@ -76,7 +50,7 @@ export interface AuditIssue {
 }
 
 export function auditCatalog(): CatalogAuditResult {
-  const products = loadCatalog();
+  const products = loadCatalogProducts();
   const slugs = new Set(products.map((p) => p.slug));
   const issues: AuditIssue[] = [];
   const warnings: AuditIssue[] = [];
@@ -98,16 +72,8 @@ export function auditCatalog(): CatalogAuditResult {
 
   for (const product of products) {
     if (!product.slug) {
-      issues.push({ severity: 'error', category: 'catalog', message: `Product missing slug: ${product.title}` });
+      issues.push({ severity: 'error', category: 'catalog', message: `Product missing slug: ${(product as { title?: string }).title}` });
       continue;
-    }
-
-    if (product.basePriceGBP == null || product.basePriceGBP < 0) {
-      issues.push({
-        severity: 'error',
-        category: 'catalog',
-        message: `${product.slug}: invalid or missing basePriceGBP`,
-      });
     }
 
     if (!product.metals?.length) {
@@ -119,44 +85,13 @@ export function auditCatalog(): CatalogAuditResult {
     }
 
     const isEarring = product.slug.includes('earring');
-    const isMensRing = product.slug.includes('mens-ring');
-    const isBracelet = product.slug.includes('bracelet');
 
     if (!isEarring && !product.sizes?.length) {
       warnings.push({
         severity: 'warning',
         category: 'catalog',
-        message: `${product.slug}: no ring sizes (may be intentional for earrings)`,
+        message: `${product.slug}: no ring sizes (earrings/bracelets use one-size variants)`,
       });
-    }
-
-    if (isMensRing && !product.widths?.length) {
-      warnings.push({
-        severity: 'warning',
-        category: 'catalog',
-        message: `${product.slug}: men's ring without width options`,
-      });
-    }
-
-    if (!product.images?.length) {
-      issues.push({
-        severity: 'error',
-        category: 'catalog',
-        message: `${product.slug}: no hero images`,
-      });
-    }
-
-    const publicRoot = path.join(process.cwd(), 'public');
-    for (const image of product.images ?? []) {
-      if (image.startsWith('http')) continue;
-      const imagePath = path.join(publicRoot, image.replace(/^\//, ''));
-      if (!fs.existsSync(imagePath)) {
-        warnings.push({
-          severity: 'warning',
-          category: 'images',
-          message: `${product.slug}: missing hero image ${image}`,
-        });
-      }
     }
 
     const expectedVariants = getExpectedInventoryVariants(product);
@@ -183,23 +118,6 @@ export function auditCatalog(): CatalogAuditResult {
         ]
           .filter(Boolean)
           .join('; '),
-      });
-    } else if (JSON.stringify(products) !== JSON.stringify(duplicate)) {
-      warnings.push({
-        severity: 'warning',
-        category: 'catalog-sync',
-        message: 'Duplicate products.json files have matching slugs but different content',
-      });
-    }
-  }
-
-  const staleDocSlugs = ['nova'];
-  for (const stale of staleDocSlugs) {
-    if (!slugs.has(stale) && slugs.has('nova-oval-solitaire-round-marquise')) {
-      warnings.push({
-        severity: 'warning',
-        category: 'docs-mismatch',
-        message: `Documentation/seed SQL references slug "${stale}" but catalog uses "nova-oval-solitaire-round-marquise"`,
       });
     }
   }

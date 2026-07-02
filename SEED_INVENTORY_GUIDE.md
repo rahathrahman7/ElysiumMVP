@@ -1,126 +1,99 @@
 # How to Seed Inventory - Step by Step
 
-## 🎯 Quick Method (Recommended)
+Inventory rows are generated from `public/data/products.json` using the same UK letter ring sizes shown on the product configurator (F, F 1/2, G, G 1/2, … through Z+4).
 
-### Step 1: Open Supabase SQL Editor
-1. Go to [Supabase Dashboard](https://app.supabase.com)
-2. Select your ELYSIUM project
-3. Click **SQL Editor** in the left sidebar
-4. Click **New Query**
+## Quick method (recommended)
 
-### Step 2: Copy the Seed SQL
-1. Open `database-seed.sql` in your code editor (VS Code)
-2. Press **Cmd+A** to select all
-3. Press **Cmd+C** to copy
+```bash
+# Ensure schema is pushed and DATABASE_URL is set in .env
+pnpm db:push
+pnpm db:seed
+```
 
-### Step 3: Run the Seed
-1. Go back to Supabase SQL Editor
-2. Press **Cmd+V** to paste the SQL
-3. Click **Run** (or press **Cmd+Enter**)
+This creates one inventory row per **metal × size** combination for each catalog product.
 
-### Step 4: Verify
-You should see a success message. Then check:
+## What gets seeded
+
+| Product type | Sizes used | Variant key format |
+|--------------|------------|-------------------|
+| Engagement / men's rings | UK letter sizes from catalog (`F`, `G 1/2`, …) | `18k-yellow-gold-f`, `platinum-g-1/2` |
+| Earrings | `one-size` (no ring sizes in catalog) | `18k-yellow-gold-one-size` |
+| Bracelets without sizes | `one-size` | `18k-rose-gold-one-size` |
+
+### Featured examples
+
+**Nova** (`nova-oval-solitaire-round-marquise`)
+- 4 metals × 45 UK sizes = **180 variants**
+- Sample keys: `platinum-f`, `18k-yellow-gold-g-1/2`
+
+**Vow & Veil** (`vow-veil`)
+- 4 metals × 45 UK sizes = **180 variants**
+
+**Full catalog:** 39 products → **5,442** inventory variants total
+
+## Verify
+
+```bash
+pnpm db:audit
+```
+
+Or in SQL:
 
 ```sql
--- Count total inventory
 SELECT COUNT(*) FROM inventory;
--- Should return: 104
 
--- Check nova products
+SELECT "productSlug", COUNT(*) AS variants
+FROM inventory
+GROUP BY "productSlug"
+ORDER BY "productSlug";
+
 SELECT "productSlug", "variantKey", "stockLevel"
 FROM inventory
-WHERE "productSlug" = 'nova'
+WHERE "productSlug" = 'nova-oval-solitaire-round-marquise'
 LIMIT 10;
 
--- Check vow-veil products
 SELECT "productSlug", "variantKey", "stockLevel"
 FROM inventory
 WHERE "productSlug" = 'vow-veil'
-LIMIT 10;
+  AND "variantKey" LIKE '%-g-1/2'
+LIMIT 5;
 ```
 
-## ✅ What Gets Seeded
-
-### Nova Ring - 52 variants
-- **Metals**: 18k Yellow Gold, 18k White Gold, 18k Rose Gold, Platinum
-- **Sizes**: 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10
-- **Total**: 4 metals × 13 sizes = 52 variants
-- **Stock levels**: 3-12 per variant (realistic inventory)
-
-### Vow & Veil Ring - 52 variants
-- **Metals**: 18k Yellow Gold, 18k White Gold, 18k Rose Gold, Platinum
-- **Sizes**: 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10
-- **Total**: 4 metals × 13 sizes = 52 variants
-- **Stock levels**: 2-10 per variant (realistic inventory)
-
-### Total: 104 inventory records
-
-## 🔍 Verify in Prisma Studio
+## Prisma Studio
 
 ```bash
-# Open Prisma Studio
 pnpm db:studio
 ```
 
-Go to http://localhost:51212:
-1. Click **inventory** table
-2. You should see 104 rows
-3. Filter by `productSlug = 'nova'` → 52 rows
-4. Filter by `productSlug = 'vow-veil'` → 52 rows
+1. Open the **inventory** table
+2. Filter `productSlug = nova-oval-solitaire-round-marquise` → 180 rows
+3. Confirm `variantKey` values use UK sizes (not numeric 4–10)
 
-## 🐛 Troubleshooting
+## Re-running the seed
 
-### "Duplicate key" error
-This means inventory is already seeded. You can:
-- **Ignore it** - seed is safe to run multiple times
-- **Clear first**: `DELETE FROM inventory;` then run seed again
+`pnpm db:seed` is safe to re-run:
 
-### No rows showing
-1. Check SQL ran successfully (green checkmark in Supabase)
-2. Refresh Prisma Studio (Cmd+R)
-3. Query directly: `SELECT COUNT(*) FROM inventory;`
+- Adds missing variants for new catalog products/sizes
+- Removes stale rows (wrong slug or outdated variant keys, e.g. old `nova` slug or numeric sizes)
+- Does **not** overwrite stock levels on existing matching rows
 
-### "Table does not exist"
-- Make sure you ran `pnpm db:push` first
-- Check you're connected to the right database
+## Troubleshooting
 
-## 📝 Sample Inventory Data
+### `DATABASE_URL is required`
+Set `DATABASE_URL` in `.env` (see `.env.example`).
 
-After seeding, you'll have entries like:
+### Duplicate key errors
+Usually means a partial seed already exists. Re-run `pnpm db:seed` — it skips existing variant keys.
 
-| productSlug | variantKey | stockLevel | reservedStock | lowStockThreshold |
-|-------------|------------|------------|---------------|-------------------|
-| nova | 18k-yellow-gold-6 | 10 | 0 | 3 |
-| nova | 18k-white-gold-7 | 12 | 0 | 3 |
-| nova | platinum-6.5 | 8 | 0 | 2 |
-| vow-veil | 18k-rose-gold-6 | 6 | 0 | 3 |
-| vow-veil | platinum-7 | 5 | 0 | 2 |
+### Wrong sizes in database
+If you previously ran old seed SQL with numeric sizes (`18k-yellow-gold-6`) or slug `nova`, run:
 
-## 🎨 Customizing Inventory
-
-Want to change stock levels? Edit `database-seed.sql`:
-
-```sql
--- Example: Increase nova yellow gold size 7 stock
-INSERT INTO inventory (..., "stockLevel", ...)
-VALUES (..., 20, ...); -- Change from 12 to 20
+```bash
+pnpm db:seed
 ```
 
-Want to add more products? Follow the same pattern:
+The seed removes orphan rows that don't match the current catalog.
 
-```sql
--- Add inventory for a new product
-INSERT INTO inventory ("id", "productSlug", "variantKey", "stockLevel", "reservedStock", "lowStockThreshold", "lastUpdated")
-VALUES
-  (gen_random_uuid(), 'your-product-slug', 'metal-size', 10, 0, 3, CURRENT_TIMESTAMP);
-```
+## Customizing stock levels
 
-## ✅ Success!
-
-After seeding, you can now:
-- ✅ Add products to cart in your app
-- ✅ Check stock availability
-- ✅ Track inventory levels
-- ✅ Get low stock alerts
-
-Next step: Test adding a product to cart in your app!
+Edit `lib/inventory/catalogInventory.ts` (`stockLevelForVariant`) or update rows via the admin inventory UI / `PATCH /api/admin/inventory`.

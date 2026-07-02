@@ -2,9 +2,14 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { requireEnv } from '@/lib/env';
 import { updateOrderStatus } from '@/lib/services/orders';
+import { clearCart } from '@/lib/services/cart';
 import { OrderStatus } from '@prisma/client';
+import {
+  fulfillOrderInventory,
+  releaseOrderInventory,
+} from '@/lib/services/checkoutInventory';
+import { prisma } from '@/lib/database/prisma';
 
-// Lazy initialize Stripe client to avoid build-time env check
 let _stripe: Stripe | null = null;
 function getStripe() {
   if (!_stripe) {
@@ -13,6 +18,23 @@ function getStripe() {
     });
   }
   return _stripe;
+}
+
+const RELEASABLE_STATUSES: OrderStatus[] = [
+  OrderStatus.PENDING,
+  OrderStatus.PROCESSING,
+  OrderStatus.PAYMENT_FAILED,
+];
+
+async function releaseOrderIfNeeded(orderId: string) {
+  const order = await prisma.order.findUnique({ where: { id: orderId } });
+  if (!order || !RELEASABLE_STATUSES.includes(order.status)) {
+    return order?.status;
+  }
+
+  await releaseOrderInventory(orderId);
+  await updateOrderStatus(orderId, OrderStatus.CANCELLED);
+  return OrderStatus.CANCELLED;
 }
 
 export async function POST(request: Request) {
@@ -60,17 +82,46 @@ export async function POST(request: Request) {
         break;
       }
 
+      case 'checkout.session.expired': {
+        const session = event.data.object as Stripe.Checkout.Session;
+        const orderId = session.metadata?.orderId;
+
+        if (orderId) {
+          const status = await releaseOrderIfNeeded(orderId);
+          console.log(`Checkout session expired for order ${orderId}, status: ${status}`);
+        }
+        break;
+      }
+
       case 'payment_intent.succeeded': {
         const paymentIntent = event.data.object as Stripe.PaymentIntent;
         const orderId = paymentIntent.metadata?.orderId;
 
         if (orderId) {
+          const existing = await prisma.order.findUnique({
+            where: { id: orderId },
+            select: { status: true, userId: true },
+          });
+
+          if (!existing) break;
+
+          if (existing.status === OrderStatus.PAID) {
+            console.log(`Order ${orderId} already PAID, skipping fulfillment`);
+            break;
+          }
+
           await updateOrderStatus(
             orderId,
             OrderStatus.PAID,
             paymentIntent.id
           );
-          console.log(`Order ${orderId} marked as PAID`);
+          await fulfillOrderInventory(orderId);
+
+          if (existing.userId) {
+            await clearCart(existing.userId);
+          }
+
+          console.log(`Order ${orderId} marked as PAID and inventory fulfilled`);
         }
         break;
       }
@@ -80,12 +131,25 @@ export async function POST(request: Request) {
         const orderId = paymentIntent.metadata?.orderId;
 
         if (orderId) {
+          const existing = await prisma.order.findUnique({
+            where: { id: orderId },
+            select: { status: true },
+          });
+
+          if (!existing) break;
+
+          if (!RELEASABLE_STATUSES.includes(existing.status)) {
+            console.log(`Order ${orderId} status ${existing.status}, skipping inventory release`);
+            break;
+          }
+
+          await releaseOrderInventory(orderId);
           await updateOrderStatus(
             orderId,
             OrderStatus.PAYMENT_FAILED,
             paymentIntent.id
           );
-          console.log(`Order ${orderId} marked as PAYMENT_FAILED`);
+          console.log(`Order ${orderId} marked as PAYMENT_FAILED and inventory released`);
         }
         break;
       }
@@ -93,9 +157,6 @@ export async function POST(request: Request) {
       case 'charge.refunded': {
         const charge = event.data.object as Stripe.Charge;
         const paymentIntentId = charge.payment_intent as string;
-
-        // Find order by payment intent ID and mark as refunded
-        // This requires a query to find the order
         console.log(`Charge refunded for payment intent: ${paymentIntentId}`);
         break;
       }

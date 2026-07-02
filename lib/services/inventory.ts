@@ -54,32 +54,18 @@ export async function reserveInventory(
   variantKey: string,
   quantity: number
 ): Promise<boolean> {
-  const inventory = await getInventory(productSlug, variantKey);
+  const updated = await prisma.$queryRaw<{ id: string }[]>`
+    UPDATE "inventory"
+    SET
+      "reservedStock" = "reservedStock" + ${quantity},
+      "lastUpdated" = NOW()
+    WHERE "productSlug" = ${productSlug}
+      AND "variantKey" = ${variantKey}
+      AND ("stockLevel" - "reservedStock") >= ${quantity}
+    RETURNING "id"
+  `;
 
-  if (!inventory) {
-    throw new Error('Inventory not found');
-  }
-
-  const availableStock = inventory.stockLevel - inventory.reservedStock;
-
-  if (availableStock < quantity) {
-    return false; // Not enough stock
-  }
-
-  await prisma.inventory.update({
-    where: {
-      productSlug_variantKey: {
-        productSlug,
-        variantKey,
-      }
-    },
-    data: {
-      reservedStock: inventory.reservedStock + quantity,
-      lastUpdated: new Date(),
-    }
-  });
-
-  return true;
+  return updated.length > 0;
 }
 
 export async function releaseInventory(

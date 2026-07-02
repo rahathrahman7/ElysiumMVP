@@ -333,12 +333,6 @@ async function main() {
     );
   }
 
-  add(
-    'warning',
-    'integration',
-    'Checkout/cart flow does not call inventory reserve/check — stock is not enforced at purchase time'
-  );
-
   const prisma = createPrismaClient();
   if (!prisma) {
     add('warning', 'connection', 'DATABASE_URL not set — skipping live database checks');

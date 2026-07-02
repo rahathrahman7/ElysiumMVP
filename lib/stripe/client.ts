@@ -37,7 +37,11 @@ export async function createCheckoutSession(
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err?.error ?? "Failed to create checkout session");
+    const message =
+      typeof err?.error === "string"
+        ? err.error
+        : "Failed to create checkout session";
+    throw new Error(message);
   }
 
   const { url } = await res.json();

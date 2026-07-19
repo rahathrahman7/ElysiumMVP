@@ -6,7 +6,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { BespokeTimelineStrip } from "./BespokeTimelineStrip";
 
 /* ─── Expandable card + colour-swatch styles (injected once via <style>) ─── */
 const expandStyles = `
@@ -502,7 +501,7 @@ export function CategoryShowcase() {
     return () => { cancelAnimationFrame(raf); cleanup?.(); };
   }, [reduced, setupMarquee]);
 
-  /* ─── Ready to Wear: scrub-based reveal (no pin, natural scroll) ─── */
+  /* ─── Ready to Wear: scrub-based reveal + optional pin ─── */
   useEffect(() => {
     const section = weddingRef.current;
     const imageEl = weddingImageRef.current;
@@ -516,7 +515,16 @@ export function CategoryShowcase() {
       ([{ gsap }, { ScrollTrigger }]) => {
         if (!mounted) return;
         gsap.registerPlugin(ScrollTrigger);
+        const pinEnd = "+=100%";
         ctx = gsap.context(() => {
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top top",
+            end: pinEnd,
+            pin: true,
+            scrub: 1,
+          });
+
           gsap.fromTo(
             imageEl,
             { scale: 0.98, opacity: 0.7 },
@@ -524,18 +532,18 @@ export function CategoryShowcase() {
               scale: 1,
               opacity: 1,
               ease: "none",
-              scrollTrigger: { trigger: section, start: "top 85%", end: "top 40%", scrub: 1 },
+              scrollTrigger: { trigger: section, start: "top top", end: pinEnd, scrub: 1 },
             }
           );
 
           gsap.fromTo(
             textEl,
-            { y: 16, opacity: 0 },
+            { y: 8, opacity: 0 },
             {
               y: 0,
               opacity: 1,
               ease: "none",
-              scrollTrigger: { trigger: section, start: "top 70%", end: "top 35%", scrub: 1 },
+              scrollTrigger: { trigger: section, start: "top top", end: pinEnd, scrub: 1 },
             }
           );
         }, section);
@@ -871,11 +879,6 @@ export function CategoryShowcase() {
           </div>
         </div>
       </div>
-
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          BESPOKE JOURNEY TIMELINE — below For Her / For Him
-          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <BespokeTimelineStrip />
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           SECTION HEADER

@@ -1,14 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useCartStore } from '@/lib/state/cart';
 import DiamondShapesDropdown, { DiamondShapesTrigger } from '@/components/ui/DiamondShapesDropdown';
 import CollectionsMegaMenu, { CollectionsTrigger } from '@/components/ui/CollectionsMegaMenu';
 import EducationMegaMenu, { EducationTrigger } from '@/components/ui/EducationMegaMenu';
-import { DiamondShapeIcon } from '@/components/icons/DiamondIcons';
 
 // Desktop navigation links (Collections & Education have their own mega-menus)
 const navigationLinks = [
@@ -131,7 +129,6 @@ function CartBadge() {
 }
 
 export default function LuxuryHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDiamondDropdownOpen, setIsDiamondDropdownOpen] = useState(false);
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
@@ -217,17 +214,6 @@ export default function LuxuryHeader() {
   };
   const diamondDropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const router = useRouter();
-  const isHomePage = pathname === '/';
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Close diamond dropdown when clicking outside or pressing Escape
   useEffect(() => {
@@ -313,28 +299,15 @@ export default function LuxuryHeader() {
   }, [pathname]);
 
   return (
-    <header
-      className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isHomePage
-          ? isScrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper"
-            : "bg-transparent"
-          : "bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper"
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className={clsx("relative transition-all duration-300", isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100")}>
+          <Link href="/" className="relative transition-all duration-300 opacity-100">
             <div className="group transition-all duration-300 hover:scale-105">
               <span
                 className="font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300"
-                style={{
-                  color: isHomePage
-                    ? (isScrolled ? "var(--elysium-brown)" : "white")
-                    : "var(--elysium-brown)"
-                }}
+                style={{ color: "var(--elysium-brown)" }}
               >
                 ELYSIUM
               </span>
@@ -353,11 +326,7 @@ export default function LuxuryHeader() {
                   setIsCollectionsOpen(false);
                   setIsEducationOpen(false);
                 }}
-                className={clsx(
-                  isHomePage
-                    ? (isScrolled ? "text-[#45321e]" : "text-white")
-                    : "text-[#45321e]"
-                )}
+                className="text-[#45321e]"
               />
               <DiamondShapesDropdown
                 isOpen={isDiamondDropdownOpen}
@@ -374,11 +343,7 @@ export default function LuxuryHeader() {
                   setIsDiamondDropdownOpen(false);
                   setIsEducationOpen(false);
                 }}
-                className={clsx(
-                  isHomePage
-                    ? (isScrolled ? "text-[#45321e]" : "text-white")
-                    : "text-[#45321e]"
-                )}
+                className="text-[#45321e]"
               />
               <CollectionsMegaMenu
                 isOpen={isCollectionsOpen}
@@ -395,11 +360,7 @@ export default function LuxuryHeader() {
                   setIsDiamondDropdownOpen(false);
                   setIsCollectionsOpen(false);
                 }}
-                className={clsx(
-                  isHomePage
-                    ? (isScrolled ? "text-[#45321e]" : "text-white")
-                    : "text-[#45321e]"
-                )}
+                className="text-[#45321e]"
               />
               <EducationMegaMenu
                 isOpen={isEducationOpen}
@@ -413,29 +374,17 @@ export default function LuxuryHeader() {
                 href={link.href}
                 className={clsx(
                   "relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 group overflow-hidden rounded-2xl",
-                  pathname === link.href
-                    ? "text-elysium-gold"
-                    : isHomePage
-                    ? (isScrolled ? "text-[#45321e]" : "text-white")
-                    : "text-[#45321e]"
+                  pathname === link.href ? "text-elysium-gold" : "text-[#45321e]"
                 )}
               >
                 {link.label}
                 
-                {/* Gold Underline - Only show when navbar is white (scrolled) */}
-                {(isScrolled || !isHomePage) && (
-                  <span
-                    className={clsx(
-                      "absolute bottom-0 left-0 h-px bg-elysium-gold transition-all duration-300",
-                      pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                    )}
-                  />
-                )}
-                
-                {/* Glassmorphism effect for transparent navbar */}
-                {isHomePage && !isScrolled && (
-                  <span className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                )}
+                <span
+                  className={clsx(
+                    "absolute bottom-0 left-0 h-px bg-elysium-gold transition-all duration-300",
+                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                  )}
+                />
               </Link>
             ))}
           </nav>
@@ -444,13 +393,7 @@ export default function LuxuryHeader() {
           <div className="flex items-center space-x-4">
             {/* Search Button */}
             <button
-              className={clsx(
-                "p-2 rounded-full transition-all duration-300 hover:scale-110",
-                "hover:bg-elysium-gold/10",
-                isHomePage 
-                  ? (isScrolled ? "text-[#45321e]" : "text-white")
-                  : "text-[#45321e]"
-              )}
+              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
               aria-label="Search"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -461,13 +404,7 @@ export default function LuxuryHeader() {
             {/* Cart Button with Badge */}
             <Link
               href="/cart"
-              className={clsx(
-                "relative p-2 rounded-full transition-all duration-300 hover:scale-110",
-                "hover:bg-elysium-gold/10",
-                isHomePage 
-                  ? (isScrolled ? "text-[#45321e]" : "text-white")
-                  : "text-[#45321e]"
-              )}
+              className="relative p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
               aria-label="Shopping cart"
             >
               <svg
@@ -488,13 +425,7 @@ export default function LuxuryHeader() {
             {/* Wishlist Button */}
             <Link
               href="/wishlist"
-              className={clsx(
-                "p-2 rounded-full transition-all duration-300 hover:scale-110",
-                "hover:bg-elysium-gold/10",
-                isHomePage 
-                  ? (isScrolled ? "text-[#45321e]" : "text-white")
-                  : "text-[#45321e]"
-              )}
+              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
               aria-label="Wishlist"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -505,13 +436,7 @@ export default function LuxuryHeader() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={clsx(
-                "md:hidden p-2 rounded-full transition-all duration-300",
-                "hover:bg-elysium-gold/10",
-                isHomePage 
-                  ? (isScrolled ? "text-[#45321e]" : "text-white")
-                  : "text-[#45321e]"
-              )}
+              className="md:hidden p-2 rounded-full transition-all duration-300 hover:bg-elysium-gold/10 text-[#45321e]"
               aria-label="Toggle menu"
             >
               <svg

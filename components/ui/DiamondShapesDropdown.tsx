@@ -123,7 +123,8 @@ export function DiamondShapesTrigger({
       className={clsx(
         "group relative flex items-center gap-2 px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300",
         "hover:text-elysium-gold",
-        isOpen ? "text-elysium-gold" : "text-elysium-charcoal",
+        // Prefer caller color (e.g. homepage white); fall back to charcoal
+        isOpen ? "text-elysium-gold" : className ? undefined : "text-elysium-charcoal",
         className
       )}
     >

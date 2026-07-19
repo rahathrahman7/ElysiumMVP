@@ -102,6 +102,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
     alt: product.title
   }));
 
+  // Commit metal selection on click (hover preview alone shouldn't stick)
+  const handleMetalChange = (metal: MetalOption | null) => {
+    setPreviewMetalName(undefined);
+    setSelectedMetal(metal);
+    setField("metal", metal?.name);
+  };
+
+  const handleMetalHover = (name?: string) => {
+    setPreviewMetalName(name);
+  };
+
   const totalPrice = product.basePriceGBP +
     (selectedMetal?.priceDeltaGBP || 0) +
     (selectedOrigin?.priceDeltaGBP || 0) +
@@ -242,8 +253,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-16">
           {/* Product Gallery & Title - shows first on mobile */}
           <div className="order-1">
-            <Gallery 
-              images={currentGalleryImages} 
+            <Gallery
+              key={displayMetal || "default"}
+              images={currentGalleryImages}
             />
 
             {/* Title & Full Description directly beneath the gallery */}
@@ -351,7 +363,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   selectedSize={selectedSize}
                   engravingSelected={engravingSelected}
                   engravingText={engravingText}
-                  onMetalChange={(v) => { setSelectedMetal(v); setField("metal", v?.name); }}
+                  onMetalChange={handleMetalChange}
                   onOriginChange={(v) => { setSelectedOrigin(v); setField("origin", v?.label); }}
                   onCaratChange={(v) => { setSelectedCarat(v); setField("carat", v?.label); }}
                   onColourChange={(v) => { setSelectedColour(v); setField("colour", v?.label); }}
@@ -359,7 +371,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   onSizeChange={(v) => { setSelectedSize(v); setField("ringSize", v || undefined); }}
                   onEngravingChange={(v) => { setEngravingSelected(v); setField("engravingOn", v); if(!v) setField("engravingText", ""); }}
                   onEngravingTextChange={(t) => { const s=t.slice(0,24); setEngravingText(s); setField("engravingText", s); }}
-                  onMetalHover={(name)=> setPreviewMetalName(name)}
+                  onMetalHover={handleMetalHover}
                 />
               {/* )} */}
 

@@ -13,6 +13,12 @@ export default function Gallery({
 }) {
   const safe = images?.length ? images : [{ src: "/products/placeholder.svg", alt: "Image coming soon" }];
   const [index, setIndex] = useState(0);
+  const imageSignature = safe.map((img) => img.src).join("|");
+
+  // Jump back to the hero when the gallery set changes (e.g. metal swatch)
+  useEffect(() => {
+    setIndex(0);
+  }, [imageSignature]);
   const [zoomOpen, setZoomOpen] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
   

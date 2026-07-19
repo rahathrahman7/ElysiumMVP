@@ -10,6 +10,16 @@ interface ConditionalLayoutProps {
 export function ConditionalLayout({ children }: ConditionalLayoutProps) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const isStandalone = pathname?.startsWith('/tmc-review');
+
+  if (isStandalone) {
+    // Standalone tool pages: no site chrome
+    return (
+      <main id="main-content" tabIndex={-1}>
+        {children}
+      </main>
+    );
+  }
 
   if (isHomePage) {
     // Homepage: Keep the floating header behavior

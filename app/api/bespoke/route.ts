@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-import { requireEnv } from "@/lib/env";
+import { requireEnv, env } from "@/lib/env";
 import { prisma } from "@/lib/database/prisma";
+import { sendAdminNotificationEmail } from "@/lib/services/email";
 import { z } from "zod";
 
 const bespokeSchema = z.object({
@@ -22,7 +22,7 @@ const bespokeSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const resend = new Resend(requireEnv("RESEND_API_KEY"));
+    requireEnv("RESEND_API_KEY");
     const form = await request.formData();
 
     const data = bespokeSchema.parse({
@@ -107,12 +107,15 @@ ${data.notes ? `\nLegacy Notes: ${data.notes}` : ''}
 `.trim();
 
     // Send email
-    await resend.emails.send({
-      from: "studio@elysium.example",
-      to: ["hello@elysium.example"],
+    const sent = await sendAdminNotificationEmail({
       subject: `New Bespoke Enquiry from ${data.name}`,
       text: emailText,
+      to: env.ADMIN_NOTIFICATION_EMAIL || "hello@elysium.example",
     });
+
+    if (!sent) {
+      console.warn("Bespoke enquiry saved but admin notification email was not sent");
+    }
 
     return NextResponse.json({ ok: true, leadId: lead.id });
   } catch (error) {

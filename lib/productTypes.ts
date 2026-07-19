@@ -59,6 +59,8 @@ export type Product = {
   sizes?: string[];
   qualityBanner: string; // "D/E/F • VS1+ • IGI/GIA"
   isFeatured?: boolean;
+  /** When true, product is excluded from shop, search, sitemap, and direct URLs return 404. */
+  isHidden?: boolean;
   collections?: string[];
   galleryByMetal?: Record<string, string[]>; // Metal-aware image galleries
   galleryByCaratAndMetal?: Record<string, Record<string, string[]>>; // Carat and metal-aware image galleries: { "2ct": { "18k Yellow Gold": [...] } }

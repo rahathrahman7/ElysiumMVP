@@ -24,7 +24,7 @@ export default function CollectionPage() {
   useEffect(() => {
     const loadProducts = async () => {
       const mod = await import('@/lib/products');
-      setAllProducts(mod.products);
+      setAllProducts(await mod.getAllProductsAsync());
       setIsLoading(false);
     };
     loadProducts();

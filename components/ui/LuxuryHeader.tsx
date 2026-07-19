@@ -14,6 +14,7 @@ import { DiamondShapeIcon } from '@/components/icons/DiamondIcons';
 const navigationLinks = [
   { href: '/heroes', label: 'Heroes', icon: 'star' },
   { href: '/bespoke', label: 'Bespoke', icon: 'pen' },
+  { href: '/prive-collection', label: 'Privé Collection', icon: 'gem' },
   { href: '/about', label: 'Our Story', icon: 'heart' },
 ];
 
@@ -69,6 +70,7 @@ const mobileMenuItems: MobileMenuItem[] = [
     ]
   },
   { label: 'Bespoke', href: '/bespoke', icon: 'pen' },
+  { label: 'Privé Collection', href: '/prive-collection', icon: 'gem' },
   { label: 'Our Story', href: '/about', icon: 'heart' },
 ];
 
@@ -113,6 +115,12 @@ const NavIcon = ({ type }: { type?: string }) => {
       return (
         <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      );
+    case 'gem':
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3L2 9l10 12 10-12-10-6z" />
         </svg>
       );
     default:

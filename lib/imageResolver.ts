@@ -32,6 +32,52 @@ function normalizeImages(product: ProductLike): string[] {
   return product.images as string[];
 }
 
+function isMetalPackshot(src: string): boolean {
+  return (
+    /\/metal-(yellow|rose|white)\./i.test(src) ||
+    /\/(yellow|rose|white)\.(jpg|jpeg|png)$/i.test(src) ||
+    /\/01\.(jpg|jpeg|png)$/i.test(src) ||
+    /Top_.*_(Yellow|White|Rose)_/i.test(src) ||
+    /Front_.*_(Yellow|White|Rose)_/i.test(src)
+  );
+}
+
+/** Lifestyle / editorial shots shared across metal variants (not packshots). */
+function sharedLifestyleImages(p: ProductLike): string[] {
+  return normalizeImages(p).filter((src) => src && !isMetalPackshot(src));
+}
+
+function resolveMetalGalleryKey(p: ProductLike, normalized?: string): string | undefined {
+  if (!normalized || !('galleryByMetal' in p) || !p.galleryByMetal) return undefined;
+
+  if (p.galleryByMetal[normalized]?.length) return normalized;
+
+  // Two-tone fallbacks: use the closest solid-metal render we have
+  if (normalized.includes('Two-Tone')) {
+    if (/rose/i.test(normalized) && p.galleryByMetal['18k Rose Gold']?.length) {
+      return '18k Rose Gold';
+    }
+    if (/yellow/i.test(normalized) && p.galleryByMetal['18k Yellow Gold']?.length) {
+      return '18k Yellow Gold';
+    }
+    if (/platinum|white/i.test(normalized) && p.galleryByMetal['18k White Gold']?.length) {
+      return '18k White Gold';
+    }
+  }
+
+  return undefined;
+}
+
+function buildMetalGallery(p: ProductLike, metalImages: string[]): string[] {
+  // Full per-metal set (e.g. Celeste front/side/back) — use as-is
+  if (metalImages.length > 1) return metalImages;
+
+  // Single metal hero (e.g. TMC imports): hero changes with metal, lifestyle shots shared
+  const lifestyle = sharedLifestyleImages(p);
+  const merged = [...metalImages, ...lifestyle.filter((src) => !metalImages.includes(src))];
+  return merged.length ? merged : metalImages;
+}
+
 export function resolveGallery(p: ProductLike, metalLabel?: string, caratLabel?: string): string[] {
   const normalized = metalLabel ? NORMALIZE_METAL[metalLabel] ?? metalLabel : undefined;
   
@@ -41,7 +87,10 @@ export function resolveGallery(p: ProductLike, metalLabel?: string, caratLabel?:
     : undefined;
   
   // Fall back to metal-specific gallery
-  const fromGallery = normalized && 'galleryByMetal' in p && p.galleryByMetal?.[normalized];
+  const galleryKey = resolveMetalGalleryKey(p, normalized);
+  const fromGallery = galleryKey && 'galleryByMetal' in p
+    ? p.galleryByMetal?.[galleryKey]
+    : undefined;
   
   // Fall back to base images
   const images = normalizeImages(p);
@@ -50,13 +99,13 @@ export function resolveGallery(p: ProductLike, metalLabel?: string, caratLabel?:
   // final fallback to a safe placeholder
   const fallback = ["/products/placeholder.svg"];
 
-  return fromCaratGallery && fromCaratGallery.length
-    ? fromCaratGallery
-    : fromGallery && fromGallery.length
-      ? fromGallery
-      : fromImages && fromImages.length
-        ? fromImages
-        : fallback;
+  if (fromCaratGallery && fromCaratGallery.length) return fromCaratGallery;
+
+  if (fromGallery && fromGallery.length) {
+    return buildMetalGallery(p, fromGallery);
+  }
+
+  return fromImages && fromImages.length ? fromImages : fallback;
 }
 
 export function resolvePrimary(p: ProductLike, metalLabel?: string, caratLabel?: string): string {

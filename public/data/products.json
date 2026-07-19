@@ -9,7 +9,7 @@
       "/products/Celeste/Celeste-gold-side.jpeg",
       "/products/Celeste/Celeste-gold-back.jpeg"
     ],
-    "basePriceGBP": 3350,
+    "basePriceGBP": 2049,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -67,17 +67,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1650
       },
       {
         "label": "3ct+",
@@ -127,7 +127,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -245,7 +245,7 @@
       "/products/Luna/Luna-gold-side.jpeg",
       "/products/Luna/Luna-gold-back.jpeg"
     ],
-    "basePriceGBP": 3250,
+    "basePriceGBP": 2249,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -291,17 +291,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1650
       },
       {
         "label": "3ct+",
@@ -351,7 +351,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -459,7 +459,7 @@
       "/products/Seraphina/Seraphina-gold-side.jpeg",
       "/products/Seraphina/Seraphina-gold-back.jpeg"
     ],
-    "basePriceGBP": 3450,
+    "basePriceGBP": 2599,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -517,17 +517,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 600
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1250
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1750
       },
       {
         "label": "3ct+",
@@ -577,7 +577,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -695,7 +695,7 @@
       "/products/vow-and-veil/VV-gold-side.jpeg",
       "/products/vow-and-veil/VV-gold-back.jpeg"
     ],
-    "basePriceGBP": 4050,
+    "basePriceGBP": 2489,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -741,17 +741,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 900
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1560
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 2460
       },
       {
         "label": "3ct+",
@@ -801,7 +801,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -905,7 +905,7 @@
       "/products/Elara/Elara-gold-side.jpeg",
       "/products/Elara/Elara-gold-back.jpeg"
     ],
-    "basePriceGBP": 3950,
+    "basePriceGBP": 2499,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -951,17 +951,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1650
       },
       {
         "label": "3ct+",
@@ -1011,7 +1011,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -1114,7 +1114,7 @@
       "/products/Aveline/Aveline-gold-side.jpeg",
       "/products/Aveline/Aveline-gold-back.jpeg"
     ],
-    "basePriceGBP": 3450,
+    "basePriceGBP": 2449,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -1160,17 +1160,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1650
       },
       {
         "label": "3ct+",
@@ -1220,7 +1220,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -1322,7 +1322,7 @@
       "/products/Orabella/orabella-gold-side.jpeg",
       "/products/Orabella/orabella-gold-back.jpeg"
     ],
-    "basePriceGBP": 3750,
+    "basePriceGBP": 2689,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -1368,17 +1368,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 900
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1560
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 2460
       },
       {
         "label": "3ct+",
@@ -1428,7 +1428,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -1526,7 +1526,7 @@
       "/products/Clarion/rsol-gold-side.jpeg",
       "/products/Clarion/rsol-gold-back.jpeg"
     ],
-    "basePriceGBP": 3450,
+    "basePriceGBP": 1949,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -1572,17 +1572,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1650
       },
       {
         "label": "3ct+",
@@ -1632,7 +1632,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -1734,7 +1734,7 @@
       "/products/Ovalis/ovalis-side.jpeg",
       "/products/Ovalis/ovalis-back.jpeg"
     ],
-    "basePriceGBP": 3200,
+    "basePriceGBP": 2179,
     "metals": [
       {
         "name": "Platinum",
@@ -1780,17 +1780,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1550
       },
       {
         "label": "3ct+",
@@ -1840,7 +1840,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -1942,7 +1942,7 @@
       "/products/Eterna/eterna-side.jpeg",
       "/products/Eterna/eterna-back.jpeg"
     ],
-    "basePriceGBP": 3450,
+    "basePriceGBP": 2379,
     "metals": [
       {
         "name": "Platinum",
@@ -1988,17 +1988,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1150
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1550
       },
       {
         "label": "3ct+",
@@ -2095,7 +2095,7 @@
       "Z+3",
       "Z+4"
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "qualityBanner": "D/E/F colour • VS1+ clarity • IGI/GIA certified",
     "isFeatured": true,
@@ -2151,7 +2151,7 @@
       "/products/Nova/nova-side.jpeg",
       "/products/Nova/nova-back.jpeg"
     ],
-    "basePriceGBP": 3750,
+    "basePriceGBP": 2635,
     "metals": [
       {
         "name": "Platinum",
@@ -2197,17 +2197,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1000
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1500
       },
       {
         "label": "3ct+",
@@ -2304,7 +2304,7 @@
       "Z+3",
       "Z+4"
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "qualityBanner": "D/E/F colour • VS1+ clarity • IGI/GIA certified",
     "isFeatured": true,
@@ -2421,7 +2421,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -2566,7 +2566,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -2711,7 +2711,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -2856,7 +2856,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3001,7 +3001,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3146,7 +3146,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3291,7 +3291,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3436,7 +3436,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3581,7 +3581,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3728,7 +3728,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -3876,7 +3876,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -4023,7 +4023,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -4170,7 +4170,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -4318,7 +4318,7 @@
         "priceDeltaGBP": 150
       }
     ],
-    "engravingFeeGBP": 25,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 30,
     "sizes": [
       "F",
@@ -4751,7 +4751,7 @@
       "/products/Aura/aura-gold-side.jpg",
       "/products/Aura/aura-gold-back.jpg"
     ],
-    "basePriceGBP": 3300,
+    "basePriceGBP": 2435,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -4809,17 +4809,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1000
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1500
       },
       {
         "label": "3ct+",
@@ -4869,7 +4869,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -4982,7 +4982,7 @@
       "/products/Lumea/lumia-gold-side.jpg",
       "/products/Lumea/lumia-gold-back.jpg"
     ],
-    "basePriceGBP": 3280,
+    "basePriceGBP": 2689,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5040,17 +5040,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 900
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1560
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 2460
       },
       {
         "label": "3ct+",
@@ -5100,7 +5100,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -5214,7 +5214,7 @@
       "/products/Unity/unity-gold-side.jpg",
       "/products/Unity/unity-gold-back.jpg"
     ],
-    "basePriceGBP": 3150,
+    "basePriceGBP": 3199,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5260,17 +5260,17 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 2000
+        "priceDeltaGBP": 500
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 5000
+        "priceDeltaGBP": 1100
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 8000
+        "priceDeltaGBP": 1600
       },
       {
         "label": "3ct+",
@@ -5320,7 +5320,7 @@
         "priceDeltaGBP": 0
       }
     ],
-    "engravingFeeGBP": 15,
+    "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
     "sizes": [
       "F",
@@ -5550,19 +5550,55 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": true,
-    "collections": ["earrings", "eternal", "four-claw", "studs", "round"],
-    "styles": ["four-claw", "studs"],
+    "collections": [
+      "earrings",
+      "eternal",
+      "four-claw",
+      "studs",
+      "round"
+    ],
+    "styles": [
+      "four-claw",
+      "studs"
+    ],
     "shape": "round",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Eternal/eternal-gold-front.PNG", "/products/Earrings/Eternal/eternal-gold-side.PNG", "/products/Earrings/Eternal/eternal-gold-back.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Eternal/eternal-rose-front.PNG", "/products/Earrings/Eternal/eternal-rose-side.PNG", "/products/Earrings/Eternal/eternal-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Eternal/eternal-silver-front.PNG", "/products/Earrings/Eternal/eternal-silver-side.PNG", "/products/Earrings/Eternal/eternal-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Eternal/eternal-gold-front.PNG",
+        "/products/Earrings/Eternal/eternal-gold-side.PNG",
+        "/products/Earrings/Eternal/eternal-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Eternal/eternal-rose-front.PNG",
+        "/products/Earrings/Eternal/eternal-rose-side.PNG",
+        "/products/Earrings/Eternal/eternal-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Eternal/eternal-silver-front.PNG",
+        "/products/Earrings/Eternal/eternal-silver-side.PNG",
+        "/products/Earrings/Eternal/eternal-silver-back.PNG"
+      ]
     }
   },
   {
@@ -5577,19 +5613,53 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": true,
-    "collections": ["earrings", "heirloom", "studs", "princess"],
-    "styles": ["studs"],
+    "collections": [
+      "earrings",
+      "heirloom",
+      "studs",
+      "princess"
+    ],
+    "styles": [
+      "studs"
+    ],
     "shape": "princess",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Heirloom/heirloom-gold-front.PNG", "/products/Earrings/Heirloom/heirloom-gold-side.PNG", "/products/Earrings/Heirloom/heirloom-gold-back.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Heirloom/heirloom-rose-front.PNG", "/products/Earrings/Heirloom/heirloom-rose-side.PNG", "/products/Earrings/Heirloom/heirloom-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Heirloom/heirloom-silver-front.PNG", "/products/Earrings/Heirloom/heirloom-silver-side.PNG", "/products/Earrings/Heirloom/heirloom-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Heirloom/heirloom-gold-front.PNG",
+        "/products/Earrings/Heirloom/heirloom-gold-side.PNG",
+        "/products/Earrings/Heirloom/heirloom-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Heirloom/heirloom-rose-front.PNG",
+        "/products/Earrings/Heirloom/heirloom-rose-side.PNG",
+        "/products/Earrings/Heirloom/heirloom-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Heirloom/heirloom-silver-front.PNG",
+        "/products/Earrings/Heirloom/heirloom-silver-side.PNG",
+        "/products/Earrings/Heirloom/heirloom-silver-back.PNG"
+      ]
     }
   },
   {
@@ -5604,19 +5674,55 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": false,
-    "collections": ["earrings", "icon", "emerald", "studs", "talon-claw"],
-    "styles": ["studs", "talon-claw"],
+    "collections": [
+      "earrings",
+      "icon",
+      "emerald",
+      "studs",
+      "talon-claw"
+    ],
+    "styles": [
+      "studs",
+      "talon-claw"
+    ],
     "shape": "emerald",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Icon/icon-gold-front.PNG", "/products/Earrings/Icon/icon-gold-side.PNG", "/products/Earrings/Icon/icon-gold-side(1).PNG"],
-      "18k Rose Gold": ["/products/Earrings/Icon/icon-rose-front.PNG", "/products/Earrings/Icon/icon-rose-side.PNG", "/products/Earrings/Icon/icon-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Icon/icon-silver-front.PNG", "/products/Earrings/Icon/icon-silver-side.PNG", "/products/Earrings/Icon/icon-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Icon/icon-gold-front.PNG",
+        "/products/Earrings/Icon/icon-gold-side.PNG",
+        "/products/Earrings/Icon/icon-gold-side(1).PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Icon/icon-rose-front.PNG",
+        "/products/Earrings/Icon/icon-rose-side.PNG",
+        "/products/Earrings/Icon/icon-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Icon/icon-silver-front.PNG",
+        "/products/Earrings/Icon/icon-silver-side.PNG",
+        "/products/Earrings/Icon/icon-silver-back.PNG"
+      ]
     }
   },
   {
@@ -5632,19 +5738,56 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": false,
-    "collections": ["earrings", "legacy", "hoops", "round"],
-    "styles": ["hoops"],
+    "collections": [
+      "earrings",
+      "legacy",
+      "hoops",
+      "round"
+    ],
+    "styles": [
+      "hoops"
+    ],
     "shape": "round",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Legacy/legacy-gold-front.PNG", "/products/Earrings/Legacy/legacy-gold-side.PNG", "/products/Earrings/Legacy/legacy-gold-dual.PNG", "/products/Earrings/Legacy/legacy-gold-open.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Legacy/legacy-rose-front.PNG", "/products/Earrings/Legacy/legacy-rose-side.PNG", "/products/Earrings/Legacy/legacy-rose-dual.PNG", "/products/Earrings/Legacy/legacy-rose-open.PNG"],
-      "18k White Gold": ["/products/Earrings/Legacy/legacy-silver-front.PNG", "/products/Earrings/Legacy/legacy-silver-side.PNG", "/products/Earrings/Legacy/legacy-silver-dual.PNG", "/products/Earrings/Legacy/legacy-silver-open.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Legacy/legacy-gold-front.PNG",
+        "/products/Earrings/Legacy/legacy-gold-side.PNG",
+        "/products/Earrings/Legacy/legacy-gold-dual.PNG",
+        "/products/Earrings/Legacy/legacy-gold-open.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Legacy/legacy-rose-front.PNG",
+        "/products/Earrings/Legacy/legacy-rose-side.PNG",
+        "/products/Earrings/Legacy/legacy-rose-dual.PNG",
+        "/products/Earrings/Legacy/legacy-rose-open.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Legacy/legacy-silver-front.PNG",
+        "/products/Earrings/Legacy/legacy-silver-side.PNG",
+        "/products/Earrings/Legacy/legacy-silver-dual.PNG",
+        "/products/Earrings/Legacy/legacy-silver-open.PNG"
+      ]
     }
   },
   {
@@ -5659,19 +5802,57 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": true,
-    "collections": ["earrings", "pure", "halo", "four-claw", "studs", "round"],
-    "styles": ["halo", "four-claw", "studs"],
+    "collections": [
+      "earrings",
+      "pure",
+      "halo",
+      "four-claw",
+      "studs",
+      "round"
+    ],
+    "styles": [
+      "halo",
+      "four-claw",
+      "studs"
+    ],
     "shape": "round",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Pure/pure-gold-front.PNG", "/products/Earrings/Pure/pure-gold-side.PNG", "/products/Earrings/Pure/pure-gold-back.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Pure/pure-rose-front.PNG", "/products/Earrings/Pure/pure-rose-side.PNG", "/products/Earrings/Pure/pure-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Pure/pure-silver-front.PNG", "/products/Earrings/Pure/pure-silver-side.PNG", "/products/Earrings/Pure/pure-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Pure/pure-gold-front.PNG",
+        "/products/Earrings/Pure/pure-gold-side.PNG",
+        "/products/Earrings/Pure/pure-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Pure/pure-rose-front.PNG",
+        "/products/Earrings/Pure/pure-rose-side.PNG",
+        "/products/Earrings/Pure/pure-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Pure/pure-silver-front.PNG",
+        "/products/Earrings/Pure/pure-silver-side.PNG",
+        "/products/Earrings/Pure/pure-silver-back.PNG"
+      ]
     }
   },
   {
@@ -5686,18 +5867,53 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": false,
-    "collections": ["earrings", "refined", "bezel-set", "studs"],
-    "styles": ["bezel-set", "studs"],
+    "collections": [
+      "earrings",
+      "refined",
+      "bezel-set",
+      "studs"
+    ],
+    "styles": [
+      "bezel-set",
+      "studs"
+    ],
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Refined/refined-gold-front.PNG", "/products/Earrings/Refined/refined-gold-side.PNG", "/products/Earrings/Refined/refined-gold-back.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Refined/refined-rose-front.PNG", "/products/Earrings/Refined/refined-rose-side.PNG", "/products/Earrings/Refined/refined-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Refined/refined-silver-front.PNG", "/products/Earrings/Refined/refined-silver-side.PNG", "/products/Earrings/Refined/refined-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Refined/refined-gold-front.PNG",
+        "/products/Earrings/Refined/refined-gold-side.PNG",
+        "/products/Earrings/Refined/refined-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Refined/refined-rose-front.PNG",
+        "/products/Earrings/Refined/refined-rose-side.PNG",
+        "/products/Earrings/Refined/refined-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Refined/refined-silver-front.PNG",
+        "/products/Earrings/Refined/refined-silver-side.PNG",
+        "/products/Earrings/Refined/refined-silver-back.PNG"
+      ]
     }
   },
   {
@@ -5712,19 +5928,4939 @@
     ],
     "basePriceGBP": 0,
     "metals": [
-      { "name": "18k Yellow Gold", "hex": "#FFD700", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/goldswatch.png" },
-      { "name": "18k Rose Gold", "hex": "#B76E79", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/rosegoldswatch.png" },
-      { "name": "18k White Gold", "hex": "#FAF9F6", "priceDeltaGBP": 0, "imageUrl": "/icons/swatches/whitegoldswatch.png" }
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
     ],
     "qualityBanner": "18k Yellow, Rose & White Gold",
     "isFeatured": false,
-    "collections": ["earrings", "timeless", "bezel-set", "studs", "round"],
-    "styles": ["bezel-set", "studs"],
+    "collections": [
+      "earrings",
+      "timeless",
+      "bezel-set",
+      "studs",
+      "round"
+    ],
+    "styles": [
+      "bezel-set",
+      "studs"
+    ],
     "shape": "round",
     "galleryByMetal": {
-      "18k Yellow Gold": ["/products/Earrings/Timeless/timeless-gold-front.PNG", "/products/Earrings/Timeless/timeless-gold-side.PNG", "/products/Earrings/Timeless/timeless-gold-back.PNG"],
-      "18k Rose Gold": ["/products/Earrings/Timeless/timeless-rose-front.PNG", "/products/Earrings/Timeless/timeless-rose-side.PNG", "/products/Earrings/Timeless/timeless-rose-back.PNG"],
-      "18k White Gold": ["/products/Earrings/Timeless/timeless-silver-front.PNG", "/products/Earrings/Timeless/timeless-silver-side.PNG", "/products/Earrings/Timeless/timeless-silver-back.PNG"]
+      "18k Yellow Gold": [
+        "/products/Earrings/Timeless/timeless-gold-front.PNG",
+        "/products/Earrings/Timeless/timeless-gold-side.PNG",
+        "/products/Earrings/Timeless/timeless-gold-back.PNG"
+      ],
+      "18k Rose Gold": [
+        "/products/Earrings/Timeless/timeless-rose-front.PNG",
+        "/products/Earrings/Timeless/timeless-rose-side.PNG",
+        "/products/Earrings/Timeless/timeless-rose-back.PNG"
+      ],
+      "18k White Gold": [
+        "/products/Earrings/Timeless/timeless-silver-front.PNG",
+        "/products/Earrings/Timeless/timeless-silver-side.PNG",
+        "/products/Earrings/Timeless/timeless-silver-back.PNG"
+      ]
     }
+  },
+  {
+    "slug": "amira-oval-marquise-accents",
+    "title": "Amira — Oval with Marquise Accents",
+    "blurb": "Oval solitaire with a twisted band and marquise accent stones.",
+    "description": "Amira features an oval lab-grown gemstone in a cathedral setting with a twisted band, adorned with four intricately set marquise accent stones. Since its inception, Amira has prevailed as one of our most coveted original designs.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-amira-ring-1/01.jpg",
+      "/products/tmc-import/the-amira-ring-1/02.jpg",
+      "/products/tmc-import/the-amira-ring-1/03.jpg",
+      "/products/tmc-import/the-amira-ring-1/04.jpg"
+    ],
+    "basePriceGBP": 3450,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "accented",
+      "oval"
+    ],
+    "shape": "oval",
+    "styles": [
+      "accented",
+      "twisted-band"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-amira-ring-1/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-amira-ring-1/metal-rose.jpg"
+      ]
+    },
+    "seoTitle": "Amira — Oval with Marquise Accents | ELYSIUM",
+    "seoDescription": "Oval solitaire with a twisted band and marquise accent stones.",
+    "isHidden": true
+  },
+  {
+    "slug": "luise-oval-solitaire",
+    "title": "Luise — Oval Solitaire",
+    "blurb": "Modern classic oval solitaire in a delicate basket setting.",
+    "description": "Luise is a modern classic featuring an oval-cut lab-grown gemstone meticulously crafted in a basket setting, blending style and femininity with a millennial twist.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-luise-ring-oval-solitaire/01.jpg",
+      "/products/tmc-import/the-luise-ring-oval-solitaire/02.jpg",
+      "/products/tmc-import/the-luise-ring-oval-solitaire/03.jpg",
+      "/products/tmc-import/the-luise-ring-oval-solitaire/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "oval"
+    ],
+    "shape": "oval",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Luise — Oval Solitaire | ELYSIUM",
+    "seoDescription": "Modern classic oval solitaire in a delicate basket setting.",
+    "isHidden": true
+  },
+  {
+    "slug": "audrey-emerald-solitaire",
+    "title": "Audrey — Emerald Solitaire",
+    "blurb": "Emerald-cut step-faceted solitaire in a divine basket setting.",
+    "description": "Audrey features a beautiful emerald-cut lab-grown gemstone with step-cut faceting, elegantly presented in a divine basket setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-audrey-ring-emerald-solitaire/01.jpg",
+      "/products/tmc-import/the-audrey-ring-emerald-solitaire/02.jpg",
+      "/products/tmc-import/the-audrey-ring-emerald-solitaire/03.jpg",
+      "/products/tmc-import/the-audrey-ring-emerald-solitaire/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "emerald"
+    ],
+    "shape": "emerald",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Audrey — Emerald Solitaire | ELYSIUM",
+    "seoDescription": "Emerald-cut step-faceted solitaire in a divine basket setting.",
+    "isHidden": true
+  },
+  {
+    "slug": "vienna-radiant-solitaire",
+    "title": "Vienna — Radiant Solitaire",
+    "blurb": "Radiant-cut solitaire with a captivating modern silhouette.",
+    "description": "Vienna dazzles with a radiant-cut lab-grown gemstone in a stunning basket setting, creating a modern and captivating look.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-vienna-ring-radiant-solitaire/01.jpg",
+      "/products/tmc-import/the-vienna-ring-radiant-solitaire/02.jpg",
+      "/products/tmc-import/the-vienna-ring-radiant-solitaire/03.jpg",
+      "/products/tmc-import/the-vienna-ring-radiant-solitaire/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "radiant"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Vienna — Radiant Solitaire | ELYSIUM",
+    "seoDescription": "Radiant-cut solitaire with a captivating modern silhouette.",
+    "isHidden": true
+  },
+  {
+    "slug": "florence-oval-pear-trilogy",
+    "title": "Florence — Oval & Pear Trilogy",
+    "blurb": "Oval centre with pear side stones — past, present, future.",
+    "description": "Florence features an oval centre stone and two pear side stones, each gemstone representing 'the past, the present, and the future'.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/01.jpg",
+      "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/02.jpg",
+      "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/03.jpg",
+      "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/04.jpg"
+    ],
+    "basePriceGBP": 3450,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "trilogy",
+      "oval"
+    ],
+    "shape": "oval",
+    "styles": [
+      "trilogy",
+      "accented"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Florence — Oval & Pear Trilogy | ELYSIUM",
+    "seoDescription": "Oval centre with pear side stones — past, present, future.",
+    "isHidden": true
+  },
+  {
+    "slug": "ophelia-elongated-cushion-solitaire",
+    "title": "Ophelia — Elongated Cushion Solitaire",
+    "blurb": "Elongated cushion solitaire blending oval and rectangular lines.",
+    "description": "Ophelia features an elongated cushion-cut lab-grown gemstone in a beautiful basket setting, offering a unique blend of oval and rectangular stone shapes.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/01.jpg",
+      "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/02.jpg",
+      "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/03.jpg",
+      "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": true,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "cushion"
+    ],
+    "shape": "cushion",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Ophelia — Elongated Cushion Solitaire | ELYSIUM",
+    "seoDescription": "Elongated cushion solitaire blending oval and rectangular lines.",
+    "isHidden": true
+  },
+  {
+    "slug": "avery-oval-marquise-band",
+    "title": "Avery — Oval with Marquise & Round Brilliant Band",
+    "blurb": "Oval solitaire on a band lined with marquise and round brilliants.",
+    "description": "Avery offers a stunning twist on the modern classic oval solitaire, featuring a detailed band lined with marquise and round brilliant stones.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/01.jpg",
+      "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/02.png",
+      "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/03.jpg",
+      "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/04.jpg"
+    ],
+    "basePriceGBP": 3450,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "accented",
+      "oval"
+    ],
+    "shape": "oval",
+    "styles": [
+      "accented",
+      "pave-band"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Avery — Oval with Marquise & Round Brilliant Band | ELYSIUM",
+    "seoDescription": "Oval solitaire on a band lined with marquise and round brilliants.",
+    "isHidden": true
+  },
+  {
+    "slug": "arie-marquise-solitaire",
+    "title": "Arie — Marquise Solitaire",
+    "blurb": "Striking elongated marquise solitaire in a basket setting.",
+    "description": "Arie boasts a striking elongated design, with a captivating marquise-cut lab-grown gemstone nestled in a stunning basket setting for a chic and contemporary solitaire appeal.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/01.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/02.png",
+      "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/03.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "marquise"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Arie — Marquise Solitaire | ELYSIUM",
+    "seoDescription": "Striking elongated marquise solitaire in a basket setting.",
+    "isHidden": true
+  },
+  {
+    "slug": "isla-round-solitaire",
+    "title": "Isla — Round Solitaire",
+    "blurb": "Forever-classic round solitaire in a basket setting.",
+    "description": "A forever classic, Isla features a round-cut lab-grown gemstone in a stunning basket setting — a mesmerising heirloom piece.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-isla-ring-round-solitaire-new/01.jpg",
+      "/products/tmc-import/the-isla-ring-round-solitaire-new/02.jpg",
+      "/products/tmc-import/the-isla-ring-round-solitaire-new/03.jpg",
+      "/products/tmc-import/the-isla-ring-round-solitaire-new/04.jpg"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "round"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Isla — Round Solitaire | ELYSIUM",
+    "seoDescription": "Forever-classic round solitaire in a basket setting.",
+    "isHidden": true
+  },
+  {
+    "slug": "sophia-pear-solitaire",
+    "title": "Sophia — Pear Solitaire",
+    "blurb": "Pear-cut solitaire balancing simplicity and sophistication.",
+    "description": "Sophia features a pear-cut lab-grown gemstone set in an exquisite basket setting, achieving the perfect balance between simplicity and sophistication.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/01.jpg",
+      "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/02.jpg",
+      "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/03.png",
+      "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/04.png"
+    ],
+    "basePriceGBP": 3250,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 2000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 5000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 8000
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "isFeatured": false,
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "solitaire",
+      "pear"
+    ],
+    "shape": "pear",
+    "styles": [
+      "solitaire",
+      "basket"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg"
+      ]
+    },
+    "seoTitle": "Sophia — Pear Solitaire | ELYSIUM",
+    "seoDescription": "Pear-cut solitaire balancing simplicity and sophistication.",
+    "isHidden": true
+  },
+  {
+    "slug": "vesper",
+    "title": "Vesper",
+    "blurb": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion.",
+    "description": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion.",
+    "images": [
+      "/products/tmc-import/the-ava-ring-pave-wedding-band/yellow.jpg",
+      "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg",
+      "/products/tmc-import/the-ava-ring-pave-wedding-band/rose.jpg"
+    ],
+    "basePriceGBP": 875,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      }
+    ],
+    "clarities": [
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "wedding-bands",
+      "pave",
+      "vesper"
+    ],
+    "styles": [
+      "pave"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg"
+      ]
+    },
+    "seoTitle": "Vesper | ELYSIUM",
+    "seoDescription": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion."
+  },
+  {
+    "slug": "evermore",
+    "title": "Evermore",
+    "blurb": "The Evermore showcases a radiant-cut centre diamond, gracefully complemented by an intricately crafted band adorned with alternating marquise and round brilliant diamonds.",
+    "description": "The Evermore showcases a radiant-cut centre diamond, gracefully complemented by an intricately crafted band adorned with alternating marquise and round brilliant diamonds. The result is a timeless design that radiates elegance, brilliance, and exceptional craftsmanship.",
+    "images": [
+      "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg",
+      "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg",
+      "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg"
+    ],
+    "basePriceGBP": 2199,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "radiant",
+      "marquise",
+      "two-tone",
+      "evermore"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "marquise",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg"
+      ]
+    },
+    "seoTitle": "Evermore | ELYSIUM",
+    "seoDescription": "The Evermore showcases a radiant-cut centre diamond, gracefully complemented by an intricately crafted band adorned with alternating marquise and round brilliant diamonds."
+  },
+  {
+    "slug": "lumina",
+    "title": "Lumina",
+    "blurb": "The Lumina exudes effortless brilliance, featuring a radiant-cut cultured gemstone framed by a shimmering halo of round brilliant stones.",
+    "description": "The Lumina exudes effortless brilliance, featuring a radiant-cut cultured gemstone framed by a shimmering halo of round brilliant stones. Designed to maximise light and sparkle, it is a timeless expression of refined elegance.",
+    "images": [
+      "/products/tmc-import/the-vienna-ring-radiant-halo/yellow.jpg",
+      "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg",
+      "/products/tmc-import/the-vienna-ring-radiant-halo/rose.jpg"
+    ],
+    "basePriceGBP": 2249,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "radiant",
+      "halo",
+      "lumina"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "halo"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-halo/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-halo/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg"
+      ]
+    },
+    "seoTitle": "Lumina | ELYSIUM",
+    "seoDescription": "The Lumina exudes effortless brilliance, featuring a radiant-cut cultured gemstone framed by a shimmering halo of round brilliant stones."
+  },
+  {
+    "slug": "arabella",
+    "title": "Arabella",
+    "blurb": "The Arabella showcases a radiant-cut lab-grown diamond, gracefully flanked by two pear-cut accent stones and secured within an elegant basket setting.",
+    "description": "The Arabella showcases a radiant-cut lab-grown diamond, gracefully flanked by two pear-cut accent stones and secured within an elegant basket setting. A timeless symbol of enduring love, the three stones beautifully represent the past, the present, and the future—celebrating every chapter of your journey together.",
+    "images": [
+      "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/yellow.jpg",
+      "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg",
+      "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/rose.jpg"
+    ],
+    "basePriceGBP": 2160,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "radiant",
+      "trilogy",
+      "arabella"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "trilogy"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg"
+      ]
+    },
+    "seoTitle": "Arabella | ELYSIUM",
+    "seoDescription": "The Arabella showcases a radiant-cut lab-grown diamond, gracefully flanked by two pear-cut accent stones and secured within an elegant basket setting."
+  },
+  {
+    "slug": "vivienne",
+    "title": "Vivienne",
+    "blurb": "The Vivienne showcases a radiant-cut lab-grown diamond, gracefully suspended between an elegantly sculpted split shank.",
+    "description": "The Vivienne showcases a radiant-cut lab-grown diamond, gracefully suspended between an elegantly sculpted split shank. Defined by its bold architectural silhouette and flowing curves, it strikes a perfect balance between contemporary sophistication and timeless elegance.\n\nPlease note, this design is crafted with a 3.2mm band width.",
+    "images": [
+      "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/yellow.jpg",
+      "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg",
+      "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1799,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "radiant",
+      "solitaire",
+      "vivienne"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg"
+      ]
+    },
+    "seoTitle": "Vivienne | ELYSIUM",
+    "seoDescription": "The Vivienne showcases a radiant-cut lab-grown diamond, gracefully suspended between an elegantly sculpted split shank."
+  },
+  {
+    "slug": "sorella",
+    "title": "Sorella",
+    "blurb": "The Sorella showcases a radiant-cut lab-grown diamond, elegantly suspended within a sculpted split shank in a distinctive east-west setting.",
+    "description": "The Sorella showcases a radiant-cut lab-grown diamond, elegantly suspended within a sculpted split shank in a distinctive east-west setting. A contemporary interpretation of a timeless silhouette, its graceful lines and bold orientation embody confidence, individuality, and effortless sophistication.\n\nPlease note, this design is crafted with a 3.2mm band width.",
+    "images": [
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/yellow.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1799,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "radiant",
+      "solitaire",
+      "sorella"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg"
+      ]
+    },
+    "seoTitle": "Sorella | ELYSIUM",
+    "seoDescription": "The Sorella showcases a radiant-cut lab-grown diamond, elegantly suspended within a sculpted split shank in a distinctive east-west setting."
+  },
+  {
+    "slug": "noemi",
+    "title": "Noémi",
+    "blurb": "The Noémi showcases a round-cut cultured gemstone, gracefully embraced by an organically sculpted wrapped band.",
+    "description": "The Noémi showcases a round-cut cultured gemstone, gracefully embraced by an organically sculpted wrapped band. A harmonious blend of contemporary elegance and timeless design, it offers a distinctive silhouette with effortless sophistication.",
+    "images": [
+      "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/yellow.jpg",
+      "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg",
+      "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/rose.jpg"
+    ],
+    "basePriceGBP": 1899,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "solitaire",
+      "noemi"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg"
+      ]
+    },
+    "seoTitle": "Noémi | ELYSIUM",
+    "seoDescription": "The Noémi showcases a round-cut cultured gemstone, gracefully embraced by an organically sculpted wrapped band."
+  },
+  {
+    "slug": "amarante",
+    "title": "Amarante",
+    "blurb": "The Amarante is a captivating design defined by effortless elegance.",
+    "description": "The Amarante is a captivating design defined by effortless elegance. Showcasing a round-cut cultured diamond, beautifully enhanced by a graceful arrangement of scattered round brilliant accent stones, it offers a delicate balance of brilliance, refinement, and timeless allure.",
+    "images": [
+      "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/yellow.jpg",
+      "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose.jpg"
+    ],
+    "basePriceGBP": 1875,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "amarante"
+    ],
+    "shape": "round",
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose.jpg"
+      ]
+    },
+    "seoTitle": "Amarante | ELYSIUM",
+    "seoDescription": "The Amarante is a captivating design defined by effortless elegance."
+  },
+  {
+    "slug": "elodie",
+    "title": "Elodie",
+    "blurb": "The Elodie showcases a captivating arrangement of round brilliant lab-grown gemstones, elegantly set within a sculpted split shank design.",
+    "description": "The Elodie showcases a captivating arrangement of round brilliant lab-grown gemstones, elegantly set within a sculpted split shank design. A striking expression of refined craftsmanship, symbolising strength, individuality, and a love that endures.\n\nPlease note, this design is crafted with a 3.2mm band width.",
+    "images": [
+      "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/yellow.jpg",
+      "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg",
+      "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/rose.jpg"
+    ],
+    "basePriceGBP": 2495,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "trilogy",
+      "elodie"
+    ],
+    "shape": "round",
+    "styles": [
+      "trilogy"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg"
+      ]
+    },
+    "seoTitle": "Elodie | ELYSIUM",
+    "seoDescription": "The Elodie showcases a captivating arrangement of round brilliant lab-grown gemstones, elegantly set within a sculpted split shank design."
+  },
+  {
+    "slug": "anastasia",
+    "title": "Anastasia",
+    "blurb": "The Anastasia showcases a round lab-grown diamond, gracefully elevated within a classic cathedral setting.",
+    "description": "The Anastasia showcases a round lab-grown diamond, gracefully elevated within a classic cathedral setting. Its elegantly twisted band is adorned with four meticulously set marquise-cut accent stones, creating a design that blends timeless craftsmanship with contemporary sophistication.",
+    "images": [
+      "/products/tmc-import/the-amira-ring-round-with-marquise-accents/yellow.jpg",
+      "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose.jpg"
+    ],
+    "basePriceGBP": 2025,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "marquise",
+      "anastasia"
+    ],
+    "shape": "round",
+    "styles": [
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose.jpg"
+      ]
+    },
+    "seoTitle": "Anastasia | ELYSIUM",
+    "seoDescription": "The Anastasia showcases a round lab-grown diamond, gracefully elevated within a classic cathedral setting."
+  },
+  {
+    "slug": "isolde",
+    "title": "Isolde",
+    "blurb": "The Isolde is a timeless classic, designed to be treasured for generations.",
+    "description": "The Isolde is a timeless classic, designed to be treasured for generations. Featuring a radiant halo of round brilliant stones, it exudes enduring elegance and exceptional brilliance from every angle.",
+    "images": [
+      "/products/tmc-import/the-isla-ring-round-brilliant-halo/yellow.jpg",
+      "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg",
+      "/products/tmc-import/the-isla-ring-round-brilliant-halo/rose.jpg"
+    ],
+    "basePriceGBP": 2149,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "halo",
+      "isolde"
+    ],
+    "shape": "round",
+    "styles": [
+      "halo"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg"
+      ]
+    },
+    "seoTitle": "Isolde | ELYSIUM",
+    "seoDescription": "The Isolde is a timeless classic, designed to be treasured for generations."
+  },
+  {
+    "slug": "ophellia",
+    "title": "Ophellia",
+    "blurb": "The Ophellia showcases a round brilliant cut lab-grown diamond, elegantly suspended within a sculpted split shank i setting.",
+    "description": "The Ophellia showcases a round brilliant cut lab-grown diamond, elegantly suspended within a sculpted split shank i setting. A contemporary interpretation of a timeless silhouette, its graceful lines and bold orientation embody confidence, individuality, and effortless sophistication.\n\nPlease note, this design is crafted with a 3.2mm band width.",
+    "images": [
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/yellow.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1799,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "cushion",
+      "solitaire",
+      "ophellia"
+    ],
+    "shape": "cushion",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg"
+      ]
+    },
+    "seoTitle": "Ophellia | ELYSIUM",
+    "seoDescription": "The Ophellia showcases a round brilliant cut lab-grown diamond, elegantly suspended within a sculpted split shank i setting."
+  },
+  {
+    "slug": "nala",
+    "title": "Nala",
+    "blurb": "The Nala is a celebration of love in its most natural form.",
+    "description": "The Nala is a celebration of love in its most natural form. Showcasing a round brilliant lab-grown diamond, it rests gracefully upon a delicately sculpted curved band. A contemporary yet timeless design, created to honour a love that lasts forever.\n\nPlease note, this design is crafted with a 2.0mm band width.",
+    "images": [
+      "/products/tmc-import/the-maya-ring-round-curved-solitaire/yellow.jpg",
+      "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg",
+      "/products/tmc-import/the-maya-ring-round-curved-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1600,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "solitaire",
+      "nala"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg"
+      ]
+    },
+    "seoTitle": "Nala | ELYSIUM",
+    "seoDescription": "The Nala is a celebration of love in its most natural form."
+  },
+  {
+    "slug": "callista",
+    "title": "Callista",
+    "blurb": "The Callista Bezel Solitaire offers a refined interpretation of a timeless classic.",
+    "description": "The Callista Bezel Solitaire offers a refined interpretation of a timeless classic. Featuring a round brilliant-cut cultured diamond, elegantly secured within a sleek solid precious metal bezel, this design embodies modern sophistication with understated elegance.",
+    "images": [
+      "/products/tmc-import/the-isla-ring-round-bezel-solitaire/yellow.jpg",
+      "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg",
+      "/products/tmc-import/the-isla-ring-round-bezel-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1645,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "round",
+      "solitaire",
+      "callista"
+    ],
+    "shape": "round",
+    "styles": [
+      "solitaire"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/yellow.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/rose.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg"
+      ]
+    },
+    "seoTitle": "Callista | ELYSIUM",
+    "seoDescription": "The Callista Bezel Solitaire offers a refined interpretation of a timeless classic."
   }
 ]

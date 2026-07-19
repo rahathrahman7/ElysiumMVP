@@ -64,30 +64,52 @@ async function loadProductsAsync(): Promise<Product[]> {
   }
 }
 
-// Export products as a getter to load on demand
-export const products: Product[] = loadProductsSync();
+export function isProductVisible(product: Product): boolean {
+  return !product.isHidden;
+}
+
+function visibleProducts(products: Product[]): Product[] {
+  return products.filter(isProductVisible);
+}
+
+// Export visible products as a getter to load on demand
+export const products: Product[] = visibleProducts(loadProductsSync());
 
 export function getAllProducts(): Product[] {
+  return visibleProducts(loadProductsSync());
+}
+
+export function getAllProductsIncludingHidden(): Product[] {
   return loadProductsSync();
 }
 
-export function getProductBySlug(slug: string): Product | undefined {
+export function getProductBySlug(slug: string, options?: { includeHidden?: boolean }): Product | undefined {
   const products = loadProductsSync();
   const product = products.find(p => p.slug === slug);
-  
-  if (!product && products.length > 0) {
-    console.warn(`[products.ts] Product not found: "${slug}". Available slugs:`, products.slice(0, 5).map(p => p.slug));
+
+  if (!product) {
+    if (products.length > 0) {
+      console.warn(`[products.ts] Product not found: "${slug}". Available slugs:`, products.slice(0, 5).map(p => p.slug));
+    }
+    return undefined;
   }
-  
+
+  if (!options?.includeHidden && product.isHidden) {
+    return undefined;
+  }
+
   return product;
 }
 
 // Async versions for client components
 export async function getAllProductsAsync(): Promise<Product[]> {
-  return loadProductsAsync();
+  return visibleProducts(await loadProductsAsync());
 }
 
-export async function getProductBySlugAsync(slug: string): Promise<Product | undefined> {
+export async function getProductBySlugAsync(slug: string, options?: { includeHidden?: boolean }): Promise<Product | undefined> {
   const products = await loadProductsAsync();
-  return products.find(p => p.slug === slug);
+  const product = products.find(p => p.slug === slug);
+  if (!product) return undefined;
+  if (!options?.includeHidden && product.isHidden) return undefined;
+  return product;
 }

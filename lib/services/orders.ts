@@ -113,6 +113,15 @@ export async function updateOrderStatus(
   });
 }
 
+export async function claimAdminNotification(orderId: string): Promise<boolean> {
+  const result = await prisma.order.updateMany({
+    where: { id: orderId, adminNotifiedAt: null },
+    data: { adminNotifiedAt: new Date() },
+  });
+
+  return result.count > 0;
+}
+
 export async function getAllOrders(params?: {
   status?: OrderStatus;
   limit?: number;

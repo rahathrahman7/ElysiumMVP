@@ -1,0 +1,226 @@
+[
+{
+"slug": "aura-engagement-ring",
+"title": "Aura — Engagement Ring",
+"blurb": "Oval-cut centre stone with refined band adorned with round and marquise-cut side stones.",
+"image": "/products/Aura/Aura-gold-front.jpg",
+"hint": "round oval marquise",
+"isMensBand": false
+},
+{
+"slug": "aveline-radiant-solitaire",
+"title": "Aveline — Radiant Solitaire",
+"blurb": "Radiant solitaire with hidden halo featuring four talon-tipped claws.",
+"image": "/products/Aveline/Aveline-gold-front.jpeg",
+"hint": "hidden halo solitaire radiant",
+"isMensBand": false
+},
+{
+"slug": "celeste-six-claw-solitaire",
+"title": "Celeste — Six-Claw Solitaire",
+"blurb": "Timeless round solitaire secured by six graceful eagle-claw prongs.",
+"image": "/products/Celeste/Celeste-gold-front.jpeg",
+"hint": "solitaire round",
+"isMensBand": false
+},
+{
+"slug": "clarion-engagement-ring",
+"title": "Clarion",
+"blurb": "Radiant solitaire with four-claw setting in classic elegance.",
+"image": "/products/Clarion/rsol-gold-front.jpeg",
+"hint": "solitaire radiant",
+"isMensBand": false
+},
+{
+"slug": "elara-trilogy",
+"title": "Elara — Trilogy",
+"blurb": "Timeless trilogy design with round center and pear sides in sculpted trellis setting.",
+"image": "/products/Elara/Elara-gold-front.jpeg",
+"hint": "trilogy round pear",
+"isMensBand": false
+},
+{
+"slug": "eterna-oval-solitaire-hidden-halo",
+"title": "Eterna",
+"blurb": "Classic oval solitaire with four-talon claws and hidden halo.",
+"image": "/products/Eterna/eterna-front.jpeg",
+"hint": "hidden halo solitaire oval",
+"isMensBand": false
+},
+{
+"slug": "lumea-engagement-ring",
+"title": "Lumea — Toi et Moi",
+"blurb": "Oval-cut and pear-cut stones in a timeless toi et moi design.",
+"image": "/products/Lumea/lumia-gold-front.jpg",
+"hint": "toi et moi oval pear",
+"isMensBand": false
+},
+{
+"slug": "luna-low-set-solitaire",
+"title": "Luna — Low-Set Solitaire",
+"blurb": "Contemporary low-set round solitaire with open bridge & hidden halo. Flush-fit friendly.",
+"image": "/products/Luna/Luna-gold-front.jpeg",
+"hint": "hidden halo solitaire round",
+"isMensBand": false
+},
+{
+"slug": "nova-oval-solitaire-round-marquise",
+"title": "Nova",
+"blurb": "Oval centre stone with hidden halo, round and marquise side stones on refined band.",
+"image": "/products/Nova/nova-front.jpeg",
+"hint": "hidden halo round oval",
+"isMensBand": false
+},
+{
+"slug": "orabella-toi-et-moi",
+"title": "Orabella — Toi et Moi",
+"blurb": "Toi et Moi design featuring pear-cut and radiant-cut stones in perfect harmony.",
+"image": "/products/Orabella/orabella-gold-front.jpeg",
+"hint": "toi et moi pear radiant",
+"isMensBand": false
+},
+{
+"slug": "ovalis-oval-solitaire",
+"title": "Ovalis — Oval Solitaire",
+"blurb": "Oval-cut centre stone with refined talon-tipped claws.",
+"image": "/products/Ovalis/ovalis-front.jpeg",
+"hint": "solitaire oval",
+"isMensBand": false
+},
+{
+"slug": "seraphina-signature-six-claw",
+"title": "Seraphina — Signature Six-Claw",
+"blurb": "Signature six-claw solitaire with a round-cut centre and pavé band.",
+"image": "/products/Seraphina/Seraphina-gold-front.jpeg",
+"hint": "solitaire round",
+"isMensBand": false
+},
+{
+"slug": "unity-engagement-ring",
+"title": "Unity — Braided Solitaire",
+"blurb": "Refined braided design with oval-cut centre, pavé detail, and hidden halo.",
+"image": "/products/Unity/unity-gold-front.jpg",
+"hint": "hidden halo solitaire oval",
+"isMensBand": false
+},
+{
+"slug": "vow-veil",
+"title": "Vow & Veil — Toi et Moi",
+"blurb": "Elegant Toi et Moi design with round and pear stones on a curved band.",
+"image": "/products/vow-and-veil/VV-gold-front.jpeg",
+"hint": "toi et moi round pear",
+"isMensBand": false
+},
+{
+"slug": "arden-mens-ring",
+"title": "Arden — Men's Wedding Band",
+"blurb": "Brushed finish with smooth beveled edges and dual grooves.",
+"image": "/products/mens-rings/Arden/arden-silver.jpeg",
+"hint": "bevel",
+"isMensBand": true
+},
+{
+"slug": "bastion-mens-ring",
+"title": "Bastion — Men's Wedding Band",
+"blurb": "Brushed finish band with polished groove detail.",
+"image": "/products/mens-rings/Bastion/basttion-silver.jpeg",
+"hint": "",
+"isMensBand": true
+},
+{
+"slug": "blacksmith-mens-ring",
+"title": "Blacksmith — Men's Wedding Band",
+"blurb": "Hammered matte finish with polished grooves and beveled edges.",
+"image": "/products/mens-rings/Blacksmith/blacksmith-silver.jpeg",
+"hint": "bevel",
+"isMensBand": true
+},
+{
+"slug": "heritage-mens-ring",
+"title": "Heritage — Men's Wedding Band",
+"blurb": "Hammered matte finish with smooth flat edges.",
+"image": "/products/mens-rings/Heritage/heritage-silver.jpeg",
+"hint": "flat",
+"isMensBand": true
+},
+{
+"slug": "kairo-mens-ring",
+"title": "Kairo — Men's Wedding Band",
+"blurb": "Brushed finish with crisp edges and single diamond detail.",
+"image": "/products/mens-rings/Kairo/kairo-silver.jpeg",
+"hint": "",
+"isMensBand": true
+},
+{
+"slug": "orion-mens-ring",
+"title": "Orion — Men's Wedding Band",
+"blurb": "Smooth finish with beveled edges for timeless elegance.",
+"image": "/products/mens-rings/Orion/orion-silver.jpeg",
+"hint": "bevel",
+"isMensBand": true
+},
+{
+"slug": "sable-mens-ring",
+"title": "Sable — Men's Wedding Band",
+"blurb": "Brushed finish with polished step-cut beveled edges.",
+"image": "/products/mens-rings/Sable/sable-silver.jpeg",
+"hint": "bevel",
+"isMensBand": true
+},
+{
+"slug": "traditional-court-mens-ring",
+"title": "Traditional Court — Men's Wedding Band",
+"blurb": "Timeless design with smooth curved exterior and polished finish.",
+"image": "/products/mens-rings/traditional/Traditional Court/Tcourt-silver.jpeg",
+"hint": "court",
+"isMensBand": true
+},
+{
+"slug": "traditional-double-milgrain-mens-ring",
+"title": "Traditional Double Milgrain — Men's Wedding Band",
+"blurb": "Vintage-style design with two rows of intricate milgrain detailing.",
+"image": "/products/mens-rings/traditional/Traditional Double Milgrain/TDM-silver.jpeg",
+"hint": "milgrain",
+"isMensBand": true
+},
+{
+"slug": "traditional-flat-bevel-mens-ring",
+"title": "Traditional Flat Bevel — Men's Wedding Band",
+"blurb": "Sleek refined design with polished beveled edges.",
+"image": "/products/mens-rings/traditional/Traditional Flat Bevel/TFB-silver.jpeg",
+"hint": "flat bevel",
+"isMensBand": true
+},
+{
+"slug": "traditional-flat-mens-ring",
+"title": "Traditional Flat — Men's Wedding Band",
+"blurb": "Minimalist sleek design with smoothed flat edges.",
+"image": "/products/mens-rings/traditional/Traditional Flat/Tflat-silver.jpeg",
+"hint": "flat",
+"isMensBand": true
+},
+{
+"slug": "traditional-milgrain-mens-ring",
+"title": "Traditional Milgrain — Men's Wedding Band",
+"blurb": "Vintage-inspired design with delicate milgrain detailing.",
+"image": "/products/mens-rings/traditional/Traditional Milgrain/TM-silver.jpeg",
+"hint": "milgrain",
+"isMensBand": true
+},
+{
+"slug": "traditional-side-cut-mens-ring",
+"title": "Traditional Side Cut — Men's Wedding Band",
+"blurb": "Timeless style with refined step-cut edge details.",
+"image": "/products/mens-rings/traditional/Traditional Side Cut/TSC-silver.jpeg",
+"hint": "",
+"isMensBand": true
+},
+{
+"slug": "vireo-mens-ring",
+"title": "Vireo — Men's Wedding Band",
+"blurb": "Brushed finish band with smooth contours and centered diamond.",
+"image": "/products/mens-rings/Vireo/vireo-silver.jpeg",
+"hint": "",
+"isMensBand": true
+}
+]

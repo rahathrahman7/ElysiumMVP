@@ -139,3 +139,8 @@ webbundles/
 .cursor/mcp.json
 .cursor/mcp_artifacts/
 .cursor/rules/bmad/
+
+# Google OAuth (Drive upload scripts)
+secrets/
+google-oauth-credentials.json
+google-drive-token.json

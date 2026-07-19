@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   // Next.js 16: typedRoutes moved from experimental to root
-  typedRoutes: true,
+  // Disabled: strict RouteImpl typing causes errors with dynamic hrefs (e.g. /shop?category=...)
+  typedRoutes: false,
   experimental: {
     optimizePackageImports: ["swr", "zustand"],
   },

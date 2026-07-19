@@ -189,7 +189,7 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                       style: "currency",
                       currency: "GBP",
                       maximumFractionDigits: 0,
-                    }).format(product.basePriceGBP / 100)}
+                    }).format(product.basePriceGBP)}
                   </div>
                 </Link>
               ))}

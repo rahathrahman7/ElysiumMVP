@@ -10,6 +10,7 @@ import { AccessibilityProvider } from "@/components/ui/AccessibilityProvider";
 import ConciergeWidget from "@/components/concierge/ConciergeWidget";
 import { ReactNode } from 'react';
 import { ConditionalLayout } from '@/components/ConditionalLayout';
+import { ConditionalChrome } from '@/components/ConditionalChrome';
 import { LenisProvider } from "@/components/providers/LenisProvider";
 
 const cormorant = Cormorant_Garamond({
@@ -25,7 +26,10 @@ const inter = Inter({
   display: "swap"
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elysium.com";
+
 export const metadata = {
+  metadataBase: new URL(baseUrl),
   title: "ELYSIUM — Fine Jewellery",
   description: "Luxury jewellery crafted in our London atelier.",
 };
@@ -47,10 +51,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           
           <div id="app-root">
             <ConditionalLayout>{children}</ConditionalLayout>
-            <Footer id="footer" />
+            <ConditionalChrome>
+              <Footer id="footer" />
+            </ConditionalChrome>
           </div>
           
-          <ConciergeWidget />
+          <ConditionalChrome>
+            <ConciergeWidget />
+          </ConditionalChrome>
           
           {/* Accessibility announcements */}
           <div 

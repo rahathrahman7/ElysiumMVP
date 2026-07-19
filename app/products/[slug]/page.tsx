@@ -4,13 +4,14 @@ import { ProductDetail } from "@/components/products/ProductDetail";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
   // Lazy import to avoid loading large products array during build compilation
   const { getProductBySlug } = await import('@/lib/products');
-  const product = getProductBySlug(slug);
+  const product = getProductBySlug(slug, { includeHidden: true });
   
   if (!product) {
     return {
@@ -46,11 +47,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({ params, searchParams }: ProductPageProps) {
   const { slug } = await params;
+  const { preview } = await searchParams;
+  const allowHiddenPreview = process.env.NODE_ENV === 'development' && preview === '1';
   // Lazy import to avoid loading large products array during build compilation
   const { getProductBySlug } = await import('@/lib/products');
-  const product = getProductBySlug(slug);
+  const product = getProductBySlug(slug, { includeHidden: allowHiddenPreview });
   
   if (!product) {
     console.error(`[ProductPage] Product not found for slug: "${slug}"`);

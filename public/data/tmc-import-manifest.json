@@ -1,0 +1,357 @@
+{
+  "source": "https://tmcfinejewellers.com",
+  "collection": "our-signature-range",
+  "importedAt": "2026-07-07T22:55:34.696Z",
+  "products": [
+    {
+      "handle": "the-amira-ring-1",
+      "title": "The Amira Ring™ - Oval with Marquise Accents",
+      "shopifyId": 7374161281197,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-amira-ring-1/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Yellow_Top__NPD-Oval-Marquise_00000.jpg?v=1691015394",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Yellow_Top__NPD-Oval-Marquise_00000.jpg?v=1691015394&width=1600",
+          "bytes": 50991,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-amira-ring-1/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-07_e26a3661-f3e7-4478-986f-714982b7aecb.jpg?v=1766453577",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-07_e26a3661-f3e7-4478-986f-714982b7aecb.jpg?v=1766453577&width=1600",
+          "bytes": 82174,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-amira-ring-1/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-09_259cfdfc-286e-4c77-888e-145d42c8e730.jpg?v=1766453577",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-09_259cfdfc-286e-4c77-888e-145d42c8e730.jpg?v=1766453577&width=1600",
+          "bytes": 250240,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-amira-ring-1/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TheAmiraRing_TMCFineJewellers-01.jpg?v=1766453577",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TheAmiraRing_TMCFineJewellers-01.jpg?v=1766453577&width=1600",
+          "bytes": 108500,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-luise-ring-oval-solitaire",
+      "title": "The Luise Ring® - Oval Solitaire",
+      "shopifyId": 7084604326061,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-luise-ring-oval-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5723_Yellow_00000.jpg?v=1696481859",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5723_Yellow_00000.jpg?v=1696481859&width=1600",
+          "bytes": 48307,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-luise-ring-oval-solitaire/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-42_d394d3e5-2073-4b7a-8ca0-2a1c3187bba2.jpg?v=1766451841",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-42_d394d3e5-2073-4b7a-8ca0-2a1c3187bba2.jpg?v=1766451841&width=1600",
+          "bytes": 191213,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-luise-ring-oval-solitaire/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-28_634f5aed-35c9-43aa-a94f-bb526c5c04af.jpg?v=1766453669",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-28_634f5aed-35c9-43aa-a94f-bb526c5c04af.jpg?v=1766453669&width=1600",
+          "bytes": 286053,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-luise-ring-oval-solitaire/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-08_03a52287-1b60-4f69-bb17-7092d6a76609.jpg?v=1766453669",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-08_03a52287-1b60-4f69-bb17-7092d6a76609.jpg?v=1766453669&width=1600",
+          "bytes": 112230,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-audrey-ring-emerald-solitaire",
+      "title": "The Audrey Ring - Emerald Solitaire",
+      "shopifyId": 6826226548909,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-audrey-ring-emerald-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6153_Yellow_00000.jpg?v=1698358032",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6153_Yellow_00000.jpg?v=1698358032&width=1600",
+          "bytes": 46691,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-audrey-ring-emerald-solitaire/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-11.jpg?v=1759878676",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-11.jpg?v=1759878676&width=1600",
+          "bytes": 127942,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-audrey-ring-emerald-solitaire/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-16_73dbbe1c-bd79-468a-a552-a0adb0328470.jpg?v=1766454068",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-16_73dbbe1c-bd79-468a-a552-a0adb0328470.jpg?v=1766454068&width=1600",
+          "bytes": 78275,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-audrey-ring-emerald-solitaire/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers_TheAudreyEmeraldSoliatire.jpg?v=1766454068",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers_TheAudreyEmeraldSoliatire.jpg?v=1766454068&width=1600",
+          "bytes": 256447,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-vienna-ring-radiant-solitaire",
+      "title": "The Vienna Ring - Radiant Solitaire",
+      "shopifyId": 6936289116333,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-vienna-ring-radiant-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5845_Yellow_00000.jpg?v=1698038481",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5845_Yellow_00000.jpg?v=1698038481&width=1600",
+          "bytes": 48604,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-vienna-ring-radiant-solitaire/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-40.jpg?v=1759880131",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-40.jpg?v=1759880131&width=1600",
+          "bytes": 189849,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-vienna-ring-radiant-solitaire/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-39.jpg?v=1759880131",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-39.jpg?v=1759880131&width=1600",
+          "bytes": 335527,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-vienna-ring-radiant-solitaire/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-17_67f2abf2-8ebf-47b3-b913-a94f110e5f22.jpg?v=1759880131",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-17_67f2abf2-8ebf-47b3-b913-a94f110e5f22.jpg?v=1759880131&width=1600",
+          "bytes": 159352,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-florence-ring-oval-and-pear-trilogy",
+      "title": "The Florence Ring - Oval and Pear Cathedral Trilogy",
+      "shopifyId": 6729029091501,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5712_Yellow_00000.jpg?v=1696480747",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5712_Yellow_00000.jpg?v=1696480747&width=1600",
+          "bytes": 48282,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-01_db041b66-b7d5-4a17-9329-d7dafa8f0275.jpg?v=1764108454",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-01_db041b66-b7d5-4a17-9329-d7dafa8f0275.jpg?v=1764108454&width=1600",
+          "bytes": 291827,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-34_d606e800-84b9-4678-8bfb-b84cf37be139.jpg?v=1764108756",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-34_d606e800-84b9-4678-8bfb-b84cf37be139.jpg?v=1764108756&width=1600",
+          "bytes": 226654,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-14.jpg?v=1764108756",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-14.jpg?v=1764108756&width=1600",
+          "bytes": 155220,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-ophelia-ring-elongated-cushion-solitaire",
+      "title": "The Ophelia Ring - Elongated Cushion Solitaire",
+      "shopifyId": 7084610257069,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6016_Yellow_00000.jpg?v=1699928979",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6016_Yellow_00000.jpg?v=1699928979&width=1600",
+          "bytes": 39891,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-37_37af951a-63b3-4812-bd87-c8e5cb0193c0.jpg?v=1766451510",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-37_37af951a-63b3-4812-bd87-c8e5cb0193c0.jpg?v=1766451510&width=1600",
+          "bytes": 177813,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-33.jpg?v=1766451510",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-33.jpg?v=1766451510&width=1600",
+          "bytes": 215584,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-34.jpg?v=1766451510",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-34.jpg?v=1766451510&width=1600",
+          "bytes": 256514,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-avery-ring-oval-with-marquise-and-round-brilliant-band",
+      "title": "The Avery Ring - Oval With Marquise and Round Brilliant Band",
+      "shopifyId": 6782185046189,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Yellow1080_Top_TheAveryring-OvalWithMarquiseandRoundBrilliantband_00000.jpg?v=1779078211",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Yellow1080_Top_TheAveryring-OvalWithMarquiseandRoundBrilliantband_00000.jpg?v=1779078211&width=1600",
+          "bytes": 58192,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/02.png",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-06.png?v=1744773017",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-06.png?v=1744773017&width=1600",
+          "bytes": 3706569,
+          "contentType": "image/png"
+        },
+        {
+          "localPath": "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-16.jpg?v=1744773017",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-16.jpg?v=1744773017&width=1600",
+          "bytes": 120833,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/White1080_Top_TheAveryring-OvalWithMarquiseandRoundBrilliantband_00000.jpg?v=1779078211",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/White1080_Top_TheAveryring-OvalWithMarquiseandRoundBrilliantband_00000.jpg?v=1779078211&width=1600",
+          "bytes": 49360,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-arie-ring-marquise-cut-solitaire",
+      "title": "The Arie Ring - Marquise Solitaire",
+      "shopifyId": 7039090131117,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6367marquise6prong13x6_Yellow_00000.jpg?v=1698187275",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_6367marquise6prong13x6_Yellow_00000.jpg?v=1698187275&width=1600",
+          "bytes": 51888,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/02.png",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-10.png?v=1744773215",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-10.png?v=1744773215&width=1600",
+          "bytes": 3559923,
+          "contentType": "image/png"
+        },
+        {
+          "localPath": "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-14_044f3a39-8271-490b-9d3b-7f94305054da.jpg?v=1766454035",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-14_044f3a39-8271-490b-9d3b-7f94305054da.jpg?v=1766454035&width=1600",
+          "bytes": 58148,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCHR-38.jpg?v=1766454035",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCHR-38.jpg?v=1766454035&width=1600",
+          "bytes": 182211,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-isla-ring-round-solitaire-new",
+      "title": "The Isla Ring - Round Solitaire",
+      "shopifyId": 7282305106093,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-isla-ring-round-solitaire-new/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5750Round4prong_Yellow_00000.jpg?v=1766449495",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_5750Round4prong_Yellow_00000.jpg?v=1766449495&width=1600",
+          "bytes": 42709,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-isla-ring-round-solitaire-new/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-07_6d8c1852-1149-418f-bdd7-6300bd14e9e1.jpg?v=1759878378",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-07_6d8c1852-1149-418f-bdd7-6300bd14e9e1.jpg?v=1759878378&width=1600",
+          "bytes": 299651,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-isla-ring-round-solitaire-new/03.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-17_a20f3391-83cb-4d39-886b-ccbe69ed512a.jpg?v=1766449495",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFJ-17_a20f3391-83cb-4d39-886b-ccbe69ed512a.jpg?v=1766449495&width=1600",
+          "bytes": 159352,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-isla-ring-round-solitaire-new/04.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-12_281fa266-8cb6-43ff-8bb3-adc5c5fb88db.jpg?v=1766449495",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJewellers-12_281fa266-8cb6-43ff-8bb3-adc5c5fb88db.jpg?v=1766449495&width=1600",
+          "bytes": 223668,
+          "contentType": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "handle": "the-sophia-ring-4-claw-pear-solitaire",
+      "title": "The Sophia Ring - Pear Solitaire",
+      "shopifyId": 6876580511917,
+      "images": [
+        {
+          "localPath": "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/01.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_65496prong_Yellow_00000.jpg?v=1700540090",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/Top_65496prong_Yellow_00000.jpg?v=1700540090&width=1600",
+          "bytes": 47632,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/02.jpg",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCHR-5_2b997c1f-eaa6-4004-ae9c-1fbbbf618009.jpg?v=1744772756",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCHR-5_2b997c1f-eaa6-4004-ae9c-1fbbbf618009.jpg?v=1744772756&width=1600",
+          "bytes": 188373,
+          "contentType": "image/jpeg"
+        },
+        {
+          "localPath": "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/03.png",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-04.png?v=1744772756",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-04.png?v=1744772756&width=1600",
+          "bytes": 3945297,
+          "contentType": "image/png"
+        },
+        {
+          "localPath": "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/04.png",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-03.png?v=1744772756",
+          "downloadedUrl": "https://cdn.shopify.com/s/files/1/0544/6408/6189/files/TMCFineJeweller-03.png?v=1744772756&width=1600",
+          "bytes": 3589910,
+          "contentType": "image/png"
+        }
+      ]
+    }
+  ]
+}

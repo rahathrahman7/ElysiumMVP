@@ -170,6 +170,7 @@ model Order {
   customerEmail          String
   customerName           String?
   notes                  String?
+  adminNotifiedAt        DateTime?
   createdAt              DateTime    @default(now())
   updatedAt              DateTime    @updatedAt
 
@@ -248,6 +249,21 @@ model ProductView {
 }
 
 // ============================================
+// Waitlist / Coming Soon signups
+// ============================================
+
+model WaitlistSignup {
+  id        String   @id @default(uuid())
+  email     String
+  source    String
+  createdAt DateTime @default(now())
+
+  @@unique([email, source])
+  @@index([source])
+  @@map("waitlist_signups")
+}
+
+// ============================================
 // Bespoke Leads (from contact form)
 // ============================================
 
@@ -265,6 +281,32 @@ model BespokeLead {
   inquiryNotes InquiryNote[]
 
   @@map("bespoke_leads")
+}
+
+// ============================================
+// TMC Ring Catalog Review (client selection tool)
+// ============================================
+
+model TmcRingReview {
+  handle         String   @id
+  keep           Boolean  @default(false)
+  displayName    String?
+  priceGbp       String?
+  notes          String?  @db.Text
+  preferredMetal String?
+  options        String?  @db.Text // JSON: configurator options the client wants offered
+  updatedAt      DateTime @updatedAt @default(now())
+
+  @@map("tmc_ring_reviews")
+}
+
+model TmcRingMatch {
+  elysiumSlug  String   @id
+  elysiumTitle String?
+  tmcHandle    String?
+  updatedAt    DateTime @updatedAt @default(now())
+
+  @@map("tmc_ring_matches")
 }
 
 // ============================================

@@ -224,21 +224,21 @@ export default function LuxuryHero() {
         <div className={`mb-8 md:mb-0 transition-all duration-1000 delay-300 ease-out ${
           ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <div className="flex flex-row items-center justify-center gap-3 md:gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
+            <Link
+              href="/bespoke"
+              className="group inline-flex items-center gap-2 px-8 md:px-10 py-3.5 md:py-4 bg-white/95 text-[#6D3D0D] font-semibold tracking-[0.18em] uppercase text-xs md:text-sm rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-white hover:gap-3 whitespace-nowrap"
+            >
+              <span>Start Your Bespoke Journey</span>
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
             <Link
               href="/shop"
-              className="group px-6 md:px-10 py-3 md:py-4 text-white text-opacity-95 font-semibold tracking-[0.2em] uppercase text-xs md:text-sm transition-all duration-300 hover:text-white whitespace-nowrap"
+              className="group px-6 md:px-8 py-3.5 md:py-4 text-white font-semibold tracking-[0.2em] uppercase text-xs md:text-sm transition-all duration-300 hover:text-white whitespace-nowrap"
             >
               <span className="relative z-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">
                 Explore Collection
               </span>
-            </Link>
-            <Link
-              href="/bespoke"
-              className="group px-6 md:px-10 py-3 md:py-4 text-white font-semibold tracking-[0.2em] uppercase text-xs md:text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
-            >
-              <span className="drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">Bespoke Design</span>
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
         </div>

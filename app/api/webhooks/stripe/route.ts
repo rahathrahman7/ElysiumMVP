@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { requireEnv } from '@/lib/env';
-import { updateOrderStatus } from '@/lib/services/orders';
+import { claimAdminNotification, getOrder, updateOrderStatus } from '@/lib/services/orders';
+import { sendAdminOrderNotification } from '@/lib/services/email';
 import { OrderStatus } from '@prisma/client';
 
 // Lazy initialize Stripe client to avoid build-time env check
@@ -71,6 +72,19 @@ export async function POST(request: Request) {
             paymentIntent.id
           );
           console.log(`Order ${orderId} marked as PAID`);
+
+          try {
+            const shouldNotify = await claimAdminNotification(orderId);
+            if (shouldNotify) {
+              const order = await getOrder(orderId);
+              if (order) {
+                await sendAdminOrderNotification(order);
+                console.log(`Order ${orderId} admin notification sent`);
+              }
+            }
+          } catch (emailError) {
+            console.error(`Order ${orderId} admin notification failed:`, emailError);
+          }
         }
         break;
       }

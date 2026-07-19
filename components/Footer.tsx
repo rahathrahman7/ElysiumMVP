@@ -2,9 +2,9 @@
 import Link from "next/link";
 import RingSizeGuide from "@/components/ui/RingSizeGuide";
 
-export function Footer() {
+export function Footer({ id }: { id?: string }) {
   return (
-    <footer className="border-t border-elysium-dark/20 bg-elysium-light/30">
+    <footer id={id} className="border-t border-elysium-dark/20 bg-elysium-light/30">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}

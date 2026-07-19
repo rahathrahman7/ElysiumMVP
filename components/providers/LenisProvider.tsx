@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -22,23 +23,27 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 2,
+      // GSAP ticker drives raf — avoid a second competing loop
+      autoRaf: false,
     });
 
     lenisRef.current = lenis;
 
+    // Keep ScrollTrigger in lockstep with Lenis (prevents pin/header jitter)
     lenis.on("scroll", ScrollTrigger.update);
+
+    const tickerFn = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+    gsap.ticker.add(tickerFn);
+    gsap.ticker.lagSmoothing(0);
 
     // Refresh ScrollTrigger after layout stabilizes (images, fonts)
     const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 500);
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     return () => {
       clearTimeout(refreshTimer);
+      gsap.ticker.remove(tickerFn);
       lenis.destroy();
       lenisRef.current = null;
     };

@@ -29,7 +29,7 @@ export async function getProductsFiltered(params: Record<string, string | undefi
   // Parse sort & pagination params first
   const sortParam = (params.sort || "newest") as string;
   const page = Math.max(1, parseInt(params.page || "1", 10));
-  const limit = Math.min(48, Math.max(1, parseInt(params.limit || "12", 10)));
+  const limit = Math.min(100, Math.max(1, parseInt(params.limit || "12", 10)));
   const start = (page - 1) * limit;
   const end = start + limit;
 
@@ -125,7 +125,8 @@ export async function getProductsFiltered(params: Record<string, string | undefi
   const total = filteredProducts.length;
   const paginatedProducts = filteredProducts.slice(start, start + limit);
 
-  // Convert to expected format - transform images to ProductImage format
+  // Convert to expected format - transform images to ProductImage format.
+  // Include galleryByMetal so collection cards can preview metal swatches.
   const products: ProductListItem[] = paginatedProducts.map(p => ({
     _id: p.slug,
     title: p.title,
@@ -137,7 +138,9 @@ export async function getProductsFiltered(params: Record<string, string | undefi
     isFeatured: p.isFeatured,
     metals: p.metals,
     styles: p.styles,
-    collections: p.collections
+    collections: p.collections,
+    galleryByMetal: p.galleryByMetal,
+    galleryByCaratAndMetal: p.galleryByCaratAndMetal,
   }));
 
   return { products, total, page, limit };

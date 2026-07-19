@@ -7,16 +7,6 @@ import { resolvePrimary } from '@/lib/imageResolver';
 import WishHeart from '@/components/common/WishHeart';
 import { useMemo, useState, useEffect } from 'react';
 
-// Lazy load product lookup to avoid importing large products array at build time
-let getLocalProductBySlug: ((slug: string) => Product | undefined) | null = null;
-const loadProductLookup = async () => {
-  if (!getLocalProductBySlug) {
-    const mod = await import('@/lib/products');
-    getLocalProductBySlug = mod.getProductBySlug;
-  }
-  return getLocalProductBySlug;
-};
-
 type Props = {
   product: Product;
   className?: string;
@@ -27,17 +17,19 @@ export default function LuxuryProductCard({ product, className = "", priority = 
   const [activeMetal, setActiveMetal] = useState<string | undefined>(undefined);
   const [localProduct, setLocalProduct] = useState<Product | undefined>(undefined);
   
-  // Load local product data on mount
+  // Client-side enrichment: sync getProductBySlug is empty in the browser
   useEffect(() => {
-    loadProductLookup().then(lookup => {
-      if (lookup) {
-        setLocalProduct(lookup(product.slug));
-      }
+    let cancelled = false;
+    void import('@/lib/products').then(async ({ getProductBySlugAsync }) => {
+      const local = await getProductBySlugAsync(product.slug);
+      if (!cancelled && local) setLocalProduct(local);
     });
+    return () => { cancelled = true; };
   }, [product.slug]);
   
   const effective = (localProduct ? { ...product, ...localProduct } : product) as Product;
-  const img = product.images?.[0];
+  const primarySrc = resolvePrimary(effective, activeMetal);
+  const img = product.images?.[0] || (primarySrc ? { url: primarySrc } : undefined);
   
   // Extract ring name from title (e.g. "Celeste — Six-Claw Solitaire" -> "Celeste")
   const ringName = product.title.split('—')[0].trim();
@@ -131,9 +123,10 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         
           {img ? (
           <>
-            {/* Main Image - CSS hover scale */}
+            {/* Main Image - CSS hover scale; key forces remount on metal change */}
             <Image
-              src={resolvePrimary(effective, activeMetal)}
+              key={primarySrc}
+              src={primarySrc}
               alt={product.title}
               fill
               sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"

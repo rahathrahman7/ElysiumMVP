@@ -29,7 +29,13 @@ export interface Product {
 
 export interface ProductListItem extends Pick<Product, "_id" | "title" | "slug" | "images" | "basePriceGBP"> {
   blurb?: string;
+  description?: string;
   isFeatured?: boolean;
+  metals?: Array<{ name: string; hex?: string; imageUrl?: string; priceDeltaGBP?: number }>;
+  styles?: string[];
+  collections?: string[];
+  galleryByMetal?: Record<string, string[]>;
+  galleryByCaratAndMetal?: Record<string, Record<string, string[]>>;
 }
 
 

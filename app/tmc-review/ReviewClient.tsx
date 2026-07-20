@@ -79,7 +79,7 @@ export default function ReviewClient() {
   const [reviews, setReviews] = useState<Record<string, Review>>({});
   const [loading, setLoading] = useState(true);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
-  const [cat, setCat] = useState<"all" | "Engagement" | "Wedding">("all");
+  const [cat, setCat] = useState<"all" | "Engagement" | "Wedding" | "Fine Jewellery">("all");
   const [keepFilter, setKeepFilter] = useState<"all" | "kept">("all");
   const [q, setQ] = useState("");
 
@@ -177,7 +177,8 @@ export default function ReviewClient() {
   const stats = useMemo(() => {
     const eng = rings.filter((r) => r.category.includes("Engagement")).length;
     const wed = rings.filter((r) => r.category.includes("Wedding")).length;
-    return { total: rings.length, eng, wed };
+    const fj = rings.filter((r) => r.category.includes("Fine Jewellery")).length;
+    return { total: rings.length, eng, wed, fj };
   }, [rings]);
 
   const visible = useMemo(() => {
@@ -185,6 +186,7 @@ export default function ReviewClient() {
     return rings.filter((ring) => {
       if (cat === "Engagement" && !ring.category.includes("Engagement")) return false;
       if (cat === "Wedding" && !ring.category.includes("Wedding")) return false;
+      if (cat === "Fine Jewellery" && !ring.category.includes("Fine Jewellery")) return false;
       if (keepFilter === "kept" && !getReview(ring.handle).keep) return false;
       if (query) {
         const hay = `${ring.tmcName} ${ring.suggested}`.toLowerCase();
@@ -288,14 +290,18 @@ export default function ReviewClient() {
               <div className="n">{stats.wed}</div>
               <div className="l">Wedding</div>
             </div>
+            <div className="tr-stat">
+              <div className="n">{stats.fj}</div>
+              <div className="l">Fine Jewellery</div>
+            </div>
             <div className="tr-pill">Adding: {keptCount}</div>
           </div>
         </div>
 
         <p className="tr-intro">
-          Browse every ring below. Tap <strong>Add to ELYSIUM</strong> on the ones you want us to list, then
-          rename them, set a price, add notes, and choose which configurator options (metal, carat, size…) to
-          offer. Everything saves automatically.
+          Browse every ring and fine jewellery piece below. Tap <strong>Add to ELYSIUM</strong> on the ones you
+          want us to list, then rename them, set a price, add notes, and choose which configurator options
+          (metal, carat, size…) to offer. Everything saves automatically.
         </p>
 
         <div className="tr-toolbar">
@@ -306,7 +312,7 @@ export default function ReviewClient() {
             onChange={(e) => setQ(e.target.value)}
           />
           <div className="tr-seg">
-            {(["all", "Engagement", "Wedding"] as const).map((c) => (
+            {(["all", "Engagement", "Wedding", "Fine Jewellery"] as const).map((c) => (
               <button key={c} className={cat === c ? "active" : ""} onClick={() => setCat(c)}>
                 {c === "all" ? "All" : c}
               </button>

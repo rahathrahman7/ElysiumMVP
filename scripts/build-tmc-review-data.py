@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "exports/tmc-ring-catalog/catalog.json"
+FJ_CATALOG_PATH = ROOT / "exports/tmc-fine-jewellery/catalog.json"
 XREF_PATH = ROOT / "exports/tmc-ring-catalog/inventory-cross-reference.json"
 OUT_PATH = ROOT / "public/data/tmc-review-catalog.json"
 
@@ -86,11 +87,9 @@ def load_owned(catalog):
     return owned
 
 
-def main():
-    catalog = json.loads(CATALOG_PATH.read_text())
-    owned = load_owned(catalog)
-    rings = {}
-    for row in catalog["rows"]:
+def ingest_rows(rows, rings, owned):
+    """Group flat scrape rows into per-handle review entries (by handle)."""
+    for row in rows:
         handle = row["handle"]
         r = rings.get(handle)
         if not r:
@@ -108,12 +107,38 @@ def main():
         if row.get("sourceUrl"):
             r["images"][row["metalKey"]] = sized(row["sourceUrl"])
 
+
+def sort_key(r):
+    cat = r["category"]
+    if "Fine Jewellery" in cat:
+        group = 2
+    elif "Engagement" in cat:
+        group = 0
+    else:
+        group = 1
+    return (group, cat, r["tmcName"].lower())
+
+
+def main():
+    catalog = json.loads(CATALOG_PATH.read_text())
+    owned = load_owned(catalog)
+    rings = {}
+    ingest_rows(catalog["rows"], rings, owned)
+
+    # Fine jewellery (earrings, necklaces, bracelets, fine rings) — optional.
+    fj_count = 0
+    if FJ_CATALOG_PATH.exists():
+        fj = json.loads(FJ_CATALOG_PATH.read_text())
+        before = len(rings)
+        ingest_rows(fj.get("rows", []), rings, owned)
+        fj_count = len(rings) - before
+
     out = [r for r in rings.values() if r["images"]]
-    out.sort(key=lambda r: (0 if "Engagement" in r["category"] else 1, r["tmcName"].lower()))
+    out.sort(key=sort_key)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding="utf-8")
-    print(f"Wrote {OUT_PATH}  ({len(out)} rings)")
+    print(f"Wrote {OUT_PATH}  ({len(out)} items; {fj_count} fine jewellery)")
 
 
 if __name__ == "__main__":

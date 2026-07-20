@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Product, MetalOption } from "@/lib/productTypes";
 import { useCartStore } from "@/lib/state/cart";
 import { CompactProductVariants } from "./CompactProductVariants";
@@ -15,7 +15,7 @@ import WishHeart from "../common/WishHeart";
 import RecentlyViewed from "../pdp/RecentlyViewed";
 import ProductReviews from "../pdp/ProductReviews";
 import { Breadcrumb } from "../ui/Breadcrumb";
-import { resolveGallery } from "@/lib/imageResolver";
+import { resolveGallery, resolveAllMetalGallery, isTmcGalleryProduct, firstImageForMetal } from "@/lib/imageResolver";
 import useConfiguratorShare from "@/hooks/useConfiguratorShare";
 import { generateProductJsonLd, generatePdpBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -97,10 +97,23 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   // Derive current gallery images based on selected/preview metal or fallback to product.images
   const displayMetal = previewMetalName || selectedMetal?.name;
-  const currentGalleryImages = resolveGallery(product, displayMetal, selectedCarat?.label).map(src => ({
-    src,
-    alt: product.title
-  }));
+
+  // TMC rings show every colour at once (stable thumbnail strip); the hero
+  // simply jumps to the selected metal. Other products keep the per-metal set.
+  const isTmcGallery = useMemo(() => isTmcGalleryProduct(product), [product]);
+  const currentGalleryImages = useMemo(() => {
+    const srcs = isTmcGallery
+      ? resolveAllMetalGallery(product)
+      : resolveGallery(product, displayMetal, selectedCarat?.label);
+    return srcs.map((src) => ({ src, alt: product.title }));
+  }, [isTmcGallery, product, displayMetal, selectedCarat?.label]);
+
+  const galleryActiveIndex = useMemo(() => {
+    if (!isTmcGallery) return undefined;
+    const first = firstImageForMetal(product, displayMetal);
+    const idx = first ? currentGalleryImages.findIndex((g) => g.src === first) : -1;
+    return idx >= 0 ? idx : 0;
+  }, [isTmcGallery, product, displayMetal, currentGalleryImages]);
 
   // Commit metal selection on click (hover preview alone shouldn't stick)
   const handleMetalChange = (metal: MetalOption | null) => {
@@ -254,8 +267,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {/* Product Gallery & Title - shows first on mobile */}
           <div className="order-1">
             <Gallery
-              key={displayMetal || "default"}
+              key={isTmcGallery ? product.slug : displayMetal || "default"}
               images={currentGalleryImages}
+              activeIndex={galleryActiveIndex}
             />
 
             {/* Title & Full Description directly beneath the gallery */}

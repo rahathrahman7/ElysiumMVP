@@ -113,6 +113,63 @@ export function resolvePrimary(p: ProductLike, metalLabel?: string, caratLabel?:
   return resolveGallery(p, metalLabel, caratLabel)[0] ?? "/products/placeholder.svg";
 }
 
+/** True for rings whose galleries come from TMC renders (imported or swapped in). */
+export function isTmcGalleryProduct(p: ProductLike): boolean {
+  const srcs: string[] = [
+    ...normalizeImages(p),
+    ...('galleryByMetal' in p && p.galleryByMetal
+      ? Object.values(p.galleryByMetal).flat()
+      : []),
+  ];
+  return srcs.some(
+    (s) => typeof s === 'string' && (s.includes('/tmc-import/') || /-tmc-/.test(s))
+  );
+}
+
+// Fixed metal order so the combined thumbnail strip is stable across swatch clicks.
+const METAL_DISPLAY_ORDER = ['18k Yellow Gold', '18k White Gold', '18k Rose Gold', 'Platinum'];
+
+/**
+ * Combined gallery containing every metal's packshots (all colours) followed by
+ * any shared lifestyle shots. Order is fixed (not dependent on the selected
+ * metal) so the thumbnail strip stays put while the hero switches. Dedupes so
+ * metals that reuse the same render (e.g. Platinum -> White) don't repeat.
+ */
+export function resolveAllMetalGallery(p: ProductLike): string[] {
+  if (!('galleryByMetal' in p) || !p.galleryByMetal) {
+    return resolveGallery(p);
+  }
+
+  const seen = new Set<string>();
+  const ordered: string[] = [];
+  const push = (arr?: string[]) => {
+    for (const s of arr || []) {
+      if (s && s.trim() !== '' && !seen.has(s)) {
+        seen.add(s);
+        ordered.push(s);
+      }
+    }
+  };
+
+  for (const key of METAL_DISPLAY_ORDER) push(p.galleryByMetal[key]);
+  // Any metals outside the canonical order (two-tone, etc.)
+  for (const [key, arr] of Object.entries(p.galleryByMetal)) {
+    if (!METAL_DISPLAY_ORDER.includes(key)) push(arr);
+  }
+  // Shared editorial / lifestyle shots last
+  push(sharedLifestyleImages(p));
+
+  return ordered.length ? ordered : resolveGallery(p);
+}
+
+/** First packshot for a metal, used to point the hero at the selected swatch. */
+export function firstImageForMetal(p: ProductLike, metalLabel?: string): string | undefined {
+  const normalized = metalLabel ? NORMALIZE_METAL[metalLabel] ?? metalLabel : undefined;
+  const key = resolveMetalGalleryKey(p, normalized);
+  if (key && 'galleryByMetal' in p) return p.galleryByMetal?.[key]?.[0];
+  return undefined;
+}
+
 
 
 

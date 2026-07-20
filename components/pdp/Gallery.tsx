@@ -7,18 +7,27 @@ type Img = { src: string; alt?: string; width?: number; height?: number };
 export default function Gallery({
   images = [],
   className = "",
+  activeIndex,
 }: {
   images: Img[];
   className?: string;
+  /** When set, points the hero at this thumbnail without reordering the strip. */
+  activeIndex?: number;
 }) {
   const safe = images?.length ? images : [{ src: "/products/placeholder.svg", alt: "Image coming soon" }];
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(activeIndex ?? 0);
   const imageSignature = safe.map((img) => img.src).join("|");
 
   // Jump back to the hero when the gallery set changes (e.g. metal swatch)
   useEffect(() => {
-    setIndex(0);
+    setIndex(activeIndex ?? 0);
   }, [imageSignature]);
+
+  // Point the hero at the selected metal (combined-gallery mode) without
+  // rebuilding the thumbnail strip.
+  useEffect(() => {
+    if (typeof activeIndex === "number") setIndex(activeIndex);
+  }, [activeIndex]);
   const [zoomOpen, setZoomOpen] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
   

@@ -189,15 +189,17 @@ function copyRenders(handle) {
   if (!fs.existsSync(srcDir)) return null;
   const destDir = path.join(PUBLIC_IMAGES_ROOT, handle);
   const available = {};
+  // Top render (primary) plus its matching Front angle, per metal colour.
   for (const color of ['yellow', 'white', 'rose']) {
-    const file = `${color}.jpg`;
-    const src = path.join(srcDir, file);
-    if (!fs.existsSync(src)) continue;
-    if (!DRY_RUN) {
-      fs.mkdirSync(destDir, { recursive: true });
-      fs.copyFileSync(src, path.join(destDir, file));
+    for (const file of [`${color}.jpg`, `${color}-front.jpg`]) {
+      const src = path.join(srcDir, file);
+      if (!fs.existsSync(src)) continue;
+      if (!DRY_RUN) {
+        fs.mkdirSync(destDir, { recursive: true });
+        fs.copyFileSync(src, path.join(destDir, file));
+      }
+      available[file] = `/products/tmc-import/${handle}/${file}`;
     }
-    available[file] = `/products/tmc-import/${handle}/${file}`;
   }
   return Object.keys(available).length ? available : null;
 }
@@ -232,7 +234,11 @@ function buildProduct(handle, review, catalogEntry, price) {
   const galleryByMetal = {};
   for (const m of metals) {
     const file = METAL_RENDER[m.name];
-    if (available[file]) galleryByMetal[m.name] = [available[file]];
+    if (!available[file]) continue;
+    const frontFile = file.replace(/\.jpg$/i, '-front.jpg');
+    galleryByMetal[m.name] = available[frontFile]
+      ? [available[file], available[frontFile]]
+      : [available[file]];
   }
 
   const notes = (review.notes || '').trim();

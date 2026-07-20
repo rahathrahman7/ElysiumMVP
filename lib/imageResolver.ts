@@ -36,6 +36,7 @@ function isMetalPackshot(src: string): boolean {
   return (
     /\/metal-(yellow|rose|white)\./i.test(src) ||
     /\/(yellow|rose|white)\.(jpg|jpeg|png)$/i.test(src) ||
+    /(yellow|rose|white)-front\.(jpg|jpeg|png)$/i.test(src) ||
     /\/01\.(jpg|jpeg|png)$/i.test(src) ||
     /Top_.*_(Yellow|White|Rose)_/i.test(src) ||
     /Front_.*_(Yellow|White|Rose)_/i.test(src)

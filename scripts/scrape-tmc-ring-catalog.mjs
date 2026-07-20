@@ -2,9 +2,11 @@
 /**
  * Scrape all TMC engagement + wedding/ceremonial rings.
  * Downloads metal render images only (Yellow / White / Rose) — no lifestyle/hand shots.
+ * For each metal it grabs the Top render plus its matching Front angle.
  *
  * Output:
  *   exports/tmc-ring-catalog/images/{handle}/{yellow|white|rose}.jpg
+ *   exports/tmc-ring-catalog/images/{handle}/{yellow|white|rose}-front.jpg
  *   exports/tmc-ring-catalog/catalog.json
  *
  * Usage:
@@ -31,6 +33,18 @@ const METALS = [
 
 const LIFESTYLE_RE =
   /TMCFineJewellers|TMCFineJeweller|TMCFJ|TMCHR|ecomm-|FineJeweller-|_The[A-Z][a-z]+Ring/i;
+
+// Narrower exclusion for Front picking: the `_The<Name>Ring` clause above
+// false-positives on CGI renders (e.g. `Yellow1080_Front_TheSnowflakeRingRound`).
+const FRONT_LIFESTYLE_RE = /TMCFineJewellers|TMCFineJeweller|TMCFJ|TMCHR|ecomm-|FineJeweller-/i;
+
+// Colour token at a path/underscore boundary, catching leading-colour names
+// (`Yellow_Front__...`) as well as `_Yellow_` and `Yellow1080_`.
+const FRONT_COLOR_PATTERNS = {
+  yellow: /[_/]Yellow(?:_|1080)/i,
+  white: /[_/]White(?:_|1080)/i,
+  rose: /[_/]Rose(?:_|1080)/i,
+};
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -95,6 +109,42 @@ function pickMetalRender(images, patterns) {
   });
 
   return candidates[0]?.src;
+}
+
+/** Normalized stem used to pair a Front render with its Top counterpart. */
+function stemKey(src) {
+  const file = (src.split('/').pop() || '').split('?')[0];
+  return file
+    .replace(/\.[a-z0-9]+$/i, '')
+    .replace(/yellow|white|rose/gi, '')
+    .replace(/top|front/gi, '')
+    .replace(/1080/g, '')
+    .replace(/0{3,}/g, '')
+    .replace(/[^a-z0-9]/gi, '')
+    .toLowerCase();
+}
+
+/** Pick the Front render for a metal, preferring the one matching the Top. */
+function pickMetalFront(images, metalKey, topSrc) {
+  const colorRe = FRONT_COLOR_PATTERNS[metalKey];
+  const candidates = images.filter((img) => {
+    const src = img.src || '';
+    if (FRONT_LIFESTYLE_RE.test(src)) return false;
+    if (!/Front_|1080_Front/i.test(src)) return false;
+    return colorRe ? colorRe.test(src) : false;
+  });
+  const topKey = topSrc ? stemKey(topSrc) : '';
+  candidates.sort((a, b) => score(a.src) - score(b.src));
+  return candidates[0]?.src;
+
+  function score(src) {
+    const key = stemKey(src);
+    let s = 100;
+    if (topKey && key === topKey) s = 0;
+    else if (topKey && key && (key.includes(topKey) || topKey.includes(key))) s = 1;
+    else if (/1080_Front/i.test(src)) s = 2;
+    return s * 1000 + src.length;
+  }
 }
 
 function withWidth(src) {
@@ -185,6 +235,7 @@ async function main() {
 
     for (const metal of METALS) {
       const src = pickMetalRender(product.images ?? [], metal.patterns);
+      const frontSrc = pickMetalFront(product.images ?? [], metal.key, src);
       const row = {
         handle,
         tmcOriginalName: product.title,
@@ -199,6 +250,9 @@ async function main() {
         imageFile: '',
         imageRelative: '',
         sourceUrl: src || '',
+        frontImageFile: '',
+        frontImageRelative: '',
+        frontSourceUrl: frontSrc || '',
       };
 
       if (!src) {
@@ -215,14 +269,33 @@ async function main() {
         row.imageFile = path.basename(finalPath);
         row.imageRelative = rel;
         downloaded += 1;
-        catalog.rows.push(row);
         console.log(`    ok  ${metal.label} (${(bytes / 1024).toFixed(0)} KB)`);
       } catch (err) {
         failed += 1;
         catalog.rows.push(row);
         console.log(`    FAIL ${metal.label}: ${err.message}`);
+        continue;
       }
       await sleep(200);
+
+      // Front angle (non-lifestyle product shot), paired with the Top render.
+      if (frontSrc) {
+        try {
+          const frontBase = path.join(productDir, `${metal.key}-front`);
+          const { finalPath, bytes } = await download(frontSrc, frontBase);
+          const rel = path.relative(OUT_DIR, finalPath).split(path.sep).join('/');
+          row.frontImageFile = path.basename(finalPath);
+          row.frontImageRelative = rel;
+          downloaded += 1;
+          console.log(`    ok  ${metal.label} Front (${(bytes / 1024).toFixed(0)} KB)`);
+          await sleep(200);
+        } catch (err) {
+          failed += 1;
+          console.log(`    FAIL ${metal.label} Front: ${err.message}`);
+        }
+      }
+
+      catalog.rows.push(row);
     }
     await sleep(250);
   }

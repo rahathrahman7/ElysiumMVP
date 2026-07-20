@@ -1107,12 +1107,11 @@
   {
     "slug": "aveline-radiant-solitaire",
     "title": "Aveline — Radiant Solitaire",
-    "blurb": "Radiant solitaire with hidden halo featuring four talon-tipped claws.",
-    "description": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and a hidden halo.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Radiant solitaire with an antique-style halo and four talon-tipped claws.",
+    "description": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and an antique style halo.\n\nA harmonious fusion of two timeless designs, thoughtfully crafted into an heirloom destined to be cherished for generations.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Aveline/Aveline-gold-front.jpeg",
-      "/products/Aveline/Aveline-gold-side.jpeg",
-      "/products/Aveline/Aveline-gold-back.jpeg"
+      "/products/Aveline/aveline-tmc-yellow.jpg",
+      "/products/Aveline/aveline-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2449,
     "metals": [
@@ -1276,13 +1275,11 @@
       "signature-collection",
       "solitaire",
       "aveline",
-      "hidden-halo",
       "radiant"
     ],
     "shape": "radiant",
     "styles": [
-      "solitaire",
-      "hidden-halo"
+      "solitaire"
     ],
     "caratBuckets": [
       "1-1.5",
@@ -1293,24 +1290,23 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Aveline/Aveline-gold-front.jpeg",
-        "/products/Aveline/Aveline-gold-side.jpeg",
-        "/products/Aveline/Aveline-gold-back.jpeg"
+        "/products/Aveline/aveline-tmc-yellow.jpg",
+        "/products/Aveline/aveline-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Aveline/Aveline-rose-front.jpeg",
-        "/products/Aveline/Aveline-rose-side.jpeg",
-        "/products/Aveline/Aveline-rose-back.jpeg"
+        "/products/Aveline/aveline-tmc-rose.jpg",
+        "/products/Aveline/aveline-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Aveline/Aveline-silver-side.jpeg",
-        "/products/Aveline/Aveline-silver-back.jpeg"
+        "/products/Aveline/aveline-tmc-white.jpg",
+        "/products/Aveline/aveline-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Aveline/Aveline-silver-side.jpeg",
-        "/products/Aveline/Aveline-silver-back.jpeg"
+        "/products/Aveline/aveline-tmc-white.jpg",
+        "/products/Aveline/aveline-tmc-white-front.jpg"
       ]
-    }
+    },
+    "seoDescription": "Aveline radiant solitaire with an antique-style halo and four talon-tipped claws."
   },
   {
     "slug": "orabella-toi-et-moi",
@@ -1318,9 +1314,8 @@
     "blurb": "Toi et Moi design featuring pear-cut and radiant-cut stones in perfect harmony.",
     "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony. Both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the pear will be 1ct and the radiant will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Orabella/orabella-gold-front.jpeg",
-      "/products/Orabella/orabella-gold-side.jpeg",
-      "/products/Orabella/orabella-gold-back.jpeg"
+      "/products/Orabella/orabella-tmc-yellow.jpg",
+      "/products/Orabella/orabella-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2689,
     "metals": [
@@ -1368,22 +1363,22 @@
       {
         "label": "1.5ct",
         "carat": 1.5,
-        "priceDeltaGBP": 900
+        "priceDeltaGBP": 0
       },
       {
         "label": "2ct",
         "carat": 2,
-        "priceDeltaGBP": 1560
+        "priceDeltaGBP": 560
       },
       {
         "label": "2.5ct",
         "carat": 2.5,
-        "priceDeltaGBP": 2460
+        "priceDeltaGBP": 1460
       },
       {
         "label": "3ct+",
         "carat": 3,
-        "priceDeltaGBP": 12000
+        "priceDeltaGBP": 11000
       }
     ],
     "colours": [
@@ -1499,20 +1494,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Orabella/orabella-gold-front.jpeg",
-        "/products/Orabella/orabella-gold-side.jpeg",
-        "/products/Orabella/orabella-gold-back.jpeg"
+        "/products/Orabella/orabella-tmc-yellow.jpg",
+        "/products/Orabella/orabella-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Orabella/orabella-rose-front.jpeg",
-        "/products/Orabella/orabella-rose-side.jpeg",
-        "/products/Orabella/orabella-rose-back.jpeg"
+        "/products/Orabella/orabella-tmc-rose.jpg",
+        "/products/Orabella/orabella-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Orabella/orabella-silver-back.jpeg"
+        "/products/Orabella/orabella-tmc-white.jpg",
+        "/products/Orabella/orabella-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Orabella/orabella-silver-back.jpeg"
+        "/products/Orabella/orabella-tmc-white.jpg",
+        "/products/Orabella/orabella-tmc-white-front.jpg"
       ]
     }
   },
@@ -1522,9 +1517,8 @@
     "blurb": "Radiant solitaire with four-claw setting in classic elegance.",
     "description": "The Clarion engagement ring is a classic solitaire design, showcasing an exquisite radiant-cut center stone held in a sleek four-claw setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Clarion/rsol-gold-front.jpeg",
-      "/products/Clarion/rsol-gold-side.jpeg",
-      "/products/Clarion/rsol-gold-back.jpeg"
+      "/products/Clarion/clarion-tmc-yellow.jpg",
+      "/products/Clarion/clarion-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 1949,
     "metals": [
@@ -1703,24 +1697,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Clarion/rsol-gold-front.jpeg",
-        "/products/Clarion/rsol-gold-side.jpeg",
-        "/products/Clarion/rsol-gold-back.jpeg"
+        "/products/Clarion/clarion-tmc-yellow.jpg",
+        "/products/Clarion/clarion-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Clarion/rsol-rose-front.jpeg",
-        "/products/Clarion/rsol-rose-side.jpeg",
-        "/products/Clarion/rsol-rose-back.jpeg"
+        "/products/Clarion/clarion-tmc-rose.jpg",
+        "/products/Clarion/clarion-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Clarion/rsol-silver-front.jpeg",
-        "/products/Clarion/rsol-silver-side.jpeg",
-        "/products/Clarion/rsol-silver-back.jpeg"
+        "/products/Clarion/clarion-tmc-white.jpg",
+        "/products/Clarion/clarion-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Clarion/rsol-silver-front.jpeg",
-        "/products/Clarion/rsol-silver-side.jpeg",
-        "/products/Clarion/rsol-silver-back.jpeg"
+        "/products/Clarion/clarion-tmc-white.jpg",
+        "/products/Clarion/clarion-tmc-white-front.jpg"
       ]
     }
   },
@@ -6179,10 +6169,12 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-amira-ring-1/metal-yellow.jpg"
+        "/products/tmc-import/the-amira-ring-1/metal-yellow.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-amira-ring-1/metal-rose.jpg"
+        "/products/tmc-import/the-amira-ring-1/metal-rose.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-rose-front.jpg"
       ]
     },
     "seoTitle": "Amira — Oval with Marquise Accents | ELYSIUM",
@@ -6389,16 +6381,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-luise-ring-oval-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Luise — Oval Solitaire | ELYSIUM",
@@ -6605,16 +6601,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-audrey-ring-emerald-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Audrey — Emerald Solitaire | ELYSIUM",
@@ -6821,16 +6821,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Vienna — Radiant Solitaire | ELYSIUM",
@@ -7037,16 +7041,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-yellow.jpg"
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-yellow.jpg",
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-rose.jpg"
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-rose.jpg",
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg"
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg",
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg"
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white.jpg",
+        "/products/tmc-import/the-florence-ring-oval-and-pear-trilogy/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Florence — Oval & Pear Trilogy | ELYSIUM",
@@ -7253,16 +7261,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-ophelia-ring-elongated-cushion-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Ophelia — Elongated Cushion Solitaire | ELYSIUM",
@@ -7469,16 +7481,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-yellow.jpg"
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-yellow.jpg",
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-rose.jpg"
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-rose.jpg",
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg"
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg",
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg"
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white.jpg",
+        "/products/tmc-import/the-avery-ring-oval-with-marquise-and-round-brilliant-band/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Avery — Oval with Marquise & Round Brilliant Band | ELYSIUM",
@@ -7685,16 +7701,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Arie — Marquise Solitaire | ELYSIUM",
@@ -7901,16 +7921,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-yellow.jpg"
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-yellow.jpg",
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-rose.jpg"
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-rose.jpg",
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg"
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg",
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg"
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white.jpg",
+        "/products/tmc-import/the-isla-ring-round-solitaire-new/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Isla — Round Solitaire | ELYSIUM",
@@ -8117,16 +8141,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-yellow.jpg"
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-yellow.jpg",
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-rose.jpg"
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-rose.jpg",
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg"
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white.jpg",
+        "/products/tmc-import/the-sophia-ring-4-claw-pear-solitaire/metal-white-front.jpg"
       ]
     },
     "seoTitle": "Sophia — Pear Solitaire | ELYSIUM",
@@ -8257,16 +8285,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-ava-ring-pave-wedding-band/yellow.jpg"
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/yellow.jpg",
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-ava-ring-pave-wedding-band/rose.jpg"
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/rose.jpg",
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg"
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg",
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg"
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg",
+        "/products/tmc-import/the-ava-ring-pave-wedding-band/white-front.jpg"
       ]
     },
     "seoTitle": "Vesper | ELYSIUM",
@@ -8472,22 +8504,28 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/white-front.jpg"
       ],
       "Two-Tone Rose/Platinum": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/rose-front.jpg"
       ],
       "Two-Tone Yellow/Platinum": [
-        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg"
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow.jpg",
+        "/products/tmc-import/the-celeste-ring-radiant-with-marquise-and-round-brilliant-band/yellow-front.jpg"
       ]
     },
     "seoTitle": "Evermore | ELYSIUM",
@@ -8679,16 +8717,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-halo/yellow.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-halo/yellow.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-halo/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-halo/rose.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-halo/rose.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-halo/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg"
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white.jpg",
+        "/products/tmc-import/the-vienna-ring-radiant-halo/white-front.jpg"
       ]
     },
     "seoTitle": "Lumina | ELYSIUM",
@@ -8880,16 +8922,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/yellow.jpg"
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/yellow.jpg",
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/rose.jpg"
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/rose.jpg",
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg"
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg",
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg"
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white.jpg",
+        "/products/tmc-import/the-emilia-ring-radiant-and-pear-trilogy/white-front.jpg"
       ]
     },
     "seoTitle": "Arabella | ELYSIUM",
@@ -9081,16 +9127,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/yellow.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/yellow.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/rose.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/rose.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-radiant-solitaire/white-front.jpg"
       ]
     },
     "seoTitle": "Vivienne | ELYSIUM",
@@ -9282,16 +9332,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/yellow.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/yellow.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/rose.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/rose.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-radiant-solitaire/white-front.jpg"
       ]
     },
     "seoTitle": "Sorella | ELYSIUM",
@@ -9483,16 +9537,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/yellow.jpg"
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/yellow.jpg",
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/rose.jpg"
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/rose.jpg",
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg"
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg",
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg"
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white.jpg",
+        "/products/tmc-import/the-adella-ring-round-brilliant-solitaire-with-wrapped-band/white-front.jpg"
       ]
     },
     "seoTitle": "Noémi | ELYSIUM",
@@ -9667,10 +9725,12 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/yellow.jpg"
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/yellow.jpg",
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose.jpg"
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose.jpg",
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose-front.jpg"
       ]
     },
     "seoTitle": "Amarante | ELYSIUM",
@@ -9862,16 +9922,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/yellow.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/yellow.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/rose.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/rose.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg"
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white.jpg",
+        "/products/tmc-import/the-elise-ring-split-shank-round-trilogy/white-front.jpg"
       ]
     },
     "seoTitle": "Elodie | ELYSIUM",
@@ -10050,10 +10114,12 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/yellow.jpg"
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/yellow.jpg",
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose.jpg"
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose.jpg",
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose-front.jpg"
       ]
     },
     "seoTitle": "Anastasia | ELYSIUM",
@@ -10245,16 +10311,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-isla-ring-round-brilliant-halo/yellow.jpg"
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/yellow.jpg",
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-isla-ring-round-brilliant-halo/rose.jpg"
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/rose.jpg",
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg"
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg",
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg"
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white.jpg",
+        "/products/tmc-import/the-isla-ring-round-brilliant-halo/white-front.jpg"
       ]
     },
     "seoTitle": "Isolde | ELYSIUM",
@@ -10446,16 +10516,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/yellow.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/yellow.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/rose.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/rose.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg"
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire/white-front.jpg"
       ]
     },
     "seoTitle": "Ophellia | ELYSIUM",
@@ -10647,16 +10721,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-maya-ring-round-curved-solitaire/yellow.jpg"
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/yellow.jpg",
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-maya-ring-round-curved-solitaire/rose.jpg"
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/rose.jpg",
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg"
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg",
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg"
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white.jpg",
+        "/products/tmc-import/the-maya-ring-round-curved-solitaire/white-front.jpg"
       ]
     },
     "seoTitle": "Nala | ELYSIUM",
@@ -10848,16 +10926,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/yellow.jpg"
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/yellow.jpg",
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/rose.jpg"
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/rose.jpg",
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg"
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg",
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white-front.jpg"
       ],
       "Platinum": [
-        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg"
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white.jpg",
+        "/products/tmc-import/the-isla-ring-round-bezel-solitaire/white-front.jpg"
       ]
     },
     "seoTitle": "Callista | ELYSIUM",

@@ -80,8 +80,15 @@ export default function ReviewClient() {
   const [loading, setLoading] = useState(true);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [cat, setCat] = useState<"all" | "Engagement" | "Wedding" | "Fine Jewellery">("all");
+  const [fjSub, setFjSub] = useState<"all" | "Earrings" | "Necklaces" | "Bracelets" | "Fine Rings">("all");
   const [keepFilter, setKeepFilter] = useState<"all" | "kept">("all");
   const [q, setQ] = useState("");
+
+  function sectionOf(category: string): "Engagement" | "Wedding" | "Fine Jewellery" {
+    if (category.includes("Fine Jewellery")) return "Fine Jewellery";
+    if (category.includes("Engagement")) return "Engagement";
+    return "Wedding";
+  }
 
   const timers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const savingCount = useRef(0);
@@ -187,6 +194,7 @@ export default function ReviewClient() {
       if (cat === "Engagement" && !ring.category.includes("Engagement")) return false;
       if (cat === "Wedding" && !ring.category.includes("Wedding")) return false;
       if (cat === "Fine Jewellery" && !ring.category.includes("Fine Jewellery")) return false;
+      if (cat === "Fine Jewellery" && fjSub !== "all" && !ring.category.includes(fjSub)) return false;
       if (keepFilter === "kept" && !getReview(ring.handle).keep) return false;
       if (query) {
         const hay = `${ring.tmcName} ${ring.suggested}`.toLowerCase();
@@ -195,7 +203,23 @@ export default function ReviewClient() {
       return true;
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rings, reviews, cat, keepFilter, q]);
+  }, [rings, reviews, cat, fjSub, keepFilter, q]);
+
+  // Build the grid with section headers so Fine Jewellery isn't buried under rings.
+  const gridItems = useMemo(() => {
+    const items: Array<{ kind: "header"; title: string; count: number } | { kind: "ring"; ring: Ring }> = [];
+    let lastSection = "";
+    for (const ring of visible) {
+      const section = sectionOf(ring.category);
+      if (cat === "all" && section !== lastSection) {
+        const count = visible.filter((r) => sectionOf(r.category) === section).length;
+        items.push({ kind: "header", title: section, count });
+        lastSection = section;
+      }
+      items.push({ kind: "ring", ring });
+    }
+    return items;
+  }, [visible, cat]);
 
   function firstMetal(ring: Ring) {
     for (const m of METAL_ORDER) if (ring.images[m]) return m;
@@ -275,7 +299,7 @@ export default function ReviewClient() {
       <header className="tr-header">
         <div className="tr-header-row">
           <div className="tr-brand">
-            ELYSIUM<small>TMC Ring Selection</small>
+            ELYSIUM<small>TMC Selection · Rings &amp; Fine Jewellery</small>
           </div>
           <div className="tr-stats">
             <div className="tr-stat">
@@ -299,22 +323,37 @@ export default function ReviewClient() {
         </div>
 
         <p className="tr-intro">
-          Browse every ring and fine jewellery piece below. Tap <strong>Add to ELYSIUM</strong> on the ones you
-          want us to list, then rename them, set a price, add notes, and choose which configurator options
-          (metal, carat, size…) to offer. Everything saves automatically.
+          Browse rings and fine jewellery below. Use the category tabs — tap{" "}
+          <strong>Fine Jewellery</strong> for earrings, necklaces, bracelets and fine rings. Tap{" "}
+          <strong>Add to ELYSIUM</strong> on pieces you want listed, then rename, price, note, and choose
+          options. Everything saves automatically.
         </p>
 
         <div className="tr-toolbar">
           <input
             type="search"
-            placeholder="Search rings by name…"
+            placeholder="Search by name…"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           />
           <div className="tr-seg">
-            {(["all", "Engagement", "Wedding", "Fine Jewellery"] as const).map((c) => (
-              <button key={c} className={cat === c ? "active" : ""} onClick={() => setCat(c)}>
-                {c === "all" ? "All" : c}
+            {(
+              [
+                ["all", "All", stats.total],
+                ["Engagement", "Engagement", stats.eng],
+                ["Wedding", "Wedding", stats.wed],
+                ["Fine Jewellery", "Fine Jewellery", stats.fj],
+              ] as const
+            ).map(([key, label, count]) => (
+              <button
+                key={key}
+                className={cat === key ? "active" : ""}
+                onClick={() => {
+                  setCat(key);
+                  if (key !== "Fine Jewellery") setFjSub("all");
+                }}
+              >
+                {label} <em>{count}</em>
               </button>
             ))}
           </div>
@@ -331,16 +370,52 @@ export default function ReviewClient() {
           </button>
           <span className={`tr-save tr-save-${saveState}`}>{saveLabel}</span>
         </div>
+
+        {cat === "Fine Jewellery" && (
+          <div className="tr-subfilter">
+            {(
+              [
+                ["all", "All fine jewellery"],
+                ["Earrings", "Earrings"],
+                ["Necklaces", "Necklaces"],
+                ["Bracelets", "Bracelets"],
+                ["Fine Rings", "Fine rings"],
+              ] as const
+            ).map(([key, label]) => (
+              <button
+                key={key}
+                className={fjSub === key ? "active" : ""}
+                onClick={() => setFjSub(key)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </header>
 
       <main className="tr-main">
         {loading ? (
-          <div className="tr-empty">Loading rings…</div>
+          <div className="tr-empty">Loading catalogue…</div>
         ) : visible.length === 0 ? (
-          <div className="tr-empty">No rings match your filters.</div>
+          <div className="tr-empty">No pieces match your filters.</div>
         ) : (
           <div className="tr-grid">
-            {visible.map((ring) => {
+            {gridItems.map((item) => {
+              if (item.kind === "header") {
+                return (
+                  <div key={`h-${item.title}`} className="tr-section">
+                    <h2>{item.title}</h2>
+                    <span>{item.count} pieces</span>
+                    {item.title === "Fine Jewellery" && cat === "all" && (
+                      <button type="button" onClick={() => setCat("Fine Jewellery")}>
+                        View fine jewellery only →
+                      </button>
+                    )}
+                  </div>
+                );
+              }
+              const ring = item.ring;
               const r = getReview(ring.handle);
               const active =
                 r.preferredMetal && ring.images[r.preferredMetal as keyof Ring["images"]]
@@ -403,7 +478,7 @@ export default function ReviewClient() {
                         <div className="tr-field">
                           <label>Notes</label>
                           <textarea
-                            placeholder="Any notes for this ring…"
+                            placeholder="Any notes for this piece…"
                             value={r.notes}
                             onChange={(e) => update(ring.handle, { notes: e.target.value })}
                           />
@@ -453,7 +528,7 @@ export default function ReviewClient() {
       </main>
 
       <footer className="tr-footer">
-        ELYSIUM × TMC ring selection · Images are 3D metal renders · Your edits save automatically to ELYSIUM.
+        ELYSIUM × TMC selection · Rings &amp; fine jewellery · Images are 3D metal renders · Edits save automatically.
       </footer>
     </div>
   );
@@ -481,14 +556,24 @@ const CSS = `
 .tr-toolbar{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;align-items:center;}
 .tr-toolbar input[type=search]{flex:1;min-width:220px;padding:11px 16px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
 .tr-seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
-.tr-seg button{border:0;background:transparent;padding:10px 16px;font-size:13px;cursor:pointer;color:var(--ink);}
+.tr-seg button{border:0;background:transparent;padding:10px 14px;font-size:13px;cursor:pointer;color:var(--ink);white-space:nowrap;}
+.tr-seg button em{font-style:normal;opacity:0.65;margin-left:4px;font-size:11px;}
 .tr-seg button.active{background:var(--brown);color:#fff;}
+.tr-seg button.active em{opacity:0.85;}
+.tr-subfilter{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.tr-subfilter button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 14px;border-radius:999px;font-size:12px;cursor:pointer;}
+.tr-subfilter button.active{background:var(--gold);border-color:var(--gold);color:#3d2a17;font-weight:600;}
 .tr-btn{border:1px solid var(--brown);background:var(--brown);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;}
 .tr-save{font-size:12px;color:var(--muted);}
 .tr-save-saved{color:#2e7d32;}
 .tr-save-error{color:#c0392b;}
 .tr-main{padding:24px;max-width:1500px;margin:0 auto;}
 .tr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-items:start;}
+.tr-section{grid-column:1 / -1;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:18px 4px 4px;border-top:1px solid var(--line);margin-top:8px;}
+.tr-section:first-child{border-top:0;margin-top:0;padding-top:0;}
+.tr-section h2{margin:0;font-size:18px;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown);font-family:var(--font-cormorant),Georgia,serif;}
+.tr-section span{font-size:12px;color:var(--muted);}
+.tr-section button{margin-left:auto;border:0;background:transparent;color:var(--brown);font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;}
 .tr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;}
 .tr-card.kept{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),var(--shadow);}
 .tr-imgwrap{position:relative;aspect-ratio:1/1;background:#efe7db;}

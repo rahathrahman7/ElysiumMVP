@@ -7,7 +7,7 @@
  * chosen TMC source ring onto the existing ELYSIUM product, and applies the
  * associated copy / pricing / UI changes:
  *
- *   Vienna moissanite radiant  -> Clarion   (rose only — source has no Y/W)
+ *   Vienna radiant solitaire   -> Clarion   (yellow / white / rose)
  *   Eloise antique halo        -> Aveline   (+ remove Hidden Halo treatment)
  *   Noa radiant+trillion       -> Orabella  (+ carat prices £1k less per tier)
  *
@@ -22,6 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DRY_RUN = process.argv.includes('--dry-run');
+const ONLY = process.argv.find((a) => a.startsWith('--only='))?.split('=')[1];
 const STORE = 'https://tmcfinejewellers.com';
 const ROOT = process.cwd();
 const PRODUCTS_PATH = path.join(ROOT, 'public/data/products.json');
@@ -44,16 +45,12 @@ const METAL_FOR_COLOR = {
 const TARGETS = [
   {
     slug: 'clarion-engagement-ring',
-    // Vienna radiant solitaire (setting 5845) is sold on TMC as separate
-    // single-metal one-offs. Combine each metal's renders under one product.
+    // Signature Vienna radiant solitaire (setting 5845) carries full yellow /
+    // white / rose renders, so all metals come from the one product.
+    handle: 'the-vienna-ring-radiant-solitaire',
     dir: 'public/products/Clarion',
     prefix: 'clarion-tmc',
     colors: ['yellow', 'white', 'rose'],
-    colorSources: {
-      yellow: 'the-vienna-ring-2-8ct-moissanite-radiant-solitaire-6',
-      white: 'the-vienna-ring-1-77ct-lab-grown-diamond-radiant-solitaire',
-      rose: 'the-vienna-ring-1ct-moissanite-radiant-solitaire',
-    },
     updatePrimaryImages: true,
     primaryColor: 'yellow',
   },
@@ -273,8 +270,9 @@ async function processTarget(products, target) {
 async function main() {
   const products = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
 
-  console.log(`Client ring image replacements${DRY_RUN ? ' (dry run)' : ''}`);
-  for (const target of TARGETS) {
+  const targets = ONLY ? TARGETS.filter((t) => t.slug === ONLY) : TARGETS;
+  console.log(`Client ring image replacements${DRY_RUN ? ' (dry run)' : ''}${ONLY ? ` — only ${ONLY}` : ''}`);
+  for (const target of targets) {
     await processTarget(products, target);
     await sleep(200);
   }

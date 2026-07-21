@@ -141,11 +141,24 @@ def resolve_src(handle: str, colour: str) -> Path | None:
     return None
 
 
-def copy_metal_images(cfg: dict) -> dict[str, str]:
-    """Copy available metal renders into product folder. Returns colour -> public path."""
+def resolve_front_src(handle: str, colour: str) -> Path | None:
+    """Front / side-angle render for a metal (public tmc-import preferred)."""
+    pub = PUBLIC_TMC / handle
+    for name in (f"metal-{colour}-front.jpg", f"{colour}-front.jpg"):
+        candidate = pub / name
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def copy_metal_images(cfg: dict) -> dict[str, dict[str, str]]:
+    """Copy top (+ front when available) into product folder.
+
+    Returns colour -> {"top": path, "front"?: path}.
+    """
     dest_dir = ROOT / "public/products" / cfg["folder"]
     dest_dir.mkdir(parents=True, exist_ok=True)
-    paths: dict[str, str] = {}
+    paths: dict[str, dict[str, str]] = {}
     for colour in cfg["metals_with_new"]:
         src = resolve_src(cfg["handle"], colour)
         if not src:
@@ -154,12 +167,24 @@ def copy_metal_images(cfg: dict) -> dict[str, str]:
         dest_name = f"{cfg['prefix']}-{colour}.jpg"
         dest = dest_dir / dest_name
         shutil.copy2(src, dest)
-        paths[colour] = f"/products/{cfg['folder']}/{dest_name}"
+        entry: dict[str, str] = {"top": f"/products/{cfg['folder']}/{dest_name}"}
         print(f"  copied {src.name} -> {dest.relative_to(ROOT)}")
+
+        front_src = resolve_front_src(cfg["handle"], colour)
+        if front_src:
+            front_name = f"{cfg['prefix']}-{colour}-front.jpg"
+            front_dest = dest_dir / front_name
+            shutil.copy2(front_src, front_dest)
+            entry["front"] = f"/products/{cfg['folder']}/{front_name}"
+            print(f"  copied {front_src.name} -> {front_dest.relative_to(ROOT)}")
+        paths[colour] = entry
     return paths
 
 
-def build_gallery(product: dict, colour_paths: dict[str, str], metals_with_new: list[str]) -> dict:
+def build_gallery(
+    product: dict, colour_paths: dict[str, dict[str, str]], metals_with_new: list[str]
+) -> dict:
+    """Per-metal gallery: top then front when both exist (PDP shows all colours at once)."""
     gallery = dict(product.get("galleryByMetal") or {})
     for metal_name, colour in GALLERY_MAP.items():
         if metal_name not in gallery and metal_name not in (m["name"] for m in product.get("metals") or []):
@@ -167,7 +192,11 @@ def build_gallery(product: dict, colour_paths: dict[str, str], metals_with_new: 
         if colour not in metals_with_new or colour not in colour_paths:
             # Leave existing gallery entries for metals without new renders
             continue
-        gallery[metal_name] = [colour_paths[colour]]
+        entry = colour_paths[colour]
+        imgs = [entry["top"]]
+        if entry.get("front"):
+            imgs.append(entry["front"])
+        gallery[metal_name] = imgs
     return gallery
 
 
@@ -203,14 +232,15 @@ def main() -> None:
         gallery = build_gallery(product, colour_paths, cfg["metals_with_new"])
         product["galleryByMetal"] = gallery
 
-        # Primary images: yellow first, else any available new colour
+        # Primary images: yellow first, else any available new colour (tops for cards)
         primary_colour = "yellow" if "yellow" in colour_paths else next(iter(colour_paths))
-        product["images"] = [colour_paths[primary_colour]]
-        # Prefer listing available metals' heroes in images[] for shop cards
+        product["images"] = [colour_paths[primary_colour]["top"]]
         ordered = []
         for c in ("yellow", "rose", "white"):
-            if c in colour_paths and colour_paths[c] not in ordered:
-                ordered.append(colour_paths[c])
+            if c in colour_paths:
+                top = colour_paths[c]["top"]
+                if top not in ordered:
+                    ordered.append(top)
         if ordered:
             product["images"] = ordered
 

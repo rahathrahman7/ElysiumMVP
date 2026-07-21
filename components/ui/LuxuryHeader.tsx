@@ -318,7 +318,8 @@ export default function LuxuryHeader() {
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         useTransparentNav
-          ? "bg-transparent"
+          ? // Soft top scrim so white nav text stays readable on the light silk hero
+            "bg-gradient-to-b from-black/55 via-black/25 to-transparent"
           : "bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper"
       )}
     >

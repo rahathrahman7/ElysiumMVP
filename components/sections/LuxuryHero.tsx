@@ -204,8 +204,10 @@ export default function LuxuryHero() {
           </div>
         </div>
 
-        {/* Gradient Overlay (animated on scroll) */}
-        <div ref={overlayRef} className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20" />
+        {/* Gradient Overlay (animated on scroll) — stronger top so transparent nav doesn't read as white */}
+        <div ref={overlayRef} className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-black/45" />
+        {/* Dedicated nav-zone scrim */}
+        <div className="absolute inset-x-0 top-0 h-28 md:h-32 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-elysium-gold/5 via-transparent to-elysium-gold/5" />
       </div>
 

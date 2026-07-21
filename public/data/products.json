@@ -8114,7 +8114,7 @@
       "/products/tmc-import/the-ava-ring-pave-wedding-band/white.jpg",
       "/products/tmc-import/the-ava-ring-pave-wedding-band/rose.jpg"
     ],
-    "basePriceGBP": 875,
+    "basePriceGBP": 935,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -8154,13 +8154,13 @@
     "colours": [
       {
         "label": "D",
-        "priceDeltaGBP": 500
+        "priceDeltaGBP": 0
       }
     ],
     "clarities": [
       {
         "label": "VVS2",
-        "priceDeltaGBP": 250
+        "priceDeltaGBP": 0
       },
       {
         "label": "VS1",
@@ -8170,53 +8170,7 @@
     "certificates": [],
     "engravingFeeGBP": 0,
     "engravingMaxChars": 24,
-    "sizes": [
-      "F",
-      "F 1/2",
-      "G",
-      "G 1/2",
-      "H",
-      "H 1/2",
-      "I",
-      "I 1/2",
-      "J",
-      "J 1/2",
-      "K",
-      "K 1/2",
-      "L",
-      "L 1/2",
-      "M",
-      "M 1/2",
-      "N",
-      "N 1/2",
-      "O",
-      "O 1/2",
-      "P",
-      "P 1/2",
-      "Q",
-      "Q 1/2",
-      "R",
-      "R 1/2",
-      "S",
-      "S 1/2",
-      "T",
-      "T 1/2",
-      "U",
-      "U 1/2",
-      "V",
-      "V 1/2",
-      "W",
-      "W 1/2",
-      "X",
-      "X 1/2",
-      "Y",
-      "Y 1/2",
-      "Z",
-      "Z+1",
-      "Z+2",
-      "Z+3",
-      "Z+4"
-    ],
+    "sizes": "F – Z+4",
     "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
     "collections": [
       "wedding-bands",
@@ -8245,7 +8199,8 @@
       ]
     },
     "seoTitle": "Vesper | ELYSIUM",
-    "seoDescription": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion."
+    "seoDescription": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion.",
+    "isHidden": false
   },
   {
     "slug": "evermore",

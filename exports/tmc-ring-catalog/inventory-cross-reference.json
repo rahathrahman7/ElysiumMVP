@@ -1,0 +1,117 @@
+{
+  "elysiumCount": 49,
+  "tmcCount": 333,
+  "matchedHandles": [
+    "the-amira-ring-1",
+    "the-arie-ring-marquise-cut-solitaire",
+    "the-audrey-ring-emerald-solitaire",
+    "the-avery-ring-oval-with-marquise-and-round-brilliant-band",
+    "the-florence-ring-oval-and-pear-trilogy",
+    "the-isla-ring-round-solitaire-new",
+    "the-luise-ring-oval-solitaire",
+    "the-ophelia-ring-elongated-cushion-solitaire",
+    "the-sophia-ring-4-claw-pear-solitaire",
+    "the-vienna-ring-radiant-solitaire"
+  ],
+  "exact": [
+    {
+      "slug": "amira-oval-marquise-accents",
+      "title": "Amira \u2014 Oval with Marquise Accents",
+      "tmcHandle": "the-amira-ring-1",
+      "tmcName": "The Amira Ring\u2122 - Oval with Marquise Accents",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "luise-oval-solitaire",
+      "title": "Luise \u2014 Oval Solitaire",
+      "tmcHandle": "the-luise-ring-oval-solitaire",
+      "tmcName": "The Luise Ring\u00ae - Oval Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "audrey-emerald-solitaire",
+      "title": "Audrey \u2014 Emerald Solitaire",
+      "tmcHandle": "the-audrey-ring-emerald-solitaire",
+      "tmcName": "The Audrey Ring - Emerald Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "vienna-radiant-solitaire",
+      "title": "Vienna \u2014 Radiant Solitaire",
+      "tmcHandle": "the-vienna-ring-radiant-solitaire",
+      "tmcName": "The Vienna Ring - Radiant Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "florence-oval-pear-trilogy",
+      "title": "Florence \u2014 Oval & Pear Trilogy",
+      "tmcHandle": "the-florence-ring-oval-and-pear-trilogy",
+      "tmcName": "The Florence Ring - Oval and Pear Cathedral Trilogy",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "ophelia-elongated-cushion-solitaire",
+      "title": "Ophelia \u2014 Elongated Cushion Solitaire",
+      "tmcHandle": "the-ophelia-ring-elongated-cushion-solitaire",
+      "tmcName": "The Ophelia Ring - Elongated Cushion Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "avery-oval-marquise-band",
+      "title": "Avery \u2014 Oval with Marquise & Round Brilliant Band",
+      "tmcHandle": "the-avery-ring-oval-with-marquise-and-round-brilliant-band",
+      "tmcName": "The Avery Ring - Oval With Marquise and Round Brilliant Band",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "arie-marquise-solitaire",
+      "title": "Arie \u2014 Marquise Solitaire",
+      "tmcHandle": "the-arie-ring-marquise-cut-solitaire",
+      "tmcName": "The Arie Ring - Marquise Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "isla-round-solitaire",
+      "title": "Isla \u2014 Round Solitaire",
+      "tmcHandle": "the-isla-ring-round-solitaire-new",
+      "tmcName": "The Isla Ring - Round Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    },
+    {
+      "slug": "sophia-pear-solitaire",
+      "title": "Sophia \u2014 Pear Solitaire",
+      "tmcHandle": "the-sophia-ring-4-claw-pear-solitaire",
+      "tmcName": "The Sophia Ring - Pear Solitaire",
+      "score": 1.0,
+      "method": "exact"
+    }
+  ],
+  "fuzzyStrong": [],
+  "fuzzyMaybe": [
+    {
+      "slug": "lumea-engagement-ring",
+      "title": "Lumea \u2014 Toi et Moi",
+      "tmcHandle": "the-luise-ring-oval-toi-et-moi",
+      "tmcName": "The Luise Ring\u00ae - Oval Toi et Moi",
+      "score": 0.603,
+      "method": "fuzzy"
+    },
+    {
+      "slug": "orabella-toi-et-moi",
+      "title": "Orabella \u2014 Toi et Moi",
+      "tmcHandle": "the-luise-ring-oval-toi-et-moi",
+      "tmcName": "The Luise Ring\u00ae - Oval Toi et Moi",
+      "score": 0.58,
+      "method": "fuzzy"
+    }
+  ]
+}

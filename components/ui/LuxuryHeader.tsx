@@ -129,6 +129,7 @@ function CartBadge() {
 }
 
 export default function LuxuryHeader() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDiamondDropdownOpen, setIsDiamondDropdownOpen] = useState(false);
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
@@ -214,6 +215,20 @@ export default function LuxuryHeader() {
   };
   const diamondDropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  // Homepage top: transparent bar + light text; after scroll (or other pages): solid white
+  const useTransparentNav = isHomePage && !isScrolled;
+  const navTextClass = useTransparentNav ? "text-white" : "text-[#45321e]";
+
+  useEffect(() => {
+    const updateScrollState = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
 
   // Close diamond dropdown when clicking outside or pressing Escape
   useEffect(() => {
@@ -299,15 +314,24 @@ export default function LuxuryHeader() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper">
+    <header
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        useTransparentNav
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-xl shadow-2xl shadow-black/5 border-b border-elysium-whisper"
+      )}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo — always visible; white over hero, brown on solid bar */}
           <Link href="/" className="relative transition-all duration-300 opacity-100">
             <div className="group transition-all duration-300 hover:scale-105">
               <span
                 className="font-serif text-2xl font-bold tracking-[0.15em] transition-all duration-300"
-                style={{ color: "var(--elysium-brown)" }}
+                style={{
+                  color: useTransparentNav ? "white" : "var(--elysium-brown)",
+                }}
               >
                 ELYSIUM
               </span>
@@ -326,7 +350,7 @@ export default function LuxuryHeader() {
                   setIsCollectionsOpen(false);
                   setIsEducationOpen(false);
                 }}
-                className="text-[#45321e]"
+                className={navTextClass}
               />
               <DiamondShapesDropdown
                 isOpen={isDiamondDropdownOpen}
@@ -343,7 +367,7 @@ export default function LuxuryHeader() {
                   setIsDiamondDropdownOpen(false);
                   setIsEducationOpen(false);
                 }}
-                className="text-[#45321e]"
+                className={navTextClass}
               />
               <CollectionsMegaMenu
                 isOpen={isCollectionsOpen}
@@ -360,7 +384,7 @@ export default function LuxuryHeader() {
                   setIsDiamondDropdownOpen(false);
                   setIsCollectionsOpen(false);
                 }}
-                className="text-[#45321e]"
+                className={navTextClass}
               />
               <EducationMegaMenu
                 isOpen={isEducationOpen}
@@ -374,17 +398,27 @@ export default function LuxuryHeader() {
                 href={link.href}
                 className={clsx(
                   "relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 group overflow-hidden rounded-2xl",
-                  pathname === link.href ? "text-elysium-gold" : "text-[#45321e]"
+                  pathname === link.href
+                    ? "text-elysium-gold"
+                    : navTextClass
                 )}
               >
                 {link.label}
                 
-                <span
-                  className={clsx(
-                    "absolute bottom-0 left-0 h-px bg-elysium-gold transition-all duration-300",
-                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                  )}
-                />
+                {/* Gold underline on solid navbar */}
+                {!useTransparentNav && (
+                  <span
+                    className={clsx(
+                      "absolute bottom-0 left-0 h-px bg-elysium-gold transition-all duration-300",
+                      pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                    )}
+                  />
+                )}
+
+                {/* Soft glass hover on transparent homepage nav */}
+                {useTransparentNav && (
+                  <span className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                )}
               </Link>
             ))}
           </nav>
@@ -393,7 +427,10 @@ export default function LuxuryHeader() {
           <div className="flex items-center space-x-4">
             {/* Search Button */}
             <button
-              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
+              className={clsx(
+                "p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10",
+                navTextClass
+              )}
               aria-label="Search"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -404,7 +441,10 @@ export default function LuxuryHeader() {
             {/* Cart Button with Badge */}
             <Link
               href="/cart"
-              className="relative p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
+              className={clsx(
+                "relative p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10",
+                navTextClass
+              )}
               aria-label="Shopping cart"
             >
               <svg
@@ -425,7 +465,10 @@ export default function LuxuryHeader() {
             {/* Wishlist Button */}
             <Link
               href="/wishlist"
-              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10 text-[#45321e]"
+              className={clsx(
+                "p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-elysium-gold/10",
+                navTextClass
+              )}
               aria-label="Wishlist"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -436,7 +479,10 @@ export default function LuxuryHeader() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-full transition-all duration-300 hover:bg-elysium-gold/10 text-[#45321e]"
+              className={clsx(
+                "md:hidden p-2 rounded-full transition-all duration-300 hover:bg-elysium-gold/10",
+                navTextClass
+              )}
               aria-label="Toggle menu"
             >
               <svg

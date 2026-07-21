@@ -14,7 +14,7 @@ const ringStyles = [
   {
     label: "Toi et Moi",
     href: "/shop?category=ring&shape=toi-et-moi",
-    image: "/products/Orabella/orabella-gold-front.jpeg",
+    image: "/products/Orabella/orabella-tmc-yellow.jpg",
   },
   {
     label: "Hidden Halo",

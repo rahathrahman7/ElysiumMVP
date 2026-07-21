@@ -629,15 +629,15 @@ export function CategoryShowcase() {
               />
               <ProductCard
                 href="/products/eterna-oval-solitaire-hidden-halo"
-                src="/products/Eterna/eterna-front.jpeg"
+                src="/products/Eterna/eterna-tmc-yellow.jpg"
                 alt="Eterna oval solitaire"
                 label="Eterna"
-                description="Classic four-talon oval solitaire enhanced by a dazzling hidden halo."
+                description="Classic four-talon oval solitaire enhanced by a dazzling halo."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/Eterna/eterna-front.jpeg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Eterna/eterna-rose-front.jpeg", swatch: SWATCH_COLOURS.rose },
-                  { name: "platinum", src: "/products/Eterna/eterna-plat-front.jpeg", swatch: SWATCH_COLOURS.platinum },
+                  { name: "gold", src: "/products/Eterna/eterna-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/Eterna/eterna-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "platinum", src: "/products/Eterna/eterna-tmc-white.jpg", swatch: SWATCH_COLOURS.platinum },
                 ]}
               />
               <ProductCard
@@ -655,54 +655,54 @@ export function CategoryShowcase() {
               />
               <ProductCard
                 href="/products/aura-engagement-ring"
-                src="/products/Aura/Aura-gold-front.jpg"
+                src="/products/Aura/aura-tmc-yellow.jpg"
                 alt="Aura engagement ring"
                 label="Aura"
                 description="Oval-cut centre stone complemented by round and marquise-cut side stones."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/Aura/Aura-gold-front.jpg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Aura/aura-rose-front.jpg", swatch: SWATCH_COLOURS.rose },
-                  { name: "silver", src: "/products/Aura/aura-silver-front.jpg", swatch: SWATCH_COLOURS.silver },
+                  { name: "gold", src: "/products/Aura/aura-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/Aura/aura-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "silver", src: "/products/Aura/aura-tmc-white.jpg", swatch: SWATCH_COLOURS.silver },
                 ]}
               />
               <ProductCard
                 href="/products/unity-engagement-ring"
-                src="/products/Unity/unity-gold-front.jpg"
+                src="/products/Unity/unity-tmc-yellow.jpg"
                 alt="Unity braided solitaire"
                 label="Unity"
-                description="Refined braided design with an oval-cut centre, pav&eacute; detail, and hidden halo."
+                description="Oval-cut centre in a cathedral setting with a sculptural twisted band and marquise accents."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/Unity/unity-gold-front.jpg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Unity/unity-rose-front.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "gold", src: "/products/Unity/unity-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/Unity/unity-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
                   { name: "silver", src: "/products/Unity/unity-silver-front.jpg", swatch: SWATCH_COLOURS.silver },
                 ]}
               />
               <ProductCard
                 href="/products/lumea-engagement-ring"
-                src="/products/Lumea/lumia-gold-front.jpg"
+                src="/products/Lumea/lumea-tmc-yellow.jpg"
                 alt="Lumea toi et moi"
                 label="Lumea"
-                description="Striking oval and pear-cut stones brought together in a timeless toi et moi design."
+                description="Striking oval and oval-cut stones brought together in a timeless toi et moi design."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/Lumea/lumia-gold-front.jpg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Lumea/lumia-rose-front.jpg", swatch: SWATCH_COLOURS.rose },
-                  { name: "silver", src: "/products/Lumea/lumia-silver-front.jpg", swatch: SWATCH_COLOURS.silver },
+                  { name: "gold", src: "/products/Lumea/lumea-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/Lumea/lumea-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "silver", src: "/products/Lumea/lumea-tmc-white.jpg", swatch: SWATCH_COLOURS.silver },
                 ]}
               />
               <ProductCard
                 href="/products/orabella-toi-et-moi"
-                src="/products/Orabella/orabella-gold-front.jpeg"
+                src="/products/Orabella/orabella-tmc-yellow.jpg"
                 alt="Orabella toi et moi"
                 label="Orabella"
-                description="Round and oval stones in a distinctive toi et moi silhouette of quiet luxury."
+                description="A centre diamond framed by two trillion-cut accents — past, present, and future."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/Orabella/orabella-gold-front.jpeg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Orabella/orabella-rose-front.jpeg", swatch: SWATCH_COLOURS.rose },
-                  { name: "silver", src: "/products/Orabella/orabella-silver-back.jpeg", swatch: SWATCH_COLOURS.silver },
+                  { name: "gold", src: "/products/Orabella/orabella-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/Orabella/orabella-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "silver", src: "/products/Orabella/orabella-tmc-white.jpg", swatch: SWATCH_COLOURS.silver },
                 ]}
               />
             </div>

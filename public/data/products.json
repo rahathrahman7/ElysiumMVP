@@ -1107,11 +1107,12 @@
   {
     "slug": "aveline-radiant-solitaire",
     "title": "Aveline — Radiant Solitaire",
-    "blurb": "Radiant solitaire with an antique-style halo and four talon-tipped claws.",
+    "blurb": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and an antique style halo.",
     "description": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and an antique style halo.\n\nA harmonious fusion of two timeless designs, thoughtfully crafted into an heirloom destined to be cherished for generations.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Aveline/aveline-tmc-yellow.jpg",
-      "/products/Aveline/aveline-tmc-yellow-front.jpg"
+      "/products/Aveline/aveline-tmc-rose.jpg",
+      "/products/Aveline/aveline-tmc-white.jpg"
     ],
     "basePriceGBP": 2449,
     "metals": [
@@ -1290,20 +1291,16 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Aveline/aveline-tmc-yellow.jpg",
-        "/products/Aveline/aveline-tmc-yellow-front.jpg"
+        "/products/Aveline/aveline-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Aveline/aveline-tmc-rose.jpg",
-        "/products/Aveline/aveline-tmc-rose-front.jpg"
+        "/products/Aveline/aveline-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Aveline/aveline-tmc-white.jpg",
-        "/products/Aveline/aveline-tmc-white-front.jpg"
+        "/products/Aveline/aveline-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Aveline/aveline-tmc-white.jpg",
-        "/products/Aveline/aveline-tmc-white-front.jpg"
+        "/products/Aveline/aveline-tmc-white.jpg"
       ]
     },
     "seoDescription": "Aveline radiant solitaire with an antique-style halo and four talon-tipped claws."
@@ -1311,13 +1308,14 @@
   {
     "slug": "orabella-toi-et-moi",
     "title": "Orabella — Toi et Moi",
-    "blurb": "Toi et Moi design featuring pear-cut and radiant-cut stones in perfect harmony.",
+    "blurb": "The Orabella features a lab-grown diamond elegantly framed by two delicate trillion-cut accent stones. Rich in symbolism, each stone represents the past, the present, and the future.",
     "description": "Orabella is a captivating toi et moi design, featuring a striking duo of pear-cut and radiant-cut stones brought together in perfect harmony. Both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the pear will be 1ct and the radiant will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Orabella/orabella-tmc-yellow.jpg",
-      "/products/Orabella/orabella-tmc-yellow-front.jpg"
+      "/products/Orabella/orabella-tmc-rose.jpg",
+      "/products/Orabella/orabella-tmc-white.jpg"
     ],
-    "basePriceGBP": 2689,
+    "basePriceGBP": 1689,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -1494,20 +1492,16 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Orabella/orabella-tmc-yellow.jpg",
-        "/products/Orabella/orabella-tmc-yellow-front.jpg"
+        "/products/Orabella/orabella-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Orabella/orabella-tmc-rose.jpg",
-        "/products/Orabella/orabella-tmc-rose-front.jpg"
+        "/products/Orabella/orabella-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Orabella/orabella-tmc-white.jpg",
-        "/products/Orabella/orabella-tmc-white-front.jpg"
+        "/products/Orabella/orabella-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Orabella/orabella-tmc-white.jpg",
-        "/products/Orabella/orabella-tmc-white-front.jpg"
+        "/products/Orabella/orabella-tmc-white.jpg"
       ]
     }
   },
@@ -1518,7 +1512,8 @@
     "description": "The Clarion engagement ring is a classic solitaire design, showcasing an exquisite radiant-cut center stone held in a sleek four-claw setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
       "/products/Clarion/clarion-tmc-yellow.jpg",
-      "/products/Clarion/clarion-tmc-yellow-front.jpg"
+      "/products/Clarion/clarion-tmc-rose.jpg",
+      "/products/Clarion/clarion-tmc-white.jpg"
     ],
     "basePriceGBP": 1949,
     "metals": [
@@ -1697,20 +1692,16 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Clarion/clarion-tmc-yellow.jpg",
-        "/products/Clarion/clarion-tmc-yellow-front.jpg"
+        "/products/Clarion/clarion-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Clarion/clarion-tmc-rose.jpg",
-        "/products/Clarion/clarion-tmc-rose-front.jpg"
+        "/products/Clarion/clarion-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Clarion/clarion-tmc-white.jpg",
-        "/products/Clarion/clarion-tmc-white-front.jpg"
+        "/products/Clarion/clarion-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Clarion/clarion-tmc-white.jpg",
-        "/products/Clarion/clarion-tmc-white-front.jpg"
+        "/products/Clarion/clarion-tmc-white.jpg"
       ]
     }
   },
@@ -1720,9 +1711,9 @@
     "blurb": "Oval-cut centre stone with refined talon-tipped claws.",
     "description": "Elegant in its simplicity, the Ovalis engagement ring showcases a captivating oval-cut centre stone secured by four refined talon-tipped claws on a slender band.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Ovalis/ovalis-front.jpeg",
-      "/products/Ovalis/ovalis-side.jpeg",
-      "/products/Ovalis/ovalis-back.jpeg"
+      "/products/Ovalis/ovalis-tmc-yellow.jpg",
+      "/products/Ovalis/ovalis-tmc-rose.jpg",
+      "/products/Ovalis/ovalis-tmc-white.jpg"
     ],
     "basePriceGBP": 2179,
     "metals": [
@@ -1901,36 +1892,28 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Ovalis/ovalis-front.jpeg",
-        "/products/Ovalis/ovalis-side.jpeg",
-        "/products/Ovalis/ovalis-back.jpeg"
+        "/products/Ovalis/ovalis-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Ovalis/ovalis-rose-front.jpeg",
-        "/products/Ovalis/ovalis-rose-side.jpeg",
-        "/products/Ovalis/ovalis-rose-back.jpeg"
+        "/products/Ovalis/ovalis-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Ovalis/ovalis-plat-front.jpeg",
-        "/products/Ovalis/ovalis-plat-side.jpeg",
-        "/products/Ovalis/ovalis-plat-back.jpeg"
+        "/products/Ovalis/ovalis-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Ovalis/ovalis-plat-front.jpeg",
-        "/products/Ovalis/ovalis-plat-side.jpeg",
-        "/products/Ovalis/ovalis-plat-back.jpeg"
+        "/products/Ovalis/ovalis-tmc-white.jpg"
       ]
     }
   },
   {
     "slug": "eterna-oval-solitaire-hidden-halo",
     "title": "Eterna",
-    "blurb": "Classic oval solitaire with four-talon claws and hidden halo.",
+    "blurb": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling halo.",
     "description": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling hidden halo.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Eterna/eterna-front.jpeg",
-      "/products/Eterna/eterna-side.jpeg",
-      "/products/Eterna/eterna-back.jpeg"
+      "/products/Eterna/eterna-tmc-yellow.jpg",
+      "/products/Eterna/eterna-tmc-rose.jpg",
+      "/products/Eterna/eterna-tmc-white.jpg"
     ],
     "basePriceGBP": 2379,
     "metals": [
@@ -2098,8 +2081,7 @@
     ],
     "shape": "oval",
     "styles": [
-      "solitaire",
-      "hidden-halo"
+      "solitaire"
     ],
     "caratBuckets": [
       "1-1.5",
@@ -2110,24 +2092,16 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Eterna/eterna-front.jpeg",
-        "/products/Eterna/eterna-side.jpeg",
-        "/products/Eterna/eterna-back.jpeg"
+        "/products/Eterna/eterna-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Eterna/eterna-rose-front.jpeg",
-        "/products/Eterna/eterna-rose-side.jpeg",
-        "/products/Eterna/eterna-rose-back.jpeg"
+        "/products/Eterna/eterna-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Eterna/eterna-plat-front.jpeg",
-        "/products/Eterna/eterna-plat-side.jpeg",
-        "/products/Eterna/eterna-plat-back.jpeg"
+        "/products/Eterna/eterna-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Eterna/eterna-plat-front.jpeg",
-        "/products/Eterna/eterna-plat-side.jpeg",
-        "/products/Eterna/eterna-plat-back.jpeg"
+        "/products/Eterna/eterna-tmc-white.jpg"
       ]
     }
   },
@@ -4737,9 +4711,9 @@
     "blurb": "Oval-cut centre stone with refined band adorned with round and marquise-cut side stones.",
     "description": "The beloved Aura design showcases a dazzling oval-cut centre stone, complemented by a refined band adorned with two pairs of round and marquise-cut side stones.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Aura/Aura-gold-front.jpg",
-      "/products/Aura/aura-gold-side.jpg",
-      "/products/Aura/aura-gold-back.jpg"
+      "/products/Aura/aura-tmc-yellow.jpg",
+      "/products/Aura/aura-tmc-rose.jpg",
+      "/products/Aura/aura-tmc-white.jpg"
     ],
     "basePriceGBP": 2435,
     "metals": [
@@ -4931,46 +4905,34 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Aura/Aura-gold-front.jpg",
-        "/products/Aura/aura-gold-side.jpg",
-        "/products/Aura/aura-gold-back.jpg"
+        "/products/Aura/aura-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Aura/aura-rose-front.jpg",
-        "/products/Aura/aura-rose-side.jpg",
-        "/products/Aura/aura-rose-back.jpg"
+        "/products/Aura/aura-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Aura/aura-silver-front.jpg",
-        "/products/Aura/aura-silver-side.jpg",
-        "/products/Aura/aura-silver-back.jpg"
+        "/products/Aura/aura-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Aura/aura-silver-front.jpg",
-        "/products/Aura/aura-silver-side.jpg",
-        "/products/Aura/aura-silver-back.jpg"
+        "/products/Aura/aura-tmc-white.jpg"
       ],
       "Two-Tone Rose/Platinum": [
-        "/products/Aura/aura-rose-silver-front.jpg",
-        "/products/Aura/aura-rose-silver-side.jpg",
-        "/products/Aura/aura-rose-silver-back.jpg"
+        "/products/Aura/aura-tmc-rose.jpg"
       ],
       "Two-Tone Yellow/Platinum": [
-        "/products/Aura/aura-gold-silver-front.jpg",
-        "/products/Aura/aura-gold-silver-side.jpg",
-        "/products/Aura/aura-gold-silver-back.jpg"
+        "/products/Aura/aura-tmc-yellow.jpg"
       ]
     }
   },
   {
     "slug": "lumea-engagement-ring",
     "title": "Lumea — Toi et Moi",
-    "blurb": "Oval-cut and pear-cut stones in a timeless toi et moi design.",
+    "blurb": "The Lumea engagement ring showcases a striking oval-cut stone paired with a twin oval-cut stone, brought together in a timeless toi et moi design.",
     "description": "The Lumea engagement ring showcases a striking oval-cut stone paired with a beautifully balanced pear-cut stone, brought together in a timeless toi et moi design. Both stones are configured together — when you choose carat, colour, clarity or certificate, that choice applies to both stones. If you select 1ct, both stones will be 1ct (the oval will be 1ct and the pear will be 1ct) for all options.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Lumea/lumia-gold-front.jpg",
-      "/products/Lumea/lumia-gold-side.jpg",
-      "/products/Lumea/lumia-gold-back.jpg"
+      "/products/Lumea/lumea-tmc-yellow.jpg",
+      "/products/Lumea/lumea-tmc-rose.jpg",
+      "/products/Lumea/lumea-tmc-white.jpg"
     ],
     "basePriceGBP": 2689,
     "metals": [
@@ -5163,46 +5125,33 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Lumea/lumia-gold-front.jpg",
-        "/products/Lumea/lumia-gold-side.jpg",
-        "/products/Lumea/lumia-gold-back.jpg"
+        "/products/Lumea/lumea-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Lumea/lumia-rose-front.jpg",
-        "/products/Lumea/lumia-rose-side.jpg",
-        "/products/Lumea/lumia-rose-back.jpg"
+        "/products/Lumea/lumea-tmc-rose.jpg"
       ],
       "18k White Gold": [
-        "/products/Lumea/lumia-silver-front.jpg",
-        "/products/Lumea/lumia-silver-side.jpg",
-        "/products/Lumea/lumia-silver-back.jpg"
+        "/products/Lumea/lumea-tmc-white.jpg"
       ],
       "Platinum": [
-        "/products/Lumea/lumia-silver-front.jpg",
-        "/products/Lumea/lumia-silver-side.jpg",
-        "/products/Lumea/lumia-silver-back.jpg"
+        "/products/Lumea/lumea-tmc-white.jpg"
       ],
       "Two-Tone Rose/Platinum": [
-        "/products/Lumea/lumia-rose-silver-front.jpg",
-        "/products/Lumea/lumia-rose-silver-side.jpg",
-        "/products/Lumea/lumia-rose-silver-back.jpg"
+        "/products/Lumea/lumea-tmc-rose.jpg"
       ],
       "Two-Tone Yellow/Platinum": [
-        "/products/Lumea/lumia-gold-silver-front.jpg",
-        "/products/Lumea/lumia-gold-silver-side.jpg",
-        "/products/Lumea/lumia-gold-silver-back.jpg"
+        "/products/Lumea/lumea-tmc-yellow.jpg"
       ]
     }
   },
   {
     "slug": "unity-engagement-ring",
     "title": "Unity — Braided Solitaire",
-    "blurb": "Refined braided design with oval-cut centre, pavé detail, and hidden halo.",
+    "blurb": "Unity showcases an oval-cut lab-grown diamond in a graceful cathedral setting, elevated by a sculptural twisted band adorned with four delicately set marquise accent stones.",
     "description": "Unity is a refined braided engagement ring featuring an interwoven half-circle of smooth pavé and polished metal, a four-claw oval-cut center stone, and a stunning hidden halo.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Unity/unity-gold-front.jpg",
-      "/products/Unity/unity-gold-side.jpg",
-      "/products/Unity/unity-gold-back.jpg"
+      "/products/Unity/unity-tmc-yellow.jpg",
+      "/products/Unity/unity-tmc-rose.jpg"
     ],
     "basePriceGBP": 3199,
     "metals": [
@@ -5365,7 +5314,6 @@
       "engagement-rings",
       "signature-collection",
       "solitaire",
-      "hidden-halo",
       "pave",
       "oval",
       "unity"
@@ -5373,7 +5321,6 @@
     "shape": "oval",
     "styles": [
       "solitaire",
-      "hidden-halo",
       "pave"
     ],
     "caratBuckets": [
@@ -5385,14 +5332,10 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Unity/unity-gold-front.jpg",
-        "/products/Unity/unity-gold-side.jpg",
-        "/products/Unity/unity-gold-back.jpg"
+        "/products/Unity/unity-tmc-yellow.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Unity/unity-rose-front.jpg",
-        "/products/Unity/unity-rose-side.jpg",
-        "/products/Unity/unity-rose-back.jpg"
+        "/products/Unity/unity-tmc-rose.jpg"
       ],
       "18k White Gold": [
         "/products/Unity/unity-silver-front.jpg",

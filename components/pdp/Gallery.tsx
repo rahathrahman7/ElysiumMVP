@@ -102,7 +102,7 @@ export default function Gallery({
       {/* Main image */}
       <div
         ref={mainRef}
-        className="gallery-main-image relative aspect-square w-full overflow-hidden border border-neutral-200"
+        className="gallery-main-image relative aspect-square w-full overflow-hidden border-[0.5px] border-neutral-200/80"
         style={{ backgroundColor: '#E8E2DA' }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -121,7 +121,7 @@ export default function Gallery({
               alt={current.alt || "Product image"}
               fill
               sizes="(min-width:1024px) 50vw, 100vw"
-              className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+              className="object-contain p-2 transition-transform duration-300 ease-out group-hover:scale-[1.02]"
               priority={index === 0}
             />
           ) : (
@@ -181,8 +181,10 @@ export default function Gallery({
               onClick={() => setIndex(i)}
               aria-current={active ? "true" : "false"}
               className={[
-                "gallery-thumbnail relative aspect-square overflow-hidden rounded-none border bg-[rgba(248,244,236,1)] touch-manipulation",
-                active ? "border-[var(--gold)] active ring-gold/20" : "border-neutral-200 hover:border-[var(--gold)]",
+                "gallery-thumbnail relative aspect-square overflow-hidden rounded-none border-[0.5px] bg-[rgba(248,244,236,1)] touch-manipulation",
+                active
+                  ? "border-[var(--gold)] active"
+                  : "border-neutral-200/80 hover:border-[var(--gold)]",
               ].join(" ")}
             >
               {img.src && img.src.trim() !== '' ? (
@@ -191,7 +193,7 @@ export default function Gallery({
                   alt={img.alt || `Thumbnail ${i + 1}`}
                   fill
                   sizes="120px"
-                  className="object-contain p-1"
+                  className="object-contain p-0.5"
                   loading={i === 0 ? "eager" : "lazy"}
                 />
               ) : (

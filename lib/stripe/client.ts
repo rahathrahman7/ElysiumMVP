@@ -23,7 +23,7 @@ export async function createCheckoutSession(
       title: it.title,
       price: it.price,
       quantity: it.quantity,
-      configuration: it.configuration ?? {},
+      configuration: (it.configuration ?? {}) as Record<string, unknown>,
     })),
     customerEmail,
     customerName,

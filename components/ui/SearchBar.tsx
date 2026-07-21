@@ -173,14 +173,14 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                       {product.title}
                     </h4>
                     <div className="flex items-center mt-1 text-xs text-[var(--color-ink-soft)] space-x-2">
-                      {product.metal && (
-                        <span className="capitalize">{product.metal}</span>
+                      {product.metals?.[0]?.name && (
+                        <span className="capitalize">{product.metals[0].name}</span>
                       )}
-                      {product.style && product.metal && (
+                      {product.styles?.[0] && product.metals?.[0]?.name && (
                         <span>•</span>
                       )}
-                      {product.style && (
-                        <span className="capitalize">{product.style}</span>
+                      {product.styles?.[0] && (
+                        <span className="capitalize">{product.styles[0]}</span>
                       )}
                     </div>
                   </div>
@@ -204,7 +204,7 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                     setQuery("");
                   }}
                 >
-                  View all results for "{query}" →
+                  View all results for &ldquo;{query}&rdquo; →
                 </Link>
               </div>
             </>
@@ -216,7 +216,7 @@ export function SearchBar({ className = "" }: SearchBarProps) {
                   <path d="M21 21l-4.35-4.35"></path>
                 </svg>
               </div>
-              <p className="text-sm">No results found for "{query}"</p>
+              <p className="text-sm">No results found for &ldquo;{query}&rdquo;</p>
               <p className="text-xs mt-1">Try different keywords or browse our collection</p>
             </div>
           ) : (

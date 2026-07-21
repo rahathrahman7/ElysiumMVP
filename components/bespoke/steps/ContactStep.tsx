@@ -30,7 +30,7 @@ export function ContactStep({ data, errors, onChange }: ContactStepProps) {
           className="font-serif text-[#6D3D0D] mt-4"
           style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", letterSpacing: "-0.02em" }}
         >
-          Let's Get <span className="text-[#D4AF37]">Acquainted</span>
+          Let&apos;s Get <span className="text-[#D4AF37]">Acquainted</span>
         </h2>
         <p
           className="text-[#6D3D0D]/75 font-light leading-relaxed mt-4 max-w-xl mx-auto"
@@ -135,7 +135,7 @@ export function ContactStep({ data, errors, onChange }: ContactStepProps) {
             className="w-full px-4 py-3 bg-white border border-[#6D3D0D]/20 text-[#6D3D0D] placeholder-[#6D3D0D]/40 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 text-base"
           />
           <p className="mt-2 text-xs text-[#6D3D0D]/50 font-light">
-            We'll use this to coordinate your consultation appointment.
+            We&apos;ll use this to coordinate your consultation appointment.
           </p>
         </div>
       </div>
@@ -186,7 +186,7 @@ export function ContactStep({ data, errors, onChange }: ContactStepProps) {
             <div>
               <p className="text-[#6D3D0D] text-sm font-medium">24hr Response</p>
               <p className="text-[#6D3D0D]/60 text-xs font-light mt-1">
-                We'll respond within one business day
+                We&apos;ll respond within one business day
               </p>
             </div>
           </div>

@@ -77,31 +77,31 @@ const metalOptions: MetalOption[] = [
     name: "18k Yellow Gold",
     imageUrl: "/icons/swatches/goldswatch.png",
     hex: "#D4AF37",
-    priceModifier: 0,
+    priceDeltaGBP: 0,
   },
   {
     name: "18k Rose Gold",
     imageUrl: "/icons/swatches/rosegoldswatch.png",
     hex: "#B76E79",
-    priceModifier: 0,
+    priceDeltaGBP: 0,
   },
   {
     name: "18k White Gold",
     imageUrl: "/icons/swatches/whitegoldswatch.png",
     hex: "#F5F5F5",
-    priceModifier: 0,
+    priceDeltaGBP: 0,
   },
   {
     name: "Platinum",
     imageUrl: "/icons/swatches/platinumswatch.png",
     hex: "#E5E4E2",
-    priceModifier: 500,
+    priceDeltaGBP: 500,
   },
   {
     name: "Two-Tone",
     imageUrl: "/icons/swatches/goldwhitegold.png",
     hex: "#D4AF37",
-    priceModifier: 0,
+    priceDeltaGBP: 0,
   },
 ];
 

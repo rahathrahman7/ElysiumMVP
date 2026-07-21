@@ -1,4 +1,20 @@
-import type { Product } from "@/types/product";
+/** Minimal product shape used by SEO helpers — works for both catalog Product types. */
+type SeoProductLike = {
+  title: string;
+  description?: string;
+  slug: string;
+  images?: Array<string | { url: string; alt?: string }>;
+  basePriceGBP: number;
+  inStock?: boolean;
+};
+
+function imageUrls(images?: SeoProductLike["images"]): string[] {
+  if (!images?.length) return [];
+  return images
+    .map((img) => (typeof img === "string" ? img : img.url))
+    .filter((url): url is string => Boolean(url))
+    .slice(0, 5);
+}
 
 export const defaultSEO = {
   titleTemplate: "%s | ELYSIUM",
@@ -31,23 +47,25 @@ export function generateOrganizationJsonLd() {
   };
 }
 
-export function generateProductJsonLd(product: Product) {
+export function generateProductJsonLd(product: SeoProductLike) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
     description: product.description,
-    image: product.images?.map((i) => i.url).slice(0, 5),
+    image: imageUrls(product.images),
     offers: {
       "@type": "Offer",
       priceCurrency: "GBP",
       price: (product.basePriceGBP).toFixed(2),
-      availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      availability: product.inStock === false
+        ? "https://schema.org/OutOfStock"
+        : "https://schema.org/InStock",
     },
   } as const;
 }
 
-export function generatePdpBreadcrumbJsonLd(product: Product) {
+export function generatePdpBreadcrumbJsonLd(product: Pick<SeoProductLike, "title" | "slug">) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -58,18 +76,3 @@ export function generatePdpBreadcrumbJsonLd(product: Product) {
     ],
   } as const;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

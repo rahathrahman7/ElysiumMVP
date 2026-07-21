@@ -1,22 +1,18 @@
 {
   "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "coverage/",
+    "public/",
+    "Public/",
+    "mcp_artifacts/",
+    "prisma/migrations/",
+    "*.config.js",
+    "*.config.mjs"
+  ],
   "rules": {
     "@next/next/no-img-element": "off"
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -207,7 +207,7 @@ export function BudgetStep({ data, errors, onChange }: BudgetStepProps) {
           <div>
             <p className="text-[#6D3D0D] text-sm font-medium mb-2">Budget Guidance</p>
             <p className="text-[#6D3D0D]/75 text-sm font-light leading-relaxed">
-              Your budget is a guideline, not a constraint. During your consultation, we'll explore all
+              Your budget is a guideline, not a constraint. During your consultation, we&apos;ll explore all
               possibilities and can adjust recommendations based on your preferences. All quotes are
               provided with transparent pricing.
             </p>

@@ -201,8 +201,8 @@ export default function LuxuryConciergeChat() {
     };
 
     const message = userMessage.toLowerCase();
-    
-    let responseCategory = 'general';
+    type ResponseKey = keyof typeof responses;
+    let responseCategory: ResponseKey | 'general' = 'general';
     
     if (message.includes('ring size') || message.includes('size') || message.includes('sizing')) {
       responseCategory = 'sizing';
@@ -218,7 +218,7 @@ export default function LuxuryConciergeChat() {
       responseCategory = 'investment';
     }
     
-    if (responseCategory !== 'general' && responses[responseCategory]) {
+    if (responseCategory !== 'general') {
       const category = responses[responseCategory];
       return {
         message: category.messages[Math.floor(Math.random() * category.messages.length)],

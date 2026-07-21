@@ -475,7 +475,9 @@ export function CategoryShowcase() {
         x: currentX + dir * cardW,
         duration: 0.45,
         ease: "power2.out",
-        onComplete: () => tweenRef.current?.play(),
+        onComplete: () => {
+          tweenRef.current?.play();
+        },
       });
     },
     [],

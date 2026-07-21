@@ -106,9 +106,12 @@ export function useOnlineStatus() {
       setIsOnline(true);
       // Trigger background sync when back online
       if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
-        navigator.serviceWorker.ready.then(registration => {
-          registration.sync.register('wishlist-sync');
-          registration.sync.register('cart-sync');
+        navigator.serviceWorker.ready.then((registration) => {
+          const syncReg = registration as ServiceWorkerRegistration & {
+            sync: { register(tag: string): Promise<void> };
+          };
+          syncReg.sync.register('wishlist-sync');
+          syncReg.sync.register('cart-sync');
         });
       }
     };

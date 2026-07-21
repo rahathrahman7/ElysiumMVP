@@ -8,7 +8,7 @@ const profileSchema = z.object({
   name: z.string().optional(),
   phone: z.string().optional(),
   dateOfBirth: z.string().optional(),
-  preferences: z.record(z.any()).optional(),
+  preferences: z.record(z.string(), z.any()).optional(),
 });
 
 export async function GET() {

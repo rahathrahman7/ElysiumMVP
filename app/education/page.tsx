@@ -222,9 +222,9 @@ export default function EducationPage() {
           <nav aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-[#6D3D0D]/60" itemScope itemType="https://schema.org/BreadcrumbList">
               <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <a href="/" itemProp="item" className="hover:text-[#D4AF37] transition-colors">
+                <Link href="/" itemProp="item" className="hover:text-[#D4AF37] transition-colors">
                   <span itemProp="name">Home</span>
-                </a>
+                </Link>
                 <meta itemProp="position" content="1" />
               </li>
               <li className="flex items-center">

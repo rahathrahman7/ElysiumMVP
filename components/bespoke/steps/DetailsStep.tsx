@@ -138,7 +138,7 @@ export function DetailsStep({ data, errors, onChange }: DetailsStepProps) {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#D4AF37] mt-0.5">•</span>
-                <span>Don't worry about perfection—we'll refine together</span>
+                <span>Don&apos;t worry about perfection—we&apos;ll refine together</span>
               </li>
             </ul>
           </div>
@@ -165,7 +165,7 @@ export function DetailsStep({ data, errors, onChange }: DetailsStepProps) {
           </div>
           <h3 className="font-serif text-[#6D3D0D] text-xl mb-2">Ready to Submit</h3>
           <p className="text-[#6D3D0D]/75 text-sm font-light leading-relaxed">
-            Click Submit to send your enquiry. We'll review your details and reach out within 24 hours
+            Click Submit to send your enquiry. We&apos;ll review your details and reach out within 24 hours
             to schedule your personal consultation.
           </p>
         </div>

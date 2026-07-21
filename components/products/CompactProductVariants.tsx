@@ -391,7 +391,7 @@ export function CompactProductVariants({
                 {selectedSize && selectedSize !== "unknown"
                   ? isBracelet ? selectedSize : `Size ${selectedSize}`
                   : selectedSize === "unknown"
-                  ? "I don't know my size"
+                  ? "I don&apos;t know my size"
                   : isBracelet ? "Select length" : "Select your ring size"}
               </span>
               <svg className="w-3 h-3 text-[#6D3D0D]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -440,7 +440,7 @@ export function CompactProductVariants({
                   }`}
                 >
                   {selectedSize === "unknown" && <span className="text-[#D4AF37] mr-1">✓</span>}
-                  I don't know my size
+                  I don&apos;t know my size
                 </button>
               )}
 

@@ -66,7 +66,16 @@ export async function getDashboardStats() {
       }
     }),
     // Low stock items - use quoted identifiers to respect camelCase columns
-    prisma.$queryRaw`
+    prisma.$queryRaw<
+      Array<{
+        id: string;
+        productSlug: string;
+        variantKey: string;
+        stockLevel: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+      }>
+    >`
       SELECT
         "id",
         "productSlug",
@@ -86,9 +95,11 @@ export async function getDashboardStats() {
     ? ((ordersToday - ordersYesterday) / ordersYesterday) * 100
     : ordersToday > 0 ? 100 : 0;
 
-  const revenueChange = (revenueLastWeek._sum.totalAmountGbp || 0) > 0
-    ? (((revenueThisWeek._sum.totalAmountGbp || 0) - (revenueLastWeek._sum.totalAmountGbp || 0)) / Number(revenueLastWeek._sum.totalAmountGbp)) * 100
-    : (revenueThisWeek._sum.totalAmountGbp || 0) > 0 ? 100 : 0;
+  const revenueLast = Number(revenueLastWeek._sum.totalAmountGbp ?? 0);
+  const revenueCurr = Number(revenueThisWeek._sum.totalAmountGbp ?? 0);
+  const revenueChange = revenueLast > 0
+    ? ((revenueCurr - revenueLast) / revenueLast) * 100
+    : revenueCurr > 0 ? 100 : 0;
 
   const viewsChange = viewsYesterday > 0
     ? ((viewsToday - viewsYesterday) / viewsYesterday) * 100

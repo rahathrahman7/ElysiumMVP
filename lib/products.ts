@@ -37,9 +37,10 @@ function loadProductsSync(): Product[] {
       }
       
       const data = fs.readFileSync(jsonPath, 'utf8');
-      _products = JSON.parse(data);
-      console.log(`[products.ts] Loaded ${_products.length} products from ${jsonPath}`);
-      return _products!;
+      const parsed = JSON.parse(data) as Product[];
+      _products = parsed;
+      console.log(`[products.ts] Loaded ${parsed.length} products from ${jsonPath}`);
+      return parsed;
     } catch (e) {
       console.error('[products.ts] Failed to load products.json:', e);
       return [];

@@ -18,7 +18,13 @@ export default function FiltersDrawer({ onClose, isOpen }: Props){
 
   // Use controlled state if provided, otherwise use internal state
   const open = isOpen !== undefined ? isOpen : internalOpen;
-  const setOpen = isOpen !== undefined ? onClose || (() => {}) : setInternalOpen;
+  const setOpen = (next?: boolean) => {
+    if (isOpen !== undefined) {
+      onClose?.();
+    } else {
+      setInternalOpen(next ?? false);
+    }
+  };
 
   const apply = ()=>{
     router.push(`/collection/engagement-rings${toQuery(state)}`);

@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LuxuryProductCard from "@/components/ui/LuxuryProductCard";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import type { Product } from "@/lib/productTypes";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
@@ -18,7 +19,7 @@ export function HorizontalProductCarousel() {
   const reduced = useReducedMotion();
 
   const { data, error, isLoading } = useSWR("/api/products?limit=12", fetcher);
-  const products = data?.products ?? [];
+  const products = (data?.products ?? []) as Product[];
 
   useEffect(() => {
     if (reduced || !sectionRef.current || !trackRef.current || products.length === 0) return;
@@ -75,8 +76,8 @@ export function HorizontalProductCarousel() {
         <div className="container mx-auto px-6">
           <h2 className="font-serif text-2xl text-[#6D3D0D] text-center mb-8">Featured Collection</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {products.map((p: { _id: string; slug: string }) => (
-              <LuxuryProductCard key={p._id} product={p} />
+            {products.map((p) => (
+              <LuxuryProductCard key={p.slug} product={p} />
             ))}
           </div>
         </div>
@@ -108,8 +109,8 @@ export function HorizontalProductCarousel() {
           className="flex gap-8 absolute left-0 top-1/2 -translate-y-1/2 pl-[5vw]"
           style={{ willChange: "transform" }}
         >
-          {products.map((p: { _id: string; slug: string }) => (
-            <div key={p._id} className="w-[280px] flex-shrink-0">
+          {products.map((p) => (
+            <div key={p.slug} className="w-[280px] flex-shrink-0">
               <LuxuryProductCard product={p} priority={false} />
             </div>
           ))}

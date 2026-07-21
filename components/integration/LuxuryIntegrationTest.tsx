@@ -11,13 +11,16 @@
  */
 
 import { useState } from 'react';
-import { LuxuryProductConfigurator } from '../configurator/LuxuryProductConfigurator';
+import LuxuryProductConfigurator from '../configurator/LuxuryProductConfigurator';
 import LuxuryConciergeChat from '../concierge/LuxuryConciergeChat';
+import type { Product } from '@/lib/productTypes';
 
 // Mock product data for testing
 const mockProduct = {
-  id: 'test-ring',
+  slug: 'test-ring',
   title: 'Eternal Solitaire',
+  blurb: 'Test ring',
+  description: 'Integration test product',
   basePriceGBP: 5000,
   metals: [
     { name: '18k Yellow Gold', priceDeltaGBP: 0, hex: '#FFD700' },
@@ -26,28 +29,21 @@ const mockProduct = {
   ],
   sizes: ['H', 'I', 'J', 'K', 'L', 'M', 'N'],
   engravingFeeGBP: 150,
-  images: ['/images/test-ring.jpg']
-};
+  images: ['/images/test-ring.jpg'],
+  qualityBanner: 'D/E/F • VS1+ • IGI/GIA',
+} satisfies Product;
 
 export default function LuxuryIntegrationTest() {
   const [showConfigurator, setShowConfigurator] = useState(true);
   const [showChat, setShowChat] = useState(false);
   const [configuration, setConfiguration] = useState({
-    metal: mockProduct.metals[0],
-    size: 'L',
-    engraving: ''
+    metalName: mockProduct.metals[0].name,
+    size: '6',
+    engraving: '',
+    totalPrice: mockProduct.basePriceGBP,
   });
 
-  const handleConfigurationChange = (field: string, value: any) => {
-    setConfiguration(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
-
-  const totalPrice = mockProduct.basePriceGBP + 
-    (configuration.metal?.priceDeltaGBP || 0) +
-    (configuration.engraving ? mockProduct.engravingFeeGBP : 0);
+  const totalPrice = configuration.totalPrice;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-elysium-ivory via-elysium-pearl to-elysium-champagne">
@@ -109,7 +105,7 @@ export default function LuxuryIntegrationTest() {
                 <div className="flex justify-between items-center">
                   <span className="text-elysium-charcoal/70">Metal:</span>
                   <span className="font-medium text-elysium-charcoal">
-                    {configuration.metal?.name || 'None selected'}
+                    {configuration.metalName || 'None selected'}
                   </span>
                 </div>
                 
@@ -149,13 +145,14 @@ export default function LuxuryIntegrationTest() {
                 
                 <LuxuryProductConfigurator
                   product={mockProduct}
-                  selectedMetal={configuration.metal}
-                  selectedSize={configuration.size}
-                  engravingText={configuration.engraving}
-                  onMetalChange={(metal) => handleConfigurationChange('metal', metal)}
-                  onSizeChange={(size) => handleConfigurationChange('size', size)}
-                  onEngravingChange={(engraving) => handleConfigurationChange('engraving', engraving)}
-                  totalPrice={totalPrice}
+                  onConfigurationChange={(config) => {
+                    setConfiguration({
+                      metalName: config.metal.name,
+                      size: config.size,
+                      engraving: config.engraving || '',
+                      totalPrice: config.totalPrice,
+                    });
+                  }}
                 />
               </div>
             )}
@@ -195,8 +192,16 @@ export default function LuxuryIntegrationTest() {
       {/* Concierge Chat */}
       {showChat && (
         <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex items-center justify-center p-6">
-          <div className="max-w-2xl w-full">
-            <LuxuryConciergeChat isOpen={true} onClose={() => setShowChat(false)} />
+          <div className="max-w-2xl w-full relative">
+            <button
+              type="button"
+              onClick={() => setShowChat(false)}
+              className="absolute -top-3 -right-3 z-10 w-10 h-10 rounded-full bg-white shadow border border-elysium-whisper text-elysium-charcoal"
+              aria-label="Close chat"
+            >
+              ✕
+            </button>
+            <LuxuryConciergeChat />
           </div>
         </div>
       )}

@@ -34,12 +34,14 @@ export default function LuxuryProductCard({ product, className = "", priority = 
   // Extract ring name from title (e.g. "Celeste — Six-Claw Solitaire" -> "Celeste")
   const ringName = product.title.split('—')[0].trim();
   
-  // Format price with luxury styling
-  const price = new Intl.NumberFormat("en-GB", {
-    style: "currency",
-    currency: "GBP",
-    maximumFractionDigits: 0,
-  }).format(product.basePriceGBP);
+  // Format price with luxury styling (hide £0 placeholders)
+  const price = product.basePriceGBP > 0
+    ? new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency: "GBP",
+        maximumFractionDigits: 0,
+      }).format(product.basePriceGBP)
+    : null;
 
   const metals = useMemo(() => (effective.metals || []).map(m => ({
     name: m.name,
@@ -224,13 +226,11 @@ export default function LuxuryProductCard({ product, className = "", priority = 
         </div>
         
         {/* Price Display - always visible */}
-        {price && (
-          <div className="text-center mt-3">
-            <p className="text-lg font-light text-elysium-dark tracking-wide">
-              From {price}
-            </p>
-          </div>
-        )}
+        <div className="text-center mt-3">
+          <p className="text-lg font-light text-elysium-dark tracking-wide">
+            {price ? `From ${price}` : "Price on request"}
+          </p>
+        </div>
 
       </div>
     </Link>

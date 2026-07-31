@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma, resolveDatabaseUrl } from "@/lib/database/prisma";
 import { dbErrorMessage, loadMatchFallback } from "@/lib/tmc/review-fallback";
 
 export const dynamic = "force-dynamic";
@@ -13,6 +12,8 @@ const schema = z.object({
 
 export async function GET() {
   try {
+    const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
+
     if (!resolveDatabaseUrl()) {
       return NextResponse.json({
         ok: true,
@@ -51,6 +52,8 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
+
     if (!resolveDatabaseUrl()) {
       return NextResponse.json(
         {

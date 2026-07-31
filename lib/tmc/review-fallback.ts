@@ -1,5 +1,5 @@
-import reviewsSnapshot from "../../public/data/tmc-reviews.json";
-import matchesSnapshot from "../../public/data/tmc-matches.json";
+import reviewsSnapshot from "./data/tmc-reviews.json";
+import matchesSnapshot from "./data/tmc-matches.json";
 
 export type TmcReviewRecord = {
   keep: boolean;

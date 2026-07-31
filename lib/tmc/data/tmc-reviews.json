@@ -1,0 +1,1006 @@
+{
+  "scrapedAt": "2026-07-31T17:15:01.007Z",
+  "source": "supabase-tmc_ring_reviews",
+  "reviews": {
+    "low-set-luise-ring-oval-solitaire": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "signature-peridot-toi-et-moi-birthstone-studs-august": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "signature-ruby-toi-et-moi-birthstone-studs-july": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "signature-sapphire-toi-et-moi-birthstone-studs-september": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-adella-ring-round-brilliant-solitaire-with-wrapped-band": {
+      "keep": true,
+      "displayName": "Noémi",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Noémi showcases a round-cut cultured gemstone, gracefully embraced by an organically sculpted wrapped band. A harmonious blend of contemporary elegance and timeless design, it offers a distinctive",
+      "preferredMetal": "yellow",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-aleasa-ring-1-30ct-lab-diamond-split-shank-east-west-radiant-solitaire": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-aleasa-ring-split-shank-east-west-asscher-solitaire": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-aleasa-ring-split-shank-east-west-elongated-cushion-solitaire": {
+      "keep": true,
+      "displayName": "Ophellia",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Ophellia showcases a round brilliant cut lab-grown diamond, elegantly suspended within a sculpted split shank i setting. A contemporary interpretation of a timeless silhouette, its graceful lines",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-aleasa-ring-split-shank-east-west-emerald-solitaire": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-aleasa-ring-split-shank-east-west-radiant-solitaire": {
+      "keep": true,
+      "displayName": "Sorella",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Sorella showcases a radiant-cut lab-grown diamond, elegantly suspended within a sculpted split shank in a distinctive east-west setting. A contemporary interpretation of a timeless silhouette, its",
+      "preferredMetal": "rose",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-amira-ring-1": {
+      "keep": true,
+      "displayName": "This to replace Unity images (remove hidden halo box)",
+      "priceGbp": "",
+      "notes": "Unity, showcases an oval-cut lab-grown diamond in a graceful cathedral setting, this design is elevated by a sculptural twisted band, adorned with four delicately set marquise accent stones.\\n\\nMetals:",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-amira-ring-round-with-marquise-accents": {
+      "keep": true,
+      "displayName": "Anastasia",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Anastasia showcases a round lab-grown diamond, gracefully elevated within a classic cathedral setting. Its elegantly twisted band is adorned with four meticulously set marquise-cut accent stones,",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-aurora-ring-round-with-round-brilliant-accents": {
+      "keep": true,
+      "displayName": "Amarante",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Amarante is a captivating design defined by effortless elegance. Showcasing a round-cut cultured diamond, beautifully enhanced by a graceful arrangement of scattered round brilliant accent stones,",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-ava-ring-pave-wedding-band": {
+      "keep": false,
+      "displayName": "Vesper",
+      "priceGbp": "935",
+      "notes": "Our Vesper half eternity ring is a timeless symbol of your everlasting love and devotion.",
+      "preferredMetal": "yellow"
+    },
+    "the-avery-ring-oval-with-marquise-and-round-brilliant-band": {
+      "keep": true,
+      "displayName": "This to replace Aura images",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": "rose",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum",
+          "Two-Tone Rose/Platinum",
+          "Two-Tone Yellow/Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-celeste-ring-radiant-with-marquise-and-round-brilliant-band": {
+      "keep": true,
+      "displayName": "Evermore",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Evermore showcases a radiant-cut centre diamond, gracefully complemented by an intricately crafted band adorned with alternating marquise and round brilliant diamonds. The result is a timeless des",
+      "preferredMetal": "yellow",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum",
+          "Two-Tone Rose/Platinum",
+          "Two-Tone Yellow/Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-elise-ring-split-shank-radiant-solitaire": {
+      "keep": true,
+      "displayName": "Vivienne",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Vivienne showcases a radiant-cut lab-grown diamond, gracefully suspended between an elegantly sculpted split shank. Defined by its bold architectural silhouette and flowing curves, it strikes a pe",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-elise-ring-split-shank-round-trilogy": {
+      "keep": true,
+      "displayName": "Elodie",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Elodie showcases a captivating arrangement of round brilliant lab-grown gemstones, elegantly set within a sculpted split shank design. A striking expression of refined craftsmanship, symbolising s",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-eloise-ring-radiant-antique-halo": {
+      "keep": true,
+      "displayName": "Replace Aveline images & remove Hidden Halo Box",
+      "priceGbp": "",
+      "notes": "Stunning in its simplicity, the Aveline engagement ring is a classic radiant solitaire design featuring four talon-tipped claws and an antique style halo.\\n\\nA harmonious fusion of two timeless designs,",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-emerie-radiant-solitaire": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-emilia-ring-radiant-and-pear-trilogy": {
+      "keep": true,
+      "displayName": "Arabella",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Arabella showcases a radiant-cut lab-grown diamond, gracefully flanked by two pear-cut accent stones and secured within an elegant basket setting. A timeless symbol of enduring love, the three sto",
+      "preferredMetal": "yellow",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-isla-ring-round-bezel-solitaire": {
+      "keep": true,
+      "displayName": "Callista",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Callista Bezel Solitaire offers a refined interpretation of a timeless classic. Featuring a round brilliant-cut cultured diamond, elegantly secured within a sleek solid precious metal bezel, this",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-isla-ring-round-brilliant-halo": {
+      "keep": true,
+      "displayName": "Isolde",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Isolde is a timeless classic, designed to be treasured for generations. Featuring a radiant halo of round brilliant stones, it exudes enduring elegance and exceptional brilliance from every angle.",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-luise-ring-oval-halo": {
+      "keep": true,
+      "displayName": "This to replace Eterna images (remove hidden halo box)",
+      "priceGbp": "",
+      "notes": "Renowned for its timeless elegance, the Eterna engagement ring features a classic four-talon claw oval solitaire design, enhanced by a dazzling halo.  Metals: Platinum, 18k White, 18k Yellow, 18k Rose",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-luise-ring-oval-solitaire": {
+      "keep": true,
+      "displayName": "This to replace Ovalis images ",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-luise-ring-oval-toi-et-moi": {
+      "keep": true,
+      "displayName": "This to replace Lumea ",
+      "priceGbp": "",
+      "notes": "The Lumea engagement ring showcases a striking oval-cut stone paired with a twin oval-cut stone, brought together in a timeless toi et moi design. Both stones are configured together — when you choose",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum",
+          "Two-Tone Rose/Platinum",
+          "Two-Tone Yellow/Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-maya-ring-round-curved-solitaire": {
+      "keep": true,
+      "displayName": "Nala",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Nala is a celebration of love in its most natural form. Showcasing a round brilliant lab-grown diamond, it rests gracefully upon a delicately sculpted curved band. A contemporary yet timeless desi",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-noa-ring-radiant-and-trilliant-trilogy": {
+      "keep": true,
+      "displayName": "To replace Orabella images, update prices to be £1k less per size",
+      "priceGbp": "",
+      "notes": "The Orabella, a lab grown diamond, elegantly framed by two delicate trillion-cut accent stones. Rich in symbolism, each stone represents the past, the present, and the future.",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-signature-round-crown-set-tennis-bracelet": {
+      "keep": false,
+      "displayName": "",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": ""
+    },
+    "the-vienna-ring-1ct-moissanite-radiant-solitaire": {
+      "keep": true,
+      "displayName": "To replace Clarion Images",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-vienna-ring-radiant-halo": {
+      "keep": true,
+      "displayName": "Lumina",
+      "priceGbp": "Check Spreadsheet",
+      "notes": "The Lumina exudes effortless brilliance, featuring a radiant-cut cultured gemstone framed by a shimmering halo of round brilliant stones. Designed to maximise light and sparkle, it is a timeless expre",
+      "preferredMetal": "yellow",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    },
+    "the-vienna-ring-radiant-solitaire": {
+      "keep": true,
+      "displayName": "This to replace clarion not the other one",
+      "priceGbp": "",
+      "notes": "",
+      "preferredMetal": "",
+      "options": {
+        "metals": [
+          "Yellow Gold",
+          "Rose Gold",
+          "White Gold",
+          "Platinum"
+        ],
+        "origins": [
+          "Natural",
+          "Lab Grown"
+        ],
+        "carats": [
+          "1ct",
+          "1.5ct",
+          "2ct",
+          "2.5ct",
+          "3ct+"
+        ],
+        "colours": [
+          "D",
+          "E",
+          "F"
+        ],
+        "clarities": [
+          "IF",
+          "VVS1",
+          "VVS2",
+          "VS1"
+        ],
+        "certificates": [
+          "GIA",
+          "IGI"
+        ],
+        "sizes": "F – Z+4"
+      }
+    }
+  }
+}

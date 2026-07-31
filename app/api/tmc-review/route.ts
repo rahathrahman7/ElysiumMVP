@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
+import { notifyTmcReviewAdded } from "@/lib/tmc/notify-review";
 
 export const dynamic = "force-dynamic";
 
@@ -125,6 +126,9 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { handle, ...fields } = patchSchema.parse(body);
 
+    const existing = await prisma.tmcRingReview.findUnique({ where: { handle } });
+    const wasKept = existing?.keep ?? false;
+
     const data: Record<string, unknown> = {};
     if (fields.keep !== undefined) data.keep = fields.keep;
     if (fields.displayName !== undefined) data.displayName = fields.displayName;
@@ -133,13 +137,46 @@ export async function POST(request: Request) {
     if (fields.preferredMetal !== undefined) data.preferredMetal = fields.preferredMetal;
     if (fields.options !== undefined) data.options = JSON.stringify(fields.options);
 
-    await prisma.tmcRingReview.upsert({
+    const saved = await prisma.tmcRingReview.upsert({
       where: { handle },
       create: { handle, ...data },
       update: data,
     });
 
-    return NextResponse.json({ ok: true });
+    // Notify only when the client newly adds a piece (false → true).
+    const justAdded = fields.keep === true && !wasKept;
+    if (justAdded) {
+      const options =
+        fields.options ??
+        (saved.options
+          ? (() => {
+              try {
+                return JSON.parse(saved.options);
+              } catch {
+                return undefined;
+              }
+            })()
+          : undefined);
+
+      // Await briefly so Vercel does not freeze the isolate before email/webhook fire.
+      try {
+        await Promise.race([
+          notifyTmcReviewAdded({
+            handle,
+            displayName: saved.displayName ?? fields.displayName ?? "",
+            priceGbp: saved.priceGbp ?? fields.priceGbp ?? "",
+            notes: saved.notes ?? fields.notes ?? "",
+            preferredMetal: saved.preferredMetal ?? fields.preferredMetal ?? "",
+            options,
+          }),
+          new Promise((resolve) => setTimeout(resolve, 5000)),
+        ]);
+      } catch (err) {
+        console.error("[tmc-review] notify failed:", err);
+      }
+    }
+
+    return NextResponse.json({ ok: true, notified: justAdded });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(

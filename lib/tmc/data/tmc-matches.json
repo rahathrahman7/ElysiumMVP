@@ -1,0 +1,34 @@
+{
+  "bySlug": {
+    "aura-engagement-ring": {
+      "elysiumTitle": "Aura — Engagement Ring",
+      "tmcHandle": ""
+    },
+    "elara-trilogy": {
+      "elysiumTitle": "Elara — Trilogy",
+      "tmcHandle": "the-emilia-ring-round-and-pear-trilogy"
+    },
+    "vireo-mens-ring": {
+      "elysiumTitle": "Vireo — Men's Wedding Band",
+      "tmcHandle": "the-adonis-ring-round-brilliant-inlay-brushed-mens-ceremonial-band"
+    },
+    "kairo-mens-ring": {
+      "elysiumTitle": "Kairo — Men's Wedding Band",
+      "tmcHandle": "the-adonis-ring-round-brilliant-inlay-brushed-mens-ceremonial-band"
+    },
+    "arden-mens-ring": {
+      "elysiumTitle": "Arden — Men's Wedding Band",
+      "tmcHandle": "brushed-gold-flat-beveled-edge-mens-ceremonial-band"
+    },
+    "sable-mens-ring": {
+      "elysiumTitle": "Sable — Men's Wedding Band",
+      "tmcHandle": "the-argo-ring-brushed-step-edge-mens-ceremonial-band"
+    }
+  },
+  "ownedByHandle": {
+    "the-emilia-ring-round-and-pear-trilogy": "Elara — Trilogy",
+    "the-adonis-ring-round-brilliant-inlay-brushed-mens-ceremonial-band": "Kairo — Men's Wedding Band",
+    "brushed-gold-flat-beveled-edge-mens-ceremonial-band": "Arden — Men's Wedding Band",
+    "the-argo-ring-brushed-step-edge-mens-ceremonial-band": "Sable — Men's Wedding Band"
+  }
+}

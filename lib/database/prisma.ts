@@ -27,6 +27,10 @@ export function resolveDatabaseUrl(): string | undefined {
 function isBuildPhase(): boolean {
   if (process.env.NEXT_PHASE === 'phase-production-build') return true;
   if (process.env.BUILDING === 'true') return true;
+  if (process.env.npm_lifecycle_event === 'build') return true;
+  // On Vercel, build workers often have VERCEL=1 without a stable VERCEL_URL.
+  // Avoid opening Postgres pools during those imports — they hang the deploy.
+  if (process.env.VERCEL === '1' && !process.env.VERCEL_URL) return true;
   return false;
 }
 
@@ -53,45 +57,61 @@ function createMockClient(): PrismaClient {
   });
 }
 
-function getPrismaClient(): PrismaClient {
-  const databaseUrl = resolveDatabaseUrl();
+function createPrismaClient(): PrismaClient {
+  try {
+    const databaseUrl = resolveDatabaseUrl();
 
-  if (!databaseUrl || isBuildPhase()) {
-    if (!globalForPrisma.prisma) {
-      globalForPrisma.prisma = createMockClient();
+    if (!databaseUrl || isBuildPhase()) {
+      return createMockClient();
     }
-    return globalForPrisma.prisma;
+
+    // Keep Prisma schema `env("DATABASE_URL")` happy when only POSTGRES_* is set.
+    if (!process.env.DATABASE_URL) {
+      process.env.DATABASE_URL = databaseUrl;
+    }
+
+    const pool = new Pool({
+      connectionString: databaseUrl,
+      max: 5,
+      connectionTimeoutMillis: 4_000,
+      idleTimeoutMillis: 10_000,
+      // Serverless / Vercel often needs TLS to Supabase poolers.
+      ssl:
+        databaseUrl.includes('supabase') || databaseUrl.includes('sslmode=require')
+          ? { rejectUnauthorized: false }
+          : undefined,
+    });
+
+    const adapter = new PrismaPg(pool);
+    const prisma = new PrismaClient({
+      adapter,
+      log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    });
+
+    globalForPrisma.prismaPool = pool;
+    globalForPrisma.prismaAdapter = adapter;
+
+    return prisma;
+  } catch (error) {
+    console.error('[prisma] Failed to initialise client, using mock:', error);
+    return createMockClient();
   }
-
-  // Keep Prisma schema `env("DATABASE_URL")` happy when only POSTGRES_* is set.
-  if (!process.env.DATABASE_URL) {
-    process.env.DATABASE_URL = databaseUrl;
-  }
-
-  if (globalForPrisma.prisma) {
-    return globalForPrisma.prisma;
-  }
-
-  const pool = new Pool({
-    connectionString: databaseUrl,
-    max: 10,
-    connectionTimeoutMillis: 5_000,
-    idleTimeoutMillis: 10_000,
-  });
-
-  const adapter = new PrismaPg(pool);
-
-  const prisma = new PrismaClient({
-    adapter,
-    log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
-  });
-
-  globalForPrisma.prisma = prisma;
-  globalForPrisma.prismaPool = pool;
-  globalForPrisma.prismaAdapter = adapter;
-
-  return prisma;
 }
 
-export const prisma = getPrismaClient();
+function getPrismaClient(): PrismaClient {
+  if (!globalForPrisma.prisma) {
+    globalForPrisma.prisma = createPrismaClient();
+  }
+  return globalForPrisma.prisma;
+}
+
+// Lazy proxy so importing this module during `next build` does not open a Pool.
+export const prisma: PrismaClient = new Proxy({} as PrismaClient, {
+  get(_target, prop, receiver) {
+    const client = getPrismaClient();
+    const value = Reflect.get(client as object, prop, receiver);
+    return typeof value === 'function' ? value.bind(client) : value;
+  },
+});
+
 export default prisma;

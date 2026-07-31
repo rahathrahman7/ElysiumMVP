@@ -97,15 +97,22 @@ export default function ReviewClient() {
     let active = true;
     (async () => {
       try {
-        const [catalogRes, reviewRes] = await Promise.all([
-          fetch("/data/tmc-review-catalog.json"),
-          fetch("/api/tmc-review"),
-        ]);
-        const catalog: Ring[] = await catalogRes.json();
-        const rev = await reviewRes.json().catch(() => ({ reviews: {} }));
+        // Load catalog independently so a broken reviews API never blanks the grid.
+        const catalogRes = await fetch("/data/tmc-review-catalog.json");
+        const catalog: Ring[] = catalogRes.ok ? await catalogRes.json() : [];
         if (!active) return;
-        setRings(catalog);
-        setReviews(rev.reviews || {});
+        setRings(Array.isArray(catalog) ? catalog : []);
+
+        try {
+          const reviewRes = await fetch("/api/tmc-review");
+          const rev = reviewRes.ok
+            ? await reviewRes.json()
+            : await reviewRes.json().catch(() => ({ reviews: {} }));
+          if (!active) return;
+          setReviews(rev.reviews || {});
+        } catch {
+          if (active) setReviews({});
+        }
       } catch {
         if (active) setRings([]);
       } finally {

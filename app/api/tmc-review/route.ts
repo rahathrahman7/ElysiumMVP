@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma, resolveDatabaseUrl } from "@/lib/database/prisma";
 import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
 import { notifyTmcSelectionIfNeeded } from "@/lib/tmc/notify-selection";
 
@@ -59,45 +58,60 @@ function rowsToReviews(
   return byHandle;
 }
 
+function fallbackResponse(warning: string) {
+  return NextResponse.json({
+    ok: true,
+    reviews: loadReviewFallback(),
+    source: "fallback",
+    warning,
+  });
+}
+
 export async function GET() {
+  // Always prefer returning the seeded snapshot over a 500 — the configurator
+  // must load even when Postgres / Prisma is unhealthy on Vercel.
   try {
+    const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
+
     if (!resolveDatabaseUrl()) {
-      const reviews = await loadReviewFallback();
-      return NextResponse.json({
-        ok: true,
-        reviews,
-        source: "fallback",
-        warning: "DATABASE_URL is not configured; serving seeded review snapshot.",
-      });
+      return fallbackResponse("DATABASE_URL is not configured; serving seeded review snapshot.");
     }
 
-    const rows = await prisma.tmcRingReview.findMany();
+    const rows = await Promise.race([
+      prisma.tmcRingReview.findMany(),
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("tmc_ring_reviews query timed out after 4s")), 4000)
+      ),
+    ]);
+
+    const fromDb = rowsToReviews(rows ?? []);
+    const keptInDb = Object.values(fromDb).filter(
+      (r) => (r as { keep?: boolean }).keep
+    ).length;
+
+    if ((rows?.length ?? 0) === 0 && keptInDb === 0) {
+      const fallback = loadReviewFallback();
+      const keptInFallback = Object.values(fallback).filter((r) => r.keep).length;
+      if (keptInFallback > 0) {
+        return fallbackResponse("Database returned no review rows; serving seeded snapshot.");
+      }
+    }
+
     return NextResponse.json({
       ok: true,
-      reviews: rowsToReviews(rows ?? []),
+      reviews: fromDb,
       source: "database",
     });
   } catch (error) {
     console.error("[tmc-review] GET error:", error);
-    try {
-      const reviews = await loadReviewFallback();
-      return NextResponse.json({
-        ok: true,
-        reviews,
-        source: "fallback",
-        warning: dbErrorMessage(error),
-      });
-    } catch {
-      return NextResponse.json(
-        { error: "Internal server error", detail: dbErrorMessage(error) },
-        { status: 500 }
-      );
-    }
+    return fallbackResponse(dbErrorMessage(error));
   }
 }
 
 export async function POST(request: Request) {
   try {
+    const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
+
     if (!resolveDatabaseUrl()) {
       return NextResponse.json(
         {

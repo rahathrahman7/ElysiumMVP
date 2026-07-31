@@ -27,7 +27,10 @@
     "build:vv:manifest": "tsx scripts/buildImageManifest.ts --slug vow-veil --folder \"public/products/Vow and Veil\" --productName \"Vow & Veil\" --altSuffix \"Toi et Moi — round + pear on curved band\"",
     "build:seraphina:manifest": "tsx scripts/buildImageManifest.ts --slug seraphina-signature-six-claw --folder public/products/Seraphina --productName \"Seraphina Signature Six-Claw\" --altSuffix \"Six-claw solitaire with pavé band\"",
     "build:luna:manifest": "tsx scripts/buildImageManifest.ts --slug luna-low-set-solitaire --folder public/products/Luna --productName \"Luna Low-Set Solitaire\" --altSuffix \"Low-set solitaire with open bridge & hidden halo\"",
-    "build:celeste:manifest": "tsx scripts/buildImageManifest.ts --slug celeste-six-claw-solitaire --folder public/products/Celeste --productName \"Celeste Six-Claw Solitaire\" --altSuffix \"Six-claw solitaire with eagle-claw prongs\""
+    "build:celeste:manifest": "tsx scripts/buildImageManifest.ts --slug celeste-six-claw-solitaire --folder public/products/Celeste --productName \"Celeste Six-Claw Solitaire\" --altSuffix \"Six-claw solitaire with eagle-claw prongs\"",
+    "tmc:plan": "node scripts/plan-tmc-import.mjs",
+    "tmc:import:dry": "node scripts/import-selected-rings.mjs --dry-run --update",
+    "tmc:import": "node scripts/import-selected-rings.mjs --update"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",

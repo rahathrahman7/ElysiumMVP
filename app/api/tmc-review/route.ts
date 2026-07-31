@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
+import { notifyTmcSelectionIfNeeded } from "@/lib/tmc/notify-selection";
 
 export const dynamic = "force-dynamic";
 
@@ -107,23 +108,77 @@ export async function GET() {
   }
 }
 
+function mergeReviewForNotify(
+  previous: { keep: boolean; displayName: string | null; priceGbp?: string | null; notes?: string | null; preferredMetal?: string | null } | null,
+  fields: z.infer<typeof patchSchema>
+) {
+  return {
+    keep: fields.keep ?? previous?.keep ?? false,
+    displayName: fields.displayName ?? previous?.displayName ?? "",
+    priceGbp: fields.priceGbp ?? previous?.priceGbp ?? "",
+    notes: fields.notes ?? previous?.notes ?? "",
+    preferredMetal: fields.preferredMetal ?? previous?.preferredMetal ?? "",
+    options: fields.options,
+  };
+}
+
+function queueNotify(args: Parameters<typeof notifyTmcSelectionIfNeeded>[0]) {
+  void notifyTmcSelectionIfNeeded(args).catch((error) => {
+    console.error("[tmc-review] notify failed:", error);
+  });
+}
+
 export async function POST(request: Request) {
+  let parsed: z.infer<typeof patchSchema> | null = null;
+
   try {
+    const body = await request.json();
+    parsed = patchSchema.parse(body);
+    const { handle, ...fields } = parsed;
+
     const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
 
     if (!resolveDatabaseUrl()) {
+      // Still notify from the attempted selection so ops aren't blind while DB is down.
+      const fallbackPrev = loadReviewFallback()[handle] ?? null;
+      queueNotify({
+        handle,
+        previous: fallbackPrev
+          ? { keep: fallbackPrev.keep, displayName: fallbackPrev.displayName }
+          : null,
+        review: mergeReviewForNotify(fallbackPrev, parsed),
+      });
       return NextResponse.json(
         {
           error: "Database unavailable",
           detail:
             "Set DATABASE_URL (or POSTGRES_PRISMA_URL / POSTGRES_URL) so review saves can persist.",
+          notified: true,
         },
         { status: 503 }
       );
     }
 
-    const body = await request.json();
-    const { handle, ...fields } = patchSchema.parse(body);
+    let previous: { keep: boolean; displayName: string | null } | null = null;
+    try {
+      previous = await Promise.race([
+        prisma.tmcRingReview.findUnique({
+          where: { handle },
+          select: { keep: true, displayName: true },
+        }),
+        new Promise<null>((resolve) => setTimeout(() => resolve(null), 4000)),
+      ]);
+    } catch {
+      previous = null;
+    }
+    // If the DB row lookup failed/timed out, use the seeded snapshot so we
+    // don't re-notify on every autosave for already-kept named rings.
+    if (!previous) {
+      const fallbackPrev = loadReviewFallback()[handle];
+      if (fallbackPrev) {
+        previous = { keep: fallbackPrev.keep, displayName: fallbackPrev.displayName };
+      }
+    }
 
     const data: Record<string, unknown> = {};
     if (fields.keep !== undefined) data.keep = fields.keep;
@@ -133,10 +188,27 @@ export async function POST(request: Request) {
     if (fields.preferredMetal !== undefined) data.preferredMetal = fields.preferredMetal;
     if (fields.options !== undefined) data.options = JSON.stringify(fields.options);
 
-    await prisma.tmcRingReview.upsert({
+    const row = await prisma.tmcRingReview.upsert({
       where: { handle },
       create: { handle, ...data },
       update: data,
+    });
+
+    // Fire-and-forget: email admin + Cursor Plan automation when a Keep
+    // selection becomes actionable. Never block the client save path.
+    queueNotify({
+      handle,
+      previous: previous
+        ? { keep: previous.keep, displayName: previous.displayName }
+        : null,
+      review: {
+        keep: row.keep,
+        displayName: row.displayName,
+        priceGbp: row.priceGbp,
+        notes: row.notes,
+        preferredMetal: row.preferredMetal,
+        options: fields.options,
+      },
     });
 
     return NextResponse.json({ ok: true });
@@ -147,9 +219,23 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // DB/host failures: best-effort notify from the request payload so you still
+    // get the plan email/webhook even when Postgres is unreachable.
+    if (parsed) {
+      const fallbackPrev = loadReviewFallback()[parsed.handle] ?? null;
+      queueNotify({
+        handle: parsed.handle,
+        previous: fallbackPrev
+          ? { keep: fallbackPrev.keep, displayName: fallbackPrev.displayName }
+          : null,
+        review: mergeReviewForNotify(fallbackPrev, parsed),
+      });
+    }
+
     console.error("[tmc-review] POST error:", error);
     return NextResponse.json(
-      { error: "Internal server error", detail: dbErrorMessage(error) },
+      { error: "Internal server error", detail: dbErrorMessage(error), notified: Boolean(parsed) },
       { status: 500 }
     );
   }

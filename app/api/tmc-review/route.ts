@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@/lib/database/prisma";
+import { prisma, resolveDatabaseUrl } from "@/lib/database/prisma";
+import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
 
 export const dynamic = "force-dynamic";
 
@@ -24,37 +25,89 @@ const patchSchema = z.object({
   options: optionsSchema.optional(),
 });
 
+function rowsToReviews(
+  rows: Array<{
+    handle: string;
+    keep: boolean;
+    displayName: string | null;
+    priceGbp: string | null;
+    notes: string | null;
+    preferredMetal: string | null;
+    options: string | null;
+  }>
+) {
+  const byHandle: Record<string, unknown> = {};
+  for (const r of rows) {
+    let options: unknown = undefined;
+    if (r.options) {
+      try {
+        options = JSON.parse(r.options);
+      } catch {
+        options = undefined;
+      }
+    }
+    byHandle[r.handle] = {
+      keep: r.keep,
+      displayName: r.displayName ?? "",
+      priceGbp: r.priceGbp ?? "",
+      notes: r.notes ?? "",
+      preferredMetal: r.preferredMetal ?? "",
+      options,
+    };
+  }
+  return byHandle;
+}
+
 export async function GET() {
   try {
-    const rows = await prisma.tmcRingReview.findMany();
-    const byHandle: Record<string, unknown> = {};
-    for (const r of rows) {
-      let options: unknown = undefined;
-      if (r.options) {
-        try {
-          options = JSON.parse(r.options);
-        } catch {
-          options = undefined;
-        }
-      }
-      byHandle[r.handle] = {
-        keep: r.keep,
-        displayName: r.displayName ?? "",
-        priceGbp: r.priceGbp ?? "",
-        notes: r.notes ?? "",
-        preferredMetal: r.preferredMetal ?? "",
-        options,
-      };
+    if (!resolveDatabaseUrl()) {
+      const reviews = await loadReviewFallback();
+      return NextResponse.json({
+        ok: true,
+        reviews,
+        source: "fallback",
+        warning: "DATABASE_URL is not configured; serving seeded review snapshot.",
+      });
     }
-    return NextResponse.json({ ok: true, reviews: byHandle });
+
+    const rows = await prisma.tmcRingReview.findMany();
+    return NextResponse.json({
+      ok: true,
+      reviews: rowsToReviews(rows ?? []),
+      source: "database",
+    });
   } catch (error) {
     console.error("[tmc-review] GET error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    try {
+      const reviews = await loadReviewFallback();
+      return NextResponse.json({
+        ok: true,
+        reviews,
+        source: "fallback",
+        warning: dbErrorMessage(error),
+      });
+    } catch {
+      return NextResponse.json(
+        { error: "Internal server error", detail: dbErrorMessage(error) },
+        { status: 500 }
+      );
+    }
   }
 }
 
 export async function POST(request: Request) {
   try {
+    if (!resolveDatabaseUrl()) {
+      return NextResponse.json(
+        {
+          error: "Database unavailable",
+          detail:
+            "Set DATABASE_URL (or POSTGRES_PRISMA_URL / POSTGRES_URL) so review saves can persist.",
+        },
+        { status: 503 }
+      );
+    }
+
     const body = await request.json();
     const { handle, ...fields } = patchSchema.parse(body);
 
@@ -81,6 +134,9 @@ export async function POST(request: Request) {
       );
     }
     console.error("[tmc-review] POST error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error", detail: dbErrorMessage(error) },
+      { status: 500 }
+    );
   }
 }

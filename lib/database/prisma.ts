@@ -8,40 +8,64 @@ const globalForPrisma = globalThis as unknown as {
   prismaAdapter: PrismaPg | undefined;
 };
 
-// Check if we're in a build environment
+/** Resolve a Postgres URL from common Vercel / Supabase env names. */
+export function resolveDatabaseUrl(): string | undefined {
+  const candidates = [
+    process.env.DATABASE_URL,
+    process.env.POSTGRES_PRISMA_URL,
+    process.env.POSTGRES_URL,
+    process.env.POSTGRES_URL_NON_POOLING,
+  ];
+  for (const value of candidates) {
+    if (value && value.trim() && !value.includes('placeholder:placeholder')) {
+      return value.trim();
+    }
+  }
+  return undefined;
+}
+
 function isBuildPhase(): boolean {
-  // Check various build-time indicators
   if (process.env.NEXT_PHASE === 'phase-production-build') return true;
   if (process.env.BUILDING === 'true') return true;
-  // During Vercel build, VERCEL is set but VERCEL_ENV might be 'production'
-  if (process.env.VERCEL === '1' && !process.env.VERCEL_URL) return true;
   return false;
 }
 
-function getPrismaClient(): PrismaClient {
-  // If no DATABASE_URL, return a mock/stub client for build
-  const databaseUrl = process.env.DATABASE_URL;
-  
-  if (!databaseUrl || isBuildPhase()) {
-    // During build or when no DB URL, create client without adapter
-    // This won't work for queries but allows build to proceed
-    if (!globalForPrisma.prisma) {
-      // Create a minimal client that won't crash on import
-      // Actual queries will fail but build will succeed
-      globalForPrisma.prisma = new Proxy({} as PrismaClient, {
-        get: (target, prop) => {
-          if (prop === 'then') return undefined; // Not a promise
-          if (typeof prop === 'string') {
-            // Return a proxy for model access that returns empty results
-            return new Proxy({}, {
-              get: () => async () => null
-            });
+function createMockClient(): PrismaClient {
+  // Build-time stub: model methods return empty/safe values so imports succeed.
+  return new Proxy({} as PrismaClient, {
+    get: (_target, prop) => {
+      if (prop === 'then') return undefined;
+      if (typeof prop === 'string') {
+        return new Proxy(
+          {},
+          {
+            get: (_t, method) => {
+              if (method === 'findMany') return async () => [];
+              if (method === 'count') return async () => 0;
+              if (method === 'aggregate' || method === 'groupBy') return async () => [];
+              return async () => null;
+            },
           }
-          return undefined;
-        }
-      });
+        );
+      }
+      return undefined;
+    },
+  });
+}
+
+function getPrismaClient(): PrismaClient {
+  const databaseUrl = resolveDatabaseUrl();
+
+  if (!databaseUrl || isBuildPhase()) {
+    if (!globalForPrisma.prisma) {
+      globalForPrisma.prisma = createMockClient();
     }
     return globalForPrisma.prisma;
+  }
+
+  // Keep Prisma schema `env("DATABASE_URL")` happy when only POSTGRES_* is set.
+  if (!process.env.DATABASE_URL) {
+    process.env.DATABASE_URL = databaseUrl;
   }
 
   if (globalForPrisma.prisma) {
@@ -51,6 +75,8 @@ function getPrismaClient(): PrismaClient {
   const pool = new Pool({
     connectionString: databaseUrl,
     max: 10,
+    connectionTimeoutMillis: 5_000,
+    idleTimeoutMillis: 10_000,
   });
 
   const adapter = new PrismaPg(pool);

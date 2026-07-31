@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@/lib/database/prisma";
+import { prisma, resolveDatabaseUrl } from "@/lib/database/prisma";
+import { dbErrorMessage, loadMatchFallback } from "@/lib/tmc/review-fallback";
 
 export const dynamic = "force-dynamic";
 
@@ -12,25 +13,59 @@ const schema = z.object({
 
 export async function GET() {
   try {
+    if (!resolveDatabaseUrl()) {
+      const fallback = await loadMatchFallback();
+      return NextResponse.json({
+        ok: true,
+        ...fallback,
+        source: "fallback",
+        warning: "DATABASE_URL is not configured; serving seeded match snapshot.",
+      });
+    }
+
     const rows = await prisma.tmcRingMatch.findMany();
     const bySlug: Record<string, { elysiumTitle: string; tmcHandle: string }> = {};
     const ownedByHandle: Record<string, string> = {};
-    for (const r of rows) {
+    for (const r of rows ?? []) {
       bySlug[r.elysiumSlug] = {
         elysiumTitle: r.elysiumTitle ?? "",
         tmcHandle: r.tmcHandle ?? "",
       };
       if (r.tmcHandle) ownedByHandle[r.tmcHandle] = r.elysiumTitle ?? "";
     }
-    return NextResponse.json({ ok: true, bySlug, ownedByHandle });
+    return NextResponse.json({ ok: true, bySlug, ownedByHandle, source: "database" });
   } catch (error) {
     console.error("[tmc-matches] GET error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    try {
+      const fallback = await loadMatchFallback();
+      return NextResponse.json({
+        ok: true,
+        ...fallback,
+        source: "fallback",
+        warning: dbErrorMessage(error),
+      });
+    } catch {
+      return NextResponse.json(
+        { error: "Internal server error", detail: dbErrorMessage(error) },
+        { status: 500 }
+      );
+    }
   }
 }
 
 export async function POST(request: Request) {
   try {
+    if (!resolveDatabaseUrl()) {
+      return NextResponse.json(
+        {
+          error: "Database unavailable",
+          detail:
+            "Set DATABASE_URL (or POSTGRES_PRISMA_URL / POSTGRES_URL) so match saves can persist.",
+        },
+        { status: 503 }
+      );
+    }
+
     const body = await request.json();
     const { elysiumSlug, elysiumTitle, tmcHandle } = schema.parse(body);
 
@@ -49,6 +84,9 @@ export async function POST(request: Request) {
       );
     }
     console.error("[tmc-matches] POST error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error", detail: dbErrorMessage(error) },
+      { status: 500 }
+    );
   }
 }

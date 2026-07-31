@@ -1,5 +1,6 @@
 import { sendAdminNotificationEmail } from "@/lib/services/email";
 import { env } from "@/lib/env";
+import { getTmcCatalogEntry } from "@/lib/tmc/catalog-lookup";
 import {
   classifyTmcSelection,
   slugifyDisplayName,
@@ -98,6 +99,7 @@ function buildEmailText(input: TmcNotifyInput): string {
   const plan = buildTmcSelectionExecutionPlan(input);
   const name = (input.review.displayName ?? "").trim();
   const site = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  const catalog = getTmcCatalogEntry(input.handle);
   const kindLabel =
     plan.kind === "image_replacement" ? "Image replacement" : "New product";
 
@@ -107,6 +109,8 @@ TMC Review — client selection ready for execution
 Kind: ${kindLabel}
 Handle: ${input.handle}
 Display name: ${name || "(unnamed)"}
+TMC name: ${catalog?.tmcName || "(unknown)"}
+Category: ${catalog?.category || "(unknown)"}
 Price (GBP field): ${(input.review.priceGbp ?? "").trim() || "(empty)"}
 Preferred metal: ${(input.review.preferredMetal ?? "").trim() || "(none)"}
 Trigger: ${input.trigger ?? "keep_enabled"}
@@ -124,12 +128,50 @@ This notification does NOT mutate the live catalog. Import only after you approv
 `.trim();
 }
 
+/** Payload for Cursor Automation "TMC Review — item added". */
+export function buildTmcReviewAddedWebhookPayload(input: TmcNotifyInput): Record<string, unknown> {
+  const plan = buildTmcSelectionExecutionPlan(input);
+  const name = (input.review.displayName ?? "").trim();
+  const site = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  const catalog = getTmcCatalogEntry(input.handle);
+
+  return {
+    event: "tmc_review.added",
+    source: "elysium-tmc-review",
+    title: name,
+    displayName: name,
+    tmcName: catalog?.tmcName ?? "",
+    category: catalog?.category ?? "",
+    preferredMetal: (input.review.preferredMetal ?? "").trim(),
+    priceGbp: (input.review.priceGbp ?? "").trim(),
+    notes: (input.review.notes ?? "").trim(),
+    handle: input.handle,
+    reviewUrl: `${site}/tmc-review`,
+    kind: plan.kind,
+    slug: plan.slug,
+    tmcPriceAud: catalog?.tmcPriceAud ?? "",
+    reviewApi: `${site}/api/tmc-review`,
+    triggeredAt: new Date().toISOString(),
+  };
+}
+
 async function fireCursorAutomationWebhook(payload: Record<string, unknown>): Promise<boolean> {
-  const url = env.CURSOR_TMC_AUTOMATION_WEBHOOK_URL.trim();
-  const apiKey = env.CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY.trim();
+  // Prefer the dedicated env the user asked for; keep legacy names as fallback.
+  const url = (
+    env.TMC_REVIEW_WEBHOOK_URL ||
+    env.CURSOR_TMC_AUTOMATION_WEBHOOK_URL ||
+    ""
+  ).trim();
+  const apiKey = (
+    env.TMC_REVIEW_WEBHOOK_API_KEY ||
+    env.CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY ||
+    ""
+  ).trim();
 
   if (!url) {
-    console.info("[tmc-notify] Cursor webhook skipped: CURSOR_TMC_AUTOMATION_WEBHOOK_URL not set");
+    console.info(
+      "[tmc-notify] Cursor webhook skipped: TMC_REVIEW_WEBHOOK_URL not set"
+    );
     return false;
   }
 
@@ -138,7 +180,6 @@ async function fireCursorAutomationWebhook(payload: Record<string, unknown>): Pr
     Accept: "application/json",
   };
   if (apiKey) {
-    // Cursor webhook auth commonly uses Authorization: Bearer <key>
     headers.Authorization = `Bearer ${apiKey}`;
   }
 
@@ -158,7 +199,7 @@ async function fireCursorAutomationWebhook(payload: Record<string, unknown>): Pr
 }
 
 /**
- * Email admin + optionally fire the Cursor Plan automation webhook when the
+ * Email admin + fire the Cursor "TMC Review — item added" webhook when the
  * client newly keeps (or names) a TMC review row. Never throws to callers.
  */
 export async function notifyTmcSelectionIfNeeded(input: TmcNotifyInput): Promise<{
@@ -184,23 +225,9 @@ export async function notifyTmcSelectionIfNeeded(input: TmcNotifyInput): Promise
       text: buildEmailText(input),
     });
 
-    const webhooked = await fireCursorAutomationWebhook({
-      source: "elysium-tmc-review",
-      event: "client_selection",
-      handle: input.handle,
-      kind: plan.kind,
-      displayName: name,
-      priceGbp: input.review.priceGbp ?? "",
-      preferredMetal: input.review.preferredMetal ?? "",
-      notes: input.review.notes ?? "",
-      options: input.review.options ?? null,
-      slug: plan.slug,
-      executionPlan: plan.steps,
-      approveHint: plan.approveHint,
-      reviewUrl: `${env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")}/tmc-review`,
-      reviewApi: `${env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")}/api/tmc-review`,
-      triggeredAt: new Date().toISOString(),
-    });
+    const webhooked = await fireCursorAutomationWebhook(
+      buildTmcReviewAddedWebhookPayload(input)
+    );
 
     return { notified: emailed || webhooked, emailed, webhooked };
   } catch (error) {

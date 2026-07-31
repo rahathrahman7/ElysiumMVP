@@ -40,24 +40,24 @@ In Vercel → Project → Settings → Environment Variables:
 
 Redeploy after setting.
 
-### 2. Cursor Automations (Plan + Execute)
+### 2. Cursor Automation — **TMC Review — item added** (primary)
 
-Cursor cannot create automations via API from this agent. Create them in the UI:
+Cloud agents cannot create Automations via API (UI + login required). Create it yourself:
 
 1. Open [cursor.com/automations/new](https://cursor.com/automations/new)  
-2. Create **TMC product import — Plan** using [`.cursor/automations/tmc-product-import-plan.md`](../.cursor/automations/tmc-product-import-plan.md)  
-   - Trigger: **Webhook**  
-   - Repo: this repository  
-3. After save, copy webhook URL + API key into Vercel:
+2. Follow [`.cursor/automations/tmc-review-item-added.md`](../.cursor/automations/tmc-review-item-added.md)  
+   - Name: **TMC Review — item added**  
+   - Trigger: **Incoming HTTP webhook**  
+3. After save, copy the webhook URL (+ API key if shown) into Vercel project **elysium-mvp**:
 
-   - `CURSOR_TMC_AUTOMATION_WEBHOOK_URL`
-   - `CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY`
+   - `TMC_REVIEW_WEBHOOK_URL`
+   - `TMC_REVIEW_WEBHOOK_API_KEY` (if provided)
+   - Also confirm: `DATABASE_URL`, `RESEND_API_KEY`, `ADMIN_NOTIFICATION_EMAIL`
 
-4. Create **TMC product import — Execute** using [`.cursor/automations/tmc-product-import-execute.md`](../.cursor/automations/tmc-product-import-execute.md)  
-   - Trigger: Slack ✅ reaction and/or comment `approve import`  
-   - Or skip this and just reply `execute the plan` on the Plan agent run
+4. Redeploy.
 
-Optional backup: add a **scheduled** trigger (e.g. every 6h) on the Plan automation that only runs `node scripts/plan-tmc-import.mjs` and notifies if new Keep rows appeared since last memory.
+Optional deeper import workflow (plan → approve → execute): see  
+`.cursor/automations/tmc-product-import-plan.md` and `tmc-product-import-execute.md`.
 
 ### 3. Smoke test
 

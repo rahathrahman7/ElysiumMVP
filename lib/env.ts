@@ -7,7 +7,10 @@ export const env = {
   RESEND_API_KEY: process.env.RESEND_API_KEY || "",
   RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
   ADMIN_NOTIFICATION_EMAIL: process.env.ADMIN_NOTIFICATION_EMAIL || "",
-  /** Optional Cursor Automations webhook (TMC Plan automation). */
+  /** Cursor Automation "TMC Review — item added" webhook (preferred). */
+  TMC_REVIEW_WEBHOOK_URL: process.env.TMC_REVIEW_WEBHOOK_URL || "",
+  TMC_REVIEW_WEBHOOK_API_KEY: process.env.TMC_REVIEW_WEBHOOK_API_KEY || "",
+  /** Legacy aliases for the same webhook. */
   CURSOR_TMC_AUTOMATION_WEBHOOK_URL: process.env.CURSOR_TMC_AUTOMATION_WEBHOOK_URL || "",
   CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY: process.env.CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY || "",
   NEXT_PUBLIC_PLAUSIBLE_DOMAIN: process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || "",

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma, resolveDatabaseUrl } from "@/lib/database/prisma";
 import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
+import { notifyTmcSelectionIfNeeded } from "@/lib/tmc/notify-selection";
 
 export const dynamic = "force-dynamic";
 
@@ -111,6 +112,11 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { handle, ...fields } = patchSchema.parse(body);
 
+    const previous = await prisma.tmcRingReview.findUnique({
+      where: { handle },
+      select: { keep: true, displayName: true },
+    });
+
     const data: Record<string, unknown> = {};
     if (fields.keep !== undefined) data.keep = fields.keep;
     if (fields.displayName !== undefined) data.displayName = fields.displayName;
@@ -119,10 +125,29 @@ export async function POST(request: Request) {
     if (fields.preferredMetal !== undefined) data.preferredMetal = fields.preferredMetal;
     if (fields.options !== undefined) data.options = JSON.stringify(fields.options);
 
-    await prisma.tmcRingReview.upsert({
+    const row = await prisma.tmcRingReview.upsert({
       where: { handle },
       create: { handle, ...data },
       update: data,
+    });
+
+    // Fire-and-forget: email admin + Cursor Plan automation when a Keep
+    // selection becomes actionable. Never block the client save path.
+    void notifyTmcSelectionIfNeeded({
+      handle,
+      previous: previous
+        ? { keep: previous.keep, displayName: previous.displayName }
+        : null,
+      review: {
+        keep: row.keep,
+        displayName: row.displayName,
+        priceGbp: row.priceGbp,
+        notes: row.notes,
+        preferredMetal: row.preferredMetal,
+        options: fields.options,
+      },
+    }).catch((error) => {
+      console.error("[tmc-review] notify failed:", error);
     });
 
     return NextResponse.json({ ok: true });

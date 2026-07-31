@@ -159,8 +159,9 @@ export async function POST(request: Request) {
           : undefined);
 
       // Await briefly so Vercel does not freeze the isolate before email/webhook fire.
+      let notifyResult: { email: boolean; webhook: boolean } | null = null;
       try {
-        await Promise.race([
+        notifyResult = (await Promise.race([
           notifyTmcReviewAdded({
             handle,
             displayName: saved.displayName ?? fields.displayName ?? "",
@@ -169,14 +170,23 @@ export async function POST(request: Request) {
             preferredMetal: saved.preferredMetal ?? fields.preferredMetal ?? "",
             options,
           }),
-          new Promise((resolve) => setTimeout(resolve, 5000)),
-        ]);
+          new Promise<{ email: boolean; webhook: boolean }>((resolve) =>
+            setTimeout(() => resolve({ email: false, webhook: false }), 5000)
+          ),
+        ])) as { email: boolean; webhook: boolean };
       } catch (err) {
         console.error("[tmc-review] notify failed:", err);
       }
+
+      return NextResponse.json({
+        ok: true,
+        notified: true,
+        email: notifyResult?.email ?? false,
+        webhook: notifyResult?.webhook ?? false,
+      });
     }
 
-    return NextResponse.json({ ok: true, notified: justAdded });
+    return NextResponse.json({ ok: true, notified: false });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(

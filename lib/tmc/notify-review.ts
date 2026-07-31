@@ -27,6 +27,14 @@ function webhookUrl(): string | undefined {
   return url.trim() || undefined;
 }
 
+function webhookApiKey(): string | undefined {
+  const key =
+    process.env.TMC_REVIEW_WEBHOOK_API_KEY ||
+    process.env.CURSOR_TMC_AUTOMATION_WEBHOOK_API_KEY ||
+    "";
+  return key.trim() || undefined;
+}
+
 function lookupCatalog(handle: string): CatalogRow | null {
   const rows = catalogSnapshot as CatalogRow[];
   return rows.find((r) => r.handle === handle) ?? null;
@@ -86,9 +94,18 @@ export async function notifyTmcReviewAdded(payload: TmcReviewNotifyPayload): Pro
   const url = webhookUrl();
   if (url) {
     try {
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      };
+      const apiKey = webhookApiKey();
+      if (apiKey) {
+        headers.Authorization = `Bearer ${apiKey}`;
+      }
+
       const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({
           event: "tmc_review.added",
           at: new Date().toISOString(),

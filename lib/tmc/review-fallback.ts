@@ -1,5 +1,5 @@
-import { readFile } from "fs/promises";
-import path from "path";
+import reviewsSnapshot from "../../public/data/tmc-reviews.json";
+import matchesSnapshot from "../../public/data/tmc-matches.json";
 
 export type TmcReviewRecord = {
   keep: boolean;
@@ -15,32 +15,24 @@ export type TmcMatchRecord = {
   tmcHandle: string;
 };
 
-async function readJsonFile<T>(relativePath: string): Promise<T | null> {
-  try {
-    const filePath = path.join(process.cwd(), relativePath);
-    const raw = await readFile(filePath, "utf8");
-    return JSON.parse(raw) as T;
-  } catch {
-    return null;
-  }
-}
-
-/** Seeded snapshot used when the database is unavailable. */
-export async function loadReviewFallback(): Promise<Record<string, TmcReviewRecord>> {
-  const data = await readJsonFile<{ reviews?: Record<string, TmcReviewRecord> }>(
-    "public/data/tmc-reviews.json"
-  );
+/**
+ * Seeded snapshot used when the database is unavailable.
+ * Imported statically so it is bundled into the Vercel serverless function
+ * (reading public/ via fs does not work in that environment).
+ */
+export function loadReviewFallback(): Record<string, TmcReviewRecord> {
+  const data = reviewsSnapshot as { reviews?: Record<string, TmcReviewRecord> };
   return data?.reviews ?? {};
 }
 
-export async function loadMatchFallback(): Promise<{
+export function loadMatchFallback(): {
   bySlug: Record<string, TmcMatchRecord>;
   ownedByHandle: Record<string, string>;
-}> {
-  const data = await readJsonFile<{
+} {
+  const data = matchesSnapshot as {
     bySlug?: Record<string, TmcMatchRecord>;
     ownedByHandle?: Record<string, string>;
-  }>("public/data/tmc-matches.json");
+  };
   return {
     bySlug: data?.bySlug ?? {},
     ownedByHandle: data?.ownedByHandle ?? {},

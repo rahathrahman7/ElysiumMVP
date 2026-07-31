@@ -61,37 +61,54 @@ function rowsToReviews(
 export async function GET() {
   try {
     if (!resolveDatabaseUrl()) {
-      const reviews = await loadReviewFallback();
       return NextResponse.json({
         ok: true,
-        reviews,
+        reviews: loadReviewFallback(),
         source: "fallback",
         warning: "DATABASE_URL is not configured; serving seeded review snapshot.",
       });
     }
 
-    const rows = await prisma.tmcRingReview.findMany();
+    // Hard timeout so a hung pooler never blocks the configurator.
+    const rows = await Promise.race([
+      prisma.tmcRingReview.findMany(),
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("tmc_ring_reviews query timed out after 4s")), 4000)
+      ),
+    ]);
+    const fromDb = rowsToReviews(rows ?? []);
+    const keptInDb = Object.values(fromDb).filter(
+      (r) => (r as { keep?: boolean }).keep
+    ).length;
+
+    // If Prisma fell back to the build-time mock (or the table was wiped),
+    // prefer the seeded snapshot so the client's kept selections stay visible.
+    if ((rows?.length ?? 0) === 0 && keptInDb === 0) {
+      const fallback = loadReviewFallback();
+      const keptInFallback = Object.values(fallback).filter((r) => r.keep).length;
+      if (keptInFallback > 0) {
+        return NextResponse.json({
+          ok: true,
+          reviews: fallback,
+          source: "fallback",
+          warning: "Database returned no review rows; serving seeded snapshot.",
+        });
+      }
+    }
+
     return NextResponse.json({
       ok: true,
-      reviews: rowsToReviews(rows ?? []),
+      reviews: fromDb,
       source: "database",
     });
   } catch (error) {
     console.error("[tmc-review] GET error:", error);
-    try {
-      const reviews = await loadReviewFallback();
-      return NextResponse.json({
-        ok: true,
-        reviews,
-        source: "fallback",
-        warning: dbErrorMessage(error),
-      });
-    } catch {
-      return NextResponse.json(
-        { error: "Internal server error", detail: dbErrorMessage(error) },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json({
+      ok: true,
+      reviews: loadReviewFallback(),
+      source: "fallback",
+      warning: dbErrorMessage(error),
+    });
   }
 }
 

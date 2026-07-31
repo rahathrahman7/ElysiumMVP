@@ -14,16 +14,20 @@ const schema = z.object({
 export async function GET() {
   try {
     if (!resolveDatabaseUrl()) {
-      const fallback = await loadMatchFallback();
       return NextResponse.json({
         ok: true,
-        ...fallback,
+        ...loadMatchFallback(),
         source: "fallback",
         warning: "DATABASE_URL is not configured; serving seeded match snapshot.",
       });
     }
 
-    const rows = await prisma.tmcRingMatch.findMany();
+    const rows = await Promise.race([
+      prisma.tmcRingMatch.findMany(),
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("tmc_ring_matches query timed out after 4s")), 4000)
+      ),
+    ]);
     const bySlug: Record<string, { elysiumTitle: string; tmcHandle: string }> = {};
     const ownedByHandle: Record<string, string> = {};
     for (const r of rows ?? []) {
@@ -36,20 +40,12 @@ export async function GET() {
     return NextResponse.json({ ok: true, bySlug, ownedByHandle, source: "database" });
   } catch (error) {
     console.error("[tmc-matches] GET error:", error);
-    try {
-      const fallback = await loadMatchFallback();
-      return NextResponse.json({
-        ok: true,
-        ...fallback,
-        source: "fallback",
-        warning: dbErrorMessage(error),
-      });
-    } catch {
-      return NextResponse.json(
-        { error: "Internal server error", detail: dbErrorMessage(error) },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json({
+      ok: true,
+      ...loadMatchFallback(),
+      source: "fallback",
+      warning: dbErrorMessage(error),
+    });
   }
 }
 

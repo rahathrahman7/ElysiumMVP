@@ -58,34 +58,44 @@ function createMockClient(): PrismaClient {
 }
 
 function createPrismaClient(): PrismaClient {
-  const databaseUrl = resolveDatabaseUrl();
+  try {
+    const databaseUrl = resolveDatabaseUrl();
 
-  if (!databaseUrl || isBuildPhase()) {
+    if (!databaseUrl || isBuildPhase()) {
+      return createMockClient();
+    }
+
+    // Keep Prisma schema `env("DATABASE_URL")` happy when only POSTGRES_* is set.
+    if (!process.env.DATABASE_URL) {
+      process.env.DATABASE_URL = databaseUrl;
+    }
+
+    const pool = new Pool({
+      connectionString: databaseUrl,
+      max: 5,
+      connectionTimeoutMillis: 4_000,
+      idleTimeoutMillis: 10_000,
+      // Serverless / Vercel often needs TLS to Supabase poolers.
+      ssl:
+        databaseUrl.includes('supabase') || databaseUrl.includes('sslmode=require')
+          ? { rejectUnauthorized: false }
+          : undefined,
+    });
+
+    const adapter = new PrismaPg(pool);
+    const prisma = new PrismaClient({
+      adapter,
+      log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    });
+
+    globalForPrisma.prismaPool = pool;
+    globalForPrisma.prismaAdapter = adapter;
+
+    return prisma;
+  } catch (error) {
+    console.error('[prisma] Failed to initialise client, using mock:', error);
     return createMockClient();
   }
-
-  // Keep Prisma schema `env("DATABASE_URL")` happy when only POSTGRES_* is set.
-  if (!process.env.DATABASE_URL) {
-    process.env.DATABASE_URL = databaseUrl;
-  }
-
-  const pool = new Pool({
-    connectionString: databaseUrl,
-    max: 10,
-    connectionTimeoutMillis: 5_000,
-    idleTimeoutMillis: 10_000,
-  });
-
-  const adapter = new PrismaPg(pool);
-  const prisma = new PrismaClient({
-    adapter,
-    log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
-  });
-
-  globalForPrisma.prismaPool = pool;
-  globalForPrisma.prismaAdapter = adapter;
-
-  return prisma;
 }
 
 function getPrismaClient(): PrismaClient {

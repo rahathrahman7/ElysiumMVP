@@ -25,12 +25,6 @@ test('products listing screenshot', async ({ page }) => {
   await page.screenshot({ path: `${OUT_DIR}/products.png`, fullPage: true });
 });
 
-test('PDP screenshot: seraphina', async ({ page }) => {
-  await page.goto('/products/seraphina-signature-six-claw');
-  await page.waitForLoadState('networkidle');
-  await page.screenshot({ path: `${OUT_DIR}/pdp-seraphina.png`, fullPage: true });
-});
-
 test('PDP screenshot: luna', async ({ page }) => {
   await page.goto('/products/luna-low-set-solitaire');
   await page.waitForLoadState('networkidle');

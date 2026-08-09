@@ -604,29 +604,16 @@ export function CategoryShowcase() {
             >
             <div ref={forHerCardsRef} className="flex gap-5 md:gap-6 pb-4 will-change-transform">
               <ProductCard
-                href="/products/seraphina-signature-six-claw"
-                src="/products/Seraphina/Seraphina-gold-front.jpeg"
-                alt="Seraphina six-claw solitaire"
-                label="Seraphina"
-                description="Signature six-claw solitaire with a round-cut centre and delicate pav&eacute; band."
-                expandable
-                variants={[
-                  { name: "gold", src: "/products/Seraphina/Seraphina-gold-front.jpeg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/Seraphina/Seraphina-rose-front.jpeg", swatch: SWATCH_COLOURS.rose },
-                  { name: "silver", src: "/products/Seraphina/Seraphina-silver-front.jpeg", swatch: SWATCH_COLOURS.silver },
-                ]}
-              />
-              <ProductCard
                 href="/products/vow-veil"
-                src="/products/vow-and-veil/VV-gold-front.jpeg"
-                alt="Vow & Veil toi et moi"
+                src="/products/vow-and-veil/vow-veil-tmc-yellow.jpg"
+                alt="Vow & Veil oval and pear toi et moi"
                 label="Vow & Veil"
-                description="A round and pear-cut stone paired in a gracefully sculpted, curved band."
+                description="An oval and pear-cut stone paired in a gracefully sculpted, curved band."
                 expandable
                 variants={[
-                  { name: "gold", src: "/products/vow-and-veil/VV-gold-front.jpeg", swatch: SWATCH_COLOURS.gold },
-                  { name: "rose", src: "/products/vow-and-veil/VV-rose-front.jpeg", swatch: SWATCH_COLOURS.rose },
-                  { name: "silver", src: "/products/vow-and-veil/VV-silver-front.jpeg", swatch: SWATCH_COLOURS.silver },
+                  { name: "gold", src: "/products/vow-and-veil/vow-veil-tmc-yellow.jpg", swatch: SWATCH_COLOURS.gold },
+                  { name: "rose", src: "/products/vow-and-veil/vow-veil-tmc-rose.jpg", swatch: SWATCH_COLOURS.rose },
+                  { name: "silver", src: "/products/vow-and-veil/vow-veil-tmc-white.jpg", swatch: SWATCH_COLOURS.silver },
                 ]}
               />
               <ProductCard

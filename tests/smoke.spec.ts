@@ -5,7 +5,7 @@ test("home → PDP → add to cart → checkout session", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("link", { name: "ELYSIUM" })).toBeVisible();
   await page.getByRole("link", { name: "SHOP COLLECTION" }).click();
-  await page.getByRole("link").filter({ hasText: /seraphina|celeste|luna/i }).first().click();
+  await page.getByRole("link").filter({ hasText: /celeste|luna|vow/i }).first().click();
   
   // Wait for product page to load and select a ring size (required for add to bag)
   await page.waitForLoadState('networkidle');

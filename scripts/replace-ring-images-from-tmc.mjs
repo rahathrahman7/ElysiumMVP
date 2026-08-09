@@ -82,6 +82,19 @@ const TARGETS = [
     caratPriceDelta: -1000,
     caratOriginalGBP: { '1ct': 0, '1.5ct': 900, '2ct': 1560, '2.5ct': 2460, '3ct+': 12000 },
   },
+  {
+    // Client: replace the old Vow & Veil (round + pear) with the new oval + pear
+    // curved Toi et Moi design, and move it out of the round filter into oval.
+    // Same product/name/prices — images + shape facet only.
+    slug: 'vow-veil',
+    handle: 'the-vivienne-ring-oval-and-pear-curved-toi-et-moi',
+    dir: 'public/products/vow-and-veil',
+    prefix: 'vow-veil-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+    retag: { removeCollections: ['round'], addCollections: ['oval'] },
+  },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -264,6 +277,17 @@ async function processTarget(products, target) {
       return { ...c, priceDeltaGBP: Math.max(0, from + target.caratPriceDelta) };
     });
     console.log('  carat deltas:', product.carats.map((c) => `${c.label}:£${c.priceDeltaGBP}`).join(' '));
+  }
+
+  // Vow & Veil: move shape facet from round to oval (shape filter reads
+  // product.collections). Idempotent — safe to re-run.
+  if (target.retag && Array.isArray(product.collections)) {
+    const remove = new Set(target.retag.removeCollections || []);
+    product.collections = product.collections.filter((c) => !remove.has(c));
+    for (const c of target.retag.addCollections || []) {
+      if (!product.collections.includes(c)) product.collections.push(c);
+    }
+    console.log('  retagged collections:', product.collections.join(', '));
   }
 }
 

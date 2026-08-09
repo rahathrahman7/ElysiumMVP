@@ -17,9 +17,9 @@ const testimonials: Testimonial[] = [
     id: "1",
     name: "Charlotte W.",
     location: "London",
-    text: "The Seraphina solitaire is absolutely breathtaking. The craftsmanship is exquisite and the six-claw setting makes the diamond appear even more brilliant. Could not be happier with my choice.",
+    text: "The Vow & Veil is absolutely breathtaking. The oval and pear stones sit so gracefully on the curved band, and the craftsmanship is exquisite. Could not be happier with my choice.",
     rating: 5,
-    ringPurchased: "Seraphina Signature Six-Claw",
+    ringPurchased: "Vow & Veil Toi et Moi",
     verified: true
   },
   {

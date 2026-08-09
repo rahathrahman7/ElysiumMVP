@@ -15,8 +15,12 @@
  * TMC AUD × AUD_TO_GBP_FACTOR (default 1.86, calibrated to Lumina £2350 / A$1264),
  * rounded to the nearest £50 — logged as a provisional price.
  *
+ * Prices: when public/data/tmc-lab-prices.json exists (generated from the client
+ * Lab Prices xlsx), its per-slug basePriceGBP + carat deltas take precedence over
+ * the review price and the AUD fallback.
+ *
  * Usage:
- *   node scripts/import-selected-rings.mjs [--dry-run] [--update]
+ *   node scripts/import-selected-rings.mjs [--dry-run] [--update] [--only=handle-or-slug,...]
  *   REVIEW_API=http://localhost:3000/api/tmc-review node scripts/import-selected-rings.mjs
  */
 
@@ -25,9 +29,17 @@ import path from 'node:path';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const UPDATE = process.argv.includes('--update');
+/** Restrict the run to a comma-separated list of TMC handles and/or product slugs. */
+const ONLY = (() => {
+  const raw = process.argv.find((a) => a.startsWith('--only='))?.split('=')[1];
+  if (!raw) return null;
+  return new Set(raw.split(',').map((s) => s.trim()).filter(Boolean));
+})();
 const ROOT = process.cwd();
 const PRODUCTS_PATH = path.join(ROOT, 'public/data/products.json');
 const REVIEW_CATALOG_PATH = path.join(ROOT, 'public/data/tmc-review-catalog.json');
+/** Optional client price book: slug -> { basePriceGBP, caratDeltas }. Generated from Lab Prices xlsx. */
+const LAB_PRICES_PATH = path.join(ROOT, 'public/data/tmc-lab-prices.json');
 const SRC_IMAGES_DIR = path.join(ROOT, 'exports/tmc-ring-catalog/images');
 const PUBLIC_IMAGES_ROOT = path.join(ROOT, 'public/products/tmc-import');
 const REVIEW_API = process.env.REVIEW_API || 'https://elysium-mvp.vercel.app/api/tmc-review';
@@ -161,7 +173,11 @@ function gbpFromAud(audRaw) {
   return Math.round((aud * AUD_TO_GBP_FACTOR) / 50) * 50;
 }
 
-function resolvePrice(review, catalogEntry, existingProduct) {
+function resolvePrice(review, catalogEntry, existingProduct, labPrice) {
+  // Client price book (Lab Prices xlsx) wins — it is the source of truth for GBP.
+  if (labPrice && Number(labPrice.basePriceGBP) > 0) {
+    return { price: Number(labPrice.basePriceGBP), source: 'lab-prices' };
+  }
   const parsed = parseGbpPrice(review.priceGbp);
   if (parsed != null) {
     return { price: parsed, source: 'review-gbp' };
@@ -204,7 +220,7 @@ function copyRenders(handle) {
   return Object.keys(available).length ? available : null;
 }
 
-function buildProduct(handle, review, catalogEntry, price) {
+function buildProduct(handle, review, catalogEntry, price, labPrice) {
   const title = (review.displayName || '').trim();
   const tmcName = catalogEntry?.tmcName || title;
   const category = catalogEntry?.category || '';
@@ -245,7 +261,16 @@ function buildProduct(handle, review, catalogEntry, price) {
   const blurb = firstSentence(notes) || `${title} — a signature ELYSIUM design.`;
   const description = notes || blurb;
 
-  const carats = pickFrom(CARATS, opts.carats);
+  let carats = pickFrom(CARATS, opts.carats);
+  if (carats.length === 0) carats = CARATS;
+  // Apply per-tier deltas from the client price book (Lab Prices xlsx), by label.
+  if (labPrice && labPrice.caratDeltas) {
+    carats = carats.map((c) =>
+      labPrice.caratDeltas[c.label] != null
+        ? { ...c, priceDeltaGBP: labPrice.caratDeltas[c.label] }
+        : c,
+    );
+  }
   const origins = pickFrom(ORIGINS, opts.origins);
   const colours = pickFrom(COLOURS, opts.colours);
   const clarities = pickFrom(CLARITIES, opts.clarities);
@@ -273,7 +298,7 @@ function buildProduct(handle, review, catalogEntry, price) {
     basePriceGBP: price,
     metals,
     origins: origins.length ? origins : ORIGINS,
-    ...(carats.length ? { carats } : { carats: CARATS }),
+    carats,
     colours: colours.length ? colours : COLOURS,
     clarities: clarities.length ? clarities : CLARITIES,
     certificates: certificates.length ? certificates : CERTIFICATES,
@@ -300,6 +325,10 @@ async function main() {
   const reviewCatalog = JSON.parse(fs.readFileSync(REVIEW_CATALOG_PATH, 'utf8'));
   const catalogByHandle = new Map(reviewCatalog.map((r) => [r.handle, r]));
 
+  const labPrices = fs.existsSync(LAB_PRICES_PATH)
+    ? JSON.parse(fs.readFileSync(LAB_PRICES_PATH, 'utf8'))
+    : {};
+
   const reviews = await fetchReviews();
 
   const added = [];
@@ -316,7 +345,10 @@ async function main() {
     const slug = slugify(name);
     const existing = bySlug.get(slug);
 
-    const { price, source } = resolvePrice(review, catalogEntry, existing);
+    if (ONLY && !ONLY.has(handle) && !ONLY.has(slug)) continue;
+
+    const labPrice = labPrices[slug];
+    const { price, source } = resolvePrice(review, catalogEntry, existing, labPrice);
     if (price == null) {
       skipped.push(`${handle} (${name}: no GBP and no AUD fallback)`);
       continue;
@@ -330,7 +362,7 @@ async function main() {
       continue;
     }
 
-    const result = buildProduct(handle, review, catalogEntry, price);
+    const result = buildProduct(handle, review, catalogEntry, price, labPrice);
     if (result.skip) { skipped.push(result.skip); continue; }
 
     const { product } = result;

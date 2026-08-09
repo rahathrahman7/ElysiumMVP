@@ -24,34 +24,6 @@ interface ProductReviewsProps {
 // Mock reviews data - would typically come from an API
 const getReviewsForProduct = (slug: string): Review[] => {
   const allReviews: Record<string, Review[]> = {
-    "seraphina-signature-six-claw": [
-      {
-        id: "1",
-        name: "Charlotte W.",
-        initials: "CW",
-        location: "London",
-        rating: 5,
-        text: "Absolutely stunning ring! The six-claw setting makes the diamond look even more brilliant. The craftsmanship is impeccable and the ring feels so luxurious. My fiancé chose perfectly.",
-        date: "2024-02-15",
-        verified: true,
-        helpful: 12,
-        ringSize: "L",
-        metal: "18k White Gold"
-      },
-      {
-        id: "2", 
-        name: "Emma S.",
-        initials: "ES",
-        location: "Manchester",
-        rating: 5,
-        text: "I was initially worried about ordering such an important piece online, but the quality exceeded all expectations. The pavé band is so delicate and beautiful.",
-        date: "2024-01-28",
-        verified: true,
-        helpful: 8,
-        ringSize: "M",
-        metal: "18k Rose Gold"
-      }
-    ],
     "luna-low-set-solitaire": [
       {
         id: "3",

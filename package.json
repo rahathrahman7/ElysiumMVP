@@ -24,8 +24,7 @@
     "build:orabella:manifest": "tsx scripts/buildImageManifest.ts --slug orabella-toi-et-moi --folder public/products/Orabella --productName \"Orabella Toi et Moi\" --altSuffix \"Toi et Moi — pear & radiant, four-claw points\"",
     "build:aveline:manifest": "tsx scripts/buildImageManifest.ts --slug aveline-radiant-solitaire --folder public/products/Aveline --productName \"Aveline Radiant Solitaire\" --altSuffix \"Radiant solitaire with hidden halo — four talon-tipped claws\"",
     "build:elara:manifest": "tsx scripts/buildImageManifest.ts --slug elara-trilogy --folder public/products/Elara --productName \"Elara Trilogy\" --altSuffix \"Round center with pear sides — sculpted trellis\"",
-    "build:vv:manifest": "tsx scripts/buildImageManifest.ts --slug vow-veil --folder \"public/products/Vow and Veil\" --productName \"Vow & Veil\" --altSuffix \"Toi et Moi — round + pear on curved band\"",
-    "build:seraphina:manifest": "tsx scripts/buildImageManifest.ts --slug seraphina-signature-six-claw --folder public/products/Seraphina --productName \"Seraphina Signature Six-Claw\" --altSuffix \"Six-claw solitaire with pavé band\"",
+    "build:vv:manifest": "tsx scripts/buildImageManifest.ts --slug vow-veil --folder \"public/products/Vow and Veil\" --productName \"Vow & Veil\" --altSuffix \"Toi et Moi — oval + pear on curved band\"",
     "build:luna:manifest": "tsx scripts/buildImageManifest.ts --slug luna-low-set-solitaire --folder public/products/Luna --productName \"Luna Low-Set Solitaire\" --altSuffix \"Low-set solitaire with open bridge & hidden halo\"",
     "build:celeste:manifest": "tsx scripts/buildImageManifest.ts --slug celeste-six-claw-solitaire --folder public/products/Celeste --productName \"Celeste Six-Claw Solitaire\" --altSuffix \"Six-claw solitaire with eagle-claw prongs\""
   },

@@ -1,0 +1,302 @@
+{
+  "celeste": {
+    "name": "Celeste",
+    "basePriceGBP": 2049,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "elara": {
+    "name": "Elara",
+    "basePriceGBP": 2499,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "luna": {
+    "name": "Luna",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "seraphina": {
+    "name": "Seraphina",
+    "basePriceGBP": 2599,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 600,
+      "2ct": 1250,
+      "2.5ct": 1750
+    }
+  },
+  "ophellia": {
+    "name": "Ophellia",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "amarante": {
+    "name": "Amarante",
+    "basePriceGBP": 1875,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "anastasia": {
+    "name": "Anastasia",
+    "basePriceGBP": 2025,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "noemi": {
+    "name": "Noémi",
+    "basePriceGBP": 1899,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "isolde": {
+    "name": "Isolde",
+    "basePriceGBP": 2149,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "nala": {
+    "name": "Nala",
+    "basePriceGBP": 1600,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "elodie": {
+    "name": "Elodie",
+    "basePriceGBP": 2495,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "callista": {
+    "name": "Callista",
+    "basePriceGBP": 1645,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "ovalis": {
+    "name": "Ovalis",
+    "basePriceGBP": 2179,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1550
+    }
+  },
+  "eterna": {
+    "name": "Eterna",
+    "basePriceGBP": 2379,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1550
+    }
+  },
+  "nova": {
+    "name": "Nova",
+    "basePriceGBP": 2635,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "unity": {
+    "name": "Unity",
+    "basePriceGBP": 3199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1100,
+      "2.5ct": 1600
+    }
+  },
+  "aura": {
+    "name": "Aura",
+    "basePriceGBP": 2435,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "felicity": {
+    "name": "Felicity",
+    "basePriceGBP": 2179,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1550
+    }
+  },
+  "leontine": {
+    "name": "Leontine",
+    "basePriceGBP": 2049,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "odessa": {
+    "name": "Odessa",
+    "basePriceGBP": 3199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1100,
+      "2.5ct": 1600
+    }
+  },
+  "lumea": {
+    "name": "Lumea",
+    "basePriceGBP": 2689,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
+    }
+  },
+  "vow-veil": {
+    "name": "Vow & Veil",
+    "basePriceGBP": 2489,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
+    }
+  },
+  "aveline": {
+    "name": "Aveline",
+    "basePriceGBP": 2449,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "clarion": {
+    "name": "Clarion",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "orabella": {
+    "name": "Orabella",
+    "basePriceGBP": 2689,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
+    }
+  },
+  "arabella": {
+    "name": "Arabella",
+    "basePriceGBP": 2160,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "evermore": {
+    "name": "Evermore",
+    "basePriceGBP": 2199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "lumina": {
+    "name": "Lumina",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    }
+  },
+  "vivienne": {
+    "name": "Vivienne",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  },
+  "sorella": {
+    "name": "Sorella",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    }
+  }
+}

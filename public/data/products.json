@@ -10680,6 +10680,7 @@
     "description": "A captivating expression of delicate elegance, the design features an oval-cut cultured gemstone, beautifully complemented by a graceful arrangement of scattered round brilliant accent stones. Each detail is thoughtfully placed to create an effortless balance of charm, brilliance, and sophistication.",
     "images": [
       "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/yellow.jpg",
+      "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/white.jpg",
       "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/rose.jpg"
     ],
     "basePriceGBP": 3199,
@@ -10695,6 +10696,18 @@
         "hex": "#B76E79",
         "priceDeltaGBP": 0,
         "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -10842,10 +10855,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/yellow.jpg"
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/yellow.jpg",
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/rose.jpg"
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/rose.jpg",
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/white.jpg",
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/white.jpg",
+        "/products/tmc-import/the-aurora-ring-oval-with-round-brilliant-accents/white-front.jpg"
       ]
     },
     "seoTitle": "Odessa | ELYSIUM",

@@ -5,9 +5,8 @@
     "blurb": "Timeless round solitaire secured by six graceful eagle-claw prongs.",
     "description": "Celeste is a timeless solitaire engagement ring, featuring a brilliant round-cut center stone secured by six graceful eagle-claw prongs.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum, Two-Tone Rose/Platinum, Two-Tone Yellow/Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Celeste/Celeste-gold-front.jpeg",
-      "/products/Celeste/Celeste-gold-side.jpeg",
-      "/products/Celeste/Celeste-gold-back.jpeg"
+      "/products/Celeste/celeste-tmc-yellow.jpg",
+      "/products/Celeste/celeste-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2049,
     "metals": [
@@ -204,46 +203,39 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Celeste/Celeste-gold-front.jpeg",
-        "/products/Celeste/Celeste-gold-side.jpeg",
-        "/products/Celeste/Celeste-gold-back.jpeg"
+        "/products/Celeste/celeste-tmc-yellow.jpg",
+        "/products/Celeste/celeste-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Celeste/Celeste-rose-front.jpeg",
-        "/products/Celeste/Celeste-rose-side.jpeg",
-        "/products/Celeste/Celeste-rose-back.jpeg"
+        "/products/Celeste/celeste-tmc-rose.jpg",
+        "/products/Celeste/celeste-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Celeste/Celeste-silver-front.jpeg",
-        "/products/Celeste/Celeste-silver-side.jpeg",
-        "/products/Celeste/Celeste-silver-back.jpeg"
+        "/products/Celeste/celeste-tmc-white.jpg",
+        "/products/Celeste/celeste-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Celeste/Celeste-silver-front.jpeg",
-        "/products/Celeste/Celeste-silver-side.jpeg",
-        "/products/Celeste/Celeste-silver-back.jpeg"
+        "/products/Celeste/celeste-tmc-white.jpg",
+        "/products/Celeste/celeste-tmc-white-front.jpg"
       ],
       "Two-Tone Rose/Platinum": [
-        "/products/Celeste/Celeste-rose-silver-front.jpeg",
-        "/products/Celeste/Celeste-rose-silver-side.jpeg",
-        "/products/Celeste/Celeste-rose-silver-back.jpeg"
+        "/products/Celeste/celeste-tmc-rose.jpg",
+        "/products/Celeste/celeste-tmc-rose-front.jpg"
       ],
       "Two-Tone Yellow/Platinum": [
-        "/products/Celeste/Celeste-gold-silver-front.jpeg",
-        "/products/Celeste/Celeste-gold-silver-side.jpeg",
-        "/products/Celeste/Celeste-gold-silver-back.jpeg"
+        "/products/Celeste/celeste-tmc-yellow.jpg",
+        "/products/Celeste/celeste-tmc-yellow-front.jpg"
       ]
     }
   },
   {
     "slug": "luna-low-set-solitaire",
     "title": "Luna — Low-Set Solitaire",
-    "blurb": "Contemporary low-set round solitaire with open bridge & hidden halo. Flush-fit friendly.",
-    "description": "Luna is a contemporary solitaire that blends elegance with everyday practicality. Designed with a low-set round center stone, its open bridge and hidden halo create a delicate floating effect, allowing the ring to sit close to the finger while fitting perfectly flush with a matching wedding band.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Round centre stone framed in our Signature Antique Halo — a fusion of timeless design and vintage-inspired elegance.",
+    "description": "The Luna showcases a round-cut cultured centre stone, beautifully framed within our Signature Antique Halo. A graceful fusion of timeless design and vintage-inspired elegance, bringing together two distinct eras to create a captivating heirloom destined to be treasured for generations.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Luna/Luna-gold-front.jpeg",
-      "/products/Luna/Luna-gold-side.jpeg",
-      "/products/Luna/Luna-gold-back.jpeg"
+      "/products/Luna/luna-tmc-yellow.jpg",
+      "/products/Luna/luna-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2249,
     "metals": [
@@ -406,18 +398,12 @@
       "engagement-rings",
       "signature-collection",
       "solitaire",
-      "flush-fit",
-      "hidden-halo",
-      "low-set",
       "luna",
       "round"
     ],
     "shape": "round",
     "styles": [
-      "solitaire",
-      "low-set",
-      "hidden-halo",
-      "flush-fit"
+      "solitaire"
     ],
     "caratBuckets": [
       "1-1.5",
@@ -428,26 +414,23 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Luna/Luna-gold-front.jpeg",
-        "/products/Luna/Luna-gold-side.jpeg",
-        "/products/Luna/Luna-gold-back.jpeg"
+        "/products/Luna/luna-tmc-yellow.jpg",
+        "/products/Luna/luna-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Luna/Luna-rose-front.jpeg",
-        "/products/Luna/Luna-Rose-Side.jpeg",
-        "/products/Luna/Luna-rose-back.jpeg"
+        "/products/Luna/luna-tmc-rose.jpg",
+        "/products/Luna/luna-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Luna/Luna-silver-front.jpeg",
-        "/products/Luna/Luna-silver-side.jpeg",
-        "/products/Luna/Luna-silver-back.jpeg"
+        "/products/Luna/luna-tmc-white.jpg",
+        "/products/Luna/luna-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Luna/Luna-silver-front.jpeg",
-        "/products/Luna/Luna-silver-side.jpeg",
-        "/products/Luna/Luna-silver-back.jpeg"
+        "/products/Luna/luna-tmc-white.jpg",
+        "/products/Luna/luna-tmc-white-front.jpg"
       ]
-    }
+    },
+    "seoDescription": "Luna round solitaire with our Signature Antique Halo."
   },
   {
     "slug": "vow-veil",
@@ -660,9 +643,8 @@
     "blurb": "Timeless trilogy design with round center and pear sides in sculpted trellis setting.",
     "description": "Elara is a timeless trilogy design, showcasing a brilliant round center stone flanked by two pear-cut side stones, all gracefully nestled within a sculpted trellis setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Elara/Elara-gold-front.jpeg",
-      "/products/Elara/Elara-gold-side.jpeg",
-      "/products/Elara/Elara-gold-back.jpeg"
+      "/products/Elara/elara-tmc-yellow.jpg",
+      "/products/Elara/elara-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2499,
     "metals": [
@@ -842,24 +824,20 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Elara/Elara-gold-front.jpeg",
-        "/products/Elara/Elara-gold-side.jpeg",
-        "/products/Elara/Elara-gold-back.jpeg"
+        "/products/Elara/elara-tmc-yellow.jpg",
+        "/products/Elara/elara-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Elara/Elara-rose-front.jpeg",
-        "/products/Elara/Elara-rose-side.jpeg",
-        "/products/Elara/Elara-rose-back.jpeg"
+        "/products/Elara/elara-tmc-rose.jpg",
+        "/products/Elara/elara-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Elara/Elara-silver-front.jpeg",
-        "/products/Elara/Elara-silver-side.jpeg",
-        "/products/Elara/Elara-silver-back.jpeg"
+        "/products/Elara/elara-tmc-white.jpg",
+        "/products/Elara/elara-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Elara/Elara-silver-front.jpeg",
-        "/products/Elara/Elara-silver-side.jpeg",
-        "/products/Elara/Elara-silver-back.jpeg"
+        "/products/Elara/elara-tmc-white.jpg",
+        "/products/Elara/elara-tmc-white-front.jpg"
       ]
     }
   },

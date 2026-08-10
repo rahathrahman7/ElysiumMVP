@@ -114,6 +114,50 @@ const TARGETS = [
     seoDescription:
       'Nova floating oval solitaire with a sculpted split band and sweeping pav\u00e9 curve.',
   },
+  {
+    // Client: replace Luna with the TMC Eloise round antique halo and remove the
+    // Hidden Halo treatment. New design is a round solitaire with a Signature
+    // Antique Halo (not the old low-set/flush-fit hidden-halo). Same metals/price/slug.
+    slug: 'luna-low-set-solitaire',
+    handle: 'the-eloise-ring-round-antique-halo',
+    dir: 'public/products/Luna',
+    prefix: 'luna-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+    removeHiddenHalo: true,
+    removeStyles: ['low-set', 'flush-fit'],
+    retag: { removeCollections: ['low-set', 'flush-fit'] },
+    blurb: 'Round centre stone framed in our Signature Antique Halo \u2014 a fusion of timeless design and vintage-inspired elegance.',
+    description:
+      'The Luna showcases a round-cut cultured centre stone, beautifully framed within our Signature Antique Halo. A graceful fusion of timeless design and vintage-inspired elegance, bringing together two distinct eras to create a captivating heirloom destined to be treasured for generations.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D\u2013F colour, VS1+ clarity.\n\nCertification: GIA or IGI.',
+    seoDescription: 'Luna round solitaire with our Signature Antique Halo.',
+  },
+  {
+    // Client: replace Celeste with the TMC Isla round solitaire (6-prong) renders.
+    // Images only — copy/tags unchanged. Two-tone metals reuse yellow/rose.
+    slug: 'celeste-six-claw-solitaire',
+    handle: 'the-isla-ring-round-solitaire-new',
+    dir: 'public/products/Celeste',
+    prefix: 'celeste-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+  },
+  {
+    // Client: replace Elara with the TMC Emilia round-and-pear basket trilogy renders.
+    slug: 'elara-trilogy',
+    handle: 'the-emilia-ring-round-and-pear-trilogy',
+    dir: 'public/products/Elara',
+    prefix: 'elara-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+    blurb: 'Timeless trilogy with a round centre stone flanked by two pear-cut side stones in a sculpted basket setting.',
+    description:
+      'Elara is a timeless trilogy design, showcasing a brilliant round centre stone flanked by two pear-cut side stones, all gracefully nestled within a sculpted basket trilogy setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D\u2013F colour, VS1+ clarity.\n\nCertification: GIA or IGI.',
+    seoDescription: 'Elara round-and-pear trilogy in a sculpted basket setting.',
+  },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

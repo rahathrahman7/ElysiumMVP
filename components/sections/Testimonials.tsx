@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     id: "2", 
     name: "James M.",
     location: "Edinburgh",
-    text: "Proposed with the Luna Low-Set and she said yes! The hidden halo detail is stunning and the ring sits perfectly on her finger. The service from Elysium was exceptional throughout.",
+    text: "Proposed with the Luna Low-Set and she said yes! The antique halo detail is stunning and the ring sits perfectly on her finger. The service from Elysium was exceptional throughout.",
     rating: 5,
     ringPurchased: "Luna Low-Set Solitaire",
     verified: true

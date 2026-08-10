@@ -5901,6 +5901,22 @@
       "18k Rose Gold": [
         "/products/tmc-import/the-amira-ring-1/metal-rose.jpg",
         "/products/tmc-import/the-amira-ring-1/metal-rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-amira-ring-1/metal-white.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-amira-ring-1/metal-white.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-white-front.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/tmc-import/the-amira-ring-1/metal-rose.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-rose-front.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/tmc-import/the-amira-ring-1/metal-yellow.jpg",
+        "/products/tmc-import/the-amira-ring-1/metal-yellow-front.jpg"
       ]
     },
     "seoTitle": "Amira — Oval with Marquise Accents | ELYSIUM",
@@ -9306,6 +9322,18 @@
         "hex": "#B76E79",
         "priceDeltaGBP": 0,
         "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -9459,6 +9487,14 @@
       "18k Rose Gold": [
         "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose.jpg",
         "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/white.jpg",
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/white.jpg",
+        "/products/tmc-import/the-aurora-ring-round-with-round-brilliant-accents/white-front.jpg"
       ]
     },
     "seoTitle": "Amarante | ELYSIUM",
@@ -9691,6 +9727,18 @@
         "hex": "#B76E79",
         "priceDeltaGBP": 0,
         "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
       }
     ],
     "origins": [
@@ -9848,6 +9896,14 @@
       "18k Rose Gold": [
         "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose.jpg",
         "/products/tmc-import/the-amira-ring-round-with-marquise-accents/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/white.jpg",
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/white.jpg",
+        "/products/tmc-import/the-amira-ring-round-with-marquise-accents/white-front.jpg"
       ]
     },
     "seoTitle": "Anastasia | ELYSIUM",

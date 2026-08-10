@@ -1883,12 +1883,11 @@
   {
     "slug": "nova-oval-solitaire-round-marquise",
     "title": "Nova",
-    "blurb": "Oval centre stone with hidden halo, round and marquise side stones on refined band.",
-    "description": "The captivating Nova design features a radiant four-claw oval-cut center stone with a shimmering hidden halo, set on a sleek band accented by two pairs of round and marquise-cut side stones.\n\nMetals: Platinum, 18k White, 18k Yellow, 18k Rose.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Oval-cut centre stone floating above a sculpted split band with a sweeping pavé curve.",
+    "description": "The Nova Ring embodies distinctive elegance, featuring an oval-cut cultured gemstone gracefully suspended above an intricately sculpted split band. One side is delicately adorned with a sweeping pavé-set curve, creating a captivating silhouette that balances individuality with refined sophistication.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
     "images": [
-      "/products/Nova/nova-front.jpeg",
-      "/products/Nova/nova-side.jpeg",
-      "/products/Nova/nova-back.jpeg"
+      "/products/Nova/nova-tmc-yellow.jpg",
+      "/products/Nova/nova-tmc-yellow-front.jpg"
     ],
     "basePriceGBP": 2635,
     "metals": [
@@ -2051,15 +2050,12 @@
       "engagement-rings",
       "signature-collection",
       "solitaire",
-      "hidden-halo",
       "nova",
       "oval"
     ],
     "shape": "oval",
     "styles": [
-      "solitaire",
-      "three-stone",
-      "hidden-halo"
+      "solitaire"
     ],
     "caratBuckets": [
       "1-1.5",
@@ -2070,26 +2066,23 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Nova/nova-front.jpeg",
-        "/products/Nova/nova-side.jpeg",
-        "/products/Nova/nova-back.jpeg"
+        "/products/Nova/nova-tmc-yellow.jpg",
+        "/products/Nova/nova-tmc-yellow-front.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Nova/nova-rose-front.jpeg",
-        "/products/Nova/nova-rose-side.jpeg",
-        "/products/Nova/nova-rose-back.jpeg"
+        "/products/Nova/nova-tmc-rose.jpg",
+        "/products/Nova/nova-tmc-rose-front.jpg"
       ],
       "18k White Gold": [
-        "/products/Nova/nova-plat-front.jpeg",
-        "/products/Nova/nova-plat-side.jpeg",
-        "/products/Nova/nova-plat-back.jpeg"
+        "/products/Nova/nova-tmc-white.jpg",
+        "/products/Nova/nova-tmc-white-front.jpg"
       ],
       "Platinum": [
-        "/products/Nova/nova-plat-front.jpeg",
-        "/products/Nova/nova-plat-side.jpeg",
-        "/products/Nova/nova-plat-back.jpeg"
+        "/products/Nova/nova-tmc-white.jpg",
+        "/products/Nova/nova-tmc-white-front.jpg"
       ]
-    }
+    },
+    "seoDescription": "Nova floating oval solitaire with a sculpted split band and sweeping pavé curve."
   },
   {
     "slug": "arden-mens-ring",

@@ -95,6 +95,25 @@ const TARGETS = [
     primaryColor: 'yellow',
     retag: { removeCollections: ['round'], addCollections: ['oval'] },
   },
+  {
+    // Client: replace Nova with the TMC Elijah floating oval solitaire (pavé
+    // split band). New design has no halo, so drop the Hidden Halo treatment
+    // and the three-stone style. Same metals/prices/slug.
+    slug: 'nova-oval-solitaire-round-marquise',
+    handle: 'the-elijah-ring-floating-oval-solitaire-with-pave-band',
+    dir: 'public/products/Nova',
+    prefix: 'nova-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+    removeHiddenHalo: true,
+    removeStyles: ['three-stone'],
+    blurb: 'Oval-cut centre stone floating above a sculpted split band with a sweeping pavé curve.',
+    description:
+      'The Nova Ring embodies distinctive elegance, featuring an oval-cut cultured gemstone gracefully suspended above an intricately sculpted split band. One side is delicately adorned with a sweeping pav\u00e9-set curve, creating a captivating silhouette that balances individuality with refined sophistication.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D\u2013F colour, VS1+ clarity.\n\nCertification: GIA or IGI.',
+    seoDescription:
+      'Nova floating oval solitaire with a sculpted split band and sweeping pav\u00e9 curve.',
+  },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -266,6 +285,14 @@ async function processTarget(products, target) {
     if (target.description) product.description = target.description;
     if (target.seoDescription) product.seoDescription = target.seoDescription;
     console.log('  removed hidden-halo + updated copy');
+  }
+
+  // Optional: strip additional styles that no longer apply to the new design
+  // (e.g. Nova is no longer a three-stone once swapped to the Elijah solitaire).
+  if (Array.isArray(target.removeStyles) && Array.isArray(product.styles)) {
+    const rm = new Set(target.removeStyles);
+    product.styles = product.styles.filter((s) => !rm.has(s));
+    console.log('  removed styles:', target.removeStyles.join(', '));
   }
 
   // Orabella: £1k off each carat tier, floored at 0. Computed from the

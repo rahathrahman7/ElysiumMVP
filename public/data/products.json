@@ -4109,13 +4109,13 @@
   {
     "slug": "bezel-tennis-bracelet",
     "title": "Bezel Tennis Bracelet",
-    "blurb": "Elegant bezel-set tennis bracelet with fluid silhouette and discreet custom clasp for all-day comfort.",
-    "description": "Embodied in timeless design, the Bezel Tennis Bracelet rests seamlessly on the wrist, featuring sleek bezel-set diamonds, a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Embodied in timeless design, the Bezel Tennis Bracelet rests seamlessly on the wrist, featuring sleek bezel-set diamonds, a fluid silhouette and discreet custom clasp for all-day comfort.",
+    "description": "Embodied in timeless design, the Bezel Tennis Bracelet rests seamlessly on the wrist, featuring sleek bezel-set diamonds, a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold.PNG",
-      "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold2.PNG"
+      "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-yellow.jpg",
+      "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1799,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -4148,14 +4148,14 @@
     ],
     "carats": [
       {
-        "label": "2ct",
+        "label": "2tcw",
         "carat": 2,
         "priceDeltaGBP": 0
       },
       {
-        "label": "4ct",
+        "label": "4tcw",
         "carat": 4,
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 900
       }
     ],
     "colours": [
@@ -4214,47 +4214,32 @@
     "caratBuckets": [
       "2-4"
     ],
-    "galleryByCaratAndMetal": {
-      "2ct": {
-        "18k Yellow Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-rose.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-silver.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 2ct/bezeltennis2ct-silver2.PNG"
-        ]
-      },
-      "4ct": {
-        "18k Yellow Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-gold.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-rose.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-silver.PNG",
-          "/products/Bezel Tennis Bracelet /bezel tennis 4ct/bezeltennis4ct-silver2.PNG"
-        ]
-      }
-    }
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-yellow.jpg",
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-yellow-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-white.jpg",
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-white-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-rose.jpg",
+        "/products/Bezel Tennis Bracelet /tmc/bezel-tennis-tmc-rose-side.jpg"
+      ]
+    },
+    "seoDescription": "Embodied in timeless design, the Bezel Tennis Bracelet rests seamlessly on the wrist, featuring sleek bezel-set diamonds, a fluid silhouette and discreet custom clasp for all-day comfort."
   },
   {
     "slug": "classic-4-claw-tennis-bracelet",
     "title": "Classic 4 Claw Tennis Bracelet",
-    "blurb": "Timeless tennis bracelet with fluid silhouette and discreet custom clasp for all-day comfort.",
-    "description": "Embodied in timeless design, the Classic 4-Claw Tennis Bracelet rests seamlessly on the wrist, featuring a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "blurb": "Embodied in timeless design, the Classic 4-Claw Tennis Bracelet rests seamlessly on the wrist, featuring a fluid silhouette and discreet custom clasp for all-day comfort.",
+    "description": "Embodied in timeless design, the Classic 4-Claw Tennis Bracelet rests seamlessly on the wrist, featuring a fluid silhouette and discreet custom clasp for all-day comfort. Available in white gold for classic elegance, yellow gold for a modern statement, or rose gold to elevate your special-occasion jewellery collection.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold.PNG",
-      "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold2.PNG"
+      "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow.jpg",
+      "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1799,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -4287,29 +4272,29 @@
     ],
     "carats": [
       {
-        "label": "2ct",
+        "label": "2tcw",
         "carat": 2,
         "priceDeltaGBP": 0
       },
       {
-        "label": "3ct",
+        "label": "3tcw",
         "carat": 3,
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 400
       },
       {
-        "label": "4ct",
+        "label": "4tcw",
         "carat": 4,
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 900
       },
       {
-        "label": "5ct",
+        "label": "5tcw",
         "carat": 5,
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 1200
       },
       {
-        "label": "7ct",
+        "label": "7tcw",
         "carat": 7,
-        "priceDeltaGBP": 0
+        "priceDeltaGBP": 1700
       }
     ],
     "colours": [
@@ -4378,78 +4363,21 @@
       "7\"",
       "7.5\""
     ],
-    "galleryByCaratAndMetal": {
-      "2ct": {
-        "18k Yellow Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-rose.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-silver.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /2ct/classicTB2ct-silver2.PNG"
-        ]
-      },
-      "3ct": {
-        "18k Yellow Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-gold.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-rose.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-silver.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-silver2.PNG"
-        ]
-      },
-      "4ct": {
-        "18k Yellow Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-gold.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-rose.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/ClassicTB4ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-silverPNG.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /4ct/classicTB4ct-silver2.PNG"
-        ]
-      },
-      "5ct": {
-        "18k Yellow Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-gold.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-rose.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classicTB5ct-silver.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /5ct/classictb5ct-silver2.PNG"
-        ]
-      },
-      "7ct": {
-        "18k Yellow Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-gold.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-gold2.PNG"
-        ],
-        "18k Rose Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-rose.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-rose2.PNG"
-        ],
-        "18k White Gold": [
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classictb7ct-silver.PNG",
-          "/products/Classic 4 Claw Tennis Bracelet /7ct/classsictb7ct-silver2.PNG"
-        ]
-      }
-    }
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow.jpg",
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-white.jpg",
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-white-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-rose.jpg",
+        "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-rose-side.jpg"
+      ]
+    },
+    "seoDescription": "Embodied in timeless design, the Classic 4-Claw Tennis Bracelet rests seamlessly on the wrist, featuring a fluid silhouette and discreet custom clasp for all-day comfort."
   },
   {
     "slug": "aura-engagement-ring",
@@ -5106,14 +5034,13 @@
   {
     "slug": "crown-earrings",
     "title": "Crown — Earrings",
-    "blurb": "Exquisitely detailed six-claw setting with a crown-inspired silhouette and two luminous round-cut stones.",
-    "description": "Exquisitely detailed, the Crown earrings showcase a beautifully sculpted six-claw setting with a crown-inspired silhouette. Set with two luminous round-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "Exquisitely detailed, the Crown earrings showcase a beautifully sculpted four-claw setting.",
+    "description": "Exquisitely detailed, the Crown earrings showcase a beautifully sculpted four-claw setting. Set with two luminous round-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Crown/crown-gold-front.PNG",
-      "/products/Earrings/Crown/crown-gold-side.PNG",
-      "/products/Earrings/Crown/crown-gold-back.PNG"
+      "/products/Earrings/Crown/crown-tmc-yellow.jpg",
+      "/products/Earrings/Crown/crown-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5148,33 +5075,52 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Crown/crown-gold-front.PNG",
-        "/products/Earrings/Crown/crown-gold-side.PNG",
-        "/products/Earrings/Crown/crown-gold-back.PNG"
+        "/products/Earrings/Crown/crown-tmc-yellow.jpg",
+        "/products/Earrings/Crown/crown-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Crown/crown-rose-front.PNG",
-        "/products/Earrings/Crown/crown-rose-side.PNG",
-        "/products/Earrings/Crown/crown-rose-back.PNG"
+        "/products/Earrings/Crown/crown-tmc-rose.jpg",
+        "/products/Earrings/Crown/crown-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Crown/crown-silver-front.PNG",
-        "/products/Earrings/Crown/crown-silver-side.PNG",
-        "/products/Earrings/Crown/crown-silver-back.PNG"
+        "/products/Earrings/Crown/crown-tmc-white.jpg",
+        "/products/Earrings/Crown/crown-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Crown earrings showcase a beautifully sculpted four-claw setting.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "essence-earrings",
     "title": "Essence — Earrings",
-    "blurb": "Refined pear-cut studs in a sleek bezel setting for comfort without compromising on style.",
-    "description": "Our Essence stud earrings offer a refined twist on the classic stud, showcasing pear-cut stones in a sleek bezel setting. Encasing the stone's edges for a smooth, secure finish, they're designed for comfort without compromising on style.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "Exquisitely detailed, the Essence earrings showcase a beautifully sculpted four-claw setting.",
+    "description": "Exquisitely detailed, the Essence earrings showcase a beautifully sculpted four-claw setting. Set with two luminous pear-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Essence/essence-gold-front.PNG",
-      "/products/Earrings/Essence/essence-gold-side.PNG",
-      "/products/Earrings/Essence/essence-gold-back.PNG"
+      "/products/Earrings/Essence/essence-tmc-yellow.jpg",
+      "/products/Earrings/Essence/essence-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5209,33 +5155,52 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Essence/essence-gold-front.PNG",
-        "/products/Earrings/Essence/essence-gold-side.PNG",
-        "/products/Earrings/Essence/essence-gold-back.PNG"
+        "/products/Earrings/Essence/essence-tmc-yellow.jpg",
+        "/products/Earrings/Essence/essence-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Essence/essence-rose-front.PNG",
-        "/products/Earrings/Essence/essence-rose-side.PNG",
-        "/products/Earrings/Essence/essence-rose-back.PNG"
+        "/products/Earrings/Essence/essence-tmc-rose.jpg",
+        "/products/Earrings/Essence/essence-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Essence/essence-silver-front.PNG",
-        "/products/Earrings/Essence/essence-silver-side.PNG",
-        "/products/Earrings/Essence/essence-silver-back.PNG"
+        "/products/Earrings/Essence/essence-tmc-white.jpg",
+        "/products/Earrings/Essence/essence-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Essence earrings showcase a beautifully sculpted four-claw setting.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "eternal-earrings",
     "title": "Eternal — Earrings",
-    "blurb": "Classic four-claw setting with a beautiful round-cut diamond. The heirloom staple you'll reach for day after day.",
-    "description": "Defined by enduring elegance, the Eternal earrings are a true heirloom staple, designed to be worn and loved for generations. Effortlessly transitioning from boardroom to brunch to evening occasions, they elevate every look with quiet brilliance. Featuring a classic four-claw setting and a beautiful round-cut diamond, these are the earrings you'll reach for day after day.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "Exquisitely detailed, the Eternal earrings showcase a beautifully sculpted four-claw setting.",
+    "description": "Exquisitely detailed, the Eternal earrings showcase a beautifully sculpted four-claw setting. Set with two luminous marquise-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Eternal/eternal-gold-front.PNG",
-      "/products/Earrings/Eternal/eternal-gold-side.PNG",
-      "/products/Earrings/Eternal/eternal-gold-back.PNG"
+      "/products/Earrings/Eternal/eternal-tmc-yellow.jpg",
+      "/products/Earrings/Eternal/eternal-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5272,33 +5237,52 @@
     "shape": "round",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Eternal/eternal-gold-front.PNG",
-        "/products/Earrings/Eternal/eternal-gold-side.PNG",
-        "/products/Earrings/Eternal/eternal-gold-back.PNG"
+        "/products/Earrings/Eternal/eternal-tmc-yellow.jpg",
+        "/products/Earrings/Eternal/eternal-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Eternal/eternal-rose-front.PNG",
-        "/products/Earrings/Eternal/eternal-rose-side.PNG",
-        "/products/Earrings/Eternal/eternal-rose-back.PNG"
+        "/products/Earrings/Eternal/eternal-tmc-rose.jpg",
+        "/products/Earrings/Eternal/eternal-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Eternal/eternal-silver-front.PNG",
-        "/products/Earrings/Eternal/eternal-silver-side.PNG",
-        "/products/Earrings/Eternal/eternal-silver-back.PNG"
+        "/products/Earrings/Eternal/eternal-tmc-white.jpg",
+        "/products/Earrings/Eternal/eternal-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Eternal earrings showcase a beautifully sculpted four-claw setting.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "heirloom-earrings",
     "title": "Heirloom — Earrings",
-    "blurb": "Princess-cut studs with softly rounded claws. Maximum sparkle for daily wear and long-term elegance.",
-    "description": "Celebrated for their clean lines and brilliance, princess-cut diamonds are a classic stud choice. Our Heirloom earrings are crafted to maximise sparkle, with softly rounded claws that offer both security and comfort — perfect for daily wear and long-term elegance.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "Exquisitely detailed, the Heirloom earrings showcase a beautifully sculpted four-claw setting.",
+    "description": "Exquisitely detailed, the Heirloom earrings showcase a beautifully sculpted four-claw setting. Set with two luminous radiant-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Heirloom/heirloom-gold-front.PNG",
-      "/products/Earrings/Heirloom/heirloom-gold-side.PNG",
-      "/products/Earrings/Heirloom/heirloom-gold-back.PNG"
+      "/products/Earrings/Heirloom/heirloom-tmc-yellow.jpg",
+      "/products/Earrings/Heirloom/heirloom-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5333,33 +5317,52 @@
     "shape": "princess",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Heirloom/heirloom-gold-front.PNG",
-        "/products/Earrings/Heirloom/heirloom-gold-side.PNG",
-        "/products/Earrings/Heirloom/heirloom-gold-back.PNG"
+        "/products/Earrings/Heirloom/heirloom-tmc-yellow.jpg",
+        "/products/Earrings/Heirloom/heirloom-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Heirloom/heirloom-rose-front.PNG",
-        "/products/Earrings/Heirloom/heirloom-rose-side.PNG",
-        "/products/Earrings/Heirloom/heirloom-rose-back.PNG"
+        "/products/Earrings/Heirloom/heirloom-tmc-rose.jpg",
+        "/products/Earrings/Heirloom/heirloom-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Heirloom/heirloom-silver-front.PNG",
-        "/products/Earrings/Heirloom/heirloom-silver-side.PNG",
-        "/products/Earrings/Heirloom/heirloom-silver-back.PNG"
+        "/products/Earrings/Heirloom/heirloom-tmc-white.jpg",
+        "/products/Earrings/Heirloom/heirloom-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Heirloom earrings showcase a beautifully sculpted four-claw setting.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "icon-earrings",
     "title": "Icon — Earrings",
-    "blurb": "Emerald-cut stones with signature talon-tip claws. Glamour and restraint for day to night.",
-    "description": "The Icon studs offer a striking balance of glamour and restraint, showcasing emerald-cut stones elevated by signature talon-tip claws. Designed to transition seamlessly from day to night, they are both confident and enduringly classic.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "Exquisitely detailed, the Icon earrings showcase a beautifully sculpted four-claw setting.",
+    "description": "Exquisitely detailed, the Icon earrings showcase a beautifully sculpted four-claw setting. Set with two luminous emerald-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn effortlessly.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Icon/icon-gold-front.PNG",
-      "/products/Earrings/Icon/icon-gold-side.PNG",
-      "/products/Earrings/Icon/icon-gold-side(1).PNG"
+      "/products/Earrings/Icon/icon-tmc-yellow.jpg",
+      "/products/Earrings/Icon/icon-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5396,34 +5399,52 @@
     "shape": "emerald",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Icon/icon-gold-front.PNG",
-        "/products/Earrings/Icon/icon-gold-side.PNG",
-        "/products/Earrings/Icon/icon-gold-side(1).PNG"
+        "/products/Earrings/Icon/icon-tmc-yellow.jpg",
+        "/products/Earrings/Icon/icon-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Icon/icon-rose-front.PNG",
-        "/products/Earrings/Icon/icon-rose-side.PNG",
-        "/products/Earrings/Icon/icon-rose-back.PNG"
+        "/products/Earrings/Icon/icon-tmc-rose.jpg",
+        "/products/Earrings/Icon/icon-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Icon/icon-silver-front.PNG",
-        "/products/Earrings/Icon/icon-silver-side.PNG",
-        "/products/Earrings/Icon/icon-silver-back.PNG"
+        "/products/Earrings/Icon/icon-tmc-white.jpg",
+        "/products/Earrings/Icon/icon-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Icon earrings showcase a beautifully sculpted four-claw setting.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "legacy-earrings",
-    "title": "Legacy — Hoop Earrings",
-    "blurb": "15mm round hoops with ten radiant stones per ear. Effortless sparkle and timeless sophistication.",
-    "description": "Designed to make a subtle statement, the Legacy 15mm round hoop earrings feature ten radiant stones per ear, offering effortless sparkle and timeless sophistication.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "title": "Legacy — Earrings",
+    "blurb": "Exquisitely detailed, the Legacy earrings showcase a beautifully sculpted four-claw setting. Set with two luminous oval-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn every day.",
+    "description": "Exquisitely detailed, the Legacy earrings showcase a beautifully sculpted four-claw setting. Set with two luminous oval-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn every day.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Legacy/legacy-gold-front.PNG",
-      "/products/Earrings/Legacy/legacy-gold-side.PNG",
-      "/products/Earrings/Legacy/legacy-gold-dual.PNG",
-      "/products/Earrings/Legacy/legacy-gold-open.PNG"
+      "/products/Earrings/Legacy/legacy-tmc-yellow.jpg",
+      "/products/Earrings/Legacy/legacy-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1099,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5458,36 +5479,52 @@
     "shape": "round",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Legacy/legacy-gold-front.PNG",
-        "/products/Earrings/Legacy/legacy-gold-side.PNG",
-        "/products/Earrings/Legacy/legacy-gold-dual.PNG",
-        "/products/Earrings/Legacy/legacy-gold-open.PNG"
+        "/products/Earrings/Legacy/legacy-tmc-yellow.jpg",
+        "/products/Earrings/Legacy/legacy-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Legacy/legacy-rose-front.PNG",
-        "/products/Earrings/Legacy/legacy-rose-side.PNG",
-        "/products/Earrings/Legacy/legacy-rose-dual.PNG",
-        "/products/Earrings/Legacy/legacy-rose-open.PNG"
+        "/products/Earrings/Legacy/legacy-tmc-rose.jpg",
+        "/products/Earrings/Legacy/legacy-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Legacy/legacy-silver-front.PNG",
-        "/products/Earrings/Legacy/legacy-silver-side.PNG",
-        "/products/Earrings/Legacy/legacy-silver-dual.PNG",
-        "/products/Earrings/Legacy/legacy-silver-open.PNG"
+        "/products/Earrings/Legacy/legacy-tmc-white.jpg",
+        "/products/Earrings/Legacy/legacy-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "Exquisitely detailed, the Legacy earrings showcase a beautifully sculpted four-claw setting. Set with two luminous oval-cut stones and finished with smooth, rounded claws, they offer a regal sparkle designed to be worn every day.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1500
+      }
+    ]
   },
   {
     "slug": "pure-earrings",
     "title": "Pure — Earrings",
-    "blurb": "Luminous round-cut centre stone with a pavé halo in a graceful four-claw basket setting.",
-    "description": "Featuring a luminous round-cut centre stone, the Pure earring is encircled by a sparkling pavé halo and secured in a graceful four-claw basket setting.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Pure Studs feature vivid lab-grown emeralds, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Pure/pure-gold-front.PNG",
-      "/products/Earrings/Pure/pure-gold-side.PNG",
-      "/products/Earrings/Pure/pure-gold-back.PNG"
+      "/products/Earrings/Pure/pure-tmc-yellow.jpg",
+      "/products/Earrings/Pure/pure-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1299,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5526,33 +5563,42 @@
     "shape": "round",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Pure/pure-gold-front.PNG",
-        "/products/Earrings/Pure/pure-gold-side.PNG",
-        "/products/Earrings/Pure/pure-gold-back.PNG"
+        "/products/Earrings/Pure/pure-tmc-yellow.jpg",
+        "/products/Earrings/Pure/pure-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Pure/pure-rose-front.PNG",
-        "/products/Earrings/Pure/pure-rose-side.PNG",
-        "/products/Earrings/Pure/pure-rose-back.PNG"
+        "/products/Earrings/Pure/pure-tmc-rose.jpg",
+        "/products/Earrings/Pure/pure-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Pure/pure-silver-front.PNG",
-        "/products/Earrings/Pure/pure-silver-side.PNG",
-        "/products/Earrings/Pure/pure-silver-back.PNG"
+        "/products/Earrings/Pure/pure-tmc-white.jpg",
+        "/products/Earrings/Pure/pure-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ]
   },
   {
     "slug": "refined-earrings",
     "title": "Refined — Earrings",
-    "blurb": "Bezel-set studs for a sleek, striking finish. From daytime sophistication to evening elegance.",
-    "description": "A modern interpretation of a timeless staple, the Refined studs feature bezel-set stones for a sleek yet striking finish. Versatile by design, they move seamlessly from daytime sophistication to evening elegance.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Refined Studs feature vivid lab-grown marquise, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Refined/refined-gold-front.PNG",
-      "/products/Earrings/Refined/refined-gold-side.PNG",
-      "/products/Earrings/Refined/refined-gold-back.PNG"
+      "/products/Earrings/Refined/refined-tmc-yellow.jpg",
+      "/products/Earrings/Refined/refined-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1299,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5587,33 +5633,42 @@
     ],
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Refined/refined-gold-front.PNG",
-        "/products/Earrings/Refined/refined-gold-side.PNG",
-        "/products/Earrings/Refined/refined-gold-back.PNG"
+        "/products/Earrings/Refined/refined-tmc-yellow.jpg",
+        "/products/Earrings/Refined/refined-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Refined/refined-rose-front.PNG",
-        "/products/Earrings/Refined/refined-rose-side.PNG",
-        "/products/Earrings/Refined/refined-rose-back.PNG"
+        "/products/Earrings/Refined/refined-tmc-rose.jpg",
+        "/products/Earrings/Refined/refined-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Refined/refined-silver-front.PNG",
-        "/products/Earrings/Refined/refined-silver-side.PNG",
-        "/products/Earrings/Refined/refined-silver-back.PNG"
+        "/products/Earrings/Refined/refined-tmc-white.jpg",
+        "/products/Earrings/Refined/refined-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ]
   },
   {
     "slug": "timeless-earrings",
     "title": "Timeless — Earrings",
-    "blurb": "Striking round-cut stone in a bold bezel setting. Classic and enduring.",
-    "description": "The Timeless earring showcases a striking round cut stone set within a bold bezel setting.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Timeless Studs feature vivid lab-grown rounds, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
     "images": [
-      "/products/Earrings/Timeless/timeless-gold-front.PNG",
-      "/products/Earrings/Timeless/timeless-gold-side.PNG",
-      "/products/Earrings/Timeless/timeless-gold-back.PNG"
+      "/products/Earrings/Timeless/timeless-tmc-yellow.jpg",
+      "/products/Earrings/Timeless/timeless-tmc-yellow-side.jpg"
     ],
-    "basePriceGBP": 0,
+    "basePriceGBP": 1299,
     "metals": [
       {
         "name": "18k Yellow Gold",
@@ -5650,21 +5705,31 @@
     "shape": "round",
     "galleryByMetal": {
       "18k Yellow Gold": [
-        "/products/Earrings/Timeless/timeless-gold-front.PNG",
-        "/products/Earrings/Timeless/timeless-gold-side.PNG",
-        "/products/Earrings/Timeless/timeless-gold-back.PNG"
+        "/products/Earrings/Timeless/timeless-tmc-yellow.jpg",
+        "/products/Earrings/Timeless/timeless-tmc-yellow-side.jpg"
       ],
       "18k Rose Gold": [
-        "/products/Earrings/Timeless/timeless-rose-front.PNG",
-        "/products/Earrings/Timeless/timeless-rose-side.PNG",
-        "/products/Earrings/Timeless/timeless-rose-back.PNG"
+        "/products/Earrings/Timeless/timeless-tmc-rose.jpg",
+        "/products/Earrings/Timeless/timeless-tmc-rose-side.jpg"
       ],
       "18k White Gold": [
-        "/products/Earrings/Timeless/timeless-silver-front.PNG",
-        "/products/Earrings/Timeless/timeless-silver-side.PNG",
-        "/products/Earrings/Timeless/timeless-silver-back.PNG"
+        "/products/Earrings/Timeless/timeless-tmc-white.jpg",
+        "/products/Earrings/Timeless/timeless-tmc-white-side.jpg"
       ]
-    }
+    },
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ]
   },
   {
     "slug": "amira-oval-marquise-accents",
@@ -11302,5 +11367,3582 @@
     },
     "seoTitle": "Leontine | ELYSIUM",
     "seoDescription": "A celebration of love in its most natural and enduring form."
+  },
+  {
+    "slug": "ethereal",
+    "title": "Ethereal",
+    "blurb": "Ethereal in beauty and intricate in design, this captivating piece features a marquise-cut lab-grown diamond elevated within a graceful cathedral setting.",
+    "description": "Ethereal in beauty and intricate in design, this captivating piece features a marquise-cut lab-grown diamond elevated within a graceful cathedral setting. A delicately twisted band is adorned with four intricately set marquise-cut accent stones, creating a design rich in detail and timeless elegance.",
+    "images": [
+      "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/yellow.jpg",
+      "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/white.jpg",
+      "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/rose.jpg"
+    ],
+    "basePriceGBP": 3199,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1100
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1600
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "ethereal"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/yellow.jpg",
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/rose.jpg",
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/white.jpg",
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/white.jpg",
+        "/products/tmc-import/the-amira-ring-marquise-with-marquise-accents/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Ethereal | ELYSIUM",
+    "seoDescription": "Ethereal in beauty and intricate in design, this captivating piece features a marquise-cut lab-grown diamond elevated within a graceful cathedral setting."
+  },
+  {
+    "slug": "odette",
+    "title": "Odette",
+    "blurb": "The Odette Bezel Solitaire offers a refined interpretation of the classic bezel setting, elegantly encasing a marquise-cut lab-grown diamond.",
+    "description": "The Odette Bezel Solitaire offers a refined interpretation of the classic bezel setting, elegantly encasing a marquise-cut lab-grown diamond. The clean, sculptural design creates a timeless silhouette with an effortlessly sophisticated finish.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/yellow.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/white.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/rose.jpg"
+    ],
+    "basePriceGBP": 1949,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "odette"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-bezel-solitaire-1/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Odette | ELYSIUM",
+    "seoDescription": "The Odette Bezel Solitaire offers a refined interpretation of the classic bezel setting, elegantly encasing a marquise-cut lab-grown diamond."
+  },
+  {
+    "slug": "maison",
+    "title": "Maison",
+    "blurb": "Defined by its strikingly elongated silhouette, the Maison Cathedral Solitaire showcases a beautifully proportioned marquise-cut lab-grown gemstone.",
+    "description": "Defined by its strikingly elongated silhouette, the Maison Cathedral Solitaire showcases a beautifully proportioned marquise-cut lab-grown gemstone. Entirely bespoke, each piece is crafted to reflect your individual vision and timeless sense of style.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/yellow.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/white.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1949,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "two-tone",
+      "maison"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/white-front.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/rose-front.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-cut-cathedral-solitaire/yellow-front.jpg"
+      ]
+    },
+    "seoTitle": "Maison | ELYSIUM",
+    "seoDescription": "Defined by its strikingly elongated silhouette, the Maison Cathedral Solitaire showcases a beautifully proportioned marquise-cut lab-grown gemstone."
+  },
+  {
+    "slug": "verity",
+    "title": "Verity",
+    "blurb": "A distinctive interpretation of the classic solitaire, this elegant design features a marquise-cut cultured gemstone set horizontally in an exquisite east-west cathedral setting.",
+    "description": "A distinctive interpretation of the classic solitaire, this elegant design features a marquise-cut cultured gemstone set horizontally in an exquisite east-west cathedral setting.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/yellow.jpg",
+      "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/white.jpg",
+      "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1949,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "verity"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/rose.jpg",
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-east-west-marquise-cathedral-solitaire/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Verity | ELYSIUM",
+    "seoDescription": "A distinctive interpretation of the classic solitaire, this elegant design features a marquise-cut cultured gemstone set horizontally in an exquisite east-west cathedral setting."
+  },
+  {
+    "slug": "opaline",
+    "title": "Opaline",
+    "blurb": "The Opaline Bezel Solitaire reimagines the classic bezel setting through a modern, refined lens.",
+    "description": "The Opaline Bezel Solitaire reimagines the classic bezel setting through a modern, refined lens. A beautiful marquise-cut lab-grown diamond is seamlessly encased within the setting, creating a clean silhouette that feels both timeless and effortlessly elegant.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/yellow.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/white.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1949,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "opaline"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-half-bezel-solitaire/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Opaline | ELYSIUM",
+    "seoDescription": "The Opaline Bezel Solitaire reimagines the classic bezel setting through a modern, refined lens."
+  },
+  {
+    "slug": "isadora",
+    "title": "Isadora",
+    "blurb": "The Isadora Ring presents a captivating marquise-cut lab-grown gemstone, elegantly framed by two perfectly proportioned pear-cut accent stones within a refined basket setting.",
+    "description": "The Isadora Ring presents a captivating marquise-cut lab-grown gemstone, elegantly framed by two perfectly proportioned pear-cut accent stones within a refined basket setting. Rich with meaning, each stone symbolises the past, the present, and the future — a timeless expression of love, connection, and everything yet to come.",
+    "images": [
+      "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/yellow.jpg",
+      "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/white.jpg",
+      "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/rose.jpg"
+    ],
+    "basePriceGBP": 2160,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "pear",
+      "trilogy",
+      "marquise",
+      "two-tone",
+      "isadora"
+    ],
+    "shape": "pear",
+    "styles": [
+      "trilogy",
+      "marquise",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/yellow.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/rose.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/white.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/white.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/white-front.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/rose.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/rose-front.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/yellow.jpg",
+        "/products/tmc-import/the-emilia-ring-marquise-pear-trilogy/yellow-front.jpg"
+      ]
+    },
+    "seoTitle": "Isadora | ELYSIUM",
+    "seoDescription": "The Isadora Ring presents a captivating marquise-cut lab-grown gemstone, elegantly framed by two perfectly proportioned pear-cut accent stones within a refined basket setting."
+  },
+  {
+    "slug": "amoret",
+    "title": "Amoret",
+    "blurb": "The Amoret captivates with its graceful, elongated silhouette, framed by a luminous halo of round brilliant cultured diamonds.",
+    "description": "The Amoret captivates with its graceful, elongated silhouette, framed by a luminous halo of round brilliant cultured diamonds. Distinctive and beautifully considered, it creates a truly unforgettable expression of elegance.",
+    "images": [
+      "/products/tmc-import/the-arie-ring-marquise-halo/yellow.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-halo/white.jpg",
+      "/products/tmc-import/the-arie-ring-marquise-halo/rose.jpg"
+    ],
+    "basePriceGBP": 2249,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Yellow/Platinum",
+        "hex": "#D4AF37",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/goldplatinumswatch.png"
+      },
+      {
+        "name": "Two-Tone Rose/Platinum",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 50,
+        "imageUrl": "/icons/swatches/rosegoldplatinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "halo",
+      "two-tone",
+      "amoret"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "halo",
+      "marquise",
+      "two-tone"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/white.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/white-front.jpg"
+      ],
+      "Two-Tone Yellow/Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/yellow.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/yellow-front.jpg"
+      ],
+      "Two-Tone Rose/Platinum": [
+        "/products/tmc-import/the-arie-ring-marquise-halo/rose.jpg",
+        "/products/tmc-import/the-arie-ring-marquise-halo/rose-front.jpg"
+      ]
+    },
+    "seoTitle": "Amoret | ELYSIUM",
+    "seoDescription": "The Amoret captivates with its graceful, elongated silhouette, framed by a luminous halo of round brilliant cultured diamonds."
+  },
+  {
+    "slug": "cleo",
+    "title": "Cleo",
+    "blurb": "The Cleo Ring showcases a captivating marquise lab-grown diamond, gracefully suspended between an elegantly curved split shank in a distinctive east-west setting.",
+    "description": "The Cleo Ring showcases a captivating marquise lab-grown diamond, gracefully suspended between an elegantly curved split shank in a distinctive east-west setting. Contemporary yet timeless, it is a beautifully considered design created to be treasured for a lifetime.\n\nPlease note, this design is crafted with a 3.2mm band width.",
+    "images": [
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/yellow.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/white.jpg",
+      "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 1799,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "cleo"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/yellow.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/rose.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/white.jpg",
+        "/products/tmc-import/the-aleasa-ring-split-shank-east-west-marquise-solitaire/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Cleo | ELYSIUM",
+    "seoDescription": "The Cleo Ring showcases a captivating marquise lab-grown diamond, gracefully suspended between an elegantly curved split shank in a distinctive east-west setting."
+  },
+  {
+    "slug": "splendour",
+    "title": "Splendour",
+    "blurb": "Stunning in its simplicity, the Splendour engagement ring is a classic marquise solitaire design featuring four talon-tipped claws and an antique style halo.",
+    "description": "Stunning in its simplicity, the Splendour engagement ring is a classic marquise solitaire design featuring four talon-tipped claws and an antique style halo.\n\nA harmonious fusion of two timeless designs, thoughtfully crafted into an heirloom destined to be cherished for generations.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.",
+    "images": [
+      "/products/tmc-import/the-eloise-ring-marquise-antique-halo/yellow.jpg",
+      "/products/tmc-import/the-eloise-ring-marquise-antique-halo/white.jpg",
+      "/products/tmc-import/the-eloise-ring-marquise-antique-halo/rose.jpg"
+    ],
+    "basePriceGBP": 2449,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1150
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1650
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "halo",
+      "splendour"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "halo",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/yellow.jpg",
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/rose.jpg",
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/white.jpg",
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/white.jpg",
+        "/products/tmc-import/the-eloise-ring-marquise-antique-halo/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Splendour | ELYSIUM",
+    "seoDescription": "Stunning in its simplicity, the Splendour engagement ring is a classic marquise solitaire design featuring four talon-tipped claws and an antique style halo."
+  },
+  {
+    "slug": "essence",
+    "title": "Essence",
+    "blurb": "A celebration of love in its most natural and enduring form.",
+    "description": "A celebration of love in its most natural and enduring form. The design features a marquise-cut lab-grown diamond presented in a distinctive east-west setting, gracefully resting upon a delicately curved band. An elevated expression of timeless elegance, created to symbolise a love that lasts forever.",
+    "images": [
+      "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/yellow.jpg",
+      "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/white.jpg",
+      "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/rose.jpg"
+    ],
+    "basePriceGBP": 2049,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      },
+      {
+        "name": "Platinum",
+        "hex": "#E5E4E2",
+        "priceDeltaGBP": 75,
+        "imageUrl": "/icons/swatches/platinumswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1.5ct",
+        "carat": 1.5,
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "2ct",
+        "carat": 2,
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "2.5ct",
+        "carat": 2.5,
+        "priceDeltaGBP": 1500
+      },
+      {
+        "label": "3ct+",
+        "carat": 3,
+        "priceDeltaGBP": 12000
+      }
+    ],
+    "colours": [
+      {
+        "label": "D",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "E",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "F",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "clarities": [
+      {
+        "label": "IF",
+        "priceDeltaGBP": 1000
+      },
+      {
+        "label": "VVS1",
+        "priceDeltaGBP": 500
+      },
+      {
+        "label": "VVS2",
+        "priceDeltaGBP": 250
+      },
+      {
+        "label": "VS1",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "certificates": [
+      {
+        "label": "GIA",
+        "priceDeltaGBP": 300
+      },
+      {
+        "label": "IGI",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "engravingFeeGBP": 0,
+    "engravingMaxChars": 24,
+    "sizes": [
+      "F",
+      "F 1/2",
+      "G",
+      "G 1/2",
+      "H",
+      "H 1/2",
+      "I",
+      "I 1/2",
+      "J",
+      "J 1/2",
+      "K",
+      "K 1/2",
+      "L",
+      "L 1/2",
+      "M",
+      "M 1/2",
+      "N",
+      "N 1/2",
+      "O",
+      "O 1/2",
+      "P",
+      "P 1/2",
+      "Q",
+      "Q 1/2",
+      "R",
+      "R 1/2",
+      "S",
+      "S 1/2",
+      "T",
+      "T 1/2",
+      "U",
+      "U 1/2",
+      "V",
+      "V 1/2",
+      "W",
+      "W 1/2",
+      "X",
+      "X 1/2",
+      "Y",
+      "Y 1/2",
+      "Z",
+      "Z+1",
+      "Z+2",
+      "Z+3",
+      "Z+4"
+    ],
+    "qualityBanner": "D–F colour • VS1+ clarity • GIA/IGI certified",
+    "collections": [
+      "engagement-rings",
+      "signature-collection",
+      "marquise",
+      "solitaire",
+      "essence"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "solitaire",
+      "marquise"
+    ],
+    "caratBuckets": [
+      "1-1.5",
+      "1.5-2",
+      "2-2.5",
+      "2.5-3",
+      "3plus"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/yellow.jpg",
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/yellow-front.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/rose.jpg",
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/rose-front.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/white.jpg",
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/white-front.jpg"
+      ],
+      "Platinum": [
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/white.jpg",
+        "/products/tmc-import/the-maya-ring-marquise-ascend-signature-solitaire/white-front.jpg"
+      ]
+    },
+    "seoTitle": "Essence | ELYSIUM",
+    "seoDescription": "A celebration of love in its most natural and enduring form."
+  },
+  {
+    "slug": "allure-earrings",
+    "title": "Allure",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Allure Studs feature vivid lab-grown pears, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
+    "images": [
+      "/products/tmc-import/the-vera-earrings-pear-bezel-studs/yellow.jpg",
+      "/products/tmc-import/the-vera-earrings-pear-bezel-studs/white.jpg",
+      "/products/tmc-import/the-vera-earrings-pear-bezel-studs/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "earrings",
+      "signature-collection",
+      "pear",
+      "allure-earrings"
+    ],
+    "shape": "pear",
+    "styles": [
+      "studs"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/yellow.jpg",
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/rose.jpg",
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/white.jpg",
+        "/products/tmc-import/the-vera-earrings-pear-bezel-studs/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Allure | ELYSIUM",
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "isFeatured": false
+  },
+  {
+    "slug": "radiance-earrings",
+    "title": "Radiance",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Radiance Studs feature vivid lab-grown radiants, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
+    "images": [
+      "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/yellow.jpg",
+      "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/white.jpg",
+      "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "earrings",
+      "signature-collection",
+      "radiant",
+      "radiance-earrings"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "studs"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/yellow.jpg",
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/rose.jpg",
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/white.jpg",
+        "/products/tmc-import/the-vera-earrings-radiant-bezel-studs/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Radiance | ELYSIUM",
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "isFeatured": false
+  },
+  {
+    "slug": "union-earrings",
+    "title": "Union",
+    "blurb": "A refined fusion of timeless elegance and contemporary design.",
+    "description": "A refined fusion of timeless elegance and contemporary design. The Union Studs feature vivid lab-grown ovals, delicately bezel-set within a sleek precious metal frame and available in two considered sizes. Effortlessly sophisticated, they are designed to bring a touch of modern refinement to every occasion.\n\nPlease note, all lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.",
+    "images": [
+      "/products/tmc-import/the-vera-earrings-oval-bezel-studs/yellow.jpg",
+      "/products/tmc-import/the-vera-earrings-oval-bezel-studs/white.jpg",
+      "/products/tmc-import/the-vera-earrings-oval-bezel-studs/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "earrings",
+      "signature-collection",
+      "oval",
+      "union-earrings"
+    ],
+    "shape": "oval",
+    "styles": [
+      "studs"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/yellow.jpg",
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/rose.jpg",
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/white.jpg",
+        "/products/tmc-import/the-vera-earrings-oval-bezel-studs/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Union | ELYSIUM",
+    "seoDescription": "A refined fusion of timeless elegance and contemporary design.",
+    "isFeatured": false
+  },
+  {
+    "slug": "beloved-hoops",
+    "title": "Beloved",
+    "blurb": "The Beloved Hoop is an effortless expression of timeless elegance, designed to complement your individual style.",
+    "description": "The Beloved Hoop is an effortless expression of timeless elegance, designed to complement your individual style. Featuring a perfectly rounded silhouette, it is an essential everyday staple—refined, versatile, and made to be worn endlessly.",
+    "images": [
+      "/products/tmc-import/the-statement-hoop/yellow.jpg",
+      "/products/tmc-import/the-statement-hoop/white.jpg",
+      "/products/tmc-import/the-statement-hoop/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "qualityBanner": "Solid 18k gold",
+    "collections": [
+      "earrings",
+      "signature-collection",
+      "beloved-hoops"
+    ],
+    "styles": [
+      "hoops"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-statement-hoop/yellow.jpg",
+        "/products/tmc-import/the-statement-hoop/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-statement-hoop/rose.jpg",
+        "/products/tmc-import/the-statement-hoop/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-statement-hoop/white.jpg",
+        "/products/tmc-import/the-statement-hoop/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Beloved | ELYSIUM",
+    "seoDescription": "The Beloved Hoop is an effortless expression of timeless elegance, designed to complement your individual style.",
+    "isFeatured": false
+  },
+  {
+    "slug": "paperclip-chain",
+    "title": "Paperclip Chain",
+    "blurb": "The Paperclip Necklace is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links.",
+    "description": "The Paperclip Necklace is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links. A refined everyday statement, designed to embody understated sophistication and effortless luxury.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nPlease note, all chains are made from solid precious metals. As weights vary by design, exact specifications are available upon request.",
+    "images": [
+      "/products/tmc-import/the-fine-paperclip-chain/yellow.jpg",
+      "/products/tmc-import/the-fine-paperclip-chain/white.jpg",
+      "/products/tmc-import/the-fine-paperclip-chain/rose.jpg"
+    ],
+    "basePriceGBP": 3399,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "qualityBanner": "Solid 18k gold",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "paperclip-chain"
+    ],
+    "styles": [
+      "chain"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-fine-paperclip-chain/yellow.jpg",
+        "/products/tmc-import/the-fine-paperclip-chain/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-fine-paperclip-chain/rose.jpg",
+        "/products/tmc-import/the-fine-paperclip-chain/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-fine-paperclip-chain/white.jpg",
+        "/products/tmc-import/the-fine-paperclip-chain/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Paperclip Chain | ELYSIUM",
+    "seoDescription": "The Paperclip Necklace is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links.",
+    "isFeatured": false
+  },
+  {
+    "slug": "paperclip-bracelet",
+    "title": "Paperclip Bracelet",
+    "blurb": "The Paperclip Bracelet is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links.",
+    "description": "The Paperclip Bracelet is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links. A refined everyday statement, designed to embody understated sophistication and effortless luxury.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nPlease note, all chains are made from solid precious metals. As weights vary by design, exact specifications are available upon request.",
+    "images": [
+      "/products/tmc-import/the-fine-paperclip-bracelet/yellow.jpg",
+      "/products/tmc-import/the-fine-paperclip-bracelet/white.jpg",
+      "/products/tmc-import/the-fine-paperclip-bracelet/rose.jpg"
+    ],
+    "basePriceGBP": 1739,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "qualityBanner": "Solid 18k gold",
+    "collections": [
+      "bracelets",
+      "signature-collection",
+      "paperclip-bracelet"
+    ],
+    "styles": [
+      "chain"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-fine-paperclip-bracelet/yellow.jpg",
+        "/products/tmc-import/the-fine-paperclip-bracelet/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-fine-paperclip-bracelet/rose.jpg",
+        "/products/tmc-import/the-fine-paperclip-bracelet/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-fine-paperclip-bracelet/white.jpg",
+        "/products/tmc-import/the-fine-paperclip-bracelet/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Paperclip Bracelet | ELYSIUM",
+    "seoDescription": "The Paperclip Bracelet is expertly crafted in solid 18K gold, featuring an elegant arrangement of elongated interlocking links.",
+    "isFeatured": false
+  },
+  {
+    "slug": "legacy-necklace",
+    "title": "Legacy Necklace",
+    "blurb": "The Legacy Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Legacy Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a oval-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-oval-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-oval-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-oval-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1099,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "oval",
+      "legacy-necklace"
+    ],
+    "shape": "oval",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-oval-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-oval-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-oval-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-oval-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-oval-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-oval-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Legacy Necklace | ELYSIUM",
+    "seoDescription": "The Legacy Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "refined-necklace",
+    "title": "Refined Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Refined Necklace showcases a vivid lab-grown marquise diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Refined Necklace showcases a vivid lab-grown marquise diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/white.jpg",
+      "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "marquise",
+      "refined-necklace"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/white.jpg",
+        "/products/tmc-import/the-vera-necklace-marquise-bezel-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Refined Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Refined Necklace showcases a vivid lab-grown marquise diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
+  },
+  {
+    "slug": "pure-necklace",
+    "title": "Pure Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Pure Necklace showcases a vivid lab-grown emerald diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Pure Necklace showcases a vivid lab-grown emerald diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/white.jpg",
+      "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "emerald",
+      "pure-necklace"
+    ],
+    "shape": "emerald",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/white.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-emerald-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Pure Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Pure Necklace showcases a vivid lab-grown emerald diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
+  },
+  {
+    "slug": "essence-necklace",
+    "title": "Essence Necklace",
+    "blurb": "The Essence Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Essence Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a pear-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-pear-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-pear-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-pear-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 300
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "pear",
+      "essence-necklace"
+    ],
+    "shape": "pear",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-pear-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-pear-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-pear-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-pear-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-pear-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-pear-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Essence Necklace | ELYSIUM",
+    "seoDescription": "The Essence Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "crown-necklace",
+    "title": "Crown Necklace",
+    "blurb": "The Crown Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Crown Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a round-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-round-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-round-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-round-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 300
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "round",
+      "crown-necklace"
+    ],
+    "shape": "round",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-round-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-round-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-round-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-round-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-round-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-round-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Crown Necklace | ELYSIUM",
+    "seoDescription": "The Crown Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "icon-necklace",
+    "title": "Icon Necklace",
+    "blurb": "The Icon Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Icon Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a emerald-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-emerald-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-emerald-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-emerald-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 300
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "emerald",
+      "icon-necklace"
+    ],
+    "shape": "emerald",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-emerald-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Icon Necklace | ELYSIUM",
+    "seoDescription": "The Icon Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "heirloom-necklace",
+    "title": "Heirloom Necklace",
+    "blurb": "The Heirloom Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Heirloom Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a radiant-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-radiant-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-radiant-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-radiant-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 300
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "radiant",
+      "heirloom-necklace"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-radiant-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Heirloom Necklace | ELYSIUM",
+    "seoDescription": "The Heirloom Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "eternal-necklace",
+    "title": "Eternal Necklace",
+    "blurb": "The Eternal Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "description": "The Eternal Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication. Featuring a marquise-cut lab-grown diamond secured within an elegant prong setting, it is available in two carat options. Shown here is the 0.50ct.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-iris-necklace-marquise-pendant/yellow.jpg",
+      "/products/tmc-import/the-iris-necklace-marquise-pendant/white.jpg",
+      "/products/tmc-import/the-iris-necklace-marquise-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 999,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 300
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "marquise",
+      "eternal-necklace"
+    ],
+    "shape": "marquise",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/yellow.jpg",
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/rose.jpg",
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/white.jpg",
+        "/products/tmc-import/the-iris-necklace-marquise-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Eternal Necklace | ELYSIUM",
+    "seoDescription": "The Eternal Necklace offers a refined interpretation of timeless elegance, blending classic design with contemporary sophistication.",
+    "isFeatured": false
+  },
+  {
+    "slug": "timeless-necklace",
+    "title": "Timeless Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Timeless Necklace showcases a vivid lab-grown round diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Timeless Necklace showcases a vivid lab-grown round diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-round-bezel-set/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-round-bezel-set/white.jpg",
+      "/products/tmc-import/the-vera-necklace-round-bezel-set/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "round",
+      "timeless-necklace"
+    ],
+    "shape": "round",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/white.jpg",
+        "/products/tmc-import/the-vera-necklace-round-bezel-set/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Timeless Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Timeless Necklace showcases a vivid lab-grown round diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
+  },
+  {
+    "slug": "union-necklace",
+    "title": "Union Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Union Necklace showcases a vivid lab-grown oval diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Union Necklace showcases a vivid lab-grown oval diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/white.jpg",
+      "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "oval",
+      "union-necklace"
+    ],
+    "shape": "oval",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/white.jpg",
+        "/products/tmc-import/the-vera-necklace-oval-bezel-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Union Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Union Necklace showcases a vivid lab-grown oval diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
+  },
+  {
+    "slug": "radiance-necklace",
+    "title": "Radiance Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Radiance Necklace showcases a vivid lab-grown radiant diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Radiance Necklace showcases a vivid lab-grown radiant diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/white.jpg",
+      "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "radiant",
+      "radiance-necklace"
+    ],
+    "shape": "radiant",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/white.jpg",
+        "/products/tmc-import/the-vera-necklace-radiant-bezel-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Radiance Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Radiance Necklace showcases a vivid lab-grown radiant diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
+  },
+  {
+    "slug": "allure-necklace",
+    "title": "Allure Necklace",
+    "blurb": "A refined addition to any jewellery collection, the Allure Necklace showcases a vivid lab-grown pear diamond, elegantly framed within a sleek bezel setting.",
+    "description": "A refined addition to any jewellery collection, the Allure Necklace showcases a vivid lab-grown pear diamond, elegantly framed within a sleek bezel setting. Available in two considered sizes, it offers effortless sophistication for every occasion. Pictured here is our 5mm (0.50ct) pendant.\n\nMetals: 18k Yellow Gold, 18k Rose Gold, 18k White Gold.\n\nAll lab-grown diamonds used in our Fine Jewellery pieces are guaranteed to be D - E colour, VS1+ clarity, and Very Good to Excellent in cut. Your completed piece will not be accompanied by certification.\n\nPlease note, all necklaces are made from solid precious metals. This piece is crafted with a 1.2mm chain width.",
+    "images": [
+      "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/yellow.jpg",
+      "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/white.jpg",
+      "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/rose.jpg"
+    ],
+    "basePriceGBP": 1299,
+    "metals": [
+      {
+        "name": "18k Yellow Gold",
+        "hex": "#FFD700",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/goldswatch.png"
+      },
+      {
+        "name": "18k Rose Gold",
+        "hex": "#B76E79",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/rosegoldswatch.png"
+      },
+      {
+        "name": "18k White Gold",
+        "hex": "#FAF9F6",
+        "priceDeltaGBP": 0,
+        "imageUrl": "/icons/swatches/whitegoldswatch.png"
+      }
+    ],
+    "origins": [
+      {
+        "label": "Natural",
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "Lab Grown",
+        "priceDeltaGBP": 0
+      }
+    ],
+    "carats": [
+      {
+        "label": "0.5ct",
+        "carat": 0.5,
+        "priceDeltaGBP": 0
+      },
+      {
+        "label": "1ct",
+        "carat": 1,
+        "priceDeltaGBP": 500
+      }
+    ],
+    "sizes": [
+      "16\"",
+      "18\""
+    ],
+    "qualityBanner": "D–E colour • VS1+ clarity • Very Good to Excellent cut",
+    "collections": [
+      "necklaces",
+      "signature-collection",
+      "pear",
+      "allure-necklace"
+    ],
+    "shape": "pear",
+    "styles": [
+      "necklaces"
+    ],
+    "galleryByMetal": {
+      "18k Yellow Gold": [
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/yellow.jpg",
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/yellow-side.jpg"
+      ],
+      "18k Rose Gold": [
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/rose.jpg",
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/rose-side.jpg"
+      ],
+      "18k White Gold": [
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/white.jpg",
+        "/products/tmc-import/the-vera-necklace-pear-bezel-pendant/white-side.jpg"
+      ]
+    },
+    "seoTitle": "Allure Necklace | ELYSIUM",
+    "seoDescription": "A refined addition to any jewellery collection, the Allure Necklace showcases a vivid lab-grown pear diamond, elegantly framed within a sleek bezel setting.",
+    "isFeatured": false
   }
 ]

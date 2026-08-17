@@ -7,7 +7,52 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "crown-earrings": {
+    "name": "Crown",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "paperclip-bracelet": {
+    "name": "Paperclip",
+    "basePriceGBP": 1739,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
+  },
+  "paperclip-necklace": {
+    "name": "Paperclip Necklace",
+    "basePriceGBP": 3399,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
+  },
+  "classic-tennis": {
+    "name": "Classic Tennis",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "2tcw": 0,
+      "3tcw": 400,
+      "4tcw": 900,
+      "5tcw": 1200,
+      "7tcw": 1700
+    },
+    "baseCaratLabel": "2tcw"
+  },
+  "crown-necklace": {
+    "name": "Crown Necklace",
+    "basePriceGBP": 999,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 300
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "elara": {
     "name": "Elara",
@@ -17,7 +62,28 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "essence-earrings": {
+    "name": "Essence",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "essence-necklace": {
+    "name": "Essence Necklace",
+    "basePriceGBP": 999,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 300
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "luna": {
     "name": "Luna",
@@ -27,7 +93,37 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "bezel-tennis": {
+    "name": "Bezel Tennis",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "2tcw": 0,
+      "4tcw": 900
+    },
+    "baseCaratLabel": "2tcw"
+  },
+  "icon-earrings": {
+    "name": "Icon",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "icon-necklace": {
+    "name": "Icon Necklace",
+    "basePriceGBP": 999,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 300
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "seraphina": {
     "name": "Seraphina",
@@ -37,7 +133,28 @@
       "1.5ct": 600,
       "2ct": 1250,
       "2.5ct": 1750
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "heirloom-earrings": {
+    "name": "Heirloom",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "heirloom-necklace": {
+    "name": "Heirloom Necklace",
+    "basePriceGBP": 999,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 300
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "ophellia": {
     "name": "Ophellia",
@@ -47,7 +164,37 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "eternal-necklace": {
+    "name": "Eternal Necklace",
+    "basePriceGBP": 999,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 300
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "eternal-earrings": {
+    "name": "Eternal",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "legacy-necklace": {
+    "name": "Legacy Necklace",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "amarante": {
     "name": "Amarante",
@@ -57,7 +204,28 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "legacy-earrings": {
+    "name": "Legacy",
+    "basePriceGBP": 1099,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500,
+      "1.5ct": 1000,
+      "2ct": 1500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "pure-necklace": {
+    "name": "Pure",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "anastasia": {
     "name": "Anastasia",
@@ -67,7 +235,35 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "pure-earrings": {
+    "name": "Pure",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "refined-necklace": {
+    "name": "Refined",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "refined-earrings": {
+    "name": "Refined",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "noemi": {
     "name": "Noémi",
@@ -77,7 +273,26 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "timeless-necklace": {
+    "name": "Timeless",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "timeless-earrings": {
+    "name": "Timeless",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "isolde": {
     "name": "Isolde",
@@ -87,7 +302,44 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "union-earrings": {
+    "name": "Union",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "union-necklace": {
+    "name": "Union",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "allure-earrings": {
+    "name": "Allure",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "allure-necklace": {
+    "name": "Allure",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
   },
   "nala": {
     "name": "Nala",
@@ -97,7 +349,32 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "radiance-earrings": {
+    "name": "Radiance",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "radiance-necklace": {
+    "name": "Radiance",
+    "basePriceGBP": 1299,
+    "caratDeltas": {
+      "0.5ct": 0,
+      "1ct": 500
+    },
+    "baseCaratLabel": "0.5ct"
+  },
+  "beloved": {
+    "name": "Beloved",
+    "basePriceGBP": 999,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
   },
   "elodie": {
     "name": "Elodie",
@@ -107,7 +384,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "callista": {
     "name": "Callista",
@@ -117,7 +395,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "ovalis": {
     "name": "Ovalis",
@@ -127,7 +406,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1550
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "eterna": {
     "name": "Eterna",
@@ -137,7 +417,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1550
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "nova": {
     "name": "Nova",
@@ -147,7 +428,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "unity": {
     "name": "Unity",
@@ -157,7 +439,8 @@
       "1.5ct": 500,
       "2ct": 1100,
       "2.5ct": 1600
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "aura": {
     "name": "Aura",
@@ -167,7 +450,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "felicity": {
     "name": "Felicity",
@@ -177,7 +461,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1550
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "leontine": {
     "name": "Leontine",
@@ -187,7 +472,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "odessa": {
     "name": "Odessa",
@@ -197,7 +483,8 @@
       "1.5ct": 500,
       "2ct": 1100,
       "2.5ct": 1600
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "lumea": {
     "name": "Lumea",
@@ -207,7 +494,8 @@
       "1.5ct": 900,
       "2ct": 1560,
       "2.5ct": 2460
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "vow-veil": {
     "name": "Vow & Veil",
@@ -217,7 +505,8 @@
       "1.5ct": 900,
       "2ct": 1560,
       "2.5ct": 2460
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "aveline": {
     "name": "Aveline",
@@ -227,7 +516,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "clarion": {
     "name": "Clarion",
@@ -237,7 +527,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "orabella": {
     "name": "Orabella",
@@ -247,7 +538,8 @@
       "1.5ct": 900,
       "2ct": 1560,
       "2.5ct": 2460
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "arabella": {
     "name": "Arabella",
@@ -257,7 +549,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "evermore": {
     "name": "Evermore",
@@ -267,7 +560,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "lumina": {
     "name": "Lumina",
@@ -277,7 +571,8 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "vivienne": {
     "name": "Vivienne",
@@ -287,7 +582,8 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
   },
   "sorella": {
     "name": "Sorella",
@@ -297,6 +593,156 @@
       "1.5ct": 500,
       "2ct": 1000,
       "2.5ct": 1500
-    }
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "ethereal": {
+    "name": "Ethereal",
+    "basePriceGBP": 3199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1100,
+      "2.5ct": 1600
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "verity": {
+    "name": "Verity",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "odette": {
+    "name": "Odette",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "maison": {
+    "name": "Maison",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "opaline": {
+    "name": "Opaline",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "amoret": {
+    "name": "Amoret",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "isadora": {
+    "name": "Isadora",
+    "basePriceGBP": 2160,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "cleo": {
+    "name": "Cleo",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "essence": {
+    "name": "Essence",
+    "basePriceGBP": 2049,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "splendour": {
+    "name": "Splendour",
+    "basePriceGBP": 2449,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "paperclip-chain": {
+    "name": "Paperclip Necklace",
+    "basePriceGBP": 3399,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
+  },
+  "classic-4-claw-tennis-bracelet": {
+    "name": "Classic Tennis",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "2tcw": 0,
+      "3tcw": 400,
+      "4tcw": 900,
+      "5tcw": 1200,
+      "7tcw": 1700
+    },
+    "baseCaratLabel": "2tcw"
+  },
+  "bezel-tennis-bracelet": {
+    "name": "Bezel Tennis",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "2tcw": 0,
+      "4tcw": 900
+    },
+    "baseCaratLabel": "2tcw"
+  },
+  "beloved-hoops": {
+    "name": "Beloved",
+    "basePriceGBP": 999,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
+  },
+  "beloved-earrings": {
+    "name": "Beloved",
+    "basePriceGBP": 999,
+    "caratDeltas": {},
+    "baseCaratLabel": ""
   }
 }

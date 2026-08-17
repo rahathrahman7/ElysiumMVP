@@ -8,6 +8,7 @@ type Ring = {
   suggested: string;
   category: string;
   tmcPriceAud: string;
+  isNew?: boolean;
   images: Partial<Record<"yellow" | "white" | "rose", string>>;
 };
 
@@ -81,7 +82,7 @@ export default function ReviewClient() {
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [cat, setCat] = useState<"all" | "Engagement" | "Wedding" | "Fine Jewellery">("all");
   const [fjSub, setFjSub] = useState<"all" | "Earrings" | "Necklaces" | "Bracelets" | "Fine Rings">("all");
-  const [keepFilter, setKeepFilter] = useState<"all" | "kept">("all");
+  const [keepFilter, setKeepFilter] = useState<"all" | "kept" | "new">("all");
   const [q, setQ] = useState("");
 
   function sectionOf(category: string): "Engagement" | "Wedding" | "Fine Jewellery" {
@@ -192,7 +193,8 @@ export default function ReviewClient() {
     const eng = rings.filter((r) => r.category.includes("Engagement")).length;
     const wed = rings.filter((r) => r.category.includes("Wedding")).length;
     const fj = rings.filter((r) => r.category.includes("Fine Jewellery")).length;
-    return { total: rings.length, eng, wed, fj };
+    const fresh = rings.filter((r) => r.isNew).length;
+    return { total: rings.length, eng, wed, fj, fresh };
   }, [rings]);
 
   const visible = useMemo(() => {
@@ -203,6 +205,7 @@ export default function ReviewClient() {
       if (cat === "Fine Jewellery" && !ring.category.includes("Fine Jewellery")) return false;
       if (cat === "Fine Jewellery" && fjSub !== "all" && !ring.category.includes(fjSub)) return false;
       if (keepFilter === "kept" && !getReview(ring.handle).keep) return false;
+      if (keepFilter === "new" && !ring.isNew) return false;
       if (query) {
         const hay = `${ring.tmcName} ${ring.suggested}`.toLowerCase();
         if (!hay.includes(query)) return false;
@@ -331,7 +334,8 @@ export default function ReviewClient() {
 
         <p className="tr-intro">
           Browse rings and fine jewellery below. Use the category tabs — tap{" "}
-          <strong>Fine Jewellery</strong> for earrings, necklaces, bracelets and fine rings. Tap{" "}
+          <strong>Fine Jewellery</strong> for earrings, necklaces, bracelets and fine rings, or{" "}
+          <strong>New drop</strong> for the August TMC additions. Tap{" "}
           <strong>Add to ELYSIUM</strong> on pieces you want listed, then rename, price, note, and choose
           options. Everything saves automatically.
         </p>
@@ -371,6 +375,11 @@ export default function ReviewClient() {
             <button className={keepFilter === "kept" ? "active" : ""} onClick={() => setKeepFilter("kept")}>
               Added only
             </button>
+            {stats.fresh > 0 && (
+              <button className={keepFilter === "new" ? "active" : ""} onClick={() => setKeepFilter("new")}>
+                New drop <em>{stats.fresh}</em>
+              </button>
+            )}
           </div>
           <button className="tr-btn" onClick={exportCsv}>
             Export CSV
@@ -432,7 +441,10 @@ export default function ReviewClient() {
               return (
                 <div key={ring.handle} className={`tr-card${r.keep ? " kept" : ""}`}>
                   <div className="tr-imgwrap">
-                    <div className="tr-cat">{ring.category}</div>
+                    <div className="tr-cat">
+                      {ring.category}
+                      {ring.isNew ? <span className="tr-new">New</span> : null}
+                    </div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img loading="lazy" src={ring.images[active]} alt={ring.tmcName} />
                     <div className="tr-metals">
@@ -585,7 +597,8 @@ const CSS = `
 .tr-card.kept{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),var(--shadow);}
 .tr-imgwrap{position:relative;aspect-ratio:1/1;background:#efe7db;}
 .tr-imgwrap img{width:100%;height:100%;object-fit:contain;padding:12px;}
-.tr-cat{position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.9);color:var(--brown);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;}
+.tr-cat{position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.9);color:var(--brown);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;display:flex;align-items:center;gap:6px;}
+.tr-new{background:var(--gold);color:#3d2a17;font-size:9px;letter-spacing:0.12em;padding:2px 6px;border-radius:999px;font-weight:700;}
 .tr-metals{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;background:rgba(255,255,255,0.85);padding:6px 8px;border-radius:999px;}
 .tr-dot{width:20px;height:20px;border-radius:50%;border:2px solid #fff;cursor:pointer;box-shadow:0 0 0 1px var(--line);padding:0;}
 .tr-dot.active{box-shadow:0 0 0 2px var(--brown);}

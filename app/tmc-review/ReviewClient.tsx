@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  type ClientAction,
+  unresolvedClientActions,
+} from "@/lib/tmc/client-actions";
 
 type Ring = {
   handle: string;
@@ -75,17 +79,10 @@ function emptyReview(): Review {
   return { keep: false, displayName: "", priceGbp: "", notes: "", preferredMetal: "" };
 }
 
-// Pieces held for client follow-up (not yet on Lab Prices / site). Clear when resolved.
-const CLIENT_ACTION_HANDLES = new Set(["the-athaliah-ring-oval-and-marquise-curved-toi-et-moi"]);
-
-function needsClientPrice(priceGbp: string) {
-  const p = (priceGbp || "").trim().toLowerCase();
-  return !p || p === "check spreadsheet" || p === "tbc" || p === "tba" || p === "n/a" || p === "na";
-}
-
 export default function ReviewClient() {
   const [rings, setRings] = useState<Ring[]>([]);
   const [reviews, setReviews] = useState<Record<string, Review>>({});
+  const [clientActions, setClientActions] = useState<ClientAction[]>([]);
   const [loading, setLoading] = useState(true);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [cat, setCat] = useState<"all" | "Engagement" | "Wedding" | "Fine Jewellery">("all");
@@ -111,6 +108,14 @@ export default function ReviewClient() {
         const catalog: Ring[] = catalogRes.ok ? await catalogRes.json() : [];
         if (!active) return;
         setRings(Array.isArray(catalog) ? catalog : []);
+
+        try {
+          const actionsRes = await fetch("/data/tmc-client-actions.json");
+          const actions: ClientAction[] = actionsRes.ok ? await actionsRes.json() : [];
+          if (active) setClientActions(Array.isArray(actions) ? actions : []);
+        } catch {
+          if (active) setClientActions([]);
+        }
 
         try {
           const reviewRes = await fetch("/api/tmc-review");
@@ -202,33 +207,25 @@ export default function ReviewClient() {
 
   const keptCount = useMemo(() => Object.values(reviews).filter((r) => r?.keep).length, [reviews]);
 
+  const pendingActions = useMemo(
+    () => unresolvedClientActions(clientActions, reviews),
+    [clientActions, reviews]
+  );
+
   const actionNeeded = useMemo(() => {
-    const items: Array<{
-      handle: string;
-      name: string;
-      price: string;
-      tmcName: string;
-      category: string;
-      image: string;
-    }> = [];
-    for (const handle of CLIENT_ACTION_HANDLES) {
-      const r = reviews[handle];
-      if (!r?.keep) continue;
-      if (!needsClientPrice(r.priceGbp || "")) continue;
-      const ring = rings.find((x) => x.handle === handle);
-      const metal = (r.preferredMetal as keyof Ring["images"]) || (ring ? firstMetal(ring) : "yellow");
+    return pendingActions.map((action) => {
+      const r = reviews[action.handle];
+      const ring = rings.find((x) => x.handle === action.handle);
+      const metal = (r?.preferredMetal as keyof Ring["images"]) || (ring ? firstMetal(ring) : "yellow");
       const image = ring?.images[metal] || ring?.images.yellow || ring?.images.white || ring?.images.rose || "";
-      items.push({
-        handle,
-        name: (r.displayName || ring?.suggested || ring?.tmcName || handle).trim(),
-        price: (r.priceGbp || "").trim(),
+      return {
+        ...action,
+        name: (r?.displayName || ring?.suggested || ring?.tmcName || action.handle).trim(),
         tmcName: ring?.tmcName || "",
-        category: ring?.category || "",
         image,
-      });
-    }
-    return items;
-  }, [reviews, rings]);
+      };
+    });
+  }, [pendingActions, reviews, rings]);
 
   function jumpToCard(handle: string) {
     const el = document.getElementById(`tr-card-${handle}`);
@@ -385,37 +382,35 @@ export default function ReviewClient() {
         </p>
 
         {actionNeeded.length > 0 && (
-          <aside className="tr-alert" role="status">
-            <div className="tr-alert-label">Action needed</div>
-            <p>
-              Please enter a GBP price for the piece(s) below so we can add them to ELYSIUM. Update the{" "}
-              <strong>Price (£)</strong> field on the card — changes save automatically.
-            </p>
-            <div className="tr-alert-items">
+          <aside className="tr-attn" role="status" aria-live="polite">
+            <div className="tr-attn-head">
+              <span className="tr-attn-badge">{actionNeeded.length}</span>
+              <div>
+                <strong>Your attention needed</strong>
+                <p>Update the highlighted piece{actionNeeded.length > 1 ? "s" : ""} below — changes save automatically.</p>
+              </div>
+            </div>
+            <div className="tr-attn-list">
               {actionNeeded.map((item) => (
                 <button
                   key={item.handle}
                   type="button"
-                  className="tr-alert-item"
+                  className="tr-attn-item"
                   onClick={() => jumpToCard(item.handle)}
                 >
-                  <div className="tr-alert-thumb">
+                  <div className="tr-attn-thumb">
                     {item.image ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.image} alt={item.name} />
-                    ) : (
-                      <span>No image</span>
-                    )}
+                      <img src={item.image} alt="" />
+                    ) : null}
                   </div>
-                  <div className="tr-alert-meta">
-                    <strong>{item.name}</strong>
-                    {item.tmcName ? <span className="tr-alert-tmc">{item.tmcName}</span> : null}
-                    <span className="tr-alert-price">
-                      Price: {item.price || "not set yet"}
-                      {item.category ? ` · ${item.category}` : ""}
-                    </span>
-                    <span className="tr-alert-jump">Tap to jump to this piece →</span>
+                  <div className="tr-attn-copy">
+                    <span className="tr-attn-name">{item.name}</span>
+                    <span className="tr-attn-reason">{item.reason}</span>
                   </div>
+                  <span className="tr-attn-arrow" aria-hidden="true">
+                    →
+                  </span>
                 </button>
               ))}
             </div>
@@ -515,6 +510,8 @@ export default function ReviewClient() {
               }
               const ring = item.ring;
               const r = getReview(ring.handle);
+              const pendingAction = pendingActions.find((a) => a.handle === ring.handle);
+              const needsAction = Boolean(pendingAction);
               const active =
                 r.preferredMetal && ring.images[r.preferredMetal as keyof Ring["images"]]
                   ? (r.preferredMetal as "yellow" | "white" | "rose")
@@ -524,11 +521,7 @@ export default function ReviewClient() {
                 <div
                   key={ring.handle}
                   id={`tr-card-${ring.handle}`}
-                  className={`tr-card${r.keep ? " kept" : ""}${
-                    CLIENT_ACTION_HANDLES.has(ring.handle) && needsClientPrice(r.priceGbp || "")
-                      ? " needs-action"
-                      : ""
-                  }`}
+                  className={`tr-card${r.keep ? " kept" : ""}${needsAction ? " needs-action" : ""}`}
                 >
                   <div className="tr-imgwrap">
                     <div className="tr-cat">
@@ -550,9 +543,6 @@ export default function ReviewClient() {
                   </div>
                   <div className="tr-body">
                     <div className="tr-tmc">{ring.tmcName}</div>
-                    {CLIENT_ACTION_HANDLES.has(ring.handle) && needsClientPrice(r.priceGbp || "") && (
-                      <div className="tr-action-note">Action needed — please add a GBP price</div>
-                    )}
                     <div className="tr-keeprow">
                       <button
                         className={`tr-keep${r.keep ? " on" : ""}`}
@@ -575,21 +565,28 @@ export default function ReviewClient() {
                           />
                         </div>
                         <div className="tr-field">
-                          <label>Price (GBP)</label>
-                          <div className="tr-price">
+                          <label>
+                            Price (GBP)
+                            {pendingAction?.type === "price" ? " — required" : ""}
+                          </label>
+                          <div className={`tr-price${pendingAction?.type === "price" ? " highlight" : ""}`}>
                             <span>£</span>
                             <input
                               type="text"
                               inputMode="decimal"
-                              placeholder="e.g. 1450"
+                              placeholder={pendingAction?.type === "price" ? "Enter price" : "e.g. 1450"}
                               value={r.priceGbp}
                               onChange={(e) => update(ring.handle, { priceGbp: e.target.value })}
                             />
                           </div>
                         </div>
                         <div className="tr-field">
-                          <label>Notes</label>
+                          <label>
+                            Notes
+                            {pendingAction?.type === "note" ? " — required" : ""}
+                          </label>
                           <textarea
+                            className={pendingAction?.type === "note" ? "highlight" : ""}
                             placeholder="Any notes for this piece…"
                             value={r.notes}
                             onChange={(e) => update(ring.handle, { notes: e.target.value })}
@@ -665,22 +662,20 @@ const CSS = `
 .tr-pill{background:var(--brown);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;}
 .tr-intro{margin:12px 0 0;font-size:13px;color:var(--muted);max-width:900px;line-height:1.5;}
 .tr-intro strong{color:var(--brown);}
-.tr-alert{margin-top:14px;max-width:900px;padding:14px 16px;border:1px solid #d4a017;border-left:4px solid #b8860b;background:#fff8e7;border-radius:10px;color:var(--ink);}
-.tr-alert-label{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#8a5a00;margin-bottom:6px;}
-.tr-alert p{margin:0;font-size:13px;line-height:1.5;color:#5c4a32;}
-.tr-alert p strong{color:var(--brown);}
-.tr-alert-items{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
-.tr-alert-item{display:flex;align-items:center;gap:14px;width:100%;padding:10px 12px;border:1px solid #e8d49a;border-radius:12px;background:#fff;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s;}
-.tr-alert-item:hover{border-color:#b8860b;box-shadow:0 2px 10px rgba(184,134,11,0.15);}
-.tr-alert-thumb{flex:0 0 88px;width:88px;height:88px;border-radius:10px;background:#efe7db;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.tr-alert-thumb img{width:100%;height:100%;object-fit:contain;padding:6px;}
-.tr-alert-thumb span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
-.tr-alert-meta{display:flex;flex-direction:column;gap:3px;min-width:0;}
-.tr-alert-meta strong{font-size:15px;color:var(--brown);}
-.tr-alert-tmc{font-size:12px;color:var(--muted);line-height:1.35;}
-.tr-alert-price{font-size:12px;color:#5c4a32;}
-.tr-alert-jump{font-size:11px;font-weight:600;color:#8a5a00;margin-top:2px;}
-.tr-action-note{background:#fff8e7;border:1px solid #d4a017;color:#8a5a00;font-size:12px;font-weight:600;padding:8px 10px;border-radius:8px;text-align:center;}
+.tr-attn{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow);}
+.tr-attn-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
+.tr-attn-badge{flex:0 0 28px;height:28px;border-radius:999px;background:#b8860b;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.tr-attn-head strong{display:block;font-size:14px;color:var(--brown);letter-spacing:0.02em;}
+.tr-attn-head p{margin:2px 0 0;font-size:12px;line-height:1.45;color:var(--muted);}
+.tr-attn-list{display:flex;flex-direction:column;gap:8px;}
+.tr-attn-item{display:flex;align-items:center;gap:12px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fdfbf8;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
+.tr-attn-item:hover{border-color:#c8a24a;background:#fff;}
+.tr-attn-thumb{flex:0 0 56px;width:56px;height:56px;border-radius:8px;background:#efe7db;overflow:hidden;}
+.tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:4px;}
+.tr-attn-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+.tr-attn-name{font-size:14px;font-weight:600;color:var(--brown);}
+.tr-attn-reason{font-size:12px;color:var(--muted);line-height:1.35;}
+.tr-attn-arrow{flex:0 0 auto;color:var(--muted);font-size:16px;}
 .tr-toolbar{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;align-items:center;}
 .tr-toolbar input[type=search]{flex:1;min-width:220px;padding:11px 16px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
 .tr-seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
@@ -704,9 +699,9 @@ const CSS = `
 .tr-section button{margin-left:auto;border:0;background:transparent;color:var(--brown);font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;}
 .tr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;}
 .tr-card.kept{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),var(--shadow);}
-.tr-card.needs-action,.tr-card.kept.needs-action{border-color:#d4a017;box-shadow:0 0 0 2px #d4a017,var(--shadow);}
+.tr-card.needs-action,.tr-card.kept.needs-action{border-color:#c8a24a;box-shadow:0 0 0 2px #c8a24a,var(--shadow);}
 .tr-card.tr-flash{animation:trFlash 1.4s ease;}
-@keyframes trFlash{0%,100%{box-shadow:0 0 0 2px #d4a017,var(--shadow);}40%{box-shadow:0 0 0 4px #f0c14b,0 0 0 8px rgba(212,160,23,0.25);}}
+@keyframes trFlash{0%,100%{box-shadow:0 0 0 2px #c8a24a,var(--shadow);}40%{box-shadow:0 0 0 4px #e8c66a,0 0 0 8px rgba(200,162,74,0.2);}}
 .tr-imgwrap{position:relative;aspect-ratio:1/1;background:#efe7db;}
 .tr-imgwrap img{width:100%;height:100%;object-fit:contain;padding:12px;}
 .tr-cat{position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.9);color:var(--brown);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;display:flex;align-items:center;gap:6px;}
@@ -725,6 +720,7 @@ const CSS = `
 .tr-ref{font-size:11px;color:var(--muted);white-space:nowrap;}
 .tr-field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:4px;}
 .tr-field input,.tr-field textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-family:inherit;background:#fdfbf8;color:var(--ink);}
+.tr-field textarea.highlight,.tr-price.highlight input{border-color:#c8a24a;background:#fffdf8;}
 .tr-field textarea{resize:vertical;min-height:46px;}
 .tr-price{position:relative;}
 .tr-price span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;}

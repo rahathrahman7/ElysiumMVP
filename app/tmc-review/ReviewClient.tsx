@@ -220,7 +220,7 @@ export default function ReviewClient() {
       const image = ring?.images[metal] || ring?.images.yellow || ring?.images.white || ring?.images.rose || "";
       return {
         ...action,
-        name: (r?.displayName || ring?.suggested || ring?.tmcName || action.handle).trim(),
+        name: (action.label || r?.displayName || ring?.suggested || ring?.tmcName || action.handle).trim(),
         tmcName: ring?.tmcName || "",
         image,
       };
@@ -579,11 +579,21 @@ export default function ReviewClient() {
                         <div className="tr-field">
                           <label>
                             Notes
-                            {pendingAction?.type === "note" ? " — required" : ""}
+                            {pendingAction?.type === "note" || pendingAction?.type === "confirm"
+                              ? " — reply here"
+                              : ""}
                           </label>
                           <textarea
-                            className={pendingAction?.type === "note" ? "highlight" : ""}
-                            placeholder="Any notes for this piece…"
+                            className={
+                              pendingAction?.type === "note" || pendingAction?.type === "confirm"
+                                ? "highlight"
+                                : ""
+                            }
+                            placeholder={
+                              pendingAction?.type === "confirm"
+                                ? "Reply here — add Confirmed or your answer…"
+                                : "Any notes for this piece…"
+                            }
                             value={r.notes}
                             onChange={(e) => update(ring.handle, { notes: e.target.value })}
                           />

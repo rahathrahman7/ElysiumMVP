@@ -4,6 +4,7 @@ export type ClientAction = {
   handle: string;
   type: ClientActionType;
   reason: string;
+  label?: string;
 };
 
 export type ClientReview = {
@@ -31,8 +32,10 @@ export function isResolvedClientAction(action: ClientAction, review: ClientRevie
     }
     case "note":
       return Boolean((review.notes || "").trim());
-    case "confirm":
-      return false;
+    case "confirm": {
+      const notes = (review.notes || "").trim().toLowerCase();
+      return /\bconfirmed\b/.test(notes) || /^yes\b/.test(notes);
+    }
     default:
       return true;
   }

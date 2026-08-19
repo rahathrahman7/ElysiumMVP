@@ -230,7 +230,7 @@ export default function ReviewClient() {
   function jumpToCard(handle: string) {
     const el = document.getElementById(`tr-card-${handle}`);
     if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
     el.classList.add("tr-flash");
     window.setTimeout(() => el.classList.remove("tr-flash"), 1600);
   }
@@ -380,43 +380,9 @@ export default function ReviewClient() {
           <strong>Add to ELYSIUM</strong> on pieces you want listed, then rename, price, note, and choose
           options. Everything saves automatically.
         </p>
+      </header>
 
-        {actionNeeded.length > 0 && (
-          <aside className="tr-attn" role="status" aria-live="polite">
-            <div className="tr-attn-head">
-              <span className="tr-attn-badge">{actionNeeded.length}</span>
-              <div>
-                <strong>Your attention needed</strong>
-                <p>Update the highlighted piece{actionNeeded.length > 1 ? "s" : ""} below — changes save automatically.</p>
-              </div>
-            </div>
-            <div className="tr-attn-list">
-              {actionNeeded.map((item) => (
-                <button
-                  key={item.handle}
-                  type="button"
-                  className="tr-attn-item"
-                  onClick={() => jumpToCard(item.handle)}
-                >
-                  <div className="tr-attn-thumb">
-                    {item.image ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.image} alt="" />
-                    ) : null}
-                  </div>
-                  <div className="tr-attn-copy">
-                    <span className="tr-attn-name">{item.name}</span>
-                    <span className="tr-attn-reason">{item.reason}</span>
-                  </div>
-                  <span className="tr-attn-arrow" aria-hidden="true">
-                    →
-                  </span>
-                </button>
-              ))}
-            </div>
-          </aside>
-        )}
-
+      <div className="tr-sticky-bar">
         <div className="tr-toolbar">
           <input
             type="search"
@@ -485,7 +451,37 @@ export default function ReviewClient() {
             ))}
           </div>
         )}
-      </header>
+      </div>
+
+      {actionNeeded.length > 0 && (
+        <div className="tr-attn-wrap">
+          <aside className="tr-attn" role="status" aria-live="polite">
+            {actionNeeded.map((item) => (
+              <button
+                key={item.handle}
+                type="button"
+                className="tr-attn-item"
+                onClick={() => jumpToCard(item.handle)}
+              >
+                <span className="tr-attn-badge" aria-hidden="true">
+                  !
+                </span>
+                <div className="tr-attn-thumb">
+                  {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={item.image} alt="" />
+                  ) : null}
+                </div>
+                <span className="tr-attn-name">{item.name}</span>
+                <span className="tr-attn-reason">{item.reason}</span>
+                <span className="tr-attn-arrow" aria-hidden="true">
+                  →
+                </span>
+              </button>
+            ))}
+          </aside>
+        </div>
+      )}
 
       <main className="tr-main">
         {loading ? (
@@ -651,53 +647,50 @@ const CSS = `
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 .tmc-review *{box-sizing:border-box;}
-.tr-header{position:sticky;top:0;z-index:50;background:rgba(246,241,234,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:16px 24px;}
+.tr-header{padding:16px 24px 12px;border-bottom:1px solid var(--line);}
+.tr-sticky-bar{position:sticky;top:0;z-index:50;background:rgba(246,241,234,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 24px 12px;}
 .tr-header-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.tr-brand{font-size:26px;font-weight:600;letter-spacing:0.14em;color:var(--brown);text-transform:uppercase;font-family:var(--font-cormorant),Georgia,serif;}
+.tr-brand{font-size:22px;font-weight:600;letter-spacing:0.14em;color:var(--brown);text-transform:uppercase;font-family:var(--font-cormorant),Georgia,serif;}
 .tr-brand small{display:block;font-size:10px;letter-spacing:0.3em;color:var(--muted);margin-top:2px;font-family:inherit;}
-.tr-stats{display:flex;gap:18px;margin-left:auto;align-items:center;flex-wrap:wrap;}
+.tr-stats{display:flex;gap:14px;margin-left:auto;align-items:center;flex-wrap:wrap;}
 .tr-stat{text-align:center;}
-.tr-stat .n{font-size:22px;font-weight:700;color:var(--brown);}
+.tr-stat .n{font-size:18px;font-weight:700;color:var(--brown);}
 .tr-stat .l{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);}
-.tr-pill{background:var(--brown);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;}
-.tr-intro{margin:12px 0 0;font-size:13px;color:var(--muted);max-width:900px;line-height:1.5;}
+.tr-pill{background:var(--brown);color:#fff;padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
+.tr-intro{margin:10px 0 0;font-size:13px;color:var(--muted);line-height:1.45;max-width:900px;}
 .tr-intro strong{color:var(--brown);}
-.tr-attn{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow);}
-.tr-attn-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
-.tr-attn-badge{flex:0 0 28px;height:28px;border-radius:999px;background:#b8860b;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.tr-attn-head strong{display:block;font-size:14px;color:var(--brown);letter-spacing:0.02em;}
-.tr-attn-head p{margin:2px 0 0;font-size:12px;line-height:1.45;color:var(--muted);}
-.tr-attn-list{display:flex;flex-direction:column;gap:8px;}
-.tr-attn-item{display:flex;align-items:center;gap:12px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fdfbf8;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
-.tr-attn-item:hover{border-color:#c8a24a;background:#fff;}
-.tr-attn-thumb{flex:0 0 56px;width:56px;height:56px;border-radius:8px;background:#efe7db;overflow:hidden;}
-.tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:4px;}
-.tr-attn-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
-.tr-attn-name{font-size:14px;font-weight:600;color:var(--brown);}
-.tr-attn-reason{font-size:12px;color:var(--muted);line-height:1.35;}
-.tr-attn-arrow{flex:0 0 auto;color:var(--muted);font-size:16px;}
-.tr-toolbar{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;align-items:center;}
-.tr-toolbar input[type=search]{flex:1;min-width:220px;padding:11px 16px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
+.tr-attn-wrap{max-width:1500px;margin:0 auto;padding:10px 24px 0;}
+.tr-attn{display:flex;flex-direction:column;gap:6px;}
+.tr-attn-item{display:flex;align-items:center;gap:10px;width:100%;padding:6px 10px;border:1px solid #e8d49a;border-radius:999px;background:#fff;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
+.tr-attn-item:hover{border-color:#c8a24a;background:#fffdf8;}
+.tr-attn-badge{flex:0 0 20px;width:20px;height:20px;border-radius:999px;background:#b8860b;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.tr-attn-thumb{flex:0 0 36px;width:36px;height:36px;border-radius:999px;background:#efe7db;overflow:hidden;}
+.tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:3px;}
+.tr-attn-name{flex:0 0 auto;font-size:13px;font-weight:600;color:var(--brown);white-space:nowrap;}
+.tr-attn-reason{flex:1;min-width:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tr-attn-arrow{flex:0 0 auto;color:var(--muted);font-size:14px;padding-right:2px;}
+.tr-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.tr-toolbar input[type=search]{flex:1;min-width:220px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
 .tr-seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
-.tr-seg button{border:0;background:transparent;padding:10px 14px;font-size:13px;cursor:pointer;color:var(--ink);white-space:nowrap;}
+.tr-seg button{border:0;background:transparent;padding:9px 12px;font-size:13px;cursor:pointer;color:var(--ink);white-space:nowrap;}
 .tr-seg button em{font-style:normal;opacity:0.65;margin-left:4px;font-size:11px;}
 .tr-seg button.active{background:var(--brown);color:#fff;}
 .tr-seg button.active em{opacity:0.85;}
-.tr-subfilter{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.tr-subfilter{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
 .tr-subfilter button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 14px;border-radius:999px;font-size:12px;cursor:pointer;}
 .tr-subfilter button.active{background:var(--gold);border-color:var(--gold);color:#3d2a17;font-weight:600;}
 .tr-btn{border:1px solid var(--brown);background:var(--brown);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;}
 .tr-save{font-size:12px;color:var(--muted);}
 .tr-save-saved{color:#2e7d32;}
 .tr-save-error{color:#c0392b;}
-.tr-main{padding:24px;max-width:1500px;margin:0 auto;}
+.tr-main{padding:16px 24px 24px;max-width:1500px;margin:0 auto;}
 .tr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-items:start;}
 .tr-section{grid-column:1 / -1;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:18px 4px 4px;border-top:1px solid var(--line);margin-top:8px;}
 .tr-section:first-child{border-top:0;margin-top:0;padding-top:0;}
 .tr-section h2{margin:0;font-size:18px;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown);font-family:var(--font-cormorant),Georgia,serif;}
 .tr-section span{font-size:12px;color:var(--muted);}
 .tr-section button{margin-left:auto;border:0;background:transparent;color:var(--brown);font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;}
-.tr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;}
+.tr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;scroll-margin-top:88px;}
 .tr-card.kept{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),var(--shadow);}
 .tr-card.needs-action,.tr-card.kept.needs-action{border-color:#c8a24a;box-shadow:0 0 0 2px #c8a24a,var(--shadow);}
 .tr-card.tr-flash{animation:trFlash 1.4s ease;}
@@ -735,5 +728,12 @@ const CSS = `
 .tr-sizes{width:100%;padding:8px 11px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-family:inherit;background:#fff;color:var(--ink);}
 .tr-empty{text-align:center;padding:60px;color:var(--muted);}
 .tr-footer{text-align:center;padding:30px;color:var(--muted);font-size:12px;}
-@media (max-width:640px){.tr-brand{font-size:20px;}.tr-main{padding:14px;}}
+@media (max-width:640px){
+  .tr-brand{font-size:18px;}
+  .tr-main,.tr-attn-wrap,.tr-sticky-bar{padding-left:14px;padding-right:14px;}
+  .tr-header{padding:12px 14px 10px;}
+  .tr-attn-reason{display:none;}
+  .tr-stats{gap:10px;}
+  .tr-stat .n{font-size:16px;}
+}
 `;

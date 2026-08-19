@@ -14,11 +14,37 @@ export type ClientReview = {
   notes?: string;
 };
 
+export const CLIENT_REPLY_PREFIX = "Client reply:";
+export const SPREADSHEET_UPDATED_LABEL = "Spreadsheet updated";
+
 const PLACEHOLDER_PRICES = new Set(["check spreadsheet", "tbc", "tba", "n/a", "na"]);
 
 export function isPlaceholderPrice(priceGbp: string) {
   const p = (priceGbp || "").trim().toLowerCase();
   return !p || PLACEHOLDER_PRICES.has(p);
+}
+
+export function isSpreadsheetUpdated(priceGbp: string) {
+  return (priceGbp || "").trim().toLowerCase() === SPREADSHEET_UPDATED_LABEL.toLowerCase();
+}
+
+export function getClientReply(notes: string) {
+  const match = (notes || "").match(/Client reply:\s*([\s\S]*)$/);
+  return match ? match[1].trim() : "";
+}
+
+export function hasClientReply(notes: string) {
+  return getClientReply(notes).length > 0;
+}
+
+export function appendClientReply(notes: string, reply: string) {
+  const trimmed = reply.trim();
+  const base = (notes || "")
+    .replace(/\n\nClient reply:[\s\S]*$/, "")
+    .replace(/Client reply:[\s\S]*$/, "")
+    .trim();
+  const block = `${CLIENT_REPLY_PREFIX} ${trimmed}`;
+  return base ? `${base}\n\n${block}` : block;
 }
 
 export function isResolvedClientAction(action: ClientAction, review: ClientReview) {
@@ -27,37 +53,22 @@ export function isResolvedClientAction(action: ClientAction, review: ClientRevie
   switch (action.type) {
     case "price": {
       const raw = (review.priceGbp || "").trim();
+      if (isSpreadsheetUpdated(raw)) return true;
       if (isPlaceholderPrice(raw)) return false;
       return /^\d/.test(raw.replace(/[£,\s]/g, ""));
     }
     case "note":
-      return Boolean((review.notes || "").trim());
-    case "confirm": {
-      const notes = (review.notes || "").trim().toLowerCase();
-      return /\bconfirmed\b/.test(notes) || /^yes\b/.test(notes);
-    }
+    case "confirm":
+      return hasClientReply(review.notes || "");
     default:
       return true;
   }
 }
 
-export function clientActionCompletionPatch(
-  action: ClientAction,
-  review: ClientReview
-): Partial<ClientReview> | null {
-  switch (action.type) {
-    case "confirm": {
-      const notes = (review.notes || "").trim();
-      if (/\bconfirmed\b/i.test(notes) || /^yes\b/i.test(notes)) return null;
-      return { notes: notes ? `${notes}\n\nConfirmed.` : "Confirmed." };
-    }
-    case "note":
-    case "price":
-      return null;
-    default:
-      return null;
-  }
-}
+export function unresolvedClientActions(
+  actions: ClientAction[],
+  reviews: Record<string, ClientReview>
+) {
   return actions.filter((action) => {
     const review = reviews[action.handle];
     if (!review?.keep) return false;

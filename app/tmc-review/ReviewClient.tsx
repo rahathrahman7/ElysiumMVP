@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   type ClientAction,
-  clientActionCompletionPatch,
-  isPlaceholderPrice,
+  appendClientReply,
+  getClientReply,
+  isSpreadsheetUpdated,
   unresolvedClientActions,
 } from "@/lib/tmc/client-actions";
 
@@ -92,6 +93,8 @@ export default function ReviewClient() {
   const [keepFilter, setKeepFilter] = useState<"all" | "kept" | "new">("all");
   const [q, setQ] = useState("");
   const [attnOpen, setAttnOpen] = useState(false);
+  const [openActionHandle, setOpenActionHandle] = useState<string | null>(null);
+  const [actionDrafts, setActionDrafts] = useState<Record<string, string>>({});
 
   function sectionOf(category: string): "Engagement" | "Wedding" | "Fine Jewellery" {
     if (category.includes("Fine Jewellery")) return "Fine Jewellery";
@@ -230,30 +233,32 @@ export default function ReviewClient() {
     });
   }, [pendingActions, reviews, rings]);
 
-  function jumpToCard(handle: string) {
-    const el = document.getElementById(`tr-card-${handle}`);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-    el.classList.add("tr-flash");
-    window.setTimeout(() => el.classList.remove("tr-flash"), 1600);
+  function toggleActionReply(handle: string) {
+    setAttnOpen(true);
+    setOpenActionHandle((current) => {
+      const next = current === handle ? null : handle;
+      if (next) {
+        const review = getReview(handle);
+        setActionDrafts((drafts) => ({
+          ...drafts,
+          [handle]: drafts[handle] ?? getClientReply(review.notes || ""),
+        }));
+      }
+      return next;
+    });
   }
 
-  function tickAction(item: ClientAction) {
-    const review = getReview(item.handle);
+  function saveActionReply(handle: string) {
+    const reply = (actionDrafts[handle] || "").trim();
+    if (!reply) return;
+    const review = getReview(handle);
+    update(handle, { notes: appendClientReply(review.notes || "", reply) }, { immediate: true });
+    setOpenActionHandle(null);
+  }
 
-    if (item.type === "price") {
-      const raw = (review.priceGbp || "").trim();
-      const hasPrice = !isPlaceholderPrice(raw) && /^\d/.test(raw.replace(/[£,\s]/g, ""));
-      if (!hasPrice) {
-        setAttnOpen(true);
-        jumpToCard(item.handle);
-        return;
-      }
-      return;
-    }
-
-    const patch = clientActionCompletionPatch(item, review);
-    if (patch) update(item.handle, patch, { immediate: true });
+  function markSpreadsheetUpdated(handle: string, checked: boolean) {
+    if (!checked) return;
+    update(handle, { priceGbp: "Spreadsheet updated" }, { immediate: true });
   }
 
   const stats = useMemo(() => {
@@ -493,33 +498,97 @@ export default function ReviewClient() {
             </button>
             {attnOpen && (
               <ul className="tr-attn-list">
-                {actionNeeded.map((item) => (
-                  <li key={item.handle} className="tr-attn-item">
-                    <label className="tr-attn-check" title="Mark as done">
-                      <input
-                        type="checkbox"
-                        onChange={() => tickAction(item)}
-                        aria-label={`Mark ${item.name} as done`}
-                      />
-                    </label>
-                    <button
-                      type="button"
-                      className="tr-attn-body"
-                      onClick={() => jumpToCard(item.handle)}
+                {actionNeeded.map((item) => {
+                  const review = getReview(item.handle);
+                  const isOpen = openActionHandle === item.handle;
+                  const isPrice = item.type === "price";
+                  return (
+                    <li
+                      key={item.handle}
+                      className={`tr-attn-item${isOpen ? " expanded" : ""}${isPrice ? " price" : ""}`}
                     >
-                      <div className="tr-attn-thumb">
-                        {item.image ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={item.image} alt="" />
-                        ) : null}
+                      <div className="tr-attn-row">
+                        {isPrice ? (
+                          <label className="tr-attn-spreadsheet">
+                            <input
+                              type="checkbox"
+                              checked={isSpreadsheetUpdated(review.priceGbp || "")}
+                              onChange={(e) => markSpreadsheetUpdated(item.handle, e.target.checked)}
+                            />
+                            <span>Spreadsheet updated</span>
+                          </label>
+                        ) : (
+                          <button
+                            type="button"
+                            className="tr-attn-body"
+                            aria-expanded={isOpen}
+                            onClick={() => toggleActionReply(item.handle)}
+                          >
+                            <div className="tr-attn-thumb">
+                              {item.image ? (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img src={item.image} alt="" />
+                              ) : null}
+                            </div>
+                            <span className="tr-attn-copy">
+                              <span className="tr-attn-name">{item.name}</span>
+                              <span className="tr-attn-reason">{item.reason}</span>
+                            </span>
+                            <span className="tr-attn-chevron" aria-hidden="true">
+                              {isOpen ? "▾" : "▸"}
+                            </span>
+                          </button>
+                        )}
+                        {isPrice && (
+                          <div className="tr-attn-price-meta">
+                            <div className="tr-attn-thumb">
+                              {item.image ? (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img src={item.image} alt="" />
+                              ) : null}
+                            </div>
+                            <span className="tr-attn-copy">
+                              <span className="tr-attn-name">{item.name}</span>
+                              <span className="tr-attn-reason">{item.reason}</span>
+                            </span>
+                          </div>
+                        )}
                       </div>
-                      <span className="tr-attn-copy">
-                        <span className="tr-attn-name">{item.name}</span>
-                        <span className="tr-attn-reason">{item.reason}</span>
-                      </span>
-                    </button>
-                  </li>
-                ))}
+                      {!isPrice && isOpen && (
+                        <div className="tr-attn-reply">
+                          <textarea
+                            rows={3}
+                            placeholder="Type your answer here…"
+                            value={actionDrafts[item.handle] ?? ""}
+                            onChange={(e) =>
+                              setActionDrafts((drafts) => ({
+                                ...drafts,
+                                [item.handle]: e.target.value,
+                              }))
+                            }
+                          />
+                          <div className="tr-attn-reply-actions">
+                            <button
+                              type="button"
+                              className="tr-attn-save"
+                              disabled={!(actionDrafts[item.handle] || "").trim()}
+                              onClick={() => saveActionReply(item.handle)}
+                            >
+                              Save to notes
+                            </button>
+                            <button
+                              type="button"
+                              className="tr-attn-cancel"
+                              onClick={() => setOpenActionHandle(null)}
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </aside>
@@ -604,16 +673,13 @@ export default function ReviewClient() {
                           />
                         </div>
                         <div className="tr-field">
-                          <label>
-                            Price (GBP)
-                            {pendingAction?.type === "price" ? " — required" : ""}
-                          </label>
-                          <div className={`tr-price${pendingAction?.type === "price" ? " highlight" : ""}`}>
+                          <label>Price (GBP)</label>
+                          <div className="tr-price">
                             <span>£</span>
                             <input
                               type="text"
                               inputMode="decimal"
-                              placeholder={pendingAction?.type === "price" ? "Enter price" : "e.g. 1450"}
+                              placeholder="e.g. 1450"
                               value={r.priceGbp}
                               onChange={(e) => update(ring.handle, { priceGbp: e.target.value })}
                             />
@@ -622,21 +688,12 @@ export default function ReviewClient() {
                         <div className="tr-field">
                           <label>
                             Notes
-                            {pendingAction?.type === "note" || pendingAction?.type === "confirm"
-                              ? " — reply here"
+                            {pendingAction?.type === "confirm" || pendingAction?.type === "note"
+                              ? " — includes your reply"
                               : ""}
                           </label>
                           <textarea
-                            className={
-                              pendingAction?.type === "note" || pendingAction?.type === "confirm"
-                                ? "highlight"
-                                : ""
-                            }
-                            placeholder={
-                              pendingAction?.type === "confirm"
-                                ? "Reply here — add Confirmed or your answer…"
-                                : "Any notes for this piece…"
-                            }
+                            placeholder="Any notes for this piece…"
                             value={r.notes}
                             onChange={(e) => update(ring.handle, { notes: e.target.value })}
                           />
@@ -719,17 +776,26 @@ const CSS = `
 .tr-attn-count{flex:0 0 auto;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--brown);color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
 .tr-attn-toggle-label{flex:1;font-size:13px;color:var(--brown);font-weight:600;}
 .tr-attn-chevron{flex:0 0 auto;color:var(--muted);font-size:12px;}
-.tr-attn-list{list-style:none;margin:0;padding:0 8px 8px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);}
-.tr-attn-item{display:flex;align-items:stretch;gap:8px;}
-.tr-attn-check{flex:0 0 auto;display:flex;align-items:center;padding-left:4px;cursor:pointer;}
-.tr-attn-check input{width:16px;height:16px;accent-color:var(--brown);cursor:pointer;}
+.tr-attn-list{list-style:none;margin:0;padding:0 8px 8px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);}
+.tr-attn-item{display:flex;flex-direction:column;gap:8px;}
+.tr-attn-row{display:flex;align-items:flex-start;gap:10px;}
+.tr-attn-item.price .tr-attn-row{align-items:center;}
+.tr-attn-spreadsheet{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fdfbf8;font-size:12px;color:var(--brown);cursor:pointer;white-space:nowrap;}
+.tr-attn-spreadsheet input{width:16px;height:16px;accent-color:var(--brown);cursor:pointer;}
+.tr-attn-price-meta{flex:1;display:flex;align-items:center;gap:10px;min-width:0;}
 .tr-attn-body{flex:1;display:flex;align-items:center;gap:10px;min-width:0;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fdfbf8;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
-.tr-attn-body:hover{border-color:#c8a24a;background:#fff;}
+.tr-attn-body:hover,.tr-attn-item.expanded .tr-attn-body{border-color:#c8a24a;background:#fff;}
 .tr-attn-thumb{flex:0 0 32px;width:32px;height:32px;border-radius:6px;background:#efe7db;overflow:hidden;}
 .tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:2px;}
 .tr-attn-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;}
 .tr-attn-name{font-size:13px;font-weight:600;color:var(--brown);}
 .tr-attn-reason{font-size:11px;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.tr-attn-reply{padding:0 4px 4px 4px;display:flex;flex-direction:column;gap:8px;}
+.tr-attn-reply textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;background:#fff;color:var(--ink);resize:vertical;min-height:72px;}
+.tr-attn-reply-actions{display:flex;gap:8px;align-items:center;}
+.tr-attn-save{border:1px solid var(--brown);background:var(--brown);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;}
+.tr-attn-save:disabled{opacity:0.45;cursor:not-allowed;}
+.tr-attn-cancel{border:0;background:transparent;color:var(--muted);padding:8px 10px;font-size:12px;cursor:pointer;}
 .tr-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .tr-toolbar input[type=search]{flex:1;min-width:220px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
 .tr-seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}

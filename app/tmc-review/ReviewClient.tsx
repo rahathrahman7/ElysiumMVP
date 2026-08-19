@@ -3,9 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   type ClientAction,
-  appendClientReply,
-  getClientReply,
+  appendClientFollowUp,
+  getClientFollowUpAnswer,
   isSpreadsheetUpdated,
+  SPREADSHEET_UPDATED_LABEL,
   unresolvedClientActions,
 } from "@/lib/tmc/client-actions";
 
@@ -233,32 +234,45 @@ export default function ReviewClient() {
     });
   }, [pendingActions, reviews, rings]);
 
-  function toggleActionReply(handle: string) {
+  function toggleActionReply(action: ClientAction) {
     setAttnOpen(true);
     setOpenActionHandle((current) => {
-      const next = current === handle ? null : handle;
+      const next = current === action.handle ? null : action.handle;
       if (next) {
-        const review = getReview(handle);
+        const review = getReview(action.handle);
         setActionDrafts((drafts) => ({
           ...drafts,
-          [handle]: drafts[handle] ?? getClientReply(review.notes || ""),
+          [action.handle]:
+            drafts[action.handle] ?? getClientFollowUpAnswer(review.notes || "", action),
         }));
       }
       return next;
     });
   }
 
-  function saveActionReply(handle: string) {
-    const reply = (actionDrafts[handle] || "").trim();
+  function saveActionReply(action: ClientAction) {
+    const reply = (actionDrafts[action.handle] || "").trim();
     if (!reply) return;
-    const review = getReview(handle);
-    update(handle, { notes: appendClientReply(review.notes || "", reply) }, { immediate: true });
+    const review = getReview(action.handle);
+    update(
+      action.handle,
+      { notes: appendClientFollowUp(review.notes || "", action, reply) },
+      { immediate: true }
+    );
     setOpenActionHandle(null);
   }
 
-  function markSpreadsheetUpdated(handle: string, checked: boolean) {
+  function markSpreadsheetUpdated(action: ClientAction, checked: boolean) {
     if (!checked) return;
-    update(handle, { priceGbp: "Spreadsheet updated" }, { immediate: true });
+    const review = getReview(action.handle);
+    update(
+      action.handle,
+      {
+        priceGbp: SPREADSHEET_UPDATED_LABEL,
+        notes: appendClientFollowUp(review.notes || "", action, SPREADSHEET_UPDATED_LABEL),
+      },
+      { immediate: true }
+    );
   }
 
   const stats = useMemo(() => {
@@ -513,7 +527,7 @@ export default function ReviewClient() {
                             <input
                               type="checkbox"
                               checked={isSpreadsheetUpdated(review.priceGbp || "")}
-                              onChange={(e) => markSpreadsheetUpdated(item.handle, e.target.checked)}
+                              onChange={(e) => markSpreadsheetUpdated(item, e.target.checked)}
                             />
                             <span>Spreadsheet updated</span>
                           </label>
@@ -522,7 +536,7 @@ export default function ReviewClient() {
                             type="button"
                             className="tr-attn-body"
                             aria-expanded={isOpen}
-                            onClick={() => toggleActionReply(item.handle)}
+                            onClick={() => toggleActionReply(item)}
                           >
                             <div className="tr-attn-thumb">
                               {item.image ? (
@@ -556,9 +570,10 @@ export default function ReviewClient() {
                       </div>
                       {!isPrice && isOpen && (
                         <div className="tr-attn-reply">
+                          <p className="tr-attn-question">{item.reason}</p>
                           <textarea
                             rows={3}
-                            placeholder="Type your answer here…"
+                            placeholder="Your answer — saved to this product's notes"
                             value={actionDrafts[item.handle] ?? ""}
                             onChange={(e) =>
                               setActionDrafts((drafts) => ({
@@ -572,9 +587,9 @@ export default function ReviewClient() {
                               type="button"
                               className="tr-attn-save"
                               disabled={!(actionDrafts[item.handle] || "").trim()}
-                              onClick={() => saveActionReply(item.handle)}
+                              onClick={() => saveActionReply(item)}
                             >
-                              Save to notes
+                              Save to product notes
                             </button>
                             <button
                               type="button"
@@ -791,6 +806,7 @@ const CSS = `
 .tr-attn-name{font-size:13px;font-weight:600;color:var(--brown);}
 .tr-attn-reason{font-size:11px;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .tr-attn-reply{padding:0 4px 4px 4px;display:flex;flex-direction:column;gap:8px;}
+.tr-attn-question{margin:0;font-size:12px;line-height:1.45;color:var(--muted);}
 .tr-attn-reply textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;background:#fff;color:var(--ink);resize:vertical;min-height:72px;}
 .tr-attn-reply-actions{display:flex;gap:8px;align-items:center;}
 .tr-attn-save{border:1px solid var(--brown);background:var(--brown);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;}

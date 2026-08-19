@@ -41,10 +41,23 @@ export function isResolvedClientAction(action: ClientAction, review: ClientRevie
   }
 }
 
-export function unresolvedClientActions(
-  actions: ClientAction[],
-  reviews: Record<string, ClientReview>
-) {
+export function clientActionCompletionPatch(
+  action: ClientAction,
+  review: ClientReview
+): Partial<ClientReview> | null {
+  switch (action.type) {
+    case "confirm": {
+      const notes = (review.notes || "").trim();
+      if (/\bconfirmed\b/i.test(notes) || /^yes\b/i.test(notes)) return null;
+      return { notes: notes ? `${notes}\n\nConfirmed.` : "Confirmed." };
+    }
+    case "note":
+    case "price":
+      return null;
+    default:
+      return null;
+  }
+}
   return actions.filter((action) => {
     const review = reviews[action.handle];
     if (!review?.keep) return false;

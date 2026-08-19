@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   type ClientAction,
+  clientActionCompletionPatch,
+  isPlaceholderPrice,
   unresolvedClientActions,
 } from "@/lib/tmc/client-actions";
 
@@ -89,6 +91,7 @@ export default function ReviewClient() {
   const [fjSub, setFjSub] = useState<"all" | "Earrings" | "Necklaces" | "Bracelets" | "Fine Rings">("all");
   const [keepFilter, setKeepFilter] = useState<"all" | "kept" | "new">("all");
   const [q, setQ] = useState("");
+  const [attnOpen, setAttnOpen] = useState(false);
 
   function sectionOf(category: string): "Engagement" | "Wedding" | "Fine Jewellery" {
     if (category.includes("Fine Jewellery")) return "Fine Jewellery";
@@ -233,6 +236,24 @@ export default function ReviewClient() {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
     el.classList.add("tr-flash");
     window.setTimeout(() => el.classList.remove("tr-flash"), 1600);
+  }
+
+  function tickAction(item: ClientAction) {
+    const review = getReview(item.handle);
+
+    if (item.type === "price") {
+      const raw = (review.priceGbp || "").trim();
+      const hasPrice = !isPlaceholderPrice(raw) && /^\d/.test(raw.replace(/[£,\s]/g, ""));
+      if (!hasPrice) {
+        setAttnOpen(true);
+        jumpToCard(item.handle);
+        return;
+      }
+      return;
+    }
+
+    const patch = clientActionCompletionPatch(item, review);
+    if (patch) update(item.handle, patch, { immediate: true });
   }
 
   const stats = useMemo(() => {
@@ -455,30 +476,52 @@ export default function ReviewClient() {
 
       {actionNeeded.length > 0 && (
         <div className="tr-attn-wrap">
-          <aside className="tr-attn" role="status" aria-live="polite">
-            {actionNeeded.map((item) => (
-              <button
-                key={item.handle}
-                type="button"
-                className="tr-attn-item"
-                onClick={() => jumpToCard(item.handle)}
-              >
-                <span className="tr-attn-badge" aria-hidden="true">
-                  !
-                </span>
-                <div className="tr-attn-thumb">
-                  {item.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={item.image} alt="" />
-                  ) : null}
-                </div>
-                <span className="tr-attn-name">{item.name}</span>
-                <span className="tr-attn-reason">{item.reason}</span>
-                <span className="tr-attn-arrow" aria-hidden="true">
-                  →
-                </span>
-              </button>
-            ))}
+          <aside className={`tr-attn-panel${attnOpen ? " open" : ""}`} role="status" aria-live="polite">
+            <button
+              type="button"
+              className="tr-attn-toggle"
+              aria-expanded={attnOpen}
+              onClick={() => setAttnOpen((open) => !open)}
+            >
+              <span className="tr-attn-count">{actionNeeded.length}</span>
+              <span className="tr-attn-toggle-label">
+                {actionNeeded.length === 1 ? "Item needs your attention" : "Items need your attention"}
+              </span>
+              <span className="tr-attn-chevron" aria-hidden="true">
+                {attnOpen ? "▾" : "▸"}
+              </span>
+            </button>
+            {attnOpen && (
+              <ul className="tr-attn-list">
+                {actionNeeded.map((item) => (
+                  <li key={item.handle} className="tr-attn-item">
+                    <label className="tr-attn-check" title="Mark as done">
+                      <input
+                        type="checkbox"
+                        onChange={() => tickAction(item)}
+                        aria-label={`Mark ${item.name} as done`}
+                      />
+                    </label>
+                    <button
+                      type="button"
+                      className="tr-attn-body"
+                      onClick={() => jumpToCard(item.handle)}
+                    >
+                      <div className="tr-attn-thumb">
+                        {item.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={item.image} alt="" />
+                        ) : null}
+                      </div>
+                      <span className="tr-attn-copy">
+                        <span className="tr-attn-name">{item.name}</span>
+                        <span className="tr-attn-reason">{item.reason}</span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </aside>
         </div>
       )}
@@ -669,16 +712,24 @@ const CSS = `
 .tr-pill{background:var(--brown);color:#fff;padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
 .tr-intro{margin:10px 0 0;font-size:13px;color:var(--muted);line-height:1.45;max-width:900px;}
 .tr-intro strong{color:var(--brown);}
-.tr-attn-wrap{max-width:1500px;margin:0 auto;padding:10px 24px 0;}
-.tr-attn{display:flex;flex-direction:column;gap:6px;}
-.tr-attn-item{display:flex;align-items:center;gap:10px;width:100%;padding:6px 10px;border:1px solid #e8d49a;border-radius:999px;background:#fff;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
-.tr-attn-item:hover{border-color:#c8a24a;background:#fffdf8;}
-.tr-attn-badge{flex:0 0 20px;width:20px;height:20px;border-radius:999px;background:#b8860b;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.tr-attn-thumb{flex:0 0 36px;width:36px;height:36px;border-radius:999px;background:#efe7db;overflow:hidden;}
-.tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:3px;}
-.tr-attn-name{flex:0 0 auto;font-size:13px;font-weight:600;color:var(--brown);white-space:nowrap;}
-.tr-attn-reason{flex:1;min-width:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.tr-attn-arrow{flex:0 0 auto;color:var(--muted);font-size:14px;padding-right:2px;}
+.tr-attn-wrap{max-width:1500px;margin:0 auto;padding:8px 24px 0;}
+.tr-attn-panel{border:1px solid var(--line);border-radius:10px;background:#fff;}
+.tr-attn-toggle{display:flex;align-items:center;gap:10px;width:100%;padding:8px 12px;border:0;background:transparent;text-align:left;cursor:pointer;color:var(--ink);}
+.tr-attn-toggle:hover{background:#fdfbf8;}
+.tr-attn-count{flex:0 0 auto;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--brown);color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
+.tr-attn-toggle-label{flex:1;font-size:13px;color:var(--brown);font-weight:600;}
+.tr-attn-chevron{flex:0 0 auto;color:var(--muted);font-size:12px;}
+.tr-attn-list{list-style:none;margin:0;padding:0 8px 8px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);}
+.tr-attn-item{display:flex;align-items:stretch;gap:8px;}
+.tr-attn-check{flex:0 0 auto;display:flex;align-items:center;padding-left:4px;cursor:pointer;}
+.tr-attn-check input{width:16px;height:16px;accent-color:var(--brown);cursor:pointer;}
+.tr-attn-body{flex:1;display:flex;align-items:center;gap:10px;min-width:0;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fdfbf8;text-align:left;cursor:pointer;transition:border-color .15s,background .15s;}
+.tr-attn-body:hover{border-color:#c8a24a;background:#fff;}
+.tr-attn-thumb{flex:0 0 32px;width:32px;height:32px;border-radius:6px;background:#efe7db;overflow:hidden;}
+.tr-attn-thumb img{width:100%;height:100%;object-fit:contain;padding:2px;}
+.tr-attn-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;}
+.tr-attn-name{font-size:13px;font-weight:600;color:var(--brown);}
+.tr-attn-reason{font-size:11px;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .tr-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .tr-toolbar input[type=search]{flex:1;min-width:220px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink);}
 .tr-seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
@@ -702,7 +753,7 @@ const CSS = `
 .tr-section button{margin-left:auto;border:0;background:transparent;color:var(--brown);font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;}
 .tr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;scroll-margin-top:88px;}
 .tr-card.kept{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),var(--shadow);}
-.tr-card.needs-action,.tr-card.kept.needs-action{border-color:#c8a24a;box-shadow:0 0 0 2px #c8a24a,var(--shadow);}
+.tr-card.needs-action,.tr-card.kept.needs-action{border-color:#e8d49a;box-shadow:0 0 0 1px #e8d49a,var(--shadow);}
 .tr-card.tr-flash{animation:trFlash 1.4s ease;}
 @keyframes trFlash{0%,100%{box-shadow:0 0 0 2px #c8a24a,var(--shadow);}40%{box-shadow:0 0 0 4px #e8c66a,0 0 0 8px rgba(200,162,74,0.2);}}
 .tr-imgwrap{position:relative;aspect-ratio:1/1;background:#efe7db;}
@@ -742,7 +793,7 @@ const CSS = `
   .tr-brand{font-size:18px;}
   .tr-main,.tr-attn-wrap,.tr-sticky-bar{padding-left:14px;padding-right:14px;}
   .tr-header{padding:12px 14px 10px;}
-  .tr-attn-reason{display:none;}
+  .tr-attn-reason{-webkit-line-clamp:1;}
   .tr-stats{gap:10px;}
   .tr-stat .n{font-size:16px;}
 }

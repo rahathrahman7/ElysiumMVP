@@ -24,12 +24,6 @@
     "reason": "Live as Virelle using the primary Top/Front_6016 renders (not the alternate 1080 Ophelia/6924 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
   },
   {
-    "handle": "the-arie-ring-marquise-halo",
-    "type": "confirm",
-    "label": "Amoret two-tone",
-    "reason": "Two-tone Yellow/Rose–Platinum swatches were removed — TMC only has solid Y/W/R renders (no distinct two-tone images). Confirm solid metals only is fine, or supply distinct two-tone assets."
-  },
-  {
     "handle": "the-eloise-ring-marquise-antique-halo",
     "type": "note",
     "label": "Ready to Wear FJ tiles (homepage)",

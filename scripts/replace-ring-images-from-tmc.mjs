@@ -158,6 +158,19 @@ const TARGETS = [
       'Elara is a timeless trilogy design, showcasing a brilliant round centre stone flanked by two pear-cut side stones, all gracefully nestled within a sculpted basket trilogy setting.\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D\u2013F colour, VS1+ clarity.\n\nCertification: GIA or IGI.',
     seoDescription: 'Elara round-and-pear trilogy in a sculpted basket setting.',
   },
+  {
+    // Client: Ophellia had the wrong shape (east-west elongated cushion). Replace
+    // with Elise round split-shank solitaire Top+Front renders.
+    slug: 'ophellia',
+    handle: 'the-elise-ring-split-shank-round-solitaire',
+    dir: 'public/products/Ophellia',
+    prefix: 'ophellia-tmc',
+    colors: ['yellow', 'white', 'rose'],
+    updatePrimaryImages: true,
+    primaryColor: 'yellow',
+    shape: 'round',
+    retag: { removeCollections: ['cushion'], addCollections: ['round'] },
+  },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -359,6 +372,11 @@ async function processTarget(products, target) {
       if (!product.collections.includes(c)) product.collections.push(c);
     }
     console.log('  retagged collections:', product.collections.join(', '));
+  }
+
+  if (target.shape) {
+    product.shape = target.shape;
+    console.log('  shape:', target.shape);
   }
 }
 

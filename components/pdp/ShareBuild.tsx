@@ -31,7 +31,7 @@ export default function ShareBuild({ onShare }:{ onShare: ()=>Promise<string>|vo
             setBusy(false);
           }
         }}
-        className="group flex items-center gap-1.5 font-serif text-[11px] uppercase tracking-[0.15em] text-[#6D3D0D]/50 hover:text-[#D4AF37] transition-colors duration-200 disabled:opacity-50"
+        className="group flex items-center gap-1.5 font-serif text-[12px] font-medium uppercase tracking-[0.15em] text-[#6D3D0D] hover:text-[#D4AF37] transition-colors duration-200 disabled:opacity-50"
         disabled={busy}
       >
         {busy ? (

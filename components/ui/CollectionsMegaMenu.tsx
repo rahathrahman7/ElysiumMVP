@@ -12,19 +12,19 @@ interface CollectionsMegaMenuProps {
 // Engagement ring styles
 const ringStyles = [
   {
+    label: "Best Sellers",
+    href: "/shop?category=ring&featured=true",
+    image: "/products/Aura/aura-tmc-yellow.jpg",
+  },
+  {
     label: "Toi et Moi",
     href: "/shop?category=ring&shape=toi-et-moi",
-    image: "/products/Orabella/orabella-tmc-yellow.jpg",
+    image: "/products/vow-and-veil/vow-veil-tmc-yellow.jpg",
   },
   {
-    label: "Hidden Halo",
-    href: "/shop?category=ring&style=hidden-halo",
-    image: "/products/vow-and-veil/VV-gold-front.jpeg",
-  },
-  {
-    label: "Trilogy",
-    href: "/shop?category=ring&style=three-stone",
-    image: "/products/Elara/Elara-gold-front.jpeg",
+    label: "Vintage",
+    href: "/shop?category=ring&style=vintage",
+    image: "/products/tmc-import/the-eloise-ring-marquise-antique-halo/yellow.jpg",
   },
 ];
 
@@ -33,12 +33,17 @@ const fineJewelleryItems = [
   {
     label: "Earrings",
     href: "/fine-jewellery/earrings",
-    image: "/products/Earrings/Eternal/eternal-gold-front.PNG",
+    image: "/products/Earrings/Crown/crown-tmc-yellow.jpg",
+  },
+  {
+    label: "Bracelets",
+    href: "/fine-jewellery/bracelets",
+    image: "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow.jpg",
   },
   {
     label: "Necklaces",
     href: "/fine-jewellery/necklaces",
-    comingSoon: true,
+    image: "/products/tmc-import/the-iris-necklace-round-pendant/yellow.jpg",
   },
 ];
 
@@ -208,7 +213,7 @@ export default function CollectionsMegaMenu({
                 <div className="p-[6px] mb-2" style={{ backgroundColor: "#E8E2DA", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
                   <div className="relative aspect-[16/9] overflow-hidden bg-white">
                     <Image
-                      src="/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-gold.PNG"
+                      src="/products/Classic%204%20Claw%20Tennis%20Bracelet%20/tmc/classic-tennis-tmc-yellow.jpg"
                       alt="Bracelets"
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -227,7 +232,6 @@ export default function CollectionsMegaMenu({
                   href={item.href}
                   image={item.image}
                   label={item.label}
-                  comingSoon={item.comingSoon}
                   onClose={onClose}
                 />
               ))}

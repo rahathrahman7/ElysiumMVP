@@ -61,14 +61,14 @@ export function ProductActions({
       <div className="flex items-center justify-center gap-2 pt-1">
         <Link
           href="/contact"
-          className="font-serif text-[11px] uppercase tracking-[0.15em] text-[#6D3D0D]/60 hover:text-[#D4AF37] transition-colors duration-200"
+          className="font-serif text-[12px] uppercase tracking-[0.15em] text-[#6D3D0D] hover:text-[#D4AF37] transition-colors duration-200"
         >
           Book Consultation
         </Link>
-        <span className="text-[#6D3D0D]/30">·</span>
+        <span className="text-[#6D3D0D]/40">·</span>
         <Link
           href="/education"
-          className="font-serif text-[11px] uppercase tracking-[0.15em] text-[#6D3D0D]/60 hover:text-[#D4AF37] transition-colors duration-200"
+          className="font-serif text-[12px] uppercase tracking-[0.15em] text-[#6D3D0D] hover:text-[#D4AF37] transition-colors duration-200"
         >
           Learn More
         </Link>
@@ -77,16 +77,16 @@ export function ProductActions({
       {/* Trust Indicators - Refined */}
       <div className="pt-5">
         <div className="flex items-center justify-center gap-5 flex-wrap">
-          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
-            <span className="text-[#D4AF37]/70">◆</span>
+          <div className="flex items-center gap-1.5 text-[11px] font-serif font-medium tracking-[0.1em] text-[#6D3D0D]">
+            <span className="text-[#D4AF37]">◆</span>
             UK Hallmarked
           </div>
-          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
-            <span className="text-[#D4AF37]/70">◆</span>
+          <div className="flex items-center gap-1.5 text-[11px] font-serif font-medium tracking-[0.1em] text-[#6D3D0D]">
+            <span className="text-[#D4AF37]">◆</span>
             Lifetime Care
           </div>
-          <div className="flex items-center gap-1.5 text-[10px] font-serif tracking-[0.1em] text-[#6D3D0D]/50">
-            <span className="text-[#D4AF37]/70">◆</span>
+          <div className="flex items-center gap-1.5 text-[11px] font-serif font-medium tracking-[0.1em] text-[#6D3D0D]">
+            <span className="text-[#D4AF37]">◆</span>
             London Atelier
           </div>
         </div>

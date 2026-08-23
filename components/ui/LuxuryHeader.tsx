@@ -35,6 +35,7 @@ const mobileMenuItems: MobileMenuItem[] = [
       { label: 'Radiant Diamonds', href: '/shop?shape=radiant' },
       { label: 'Emerald Diamonds', href: '/shop?shape=emerald' },
       { label: 'Marquise Diamonds', href: '/shop?shape=marquise' },
+      { label: 'Asscher Diamonds', href: '/shop?shape=asscher' },
       { label: 'Cushion Diamonds', href: '/shop?shape=cushion' },
       { label: 'Heart Diamonds', href: '/shop?shape=heart' },
       { label: 'Browse All', href: '/shop' },

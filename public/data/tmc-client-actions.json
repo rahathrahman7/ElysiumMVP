@@ -1,38 +1,38 @@
 [
   {
-    "handle": "the-athaliah-ring-oval-and-marquise-curved-toi-et-moi",
-    "type": "price",
-    "label": "Serelle",
-    "reason": "Please add Serelle to the Lab Prices spreadsheet, then tick Spreadsheet updated."
+    "handle": "the-elmira-ring-asscher-bezel-solitaire",
+    "type": "note",
+    "label": "Unnamed Elmira Asscher Bezel",
+    "reason": "This Keep has no display name yet — please add the ELYSIUM name so we can import it (held for now)."
+  },
+  {
+    "handle": "the-elise-ring-split-shank-elongated-cushion-solitaire",
+    "type": "note",
+    "label": "Unnamed Elise elongated cushion",
+    "reason": "Notes still paste Felicity copy, but Felicity (oval) is already live. Please give this Keep its own name (or untick Keep if it was a mistake)."
+  },
+  {
+    "handle": "the-paloma-ring-cushion-cut-solitaire",
+    "type": "confirm",
+    "label": "Avelon images",
+    "reason": "Live as Avelon using the primary Top/Front_6392 basket-head renders (not the alternate 1080 Paloma/7926 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
+  },
+  {
+    "handle": "the-ophelia-ring-elongated-cushion-solitaire",
+    "type": "confirm",
+    "label": "Virelle images",
+    "reason": "Live as Virelle using the primary Top/Front_6016 renders (not the alternate 1080 Ophelia/6924 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
+  },
+  {
+    "handle": "the-arie-ring-marquise-halo",
+    "type": "confirm",
+    "label": "Amoret two-tone",
+    "reason": "Two-tone Yellow/Rose–Platinum swatches were removed — TMC only has solid Y/W/R renders (no distinct two-tone images). Confirm solid metals only is fine, or supply distinct two-tone assets."
   },
   {
     "handle": "the-eloise-ring-marquise-antique-halo",
-    "type": "confirm",
-    "label": "Splendour",
-    "reason": "Your notes still say \"Aveline\" — please confirm Splendour copy is correct or edit the notes."
-  },
-  {
-    "handle": "the-iris-earrings-oval-studs",
-    "type": "confirm",
-    "label": "Legacy Earrings",
-    "reason": "Notes say \"Essence\" and the site lists these as Hoops — please confirm copy and whether they should be studs not hoops."
-  },
-  {
-    "handle": "the-maya-ring-marquise-ascend-signature-solitaire",
-    "type": "confirm",
-    "label": "Essence (ring)",
-    "reason": "Essence, Allure, Union & Radiance each exist as a ring, earrings and necklace — please confirm that's intentional."
-  },
-  {
-    "handle": "the-iris-necklace-round-pendant",
-    "type": "confirm",
-    "label": "Crown Necklace",
-    "reason": "Please confirm all pendant necklaces should offer 16\" & 18\" chain lengths."
-  },
-  {
-    "handle": "the-iris-earrings-round-studs",
-    "type": "confirm",
-    "label": "Crown Earrings",
-    "reason": "Please confirm stud earring carat options (0.5ct–2ct) and tennis bracelet carats match your pricing sheet."
+    "type": "note",
+    "label": "Ready to Wear FJ tiles (homepage)",
+    "reason": "Homepage Ready to Wear → 3 Fine Jewellery tiles (Earrings / Bracelets / Necklaces) is ready to build once you send lifestyle images for those three tiles. Reply here when assets are ready (or attach links)."
   }
 ]

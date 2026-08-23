@@ -51,14 +51,19 @@ export function CompactProductVariants({
   // Check if product is a bracelet or earrings (different labeling and no engraving)
   const isBracelet = product.collections?.includes('bracelets') || product.collections?.includes('tennis-bracelets');
   const isEarring = product.collections?.includes('earrings');
-  const isMetalOnlyProduct = isBracelet || isEarring;
+  const isNecklace =
+    product.collections?.includes('necklaces') ||
+    product.collections?.includes('pendants') ||
+    product.collections?.includes('paperclip-chain');
+  const isLengthProduct = isBracelet || isNecklace;
+  const isMetalOnlyProduct = isBracelet || isEarring || isNecklace;
 
   // Diamond Tiers - All based on F Colour / VS1 Clarity as standard
   // Client requirement: All tiers use F/VS1 as baseline for pricing
   // For better colour (D, E) or clarity (IF, VVS1, VVS2) → Custom Specification
   // Helper to format carat label - bracelets use "Total", rings use "Centre"
   const formatCaratLabel = (carat: string, useTotalWeight: boolean = false) => {
-    if (isBracelet || useTotalWeight) {
+    if (isLengthProduct || useTotalWeight) {
       return `${carat} | F Colour | VS1 Clarity`;
     }
     return `${carat} Centre | F Colour | VS1 Clarity`;
@@ -289,7 +294,7 @@ export function CompactProductVariants({
       {diamondTiers.length > 0 && (
         <div>
           <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D] mb-4">
-            Carat {isBracelet ? 'Weight' : 'Size'}
+            Carat {isLengthProduct ? 'Weight' : 'Size'}
           </h3>
           <div className="space-y-3">
             {diamondTiers.map((tier) => {
@@ -376,9 +381,9 @@ export function CompactProductVariants({
         <div>
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-serif text-[10px] font-medium uppercase tracking-[0.2em] text-[#6D3D0D]">
-              {isBracelet ? "Length" : "Ring Size"}
+              {isLengthProduct ? "Length" : "Ring Size"}
             </h3>
-            {!isBracelet && <RingSizeGuide />}
+            {!isLengthProduct && <RingSizeGuide />}
           </div>
 
           {/* Collapsed State - Minimal Select */}
@@ -389,10 +394,10 @@ export function CompactProductVariants({
             >
               <span className="font-serif text-[14px] tracking-[0.05em] text-[#6D3D0D]">
                 {selectedSize && selectedSize !== "unknown"
-                  ? isBracelet ? selectedSize : `Size ${selectedSize}`
+                  ? isLengthProduct ? selectedSize : `Size ${selectedSize}`
                   : selectedSize === "unknown"
                   ? "I don&apos;t know my size"
-                  : isBracelet ? "Select length" : "Select your ring size"}
+                  : isLengthProduct ? "Select length" : "Select your ring size"}
               </span>
               <svg className="w-3 h-3 text-[#6D3D0D]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -404,7 +409,7 @@ export function CompactProductVariants({
           {ringSizeExpanded && (
             <div className="p-4 rounded border border-[#6D3D0D]/15 bg-white">
               {/* Size Grid */}
-              <div className={`grid gap-2 mb-3 ${isBracelet ? "grid-cols-2" : "grid-cols-6"}`}>
+              <div className={`grid gap-2 mb-3 ${isLengthProduct ? "grid-cols-2" : "grid-cols-6"}`}>
                 {product.sizes.map((size) => {
                   const isSelected = selectedSize === size;
                   return (
@@ -427,7 +432,7 @@ export function CompactProductVariants({
               </div>
 
               {/* "I Don't Know My Size" Option - rings only */}
-              {!isBracelet && (
+              {!isLengthProduct && (
                 <button
                   onClick={() => {
                     onSizeChange("unknown");

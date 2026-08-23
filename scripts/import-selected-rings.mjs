@@ -125,6 +125,32 @@ function slugify(name) {
     .replace(/^-+|-+$/g, '');
 }
 
+/** Strip parenthetical image-filter instructions from display names for PDP title/slug. */
+function cleanDisplayName(name) {
+  return String(name || '')
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Drop appended TMC-review client follow-up blocks from marketing notes. */
+function stripClientFollowUps(notes) {
+  return String(notes || '')
+    .replace(/\n\n\[Client follow-up[^\]]*\][\s\S]*$/g, '')
+    .replace(/\n\nClient reply:[\s\S]*$/g, '')
+    .trim();
+}
+
+const MATERIALS_FOOTER =
+  '\n\nAt Elysium, every piece is crafted using only the finest materials and exceptional standards. Our gold jewellery is available exclusively in 18ct yellow, white, and rose gold, with select designs offered in sophisticated 18ct gold and platinum two-tone combinations.\n\nFor our diamonds, we exclusively select D-F colour grades, chosen for their exceptional colourless appearance and brilliance. All of our centre diamonds for engagement rings are accompanied by certification from GIA or IGI, providing assurance of their quality, authenticity, and provenance.';
+
+function withMaterialsFooter(body) {
+  const base = String(body || '').trim();
+  if (!base) return MATERIALS_FOOTER.trim();
+  if (base.includes('At Elysium, every piece is crafted')) return base;
+  return `${base}${MATERIALS_FOOTER}`;
+}
+
 function firstSentence(text) {
   if (!text) return '';
   const m = text.match(/^.*?[.!?](\s|$)/);
@@ -221,7 +247,7 @@ function copyRenders(handle) {
 }
 
 function buildProduct(handle, review, catalogEntry, price, labPrice) {
-  const title = (review.displayName || '').trim();
+  const title = cleanDisplayName(review.displayName);
   const tmcName = catalogEntry?.tmcName || title;
   const category = catalogEntry?.category || '';
   const opts = review.options || {};
@@ -257,9 +283,9 @@ function buildProduct(handle, review, catalogEntry, price, labPrice) {
       : [available[file]];
   }
 
-  const notes = (review.notes || '').trim();
+  const notes = stripClientFollowUps(review.notes);
   const blurb = firstSentence(notes) || `${title} — a signature ELYSIUM design.`;
-  const description = notes || blurb;
+  const description = withMaterialsFooter(notes || blurb);
 
   let carats = pickFrom(CARATS, opts.carats);
   if (carats.length === 0) carats = CARATS;
@@ -338,14 +364,16 @@ async function main() {
 
   for (const [handle, review] of Object.entries(reviews)) {
     if (!review.keep) continue;
-    const name = (review.displayName || '').trim();
-    if (!name) { skipped.push(`${handle} (kept but no name yet)`); continue; }
+    const rawName = (review.displayName || '').trim();
+    if (!rawName) { skipped.push(`${handle} (kept but no name yet)`); continue; }
+    const name = cleanDisplayName(rawName);
+    if (!name) { skipped.push(`${handle} (kept but no usable name yet)`); continue; }
 
     const catalogEntry = catalogByHandle.get(handle);
     const slug = slugify(name);
     const existing = bySlug.get(slug);
 
-    if (ONLY && !ONLY.has(handle) && !ONLY.has(slug)) continue;
+    if (ONLY && !ONLY.has(handle) && !ONLY.has(slug) && !ONLY.has(slugify(rawName))) continue;
 
     const labPrice = labPrices[slug];
     const { price, source } = resolvePrice(review, catalogEntry, existing, labPrice);

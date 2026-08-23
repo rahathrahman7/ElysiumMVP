@@ -58,7 +58,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedCarat, setSelectedCarat] = useState(product.carats?.[0] || null); // Default to 1ct (or null if no carats)
   const [selectedColour, setSelectedColour] = useState(product.colours?.[2] || null); // Default to F (or null if no colours)
   const [selectedClarity, setSelectedClarity] = useState(product.clarities?.[3] || null); // Default to VS1 (or null if no clarities)
-  const [selectedSize, setSelectedSize] = useState(product.sizes?.[2] || null); // Default to L (or null if no sizes)
+  const [selectedSize, setSelectedSize] = useState(product.sizes?.[0] || product.sizes?.[2] || null); // Default first size (or L for rings)
   const [engravingSelected, setEngravingSelected] = useState(false);
   const [engravingText, setEngravingText] = useState("");
   // Premium configurator hidden for now - may work on this later
@@ -135,15 +135,23 @@ export function ProductDetail({ product }: ProductDetailProps) {
     (engravingSelected ? (product.engravingFeeGBP || 0) : 0);
 
   const isBracelet = product.collections?.includes('bracelets') || product.collections?.includes('tennis-bracelets');
+  const isNecklace =
+    product.collections?.includes('necklaces') ||
+    product.collections?.includes('pendants') ||
+    product.collections?.includes('paperclip-chain');
+  const isEarring = product.collections?.includes('earrings');
+  const isFineJewellery = isBracelet || isNecklace || isEarring;
 
-  // Prepare selections for StickySummary (use "length" for bracelets, "ringSize" for rings)
+  // Prepare selections for StickySummary (use "length" for bracelets/necklaces, "ringSize" for rings)
   const selections = {
     origin: selectedOrigin?.label,
     carat: selectedCarat?.label,
     colour: selectedColour?.label,
     clarity: selectedClarity?.label,
     metal: selectedMetal?.name,
-    ...(isBracelet ? { length: selectedSize || undefined } : { ringSize: selectedSize || undefined }),
+    ...((isBracelet || isNecklace)
+      ? { length: selectedSize || undefined }
+      : { ringSize: selectedSize || undefined }),
     engraving: engravingSelected ? "Yes" : null,
   };
 
@@ -183,14 +191,22 @@ export function ProductDetail({ product }: ProductDetailProps) {
   // - Lab Grown + NOT custom spec → Buy Now
   // - Lab Grown + custom spec → Enquire
   const isEntryLevel = Boolean(
-    is1ctNatural || (!isNaturalDiamond && !isCustomSpecification)
+    isFineJewellery ||
+      is1ctNatural ||
+      (!isNaturalDiamond && !isCustomSpecification)
   );
 
   // Helper: display title without technical suffixes (e.g. remove "— SIX-CLAW SOLITAIRE")
   const displayTitle = product.title.split('—')[0]?.trim() || product.title;
 
-  // Check if required fields are selected (ring size is required)
-  const canAdd = Boolean(selectedSize);
+  // Rings need size; FJ: metal (+ carat when offered) (+ length for bracelets/necklaces)
+  const canAdd = isFineJewellery
+    ? Boolean(
+        selectedMetal &&
+          (!product.carats?.length || selectedCarat) &&
+          (!(isBracelet || isNecklace) || selectedSize || !product.sizes?.length)
+      )
+    : Boolean(selectedSize);
 
   const addItem = useCartStore((s) => s.addItem);
 

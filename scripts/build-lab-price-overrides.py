@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the client price book override JSON from the Lab Prices xlsx.
 
-Reads the newest "Lab Prices (2).xlsx" (falls back to (1), then Lab Prices.xlsx)
+Reads the newest "Lab Prices (3).xlsx" (falls back to (2), (1), then Lab Prices.xlsx)
 and writes public/data/tmc-lab-prices.json mapping product slug ->
     { "name", "basePriceGBP", "caratDeltas": { label: delta } }
 
@@ -63,7 +63,12 @@ def slugify(name: str) -> str:
 
 
 def pick_sheet_path() -> Path:
-    for name in ("Lab Prices (2).xlsx", "Lab Prices (1).xlsx", "Lab Prices.xlsx"):
+    for name in (
+        "Lab Prices (3).xlsx",
+        "Lab Prices (2).xlsx",
+        "Lab Prices (1).xlsx",
+        "Lab Prices.xlsx",
+    ):
         path = PRICES_DIR / name
         if path.exists():
             return path

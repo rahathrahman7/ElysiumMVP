@@ -2,7 +2,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import useSWR from "swr";
 import LuxuryProductCard from "@/components/ui/LuxuryProductCard";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { facets } from "@/lib/filterSchema";
 
 const fetcher = (url: string) => fetch(url).then(r=>r.json());
@@ -10,6 +10,7 @@ const fetcher = (url: string) => fetch(url).then(r=>r.json());
 export function ShopGrid() {
   const params = useSearchParams();
   const router = useRouter();
+  const topRef = useRef<HTMLDivElement>(null);
   
   // Check if any filter is active - if not, we'll show grouped view
   const hasCategory = params.get("category");
@@ -28,22 +29,30 @@ export function ShopGrid() {
   const { data } = useSWR(`/api/products?${query}`, fetcher);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
+  const page = Number(params.get("page") || 1);
+  const pageScrollReady = useRef(false);
+  useEffect(() => {
+    if (!pageScrollReady.current) {
+      pageScrollReady.current = true;
+      return;
+    }
+    topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [page]);
+
   function updateParam(key: string, value: string) {
     const next = new URLSearchParams(params.toString());
     if (value) next.set(key, value); else next.delete(key);
     if (key !== "page") next.delete("page");
     router.push(`/shop?${next.toString()}`);
   }
-
-  const page = Number(params.get("page") || 1);
   // Use the actual limit from the query we sent
   const limit = isFilteredView ? Number(params.get("limit") || 12) : 50;
   const total = Number(data?.total || 0);
   const totalPages = total ? Math.max(1, Math.ceil(total / limit)) : 1;
 
   return (
-    <div className="relative">
-      <div className="grid grid-cols-1 xl:grid-cols-[320px_1fr] gap-8 xl:gap-12">
+    <div className="relative scroll-mt-24" ref={topRef}>
+      <div className="grid grid-cols-1 xl:grid-cols-[240px_1fr] gap-8 xl:gap-8">
         {/* Filters Sidebar */}
         <aside className="xl:sticky xl:top-24 h-fit">
           <button 
@@ -59,10 +68,10 @@ export function ShopGrid() {
           </button>
 
           <div className={`xl:block ${filtersOpen ? 'block' : 'hidden'} space-y-6`}>
-            <div className="bg-white/70 backdrop-blur-xl p-8 border border-elysium-whisper shadow-2xl">
-              <h3 className="font-serif text-xl text-elysium-obsidian mb-6 tracking-wide">Curate Your Selection</h3>
+            <div className="bg-white/70 backdrop-blur-xl p-5 border border-elysium-whisper shadow-2xl">
+              <h3 className="font-serif text-lg text-elysium-obsidian mb-5 tracking-wide">Curate Your Selection</h3>
               
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div className="group">
                   <label className="block text-sm font-medium text-elysium-smoke mb-2 tracking-wider uppercase">Category</label>
                   <select 

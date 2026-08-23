@@ -21,7 +21,7 @@ export default function RecentlyViewed({ current }: { current: SavedItem }) {
               {p.imageSrc ? (
                 <Image 
                   src={p.imageSrc} 
-                  alt={p.name} 
+                  alt={p.name || p.slug} 
                   fill 
                   className="object-contain p-1 transition-transform duration-300 hover:scale-105" 
                 />

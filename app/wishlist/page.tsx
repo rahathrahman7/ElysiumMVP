@@ -31,7 +31,7 @@ export default function WishlistPage(){
               <Link href={`/products/${i.slug}`} className="block hover:scale-[1.02] transition-transform">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300">
                   {i.imageSrc ? (
-                    <Image src={i.imageSrc} alt={i.name} fill className="object-cover transition-transform duration-300 hover:scale-105" />
+                    <Image src={i.imageSrc} alt={i.name || i.slug} fill className="object-cover transition-transform duration-300 hover:scale-105" />
                   ) : (
                     <div className="absolute inset-0 grid place-items-center bg-neutral-50 text-neutral-400">
                       <span className="text-xs">Image</span>

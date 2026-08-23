@@ -1,7 +1,7 @@
 {
   "celeste": {
     "name": "Celeste",
-    "basePriceGBP": 2049,
+    "basePriceGBP": 1949,
     "caratDeltas": {
       "1ct": 0,
       "1.5ct": 500,
@@ -400,12 +400,12 @@
   },
   "ovalis": {
     "name": "Ovalis",
-    "basePriceGBP": 2179,
+    "basePriceGBP": 1949,
     "caratDeltas": {
       "1ct": 0,
       "1.5ct": 500,
       "2ct": 1150,
-      "2.5ct": 1550
+      "2.5ct": 1650
     },
     "baseCaratLabel": "1ct"
   },
@@ -499,6 +499,17 @@
   },
   "vow-veil": {
     "name": "Vow & Veil",
+    "basePriceGBP": 2489,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "serelle": {
+    "name": "Serelle",
     "basePriceGBP": 2489,
     "caratDeltas": {
       "1ct": 0,
@@ -684,8 +695,8 @@
     },
     "baseCaratLabel": "1ct"
   },
-  "essence": {
-    "name": "Essence",
+  "evoke": {
+    "name": "Evoke",
     "basePriceGBP": 2049,
     "caratDeltas": {
       "1ct": 0,
@@ -703,6 +714,303 @@
       "1.5ct": 500,
       "2ct": 1150,
       "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "solace": {
+    "name": "Solace",
+    "basePriceGBP": 3199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1100,
+      "2.5ct": 1600
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "haven": {
+    "name": "Haven",
+    "basePriceGBP": 1875,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "calibre": {
+    "name": "Calibre",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "mirage": {
+    "name": "Mirage",
+    "basePriceGBP": 2449,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "lucent": {
+    "name": "Lucent",
+    "basePriceGBP": 2160,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "wisp": {
+    "name": "Wisp",
+    "basePriceGBP": 2489,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "amity": {
+    "name": "Amity",
+    "basePriceGBP": 2049,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "zephyr": {
+    "name": "Zephyr",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "zara": {
+    "name": "Zara",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "valeria": {
+    "name": "Valeria",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "valence": {
+    "name": "Valence",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "montelle": {
+    "name": "Montelle",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "ravelle": {
+    "name": "Ravelle",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "corvelle": {
+    "name": "Corvelle",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "delance": {
+    "name": "Delance",
+    "basePriceGBP": 2099,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "marais": {
+    "name": "Marais",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "avelon": {
+    "name": "Avelon",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "roselle": {
+    "name": "Roselle",
+    "basePriceGBP": 1645,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "virelle": {
+    "name": "Virelle",
+    "basePriceGBP": 1949,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "bellamy": {
+    "name": "Bellamy",
+    "basePriceGBP": 2249,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "ornelle": {
+    "name": "Ornelle",
+    "basePriceGBP": 1645,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "talia": {
+    "name": "Talia",
+    "basePriceGBP": 2449,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1150,
+      "2.5ct": 1650
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "naya": {
+    "name": "Naya",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "solange": {
+    "name": "Solange",
+    "basePriceGBP": 1799,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "arvelle": {
+    "name": "Arvelle",
+    "basePriceGBP": 3199,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1100,
+      "2.5ct": 1600
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "bellavelle": {
+    "name": "Bellavelle",
+    "basePriceGBP": 2160,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 500,
+      "2ct": 1000,
+      "2.5ct": 1500
+    },
+    "baseCaratLabel": "1ct"
+  },
+  "cordelia": {
+    "name": "Cordelia",
+    "basePriceGBP": 2489,
+    "caratDeltas": {
+      "1ct": 0,
+      "1.5ct": 900,
+      "2ct": 1560,
+      "2.5ct": 2460
     },
     "baseCaratLabel": "1ct"
   },

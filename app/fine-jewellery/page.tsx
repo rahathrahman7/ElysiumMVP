@@ -20,20 +20,19 @@ const categories = [
     name: "Earrings",
     href: "/fine-jewellery/earrings",
     description: "From refined studs to statement pieces",
-    image: "/products/Earrings/Pure/pure-gold-front.PNG",
+    image: "/products/Earrings/Crown/crown-tmc-yellow.jpg",
   },
   {
     name: "Bracelets",
     href: "/fine-jewellery/bracelets",
     description: "Timeless tennis bracelets",
-    image: "/products/Classic 4 Claw Tennis Bracelet /3ct/classicTB3ct-gold.PNG",
+    image: "/products/Classic 4 Claw Tennis Bracelet /tmc/classic-tennis-tmc-yellow.jpg",
   },
   {
     name: "Necklaces",
     href: "/fine-jewellery/necklaces",
-    description: "Coming soon",
-    image: null,
-    comingSoon: true,
+    description: "Pendants and chains in 18ct gold",
+    image: "/products/tmc-import/the-iris-necklace-round-pendant/yellow.jpg",
   },
 ];
 
@@ -109,13 +108,6 @@ export default function FineJewelleryPage() {
                     </span>
                   </div>
                 </div>
-
-                {/* Coming Soon Badge */}
-                {category.comingSoon && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs uppercase tracking-wider">
-                    Coming Soon
-                  </div>
-                )}
               </Link>
             ))}
           </div>

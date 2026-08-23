@@ -15,13 +15,14 @@ interface DiamondShapeItem {
 }
 
 const diamondShapes: DiamondShapeItem[] = [
-  { shape: 'round',    name: 'Round Brilliant', description: 'Classic and most popular cut',  href: '/shop?shape=round'    },
+  { shape: 'round',    name: 'Round',           description: 'Classic and most popular cut',  href: '/shop?shape=round'    },
   { shape: 'oval',     name: 'Oval',            description: 'Elegant elongated brilliance',  href: '/shop?shape=oval'     },
   { shape: 'princess', name: 'Princess',        description: 'Modern square cut',             href: '/shop?shape=princess' },
   { shape: 'pear',     name: 'Pear',            description: 'Unique teardrop shape',         href: '/shop?shape=pear'     },
   { shape: 'radiant',  name: 'Radiant',         description: 'Brilliant rectangular cut',     href: '/shop?shape=radiant'  },
   { shape: 'emerald',  name: 'Emerald',         description: 'Step-cut elegance',             href: '/shop?shape=emerald'  },
-  { shape: 'marquise', name: 'Marquise',        description: 'Regal pointed oval',            href: '/shop?shape=marquise' },
+  { shape: 'marquise', name: 'Marquise',        description: 'Eye-shaped pointed oval',       href: '/shop?shape=marquise' },
+  { shape: 'asscher',  name: 'Asscher',         description: 'Square step-cut',               href: '/shop?shape=asscher'  },
   { shape: 'heart',    name: 'Heart',           description: 'Symbol of love',                href: '/shop?shape=heart'    },
   { shape: 'cushion',  name: 'Cushion',         description: 'Vintage pillow cut',            href: '/shop?shape=cushion'  },
 ];
@@ -128,11 +129,6 @@ export function DiamondShapesTrigger({
         className
       )}
     >
-      <DiamondShapeIcon
-        shape="princess"
-        size={16}
-        className="transition-transform duration-300 group-hover:scale-110"
-      />
       <span>Diamonds</span>
       <svg
         className={clsx(

@@ -93,7 +93,7 @@ const SIZES = [
 const CARAT_BUCKETS = ['1-1.5', '1.5-2', '2-2.5', '2.5-3', '3plus'];
 const QUALITY_BANNER = 'D–F colour • VS1+ clarity • GIA/IGI certified';
 const STONE_BLOCK =
-  '\n\nMetals: 18k Yellow, 18k Rose, 18k White, Platinum.\n\nDiamonds: D–F colour, VS1+ clarity.\n\nCertification: GIA or IGI.';
+  '\n\nAt Elysium, every piece is crafted using only the finest materials and exceptional standards. Our gold jewellery is available exclusively in 18ct yellow, white, and rose gold, with select designs offered in sophisticated 18ct gold and platinum two-tone combinations.\n\nFor our diamonds, we exclusively select D-F colour grades, chosen for their exceptional colourless appearance and brilliance. All of our centre diamonds for engagement rings are accompanied by certification from GIA or IGI, providing assurance of their quality, authenticity, and provenance.';
 
 // Curated per-ring data. Keyed by the TMC handle used in the manifest.
 // tier: 'solitaire' => £3,250, 'accented'/'trilogy' => £3,450.

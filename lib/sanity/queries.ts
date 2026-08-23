@@ -106,6 +106,19 @@ export async function getProductsFiltered(params: Record<string, string | undefi
     );
   }
 
+  if (params.featured === 'true' || params.featured === '1') {
+    filteredProducts = filteredProducts.filter((p) => p.isFeatured === true);
+  }
+
+  if (params.style) {
+    const style = (params.style || '').toLowerCase();
+    filteredProducts = filteredProducts.filter(
+      (p) =>
+        p.styles?.some((s) => s.toLowerCase() === style) ||
+        p.collections?.some((c) => c.toLowerCase() === style)
+    );
+  }
+
   // Apply metal filter if specified
   if (params.metal) {
     filteredProducts = filteredProducts.filter(p => 

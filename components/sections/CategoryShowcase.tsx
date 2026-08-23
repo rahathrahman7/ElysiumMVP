@@ -273,7 +273,6 @@ export function CategoryShowcase() {
   const headerRef = useRef<HTMLDivElement>(null);
   const bespokeRef = useRef<HTMLDivElement>(null);
   const bespokeHeadingRef = useRef<HTMLHeadingElement>(null);
-  const bentoRef = useRef<HTMLDivElement>(null);
   const weddingRef = useRef<HTMLDivElement>(null);
   const weddingImageRef = useRef<HTMLDivElement>(null);
   const weddingTextRef = useRef<HTMLDivElement>(null);
@@ -294,46 +293,6 @@ export function CategoryShowcase() {
     y: [12, 0],
   });
 
-  /* ─── Bento: scrub-based stagger reveal ─── */
-  useEffect(() => {
-    const container = bentoRef.current;
-    if (!container || reduced || typeof window === "undefined") return;
-    const items = container.querySelectorAll(".bento-reveal-item");
-    if (items.length === 0) return;
-
-    let ctx: { revert: () => void } | null = null;
-    let mounted = true;
-
-    void Promise.all([import("gsap"), import("gsap/ScrollTrigger")]).then(
-      ([{ gsap }, { ScrollTrigger }]) => {
-        if (!mounted) return;
-        gsap.registerPlugin(ScrollTrigger);
-        ctx = gsap.context(() => {
-          gsap.fromTo(
-            items,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              ease: "none",
-              stagger: 0.08,
-              scrollTrigger: {
-                trigger: container,
-                start: "top 85%",
-                end: "top 45%",
-                scrub: 1,
-              },
-            }
-          );
-        }, container);
-      }
-    );
-
-    return () => {
-      mounted = false;
-      ctx?.revert();
-    };
-  }, [reduced]);
 
   /* ─── Bespoke CTA: blur-to-sharp word reveal ─── */
   useEffect(() => {
@@ -378,46 +337,6 @@ export function CategoryShowcase() {
       ctx?.revert();
     };
   }, [reduced]);
-
-  /* ─── Bento carousel state ─── */
-  const bentoStripRef = useRef<HTMLDivElement>(null);
-  const [bentoPage, setBentoPage] = useState(0);
-  const BENTO_PER_PAGE = 6; // 3 cols × 2 rows
-  const bentoProducts = [
-    { href: "/products/crown-earrings", src: "/products/Earrings/Crown/crown-gold-front.PNG", alt: "Crown diamond studs", label: "Crown Studs", description: "Classic four-claw diamond studs, designed to be worn and loved for generations.", variants: [{ name: "gold", src: "/products/Earrings/Crown/crown-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Crown/crown-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Crown/crown-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/eternal-earrings", src: "/products/Earrings/Eternal/eternal-gold-front.PNG", alt: "Eternal diamond drops", label: "Eternal Drops", description: "Enduring elegance with a round-cut diamond in a classic four-claw setting.", variants: [{ name: "gold", src: "/products/Earrings/Eternal/eternal-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Eternal/eternal-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Eternal/eternal-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/essence-earrings", src: "/products/Earrings/Essence/essence-gold-front.PNG", alt: "Essence diamond studs", label: "Essence Studs", description: "Minimalist brilliance captured in a refined bezel setting for everyday luxury.", variants: [{ name: "gold", src: "/products/Earrings/Essence/essence-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Essence/essence-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Essence/essence-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/heirloom-earrings", src: "/products/Earrings/Heirloom/heirloom-gold-front.PNG", alt: "Heirloom diamond drops", label: "Heirloom Drops", description: "Timeless drop earrings with exceptional craftsmanship passed through generations.", variants: [{ name: "gold", src: "/products/Earrings/Heirloom/heirloom-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Heirloom/heirloom-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Heirloom/heirloom-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/timeless-earrings", src: "/products/Earrings/Timeless/timeless-gold-front.PNG", alt: "Timeless diamond studs", label: "Timeless Studs", description: "The quintessential diamond stud, effortlessly elevating every occasion.", variants: [{ name: "gold", src: "/products/Earrings/Timeless/timeless-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Timeless/timeless-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Timeless/timeless-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/pure-earrings", src: "/products/Earrings/Pure/pure-gold-front.PNG", alt: "Pure diamond studs", label: "Pure Studs", description: "Clean lines and pure brilliance in a contemporary setting for modern elegance.", variants: [{ name: "gold", src: "/products/Earrings/Pure/pure-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Pure/pure-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Pure/pure-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/refined-earrings", src: "/products/Earrings/Refined/refined-gold-front.PNG", alt: "Refined diamond drops", label: "Refined Drops", description: "Delicate drops that catch the light with every movement. Effortlessly sophisticated.", variants: [{ name: "gold", src: "/products/Earrings/Refined/refined-gold-front.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Earrings/Refined/refined-rose-front.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Earrings/Refined/refined-silver-front.PNG", swatch: SWATCH_COLOURS.silver }] },
-    { href: "/products/classic-4-claw-tennis-bracelet", src: "/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-gold2.PNG", alt: "Classic tennis bracelet", label: "Classic Tennis", description: "A continuous line of brilliant diamonds set in 18k gold. The ultimate statement.", variants: [{ name: "gold", src: "/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-gold2.PNG", swatch: SWATCH_COLOURS.gold }, { name: "rose", src: "/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-rose2.PNG", swatch: SWATCH_COLOURS.rose }, { name: "silver", src: "/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-silver2.PNG", swatch: SWATCH_COLOURS.silver }] },
-  ];
-  const bentoTotalPages = Math.ceil(bentoProducts.length / BENTO_PER_PAGE);
-
-  const advanceBento = useCallback(() => {
-    const next = (bentoPage + 1) % bentoTotalPages;
-    setBentoPage(next);
-    if (bentoStripRef.current) {
-      gsap.to(bentoStripRef.current, {
-        xPercent: -next * 100,
-        duration: 0.6,
-        ease: "power2.inOut",
-      });
-    }
-  }, [bentoPage, bentoTotalPages]);
-
-  const retreatBento = useCallback(() => {
-    const prev = bentoPage <= 0 ? bentoTotalPages - 1 : bentoPage - 1;
-    setBentoPage(prev);
-    if (bentoStripRef.current) {
-      gsap.to(bentoStripRef.current, {
-        xPercent: -prev * 100,
-        duration: 0.6,
-        ease: "power2.inOut",
-      });
-    }
-  }, [bentoPage, bentoTotalPages]);
 
   /* ─── Continuous marquee for For Her / For Him ─── */
   const forHerTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -550,7 +469,7 @@ export function CategoryShowcase() {
   }, [reduced]);
 
   return (
-    <section className="bg-[#FAF7F2]">
+    <section id="featured-collection" className="bg-[#FAF7F2] scroll-mt-24">
       {/* Inject expand-card hover styles (works on cloned nodes too) */}
       <style dangerouslySetInnerHTML={{ __html: expandStyles }} />
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -983,135 +902,6 @@ export function CategoryShowcase() {
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#B8963E]/30" />
             <div className="w-1.5 h-1.5 rotate-45 border border-[#B8963E]/40" />
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#B8963E]/30" />
-          </div>
-        </div>
-      </div>
-
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          FINE JEWELLERY BENTO GRID + CAROUSEL
-          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div ref={bentoRef} className="px-4 md:px-6 lg:px-10 pt-8 md:pt-12 pb-24 md:pb-32">
-        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6">
-          {/* Left: Tennis bracelet hero - height matches grid cards */}
-          <div className="bento-reveal-item lg:col-span-5">
-            <Link href="/products/classic-4-claw-tennis-bracelet" className="group block">
-              <div
-                className="relative overflow-hidden p-[6px]"
-                style={{ backgroundColor: "#E8E2DA", boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)" }}
-              >
-                <div className="relative h-[602px] md:h-[762px] overflow-hidden bg-white">
-                  <Image
-                    src="/products/Classic%204%20Claw%20Tennis%20Bracelet%20/3ct/classicTB3ct-gold.PNG"
-                    alt="Classic tennis bracelet"
-                    fill
-                    className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                    sizes="(max-width: 1024px) 100vw, 42vw"
-                  />
-                </div>
-              </div>
-            </Link>
-            <div className="mt-4">
-              <h4 className="font-serif text-[#6D3D0D] text-2xl md:text-3xl mb-2">Classic Tennis</h4>
-              <p className="text-[10px] text-[#6D3D0D]/40 tracking-[0.15em] mb-4">18K GOLD</p>
-              <Link
-                href="/products/classic-4-claw-tennis-bracelet"
-                className="inline-flex items-center gap-2 text-xs text-[#6D3D0D]/60 uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors duration-300"
-              >
-                View Collection <ArrowRight />
-              </Link>
-            </div>
-          </div>
-
-          {/* Right: Paginated 2×2 earring grid */}
-          <div className="bento-reveal-item lg:col-span-7 flex flex-col">
-            {/* Carousel viewport */}
-            <div className="overflow-hidden">
-              <div ref={bentoStripRef} className="flex will-change-transform" style={{ width: `${bentoTotalPages * 100}%` }}>
-                {Array.from({ length: bentoTotalPages }).map((_, pageIdx) => {
-                  const pageProducts = bentoProducts.slice(pageIdx * BENTO_PER_PAGE, (pageIdx + 1) * BENTO_PER_PAGE);
-                  const row1 = pageProducts.slice(0, 3);
-                  const row2 = pageProducts.slice(3, 6);
-                  return (
-                    <div key={pageIdx} className="flex flex-col gap-4" style={{ width: `${100 / bentoTotalPages}%` }}>
-                      <div className="bento-row flex gap-4 overflow-hidden">
-                        {row1.map((p) => (
-                          <ProductCard
-                            key={p.href}
-                            href={p.href}
-                            src={p.src}
-                            alt={p.alt}
-                            label={p.label}
-                            description={p.description}
-                            expandable
-                            aspect="aspect-[3/4]"
-                            variants={p.variants}
-                          />
-                        ))}
-                      </div>
-                      {row2.length > 0 && (
-                        <div className="bento-row flex gap-4 overflow-hidden">
-                          {row2.map((p) => (
-                            <ProductCard
-                              key={p.href}
-                              href={p.href}
-                              src={p.src}
-                              alt={p.alt}
-                              label={p.label}
-                              description={p.description}
-                              expandable
-                              aspect="aspect-[3/4]"
-                              variants={p.variants}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Navigation: arrows + dots + CTA */}
-            <div className="flex items-center justify-between pt-6">
-              {bentoTotalPages > 1 ? (
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={retreatBento}
-                    aria-label="Previous products"
-                    className="text-[#6D3D0D]/30 hover:text-[#D4AF37] transition-colors duration-300"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                    </svg>
-                  </button>
-                  <div className="flex gap-2">
-                    {Array.from({ length: bentoTotalPages }).map((_, i) => (
-                      <div
-                        key={i}
-                        className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                          i === bentoPage ? "bg-[#D4AF37]" : "bg-[#6D3D0D]/15"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <button
-                    onClick={advanceBento}
-                    aria-label="More fine jewellery"
-                    className="text-[#6D3D0D]/30 hover:text-[#D4AF37] transition-colors duration-300"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                    </svg>
-                  </button>
-                </div>
-              ) : <div />}
-              <Link
-                href="/fine-jewellery"
-                className="inline-flex items-center gap-2 text-xs text-[#D4AF37] uppercase tracking-[0.2em] hover:text-[#6D3D0D] transition-colors duration-300"
-              >
-                Explore Fine Jewellery <ArrowRight />
-              </Link>
-            </div>
           </div>
         </div>
       </div>

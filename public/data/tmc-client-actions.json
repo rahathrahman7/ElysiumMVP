@@ -22,11 +22,5 @@
     "type": "confirm",
     "label": "Virelle images",
     "reason": "Live as Virelle using the primary Top/Front_6016 renders (not the alternate 1080 Ophelia/6924 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
-  },
-  {
-    "handle": "the-eloise-ring-marquise-antique-halo",
-    "type": "note",
-    "label": "Ready to Wear FJ tiles (homepage)",
-    "reason": "Homepage Ready to Wear → 3 Fine Jewellery tiles (Earrings / Bracelets / Necklaces) is ready to build once you send lifestyle images for those three tiles. Reply here when assets are ready (or attach links)."
   }
 ]

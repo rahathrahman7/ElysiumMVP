@@ -14,13 +14,13 @@
   {
     "handle": "the-paloma-ring-cushion-cut-solitaire",
     "type": "confirm",
-    "label": "Avelon images",
-    "reason": "Live as Avelon using the primary Top/Front_6392 basket-head renders (not the alternate 1080 Paloma/7926 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
+    "label": "Avelon",
+    "reason": "Please check the Avelon images on the site and confirm they look correct (basket-head only)."
   },
   {
     "handle": "the-ophelia-ring-elongated-cushion-solitaire",
     "type": "confirm",
-    "label": "Virelle images",
-    "reason": "Live as Virelle using the primary Top/Front_6016 renders (not the alternate 1080 Ophelia/6924 set). Reply OK if that matches “basket type head”, or tell us which filenames to use."
+    "label": "Virelle",
+    "reason": "Please check the Virelle images on the site and confirm they look correct (basket-head only)."
   }
 ]

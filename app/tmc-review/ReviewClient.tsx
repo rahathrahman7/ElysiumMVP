@@ -117,7 +117,9 @@ export default function ReviewClient() {
         setRings(Array.isArray(catalog) ? catalog : []);
 
         try {
-          const actionsRes = await fetch("/data/tmc-client-actions.json");
+          const actionsRes = await fetch("/data/tmc-client-actions.json", {
+            cache: "no-store",
+          });
           const actions: ClientAction[] = actionsRes.ok ? await actionsRes.json() : [];
           if (active) setClientActions(Array.isArray(actions) ? actions : []);
         } catch {

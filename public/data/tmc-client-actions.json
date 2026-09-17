@@ -22,5 +22,23 @@
     "type": "confirm",
     "label": "Virelle",
     "reason": "Please check the Virelle images on the site and confirm they look correct (basket-head only)."
+  },
+  {
+    "handle": "the-isla-ring-round-solitaire-new",
+    "type": "confirm",
+    "label": "Celeste price",
+    "reason": "Lab Prices sheet lists Celeste from £1949; the site currently shows £2049. Which should we use?"
+  },
+  {
+    "handle": "the-luise-ring-oval-solitaire",
+    "type": "confirm",
+    "label": "Ovalis price",
+    "reason": "Lab Prices sheet lists Ovalis from £1949; the site currently shows £2179. Which should we use?"
+  },
+  {
+    "handle": "the-eloise-ring-marquise-antique-halo",
+    "type": "confirm",
+    "label": "Seraphina & Solange",
+    "reason": "Seraphina and Solange are on Lab Prices (4) but are not kept as new products on the review. Should we import them, or ignore?"
   }
 ]

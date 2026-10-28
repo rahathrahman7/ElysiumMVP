@@ -3,9 +3,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth/config';
 import { prisma } from '@/lib/database/prisma';
 import { AdminSidebar } from '@/components/admin/layout/AdminSidebar';
-
-const demoAdminEmail = process.env.DEMO_ADMIN_EMAIL;
-const disableAdminAuth = process.env.DISABLE_ADMIN_AUTH === 'true';
+import { isAdminAuthDisabled, isDemoAdminBypassEnabled } from '@/lib/auth/productionGuards';
 
 export const metadata = {
   title: 'ELYSIUM Admin Dashboard',
@@ -17,21 +15,26 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  if (!disableAdminAuth) {
-    // Check authentication
+  // DISABLE_ADMIN_AUTH / DEMO_ADMIN_* are ignored in production (fail closed).
+  if (!isAdminAuthDisabled()) {
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.id) {
       redirect('/api/auth/signin?callbackUrl=/admin');
     }
 
-    const sessionRole = (session.user as any).role;
+    const sessionRole = session.user.role;
     const sessionEmail = session.user.email;
+    const demoEmail = process.env.DEMO_ADMIN_EMAIL;
 
     if (sessionRole !== 'ADMIN') {
-      if (sessionEmail && demoAdminEmail && sessionEmail === demoAdminEmail) {
-        // Allow demo admin access
-      } else {
+      const demoAllowed =
+        isDemoAdminBypassEnabled() &&
+        sessionEmail &&
+        demoEmail &&
+        sessionEmail === demoEmail;
+
+      if (!demoAllowed) {
         const user = await prisma.user.findUnique({
           where: { id: session.user.id },
           select: { role: true }

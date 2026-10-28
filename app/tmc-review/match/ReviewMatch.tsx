@@ -27,6 +27,15 @@ function firstImage(ring: Ring) {
   return "";
 }
 
+function redirectIfUnauthorized(res: Response) {
+  if (res.status === 401 || res.status === 403) {
+    const next = encodeURIComponent(window.location.pathname || "/tmc-review/match");
+    window.location.href = `/tmc-review/login?callbackUrl=${next}`;
+    return true;
+  }
+  return false;
+}
+
 export default function ReviewMatch() {
   const [originals, setOriginals] = useState<Original[]>([]);
   const [tmc, setTmc] = useState<Ring[]>([]);
@@ -44,6 +53,7 @@ export default function ReviewMatch() {
           fetch("/data/tmc-review-catalog.json"),
           fetch("/api/tmc-matches"),
         ]);
+        if (redirectIfUnauthorized(mRes)) return;
         const o: Original[] = await oRes.json();
         const t: Ring[] = await tRes.json();
         const m = await mRes.json().catch(() => ({ bySlug: {} }));
@@ -106,6 +116,7 @@ export default function ReviewMatch() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ elysiumSlug: slug, elysiumTitle: title, tmcHandle }),
       });
+      if (redirectIfUnauthorized(res)) return;
       if (!res.ok) throw new Error();
       setSaveState("saved");
     } catch {

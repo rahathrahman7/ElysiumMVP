@@ -5,11 +5,9 @@ import GoogleProvider from 'next-auth/providers/google';
 import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/database/prisma';
 import { Adapter } from 'next-auth/adapters';
+import { isDemoAdminBypassEnabled } from '@/lib/auth/productionGuards';
 
-// Demo admin credentials - only enabled if explicitly set in environment
-// Remove these env vars in production for security
-const demoAdminEmail = process.env.DEMO_ADMIN_EMAIL;
-const demoAdminPassword = process.env.DEMO_ADMIN_PASSWORD;
+// Demo admin credentials — ignored when NODE_ENV or VERCEL_ENV is production.
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
@@ -26,15 +24,14 @@ export const authOptions: NextAuthOptions = {
         }
 
         const isDemoCredentials =
-          demoAdminEmail &&
-          demoAdminPassword &&
-          credentials.email === demoAdminEmail &&
-          credentials.password === demoAdminPassword;
+          isDemoAdminBypassEnabled() &&
+          credentials.email === process.env.DEMO_ADMIN_EMAIL &&
+          credentials.password === process.env.DEMO_ADMIN_PASSWORD;
 
         if (isDemoCredentials) {
           return {
             id: 'demo-admin',
-            email: demoAdminEmail,
+            email: process.env.DEMO_ADMIN_EMAIL,
             name: 'Demo Admin',
             role: 'ADMIN',
           };

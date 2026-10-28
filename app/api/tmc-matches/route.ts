@@ -1,6 +1,18 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { dbErrorMessage, loadMatchFallback } from "@/lib/tmc/review-fallback";
+import { requireTmcReviewAccess } from "@/lib/auth/tmcReviewAuth";
+import { ForbiddenError, UnauthorizedError } from "@/lib/auth/adminAuth";
+
+function authErrorResponse(error: unknown) {
+  if (error instanceof UnauthorizedError) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  if (error instanceof ForbiddenError) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return null;
+}
 
 export const dynamic = "force-dynamic";
 
@@ -10,8 +22,9 @@ const schema = z.object({
   tmcHandle: z.string().max(200).nullable().optional(),
 });
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    await requireTmcReviewAccess(request);
     const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
 
     if (!resolveDatabaseUrl()) {
@@ -40,6 +53,8 @@ export async function GET() {
     }
     return NextResponse.json({ ok: true, bySlug, ownedByHandle, source: "database" });
   } catch (error) {
+    const auth = authErrorResponse(error);
+    if (auth) return auth;
     console.error("[tmc-matches] GET error:", error);
     return NextResponse.json({
       ok: true,
@@ -52,6 +67,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    await requireTmcReviewAccess(request);
     const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
 
     if (!resolveDatabaseUrl()) {
@@ -76,6 +92,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
+    const auth = authErrorResponse(error);
+    if (auth) return auth;
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: "Validation error", details: error.issues },

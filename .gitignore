@@ -12,6 +12,8 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.e2e
+.env.e2e.local
 
 # Logs
 npm-debug.log*

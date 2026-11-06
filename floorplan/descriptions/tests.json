@@ -1,0 +1,20 @@
+{
+  "files": {
+    "components/integration/LuxuryIntegrationTest.tsx": {
+      "name": "Luxury features demo",
+      "description": "Shows the product configurator and concierge chat working together on a test product for internal review."
+    },
+    "tests/screenshots.spec.ts": {
+      "name": "Page screenshot capture",
+      "description": "Visits the home, shop, product, and wishlist pages and saves full-page screenshots for visual review."
+    },
+    "tests/smoke.spec.ts": {
+      "name": "Checkout walkthrough",
+      "description": "Opens the homepage, picks a ring, adds it to the bag, and starts checkout to confirm the whole flow works."
+    },
+    "tests/styling.spec.ts": {
+      "name": "Homepage styling check",
+      "description": "Loads the homepage and verifies that the hero section, featured products, and navigation look correct."
+    }
+  }
+}

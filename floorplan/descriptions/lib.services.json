@@ -1,0 +1,36 @@
+{
+  "files": {
+    "lib/services/admin.ts": {
+      "name": "Dashboard overview",
+      "description": "Pulls together the headline numbers and pending enquiries the admin dashboard shows when it first loads."
+    },
+    "lib/services/analytics.ts": {
+      "name": "Product view tracking",
+      "description": "Records which products each visitor looks at and uses that history to show recently-viewed and trending items."
+    },
+    "lib/services/cart.ts": {
+      "name": "Shopping bag",
+      "description": "Adds, updates, and removes items in a customer's shopping bag and keeps the running item count."
+    },
+    "lib/services/email.ts": {
+      "name": "Order and alert emails",
+      "description": "Sends the team an email when a new order arrives, a waitlist signup happens, or something else needs attention."
+    },
+    "lib/services/inventory.ts": {
+      "name": "Stock management",
+      "description": "Tracks how many of each product are in stock, reserves items during checkout, and flags anything running low."
+    },
+    "lib/services/leads.ts": {
+      "name": "Bespoke enquiry leads",
+      "description": "Stores and manages custom-design enquiries so the team can review, update, and follow up on each one."
+    },
+    "lib/services/orders.ts": {
+      "name": "Order records",
+      "description": "Creates new orders after payment, looks them up by number or customer, and lets the team update their status."
+    },
+    "lib/services/wishlist.ts": {
+      "name": "Customer wishlist",
+      "description": "Lets signed-in customers save products to a personal wishlist and check whether an item is already saved."
+    }
+  }
+}

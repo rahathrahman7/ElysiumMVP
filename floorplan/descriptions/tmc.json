@@ -1,0 +1,36 @@
+{
+  "files": {
+    "app/test-carousel/page.tsx": {
+      "name": "Carousel preview page",
+      "description": "Opens a standalone test page to preview how the horizontal product carousel looks and scrolls."
+    },
+    "app/tmc-review/match/page.tsx": {
+      "name": "Supplier match page",
+      "description": "Opens the screen where staff pair each existing Elysium product with the matching ring from TMC's catalogue."
+    },
+    "app/tmc-review/match/ReviewMatch.tsx": {
+      "name": "Supplier match tool",
+      "description": "Lets staff search TMC's catalogue, pick the matching ring for each Elysium product, and save the pairing."
+    },
+    "app/tmc-review/page.tsx": {
+      "name": "Supplier review page",
+      "description": "Opens the screen where staff review every ring in TMC's catalogue and decide which ones to sell."
+    },
+    "app/tmc-review/ReviewClient.tsx": {
+      "name": "Supplier ring reviewer",
+      "description": "Lets staff browse TMC's full ring list, set a display name and price, add notes, and mark each ring to keep or skip."
+    },
+    "lib/tmc/client-actions.ts": {
+      "name": "Review follow-up helpers",
+      "description": "Formats and tracks follow-up questions between staff and the supplier during the ring review process."
+    },
+    "lib/tmc/notify-review.ts": {
+      "name": "Review notification sender",
+      "description": "Sends an email and a notification to the team whenever a ring review decision is saved."
+    },
+    "lib/tmc/review-fallback.ts": {
+      "name": "Review backup data",
+      "description": "Loads a saved snapshot of review decisions so the tool still works when the database is temporarily unavailable."
+    }
+  }
+}

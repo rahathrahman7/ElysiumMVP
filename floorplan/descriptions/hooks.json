@@ -1,0 +1,44 @@
+{
+  "files": {
+    "hooks/useConfiguratorShare.ts": {
+      "name": "Shareable ring build link",
+      "description": "Saves the customer's ring choices into the page address so they can copy and share a link to their exact build."
+    },
+    "hooks/useFadeInOnScroll.ts": {
+      "name": "Scroll fade-in",
+      "description": "Fades an element smoothly into view when the visitor scrolls it onto the screen."
+    },
+    "hooks/useKeyboardNavigation.ts": {
+      "name": "Keyboard navigation",
+      "description": "Lets visitors move through menus, modals, and lists using arrow keys, Tab, and Escape for full keyboard access."
+    },
+    "hooks/useParallax.ts": {
+      "name": "Parallax scroll effect",
+      "description": "Adds a subtle depth effect by moving an element at a different speed as the visitor scrolls."
+    },
+    "hooks/usePerformance.ts": {
+      "name": "Page speed tracking",
+      "description": "Measures how fast each page loads and reports the numbers so the team can spot and fix slowdowns."
+    },
+    "hooks/useRecentlyViewed.ts": {
+      "name": "Recently viewed products",
+      "description": "Remembers which products the customer looked at and shows them again for easy comparison."
+    },
+    "hooks/useReducedMotion.ts": {
+      "name": "Reduced motion check",
+      "description": "Detects when a visitor has asked their device to limit animations and turns off motion effects to respect that choice."
+    },
+    "hooks/useScrollReveal.ts": {
+      "name": "Scroll reveal animation",
+      "description": "Animates an element's opacity, position, or scale as it enters the screen during scrolling."
+    },
+    "hooks/useStaggerChildren.ts": {
+      "name": "Staggered children reveal",
+      "description": "Reveals a group of child items one by one with a short delay between each as the visitor scrolls."
+    },
+    "hooks/useWishlist.ts": {
+      "name": "Wishlist",
+      "description": "Lets customers save favourite products to a wishlist and check whether a product is already saved."
+    }
+  }
+}

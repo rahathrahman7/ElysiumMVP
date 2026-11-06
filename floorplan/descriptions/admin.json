@@ -1,0 +1,60 @@
+{
+  "files": {
+    "app/admin/analytics/page.tsx": {
+      "name": "Sales analytics",
+      "description": "Shows staff charts and figures for revenue, order volume, and sales trends over time."
+    },
+    "app/admin/customers/page.tsx": {
+      "name": "Customer list",
+      "description": "Lists every customer with their contact details and order history for staff to review."
+    },
+    "app/admin/inquiries/page.tsx": {
+      "name": "Bespoke enquiries",
+      "description": "Shows all bespoke and custom-order enquiries so staff can review, respond to, and update each one."
+    },
+    "app/admin/inventory/page.tsx": {
+      "name": "Inventory management",
+      "description": "Displays current stock levels for every product and lets staff adjust quantities."
+    },
+    "app/admin/layout.tsx": {
+      "name": "Staff-only access",
+      "description": "Checks that the signed-in user is an admin before showing any dashboard page, and redirects everyone else away."
+    },
+    "app/admin/orders/page.tsx": {
+      "name": "Order management",
+      "description": "Lists all customer orders with their status and totals so staff can track fulfilment."
+    },
+    "app/admin/page.tsx": {
+      "name": "Dashboard overview",
+      "description": "Shows a summary of today's key numbers — revenue, new orders, pending enquiries — as soon as staff open the dashboard."
+    },
+    "components/admin/dashboard/PendingInquiries.tsx": {
+      "name": "Pending enquiries panel",
+      "description": "Highlights the most recent unanswered bespoke enquiries on the dashboard so staff can act on them quickly."
+    },
+    "components/admin/dashboard/RecentOrders.tsx": {
+      "name": "Recent orders panel",
+      "description": "Shows the latest orders on the dashboard so staff can see new purchases at a glance."
+    },
+    "components/admin/layout/AdminHeader.tsx": {
+      "name": "Dashboard header bar",
+      "description": "Displays the page title, breadcrumbs, and quick-action buttons at the top of every dashboard page."
+    },
+    "components/admin/layout/AdminSidebar.tsx": {
+      "name": "Dashboard sidebar",
+      "description": "Shows navigation links down the left side of the dashboard for orders, inventory, enquiries, customers, and analytics."
+    },
+    "components/admin/ui/AdminBadge.tsx": {
+      "name": "Status badges",
+      "description": "Shows colour-coded labels for order and enquiry statuses like Pending, Shipped, or Completed."
+    },
+    "components/admin/ui/AdminButton.tsx": {
+      "name": "Dashboard button",
+      "description": "Renders a consistently styled button used for actions throughout the admin dashboard."
+    },
+    "components/admin/ui/AdminCard.tsx": {
+      "name": "Dashboard stat cards",
+      "description": "Displays a single metric — such as total revenue or order count — inside a neat card on the dashboard."
+    }
+  }
+}

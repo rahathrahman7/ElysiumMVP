@@ -1,0 +1,45 @@
+{
+  "files": {
+    "components/sections/CategoryShowcase.tsx": {
+      "name": "Category showcase",
+      "description": "Displays the main product categories on the homepage with images, titles and links so customers can jump to what interests them."
+    },
+    "components/sections/CollectionGrid.tsx": {
+      "name": "Collection grid",
+      "description": "Lays out a collection of products in a neat grid with images, names and prices."
+    },
+    "components/sections/EditorialTeasers.tsx": {
+      "name": "Editorial teasers",
+      "description": "Shows magazine-style story cards that link to educational or brand-story pages."
+    },
+    "components/sections/Hero.tsx": {
+      "name": "Hero banner",
+      "description": "A large banner at the top of a page with a headline, description and a call-to-action button."
+    },
+    "components/sections/HorizontalProductCarousel.tsx": {
+      "name": "Product carousel",
+      "description": "A scrollable row of product cards that customers can swipe or arrow through."
+    },
+    "components/sections/LuxuryHero.tsx": {
+      "name": "Homepage hero",
+      "description": "The full-screen opening section of the homepage with animated text, a background image and shop-now buttons."
+    },
+    "components/sections/QuickShopChips.tsx": {
+      "name": "Quick-shop chips",
+      "description": "A row of tappable labels for popular categories so customers can jump straight to engagement rings, bands or earrings."
+    },
+    "components/sections/Testimonials.tsx": {
+      "name": "Customer testimonials",
+      "description": "Displays real customer quotes in a rotating carousel to build trust and social proof."
+    },
+    "components/sections/TrustStrip.tsx": {
+      "name": "Trust badges",
+      "description": "Shows reassuring icons and promises — free shipping, lifetime warranty, ethically sourced — in a horizontal strip."
+    },
+    "components/sections/ValueBar.tsx": {
+      "name": "Value proposition bar",
+      "description": "Highlights key selling points like handcrafted quality and complimentary resizing in a slim bar."
+    }
+  },
+  "routes": {}
+}

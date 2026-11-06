@@ -1,0 +1,8 @@
+{
+  "files": {
+    "lib/database/prisma.ts": {
+      "name": "Database connection",
+      "description": "Opens and shares a single connection to the Postgres database used for orders, customers, inventory, and carts."
+    }
+  }
+}

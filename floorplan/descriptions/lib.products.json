@@ -1,0 +1,56 @@
+{
+  "files": {
+    "lib/applyFilters.ts": {
+      "name": "Product filtering",
+      "description": "Narrows the product list down to only the items that match the customer's chosen filters."
+    },
+    "lib/catalog.ts": {
+      "name": "Featured and collections",
+      "description": "Returns the featured products and the products belonging to a specific collection."
+    },
+    "lib/currency.ts": {
+      "name": "Price formatting",
+      "description": "Formats a number as a British-pound price string for display on the site."
+    },
+    "lib/env.ts": {
+      "name": "Environment settings",
+      "description": "Reads the secret keys and configuration values the site needs for Stripe, Sanity, email, and analytics."
+    },
+    "lib/filterSchema.ts": {
+      "name": "Filter options",
+      "description": "Defines the available filter categories like metal, stone, and price and converts customer selections to and from the page address."
+    },
+    "lib/gsap.ts": {
+      "name": "Scroll animations",
+      "description": "Loads the animation library used for smooth scroll-triggered effects throughout the storefront."
+    },
+    "lib/imageResolver.ts": {
+      "name": "Product image picker",
+      "description": "Chooses the right gallery photos for a product based on its metal colour, supplier images, and lifestyle shots."
+    },
+    "lib/nivoda.ts": {
+      "name": "Diamond sourcing",
+      "description": "Searches the Nivoda diamond marketplace to find and price loose stones that fit a customer's ring build."
+    },
+    "lib/products.ts": {
+      "name": "Product catalogue",
+      "description": "Holds the master list of all products and provides look-up by slug, visibility filtering, and async loading."
+    },
+    "lib/productTypes.ts": {
+      "name": "Product definitions",
+      "description": "Describes what a product looks like in the system — metals, carats, origins, sizes, and colour swatches."
+    },
+    "lib/seo.ts": {
+      "name": "Search engine tags",
+      "description": "Generates the meta tags and structured data that help Google and social platforms display product listings correctly."
+    },
+    "lib/storage.ts": {
+      "name": "Saved items memory",
+      "description": "Remembers the visitor's wishlist and recently-viewed products in their browser so they persist between visits."
+    },
+    "lib/urlState.ts": {
+      "name": "Ring build in address",
+      "description": "Saves and restores a customer's ring-builder choices (origin, carat, metal, size) in the page address so they can share a link."
+    }
+  }
+}

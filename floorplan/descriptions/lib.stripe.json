@@ -1,0 +1,8 @@
+{
+  "files": {
+    "lib/stripe/client.ts": {
+      "name": "Checkout payment",
+      "description": "Sends the customer's bag to Stripe and redirects them to the secure payment page to complete their purchase."
+    }
+  }
+}

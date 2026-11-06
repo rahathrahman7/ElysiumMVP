@@ -1,0 +1,37 @@
+{
+  "files": {
+    "app/test-carousel/page.tsx": {
+      "name": "Carousel test page",
+      "description": "A test page for previewing the product carousel layout before it goes live."
+    },
+    "app/tmc-review/match/page.tsx": {
+      "name": "Ring matching page",
+      "description": "Shows the tool where staff link Elysium ring designs to their TMC supplier equivalents."
+    },
+    "app/tmc-review/match/ReviewMatch.tsx": {
+      "name": "Ring matcher",
+      "description": "Lets staff search and pair each Elysium design with the matching TMC supplier ring side by side."
+    },
+    "app/tmc-review/page.tsx": {
+      "name": "TMC review page",
+      "description": "Shows the supplier ring catalogue so staff can mark which rings to include in the shop."
+    },
+    "app/tmc-review/ReviewClient.tsx": {
+      "name": "Ring review tool",
+      "description": "The main review interface where staff browse TMC rings, set prices, choose metals and decide what to keep."
+    },
+    "lib/tmc/client-actions.ts": {
+      "name": "Review actions",
+      "description": "Handles the back-and-forth between staff reviewing TMC rings: replies, follow-ups and status labels."
+    },
+    "lib/tmc/notify-review.ts": {
+      "name": "Review notification",
+      "description": "Sends an email and a notification when a TMC ring review decision is saved."
+    },
+    "lib/tmc/review-fallback.ts": {
+      "name": "Review fallback data",
+      "description": "Provides a backup copy of TMC review decisions when the database is temporarily unavailable."
+    }
+  },
+  "routes": {}
+}

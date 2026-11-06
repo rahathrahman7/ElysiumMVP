@@ -1,0 +1,45 @@
+{
+  "files": {
+    "hooks/useConfiguratorShare.ts": {
+      "name": "Share a build",
+      "description": "Creates a shareable link that captures the customer's exact ring configuration so they can send it to someone."
+    },
+    "hooks/useFadeInOnScroll.ts": {
+      "name": "Fade-in animation",
+      "description": "Makes page sections gently appear as the customer scrolls down to them."
+    },
+    "hooks/useKeyboardNavigation.ts": {
+      "name": "Keyboard navigation",
+      "description": "Lets customers use the keyboard to move through menus, galleries and dropdowns for better accessibility."
+    },
+    "hooks/useParallax.ts": {
+      "name": "Parallax effect",
+      "description": "Makes background images move at a different speed from the text, creating a sense of depth as the customer scrolls."
+    },
+    "hooks/usePerformance.ts": {
+      "name": "Speed monitoring",
+      "description": "Tracks how fast pages load and reports performance numbers so slow spots can be found and fixed."
+    },
+    "hooks/useRecentlyViewed.ts": {
+      "name": "Recently viewed tracker",
+      "description": "Remembers which products a customer has looked at and fetches their details for the recently-viewed section."
+    },
+    "hooks/useReducedMotion.ts": {
+      "name": "Reduced motion check",
+      "description": "Detects when a customer has asked their device to reduce animations and turns off motion effects."
+    },
+    "hooks/useScrollReveal.ts": {
+      "name": "Scroll reveal",
+      "description": "Triggers entrance animations on elements as they scroll into view, adding polish to the browsing experience."
+    },
+    "hooks/useStaggerChildren.ts": {
+      "name": "Staggered entrance",
+      "description": "Makes a group of items appear one after another with a slight delay, giving product grids a flowing entrance."
+    },
+    "hooks/useWishlist.ts": {
+      "name": "Wishlist tracker",
+      "description": "Keeps track of which products the customer has saved as favourites across the whole site."
+    }
+  },
+  "routes": {}
+}

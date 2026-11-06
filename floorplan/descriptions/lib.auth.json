@@ -1,0 +1,12 @@
+{
+  "files": {
+    "lib/auth/adminAuth.ts": {
+      "name": "Admin access checks",
+      "description": "Verifies that the person making a request is a logged-in admin before allowing access to staff-only features."
+    },
+    "lib/auth/config.ts": {
+      "name": "Sign-in settings",
+      "description": "Configures how customers and staff sign in, supporting email-and-password and Google login."
+    }
+  }
+}

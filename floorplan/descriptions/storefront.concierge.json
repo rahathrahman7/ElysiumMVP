@@ -1,0 +1,13 @@
+{
+  "files": {
+    "components/concierge/ConciergeWidget.tsx": {
+      "name": "Chat bubble",
+      "description": "Shows a floating button in the corner that opens the personal shopping assistant chat."
+    },
+    "components/concierge/LuxuryConciergeChat.tsx": {
+      "name": "Concierge chat window",
+      "description": "A full chat interface where customers can ask questions and get personalised jewellery recommendations."
+    }
+  },
+  "routes": {}
+}

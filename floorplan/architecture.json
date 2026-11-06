@@ -1,0 +1,366 @@
+{
+  "$schema": "floorplan/architecture@1",
+  "project": {
+    "name": "Elysium",
+    "summary": "A luxury jewellery e-commerce storefront built with Next.js. Customers browse engagement rings and fine jewellery, configure ring options, and check out with Stripe. Staff manage orders, inventory and bespoke enquiries through an admin dashboard. Product content comes from Sanity CMS and a local catalogue, with data kept in PostgreSQL.",
+    "entrypoints": ["app/layout.tsx", "app/page.tsx"]
+  },
+  "audience": "everyone",
+  "include": ["code", "config"],
+  "ignore": [
+    "public/**",
+    "Public/**",
+    "docs/**",
+    "planning and client meetings/**",
+    "mcp_artifacts/**",
+    "exports/**",
+    "qa/**",
+    "data/products/**",
+    "pnpm-lock.yaml",
+    "floorplan/**"
+  ],
+  "nodes": [
+    {
+      "id": "storefront",
+      "label": "Storefront",
+      "kind": "ui",
+      "summary": "The customer-facing website: homepage, product pages, collection browsing, shopping cart, checkout and account screens.",
+      "paths": ["app/**", "components/**"],
+      "exclude": ["app/api/**", "app/admin/**", "components/admin/**"]
+    },
+    {
+      "id": "storefront.pages",
+      "parent": "storefront",
+      "label": "Pages",
+      "kind": "feature",
+      "summary": "Each screen a customer can visit: home, shop, collections, product detail, cart, checkout, about, contact, FAQs and policies.",
+      "paths": ["app/page.tsx", "app/layout.tsx", "app/error.tsx", "app/global-error.tsx", "app/sitemap.ts", "app/about/**", "app/bespoke/**", "app/cart/**", "app/checkout/**", "app/collection/**", "app/contact/**", "app/diamonds/**", "app/education/**", "app/faq/**", "app/fine-jewellery/**", "app/heroes/**", "app/privacy/**", "app/prive-collection/**", "app/products/**", "app/resizing/**", "app/shipping/**", "app/shop/**", "app/terms/**", "app/wishlist/**"]
+    },
+    {
+      "id": "storefront.sections",
+      "parent": "storefront",
+      "label": "Page sections",
+      "kind": "feature",
+      "summary": "Reusable building blocks that make up the homepage and landing pages: hero banners, product carousels, testimonials, trust badges and category showcases.",
+      "paths": ["components/sections/**"]
+    },
+    {
+      "id": "storefront.product",
+      "parent": "storefront",
+      "label": "Product experience",
+      "kind": "feature",
+      "summary": "Everything on a product page: photo gallery, zoom, configuration options (metal, size, stone), sticky price summary, reviews, recently viewed, and share-a-build.",
+      "paths": ["components/pdp/**", "components/products/**", "components/configurator/**", "components/config/**"]
+    },
+    {
+      "id": "storefront.filters",
+      "parent": "storefront",
+      "label": "Browsing & filters",
+      "kind": "feature",
+      "summary": "Lets customers narrow products by shape, metal, price and other attributes using a filter drawer and chips.",
+      "paths": ["components/filters/**"]
+    },
+    {
+      "id": "storefront.bespoke",
+      "parent": "storefront",
+      "label": "Bespoke enquiry",
+      "kind": "feature",
+      "summary": "A step-by-step wizard where customers describe a custom ring they'd like made, including file uploads and budget.",
+      "paths": ["components/bespoke/**", "components/BespokeForm.tsx"]
+    },
+    {
+      "id": "storefront.cart",
+      "parent": "storefront",
+      "label": "Cart & wishlist",
+      "kind": "feature",
+      "summary": "The slide-out cart drawer, mini cart icon and wishlist heart button that let customers save and buy items.",
+      "paths": ["components/CartDrawer.tsx", "components/MiniCartIcon.tsx", "components/WishlistIcon.tsx", "components/common/WishHeart.tsx"]
+    },
+    {
+      "id": "storefront.ui",
+      "parent": "storefront",
+      "label": "Shared UI kit",
+      "kind": "library",
+      "summary": "Common building blocks used across every screen: header, buttons, product cards, breadcrumbs, search bar, image loader, modals, accessibility helpers and loading spinners.",
+      "paths": ["components/ui/**", "components/icons/**", "components/ux/**", "components/navigation/**", "components/mobile/**", "components/providers/**", "components/ConditionalChrome.tsx", "components/ConditionalLayout.tsx", "components/PlausibleAnalytics.tsx", "components/ServiceWorkerRegistration.tsx", "components/HeroImage.tsx", "components/OptionsSelector.tsx", "components/Price.tsx", "components/ProductGallery.tsx", "components/RingSizeGuide.tsx", "components/ShopGrid.tsx", "styles/**"]
+    },
+    {
+      "id": "storefront.concierge",
+      "parent": "storefront",
+      "label": "Concierge chat",
+      "kind": "feature",
+      "summary": "A floating chat widget that offers personal shopping assistance to visitors.",
+      "paths": ["components/concierge/**"]
+    },
+    {
+      "id": "storefront.prive",
+      "parent": "storefront",
+      "label": "Privé collection",
+      "kind": "feature",
+      "summary": "An invitation-only or coming-soon collection page with a waitlist sign-up modal.",
+      "paths": ["components/prive/**"]
+    },
+    {
+      "id": "storefront.finejewellery",
+      "parent": "storefront",
+      "label": "Fine jewellery",
+      "kind": "feature",
+      "summary": "Browsing and hero sections for the fine-jewellery category: earrings, necklaces, bracelets.",
+      "paths": ["components/fine-jewellery/**"]
+    },
+    {
+      "id": "admin",
+      "label": "Admin dashboard",
+      "kind": "ui",
+      "summary": "A staff-only area for managing orders, inventory levels, bespoke enquiries, and viewing sales statistics.",
+      "paths": ["app/admin/**", "components/admin/**"]
+    },
+    {
+      "id": "tmc",
+      "label": "TMC review tool",
+      "kind": "ui",
+      "summary": "An internal tool for reviewing and selecting rings from TMC (The Master Craftsman) supplier catalogue for inclusion in the Elysium storefront.",
+      "paths": ["app/tmc-review/**", "app/test-carousel/**", "lib/tmc/**"]
+    },
+    {
+      "id": "api",
+      "label": "Server",
+      "kind": "service",
+      "summary": "The Next.js API routes that power everything behind the screens: user accounts, shopping cart, checkout, orders, inventory, wishlists, bespoke enquiries and admin operations.",
+      "paths": ["app/api/**"]
+    },
+    {
+      "id": "api.auth",
+      "parent": "api",
+      "label": "Sign-in",
+      "kind": "feature",
+      "summary": "Handles customer registration, email/password login and Google sign-in so people can track orders and save wishlists.",
+      "paths": ["app/api/auth/**"]
+    },
+    {
+      "id": "api.shop",
+      "parent": "api",
+      "label": "Shopping requests",
+      "kind": "feature",
+      "summary": "Requests for the cart, checkout, orders, products, inventory, wishlists, recently-viewed tracking and waitlist sign-ups.",
+      "paths": ["app/api/cart/**", "app/api/checkout/**", "app/api/orders/**", "app/api/products/**", "app/api/inventory/**", "app/api/wishlist/**", "app/api/analytics/**", "app/api/waitlist/**", "app/api/bespoke/**"]
+    },
+    {
+      "id": "api.admin",
+      "parent": "api",
+      "label": "Admin requests",
+      "kind": "feature",
+      "summary": "Staff-only requests for the dashboard: sales stats, order management, inventory updates and bespoke enquiry handling.",
+      "paths": ["app/api/admin/**"]
+    },
+    {
+      "id": "api.webhooks",
+      "parent": "api",
+      "label": "Stripe alerts",
+      "kind": "feature",
+      "summary": "Stripe calls this when a payment succeeds, fails or is refunded, so the order status updates automatically.",
+      "paths": ["app/api/webhooks/**"]
+    },
+    {
+      "id": "api.integrations",
+      "parent": "api",
+      "label": "Supplier integrations",
+      "kind": "feature",
+      "summary": "Requests that talk to the Nivoda diamond marketplace and TMC supplier catalogue.",
+      "paths": ["app/api/test-nivoda/**", "app/api/tmc-review/**", "app/api/tmc-matches/**"]
+    },
+    {
+      "id": "lib",
+      "label": "Shared logic",
+      "kind": "library",
+      "summary": "Business logic and helpers used by both screens and the server: database queries, authentication checks, payment processing, email sending, product data and validation.",
+      "paths": ["lib/**"]
+    },
+    {
+      "id": "lib.database",
+      "parent": "lib",
+      "label": "Database",
+      "kind": "data",
+      "summary": "The Prisma client setup and direct database queries for reading and writing orders, cart items, inventory and customer data.",
+      "paths": ["lib/database/**"]
+    },
+    {
+      "id": "lib.services",
+      "parent": "lib",
+      "label": "Business services",
+      "kind": "library",
+      "summary": "The core business logic: managing the cart, processing orders, tracking inventory, handling bespoke leads, sending emails, recording analytics and admin authentication.",
+      "paths": ["lib/services/**"]
+    },
+    {
+      "id": "lib.auth",
+      "parent": "lib",
+      "label": "Authentication",
+      "kind": "library",
+      "summary": "NextAuth.js configuration for customer sign-in (email/password and Google) and admin access checks.",
+      "paths": ["lib/auth/**"]
+    },
+    {
+      "id": "lib.stripe",
+      "parent": "lib",
+      "label": "Payments",
+      "kind": "library",
+      "summary": "Stripe integration for taking card payments at checkout and processing webhook events.",
+      "paths": ["lib/stripe/**"]
+    },
+    {
+      "id": "lib.sanity",
+      "parent": "lib",
+      "label": "Content (Sanity)",
+      "kind": "library",
+      "summary": "Fetches product descriptions, images and editorial content from the Sanity headless CMS.",
+      "paths": ["lib/sanity/**"]
+    },
+    {
+      "id": "lib.products",
+      "parent": "lib",
+      "label": "Product catalogue",
+      "kind": "library",
+      "summary": "Product definitions, pricing, filtering logic, image resolution and the local catalogue data that powers the shop when Sanity isn't involved.",
+      "paths": ["lib/catalog.ts", "lib/products.ts", "lib/productTypes.ts", "lib/applyFilters.ts", "lib/filterSchema.ts", "lib/imageResolver.ts", "lib/currency.ts", "lib/nivoda.ts", "lib/urlState.ts", "lib/env.ts", "lib/seo.ts", "lib/gsap.ts", "lib/storage.ts"]
+    },
+    {
+      "id": "lib.validation",
+      "parent": "lib",
+      "label": "Validation",
+      "kind": "library",
+      "summary": "Input validation rules for checkout forms, bespoke enquiries and other user-submitted data.",
+      "paths": ["lib/validation/**"]
+    },
+    {
+      "id": "lib.state",
+      "parent": "lib",
+      "label": "App state",
+      "kind": "library",
+      "summary": "Zustand store that keeps the cart and other session data in sync across screens.",
+      "paths": ["lib/state/**"]
+    },
+    {
+      "id": "hooks",
+      "label": "Screen helpers",
+      "kind": "library",
+      "summary": "React hooks that add scroll animations, parallax effects, keyboard navigation, performance monitoring and wishlist/recently-viewed tracking to the screens.",
+      "paths": ["hooks/**"]
+    },
+    {
+      "id": "data",
+      "label": "Data & schema",
+      "kind": "data",
+      "summary": "The database schema (Prisma), Sanity CMS content schemas, and TypeScript type definitions that describe products, orders and other business objects.",
+      "paths": ["sanity/**", "types/**"]
+    },
+    {
+      "id": "scripts",
+      "label": "Build & import scripts",
+      "kind": "script",
+      "summary": "One-off and recurring scripts: importing products from the TMC supplier, building image manifests, seeding the database, auditing data, and setting up third-party services.",
+      "paths": ["scripts/**"]
+    },
+    {
+      "id": "tests",
+      "label": "Tests",
+      "kind": "test",
+      "summary": "Playwright browser tests and integration test support for the storefront.",
+      "paths": ["tests/**", "components/integration/**"]
+    },
+    {
+      "id": "config",
+      "label": "Configuration",
+      "kind": "config",
+      "summary": "Build and deploy settings: Next.js config, Tailwind theme, TypeScript, ESLint, PostCSS, Playwright and Vercel deployment.",
+      "paths": ["next.config.mjs", "tailwind.config.ts", "tsconfig.json", ".eslintrc.json", "postcss.config.mjs", "playwright.config.ts", "vercel.json", "prisma.config.ts", ".npmrc", ".nvmrc", "package.json"]
+    },
+    {
+      "id": "stripe-ext",
+      "label": "Stripe",
+      "kind": "external",
+      "summary": "Handles card payments and sends alerts when payments succeed or fail.",
+      "packages": ["stripe"]
+    },
+    {
+      "id": "postgres",
+      "label": "PostgreSQL",
+      "kind": "external",
+      "summary": "The database where all customer accounts, orders, cart items, inventory and enquiries are stored.",
+      "packages": ["@prisma/client", "@prisma/adapter-pg", "prisma", "pg"]
+    },
+    {
+      "id": "sanity-ext",
+      "label": "Sanity CMS",
+      "kind": "external",
+      "summary": "A headless content management system that stores product descriptions, images and editorial content.",
+      "packages": ["@sanity/client", "@sanity/image-url", "sanity"]
+    },
+    {
+      "id": "nivoda-ext",
+      "label": "Nivoda",
+      "kind": "external",
+      "summary": "A diamond marketplace that supplies loose stones and pricing data.",
+      "hosts": ["integrations.nivoda.net", "intg-customer-staging.nivodaapi.net"]
+    },
+    {
+      "id": "resend-ext",
+      "label": "Resend",
+      "kind": "external",
+      "summary": "Sends transactional emails: order confirmations, bespoke enquiry notifications and admin alerts.",
+      "packages": ["resend"]
+    }
+  ],
+  "edges": [
+    { "from": "stripe-ext", "to": "api.webhooks", "kind": "http", "label": "Payment alerts", "description": "Stripe sends a message when a payment succeeds, fails or is disputed." },
+    { "from": "api", "to": "postgres", "kind": "data", "label": "Reads/writes", "description": "Every server request reads or writes customer, order and inventory records." },
+    { "from": "lib.sanity", "to": "sanity-ext", "kind": "http", "label": "Fetches content", "description": "Pulls product descriptions and editorial content from the CMS." },
+    { "from": "lib.services", "to": "resend-ext", "kind": "http", "label": "Sends emails", "description": "Sends order confirmations, enquiry alerts and admin notifications." },
+    { "from": "scripts", "to": "nivoda-ext", "kind": "http", "label": "Diamond data", "description": "Import scripts fetch diamond pricing and availability from the Nivoda marketplace." }
+  ],
+  "flows": [
+    {
+      "id": "checkout",
+      "title": "Buying a ring",
+      "steps": [
+        { "node": "storefront.pages", "note": "Customer finds a ring and configures metal, size and stone" },
+        { "node": "storefront.cart", "note": "Adds it to the cart" },
+        { "node": "api.shop", "note": "Cart and checkout requests save items and create a payment" },
+        { "node": "lib.stripe", "note": "Sends the payment to Stripe" },
+        { "node": "stripe-ext", "note": "Charges the customer's card" },
+        { "node": "api.webhooks", "note": "Stripe confirms payment succeeded" },
+        { "node": "lib.services", "note": "Order is marked paid and confirmation email is sent" }
+      ]
+    },
+    {
+      "id": "bespoke",
+      "title": "Bespoke enquiry",
+      "steps": [
+        { "node": "storefront.bespoke", "note": "Customer fills in the bespoke wizard with their dream ring details" },
+        { "node": "api.shop", "note": "Enquiry is submitted to the server" },
+        { "node": "lib.services", "note": "Lead is saved and staff are emailed" },
+        { "node": "admin", "note": "Staff review and respond from the admin dashboard" }
+      ]
+    },
+    {
+      "id": "admin-orders",
+      "title": "Managing orders",
+      "steps": [
+        { "node": "admin", "note": "Staff open the admin dashboard" },
+        { "node": "api.admin", "note": "Dashboard fetches order, inventory and sales data" },
+        { "node": "lib.services", "note": "Business logic processes the request against the database" },
+        { "node": "postgres", "note": "Records are read or updated" }
+      ]
+    }
+  ],
+  "tour": [
+    { "node": "storefront", "title": "The shop", "note": "This is the website customers see: a luxury jewellery storefront with product pages, filtering, a configurator for ring options and a shopping cart." },
+    { "node": "storefront.product", "title": "Choosing a ring", "note": "Each product page lets you pick metal, stone and size, view photos from every angle, and see the price update live." },
+    { "node": "api", "title": "Behind the screens", "note": "Every action — adding to cart, checking out, signing in — sends a request here. These are the Next.js API routes." },
+    { "node": "lib", "title": "Shared logic", "note": "Business rules, database access, payment processing and email sending all live here so both the screens and the server can use them." },
+    { "node": "stripe-ext", "title": "Taking payments", "note": "Stripe handles card payments. When a payment goes through, Stripe sends an alert back so the order updates automatically." },
+    { "node": "postgres", "title": "Where the data lives", "note": "PostgreSQL stores everything: customer accounts, orders, cart items, inventory levels and enquiries." },
+    { "node": "admin", "title": "Staff dashboard", "note": "Staff sign in to a separate admin area to manage orders, update stock and reply to bespoke enquiries." },
+    { "node": "scripts", "title": "Behind-the-scenes scripts", "note": "Import scripts bring in products from the TMC supplier, build image sets and seed the database." }
+  ]
+}

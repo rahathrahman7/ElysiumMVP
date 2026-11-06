@@ -1,0 +1,42 @@
+{
+  "files": {
+    "app/api/admin/dashboard/stats/route.ts": {
+      "name": "Sales dashboard numbers",
+      "description": "Returns headline figures — total orders, revenue and recent trends — for the admin dashboard."
+    },
+    "app/api/admin/inquiries/route.ts": {
+      "name": "Bespoke enquiry list",
+      "description": "Returns all bespoke ring enquiries so staff can review and respond to them."
+    },
+    "app/api/admin/inventory/route.ts": {
+      "name": "Stock management",
+      "description": "Lets staff view current stock levels and update quantities for any product variant."
+    },
+    "app/api/admin/orders/route.ts": {
+      "name": "Order management",
+      "description": "Returns all customer orders with their status so staff can track and manage fulfilment."
+    }
+  },
+  "routes": {
+    "GET /api/admin/dashboard/stats": {
+      "name": "Dashboard statistics",
+      "description": "Returns sales totals, order counts and other numbers shown on the admin home screen."
+    },
+    "GET /api/admin/inquiries": {
+      "name": "List enquiries",
+      "description": "Returns every bespoke ring enquiry for the staff enquiry-management screen."
+    },
+    "GET /api/admin/inventory": {
+      "name": "View stock",
+      "description": "Lists every product variant and how many are in stock."
+    },
+    "POST /api/admin/inventory": {
+      "name": "Update stock",
+      "description": "Changes the stock level for a product variant."
+    },
+    "GET /api/admin/orders": {
+      "name": "All orders",
+      "description": "Returns every order with status, customer and payment details for the admin orders screen."
+    }
+  }
+}

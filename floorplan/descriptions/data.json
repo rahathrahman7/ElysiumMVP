@@ -1,0 +1,28 @@
+{
+  "files": {
+    "sanity/schema.ts": {
+      "name": "Content schema index",
+      "description": "Registers every content type (products, pages, settings) so the content system knows what data to expect."
+    },
+    "sanity/schemas/page.ts": {
+      "name": "Page content shape",
+      "description": "Defines what fields an editorial page has in the content system, such as title and body text."
+    },
+    "sanity/schemas/product.ts": {
+      "name": "Product content shape",
+      "description": "Defines the fields a product has in the content system — title, images, price, options, and stock status."
+    },
+    "sanity/schemas/settings.ts": {
+      "name": "Site-wide settings shape",
+      "description": "Defines the global settings stored in the content system, like site name and default metadata."
+    },
+    "types/next-auth.d.ts": {
+      "name": "Sign-in session shape",
+      "description": "Describes what information is available about a signed-in user, including their role and customer ID."
+    },
+    "types/product.ts": {
+      "name": "Product data shape",
+      "description": "Describes the structure of a product record — images, options, and pricing — used throughout the site."
+    }
+  }
+}

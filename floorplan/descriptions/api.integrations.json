@@ -1,0 +1,42 @@
+{
+  "files": {
+    "app/api/test-nivoda/route.ts": {
+      "name": "Diamond search",
+      "description": "Searches the Nivoda diamond marketplace for loose stones matching the customer's criteria."
+    },
+    "app/api/tmc-matches/route.ts": {
+      "name": "TMC ring matches",
+      "description": "Links Elysium ring designs to their TMC supplier equivalents so images and data can be imported."
+    },
+    "app/api/tmc-review/route.ts": {
+      "name": "TMC ring reviews",
+      "description": "Lets staff browse TMC supplier rings and mark which ones to include in the Elysium catalogue."
+    }
+  },
+  "routes": {
+    "POST /api/test-nivoda": {
+      "name": "Search diamonds",
+      "description": "Sends a search to Nivoda and returns matching loose diamonds with prices."
+    },
+    "GET /api/test-nivoda": {
+      "name": "Nivoda status",
+      "description": "Checks whether the connection to the Nivoda diamond marketplace is working."
+    },
+    "GET /api/tmc-matches": {
+      "name": "View ring matches",
+      "description": "Returns the current mapping between Elysium designs and TMC supplier rings."
+    },
+    "POST /api/tmc-matches": {
+      "name": "Save ring match",
+      "description": "Links an Elysium ring design to its TMC supplier equivalent."
+    },
+    "GET /api/tmc-review": {
+      "name": "TMC ring list",
+      "description": "Returns TMC supplier rings with their review status for the selection tool."
+    },
+    "POST /api/tmc-review": {
+      "name": "Review TMC ring",
+      "description": "Saves a staff member's decision on whether to include a TMC ring in the catalogue."
+    }
+  }
+}

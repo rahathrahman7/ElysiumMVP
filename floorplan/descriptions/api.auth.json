@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app/api/auth/[...nextauth]/route.ts": {
+      "name": "Sign-in handler",
+      "description": "Manages the sign-in and sign-out flow for email/password and Google accounts."
+    },
+    "app/api/auth/register/route.ts": {
+      "name": "New account",
+      "description": "Creates a new customer account with an email address and password."
+    }
+  },
+  "routes": {
+    "ANY /api/auth/[...nextauth]": {
+      "name": "Sign-in and sign-out",
+      "description": "Handles every step of signing in, signing out and checking who is currently logged in."
+    },
+    "POST /api/auth/register": {
+      "name": "Create account",
+      "description": "Registers a new customer with their name, email and a password they choose."
+    }
+  }
+}

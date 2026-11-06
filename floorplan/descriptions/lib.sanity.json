@@ -1,0 +1,12 @@
+{
+  "files": {
+    "lib/sanity/client.ts": {
+      "name": "Content connection",
+      "description": "Opens the connection to the Sanity content system where product descriptions and editorial copy are managed."
+    },
+    "lib/sanity/queries.ts": {
+      "name": "Content lookups",
+      "description": "Fetches featured products, individual product details, and filtered product lists from the content system."
+    }
+  }
+}

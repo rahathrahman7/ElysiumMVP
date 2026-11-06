@@ -1,0 +1,8 @@
+{
+  "files": {
+    "lib/state/cart.ts": {
+      "name": "Live shopping bag",
+      "description": "Keeps the shopping-bag contents in sync across every screen so adding an item anywhere updates the bag instantly."
+    }
+  }
+}

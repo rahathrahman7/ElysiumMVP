@@ -1,0 +1,61 @@
+{
+  "files": {
+    "app/admin/analytics/page.tsx": {
+      "name": "Analytics page",
+      "description": "Shows sales trends, traffic and conversion charts for the business owner."
+    },
+    "app/admin/customers/page.tsx": {
+      "name": "Customer list",
+      "description": "Displays all registered customers with their details so staff can look up accounts."
+    },
+    "app/admin/inquiries/page.tsx": {
+      "name": "Enquiry management",
+      "description": "Lists every bespoke ring enquiry and lets staff update their status, add notes and follow up."
+    },
+    "app/admin/inventory/page.tsx": {
+      "name": "Inventory page",
+      "description": "Shows current stock levels for every product variant and lets staff adjust quantities."
+    },
+    "app/admin/layout.tsx": {
+      "name": "Admin shell",
+      "description": "Wraps every admin page with the sidebar, header and access checks that keep it staff-only."
+    },
+    "app/admin/orders/page.tsx": {
+      "name": "Orders page",
+      "description": "Lists every customer order with its status so staff can track and manage fulfilment."
+    },
+    "app/admin/page.tsx": {
+      "name": "Dashboard home",
+      "description": "The first screen staff see after signing in: headline sales numbers, recent orders and pending enquiries."
+    },
+    "components/admin/dashboard/PendingInquiries.tsx": {
+      "name": "Pending enquiries card",
+      "description": "Shows the newest bespoke enquiries that still need a response, right on the dashboard."
+    },
+    "components/admin/dashboard/RecentOrders.tsx": {
+      "name": "Recent orders card",
+      "description": "Shows the latest orders with their status and totals on the dashboard home screen."
+    },
+    "components/admin/layout/AdminHeader.tsx": {
+      "name": "Admin header",
+      "description": "The top bar on every admin page with the logo, page title and a link back to the shop."
+    },
+    "components/admin/layout/AdminSidebar.tsx": {
+      "name": "Admin sidebar",
+      "description": "The left-hand menu with links to orders, inventory, enquiries, customers and analytics."
+    },
+    "components/admin/ui/AdminBadge.tsx": {
+      "name": "Status badges",
+      "description": "Coloured labels that show an order's or enquiry's current status at a glance."
+    },
+    "components/admin/ui/AdminButton.tsx": {
+      "name": "Admin button",
+      "description": "A styled button used throughout the admin area for actions like saving, editing and exporting."
+    },
+    "components/admin/ui/AdminCard.tsx": {
+      "name": "Dashboard card",
+      "description": "A box that holds a statistic or a summary panel on the admin dashboard."
+    }
+  },
+  "routes": {}
+}

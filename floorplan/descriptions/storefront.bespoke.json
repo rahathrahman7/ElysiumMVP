@@ -1,0 +1,37 @@
+{
+  "files": {
+    "components/bespoke/BespokeSuccessModal.tsx": {
+      "name": "Enquiry confirmation",
+      "description": "Shows a thank-you message after a bespoke enquiry is sent, with what happens next and a reference number."
+    },
+    "components/bespoke/BespokeWizard.tsx": {
+      "name": "Bespoke wizard",
+      "description": "Guides the customer step by step through designing a custom ring: style, budget, details, contact info and submission."
+    },
+    "components/bespoke/FileUploadZone.tsx": {
+      "name": "Inspiration upload",
+      "description": "Lets customers drag and drop or browse for photos of rings they love to include with their bespoke enquiry."
+    },
+    "components/bespoke/steps/BudgetStep.tsx": {
+      "name": "Budget step",
+      "description": "Asks the customer to choose a budget range and any preferences for the centre stone."
+    },
+    "components/bespoke/steps/ContactStep.tsx": {
+      "name": "Contact step",
+      "description": "Collects the customer's name, email, phone and any extra notes before they submit their enquiry."
+    },
+    "components/bespoke/steps/DetailsStep.tsx": {
+      "name": "Details step",
+      "description": "Lets the customer describe their ideal ring in their own words and upload inspiration images."
+    },
+    "components/bespoke/steps/StyleStep.tsx": {
+      "name": "Style step",
+      "description": "Shows diamond shapes and setting styles so the customer can pick the look they want for their custom ring."
+    },
+    "components/BespokeForm.tsx": {
+      "name": "Bespoke form entry",
+      "description": "A small wrapper that loads the bespoke wizard so pages can include it easily."
+    }
+  },
+  "routes": {}
+}

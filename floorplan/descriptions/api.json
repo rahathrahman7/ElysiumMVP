@@ -1,0 +1,42 @@
+{
+  "files": {
+    "app/api/user/addresses/[id]/route.ts": {
+      "name": "Edit or remove address",
+      "description": "Lets a signed-in customer update or delete one of their saved delivery or billing addresses."
+    },
+    "app/api/user/addresses/route.ts": {
+      "name": "Saved addresses",
+      "description": "Lists a customer's saved addresses and lets them add a new one."
+    },
+    "app/api/user/profile/route.ts": {
+      "name": "Customer profile",
+      "description": "Shows or updates a signed-in customer's name, phone number and preferences."
+    }
+  },
+  "routes": {
+    "PUT /api/user/addresses/[id]": {
+      "name": "Update address",
+      "description": "Saves changes to one of the customer's delivery or billing addresses."
+    },
+    "DELETE /api/user/addresses/[id]": {
+      "name": "Remove address",
+      "description": "Deletes a saved address from the customer's account."
+    },
+    "GET /api/user/addresses": {
+      "name": "List addresses",
+      "description": "Returns all saved delivery and billing addresses for the signed-in customer."
+    },
+    "POST /api/user/addresses": {
+      "name": "Add address",
+      "description": "Saves a new delivery or billing address to the customer's account."
+    },
+    "GET /api/user/profile": {
+      "name": "View profile",
+      "description": "Returns the signed-in customer's name, contact details and preferences."
+    },
+    "PUT /api/user/profile": {
+      "name": "Update profile",
+      "description": "Saves changes to the customer's name, phone number or preferences."
+    }
+  }
+}

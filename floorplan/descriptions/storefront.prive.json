@@ -1,0 +1,13 @@
+{
+  "files": {
+    "components/prive/PriveCollectionContent.tsx": {
+      "name": "Privé collection page",
+      "description": "Displays the invitation-only Privé collection with a teaser and a button to join the waitlist."
+    },
+    "components/prive/PriveNotifyModal.tsx": {
+      "name": "Waitlist sign-up",
+      "description": "Pops up a form where customers enter their email to be notified when Privé pieces become available."
+    }
+  },
+  "routes": {}
+}

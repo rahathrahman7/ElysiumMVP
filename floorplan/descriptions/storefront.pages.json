@@ -1,0 +1,145 @@
+{
+  "files": {
+    "app/about/page.tsx": {
+      "name": "About page",
+      "description": "Tells the Elysium story — the London atelier, craftsmanship philosophy and the people behind the brand."
+    },
+    "app/bespoke/page.tsx": {
+      "name": "Bespoke page",
+      "description": "Invites customers to design their own ring and presents the step-by-step bespoke enquiry wizard."
+    },
+    "app/cart/page.tsx": {
+      "name": "Cart page",
+      "description": "Shows everything in the customer's shopping bag with prices, quantities and a button to proceed to checkout."
+    },
+    "app/checkout/cancel/page.tsx": {
+      "name": "Payment cancelled",
+      "description": "Appears when a customer leaves the Stripe payment page without completing, offering a way to try again."
+    },
+    "app/checkout/success/page.tsx": {
+      "name": "Order confirmed",
+      "description": "Thanks the customer after a successful payment and shows their order details."
+    },
+    "app/collection/[handle]/page.tsx": {
+      "name": "Collection page",
+      "description": "Displays all products in a specific collection with filters and sorting so customers can browse by theme."
+    },
+    "app/contact/page.tsx": {
+      "name": "Contact page",
+      "description": "Provides the atelier's address, phone, email and a contact form for general enquiries."
+    },
+    "app/diamonds/page.tsx": {
+      "name": "Diamonds page",
+      "description": "Showcases loose diamonds and explains Elysium's ethical sourcing and grading standards."
+    },
+    "app/education/care/page.tsx": {
+      "name": "Jewellery care guide",
+      "description": "Teaches customers how to clean, store and look after their rings and fine jewellery."
+    },
+    "app/education/diamonds/page.tsx": {
+      "name": "Diamond guide",
+      "description": "Explains the 4Cs — cut, colour, clarity and carat — so customers can choose their stone confidently."
+    },
+    "app/education/layout.tsx": {
+      "name": "Education layout",
+      "description": "Wraps all education pages with a shared navigation bar and consistent styling."
+    },
+    "app/education/metals/page.tsx": {
+      "name": "Metals guide",
+      "description": "Describes the differences between platinum, white gold, yellow gold and rose gold to help customers choose."
+    },
+    "app/education/page.tsx": {
+      "name": "Education hub",
+      "description": "The landing page for all guides — diamonds, metals, settings and care — with links and previews."
+    },
+    "app/education/settings/page.tsx": {
+      "name": "Settings guide",
+      "description": "Explains ring settings — solitaire, halo, trilogy and more — so customers understand what suits them."
+    },
+    "app/error.tsx": {
+      "name": "Error page",
+      "description": "Shows a friendly message when something goes wrong on a page, with a way to try again."
+    },
+    "app/faq/page.tsx": {
+      "name": "FAQ page",
+      "description": "Answers the most common questions about ordering, shipping, returns and ring sizing."
+    },
+    "app/fine-jewellery/bracelets/page.tsx": {
+      "name": "Bracelets page",
+      "description": "Shows the fine jewellery bracelet collection with a hero image and product grid."
+    },
+    "app/fine-jewellery/earrings/page.tsx": {
+      "name": "Earrings page",
+      "description": "Shows the fine jewellery earring collection with a hero image and product grid."
+    },
+    "app/fine-jewellery/necklaces/page.tsx": {
+      "name": "Necklaces page",
+      "description": "Shows the fine jewellery necklace collection with a hero image and product grid."
+    },
+    "app/fine-jewellery/page.tsx": {
+      "name": "Fine jewellery landing",
+      "description": "The entry point for the fine jewellery range, with category links to earrings, necklaces and bracelets."
+    },
+    "app/global-error.tsx": {
+      "name": "Critical error page",
+      "description": "A last-resort error screen that appears if even the normal error page fails."
+    },
+    "app/heroes/layout.tsx": {
+      "name": "Heroes layout",
+      "description": "Wraps the hero showcase pages with shared styling and metadata."
+    },
+    "app/heroes/page.tsx": {
+      "name": "Hero showcase",
+      "description": "A gallery of hero banner designs and animations used to preview and test homepage visuals."
+    },
+    "app/layout.tsx": {
+      "name": "Site shell",
+      "description": "The outermost wrapper of the entire site: loads fonts, header, footer, accessibility features and the concierge chat."
+    },
+    "app/page.tsx": {
+      "name": "Homepage",
+      "description": "The first page customers see: a luxury hero banner, category showcase, trust badges and testimonials."
+    },
+    "app/privacy/page.tsx": {
+      "name": "Privacy policy",
+      "description": "Explains how Elysium collects, uses and protects customer data."
+    },
+    "app/prive-collection/page.tsx": {
+      "name": "Privé collection page",
+      "description": "Presents the exclusive Privé collection with a waitlist option for interested customers."
+    },
+    "app/products/[slug]/page.tsx": {
+      "name": "Product page",
+      "description": "Shows a single ring or jewellery piece with photos, configurator, price, reviews and related items."
+    },
+    "app/products/page.tsx": {
+      "name": "All products",
+      "description": "Lists every product in the catalogue with filtering and search so customers can browse the full range."
+    },
+    "app/resizing/page.tsx": {
+      "name": "Ring resizing page",
+      "description": "Explains the complimentary ring resizing service and how to measure ring size at home."
+    },
+    "app/shipping/page.tsx": {
+      "name": "Shipping info",
+      "description": "Details shipping options, delivery times and costs for UK and international orders."
+    },
+    "app/shop/page.tsx": {
+      "name": "Shop page",
+      "description": "A curated shopping view that highlights featured products and popular categories."
+    },
+    "app/sitemap.ts": {
+      "name": "Sitemap generator",
+      "description": "Produces an XML sitemap listing every page and product so search engines can find and index them."
+    },
+    "app/terms/page.tsx": {
+      "name": "Terms & conditions",
+      "description": "Sets out the legal terms for using the site and placing orders."
+    },
+    "app/wishlist/page.tsx": {
+      "name": "Wishlist page",
+      "description": "Shows all the products the customer has saved as favourites, with options to add them to the cart."
+    }
+  },
+  "routes": {}
+}

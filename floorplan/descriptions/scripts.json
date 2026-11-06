@@ -1,0 +1,160 @@
+{
+  "files": {
+    "scripts/add-metal-images.js": {
+      "name": "Add metal swatch icons",
+      "description": "Assigns the correct colour-swatch icon to every metal option in the product catalogue."
+    },
+    "scripts/append-new-tmc-fine-jewellery.mjs": {
+      "name": "Fetch new TMC jewellery",
+      "description": "Pulls newly listed earrings, necklaces, and bracelets from the TMC supplier and queues them for client review."
+    },
+    "scripts/apply-tmc-image-replacements.py": {
+      "name": "Replace TMC images",
+      "description": "Swaps in the client-approved replacement photos and updated prices for products sourced from TMC."
+    },
+    "scripts/audit.mjs": {
+      "name": "Visual site audit",
+      "description": "Opens every key page in a browser, takes screenshots on desktop and mobile, and saves them for review."
+    },
+    "scripts/build-elysium-originals.py": {
+      "name": "Originals ring list",
+      "description": "Builds a slim reference list of Elysium's own ring designs used by the TMC visual matcher."
+    },
+    "scripts/build-lab-price-overrides.py": {
+      "name": "Lab-diamond price book",
+      "description": "Reads the lab-diamond pricing spreadsheet and generates the override prices used on the site."
+    },
+    "scripts/build-tmc-client-catalog-sheet.py": {
+      "name": "TMC catalogue spreadsheet",
+      "description": "Creates a client-friendly Excel and CSV file from the scraped TMC ring catalogue for review."
+    },
+    "scripts/build-tmc-review-app.py": {
+      "name": "TMC review page builder",
+      "description": "Generates the self-contained review page where the client picks which TMC rings to add to the shop."
+    },
+    "scripts/build-tmc-review-data.py": {
+      "name": "TMC review data",
+      "description": "Prepares the structured catalogue data that powers the TMC ring-review page."
+    },
+    "scripts/buildImageManifest.ts": {
+      "name": "Image manifest builder",
+      "description": "Scans a product's image folder and creates a manifest listing every metal-variant photo by angle."
+    },
+    "scripts/cross-reference-tmc-inventory.py": {
+      "name": "TMC inventory cross-check",
+      "description": "Compares Elysium's current stock against the TMC catalogue to spot overlaps and missing items."
+    },
+    "scripts/db/seed-tmc-from-json.mjs": {
+      "name": "Seed TMC review data",
+      "description": "Loads the TMC review and match decisions into the database so the review page can read them."
+    },
+    "scripts/download-tmc-review-images.mjs": {
+      "name": "Download TMC review images",
+      "description": "Downloads the top-view ring renders from TMC's configurator for use in the review page."
+    },
+    "scripts/download-tmc-store-images.mjs": {
+      "name": "Download TMC store images",
+      "description": "Downloads the top and front ring photos in every metal colour from the TMC online store."
+    },
+    "scripts/fix-metal-images.js": {
+      "name": "Fix metal swatch paths",
+      "description": "Corrects the file paths for metal-colour swatch icons so they point to the actual image files."
+    },
+    "scripts/generate-tmc-client-sheet.mjs": {
+      "name": "TMC client review sheet",
+      "description": "Produces a spreadsheet summarising each TMC ring import for the client to approve or reject."
+    },
+    "scripts/generate-tmc-client-sheet.py": {
+      "name": "TMC client review Excel",
+      "description": "Writes the TMC client review sheet as a formatted Excel workbook for easy offline review."
+    },
+    "scripts/import-selected-jewellery.mjs": {
+      "name": "Import approved jewellery",
+      "description": "Adds the client-selected TMC earrings, necklaces, and bracelets into the live product catalogue."
+    },
+    "scripts/import-selected-rings.mjs": {
+      "name": "Import approved rings",
+      "description": "Adds the client-selected TMC rings into the live product catalogue with images and pricing."
+    },
+    "scripts/import-tmc-front-angles.mjs": {
+      "name": "Backfill front-angle photos",
+      "description": "Downloads and adds the missing front-angle photos for TMC rings that were imported without them."
+    },
+    "scripts/import-tmc-images.mjs": {
+      "name": "Import TMC ring images",
+      "description": "Pulls ring product images from the TMC Shopify store and saves them into the Elysium image folders."
+    },
+    "scripts/import-tmc-metal-images.mjs": {
+      "name": "Import per-metal renders",
+      "description": "Downloads the per-metal-colour render shots from TMC and updates each product's gallery."
+    },
+    "scripts/merge-tmc-review-drop.py": {
+      "name": "Merge new TMC drop",
+      "description": "Adds a new batch of TMC fine-jewellery items into the existing review catalogue."
+    },
+    "scripts/replace-jewellery-from-tmc.mjs": {
+      "name": "Replace jewellery images",
+      "description": "Replaces images and applies updated prices for earrings and bracelets flagged in the TMC review."
+    },
+    "scripts/replace-ring-images-from-tmc.mjs": {
+      "name": "Replace ring images",
+      "description": "Applies the client's 'replace images' decisions from the TMC review tool to the live catalogue."
+    },
+    "scripts/sanity-seed.ts": {
+      "name": "Seed demo products",
+      "description": "Creates a set of sample products in the Sanity content system for testing and demonstration."
+    },
+    "scripts/scrape-tmc-fine-jewellery.mjs": {
+      "name": "Scrape TMC jewellery",
+      "description": "Collects earring, necklace, pendant, and bracelet listings from the TMC website for review."
+    },
+    "scripts/scrape-tmc-ring-catalog.mjs": {
+      "name": "Scrape TMC rings",
+      "description": "Collects all engagement and wedding ring listings from the TMC website into a local catalogue."
+    },
+    "scripts/setup-google-drive-mcp.sh": {
+      "name": "Google Drive setup",
+      "description": "Runs the one-time setup to connect Google Drive access for sharing catalogues and reports."
+    },
+    "scripts/setup-vercel-stripe-env.sh": {
+      "name": "Stripe keys to Vercel",
+      "description": "Pushes the Stripe test-mode secret keys to the Vercel hosting environment so payments work in staging."
+    },
+    "scripts/sync-tmc-products.mjs": {
+      "name": "Sync TMC pilot rings",
+      "description": "Synchronises the TMC pilot ring selection into the live product catalogue."
+    },
+    "scripts/testAvelineMapping.ts": {
+      "name": "Check Aveline images",
+      "description": "Verifies that the Aveline ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testCelesteMapping.ts": {
+      "name": "Check Celeste images",
+      "description": "Verifies that the Celeste ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testClarionMapping.ts": {
+      "name": "Check Clarion images",
+      "description": "Verifies that the Clarion ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testElaraMapping.ts": {
+      "name": "Check Elara images",
+      "description": "Verifies that the Elara ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testLunaMapping.ts": {
+      "name": "Check Luna images",
+      "description": "Verifies that the Luna ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testOrabellaMapping.ts": {
+      "name": "Check Orabella images",
+      "description": "Verifies that the Orabella ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/testVowVeilMapping.ts": {
+      "name": "Check Vow & Veil images",
+      "description": "Verifies that the Vow & Veil ring's product data, metal options, and image galleries are set up correctly."
+    },
+    "scripts/upload_tmc_catalog_to_drive.py": {
+      "name": "Upload catalogue to Drive",
+      "description": "Logs into Google Drive and uploads the TMC ring catalogue spreadsheet for sharing with the client."
+    }
+  }
+}

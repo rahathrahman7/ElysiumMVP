@@ -1,0 +1,21 @@
+{
+  "files": {
+    "components/CartDrawer.tsx": {
+      "name": "Cart drawer",
+      "description": "Slides out from the side to show everything in the customer's shopping bag with totals and a checkout button."
+    },
+    "components/common/WishHeart.tsx": {
+      "name": "Wishlist heart",
+      "description": "A heart icon on each product that turns solid when the customer saves it to their wishlist."
+    },
+    "components/MiniCartIcon.tsx": {
+      "name": "Mini cart icon",
+      "description": "Shows a small shopping-bag icon in the header with a badge counting how many items are inside."
+    },
+    "components/WishlistIcon.tsx": {
+      "name": "Wishlist link",
+      "description": "A heart icon in the header that takes the customer to their saved-items page."
+    }
+  },
+  "routes": {}
+}

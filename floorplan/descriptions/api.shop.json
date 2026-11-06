@@ -1,0 +1,122 @@
+{
+  "files": {
+    "app/api/analytics/recently-viewed/route.ts": {
+      "name": "Recently viewed",
+      "description": "Returns the products a customer has looked at recently so they can pick up where they left off."
+    },
+    "app/api/analytics/track-view/route.ts": {
+      "name": "Record product view",
+      "description": "Notes which product a customer just looked at so it appears in their recently-viewed list."
+    },
+    "app/api/bespoke/route.ts": {
+      "name": "Bespoke enquiry",
+      "description": "Receives a custom ring request with the customer's details, budget and inspiration images, saves it and notifies staff."
+    },
+    "app/api/cart/[id]/route.ts": {
+      "name": "Update cart item",
+      "description": "Changes the quantity or options of a single item in the customer's shopping bag, or removes it."
+    },
+    "app/api/cart/route.ts": {
+      "name": "Shopping cart",
+      "description": "Lists everything in the customer's bag, adds a new item, or empties the bag entirely."
+    },
+    "app/api/checkout/route.ts": {
+      "name": "Start checkout",
+      "description": "Takes the customer's cart and creates a Stripe payment so they can complete their purchase."
+    },
+    "app/api/inventory/route.ts": {
+      "name": "Stock levels",
+      "description": "Checks how many units of a product are currently available."
+    },
+    "app/api/orders/[id]/route.ts": {
+      "name": "Order details",
+      "description": "Shows the full details of a single order for the signed-in customer."
+    },
+    "app/api/orders/route.ts": {
+      "name": "Order history",
+      "description": "Lists all orders the signed-in customer has placed."
+    },
+    "app/api/products/route.ts": {
+      "name": "Product list",
+      "description": "Returns the catalogue of rings and jewellery with images, prices and options."
+    },
+    "app/api/waitlist/route.ts": {
+      "name": "Waitlist sign-up",
+      "description": "Adds a customer's email to the waitlist for a coming-soon collection."
+    },
+    "app/api/wishlist/route.ts": {
+      "name": "Wishlist",
+      "description": "Shows, adds to, or removes from the customer's list of saved favourites."
+    }
+  },
+  "routes": {
+    "GET /api/analytics/recently-viewed": {
+      "name": "Recently viewed products",
+      "description": "Returns the products the customer looked at recently."
+    },
+    "POST /api/analytics/track-view": {
+      "name": "Log a product view",
+      "description": "Records that the customer just viewed a specific product."
+    },
+    "POST /api/bespoke": {
+      "name": "Submit bespoke enquiry",
+      "description": "Saves a custom ring request with contact details, budget and inspiration, and emails the team."
+    },
+    "PUT /api/cart/[id]": {
+      "name": "Update cart item",
+      "description": "Changes the quantity or configuration of one item in the shopping bag."
+    },
+    "DELETE /api/cart/[id]": {
+      "name": "Remove cart item",
+      "description": "Takes a single item out of the shopping bag."
+    },
+    "GET /api/cart": {
+      "name": "View cart",
+      "description": "Returns every item currently in the customer's shopping bag with prices."
+    },
+    "POST /api/cart": {
+      "name": "Add to cart",
+      "description": "Puts a configured ring or jewellery piece into the shopping bag."
+    },
+    "DELETE /api/cart": {
+      "name": "Empty cart",
+      "description": "Removes everything from the customer's shopping bag at once."
+    },
+    "POST /api/checkout": {
+      "name": "Pay now",
+      "description": "Creates a Stripe payment for the shopping bag and redirects the customer to complete it."
+    },
+    "GET /api/inventory": {
+      "name": "Check stock",
+      "description": "Returns how many units of a product variant are available."
+    },
+    "GET /api/orders/[id]": {
+      "name": "View order",
+      "description": "Returns the full details of one past order."
+    },
+    "GET /api/orders": {
+      "name": "Past orders",
+      "description": "Lists all orders the signed-in customer has placed, newest first."
+    },
+    "GET /api/products": {
+      "name": "Browse products",
+      "description": "Returns the full product catalogue with images, prices and available options."
+    },
+    "POST /api/waitlist": {
+      "name": "Join waitlist",
+      "description": "Adds a customer's email to be notified when a coming-soon collection launches."
+    },
+    "GET /api/wishlist": {
+      "name": "View saved items",
+      "description": "Returns the customer's list of favourite products."
+    },
+    "POST /api/wishlist": {
+      "name": "Save to wishlist",
+      "description": "Adds a product to the customer's list of favourites."
+    },
+    "DELETE /api/wishlist": {
+      "name": "Remove from wishlist",
+      "description": "Takes a product off the customer's list of favourites."
+    }
+  }
+}

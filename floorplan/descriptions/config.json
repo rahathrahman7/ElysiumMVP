@@ -1,0 +1,48 @@
+{
+  "files": {
+    ".eslintrc.json": {
+      "name": "Code style rules",
+      "description": "Sets the automatic code-quality rules that flag common mistakes before they reach the live site."
+    },
+    ".npmrc": {
+      "name": "Package manager settings",
+      "description": "Tells the package installer how to behave when adding or updating the site's software dependencies."
+    },
+    ".nvmrc": {
+      "name": "Node version pin",
+      "description": "Locks the version of Node.js so every developer and the hosting service run the exact same one."
+    },
+    "next.config.mjs": {
+      "name": "Site build settings",
+      "description": "Configures how the website is built and which image sources, redirects, and optimisations are enabled."
+    },
+    "package.json": {
+      "name": "Project manifest",
+      "description": "Lists every software dependency the site needs and the commands to build, start, and test it."
+    },
+    "playwright.config.ts": {
+      "name": "Browser test settings",
+      "description": "Configures the automated browser tests — which browsers to use, timeouts, and where to find the site."
+    },
+    "postcss.config.mjs": {
+      "name": "CSS processing settings",
+      "description": "Tells the build step which CSS transformations to apply so modern styles work in all browsers."
+    },
+    "prisma.config.ts": {
+      "name": "Database tool settings",
+      "description": "Points the database management tool at the correct Postgres database address."
+    },
+    "tailwind.config.ts": {
+      "name": "Design system theme",
+      "description": "Defines the brand colours, fonts, spacing, and breakpoints that keep the site's look consistent."
+    },
+    "tsconfig.json": {
+      "name": "TypeScript settings",
+      "description": "Configures the type-checking rules and import shortcuts used across the entire codebase."
+    },
+    "vercel.json": {
+      "name": "Hosting settings",
+      "description": "Tells Vercel how to deploy the site, including any custom headers or function limits."
+    }
+  }
+}

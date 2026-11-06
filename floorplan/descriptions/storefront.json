@@ -1,0 +1,33 @@
+{
+  "files": {
+    "app/auth/error/page.tsx": {
+      "name": "Sign-in error page",
+      "description": "Shows a message when something goes wrong during sign-in and offers a way to try again."
+    },
+    "app/auth/signin/page.tsx": {
+      "name": "Sign-in page",
+      "description": "Lets customers sign in with their email and password or their Google account."
+    },
+    "app/auth/signin/SignInForm.tsx": {
+      "name": "Sign-in form",
+      "description": "Collects email and password, shows errors, and sends the customer to Google if they prefer."
+    },
+    "app/globals.css": {
+      "name": "Global styles",
+      "description": "Sets the colours, fonts and base look-and-feel used across every page of the site."
+    },
+    "components/edu/Accordion.tsx": {
+      "name": "Expandable section",
+      "description": "Shows a question or title that opens to reveal more detail when tapped."
+    },
+    "components/edu/KV.tsx": {
+      "name": "Label-value pair",
+      "description": "Displays a label next to its value in a neat row, used on education pages."
+    },
+    "components/Footer.tsx": {
+      "name": "Page footer",
+      "description": "Shows links to key pages, contact details and brand information at the bottom of every screen."
+    }
+  },
+  "routes": {}
+}

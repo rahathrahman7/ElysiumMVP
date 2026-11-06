@@ -1,0 +1,37 @@
+{
+  "files": {
+    "components/filters/ChipGallery.tsx": {
+      "name": "Shape picker chips",
+      "description": "Shows a row of tappable chips with diamond-shape images so customers can quickly filter by shape."
+    },
+    "components/filters/CollapsibleSection.tsx": {
+      "name": "Filter group",
+      "description": "A collapsible panel that groups related filter options together, like metal type or price range."
+    },
+    "components/filters/EnhancedFilterSummary.tsx": {
+      "name": "Active filter tags",
+      "description": "Shows small tags for every filter the customer has chosen, each with an X to remove it."
+    },
+    "components/filters/FilterHeaderBar.tsx": {
+      "name": "Filter & sort bar",
+      "description": "The bar above product listings with a filter button, sort dropdown and a count of matching results."
+    },
+    "components/filters/FiltersDrawer.tsx": {
+      "name": "Filter drawer",
+      "description": "Slides out from the side to show all available filters: shape, metal, price, stone size and more."
+    },
+    "components/filters/FilterSections.tsx": {
+      "name": "Filter options",
+      "description": "Renders each group of filter choices — checkboxes, sliders and swatches — inside the filter drawer."
+    },
+    "components/filters/LuxuryFilterButton.tsx": {
+      "name": "Filter button",
+      "description": "A styled button that opens the filter drawer, showing how many filters are active."
+    },
+    "components/filters/SectionSelectedCount.tsx": {
+      "name": "Selected count badge",
+      "description": "Shows a small number next to a filter group name indicating how many options are selected."
+    }
+  },
+  "routes": {}
+}

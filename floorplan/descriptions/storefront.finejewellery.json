@@ -1,0 +1,13 @@
+{
+  "files": {
+    "components/fine-jewellery/CategoryHero.tsx": {
+      "name": "Category banner",
+      "description": "Shows a large hero image and headline at the top of each fine-jewellery category page."
+    },
+    "components/fine-jewellery/FineJewelleryGrid.tsx": {
+      "name": "Fine jewellery grid",
+      "description": "Lays out fine-jewellery products in a browsable grid with images, names and prices."
+    }
+  },
+  "routes": {}
+}

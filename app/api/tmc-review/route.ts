@@ -2,6 +2,18 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { dbErrorMessage, loadReviewFallback } from "@/lib/tmc/review-fallback";
 import { notifyTmcReviewAdded } from "@/lib/tmc/notify-review";
+import { requireTmcReviewAccess } from "@/lib/auth/tmcReviewAuth";
+import { ForbiddenError, UnauthorizedError } from "@/lib/auth/adminAuth";
+
+function authErrorResponse(error: unknown) {
+  if (error instanceof UnauthorizedError) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  if (error instanceof ForbiddenError) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return null;
+}
 
 export const dynamic = "force-dynamic";
 
@@ -67,10 +79,11 @@ function fallbackResponse(warning: string) {
   });
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   // Always prefer returning the seeded snapshot over a 500 — the configurator
   // must load even when Postgres / Prisma is unhealthy on Vercel.
   try {
+    await requireTmcReviewAccess(request);
     const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
 
     if (!resolveDatabaseUrl()) {
@@ -103,6 +116,8 @@ export async function GET() {
       source: "database",
     });
   } catch (error) {
+    const auth = authErrorResponse(error);
+    if (auth) return auth;
     console.error("[tmc-review] GET error:", error);
     return fallbackResponse(dbErrorMessage(error));
   }
@@ -110,6 +125,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    await requireTmcReviewAccess(request);
     const { prisma, resolveDatabaseUrl } = await import("@/lib/database/prisma");
 
     if (!resolveDatabaseUrl()) {
@@ -188,6 +204,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true, notified: false });
   } catch (error) {
+    const auth = authErrorResponse(error);
+    if (auth) return auth;
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: "Validation error", details: error.issues },

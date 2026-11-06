@@ -83,6 +83,15 @@ function emptyReview(): Review {
   return { keep: false, displayName: "", priceGbp: "", notes: "", preferredMetal: "" };
 }
 
+function redirectIfUnauthorized(res: Response) {
+  if (res.status === 401 || res.status === 403) {
+    const next = encodeURIComponent(window.location.pathname || "/tmc-review");
+    window.location.href = `/tmc-review/login?callbackUrl=${next}`;
+    return true;
+  }
+  return false;
+}
+
 export default function ReviewClient() {
   const [rings, setRings] = useState<Ring[]>([]);
   const [reviews, setReviews] = useState<Record<string, Review>>({});
@@ -128,6 +137,7 @@ export default function ReviewClient() {
 
         try {
           const reviewRes = await fetch("/api/tmc-review");
+          if (redirectIfUnauthorized(reviewRes)) return;
           const rev = reviewRes.ok
             ? await reviewRes.json()
             : await reviewRes.json().catch(() => ({ reviews: {} }));
@@ -160,6 +170,7 @@ export default function ReviewClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ handle, ...patch }),
       });
+      if (redirectIfUnauthorized(res)) return;
       if (!res.ok) throw new Error("save failed");
       savingCount.current -= 1;
       if (savingCount.current <= 0) {

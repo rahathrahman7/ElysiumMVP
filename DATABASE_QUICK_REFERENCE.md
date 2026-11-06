@@ -48,8 +48,8 @@ chmod +x apply-improvements.sh
 # Direct connection
 psql $DATABASE_URL
 
-# Or with connection string
-psql "postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
+# Or with connection string (never commit real credentials)
+psql "$DATABASE_URL"
 ```
 
 ### Prisma Commands
@@ -472,11 +472,11 @@ ORDER BY tablename, indexname;
 ## Environment Variables
 
 ```bash
-# Direct connection (for migrations, schema push)
-DATABASE_URL="postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
+# Direct connection (for migrations, schema push) — use env, never commit secrets
+DATABASE_URL="postgresql://USER:PASSWORD@127.0.0.1:5432/elysium"
 
 # Pooled connection (for application queries)
-DATABASE_URL_POOLED="postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:6543/postgres"
+DATABASE_URL_POOLED="postgresql://USER:PASSWORD@127.0.0.1:5432/elysium"
 ```
 
 ## Important Files

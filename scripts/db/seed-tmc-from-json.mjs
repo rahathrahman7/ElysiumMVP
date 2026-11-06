@@ -2,16 +2,68 @@
 /**
  * Upsert TMC review/match seed JSON into Postgres.
  * Usage: DATABASE_URL=... node scripts/db/seed-tmc-from-json.mjs
+ * Keep this allowlist in sync with lib/safety/database-url.ts.
  */
 import { readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import pg from "pg";
 
+const LOCAL_HOSTS = new Set([
+  "localhost",
+  "127.0.0.1",
+  "0.0.0.0",
+  "::1",
+  "[::1]",
+  "postgres",
+  "db",
+  "database",
+  "host.docker.internal",
+]);
+
+function assertSafeDatabaseUrl(connectionString) {
+  let host;
+  try {
+    host = new URL(connectionString).hostname.toLowerCase();
+  } catch {
+    throw new Error("Invalid database URL. Expected a postgresql:// connection string.");
+  }
+  const supabase =
+    /(^|\.)supabase\.(co|com)$|(^|\.)pooler\.supabase\.com$/i.test(host) ||
+    host.includes("supabase.co");
+  if (supabase) {
+    throw new Error(
+      `Refusing to run against Supabase host "${host}". Wipe/reset/migrate/seed scripts never target prod Supabase.`
+    );
+  }
+  const extra = (process.env.ALLOWED_TEST_DB_HOSTS || "")
+    .split(",")
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+  if (!LOCAL_HOSTS.has(host) && !extra.includes(host)) {
+    throw new Error(
+      `Refusing to run against database host "${host}". Allowed hosts: localhost, 127.0.0.1, docker, or ALLOWED_TEST_DB_HOSTS.`
+    );
+  }
+}
+
+if (process.env.NODE_ENV === "production" || process.env.VERCEL_ENV === "production") {
+  if (process.env.ALLOW_PRODUCTION_SEED !== "true") {
+    console.error("Refusing to seed in production.");
+    process.exit(1);
+  }
+}
+
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const url = process.env.DATABASE_URL || process.env.POSTGRES_PRISMA_URL || process.env.POSTGRES_URL;
 if (!url) {
   console.error("Set DATABASE_URL (or POSTGRES_PRISMA_URL / POSTGRES_URL)");
+  process.exit(1);
+}
+try {
+  assertSafeDatabaseUrl(url);
+} catch (error) {
+  console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 }
 

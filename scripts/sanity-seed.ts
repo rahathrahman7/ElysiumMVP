@@ -1,7 +1,13 @@
 import { createClient } from "@sanity/client";
 import { env, requireEnv } from "@/lib/env";
+import { isProductionRuntime } from "@/lib/safety/production";
 
 async function main() {
+  if (isProductionRuntime() && process.env.ALLOW_PRODUCTION_SEED !== "true") {
+    throw new Error(
+      "Refusing to seed Sanity in production. Set ALLOW_PRODUCTION_SEED=true only for an explicit demo/test run."
+    );
+  }
   const client = createClient({ projectId: env.SANITY_PROJECT_ID, dataset: env.SANITY_DATASET, apiVersion: "2024-07-01", token: requireEnv("SANITY_API_TOKEN") });
 
   const demoProducts = Array.from({ length: 8 }).map((_, i) => ({

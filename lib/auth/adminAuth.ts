@@ -2,6 +2,8 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from './config';
 import { prisma } from '@/lib/database/prisma';
 import { User } from '@prisma/client';
+import { isAdminAuthDisabled, isDemoAdminBypassEnabled } from '@/lib/auth/productionGuards';
+import { isProductionRuntime } from '@/lib/safety/production';
 
 export class UnauthorizedError extends Error {
   constructor(message: string = 'Unauthorized') {
@@ -17,16 +19,47 @@ export class ForbiddenError extends Error {
   }
 }
 
+function syntheticAdmin(id: string, email: string, name: string): User {
+  return {
+    id,
+    email,
+    emailVerified: null,
+    name,
+    password: null,
+    image: null,
+    role: 'ADMIN',
+    createdAt: new Date(0),
+    updatedAt: new Date(0),
+  };
+}
+
 /**
  * Require admin authentication for API routes
  * Throws UnauthorizedError if not logged in
  * Throws ForbiddenError if not an admin
+ *
+ * DISABLE_ADMIN_AUTH is ignored in production.
  */
 export async function requireAdmin(): Promise<User> {
+  if (isAdminAuthDisabled()) {
+    return syntheticAdmin('dev-bypass', 'dev@localhost', 'Dev Bypass');
+  }
+
   const session = await getServerSession(authOptions);
 
   if (!session?.user?.id) {
     throw new UnauthorizedError();
+  }
+
+  if (session.user.id === 'demo-admin') {
+    if (!isDemoAdminBypassEnabled()) {
+      throw new UnauthorizedError();
+    }
+    return syntheticAdmin(
+      'demo-admin',
+      session.user.email || process.env.DEMO_ADMIN_EMAIL || 'demo@localhost',
+      'Demo Admin'
+    );
   }
 
   const user = await prisma.user.findUnique({
@@ -34,6 +67,13 @@ export async function requireAdmin(): Promise<User> {
   });
 
   if (!user) {
+    if (!isProductionRuntime() && session.user.role === 'ADMIN') {
+      return syntheticAdmin(
+        session.user.id,
+        session.user.email || '',
+        session.user.name || 'Admin'
+      );
+    }
     throw new UnauthorizedError('User not found');
   }
 
@@ -50,18 +90,8 @@ export async function requireAdmin(): Promise<User> {
  */
 export async function isAdmin(): Promise<boolean> {
   try {
-    const session = await getServerSession(authOptions);
-
-    if (!session?.user?.id) {
-      return false;
-    }
-
-    const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
-      select: { role: true }
-    });
-
-    return user?.role === 'ADMIN';
+    await requireAdmin();
+    return true;
   } catch {
     return false;
   }
@@ -77,6 +107,15 @@ export async function getCurrentUser(): Promise<User | null> {
 
     if (!session?.user?.id) {
       return null;
+    }
+
+    if (session.user.id === 'demo-admin') {
+      if (!isDemoAdminBypassEnabled()) return null;
+      return syntheticAdmin(
+        'demo-admin',
+        session.user.email || process.env.DEMO_ADMIN_EMAIL || 'demo@localhost',
+        'Demo Admin'
+      );
     }
 
     const user = await prisma.user.findUnique({

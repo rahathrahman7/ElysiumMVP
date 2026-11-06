@@ -1,0 +1,12 @@
+{
+  "files": {
+    "components/prive/PriveCollectionContent.tsx": {
+      "name": "Privé coming-soon page",
+      "description": "Announces the upcoming exclusive Privé collection and invites visitors to join the waitlist."
+    },
+    "components/prive/PriveNotifyModal.tsx": {
+      "name": "Privé waitlist sign-up",
+      "description": "Opens a pop-up where visitors enter their email to be notified when the Privé collection launches."
+    }
+  }
+}

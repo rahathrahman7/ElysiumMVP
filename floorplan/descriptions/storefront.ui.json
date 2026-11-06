@@ -1,0 +1,156 @@
+{
+  "files": {
+    "components/ConditionalChrome.tsx": {
+      "name": "Footer and chat visibility",
+      "description": "Hides the footer and concierge chat on internal tool pages so they look like standalone screens."
+    },
+    "components/ConditionalLayout.tsx": {
+      "name": "Page layout switcher",
+      "description": "Picks the right page layout — floating header on the homepage, fixed header on shop pages, or no header at all on internal tools."
+    },
+    "components/HeroImage.tsx": {
+      "name": "Homepage hero banner",
+      "description": "Shows the main landing image with the Elysium logo, tagline, and links to shop or book an appointment."
+    },
+    "components/icons/DiamondIcons.tsx": {
+      "name": "Diamond shape icons",
+      "description": "Provides a matching icon for every diamond shape (round, oval, princess, pear, emerald, and more) used across the shop."
+    },
+    "components/icons/LuxuryIcons.tsx": {
+      "name": "Trust and service icons",
+      "description": "Supplies premium icons for hallmark certification, returns, and complimentary services shown alongside product details."
+    },
+    "components/mobile/MobileGallery.tsx": {
+      "name": "Mobile image swiper",
+      "description": "Lets phone and tablet visitors swipe through product photos with touch gestures and dot indicators."
+    },
+    "components/mobile/TouchOptimized.tsx": {
+      "name": "Touch-friendly controls",
+      "description": "Gives buttons, cards, and pull-to-refresh controls a responsive feel with ripple effects on phones and tablets."
+    },
+    "components/navigation/MobileMenu.tsx": {
+      "name": "Mobile navigation menu",
+      "description": "Opens a full-screen menu on phones so visitors can browse collections, education pages, and account links."
+    },
+    "components/OptionsSelector.tsx": {
+      "name": "Product option picker",
+      "description": "Lets the customer choose a metal, stone, and ring size from the available options on a product page."
+    },
+    "components/PlausibleAnalytics.tsx": {
+      "name": "Visitor analytics",
+      "description": "Loads the Plausible script so the shop can see how many people visit each page without using cookies."
+    },
+    "components/Price.tsx": {
+      "name": "Price display",
+      "description": "Shows a product price formatted in British pounds wherever a price needs to appear."
+    },
+    "components/ProductGallery.tsx": {
+      "name": "Product photo gallery",
+      "description": "Displays the full set of product images in a scrollable gallery on the product page."
+    },
+    "components/providers/LenisProvider.tsx": {
+      "name": "Smooth scrolling",
+      "description": "Makes page scrolling feel luxuriously smooth and keeps scroll-triggered animations in sync across the site."
+    },
+    "components/RingSizeGuide.tsx": {
+      "name": "Ring size guide",
+      "description": "Shows customers how to measure their finger and find the right ring size."
+    },
+    "components/ServiceWorkerRegistration.tsx": {
+      "name": "Offline readiness",
+      "description": "Registers a background worker so returning visitors load the shop faster and see a friendly message when offline."
+    },
+    "components/ShopGrid.tsx": {
+      "name": "Product grid",
+      "description": "Displays products in a filterable grid, grouped by collection or sorted by the customer's chosen filters."
+    },
+    "components/ui/AccessibilityProvider.tsx": {
+      "name": "Accessibility settings",
+      "description": "Detects visitor preferences for reduced motion and screen readers and adjusts the site to respect them."
+    },
+    "components/ui/Breadcrumb.tsx": {
+      "name": "Breadcrumb trail",
+      "description": "Shows a clickable trail of links at the top of each page so visitors can navigate back to parent sections."
+    },
+    "components/ui/CollectionsMegaMenu.tsx": {
+      "name": "Collections menu",
+      "description": "Opens a wide dropdown in the header listing every jewellery collection so visitors can jump straight to one."
+    },
+    "components/ui/DiamondShapesDropdown.tsx": {
+      "name": "Diamond shapes menu",
+      "description": "Opens a dropdown of diamond shape options with icons so visitors can filter products by shape."
+    },
+    "components/ui/EducationMegaMenu.tsx": {
+      "name": "Education menu",
+      "description": "Opens a wide dropdown in the header linking to diamond guides and educational content."
+    },
+    "components/ui/Header.tsx": {
+      "name": "Site header",
+      "description": "Shows the top navigation bar with links to the shop, cart, and wishlist on every page."
+    },
+    "components/ui/LoadingSpinner.tsx": {
+      "name": "Loading indicators",
+      "description": "Shows spinning or overlay animations while content is loading so visitors know the page is working."
+    },
+    "components/ui/LuxuryButton.enhanced.tsx": {
+      "name": "Animated luxury button",
+      "description": "Renders a premium-styled button with hover and click animations used for calls to action."
+    },
+    "components/ui/LuxuryButton.tsx": {
+      "name": "Luxury button",
+      "description": "Renders a clean, brand-styled button used for actions across the shop."
+    },
+    "components/ui/LuxuryHeader.tsx": {
+      "name": "Main navigation header",
+      "description": "Displays the Elysium logo, collection menus, search bar, wishlist, and cart icons at the top of every page."
+    },
+    "components/ui/LuxuryProductCard.tsx": {
+      "name": "Product card",
+      "description": "Shows a product thumbnail with its name, price, and a quick-add-to-wishlist button inside any grid or carousel."
+    },
+    "components/ui/MetalSwatch.tsx": {
+      "name": "Metal colour swatch",
+      "description": "Displays small clickable colour circles for yellow gold, white gold, rose gold, and platinum on product pages."
+    },
+    "components/ui/OptimizedImage.tsx": {
+      "name": "Fast-loading images",
+      "description": "Loads product and lifestyle images progressively so they appear quickly without slowing the page down."
+    },
+    "components/ui/ProductCard.tsx": {
+      "name": "Standard product card",
+      "description": "Shows a compact product preview with image, name, price, and a wishlist toggle for listing pages."
+    },
+    "components/ui/RingSizeGuide.tsx": {
+      "name": "Ring size reference",
+      "description": "Displays a pop-up ring-sizing chart that customers can open from any product page."
+    },
+    "components/ui/SearchBar.tsx": {
+      "name": "Product search",
+      "description": "Lets visitors type a keyword to instantly find matching rings, diamonds, or collections."
+    },
+    "components/ui/SkipLinks.tsx": {
+      "name": "Skip-to-content links",
+      "description": "Gives keyboard and screen-reader users invisible links to jump straight to main content, navigation, or search."
+    },
+    "components/ux/FadeInOnScroll.tsx": {
+      "name": "Scroll fade-in effect",
+      "description": "Gently fades content into view as the visitor scrolls down the page."
+    },
+    "components/ux/StaggerOnScroll.tsx": {
+      "name": "Staggered reveal effect",
+      "description": "Reveals a group of items one after another as the visitor scrolls, creating an elegant cascade."
+    },
+    "styles/luxury-animations.css": {
+      "name": "Brand animations",
+      "description": "Defines the signature hover glows, fade-ins, and shimmer effects that give the shop its luxury feel."
+    },
+    "styles/luxury-typography.css": {
+      "name": "Brand typography",
+      "description": "Sets the serif and sans-serif font styles, sizes, and spacing used across every page."
+    },
+    "styles/tokens.css": {
+      "name": "Design tokens",
+      "description": "Stores the brand colours, spacing values, and shadow styles shared by every part of the shop."
+    }
+  }
+}

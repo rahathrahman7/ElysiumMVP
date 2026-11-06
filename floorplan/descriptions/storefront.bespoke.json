@@ -1,0 +1,36 @@
+{
+  "files": {
+    "components/bespoke/BespokeSuccessModal.tsx": {
+      "name": "Bespoke enquiry confirmation",
+      "description": "Shows a thank-you message after a custom design request has been submitted successfully."
+    },
+    "components/bespoke/BespokeWizard.tsx": {
+      "name": "Bespoke design wizard",
+      "description": "Guides the customer through each step of the custom ring enquiry, from style to budget."
+    },
+    "components/bespoke/FileUploadZone.tsx": {
+      "name": "Inspiration image upload",
+      "description": "Lets the customer drag and drop or browse for photos to include with their bespoke request."
+    },
+    "components/bespoke/steps/BudgetStep.tsx": {
+      "name": "Budget selection step",
+      "description": "Asks the customer to choose a price range for their custom ring design."
+    },
+    "components/bespoke/steps/ContactStep.tsx": {
+      "name": "Contact details step",
+      "description": "Collects the customer's name, email and phone number so the design team can follow up."
+    },
+    "components/bespoke/steps/DetailsStep.tsx": {
+      "name": "Design details step",
+      "description": "Captures extra notes and preferences about the ring the customer wants created."
+    },
+    "components/bespoke/steps/StyleStep.tsx": {
+      "name": "Style preference step",
+      "description": "Lets the customer pick a ring style, metal type and stone shape for their bespoke design."
+    },
+    "components/BespokeForm.tsx": {
+      "name": "Bespoke form entry point",
+      "description": "Loads the multi-step bespoke wizard so it can be embedded on the bespoke page."
+    }
+  }
+}

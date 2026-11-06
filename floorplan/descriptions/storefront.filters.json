@@ -1,0 +1,36 @@
+{
+  "files": {
+    "components/filters/ChipGallery.tsx": {
+      "name": "Visual filter chips",
+      "description": "Shows image-based chips for diamond shapes and styles that customers can tap to filter results."
+    },
+    "components/filters/CollapsibleSection.tsx": {
+      "name": "Collapsible filter group",
+      "description": "Wraps a set of related filter options inside a panel that can be expanded or collapsed."
+    },
+    "components/filters/EnhancedFilterSummary.tsx": {
+      "name": "Active filters summary",
+      "description": "Lists the currently applied filters as removable tags so customers can see and clear their choices."
+    },
+    "components/filters/FilterHeaderBar.tsx": {
+      "name": "Filter and sort bar",
+      "description": "Sits above the product grid with sort options and a button to open the full filter panel."
+    },
+    "components/filters/FiltersDrawer.tsx": {
+      "name": "Filter side panel",
+      "description": "Slides open a full set of filter options—shape, metal, price and more—from the side of the screen."
+    },
+    "components/filters/FilterSections.tsx": {
+      "name": "Filter option groups",
+      "description": "Organises all available filters into labelled sections such as shape, style, metal and price."
+    },
+    "components/filters/LuxuryFilterButton.tsx": {
+      "name": "Round filter button",
+      "description": "Renders a single circular filter option that highlights when selected."
+    },
+    "components/filters/SectionSelectedCount.tsx": {
+      "name": "Selected filter count badge",
+      "description": "Shows a small number next to a filter group name indicating how many options are active."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "components/fine-jewellery/CategoryHero.tsx": {
+      "name": "Jewellery category hero",
+      "description": "Shows a large banner image and heading at the top of each fine jewellery category page."
+    },
+    "components/fine-jewellery/FineJewelleryGrid.tsx": {
+      "name": "Fine jewellery product grid",
+      "description": "Displays earrings, necklaces or bracelets in a visual grid with prices and quick-add buttons."
+    }
+  }
+}

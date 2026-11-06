@@ -1,0 +1,20 @@
+{
+  "files": {
+    "components/CartDrawer.tsx": {
+      "name": "Slide-out cart drawer",
+      "description": "Opens a side panel showing the items in the cart without leaving the current page."
+    },
+    "components/common/WishHeart.tsx": {
+      "name": "Wishlist heart button",
+      "description": "Toggles a heart icon to save or remove a product from the customer's wishlist."
+    },
+    "components/MiniCartIcon.tsx": {
+      "name": "Cart icon with count",
+      "description": "Shows a small bag icon in the header with a badge displaying how many items are in the cart."
+    },
+    "components/WishlistIcon.tsx": {
+      "name": "Wishlist header icon",
+      "description": "Displays a heart icon in the header that links to the customer's saved wishlist."
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "files": {
+    "components/sections/CategoryShowcase.tsx": {
+      "name": "Category showcase",
+      "description": "Highlights key product categories with large images and links so visitors can jump straight to a collection."
+    },
+    "components/sections/CollectionGrid.tsx": {
+      "name": "Collection product grid",
+      "description": "Lays out product cards in a responsive grid for any collection or landing page."
+    },
+    "components/sections/EditorialTeasers.tsx": {
+      "name": "Editorial teaser panels",
+      "description": "Presents side-by-side image-and-text panels promoting the ready-to-wear and bespoke collections."
+    },
+    "components/sections/Hero.tsx": {
+      "name": "Hero banner",
+      "description": "Displays a full-width headline image with overlay text to introduce a page or campaign."
+    },
+    "components/sections/HorizontalProductCarousel.tsx": {
+      "name": "Product carousel",
+      "description": "Scrolls a row of product cards horizontally so visitors can quickly browse featured items."
+    },
+    "components/sections/LuxuryHero.tsx": {
+      "name": "Luxury animated hero",
+      "description": "Shows a large animated hero section with product imagery and a call-to-action for the homepage."
+    },
+    "components/sections/QuickShopChips.tsx": {
+      "name": "Quick-shop filter chips",
+      "description": "Displays tappable chips for popular shapes, styles and categories that jump straight to filtered results."
+    },
+    "components/sections/Testimonials.tsx": {
+      "name": "Customer testimonials",
+      "description": "Rotates through real customer reviews to build trust and social proof."
+    },
+    "components/sections/TrustStrip.tsx": {
+      "name": "Trust badges strip",
+      "description": "Shows hallmark certification, free returns and complimentary resizing badges to reassure shoppers."
+    },
+    "components/sections/ValueBar.tsx": {
+      "name": "Value propositions bar",
+      "description": "Highlights three key promises—London hallmarking, free returns and lifetime resizing—in a compact row."
+    }
+  }
+}

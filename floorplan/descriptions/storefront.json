@@ -1,0 +1,32 @@
+{
+  "files": {
+    "app/auth/error/page.tsx": {
+      "name": "Sign-in error page",
+      "description": "Shows a friendly message when a customer's sign-in attempt fails and offers a link to try again."
+    },
+    "app/auth/signin/page.tsx": {
+      "name": "Sign-in page",
+      "description": "Presents the sign-in screen where customers enter their credentials to access their account."
+    },
+    "app/auth/signin/SignInForm.tsx": {
+      "name": "Sign-in form",
+      "description": "Collects a customer's email and password and submits them for authentication."
+    },
+    "app/globals.css": {
+      "name": "Global styles",
+      "description": "Sets the base colours, fonts and shared styling used across every page of the website."
+    },
+    "components/edu/Accordion.tsx": {
+      "name": "Expandable content panel",
+      "description": "Lets a visitor tap a heading to reveal or hide a block of educational content underneath."
+    },
+    "components/edu/KV.tsx": {
+      "name": "Specification table",
+      "description": "Displays a list of label–value pairs such as metal type, carat weight or certification details."
+    },
+    "components/Footer.tsx": {
+      "name": "Site footer",
+      "description": "Shows navigation links, contact details and legal information at the bottom of every page."
+    }
+  }
+}

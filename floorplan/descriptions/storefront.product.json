@@ -1,0 +1,80 @@
+{
+  "files": {
+    "components/config/AccordionSection.tsx": {
+      "name": "Collapsible option group",
+      "description": "Wraps a set of configuration choices inside a panel that expands or collapses on tap."
+    },
+    "components/config/EnhancedMetalSwatch.tsx": {
+      "name": "Premium metal colour swatch",
+      "description": "Shows an animated colour circle for each metal type so customers can preview the finish."
+    },
+    "components/config/EnhancedSelectCard.tsx": {
+      "name": "Premium option card",
+      "description": "Presents a single configuration choice—such as stone shape or setting style—as a rich selectable card."
+    },
+    "components/config/MetalSwatch.tsx": {
+      "name": "Metal colour swatch",
+      "description": "Displays a small colour circle representing a metal finish like gold, platinum or rose gold."
+    },
+    "components/config/SelectCard.tsx": {
+      "name": "Option select card",
+      "description": "Shows one selectable choice within a product configuration step."
+    },
+    "components/config/SelectionSummary.tsx": {
+      "name": "Chosen options summary",
+      "description": "Lists the customer's current selections as removable tags with a clear-all button."
+    },
+    "components/configurator/LuxuryProductConfigurator.tsx": {
+      "name": "Ring configurator",
+      "description": "Walks the customer through every customisation step—stone, metal, size and engraving—to build their perfect ring."
+    },
+    "components/pdp/Gallery.tsx": {
+      "name": "Product photo gallery",
+      "description": "Displays multiple product images with thumbnail navigation and full-screen zoom."
+    },
+    "components/pdp/ProductReviews.tsx": {
+      "name": "Customer reviews section",
+      "description": "Shows star ratings and written reviews from verified buyers beneath the product details."
+    },
+    "components/pdp/RecentlyViewed.tsx": {
+      "name": "Recently viewed products",
+      "description": "Displays a row of products the customer has looked at recently for easy comparison."
+    },
+    "components/pdp/ShareBuild.tsx": {
+      "name": "Share your build button",
+      "description": "Copies a link to the customer's configured ring so they can share it with someone else."
+    },
+    "components/pdp/StickySummary.tsx": {
+      "name": "Sticky price summary",
+      "description": "Keeps the product name, price and add-to-cart button visible as the customer scrolls."
+    },
+    "components/pdp/TrustStrip.tsx": {
+      "name": "Product trust badges",
+      "description": "Displays certification and guarantee icons directly on the product page to build confidence."
+    },
+    "components/pdp/ZoomOverlay.tsx": {
+      "name": "Image zoom overlay",
+      "description": "Opens a full-screen view of a product photo so the customer can inspect fine details."
+    },
+    "components/products/CompactProductVariants.tsx": {
+      "name": "Compact variant picker",
+      "description": "Shows metal and size options in a condensed layout for quick selection on smaller screens."
+    },
+    "components/products/ProductActions.tsx": {
+      "name": "Add to cart and wishlist",
+      "description": "Provides the buttons to add a product to the shopping cart or save it to the wishlist."
+    },
+    "components/products/ProductDetail.tsx": {
+      "name": "Full product detail view",
+      "description": "Assembles the gallery, configurator, reviews and trust badges into the complete product page."
+    },
+    "components/products/ProductGallery.tsx": {
+      "name": "Simple product gallery",
+      "description": "Displays product images in a basic scrollable gallery for straightforward items."
+    },
+    "components/products/ProductVariants.tsx": {
+      "name": "Product variant selector",
+      "description": "Lets the customer choose between available metals, sizes and other product options."
+    }
+  }
+}

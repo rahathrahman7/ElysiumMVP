@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app/api/auth/[...nextauth]/route.ts": {
+      "name": "Sign-in and sign-out",
+      "description": "Handles all customer sign-in flows including email/password and Google, plus sign-out."
+    },
+    "app/api/auth/register/route.ts": {
+      "name": "Customer registration",
+      "description": "Creates a new customer account with an email, password and optional name."
+    }
+  },
+  "routes": {
+    "ANY /api/auth/[...nextauth]": {
+      "name": "Sign in or out",
+      "description": "Handles every sign-in method (email/password, Google) and sign-out for customers."
+    },
+    "POST /api/auth/register": {
+      "name": "Create account",
+      "description": "Registers a new customer with their email and password, checking for duplicates first."
+    }
+  }
+}

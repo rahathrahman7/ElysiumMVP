@@ -1,0 +1,14 @@
+{
+  "files": {
+    "app/api/webhooks/stripe/route.ts": {
+      "name": "Stripe payment alerts",
+      "description": "Receives payment notifications from Stripe, verifies they are genuine, updates the order status and emails the team when a payment succeeds."
+    }
+  },
+  "routes": {
+    "POST /api/webhooks/stripe": {
+      "name": "Stripe payment alerts",
+      "description": "Stripe calls this when a payment succeeds, fails or is refunded; it checks the message is genuine, updates the order and notifies staff."
+    }
+  }
+}

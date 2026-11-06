@@ -1,0 +1,42 @@
+{
+  "files": {
+    "app/api/admin/dashboard/stats/route.ts": {
+      "name": "Dashboard sales summary",
+      "description": "Returns headline sales and order statistics for the admin dashboard."
+    },
+    "app/api/admin/inquiries/route.ts": {
+      "name": "Bespoke enquiry list",
+      "description": "Lists bespoke-jewellery enquiries submitted by customers, with optional status filtering."
+    },
+    "app/api/admin/inventory/route.ts": {
+      "name": "Stock management",
+      "description": "Lists current stock levels and lets staff update the quantity or low-stock threshold for any variant."
+    },
+    "app/api/admin/orders/route.ts": {
+      "name": "All orders list",
+      "description": "Lists every customer order with optional filtering by status, for staff review."
+    }
+  },
+  "routes": {
+    "GET /api/admin/dashboard/stats": {
+      "name": "View dashboard stats",
+      "description": "Returns key sales figures and order counts for the admin dashboard."
+    },
+    "GET /api/admin/inquiries": {
+      "name": "List bespoke enquiries",
+      "description": "Returns bespoke-jewellery enquiries, optionally filtered by status, for staff to review."
+    },
+    "GET /api/admin/inventory": {
+      "name": "View stock levels",
+      "description": "Returns stock quantities for all products or a single product's variants."
+    },
+    "POST /api/admin/inventory": {
+      "name": "Update stock level",
+      "description": "Sets the stock quantity or low-stock alert threshold for a specific product variant."
+    },
+    "GET /api/admin/orders": {
+      "name": "List all orders",
+      "description": "Returns every order across all customers, optionally filtered by status."
+    }
+  }
+}

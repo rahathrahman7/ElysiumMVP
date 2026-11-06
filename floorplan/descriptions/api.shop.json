@@ -1,0 +1,122 @@
+{
+  "files": {
+    "app/api/analytics/recently-viewed/route.ts": {
+      "name": "Recently viewed products",
+      "description": "Returns the list of products a customer or visitor looked at recently."
+    },
+    "app/api/analytics/track-view/route.ts": {
+      "name": "Record product view",
+      "description": "Records that a customer or visitor has viewed a specific product."
+    },
+    "app/api/bespoke/route.ts": {
+      "name": "Bespoke enquiry form",
+      "description": "Saves a custom-jewellery enquiry with budget, style preferences and inspiration files, then emails the team."
+    },
+    "app/api/cart/[id]/route.ts": {
+      "name": "Single cart item",
+      "description": "Updates the quantity of a cart item or removes it from the cart."
+    },
+    "app/api/cart/route.ts": {
+      "name": "Shopping cart",
+      "description": "Returns the customer's cart, adds a configured product to it, or clears it entirely."
+    },
+    "app/api/checkout/route.ts": {
+      "name": "Start checkout",
+      "description": "Creates an order, opens a Stripe payment page and clears the cart."
+    },
+    "app/api/inventory/route.ts": {
+      "name": "Stock check",
+      "description": "Returns the current stock level for a product or checks whether a specific variant is available."
+    },
+    "app/api/orders/[id]/route.ts": {
+      "name": "Single order details",
+      "description": "Returns the full details of one of the customer's orders."
+    },
+    "app/api/orders/route.ts": {
+      "name": "Order history",
+      "description": "Lists all orders placed by the signed-in customer."
+    },
+    "app/api/products/route.ts": {
+      "name": "Product catalogue",
+      "description": "Searches and filters the jewellery catalogue from the content system."
+    },
+    "app/api/waitlist/route.ts": {
+      "name": "Waitlist sign-up",
+      "description": "Adds an email address to the Privé collection waitlist and notifies the team."
+    },
+    "app/api/wishlist/route.ts": {
+      "name": "Customer wishlist",
+      "description": "Returns, adds to, or removes products from the customer's saved wishlist."
+    }
+  },
+  "routes": {
+    "GET /api/analytics/recently-viewed": {
+      "name": "List recently viewed",
+      "description": "Returns the products a customer or visitor browsed most recently."
+    },
+    "POST /api/analytics/track-view": {
+      "name": "Record a product view",
+      "description": "Logs that a customer or visitor has just looked at a product page."
+    },
+    "POST /api/bespoke": {
+      "name": "Submit bespoke enquiry",
+      "description": "Saves a custom-jewellery request with budget, style and stone preferences, then emails the team."
+    },
+    "PUT /api/cart/[id]": {
+      "name": "Change item quantity",
+      "description": "Updates how many of a particular item are in the customer's cart."
+    },
+    "DELETE /api/cart/[id]": {
+      "name": "Remove cart item",
+      "description": "Takes a single item out of the customer's shopping cart."
+    },
+    "GET /api/cart": {
+      "name": "View cart",
+      "description": "Returns every item currently in the signed-in customer's cart."
+    },
+    "POST /api/cart": {
+      "name": "Add to cart",
+      "description": "Puts a configured jewellery piece into the customer's shopping cart."
+    },
+    "DELETE /api/cart": {
+      "name": "Clear cart",
+      "description": "Removes all items from the customer's shopping cart at once."
+    },
+    "POST /api/checkout": {
+      "name": "Begin payment",
+      "description": "Creates an order record, opens a Stripe payment page and empties the cart."
+    },
+    "GET /api/inventory": {
+      "name": "Check stock",
+      "description": "Returns the stock level for a product or whether a chosen variant is in stock."
+    },
+    "GET /api/orders/[id]": {
+      "name": "View order details",
+      "description": "Returns the full breakdown of a single order the customer placed."
+    },
+    "GET /api/orders": {
+      "name": "List past orders",
+      "description": "Returns every order the signed-in customer has placed, newest first."
+    },
+    "GET /api/products": {
+      "name": "Browse products",
+      "description": "Searches and filters the jewellery catalogue and returns matching pieces."
+    },
+    "POST /api/waitlist": {
+      "name": "Join the waitlist",
+      "description": "Saves an email to the Privé collection waitlist and sends the team a notification."
+    },
+    "GET /api/wishlist": {
+      "name": "View wishlist",
+      "description": "Returns all products the signed-in customer has saved to their wishlist."
+    },
+    "POST /api/wishlist": {
+      "name": "Save to wishlist",
+      "description": "Adds a product to the signed-in customer's wishlist."
+    },
+    "DELETE /api/wishlist": {
+      "name": "Remove from wishlist",
+      "description": "Takes a product off the signed-in customer's wishlist."
+    }
+  }
+}

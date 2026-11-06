@@ -1,0 +1,42 @@
+{
+  "files": {
+    "app/api/user/addresses/[id]/route.ts": {
+      "name": "Single address management",
+      "description": "Updates or deletes a specific saved address for the signed-in customer."
+    },
+    "app/api/user/addresses/route.ts": {
+      "name": "Address book",
+      "description": "Lists all saved addresses for the signed-in customer and adds new ones."
+    },
+    "app/api/user/profile/route.ts": {
+      "name": "Customer profile",
+      "description": "Returns or updates the signed-in customer's name, phone, date of birth and preferences."
+    }
+  },
+  "routes": {
+    "PUT /api/user/addresses/[id]": {
+      "name": "Update saved address",
+      "description": "Saves changes to one of the customer's addresses and can set it as the default."
+    },
+    "DELETE /api/user/addresses/[id]": {
+      "name": "Remove saved address",
+      "description": "Deletes a saved address from the customer's address book."
+    },
+    "GET /api/user/addresses": {
+      "name": "List saved addresses",
+      "description": "Returns every billing and shipping address the customer has on file."
+    },
+    "POST /api/user/addresses": {
+      "name": "Add new address",
+      "description": "Saves a new billing or shipping address to the customer's account."
+    },
+    "GET /api/user/profile": {
+      "name": "View customer profile",
+      "description": "Returns the signed-in customer's profile details and saved addresses."
+    },
+    "PUT /api/user/profile": {
+      "name": "Update customer profile",
+      "description": "Saves changes to the customer's name, phone number, date of birth or preferences."
+    }
+  }
+}

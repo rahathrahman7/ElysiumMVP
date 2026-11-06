@@ -48,8 +48,8 @@ chmod +x apply-improvements.sh
 # Direct connection
 psql $DATABASE_URL
 
-# Or with connection string
-psql "postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
+# Or with connection string (use environment variable for security)
+# psql "$DATABASE_URL"
 ```
 
 ### Prisma Commands
@@ -473,10 +473,14 @@ ORDER BY tablename, indexname;
 
 ```bash
 # Direct connection (for migrations, schema push)
-DATABASE_URL="postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
+DATABASE_URL="postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@[HOST].pooler.supabase.com:5432/postgres"
 
 # Pooled connection (for application queries)
-DATABASE_URL_POOLED="postgresql://postgres.yrtpqpsuqioecjjwbmcy:Prestige998800!@aws-1-eu-west-1.pooler.supabase.com:6543/postgres"
+DATABASE_URL_POOLED="postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@[HOST].pooler.supabase.com:6543/postgres"
+
+# Get actual values from:
+# - Supabase Dashboard → Settings → Database → Connection string
+# - Or your .env.local file (never commit this file)
 ```
 
 ## Important Files
